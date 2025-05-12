@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: AdvMenu Unpacker (By Quyetdaik)
+MIDlet-1: NSOKudo LCLTTdv,/icon.png,Class_ab
+MIDlet-Vendor: Ninjaschool
+MIDlet-Version: 1.4.8
+MIDlet-Name: Ninjaschool 
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+

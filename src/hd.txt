@@ -1,0 +1,8 @@
+﻿- Chát "set" để cài đặt nhiệm vụ danh vọng và thời gian điểm danh
+- Chát "ld" để cài đặt thời gian làm nvdv và tên nhân vật lôi đài, cừu sát
+- Nhân vật thua lôi đài cũng sẽ là nhân vật  chết cừu sát nên nick clone nên chọn nick lv cách nick làm mắt 10 lv
+- Nếu có nhiều nick cùng làm nvdv thì nick thua lôi đài sẽ nhập tên tất cả các nick làm nvdv, mỗi tên nhân vật cách nhau bằng dấu phảy VD: trumkiem,trumcung,trumdao,...
+- Pb sẽ dùng đá 5 mặc định để đập đồ nếu như chỉ có đá 4 pb sẽ tự luyện đá lên 5 để đập
+- Nên chuẩn bị sẵn 1tr xu, vài cái hlct và để hành trang trống ít nhất 30 ô.
+- Sau khi hoàn thành 1 nhiệm vụ phiên bản sẽ tự bán đồ thừa và đá từ 5 đổ xuống để tránh full hành trang.
+- PB auto LC LTT Pth 5skill akn
