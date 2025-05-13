@@ -23,7 +23,7 @@ public final class Code implements Runnable {
    public static fv afa;
    private static ADV cla;
    public static AutoLoiDai aga;
-   private static gk cma;
+   private static AutoLoseLoiDai cma;
    private static cj cna;
    private static ap coa;
    private static eo cpa;
@@ -131,7 +131,7 @@ public final class Code implements Runnable {
       afa = new fv();
       cla = new ADV();
       aga = new AutoLoiDai();
-      cma = new gk();
+      cma = new AutoLoseLoiDai();
       cna = new cj();
       coa = new ap();
       cpa = new eo();

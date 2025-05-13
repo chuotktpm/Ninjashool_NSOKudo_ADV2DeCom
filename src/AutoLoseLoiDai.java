@@ -1,4 +1,4 @@
-public final class gk extends Auto {
+public final class AutoLoseLoiDai extends Auto {
    private static boolean aaa;
    private static boolean aba;
    private long aca = 0L;

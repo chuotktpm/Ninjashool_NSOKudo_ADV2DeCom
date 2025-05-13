@@ -131,21 +131,25 @@ public class Char extends dz {
    public static boolean eha;
    public static boolean eia;
    public static boolean eja;
+   
    public static boolean eka;
    public static boolean ela;
    public static boolean ema;
    public static boolean ena;
    public static boolean eoa;
+   
    public static boolean epa;
    public static boolean eqa;
    public static boolean era;
    public static boolean esa;
    public static boolean eta;
+   
    public static boolean eua;
    public static boolean eva;
    public static boolean ewa;
    public static boolean exa;
    public static boolean eya;
+   
    public static boolean eza;
    public static boolean faa;
    public static boolean fba;

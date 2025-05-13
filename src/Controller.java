@@ -2362,7 +2362,7 @@ public final class Controller implements ay {
                return;
             }
 
-            if (Code.aba instanceof gk) {
+            if (Code.aba instanceof AutoLoseLoiDai) {
                for(int var12 = 0; var12 < Code.aca(Code.bpa, ",").length; ++var12) {
                   if (var106.cea.equals(Code.aca(Code.bpa, ",")[var12])) {
                      Service.aaa().ala(var106.asa);
