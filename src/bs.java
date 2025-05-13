@@ -8,7 +8,7 @@ public final class bs implements Runnable {
    public final void run() {
       do {
          try {
-            ab.aoa();
+            GameCanvas.aoa();
             cs var1 = this.aaa;
             Code.aba();
             var1.ada();
@@ -22,7 +22,7 @@ public final class bs implements Runnable {
          } catch (InterruptedException var2) {
             var2.printStackTrace();
          }
-      } while(cs.apa && ab.bda != GameScr.aaa);
+      } while(cs.apa && GameCanvas.bda != GameScr.aaa);
 
    }
 }

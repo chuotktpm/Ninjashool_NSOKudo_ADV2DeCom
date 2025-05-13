@@ -6,24 +6,24 @@ public final class ad implements Runnable {
    }
 
    public final void run() {
-      av var1 = GameScr.aia(13);
+      Npc var1 = GameScr.findNpc(13);
       int var2 = -1;
       if (var1 != null && var1.aqa != 15) {
-         if (Math.abs(var1.ala - fz.ala().ala) > 22 || Math.abs(var1.ama - fz.ala().ama) > 22) {
-            fz.aca(var1.ala, var1.ama);
+         if (Math.abs(var1.cx - Char.getMyChar().cx) > 22 || Math.abs(var1.cy - Char.getMyChar().cy) > 22) {
+            Char.charMove(var1.cx, var1.cy);
          }
       } else {
-         if (gn.aoa != 99 && gn.aoa != 103 && gn.aoa != 134 && gn.aoa != 135 && gn.aoa != 136 && gn.aoa != 137) {
+         if (TileMap.mapID != 99 && TileMap.mapID != 103 && TileMap.mapID != 134 && TileMap.mapID != 135 && TileMap.mapID != 136 && TileMap.mapID != 137) {
             return;
          }
 
-         if ((var2 = fz.aia(37)) < 0 && (var2 = fz.aia(35)) < 0) {
+         if ((var2 = Char.aia(37)) < 0 && (var2 = Char.aia(35)) < 0) {
             return;
          }
       }
 
       Service.aaa().aaa(this.aaa, var2);
-      gn.aga();
+      TileMap.aga();
 
       try {
          Thread.sleep(100L);

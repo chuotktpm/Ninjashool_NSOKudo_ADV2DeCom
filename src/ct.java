@@ -7,8 +7,8 @@ public final class ct implements Runnable {
 
    public final void run() {
       try {
-         for(int var1 = 0; var1 < this.aaa.aea && fz.bja() > 0; ++var1) {
-            if (!(ab.bda instanceof GameScr)) {
+         for(int var1 = 0; var1 < this.aaa.aea && Char.bja() > 0; ++var1) {
+            if (!(GameCanvas.bda instanceof GameScr)) {
                return;
             }
 

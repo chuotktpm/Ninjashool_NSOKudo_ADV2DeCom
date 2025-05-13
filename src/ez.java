@@ -16,12 +16,12 @@ public final class ez extends fb implements ag {
    private static ca[][] ava;
 
    public ez() {
-      ab.bea.aca = Class_ab.ada[0];
+      GameCanvas.bea.aca = Class_ab.ada[0];
       Class_ab.aga = Class_ab.aaa[0];
 
       for(int var1 = 0; var1 < Class_ab.ada.length; ++var1) {
          if (fd.ada("indServer") == Class_ab.ada[var1]) {
-            ab.bea.aca = Class_ab.ada[var1];
+            GameCanvas.bea.aca = Class_ab.ada[var1];
             Class_ab.aga = Class_ab.aaa[var1];
             return;
          }
@@ -30,11 +30,11 @@ public final class ez extends fb implements ag {
    }
 
    public final void aaa() {
-      GameScr.aca = ab.baa;
-      if (ab.bqa == 2) {
-         ab.aaa(0);
+      GameScr.aca = GameCanvas.baa;
+      if (GameCanvas.bqa == 2) {
+         GameCanvas.aaa(0);
       } else {
-         ab.aaa(gn.ama);
+         GameCanvas.aaa(TileMap.ama);
       }
 
       super.aaa();
@@ -42,40 +42,40 @@ public final class ez extends fb implements ag {
          GameScr.aaa = null;
       }
 
-      if ((gn.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || gn.ama == 6) {
-         gn.ama = 4;
+      if ((TileMap.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || TileMap.ama == 6) {
+         TileMap.ama = 4;
       }
 
       GameScr.aaa(true);
       GameScr.aia = 100;
       this.aea = 170;
       this.afa = 175;
-      if (ab.aza == 128 || ab.baa <= 208) {
+      if (GameCanvas.aza == 128 || GameCanvas.baa <= 208) {
          this.aea = 126;
          this.afa = 160;
       }
 
-      this.aga = ab.aza / 2 - this.aea / 2;
-      this.aha = ab.baa / 2 - this.afa / 2;
-      if (ab.baa <= 250) {
+      this.aga = GameCanvas.aza / 2 - this.aea / 2;
+      this.aha = GameCanvas.baa / 2 - this.afa / 2;
+      if (GameCanvas.baa <= 250) {
          this.aha -= 10;
       }
 
-      super.ana = new ca(er.daa, ab.aja, 8885, (Object)null);
+      super.ana = new ca(er.daa, GameCanvas.aja, 8885, (Object)null);
       this.aia = -1;
-      if (!ab.afa) {
+      if (!GameCanvas.afa) {
          this.aia = 0;
       }
 
-      if (ab.afa && ab.aza >= 320) {
-         super.ana.afa = ab.aza / 2 + 88;
+      if (GameCanvas.afa && GameCanvas.aza >= 320) {
+         super.ana.afa = GameCanvas.aza / 2 + 88;
       }
 
       if (aka == null) {
-         aka = new ca(ab.afa ? "" : er.dca, this, 1000, (Object)null);
-         asa = new ca(ab.afa ? "" : er.dca, this, 1001, (Object)null);
-         aua = new ca(ab.afa ? "" : er.dca, this, 1002, (Object)null);
-         ata = new ca(ab.afa ? "" : er.dca, this, 1003, (Object)null);
+         aka = new ca(GameCanvas.afa ? "" : er.dca, this, 1000, (Object)null);
+         asa = new ca(GameCanvas.afa ? "" : er.dca, this, 1001, (Object)null);
+         aua = new ca(GameCanvas.afa ? "" : er.dca, this, 1002, (Object)null);
+         ata = new ca(GameCanvas.afa ? "" : er.dca, this, 1003, (Object)null);
          ava = new ca[][]{{aka, asa, aua}, {ata, aka, asa, aua}};
       }
 
@@ -85,12 +85,12 @@ public final class ez extends fb implements ag {
          aja = new String[]{er.tha, er.tga, er.tia, er.tja};
       }
 
-      ab.bea.aca = Class_ab.ada[0];
+      GameCanvas.bea.aca = Class_ab.ada[0];
       Class_ab.aga = Class_ab.aaa[0];
 
       for(int var1 = 0; var1 < Class_ab.ada.length; ++var1) {
          if (fd.ada("indServer") == Class_ab.ada[var1]) {
-            ab.bea.aca = Class_ab.ada[var1];
+            GameCanvas.bea.aca = Class_ab.ada[var1];
             Class_ab.aga = Class_ab.aaa[var1];
             break;
          }
@@ -104,11 +104,11 @@ public final class ez extends fb implements ag {
 
    public final void aaa(as var1) {
       var1.aaa(0);
-      var1.aca(0, 0, ab.aza, ab.baa);
-      ab.aaa(var1);
-      var1.aaa(ed.aba, ab.bba - ed.aba.getWidth() / 2, this.aha + 10 - ed.aba.getHeight() / 2, 0);
-      if (ab.bea.aca == -1) {
-         ab.bea.aca = 0;
+      var1.aca(0, 0, GameCanvas.aza, GameCanvas.baa);
+      GameCanvas.aaa(var1);
+      var1.aaa(ed.aba, GameCanvas.bba - ed.aba.getWidth() / 2, this.aha + 10 - ed.aba.getHeight() / 2, 0);
+      if (GameCanvas.bea.aca == -1) {
+         GameCanvas.bea.aca = 0;
       }
 
       int var2 = this.aha + 50;
@@ -126,21 +126,21 @@ public final class ez extends fb implements ag {
          if (var3 < aja.length) {
             if (aaa.equals("") && aca.equals("")) {
                if (var3 == 2) {
-                  fw.aga.aaa(var1, aja[var3] + Class_ab.ala[ab.bea.aca], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
+                  fw.aga.aaa(var1, aja[var3] + Class_ab.ala[GameCanvas.bea.aca], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
                } else {
                   fw.aga.aaa(var1, aja[var3], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
                }
             } else if (var3 == 0) {
                fw.aga.aaa(var1, aja[var3] + (!aca.equals("") ? ": " + aca : (aaa.startsWith("tmpusr") ? "" : ": " + aaa)), this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
             } else if (var3 == 3) {
-               fw.aga.aaa(var1, aja[var3] + Class_ab.ala[ab.bea.aca], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
+               fw.aga.aaa(var1, aja[var3] + Class_ab.ala[GameCanvas.bea.aca], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
             } else {
                fw.aga.aaa(var1, aja[var3], this.aga + this.aea / 2, var2 + var3 * 35 + 8, 2);
             }
          }
       }
 
-      if (ab.bia == null) {
+      if (GameCanvas.bia == null) {
          fk.aaa(var1, super.ala, super.ama, super.ana);
       }
 
@@ -156,7 +156,7 @@ public final class ez extends fb implements ag {
          super.ama = ava[1][this.aia];
       }
 
-      if (++GameScr.aia > ab.aza * 3 + 100) {
+      if (++GameScr.aia > GameCanvas.aza * 3 + 100) {
          GameScr.aia = 100;
       }
 
@@ -164,8 +164,8 @@ public final class ez extends fb implements ag {
    }
 
    public final void aca() {
-      if (!ab.aka[2] && !ab.aka[4]) {
-         if (ab.aka[8] || ab.aka[6]) {
+      if (!GameCanvas.aka[2] && !GameCanvas.aka[4]) {
+         if (GameCanvas.aka[8] || GameCanvas.aka[6]) {
             ++this.aia;
             if (this.aia > aja.length - 1) {
                this.aia = 0;
@@ -178,9 +178,9 @@ public final class ez extends fb implements ag {
          }
       }
 
-      if (ab.aoa && ab.aba(this.aga + 10, this.aha + 45, this.aea - 10, 140)) {
-         if (ab.ana) {
-            this.aia = (ab.aqa - (this.aha + 45)) / 35;
+      if (GameCanvas.aoa && GameCanvas.aba(this.aga + 10, this.aha + 45, this.aea - 10, 140)) {
+         if (GameCanvas.ana) {
+            this.aia = (GameCanvas.aqa - (this.aha + 45)) / 35;
          }
 
          if (aaa.equals("") && aca.equals("")) {
@@ -193,15 +193,15 @@ public final class ez extends fb implements ag {
       }
 
       super.aca();
-      ab.aka();
+      GameCanvas.aka();
    }
 
    private static void ala() {
       if (!cs.aba().afa) {
-         ab.aca();
+         GameCanvas.aca();
       }
 
-      ab.ana();
+      GameCanvas.ana();
    }
 
    public static boolean ada() {
@@ -223,7 +223,7 @@ public final class ez extends fb implements ag {
       switch(var1) {
       case 1000:
          if (ada() && !aaa.equals("")) {
-            ab.aaa(er.tfa, new ca(er.tha, this, 10001, (Object)null), new ca(er.cza, ab.aja, 8882, (Object)null));
+            GameCanvas.aaa(er.tfa, new ca(er.tha, this, 10001, (Object)null), new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
             return;
          }
 
@@ -232,11 +232,11 @@ public final class ez extends fb implements ag {
          return;
       case 1001:
          if (ada() && !aaa.equals("") && aca.equals("")) {
-            ab.aaa(er.tfa, new ca(er.tka, this, 10004, (Object)null), new ca(er.cza, ab.aja, 8882, (Object)null));
+            GameCanvas.aaa(er.tfa, new ca(er.tka, this, 10004, (Object)null), new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
             return;
          }
 
-         ab.bga.aaa();
+         GameCanvas.bga.aaa();
          return;
       case 1002:
          ev var3 = new ev();
@@ -248,9 +248,9 @@ public final class ez extends fb implements ag {
 
          var3.addElement(new ca(Class_ab.ala[Class_ab.ada[0]], this, 20000, (Object)null));
          var3.addElement(new ca(Class_ab.ala[Class_ab.ada[1]], this, 20001, (Object)null));
-         ab.bea.aaa(var3);
-         if (fd.ada("indServer") != -1 && !ab.afa) {
-            ab.bea.aca = fd.ada("indServer");
+         GameCanvas.bea.aaa(var3);
+         if (fd.ada("indServer") != -1 && !GameCanvas.afa) {
+            GameCanvas.bea.aca = fd.ada("indServer");
          }
 
          return;
@@ -280,7 +280,7 @@ public final class ez extends fb implements ag {
             return;
          }
       case 200042:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = 14446;
          Class_ab.aka = Class_ab.aca[0];
@@ -288,25 +288,25 @@ public final class ez extends fb implements ag {
       default:
          return;
       case 10004:
-         ab.bia = null;
-         ab.bga.aaa();
+         GameCanvas.bia = null;
+         GameCanvas.bga.aaa();
          return;
       case 20000:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = Class_ab.aba[0];
          Class_ab.aka = Class_ab.aca[0];
          fd.aaa("indServer", Class_ab.ada[0]);
          return;
       case 20001:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[1];
          Class_ab.afa = Class_ab.aba[1];
          Class_ab.aka = Class_ab.aca[1];
          fd.aaa("indServer", Class_ab.ada[1]);
          return;
       case 200041:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = 14444;
          Class_ab.aka = Class_ab.aca[0];

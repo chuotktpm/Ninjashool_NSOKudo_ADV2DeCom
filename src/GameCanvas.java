@@ -2,7 +2,7 @@ import java.io.IOException;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 
-public final class ab extends ee implements ag {
+public final class GameCanvas extends ee implements ag {
    public static boolean aaa;
    public static boolean aba;
    public static boolean aca;
@@ -12,7 +12,7 @@ public final class ab extends ee implements ag {
    public static boolean aga;
    public static boolean aha;
    public static boolean aia;
-   public static ab aja;
+   public static GameCanvas aja;
    public static boolean[] aka;
    private static boolean[] bwa;
    public static boolean[] ala;
@@ -114,7 +114,7 @@ public final class ab extends ee implements ag {
       aaa();
    }
 
-   public ab() {
+   public GameCanvas() {
       fg var1;
       (var1 = fg.aaa()).setFullScreenMode(true);
       var1.aba = this;
@@ -185,7 +185,7 @@ public final class ab extends ee implements ag {
 
       dga[0] = aca("/bg/sun0.png");
       dga[1] = aca("/bg/sun1.png");
-      gn.aja();
+      TileMap.aja();
       if (!aaa) {
          if (dca == null) {
             dca = new Image[2][5];
@@ -223,9 +223,9 @@ public final class ab extends ee implements ag {
       bha = new ce();
    }
 
-   public static ab aba() {
+   public static GameCanvas aba() {
       if (aja == null) {
-         aja = new ab();
+         aja = new GameCanvas();
       }
 
       return aja;
@@ -531,19 +531,19 @@ public final class ab extends ee implements ag {
       bfa.aaa();
 
       try {
-         fz.ama();
+         Char.ama();
          GameScr.awa();
          GameScr.aea();
          ama();
          br.aca();
          GameScr.aaa(true);
          GameScr.aia = 100;
-         aaa(gn.ama);
+         aaa(TileMap.ama);
          GameScr.bfa.removeAllElements();
          GameScr.bea.removeAllElements();
          GameScr.bha.removeAllElements();
          GameScr.bka.removeAllElements();
-         fz.cha = null;
+         Char.cha = null;
       } catch (Exception var1) {
          var1.printStackTrace();
       }
@@ -683,7 +683,7 @@ public final class ab extends ee implements ag {
                   }
 
                   if (bqa != 8 && bqa != 11 && bqa != 12 && bza[2] != null) {
-                     if (gn.aoa == 45) {
+                     if (TileMap.mapID == 45) {
                         var0.aaa(bza[2], GameScr.aba, cia, 0);
                      } else {
                         for(var1 = -((GameScr.aia >> cta[2]) % cca[2]); var1 < GameScr.aba; var1 += cca[2]) {
@@ -696,13 +696,13 @@ public final class ab extends ee implements ag {
                      }
                   }
 
-                  if (bqa != 11 && bqa != 12 && bza[1] != null && gn.aoa != 52) {
+                  if (bqa != 11 && bqa != 12 && bza[1] != null && TileMap.mapID != 52) {
                      for(var1 = -((GameScr.aia >> cta[1]) % cca[1]); var1 < GameScr.aba; var1 += cca[1]) {
                         var0.aaa(bza[1], var1, cla, 0);
                      }
                   }
 
-                  if (gn.aoa == 45 || gn.aoa == 55) {
+                  if (TileMap.mapID == 45 || TileMap.mapID == 55) {
                      var0.aaa(1114112);
                      var0.aca(0, cka + 20, GameScr.aba, GameScr.aca);
                   }
@@ -877,7 +877,7 @@ public final class ab extends ee implements ag {
          }
 
          if (bqa == 7 || bqa == 11 || bqa == 12) {
-            if (gn.aoa == 20) {
+            if (TileMap.mapID == 20) {
                cma = null;
             } else {
                cma = dfa[0];
@@ -947,7 +947,7 @@ public final class ab extends ee implements ag {
          var4 = 0;
       }
 
-      if (gn.aoa == 48 && gn.aoa == 51) {
+      if (TileMap.mapID == 48 && TileMap.mapID == 51) {
          cka += var4;
       }
 
@@ -1304,8 +1304,8 @@ public final class ab extends ee implements ag {
          this.cda.ada(0, 0, aza, baa);
          as var9 = this.cda;
          String var2 = br.afa;
-         if (gn.aja != null) {
-            var2 = gn.aja;
+         if (TileMap.aja != null) {
+            var2 = TileMap.aja;
          }
 
          if (br.aea && (!br.aia || br.aha <= 4990) && !GameScr.dla) {
@@ -1587,7 +1587,7 @@ public final class ab extends ee implements ag {
       Service var10000;
       String var80;
       short var81;
-      fz var82;
+      Char var82;
       int var83;
       String var84;
       fe var85;
@@ -1667,7 +1667,7 @@ public final class ab extends ee implements ag {
          Service.aaa().aha();
          return;
       case 88812:
-         var82 = (fz)var2;
+         var82 = (Char)var2;
          ama();
          var10000 = Service.aaa();
          var83 = var82.asa;
@@ -1720,8 +1720,8 @@ public final class ab extends ee implements ag {
          ama();
          return;
       case 88817:
-         if (fz.ala().dra != null) {
-            Service.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
+         if (Char.getMyChar().dra != null) {
+            Service.aaa().aca(Char.getMyChar().dra.template.aaa, bea.aca, 0);
             return;
          }
 
@@ -1752,14 +1752,14 @@ public final class ab extends ee implements ag {
          return;
       case 88820:
          String[] var90 = (String[])var2;
-         if (fz.ala().dra == null) {
+         if (Char.getMyChar().dra == null) {
             return;
          }
 
          Integer var86 = new Integer(bea.aca);
          if (var90.length <= 1) {
-            cq.aaa("", 1, fz.ala().dra);
-            Service.aaa().aca(fz.ala().dra.aaa.aaa, var86, 0);
+            cq.aaa("", 1, Char.getMyChar().dra);
+            Service.aaa().aca(Char.getMyChar().dra.template.aaa, var86, 0);
             return;
          }
 
@@ -1773,12 +1773,12 @@ public final class ab extends ee implements ag {
          return;
       case 88821:
          var4 = (Integer)var2;
-         cq.aaa("", 1, fz.ala().dra);
-         Service.aaa().aca(fz.ala().dra.aaa.aaa, var4, bea.aca);
+         cq.aaa("", 1, Char.getMyChar().dra);
+         Service.aaa().aca(Char.getMyChar().dra.template.aaa, var4, bea.aca);
          return;
       case 88822:
-         cq.aaa("", 1, fz.ala().dra);
-         Service.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
+         cq.aaa("", 1, Char.getMyChar().dra);
+         Service.aaa().aca(Char.getMyChar().dra.template.aaa, bea.aca, 0);
          return;
       case 88823:
          aaa(er.fxa);
@@ -1830,7 +1830,7 @@ public final class ab extends ee implements ag {
          if (!var80.equals("")) {
             try {
                var1 = Integer.parseInt(var80);
-               if (fz.ala().cqa >= var1 && var1 >= 0) {
+               if (Char.getMyChar().cqa >= var1 && var1 >= 0) {
                   Service.aaa().bfa(var1);
                   return;
                }
@@ -1862,7 +1862,7 @@ public final class ab extends ee implements ag {
          var1 = Integer.parseInt((String)var2);
          var83 = Integer.parseInt(bka.aaa.aea());
          bia = null;
-         if (var83 > 0 && var83 < fz.ala().arrItemBag[var1].aea) {
+         if (var83 > 0 && var83 < Char.getMyChar().arrItemBag[var1].aea) {
             Service.aaa().aka(var1, var83);
             return;
          }
@@ -1919,12 +1919,12 @@ public final class ab extends ee implements ag {
             return;
          }
       case 88840:
-         var82 = (fz)var2;
+         var82 = (Char)var2;
          ama();
          Service.aaa().ala(var82.asa);
          return;
       case 88841:
-         var82 = (fz)var2;
+         var82 = (Char)var2;
          ama();
          Service.aaa().ama(var82.asa);
          return;

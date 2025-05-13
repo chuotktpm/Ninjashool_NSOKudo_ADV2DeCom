@@ -95,7 +95,7 @@ public final class dm implements CommandListener {
          }
 
          Display.getDisplay(Class_ab.aja).setCurrent(fg.aaa());
-         ab.aaa("Lưu cài đặt thành công");
+         GameCanvas.aaa("Lưu cài đặt thành công");
       }
 
       if (var1 == this.aka) {

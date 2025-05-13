@@ -41,10 +41,10 @@ public final class Controller implements ay {
    }
 
    public final void aaa() {
-      if (fz.fda && Code.aba != null) {
+      if (Char.fda && Code.aba != null) {
          cs.aba().aea();
       } else {
-         ab.aaa(er.fda, 8884);
+         GameCanvas.aaa(er.fda, 8884);
       }
    }
 
@@ -55,10 +55,10 @@ public final class Controller implements ay {
          eu.ada = true;
       }
 
-      if (fz.fda && Code.aba != null) {
+      if (Char.fda && Code.aba != null) {
          cs.aba().aea();
       } else {
-         ab.aja.aqa();
+         GameCanvas.aja.aqa();
       }
    }
 
@@ -128,10 +128,10 @@ public final class Controller implements ay {
          ac var135;
          int var7;
          int var136;
-         fz[] var137;
+         Char[] var137;
          String var141;
          fn var142;
-         fz var10000;
+         Char var10000;
          am var149;
          am var153;
          String var154;
@@ -141,11 +141,11 @@ public final class Controller implements ay {
          int var95;
          int var96;
          ev var97;
-         fz var99;
+         Char var99;
          String var100;
          gg var101;
          byte var102;
-         fz var106;
+         Char var106;
          boolean var108;
          short var109;
          int var111;
@@ -154,8 +154,8 @@ public final class Controller implements ay {
          ac var114;
          String var116;
          long var119;
-         fz var122;
-         av var124;
+         Char var122;
+         Npc var124;
          byte var127;
          switch(var1.aaa) {
          case -30:
@@ -192,7 +192,7 @@ public final class Controller implements ay {
          default:
             return;
          case -26:
-            ab.aaa(var94 = var1.aaa().readUTF());
+            GameCanvas.aaa(var94 = var1.aaa().readUTF());
             boolean var157 = false;
             var108 = false;
             if (var94.startsWith(aca[0])) {
@@ -207,8 +207,8 @@ public final class Controller implements ay {
                cs.aba().aca();
                cs.apa = false;
                cs.afa();
-               ab.bta = var3;
-               ab.bva = ab.bua = System.currentTimeMillis();
+               GameCanvas.bta = var3;
+               GameCanvas.bva = GameCanvas.bua = System.currentTimeMillis();
                return;
             }
 
@@ -217,19 +217,19 @@ public final class Controller implements ay {
                return;
             }
 
-            if (!gn.bga || !var94.equals(ada) && !(var157 = var94.equals(aea)) && !(var108 = var94.equals(afa)) && !var94.equals(aha) && !var94.startsWith(aga)) {
+            if (!TileMap.bga || !var94.equals(ada) && !(var157 = var94.equals(aea)) && !(var108 = var94.equals(afa)) && !var94.equals(aha) && !var94.startsWith(aga)) {
                return;
             }
 
-            if (Code.aba != null && gn.aga(gn.aoa)) {
+            if (Code.aba != null && TileMap.aga(TileMap.mapID)) {
                if (var157) {
-                  if ((var3 = gn.aia(Code.aba.aga)) > 0) {
+                  if ((var3 = TileMap.aia(Code.aba.aga)) > 0) {
                      Code.aba.aga = var3;
                   }
 
                   Code.aba.aja = -1;
                } else if (var108) {
-                  if ((var3 = gn.aha(Code.aba.aga)) > 0) {
+                  if ((var3 = TileMap.aha(Code.aba.aga)) > 0) {
                      Code.aba.aga = var3;
                   }
 
@@ -237,13 +237,13 @@ public final class Controller implements ay {
                }
             }
 
-            if (gn.bfa) {
-               gn.bfa = false;
+            if (TileMap.bfa) {
+               TileMap.bfa = false;
             } else {
-               ab.ama();
+               GameCanvas.ama();
             }
 
-            gn.aha();
+            TileMap.aha();
             return;
          case -25:
             dy.aaa(var94 = var1.aaa().readUTF(), 150, fw.afa);
@@ -260,20 +260,20 @@ public final class Controller implements ay {
          case -24:
             if ((var154 = var1.aaa().readUTF()).indexOf("đang đứng nhìn bạn") > 0) {
                Code.aga(var154.substring(0, var154.indexOf("đang đứng nhìn bạn")).trim());
-            } else if (fz.fca && Code.aba != null && var154.equals("Không đủ MP để sử dụng")) {
+            } else if (Char.fca && Code.aba != null && var154.equals("Không đủ MP để sử dụng")) {
                Auto.ava = true;
             } else if (LockGame.aba && var154.equals("Vật phẩm của người khác")) {
                LockGame.aea();
-               if ((var153 = fz.ala().dta) != null) {
+               if ((var153 = Char.getMyChar().dta) != null) {
                   var153.aka = true;
                }
             } else if (Code.aba instanceof eu) {
                if (Code.aca.aaa == 2 && var154.equals("Cửa hang động đã được khép lại.")) {
                   eu.ada = true;
                } else if (Code.aca.aaa == 4 && var154.equals("Chiến trường đã khép lại, xem kết quả tại Npc Rikudou.")) {
-                  gn.aha();
+                  TileMap.aha();
                }
-            } else if (Code.aha != null && !Code.aha.equals(fz.ala().cea) && var154.equals("Đối phương đang ở trong nhóm khác.")) {
+            } else if (Code.aha != null && !Code.aha.equals(Char.getMyChar().cea) && var154.equals("Đối phương đang ở trong nhóm khác.")) {
                Service.aaa().ata();
             }
 
@@ -286,8 +286,8 @@ public final class Controller implements ay {
          case -23:
             var96 = var1.aaa().readInt();
             var94 = var1.aaa().readUTF();
-            if (fz.ala().asa == var96) {
-               var99 = fz.ala();
+            if (Char.getMyChar().asa == var96) {
+               var99 = Char.getMyChar();
             } else {
                var99 = GameScr.aea(var96);
             }
@@ -339,47 +339,47 @@ public final class Controller implements ay {
 
             return;
          case -18:
-            ab.aea = true;
+            GameCanvas.aea = true;
             GameScr.aea();
-            gn.aua.removeAllElements();
+            TileMap.aua.removeAllElements();
             System.gc();
-            gn.aoa = (short)var1.aaa().readUnsignedByte();
-            gn.aea = var1.aaa().readByte();
-            gn.ama = var1.aaa().readByte();
-            gn.ana = var1.aaa().readByte();
-            gn.aka = var1.aaa().readUTF();
-            gn.ala = var1.aaa().readByte();
-            gn.aka();
+            TileMap.mapID = (short)var1.aaa().readUnsignedByte();
+            TileMap.aea = var1.aaa().readByte();
+            TileMap.ama = var1.aaa().readByte();
+            TileMap.ana = var1.aaa().readByte();
+            TileMap.aka = var1.aaa().readUTF();
+            TileMap.zoneID = var1.aaa().readByte();
+            TileMap.aka();
 
             try {
-               gn.aia();
+               TileMap.aia();
             } catch (Exception var82) {
-               Service.aaa().ava(gn.aoa);
+               Service.aaa().ava(TileMap.mapID);
                this.aba = var1;
                return;
             }
 
             ada(var1);
-            if (fz.ala().dqa != null) {
-               fz.ala().dqa.ada = fz.ala().ala;
-               fz.ala().dqa.aea = fz.ala().ama - 40;
+            if (Char.getMyChar().dqa != null) {
+               Char.getMyChar().dqa.ada = Char.getMyChar().cx;
+               Char.getMyChar().dqa.aea = Char.getMyChar().cy - 40;
             }
 
             return;
          case -16:
-            fz.gka = true;
-            fz.gja = true;
+            Char.gka = true;
+            Char.gja = true;
             GameScr.ava().ffa = 0;
             GameScr.ava().fea = 0;
-            fz.ala().dpa = null;
-            fz.ala().dra = null;
-            fz.ala().dsa = null;
-            fz.ala().dta = null;
-            fz.ala().dua.removeAllElements();
-            fz.ala().dya = -9999;
-            fz.ala().dza = -9999;
+            Char.getMyChar().dpa = null;
+            Char.getMyChar().dra = null;
+            Char.getMyChar().dsa = null;
+            Char.getMyChar().dta = null;
+            Char.getMyChar().dua.removeAllElements();
+            Char.getMyChar().dya = -9999;
+            Char.getMyChar().dza = -9999;
             GameScr.aea();
-            ab.aia();
+            GameCanvas.aia();
             if (GameScr.bfa.size() <= 1) {
                GameScr.bfa.removeAllElements();
             }
@@ -399,16 +399,16 @@ public final class Controller implements ay {
 
             return;
          case -14:
-            fz.ala().dta = null;
+            Char.getMyChar().dta = null;
             var93 = var1.aaa().readShort();
 
             for(var3 = 0; var3 < GameScr.bma.size(); ++var3) {
                if ((var149 = (am)GameScr.bma.elementAt(var3)).aga == var93) {
-                  var149.aaa(fz.ala().ala, fz.ala().ama - 10);
+                  var149.aaa(Char.getMyChar().cx, Char.getMyChar().cy - 10);
                   var149.aka = true;
                   if (var149.aha.aba == 19) {
                      var3 = var1.aaa().readUnsignedShort();
-                     var10000 = fz.ala();
+                     var10000 = Char.getMyChar();
                      var10000.csa += var3;
                      if (var149.aha.aaa == 238) {
                         return;
@@ -438,14 +438,14 @@ public final class Controller implements ay {
                      return;
                   }
 
-                  var149.aaa(var99.ala, var99.ama - 10);
-                  if (var149.aaa < var99.ala) {
+                  var149.aaa(var99.cx, var99.cy - 10);
+                  if (var149.aaa < var99.cx) {
                      var99.ara = -1;
-                  } else if (var149.aaa > var99.ala) {
+                  } else if (var149.aaa > var99.cx) {
                      var99.ara = 1;
                   }
 
-                  if (var149 == fz.ala().dta) {
+                  if (var149 == Char.getMyChar().dta) {
                      var149.aka = true;
                      LockGame.aea();
                   }
@@ -457,49 +457,49 @@ public final class Controller implements ay {
             return;
          case -12:
             var127 = var1.aaa().readByte();
-            GameScr.bma.addElement(new am(var1.aaa().readShort(), fz.ala().arrItemBag[var127].aaa.aaa, fz.ala().ala, fz.ala().ama, var1.aaa().readShort(), var1.aaa().readShort()));
-            fz.ala().arrItemBag[var127] = null;
+            GameScr.bma.addElement(new am(var1.aaa().readShort(), Char.getMyChar().arrItemBag[var127].aaa.aaa, Char.getMyChar().cx, Char.getMyChar().cy, var1.aaa().readShort(), var1.aaa().readShort()));
+            Char.getMyChar().arrItemBag[var127] = null;
             return;
          case -11:
-            fz.ala().dka = var1.aaa().readByte();
-            fz.ala().aaa(var1.aaa().readShort(), var1.aaa().readShort());
+            Char.getMyChar().dka = var1.aaa().readByte();
+            Char.getMyChar().aaa(var1.aaa().readShort(), var1.aaa().readShort());
 
             try {
-               fz.ala().aja = var1.aaa().readLong();
-               GameScr.aaa(fz.ala().aja);
+               Char.getMyChar().aja = var1.aaa().readLong();
+               GameScr.aaa(Char.getMyChar().aja);
             } catch (Exception var78) {
             }
 
-            fz.ala().eba = 0;
+            Char.getMyChar().eba = 0;
             return;
          case -10:
-            if (fz.ala().hea != 0 || fz.ala().hfa != 0) {
-               fz.ala().ala = fz.ala().hea;
-               fz.ala().ama = fz.ala().hfa;
-               fz.ala().hea = fz.ala().hfa = 0;
+            if (Char.getMyChar().hea != 0 || Char.getMyChar().hfa != 0) {
+               Char.getMyChar().cx = Char.getMyChar().hea;
+               Char.getMyChar().cy = Char.getMyChar().hfa;
+               Char.getMyChar().hea = Char.getMyChar().hfa = 0;
             }
 
-            fz.ala().bda();
-            fz.gka = false;
+            Char.getMyChar().bda();
+            Char.gka = false;
             return;
          case -8:
             var3 = var1.aaa().readInt();
-            var10000 = fz.ala();
+            var10000 = Char.getMyChar();
             var10000.csa += var3;
             GameScr.ava().fja = var3;
-            GameScr.aaa(var3 > 0 ? "+".concat(String.valueOf(var3)) : String.valueOf(var3), fz.ala().ala, fz.ala().ama - fz.ala().cja - 10, 1);
+            GameScr.aaa(var3 > 0 ? "+".concat(String.valueOf(var3)) : String.valueOf(var3), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja - 10, 1);
             return;
          case -7:
             var3 = var1.aaa().readInt();
-            var10000 = fz.ala();
+            var10000 = Char.getMyChar();
             var10000.cqa += var3;
-            var10000 = fz.ala();
+            var10000 = Char.getMyChar();
             var10000.csa -= var3;
-            GameScr.aaa("+".concat(String.valueOf(var3)), fz.ala().ala, fz.ala().ama - fz.ala().cja - 10, 1);
+            GameScr.aaa("+".concat(String.valueOf(var3)), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja - 10, 1);
             return;
          case -6:
             if ((var99 = GameScr.aea(var1.aaa().readInt())) != null) {
-               GameScr.bma.addElement(new am(var1.aaa().readShort(), var1.aaa().readShort(), var99.ala, var99.ama, var1.aaa().readShort(), var1.aaa().readShort()));
+               GameScr.bma.addElement(new am(var1.aaa().readShort(), var1.aaa().readShort(), var99.cx, var99.cy, var1.aaa().readShort(), var1.aaa().readShort()));
                return;
             }
 
@@ -548,8 +548,8 @@ public final class Controller implements ay {
 
                   am var152 = new am(var1.aaa().readShort(), var1.aaa().readShort(), var135.ada, var135.aea, var1.aaa().readShort(), var1.aaa().readShort());
                   GameScr.bma.addElement(var152);
-                  if (ci.aea(var152.aba - fz.ala().ama) < 24 && ci.aea(var152.aaa - fz.ala().ala) < 24) {
-                     fz.ala().dsa = null;
+                  if (ci.aea(var152.aba - Char.getMyChar().cy) < 24 && ci.aea(var152.aaa - Char.getMyChar().cx) < 24) {
+                     Char.getMyChar().dsa = null;
                   }
                } catch (Exception var75) {
                }
@@ -577,19 +577,19 @@ public final class Controller implements ay {
                }
 
                if (var135.baa) {
-                  fz.ala().aaa(var96, var95, false, -1);
+                  Char.getMyChar().aaa(var96, var95, false, -1);
                   var135.aha();
                } else {
                   var135.asa = var96;
                   var135.ata = var95;
-                  var135.aaa(fz.ala());
+                  var135.aaa(Char.getMyChar());
                }
 
                var109 = var1.aaa().readShort();
                var2 = var1.aaa().readByte();
                var102 = var1.aaa().readByte();
                var135.aaa(var109, var2, var102);
-               if (fz.ala().bba < fz.ala().bea / 2) {
+               if (Char.getMyChar().bba < Char.getMyChar().bea / 2) {
                   if (var135.axa) {
                      System.out.println("Bi Quai TG Danh");
                   } else if (var135.ava == 1) {
@@ -676,24 +676,24 @@ public final class Controller implements ay {
             }
 
             var99.dka = var1.aaa().readByte();
-            if (var99.asa == fz.fya) {
-               fz.fqa = true;
+            if (var99.asa == Char.fya) {
+               Char.fqa = true;
             }
 
             var99.aaa(var1.aaa().readShort(), var1.aaa().readShort());
-            if (fz.ala().dsa == var99) {
-               fz.ala().dsa = null;
+            if (Char.getMyChar().dsa == var99) {
+               Char.getMyChar().dsa = null;
             }
 
             return;
          case 1:
             var95 = var1.aaa().readInt();
 
-            for(var96 = 0; var96 < GameScr.bla.size(); ++var96) {
+            for(var96 = 0; var96 < GameScr.vCharInMap.size(); ++var96) {
                var106 = null;
 
                try {
-                  var106 = (fz)GameScr.bla.elementAt(var96);
+                  var106 = (Char)GameScr.vCharInMap.elementAt(var96);
                } catch (Exception var53) {
                   System.out.println("Char null");
                }
@@ -715,18 +715,18 @@ public final class Controller implements ay {
          case 2:
             var95 = var1.aaa().readInt();
 
-            for(var96 = 0; var96 < GameScr.bla.size(); ++var96) {
-               if ((var106 = (fz)GameScr.bla.elementAt(var96)) != null && var106.asa == var95) {
+            for(var96 = 0; var96 < GameScr.vCharInMap.size(); ++var96) {
+               if ((var106 = (Char)GameScr.vCharInMap.elementAt(var96)) != null && var106.asa == var95) {
                   if (!var106.eea && var106.aea && !var106.afa) {
-                     ef.aaa(60, var106.ala, var106.ama, 1);
+                     ef.aaa(60, var106.cx, var106.cy, 1);
                   } else if (!var106.eea && var106.bha() && !var106.aea) {
-                     ef.aaa(141, var106.ala, var106.ama, 0);
+                     ef.aaa(141, var106.cx, var106.cy, 0);
                   }
 
-                  GameScr.bla.removeElementAt(var96);
+                  GameScr.vCharInMap.removeElementAt(var96);
                   ep.aaa(var95);
-                  if (!var106.bga() && var106.cea.equals(fz.ala().cea)) {
-                     fz.ala().aca = null;
+                  if (!var106.bga() && var106.cea.equals(Char.getMyChar().cea)) {
+                     Char.getMyChar().aca = null;
                   }
 
                   return;
@@ -735,17 +735,17 @@ public final class Controller implements ay {
 
             return;
          case 3:
-            (var99 = new fz()).asa = var1.aaa().readInt();
+            (var99 = new Char()).asa = var1.aaa().readInt();
             if (aaa(var99, var1)) {
-               GameScr.bla.addElement(var99);
+               GameScr.vCharInMap.addElement(var99);
                Auto.aba(var99);
-               if (!var99.bga() && var99.cea.equals(fz.ala().cea)) {
-                  fz.ala().aca = var99;
+               if (!var99.bga() && var99.cea.equals(Char.getMyChar().cea)) {
+                  Char.getMyChar().aca = var99;
                   LockGame.bea();
                }
 
-               if (var99.asa == -fz.ala().asa) {
-                  fz.ala().ada = var99;
+               if (var99.asa == -Char.getMyChar().asa) {
+                  Char.getMyChar().ada = var99;
                }
 
                if (Code.aba(var99.cea) && !Code.aca.afa()) {
@@ -757,7 +757,7 @@ public final class Controller implements ay {
             return;
          case 4:
             if ((var99 = GameScr.aea(var1.aaa().readInt())) != null) {
-               if ((gn.aaa(var99.ala, var99.ama) & 2) == 2) {
+               if ((TileMap.aaa(var99.cx, var99.cy) & 2) == 2) {
                   var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 0);
                } else {
                   var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 1);
@@ -781,7 +781,7 @@ public final class Controller implements ay {
                   ac var146 = ac.aaa(var1.aaa().readUnsignedByte());
                   var99.dva[var95] = var146;
                   if (var95 == 0) {
-                     if (var99.ala <= var146.ada) {
+                     if (var99.cx <= var146.ada) {
                         var99.ara = 1;
                      } else {
                         var99.ara = -1;
@@ -790,21 +790,21 @@ public final class Controller implements ay {
                }
 
                var99.dpa = var99.dva[0];
-               var137 = new fz[10];
+               var137 = new Char[10];
                var3 = 0;
 
                try {
                   for(var3 = 0; var3 < 10; ++var3) {
-                     fz var148;
-                     if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-                        var148 = fz.ala();
+                     Char var148;
+                     if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+                        var148 = Char.getMyChar();
                      } else {
                         var148 = GameScr.aea(var6);
                      }
 
                      var137[var3] = var148;
                      if (var3 == 0) {
-                        if (var99.ala <= var148.ala) {
+                        if (var99.cx <= var148.cx) {
                            var99.ara = 1;
                         } else {
                            var99.ara = -1;
@@ -818,7 +818,7 @@ public final class Controller implements ay {
                   return;
                }
 
-               var99.dwa = new fz[var3];
+               var99.dwa = new Char[var3];
 
                for(var3 = 0; var3 < var99.dwa.length; ++var3) {
                   var99.dwa[var3] = var137[var3];
@@ -831,16 +831,16 @@ public final class Controller implements ay {
             return;
          case 5:
             var119 = var1.aaa().readLong();
-            fz.ala().aka = 0L;
-            var10000 = fz.ala();
+            Char.getMyChar().aka = 0L;
+            var10000 = Char.getMyChar();
             var10000.aja += var119;
-            var6 = fz.ala().aya;
-            GameScr.aaa(fz.ala().aja);
-            if (var6 != fz.ala().aya) {
-               ef.aaa(58, fz.ala(), 1);
+            var6 = Char.getMyChar().aya;
+            GameScr.aaa(Char.getMyChar().aja);
+            if (var6 != Char.getMyChar().aya) {
+               ef.aaa(58, Char.getMyChar(), 1);
             }
 
-            GameScr.aaa("+".concat(String.valueOf(var119)), fz.ala().ala, fz.ala().ama - fz.ala().cja, 2);
+            GameScr.aaa("+".concat(String.valueOf(var119)), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja, 2);
             if (var119 >= 1000000L) {
                be.aaa(er.loa + " " + var119 + " " + er.ida, 20, fw.ala);
             }
@@ -857,50 +857,50 @@ public final class Controller implements ay {
             GameScr.bma.addElement(var153);
             return;
          case 7:
-            fz.ala().arrItemBag[var1.aaa().readByte()].aea = var1.aaa().readShort();
+            Char.getMyChar().arrItemBag[var1.aaa().readByte()].aea = var1.aaa().readShort();
             return;
          case 8:
             var127 = var1.aaa().readByte();
-            fz.ala().arrItemBag[var127] = new gg();
-            fz.ala().arrItemBag[var127].ana = 3;
-            fz.ala().arrItemBag[var127].ada = var127;
-            fz.ala().arrItemBag[var127].aaa = gi.aaa(var1.aaa().readShort());
-            fz.ala().arrItemBag[var127].aga = var1.aaa().readBoolean();
-            if (fz.ala().arrItemBag[var127].aba() || fz.ala().arrItemBag[var127].ada()) {
-               fz.ala().arrItemBag[var127].aia = var1.aaa().readByte();
+            Char.getMyChar().arrItemBag[var127] = new gg();
+            Char.getMyChar().arrItemBag[var127].ana = 3;
+            Char.getMyChar().arrItemBag[var127].ada = var127;
+            Char.getMyChar().arrItemBag[var127].aaa = gi.aaa(var1.aaa().readShort());
+            Char.getMyChar().arrItemBag[var127].aga = var1.aaa().readBoolean();
+            if (Char.getMyChar().arrItemBag[var127].aba() || Char.getMyChar().arrItemBag[var127].ada()) {
+               Char.getMyChar().arrItemBag[var127].aia = var1.aaa().readByte();
             }
 
-            fz.ala().arrItemBag[var127].aoa = var1.aaa().readBoolean();
+            Char.getMyChar().arrItemBag[var127].aoa = var1.aaa().readBoolean();
 
             try {
-               fz.ala().arrItemBag[var127].aea = var1.aaa().readUnsignedShort();
+               Char.getMyChar().arrItemBag[var127].aea = var1.aaa().readUnsignedShort();
             } catch (Exception var68) {
-               fz.ala().arrItemBag[var127].aea = 1;
+               Char.getMyChar().arrItemBag[var127].aea = 1;
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 16) {
-               GameScr.aya += fz.ala().arrItemBag[var127].aea;
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 16) {
+               GameScr.aya += Char.getMyChar().arrItemBag[var127].aea;
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 17) {
-               GameScr.axa += fz.ala().arrItemBag[var127].aea;
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 17) {
+               GameScr.axa += Char.getMyChar().arrItemBag[var127].aea;
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aaa == 340) {
+            if (Char.getMyChar().arrItemBag[var127].aaa.aaa == 340) {
                var159 = GameScr.ava();
-               var159.dea += fz.ala().arrItemBag[var127].aea;
+               var159.dea += Char.getMyChar().arrItemBag[var127].aea;
             }
 
             if (GameScr.dpa) {
                if (GameScr.ava().fda.equals("")) {
-                  (var113 = GameScr.ava()).fda = var113.fda + fz.ala().arrItemBag[var127].aaa.ada;
+                  (var113 = GameScr.ava()).fda = var113.fda + Char.getMyChar().arrItemBag[var127].aaa.ada;
                } else {
-                  (var113 = GameScr.ava()).fda = var113.fda + ", " + fz.ala().arrItemBag[var127].aaa.ada;
+                  (var113 = GameScr.ava()).fda = var113.fda + ", " + Char.getMyChar().arrItemBag[var127].aaa.ada;
                }
                break;
             } else {
-               if (fz.ala().arrItemBag[var127].aaa.aba != 20) {
-                  be.aaa(er.loa + " " + fz.ala().arrItemBag[var127].aaa.ada);
+               if (Char.getMyChar().arrItemBag[var127].aaa.aba != 20) {
+                  be.aaa(er.loa + " " + Char.getMyChar().arrItemBag[var127].aaa.ada);
                   LockGame.aua();
                   break;
                }
@@ -908,7 +908,7 @@ public final class Controller implements ay {
                return;
             }
          case 9:
-            var101 = fz.ala().arrItemBag[var1.aaa().readUnsignedByte()];
+            var101 = Char.getMyChar().arrItemBag[var1.aaa().readUnsignedByte()];
 
             try {
                var93 = var1.aaa().readShort();
@@ -930,7 +930,7 @@ public final class Controller implements ay {
                var159.dea += var93;
             }
 
-            ab.ama();
+            GameCanvas.ama();
             if (GameScr.dpa) {
                if (GameScr.ava().fda.equals("")) {
                   (var113 = GameScr.ava()).fda = var113.fda + var101.aaa.ada;
@@ -948,15 +948,15 @@ public final class Controller implements ay {
             }
          case 10:
             var127 = var1.aaa().readByte();
-            if (fz.ala().arrItemBag[var127].aaa.aba == 16) {
-               GameScr.aya -= fz.ala().arrItemBag[var127].aea;
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 16) {
+               GameScr.aya -= Char.getMyChar().arrItemBag[var127].aea;
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 17) {
-               GameScr.axa -= fz.ala().arrItemBag[var127].aea;
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 17) {
+               GameScr.axa -= Char.getMyChar().arrItemBag[var127].aea;
             }
 
-            fz.ala().arrItemBag[var127] = null;
+            Char.getMyChar().arrItemBag[var127] = null;
             if (GameScr.bia()) {
                GameScr.ava().ala = GameScr.ava().ama = null;
             } else {
@@ -966,27 +966,27 @@ public final class Controller implements ay {
             return;
          case 11:
             var127 = var1.aaa().readByte();
-            if (fz.ala().arrItemBag[var127].aaa.aba == 24) {
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 24) {
                br.aca();
             }
 
-            fz.ala().aaa(var127);
-            fz.ala().aaa(var1);
-            fz.ala().bfa = var1.aaa().readShort();
-            fz.ala().bga = var1.aaa().readShort();
+            Char.getMyChar().aaa(var127);
+            Char.getMyChar().aaa(var1);
+            Char.getMyChar().bfa = var1.aaa().readShort();
+            Char.getMyChar().bga = var1.aaa().readShort();
             GameScr.ava().bra();
             LockGame.asa();
             return;
          case 13:
-            fz.ala().cqa = var1.aaa().readInt();
-            fz.ala().csa = var1.aaa().readInt();
-            fz.ala().cta = var1.aaa().readInt();
+            Char.getMyChar().cqa = var1.aaa().readInt();
+            Char.getMyChar().csa = var1.aaa().readInt();
+            Char.getMyChar().cta = var1.aaa().readInt();
             LockGame.aia();
-            ab.ama();
+            GameCanvas.ama();
             return;
          case 14:
-            var101 = fz.ala().arrItemBag[var1.aaa().readByte()];
-            fz.ala().csa = var1.aaa().readInt();
+            var101 = Char.getMyChar().arrItemBag[var1.aaa().readByte()];
+            Char.getMyChar().csa = var1.aaa().readInt();
 
             try {
                var93 = var1.aaa().readShort();
@@ -1004,7 +1004,7 @@ public final class Controller implements ay {
             }
 
             if (var101.aea <= 0) {
-               fz.ala().arrItemBag[var101.ada] = null;
+               Char.getMyChar().arrItemBag[var101.ada] = null;
             }
 
             if (GameScr.bia()) {
@@ -1012,18 +1012,18 @@ public final class Controller implements ay {
                GameScr.ava().bka();
             }
 
-            ab.ama();
+            GameCanvas.ama();
             LockGame.aua();
             return;
          case 15:
-            fz.ala().aca(var1);
+            Char.getMyChar().aca(var1);
             LockGame.asa();
             return;
          case 16:
-            fz.ala().aea(var1);
+            Char.getMyChar().aea(var1);
             return;
          case 17:
-            fz.ala().ada(var1);
+            Char.getMyChar().ada(var1);
             return;
          case 18:
             var127 = var1.aaa().readByte();
@@ -1034,23 +1034,23 @@ public final class Controller implements ay {
             } catch (Exception var65) {
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 24) {
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 24) {
                br.aca();
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 16) {
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 16) {
                --GameScr.aya;
             }
 
-            if (fz.ala().arrItemBag[var127].aaa.aba == 17) {
+            if (Char.getMyChar().arrItemBag[var127].aaa.aba == 17) {
                --GameScr.axa;
             }
 
-            if (fz.ala().arrItemBag[var127].aea > var93) {
-               gg var158 = fz.ala().arrItemBag[var127];
+            if (Char.getMyChar().arrItemBag[var127].aea > var93) {
+               gg var158 = Char.getMyChar().arrItemBag[var127];
                var158.aea -= var93;
             } else {
-               fz.ala().arrItemBag[var127] = null;
+               Char.getMyChar().arrItemBag[var127] = null;
             }
 
             if (GameScr.doa) {
@@ -1059,18 +1059,18 @@ public final class Controller implements ay {
 
             return;
          case 19:
-            fz.ala();
-            fz.aaa(var1, true);
+            Char.getMyChar();
+            Char.aaa(var1, true);
             return;
          case 20:
-            fz.ala();
-            fz.aaa(var1, false);
+            Char.getMyChar();
+            Char.aaa(var1, false);
             return;
          case 21:
             var2 = var1.aaa().readByte();
-            fz.ala().cta = var1.aaa().readInt();
-            fz.ala().cqa = var1.aaa().readInt();
-            fz.ala().csa = var1.aaa().readInt();
+            Char.getMyChar().cta = var1.aaa().readInt();
+            Char.getMyChar().cqa = var1.aaa().readInt();
+            Char.getMyChar().csa = var1.aaa().readInt();
             if (GameScr.dfa != null) {
                GameScr.dfa.aia = var1.aaa().readByte();
                GameScr.dfa.aga = true;
@@ -1101,7 +1101,7 @@ public final class Controller implements ay {
 
             GameScr.ava().ala = GameScr.ava().ama = null;
             GameScr.ava().bja();
-            ab.ama();
+            GameCanvas.ama();
             if (var2 == 5) {
                be.aaa(er.lwa[0], 20, fw.aka);
                return;
@@ -1131,7 +1131,7 @@ public final class Controller implements ay {
                var134.afa = -1L;
                var134.aea = 1;
                var134.aga = GameScr.dga.aga;
-               fz.ala().arrItemBag[var134.ada] = var134;
+               Char.getMyChar().arrItemBag[var134.ada] = var134;
                var100 = var100 + var134.aaa.ada;
                if (var3 < var2 - 1) {
                   var100 = var100 + ", ";
@@ -1142,7 +1142,7 @@ public final class Controller implements ay {
             GameScr.dga.aga();
             GameScr.ava().ala = GameScr.ava().ama = null;
             GameScr.ava().bka();
-            ab.ama();
+            GameCanvas.ama();
             be.aaa(var100);
             GameScr.gma = GameScr.bca[66];
             GameScr.gla = 0;
@@ -1152,7 +1152,7 @@ public final class Controller implements ay {
             if (Code.aca(var94 = var1.aaa().readUTF())) {
                Service.aaa().aia(var94);
             } else {
-               ab.aaa(var94 + " " + er.nca, 8889, var94, 8882, (Object)null);
+               GameCanvas.aaa(var94 + " " + er.nca, 8889, var94, 8882, (Object)null);
             }
 
             return;
@@ -1165,8 +1165,8 @@ public final class Controller implements ay {
                short var145 = var1.aaa().readShort();
                var136 = var1.aaa().readInt();
                if ((var99 = GameScr.aea(var111)) != null) {
-                  var99.ala = var155;
-                  var99.ama = var145;
+                  var99.cx = var155;
+                  var99.cy = var145;
                   var99.bba = var136;
                   var99.aha = System.currentTimeMillis();
                }
@@ -1174,13 +1174,13 @@ public final class Controller implements ay {
 
             return;
          case 26:
-            fz.ala().eba = var1.aaa().readUnsignedShort();
-            fz.ala().eca = var1.aaa().readUnsignedShort();
+            Char.getMyChar().eba = var1.aaa().readUnsignedShort();
+            Char.getMyChar().eca = var1.aaa().readUnsignedShort();
             return;
          case 27:
             var112 = ac.aaa(var1.aaa().readUnsignedByte());
-            if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-               var99 = fz.ala();
+            if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+               var99 = Char.getMyChar();
             } else {
                var99 = GameScr.aea(var6);
             }
@@ -1196,23 +1196,23 @@ public final class Controller implements ay {
             LockGame.asa();
             return;
          case 31:
-            fz.ala().cra = var1.aaa().readInt();
-            fz.ala().dba = new gg[var1.aaa().readUnsignedByte()];
+            Char.getMyChar().cra = var1.aaa().readInt();
+            Char.getMyChar().dba = new gg[var1.aaa().readUnsignedByte()];
 
-            for(var3 = 0; var3 < fz.ala().dba.length; ++var3) {
+            for(var3 = 0; var3 < Char.getMyChar().dba.length; ++var3) {
                short var150;
                if ((var150 = var1.aaa().readShort()) != -1) {
-                  fz.ala().dba[var3] = new gg();
-                  fz.ala().dba[var3].ana = 4;
-                  fz.ala().dba[var3].ada = var3;
-                  fz.ala().dba[var3].aaa = gi.aaa(var150);
-                  fz.ala().dba[var3].aga = var1.aaa().readBoolean();
-                  if (fz.ala().dba[var3].aba() || fz.ala().dba[var3].ada()) {
-                     fz.ala().dba[var3].aia = var1.aaa().readByte();
+                  Char.getMyChar().dba[var3] = new gg();
+                  Char.getMyChar().dba[var3].ana = 4;
+                  Char.getMyChar().dba[var3].ada = var3;
+                  Char.getMyChar().dba[var3].aaa = gi.aaa(var150);
+                  Char.getMyChar().dba[var3].aga = var1.aaa().readBoolean();
+                  if (Char.getMyChar().dba[var3].aba() || Char.getMyChar().dba[var3].ada()) {
+                     Char.getMyChar().dba[var3].aia = var1.aaa().readByte();
                   }
 
-                  fz.ala().dba[var3].aoa = var1.aaa().readBoolean();
-                  fz.ala().dba[var3].aea = var1.aaa().readShort();
+                  Char.getMyChar().dba[var3].aoa = var1.aaa().readBoolean();
+                  Char.getMyChar().dba[var3].aea = var1.aaa().readShort();
                }
             }
 
@@ -1293,10 +1293,10 @@ public final class Controller implements ay {
             for(var7 = 0; var7 < var2; ++var7) {
                var141 = var1.aaa().readUTF();
                Short var143 = new Short(var1.aaa().readShort());
-               var97.addElement(new ca(var141, ab.aja, 88819, var143));
+               var97.addElement(new ca(var141, GameCanvas.aja, 88819, var143));
             }
 
-            ab.bea.aaa(var97);
+            GameCanvas.bea.aaa(var97);
             return;
          case 36:
             GameScr.ava().aaa(var1);
@@ -1311,9 +1311,9 @@ public final class Controller implements ay {
             var93 = var1.aaa().readShort();
 
             for(var3 = 0; var3 < GameScr.boa.size(); ++var3) {
-               if ((var124 = (av)GameScr.boa.elementAt(var3)).aaa.aaa == var93 && var124.equals(fz.ala().dra)) {
+               if ((var124 = (Npc)GameScr.boa.elementAt(var3)).template.aaa == var93 && var124.equals(Char.getMyChar().dra)) {
                   cq.aaa(var133 = var1.aaa().readUTF(), var124);
-                  if (var124.aaa.aaa == 0) {
+                  if (var124.template.aaa == 0) {
                      if (var133.equals("Số lần vào trong hang hôm nay của con đã hết.")) {
                         eu.aea = true;
                         if (Code.aba instanceof eu) {
@@ -1324,18 +1324,18 @@ public final class Controller implements ay {
                            Code.aca();
                         }
 
-                        gn.aha();
+                        TileMap.aha();
                         return;
                      }
 
                      return;
                   } else {
-                     if (var124.aaa.aaa == 5) {
+                     if (var124.template.aaa == 5) {
                         if (var133.equals("Tốt lắm, ngươi đã chọn nơi này làm nơi trở về khi bị trọng thương")) {
                            LockGame.baa();
                            return;
                         }
-                     } else if (var124.aaa.aaa == 25) {
+                     } else if (var124.template.aaa == 25) {
                         if (Code.aba == Code.ada) {
                            cv.aaa(var133);
                         } else if (var133.equals("Hôm nay con đã làm hết nhiệm vụ ta giao. Hãy quay lại vào ngày hôm sau.")) {
@@ -1356,7 +1356,7 @@ public final class Controller implements ay {
             var93 = var1.aaa().readShort();
 
             for(var3 = 0; var3 < GameScr.boa.size(); ++var3) {
-               if ((var124 = (av)GameScr.boa.elementAt(var3)).aaa.aaa == var93 && var124.equals(fz.ala().dra)) {
+               if ((var124 = (Npc)GameScr.boa.elementAt(var3)).template.aaa == var93 && var124.equals(Char.getMyChar().dra)) {
                   cq.aaa(var1.aaa().readUTF(), 1000, var124);
                   String[] var140 = new String[var1.aaa().readByte()];
 
@@ -1373,29 +1373,29 @@ public final class Controller implements ay {
             return;
          case 40:
             br.aca();
-            ab.ala();
-            ab.aka();
+            GameCanvas.ala();
+            GameCanvas.aka();
             var97 = new ev();
 
             try {
                while(true) {
-                  var97.addElement(new ca(var1.aaa().readUTF(), ab.aja, 88822, (Object)null));
+                  var97.addElement(new ca(var1.aaa().readUTF(), GameCanvas.aja, 88822, (Object)null));
                }
             } catch (Exception var90) {
-               if (fz.ala().dra == null) {
+               if (Char.getMyChar().dra == null) {
                   return;
                }
 
-               if (fz.ala().dra.asa == 25) {
+               if (Char.getMyChar().dra.asa == 25) {
                   GameScr.gva = var97.size();
                }
 
-               for(var7 = 0; var7 < fz.ala().dra.aaa.afa.length; ++var7) {
-                  String[] var147 = fz.ala().dra.aaa.afa[var7];
-                  var97.addElement(new ca(var147[0], ab.aja, 88820, var147));
+               for(var7 = 0; var7 < Char.getMyChar().dra.template.afa.length; ++var7) {
+                  String[] var147 = Char.getMyChar().dra.template.afa[var7];
+                  var97.addElement(new ca(var147[0], GameCanvas.aja, 88820, var147));
                }
 
-               ab.bea.aaa(var97);
+               GameCanvas.bea.aaa(var97);
                return;
             }
          case 42:
@@ -1407,7 +1407,7 @@ public final class Controller implements ay {
                if (Code.aba instanceof fv) {
                   Code.afa.aaa(var106.cea, var138);
                } else {
-                  ab.aaa(var106.cea + " " + er.mwa, 88810, var138, 88811, (Object)null);
+                  GameCanvas.aaa(var106.cea + " " + er.mwa, 88810, var138, 88811, (Object)null);
                }
                break;
             }
@@ -1447,7 +1447,7 @@ public final class Controller implements ay {
 
             return;
          case 47:
-            ab.ava = 150;
+            GameCanvas.ava = 150;
             var1.aaa().readShort();
             var102 = var1.aaa().readByte();
             var154 = var1.aaa().readUTF();
@@ -1473,44 +1473,44 @@ public final class Controller implements ay {
             } catch (Exception var88) {
             }
 
-            fz.ala().cza = new cy(var102, var154, var100, var139, var118, var109);
-            fz.ala().aca(21);
-            if (fz.ala().dra != null) {
-               av.aaa();
+            Char.getMyChar().cza = new cy(var102, var154, var100, var139, var118, var109);
+            Char.getMyChar().aca(21);
+            if (Char.getMyChar().dra != null) {
+               Npc.aaa();
             }
 
             LockGame.aqa();
             return;
          case 48:
-            if (fz.ala().cza != null) {
-               ab.ava = 100;
-               ++fz.ala().cza.aaa;
-               fz.ala().cza.afa = 0;
-               if (fz.ala().dra != null && fz.ala().dra.aia != null && fz.ala().cza.aaa >= 2) {
-                  fz.ala().dra.aia = null;
+            if (Char.getMyChar().cza != null) {
+               GameCanvas.ava = 100;
+               ++Char.getMyChar().cza.aaa;
+               Char.getMyChar().cza.afa = 0;
+               if (Char.getMyChar().dra != null && Char.getMyChar().dra.aia != null && Char.getMyChar().cza.aaa >= 2) {
+                  Char.getMyChar().dra.aia = null;
                }
 
-               if (fz.ala().cza.aaa >= fz.ala().cza.aea.length - 1) {
-                  fz.ala().aca(61);
+               if (Char.getMyChar().cza.aaa >= Char.getMyChar().cza.aea.length - 1) {
+                  Char.getMyChar().aca(61);
                } else {
-                  fz.ala().aca(21);
+                  Char.getMyChar().aca(21);
                }
 
-               av.aaa();
+               Npc.aaa();
             }
 
             LockGame.aqa();
             return;
          case 49:
-            ++fz.ala().aua;
-            fz.ala();
-            fz.bea();
+            ++Char.getMyChar().aua;
+            Char.getMyChar();
+            Char.bea();
             return;
          case 50:
-            ab.ava = 50;
-            fz.ala().cza.afa = var1.aaa().readShort();
-            if (fz.ala().dra != null) {
-               av.aaa();
+            GameCanvas.ava = 50;
+            Char.getMyChar().cza.afa = var1.aaa().readShort();
+            if (Char.getMyChar().dra != null) {
+               Npc.aaa();
             }
 
             return;
@@ -1529,12 +1529,12 @@ public final class Controller implements ay {
 
             return;
          case 52:
-            fz.gja = false;
-            fz.gka = false;
-            fz.ala().ala = var1.aaa().readShort();
-            fz.ala().ama = var1.aaa().readShort();
-            fz.ala().gea = fz.ala().ala;
-            fz.ala().gfa = fz.ala().ama;
+            Char.gja = false;
+            Char.gka = false;
+            Char.getMyChar().cx = var1.aaa().readShort();
+            Char.getMyChar().cy = var1.aaa().readShort();
+            Char.getMyChar().gea = Char.getMyChar().cx;
+            Char.getMyChar().gfa = Char.getMyChar().cy;
             return;
          case 53:
             GameScr.ava().bca();
@@ -1560,13 +1560,13 @@ public final class Controller implements ay {
                return;
             }
          case 54:
-            ab.aba().aaa(var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUTF());
+            GameCanvas.aba().aaa(var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUTF());
             return;
          case 55:
-            ab.aba().aaa(var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readShort(), var1.aaa().readUTF(), var1.aaa().readUTF());
+            GameCanvas.aba().aaa(var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readShort(), var1.aaa().readUTF(), var1.aaa().readUTF());
             return;
          case 57:
-            ab.ama();
+            GameCanvas.ama();
             GameScr.ava().bca();
             fv.aaa = true;
             LockGame.bca();
@@ -1576,12 +1576,12 @@ public final class Controller implements ay {
             GameScr.daa = null;
             if (GameScr.ava().eia > 0) {
                (var113 = GameScr.ava()).fda = var113.fda + ", " + GameScr.ava().eia + " " + er.lca;
-               GameScr.aaa("+" + GameScr.ava().eia, fz.ala().ala, fz.ala().ama - fz.ala().cja - 10, 6);
+               GameScr.aaa("+" + GameScr.ava().eia, Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja - 10, 6);
             }
 
             GameScr.ava().eha = GameScr.ava().eia = 0;
             GameScr.ava().bca();
-            fz.ala().cqa = var1.aaa().readInt();
+            Char.getMyChar().cqa = var1.aaa().readInt();
             br.aca();
             if (!GameScr.ava().fda.equals("")) {
                be.aaa(er.loa + " " + GameScr.ava().fda);
@@ -1622,7 +1622,7 @@ public final class Controller implements ay {
             }
 
             if (var99 != null) {
-               if ((gn.aaa(var99.ala, var99.ama) & 2) == 2) {
+               if ((TileMap.aaa(var99.cx, var99.cy) & 2) == 2) {
                   var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 0);
                } else {
                   var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 1);
@@ -1650,7 +1650,7 @@ public final class Controller implements ay {
                      var114 = ac.aaa(var1.aaa().readUnsignedByte());
                      var107[var3] = var114;
                      if (var3 == 0) {
-                        if (var99.ala <= var114.ada) {
+                        if (var99.cx <= var114.ada) {
                            var99.ara = 1;
                         } else {
                            var99.ara = -1;
@@ -1680,7 +1680,7 @@ public final class Controller implements ay {
                return;
             }
 
-            if ((gn.aaa(var99.ala, var99.ama) & 2) == 2) {
+            if ((TileMap.aaa(var99.cx, var99.cy) & 2) == 2) {
                var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 0);
             } else {
                var99.aaa((em)GameScr.aza[var1.aaa().readByte()], 1);
@@ -1700,20 +1700,20 @@ public final class Controller implements ay {
                ef.aaa(60, var99, 1);
             }
 
-            var137 = new fz[10];
+            var137 = new Char[10];
             var3 = 0;
 
             try {
                for(var3 = 0; var3 < 10; ++var3) {
-                  if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-                     var122 = fz.ala();
+                  if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+                     var122 = Char.getMyChar();
                   } else {
                      var122 = GameScr.aea(var6);
                   }
 
                   var137[var3] = var122;
                   if (var3 == 0) {
-                     if (var99.ala <= var122.ala) {
+                     if (var99.cx <= var122.cx) {
                         var99.ara = 1;
                      } else {
                         var99.ara = -1;
@@ -1727,7 +1727,7 @@ public final class Controller implements ay {
                return;
             }
 
-            var99.dwa = new fz[var3];
+            var99.dwa = new Char[var3];
 
             for(var3 = 0; var3 < var99.dwa.length; ++var3) {
                var99.dwa[var3] = var137[var3];
@@ -1736,8 +1736,8 @@ public final class Controller implements ay {
             var99.dsa = var99.dwa[0];
             return;
          case 62:
-            if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-               (var99 = fz.ala()).bba = var1.aaa().readInt();
+            if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+               (var99 = Char.getMyChar()).bba = var1.aaa().readInt();
                var6 = var1.aaa().readInt();
                var7 = 0;
 
@@ -1748,14 +1748,14 @@ public final class Controller implements ay {
                }
 
                if ((var6 += var7) == 0) {
-                  GameScr.aaa("", var99.ala, var99.ama - var99.cja, 7);
+                  GameScr.aaa("", var99.cx, var99.cy - var99.cja, 7);
                } else if (var6 < 0) {
-                  GameScr.aaa("-" + -var6, var99.ala, var99.ama - var99.cja, 8);
+                  GameScr.aaa("-" + -var6, var99.cx, var99.cy - var99.cja, 8);
                } else {
-                  GameScr.aaa("-".concat(String.valueOf(var6)), var99.ala, var99.ama - var99.cja, 0);
+                  GameScr.aaa("-".concat(String.valueOf(var6)), var99.cx, var99.cy - var99.cja, 0);
                }
 
-               if (fz.ala().bba < fz.ala().bea / 2) {
+               if (Char.getMyChar().bba < Char.getMyChar().bea / 2) {
                   System.out.println("Bi PK: ".concat(String.valueOf(var6)));
                   break;
                }
@@ -1777,11 +1777,11 @@ public final class Controller implements ay {
                }
 
                if ((var6 += var7) == 0) {
-                  GameScr.aaa("", var99.ala, var99.ama - var99.cja, 4);
+                  GameScr.aaa("", var99.cx, var99.cy - var99.cja, 4);
                } else if (var6 < 0) {
-                  GameScr.aaa("-" + -var6, var99.ala, var99.ama - var99.cja, 3);
+                  GameScr.aaa("-" + -var6, var99.cx, var99.cy - var99.cja, 3);
                } else {
-                  GameScr.aaa("-".concat(String.valueOf(var6)), var99.ala, var99.ama - var99.cja, 5);
+                  GameScr.aaa("-".concat(String.valueOf(var6)), var99.cx, var99.cy - var99.cja, 5);
                }
                break;
             }
@@ -1790,15 +1790,15 @@ public final class Controller implements ay {
 
             while(true) {
                try {
-                  var97.addElement(new ca(var1.aaa().readUTF(), ab.aja, 88817, (Object)null));
+                  var97.addElement(new ca(var1.aaa().readUTF(), GameCanvas.aja, 88817, (Object)null));
                } catch (Exception var81) {
-                  ab.bea.aaa(var97);
+                  GameCanvas.bea.aaa(var97);
                   return;
                }
             }
          case 64:
-            if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-               var106 = fz.ala();
+            if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+               var106 = Char.getMyChar();
             } else {
                var106 = GameScr.aea(var6);
             }
@@ -1812,14 +1812,14 @@ public final class Controller implements ay {
             var106.gna = false;
 
             try {
-               if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-                  var106 = fz.ala();
+               if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+                  var106 = Char.getMyChar();
                } else {
                   var106 = GameScr.aea(var6);
                }
 
-               var106.ala = var109;
-               var106.ama = var93;
+               var106.cx = var109;
+               var106.cy = var93;
             } catch (Exception var61) {
                var61.printStackTrace();
             }
@@ -1827,39 +1827,39 @@ public final class Controller implements ay {
             return;
          case 65:
             if ((var106 = GameScr.aea(var1.aaa().readInt())) != null) {
-               ab.aaa(var106.cea + " " + er.mza, 88812, var106, 8882, (Object)null);
+               GameCanvas.aaa(var106.cea + " " + er.mza, 88812, var106, 8882, (Object)null);
             }
 
             return;
          case 66:
             var3 = var1.aaa().readInt();
             var6 = var1.aaa().readInt();
-            if (var3 != fz.ala().asa && var6 != fz.ala().asa) {
+            if (var3 != Char.getMyChar().asa && var6 != Char.getMyChar().asa) {
                GameScr.aea(var3).dya = var6;
                GameScr.aea(var6).dya = var3;
                return;
             }
 
-            if (var3 == fz.ala().asa) {
-               fz.ala().dya = var6;
-               fz.ala().dra = null;
-               fz.ala().dpa = null;
-               fz.ala().dta = null;
-               fz.ala().dsa = GameScr.aea(fz.ala().dya);
-               fz.ala().dsa.dya = fz.ala().asa;
+            if (var3 == Char.getMyChar().asa) {
+               Char.getMyChar().dya = var6;
+               Char.getMyChar().dra = null;
+               Char.getMyChar().dpa = null;
+               Char.getMyChar().dta = null;
+               Char.getMyChar().dsa = GameScr.aea(Char.getMyChar().dya);
+               Char.getMyChar().dsa.dya = Char.getMyChar().asa;
                GameScr.ava().ela = GameScr.ava().eka;
                GameScr.ava().eka = var6;
-               fz.hda = true;
-            } else if (var6 == fz.ala().asa) {
-               fz.ala().dya = var3;
-               fz.ala().dra = null;
-               fz.ala().dpa = null;
-               fz.ala().dta = null;
-               fz.ala().dsa = GameScr.aea(fz.ala().dya);
-               fz.ala().dsa.dya = fz.ala().asa;
+               Char.hda = true;
+            } else if (var6 == Char.getMyChar().asa) {
+               Char.getMyChar().dya = var3;
+               Char.getMyChar().dra = null;
+               Char.getMyChar().dpa = null;
+               Char.getMyChar().dta = null;
+               Char.getMyChar().dsa = GameScr.aea(Char.getMyChar().dya);
+               Char.getMyChar().dsa.dya = Char.getMyChar().asa;
                GameScr.ava().ela = GameScr.ava().eka;
                GameScr.ava().eka = var3;
-               fz.hda = true;
+               Char.hda = true;
                break;
             }
 
@@ -1874,12 +1874,12 @@ public final class Controller implements ay {
             } catch (Exception var60) {
             }
 
-            if (var3 == fz.ala().asa) {
+            if (var3 == Char.getMyChar().asa) {
                var99 = GameScr.aea(var6);
                if (var7 > 0) {
                   be.aaa(er.aaa(er.kaa, var99.cea));
-                  fz.ala().bba = var7;
-                  fz.ala().eaa = 29;
+                  Char.getMyChar().bba = var7;
+                  Char.getMyChar().eaa = 29;
                   if (var99 != null) {
                      var99.eaa = 89;
                   }
@@ -1888,12 +1888,12 @@ public final class Controller implements ay {
                      var99.eaa = 59;
                   }
 
-                  fz.ala().eaa = 59;
+                  Char.getMyChar().eaa = 59;
                   be.aaa(er.aaa(er.kba, var99.cea));
                }
 
-               fz.ala().dya = -9999;
-               fz.ala().dsa = null;
+               Char.getMyChar().dya = -9999;
+               Char.getMyChar().dsa = null;
                if (GameScr.ava().ela >= 0) {
                   GameScr.ava().eka = GameScr.ava().ela;
                   GameScr.ava().ela = -1;
@@ -1908,7 +1908,7 @@ public final class Controller implements ay {
 
                return;
             } else {
-               if (var6 == fz.ala().asa) {
+               if (var6 == Char.getMyChar().asa) {
                   var99 = GameScr.aea(var3);
                   if (var7 > 0) {
                      if (var99 != null) {
@@ -1919,14 +1919,14 @@ public final class Controller implements ay {
                         var99.eaa = 29;
                      }
 
-                     fz.ala().eaa = 89;
+                     Char.getMyChar().eaa = 89;
                      be.aaa(er.aaa(er.jza, var99.cea));
                   } else {
                      if (var99 != null) {
                         var99.eaa = 59;
                      }
 
-                     fz.ala().eaa = 59;
+                     Char.getMyChar().eaa = 59;
                      be.aaa(er.aaa(er.kba, var99.cea));
                   }
 
@@ -1934,8 +1934,8 @@ public final class Controller implements ay {
                      var99.dya = -9999;
                   }
 
-                  fz.ala().dya = -9999;
-                  fz.ala().dsa = null;
+                  Char.getMyChar().dya = -9999;
+                  Char.getMyChar().dsa = null;
                   if (GameScr.ava().ela >= 0) {
                      GameScr.ava().eka = GameScr.ava().ela;
                      GameScr.ava().ela = -1;
@@ -1944,7 +1944,7 @@ public final class Controller implements ay {
                   }
                } else {
                   var122 = GameScr.aea(var3);
-                  fz var130 = GameScr.aea(var6);
+                  Char var130 = GameScr.aea(var6);
                   if (var7 > 0) {
                      if (var122 != null) {
                         var122.bba = var7;
@@ -1979,27 +1979,27 @@ public final class Controller implements ay {
             }
          case 68:
             if ((var99 = GameScr.aea(var1.aaa().readInt())) != null) {
-               var99.dza = fz.ala().asa;
+               var99.dza = Char.getMyChar().asa;
                Auto.aba(var99);
-               fz.ala().dra = null;
-               fz.ala().dpa = null;
-               fz.ala().dta = null;
-               fz.ala().dsa = var99;
-               fz.hda = true;
+               Char.getMyChar().dra = null;
+               Char.getMyChar().dpa = null;
+               Char.getMyChar().dta = null;
+               Char.getMyChar().dsa = var99;
+               Char.hda = true;
                be.aaa(var99.cea + er.kda, 20, fw.ana);
             }
 
             return;
          case 69:
-            fz.ala().dza = var1.aaa().readInt();
-            fz.ala().dra = null;
-            fz.ala().dpa = null;
-            fz.ala().dta = null;
-            fz.ala().dsa = GameScr.aea(fz.ala().dza);
-            fz.hda = true;
+            Char.getMyChar().dza = var1.aaa().readInt();
+            Char.getMyChar().dra = null;
+            Char.getMyChar().dpa = null;
+            Char.getMyChar().dta = null;
+            Char.getMyChar().dsa = GameScr.aea(Char.getMyChar().dza);
+            Char.hda = true;
             return;
          case 70:
-            var99 = fz.ala();
+            var99 = Char.getMyChar();
 
             try {
                var99 = GameScr.aea(var1.aaa().readInt());
@@ -2010,16 +2010,16 @@ public final class Controller implements ay {
             return;
          case 71:
             var119 = var1.aaa().readLong();
-            var10000 = fz.ala();
+            var10000 = Char.getMyChar();
             var10000.aka -= var119;
-            GameScr.aaa("+".concat(String.valueOf(var119)), fz.ala().ala, fz.ala().ama - fz.ala().cja, 2);
+            GameScr.aaa("+".concat(String.valueOf(var119)), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja, 2);
             return;
          case 72:
-            fz.ala().dka = var1.aaa().readByte();
-            fz.ala().aaa(var1.aaa().readShort(), var1.aaa().readShort());
-            fz.ala().aja = GameScr.aba(fz.ala().aya - 1);
-            fz.ala().aka = var1.aaa().readLong();
-            GameScr.aaa(fz.ala().aja);
+            Char.getMyChar().dka = var1.aaa().readByte();
+            Char.getMyChar().aaa(var1.aaa().readShort(), var1.aaa().readShort());
+            Char.getMyChar().aja = GameScr.aba(Char.getMyChar().aya - 1);
+            Char.getMyChar().aka = var1.aaa().readLong();
+            GameScr.aaa(Char.getMyChar().aja);
             return;
          case 75:
             var142 = new fn(var1.aaa().readUTF(), var1.aaa().readShort(), var1.aaa().readShort());
@@ -2058,8 +2058,8 @@ public final class Controller implements ay {
                ef.aaa(60, var135.ada, var135.aea, 1);
                am var126 = new am(var1.aaa().readShort(), var1.aaa().readShort(), var135.ada, var135.aea, var1.aaa().readShort(), var1.aaa().readShort());
                GameScr.bma.addElement(var126);
-               if (ci.aea(var126.aba - fz.ala().ama) < 24 && ci.aea(var126.aaa - fz.ala().ala) < 24) {
-                  fz.ala().dsa = null;
+               if (ci.aea(var126.aba - Char.getMyChar().cy) < 24 && ci.aea(var126.aaa - Char.getMyChar().cx) < 24) {
+                  Char.getMyChar().dsa = null;
                   break;
                }
             }
@@ -2072,7 +2072,7 @@ public final class Controller implements ay {
                return;
             }
 
-            ab.aaa(var4 + " " + er.nba, 8887, var3, 8888, var3);
+            GameCanvas.aaa(var4 + " " + er.nba, 8887, var3, 8888, var3);
             return;
          case 82:
             GameScr.bfa.removeAllElements();
@@ -2140,8 +2140,8 @@ public final class Controller implements ay {
 
             return;
          case 87:
-            if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-               var99 = fz.ala();
+            if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+               var99 = Char.getMyChar();
             } else {
                var99 = GameScr.aea(var6);
             }
@@ -2178,16 +2178,16 @@ public final class Controller implements ay {
             var99.dqa.aaa(var109, var2, var102);
             return;
          case 88:
-            if ((var6 = var1.aaa().readInt()) == fz.ala().asa) {
-               var99 = fz.ala();
+            if ((var6 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+               var99 = Char.getMyChar();
             } else if ((var99 = GameScr.aea(var6)) == null) {
                return;
             }
 
             var99.bba = var99.bea;
             var99.aza = var99.baa;
-            var99.ala = var1.aaa().readShort();
-            var99.ama = var1.aaa().readShort();
+            var99.cx = var1.aaa().readShort();
+            var99.cy = var1.aaa().readShort();
             var99.bda();
             return;
          case 89:
@@ -2215,16 +2215,16 @@ public final class Controller implements ay {
          case 92:
             var94 = var1.aaa().readUTF();
             Short var129 = new Short(var1.aaa().readShort());
-            ab.bka.aaa(var94, new ca(er.ega, ab.aja, 88818, var129), 0);
+            GameCanvas.bka.aaa(var94, new ca(er.ega, GameCanvas.aja, 88818, var129), 0);
             return;
          case 93:
             var6 = var1.aaa().readInt();
-            GameScr.dsa = new fz();
-            if (fz.ala().asa == var6) {
-               GameScr.dsa = fz.ala();
+            GameScr.dsa = new Char();
+            if (Char.getMyChar().asa == var6) {
+               GameScr.dsa = Char.getMyChar();
             } else {
                if ((var99 = GameScr.aea(var6)) == null) {
-                  GameScr.dsa = new fz();
+                  GameScr.dsa = new Char();
                } else {
                   GameScr.dsa = var99;
                }
@@ -2315,24 +2315,24 @@ public final class Controller implements ay {
             return;
          case 95:
             var95 = var1.aaa().readInt();
-            var10000 = fz.ala();
+            var10000 = Char.getMyChar();
             var10000.cqa += var95;
-            GameScr.aaa(var95 > 0 ? "+".concat(String.valueOf(var95)) : String.valueOf(var95), fz.ala().ala, fz.ala().ama - fz.ala().cja - 10, 1);
+            GameScr.aaa(var95 > 0 ? "+".concat(String.valueOf(var95)) : String.valueOf(var95), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja - 10, 1);
             return;
          case 96:
-            fz.ala().fza.addElement(new aj(var1.aaa().readByte(), var1.aaa().readInt(), var1.aaa().readInt(), var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUnsignedByte(), var1.aaa().readUnsignedByte()));
-            fz.ala().aca(21);
+            Char.getMyChar().fza.addElement(new aj(var1.aaa().readByte(), var1.aaa().readInt(), var1.aaa().readInt(), var1.aaa().readUTF(), var1.aaa().readUTF(), var1.aaa().readUnsignedByte(), var1.aaa().readUnsignedByte()));
+            Char.getMyChar().aca(21);
             LockGame.ama();
             return;
          case 97:
             var2 = var1.aaa().readByte();
 
-            for(var3 = 0; var3 < fz.ala().fza.size(); ++var3) {
+            for(var3 = 0; var3 < Char.getMyChar().fza.size(); ++var3) {
                aj var121;
-               if ((var121 = (aj)fz.ala().fza.elementAt(var3)).aaa == var2) {
+               if ((var121 = (aj)Char.getMyChar().fza.elementAt(var3)).aaa == var2) {
                   var121.aba = var1.aaa().readInt();
                   if (var121.aba == var121.aca) {
-                     fz.ala().aca(61);
+                     Char.getMyChar().aca(61);
                   }
 
                   if (var121.aaa == 0) {
@@ -2347,14 +2347,14 @@ public final class Controller implements ay {
          case 98:
             var2 = var1.aaa().readByte();
 
-            for(var3 = 0; var3 < fz.ala().fza.size(); ++var3) {
-               if (((aj)fz.ala().fza.elementAt(var3)).aaa == var2) {
-                  fz.ala().fza.removeElementAt(var3);
+            for(var3 = 0; var3 < Char.getMyChar().fza.size(); ++var3) {
+               if (((aj)Char.getMyChar().fza.elementAt(var3)).aaa == var2) {
+                  Char.getMyChar().fza.removeElementAt(var3);
                   break;
                }
             }
 
-            fz.ala().aca(21);
+            Char.getMyChar().aca(21);
             LockGame.aoa();
             return;
          case 99:
@@ -2372,7 +2372,7 @@ public final class Controller implements ay {
                return;
             }
 
-            ab.aaa(var106.cea + " " + er.naa, 88840, var106, 8882, (Object)null);
+            GameCanvas.aaa(var106.cea + " " + er.naa, 88840, var106, 8882, (Object)null);
             return;
          case 100:
             GameScr.bia.removeAllElements();
@@ -2402,11 +2402,11 @@ public final class Controller implements ay {
 
             return;
          case 102:
-            if ((var101 = fz.ala().arrItemBag[var1.aaa().readByte()]) != null) {
+            if ((var101 = Char.getMyChar().arrItemBag[var1.aaa().readByte()]) != null) {
                GameScr.dha = var101;
             }
 
-            fz.ala().cqa = var1.aaa().readInt();
+            Char.getMyChar().cqa = var1.aaa().readInt();
             if (GameScr.dha != null) {
                if (GameScr.dha.aaa.aba == 16) {
                   GameScr.aya -= GameScr.dha.aea;
@@ -2416,13 +2416,13 @@ public final class Controller implements ay {
                   GameScr.axa -= GameScr.dha.aea;
                }
 
-               fz.ala().arrItemBag[GameScr.dha.ada] = null;
+               Char.getMyChar().arrItemBag[GameScr.dha.ada] = null;
                GameScr.dha = null;
                GameScr.ava().bca();
                be.aaa(er.rha);
             }
 
-            ab.ama();
+            GameCanvas.ama();
             return;
          case 103:
             GameScr.bta = var1.aaa().readByte();
@@ -2447,21 +2447,21 @@ public final class Controller implements ay {
             return;
          case 106:
             if ((var106 = GameScr.aea(var1.aaa().readInt())) != null) {
-               ab.aaa(var106.cea + " " + er.rva, 88841, var106, 8882, (Object)null);
+               GameCanvas.aaa(var106.cea + " " + er.rva, 88841, var106, 8882, (Object)null);
             }
 
             return;
          case 107:
             var102 = var1.aaa().readByte();
-            ab.aaa(var1.aaa().readUTF(), 8890, Integer.valueOf(var102), 8882, (Object)null);
+            GameCanvas.aaa(var1.aaa().readUTF(), 8890, Integer.valueOf(var102), 8882, (Object)null);
             return;
          case 108:
-            fz.ala().aba(var1);
+            Char.getMyChar().aba(var1);
             return;
          case 109:
             br.aca();
-            ab.ala();
-            ab.aka();
+            GameCanvas.ala();
+            GameCanvas.aka();
             var97 = new ev();
 
             try {
@@ -2474,19 +2474,19 @@ public final class Controller implements ay {
                      var110[var95] = var1.aaa().readUTF();
                   }
 
-                  var97.addElement(new ca(var110[0], ab.aja, 88820, var110));
+                  var97.addElement(new ca(var110[0], GameCanvas.aja, 88820, var110));
                }
             } catch (Exception var80) {
             }
 
-            if (fz.ala().dra == null) {
+            if (Char.getMyChar().dra == null) {
                return;
             }
 
-            ab.bea.aaa(var97);
+            GameCanvas.bea.aaa(var97);
             return;
          case 112:
-            (var101 = fz.ala().arrItemBag[var1.aaa().readByte()]).aia = var1.aaa().readByte();
+            (var101 = Char.getMyChar().arrItemBag[var1.aaa().readByte()]).aia = var1.aaa().readByte();
             var101.afa = 0L;
             return;
          case 114:
@@ -2499,10 +2499,10 @@ public final class Controller implements ay {
 
             return;
          case 117:
-            if (!ab.aaa) {
+            if (!GameCanvas.aaa) {
                try {
                   ac.aza.removeAllElements();
-                  gn.axa.clear();
+                  TileMap.axa.clear();
                   GameScr.fna.removeAllElements();
                   GameScr.foa.removeAllElements();
                   GameScr.fma.removeAllElements();
@@ -2513,7 +2513,7 @@ public final class Controller implements ay {
                      byte[] var103 = new byte[var1.aaa().readInt()];
                      var1.aaa().read(var103);
                      Image var104 = aaa(var103);
-                     gn.axa.put(var4, var104);
+                     TileMap.axa.put(var4, var104);
                   }
 
                   var6 = var1.aaa().readUnsignedByte();
@@ -2578,17 +2578,17 @@ public final class Controller implements ay {
                   GameScr.fva = true;
                } else {
                   GameScr.fva = false;
-                  GameScr.goa = fz.ala().ala;
-                  GameScr.gpa = fz.ala().ama;
+                  GameScr.goa = Char.getMyChar().cx;
+                  GameScr.gpa = Char.getMyChar().cy;
                }
             } else if (var102 == 0) {
                if ((var99 = GameScr.aea(var1.aaa().readInt())) != null) {
-                  ef.aaa(141, var99.ala, var99.ama, 2);
+                  ef.aaa(141, var99.cx, var99.cy, 2);
                   var93 = var1.aaa().readShort();
                   var99.gga = var93;
                   var93 = var1.aaa().readShort();
                   var99.gha = var93;
-                  ef.aaa(141, var99.ala, var99.ama, 2);
+                  ef.aaa(141, var99.cx, var99.cy, 2);
                }
             } else {
                GameScr.fua = false;
@@ -2648,7 +2648,7 @@ public final class Controller implements ay {
             }
          case 126:
             var5 = var1.aaa().readByte();
-            ab.ama();
+            GameCanvas.ama();
             if (var5 == 0) {
                GameScr.aaa.bca();
             }
@@ -2711,7 +2711,7 @@ public final class Controller implements ay {
             GameScr.bqa[var1].aca[var2].ada = var0.readByte();
             GameScr.bqa[var1].aca[var2].aea = var0.readShort();
             short var3 = 150;
-            if (ab.aza == 128 || ab.baa <= 208) {
+            if (GameCanvas.aza == 128 || GameCanvas.baa <= 208) {
                var3 = 100;
             }
 
@@ -2746,30 +2746,30 @@ public final class Controller implements ay {
 
    private static void aca(DataInputStream var0) {
       GameScr.epa = var0.readByte();
-      gn.ava = new String[var0.readUnsignedByte()];
+      TileMap.ava = new String[var0.readUnsignedByte()];
 
       int var1;
-      for(var1 = 0; var1 < gn.ava.length; ++var1) {
-         gn.ava[var1] = var0.readUTF();
+      for(var1 = 0; var1 < TileMap.ava.length; ++var1) {
+         TileMap.ava[var1] = var0.readUTF();
       }
 
-      av.aba = new cm[var0.readByte()];
+      Npc.arrNpcTemplate = new cm[var0.readByte()];
 
       int var2;
-      for(byte var4 = 0; var4 < av.aba.length; ++var4) {
-         av.aba[var4] = new cm();
-         av.aba[var4].aaa = var4;
-         av.aba[var4].aba = var0.readUTF();
-         av.aba[var4].aca = var0.readShort();
-         av.aba[var4].ada = var0.readShort();
-         av.aba[var4].aea = var0.readShort();
-         av.aba[var4].afa = new String[var0.readByte()][];
+      for(byte var4 = 0; var4 < Npc.arrNpcTemplate.length; ++var4) {
+         Npc.arrNpcTemplate[var4] = new cm();
+         Npc.arrNpcTemplate[var4].aaa = var4;
+         Npc.arrNpcTemplate[var4].aba = var0.readUTF();
+         Npc.arrNpcTemplate[var4].aca = var0.readShort();
+         Npc.arrNpcTemplate[var4].ada = var0.readShort();
+         Npc.arrNpcTemplate[var4].aea = var0.readShort();
+         Npc.arrNpcTemplate[var4].afa = new String[var0.readByte()][];
 
-         for(var2 = 0; var2 < av.aba[var4].afa.length; ++var2) {
-            av.aba[var4].afa[var2] = new String[var0.readByte()];
+         for(var2 = 0; var2 < Npc.arrNpcTemplate[var4].afa.length; ++var2) {
+            Npc.arrNpcTemplate[var4].afa[var2] = new String[var0.readByte()];
 
-            for(int var3 = 0; var3 < av.aba[var4].afa[var2].length; ++var3) {
-               av.aba[var4].afa[var2][var3] = var0.readUTF();
+            for(int var3 = 0; var3 < Npc.arrNpcTemplate[var4].afa[var2].length; ++var3) {
+               Npc.arrNpcTemplate[var4].afa[var2][var3] = var0.readUTF();
             }
          }
       }
@@ -2899,15 +2899,15 @@ public final class Controller implements ay {
          Auto.aia();
          Auto.aja();
          Auto.ava = false;
-         fz var1;
-         (var1 = fz.ala()).ada = null;
-         var1.ala = var1.gea = var0.ada.readShort();
-         var1.ama = var1.gfa = var0.ada.readShort();
+         Char var1;
+         (var1 = Char.getMyChar()).ada = null;
+         var1.cx = var1.gea = var0.ada.readShort();
+         var1.cy = var1.gfa = var0.ada.readShort();
          byte var10 = var0.ada.readByte();
 
          int var2;
          for(var2 = 0; var2 < var10; ++var2) {
-            gn.aua.addElement(new dn(var0.ada.readShort(), var0.ada.readShort(), var0.ada.readShort(), var0.ada.readShort()));
+            TileMap.aua.addElement(new dn(var0.ada.readShort(), var0.ada.readShort(), var0.ada.readShort(), var0.ada.readShort()));
          }
 
          Auto.aia();
@@ -2927,7 +2927,7 @@ public final class Controller implements ay {
          var10 = var0.ada.readByte();
 
          for(var2 = 0; var2 < var10; ++var2) {
-            GameScr.boa.addElement(new av(var0.ada.readByte(), var0.ada.readShort(), var0.ada.readShort(), var0.ada.readByte()));
+            GameScr.boa.addElement(new Npc(var0.ada.readByte(), var0.ada.readShort(), var0.ada.readShort(), var0.ada.readByte()));
          }
 
          var10 = var0.ada.readByte();
@@ -2951,33 +2951,33 @@ public final class Controller implements ay {
          GameScr.aaa(false);
 
          try {
-            gn.aja = null;
-            gn.aka = gn.aja = var0.ada.readUTF();
+            TileMap.aja = null;
+            TileMap.aka = TileMap.aja = var0.ada.readUTF();
          } catch (Exception var6) {
          }
 
          try {
-            gn.awa.clear();
+            TileMap.awa.clear();
             var2 = var0.ada.readUnsignedByte();
 
             for(int var14 = 0; var14 < var2; ++var14) {
                int var15 = var0.ada.readUnsignedByte();
-               String var12 = String.valueOf((short)(var0.ada.readUnsignedByte() * gn.aaa + var15));
-               gn.awa.put(var12, "location");
+               String var12 = String.valueOf((short)(var0.ada.readUnsignedByte() * TileMap.aaa + var15));
+               TileMap.awa.put(var12, "location");
             }
          } catch (Exception var7) {
             var7.printStackTrace();
          }
 
-         gn.aaa(gn.aea);
-         fz.ala().ana = 0;
-         fz.ala().aqa = 4;
+         TileMap.aaa(TileMap.aea);
+         Char.getMyChar().ana = 0;
+         Char.getMyChar().aqa = 4;
          GameScr var9 = GameScr.ava();
          if (GameScr.gga == null) {
             GameScr.gga = new Image[3];
 
             for(int var13 = 0; var13 < 3; ++var13) {
-               GameScr.gga[var13] = ab.aca("/e/sp" + var13 + ".png");
+               GameScr.gga[var13] = GameCanvas.aca("/e/sp" + var13 + ".png");
             }
          }
 
@@ -2989,25 +2989,25 @@ public final class Controller implements ay {
          GameScr.gda[0] = GameScr.gda[1] = -1;
          var9.bha();
          ci.aba();
-         ab.aaa(gn.ama);
-         fz.gka = false;
-         fz.gja = false;
-         ab.ala();
-         ab.aka();
-         if (!gn.bfa || gn.bea == gn.aoa) {
+         GameCanvas.aaa(TileMap.ama);
+         Char.gka = false;
+         Char.gja = false;
+         GameCanvas.ala();
+         GameCanvas.aka();
+         if (!TileMap.bfa || TileMap.bea == TileMap.mapID) {
             GameScr.ava().aaa();
             br.aca();
-            br.aaa(gn.aka, er.nfa + " " + gn.ala, 30);
+            br.aaa(TileMap.aka, er.nfa + " " + TileMap.zoneID, 30);
             ep.aaa();
-            ab.ama();
+            GameCanvas.ama();
          }
 
          cs.afa();
-         ab.aea = false;
+         GameCanvas.aea = false;
       } catch (Exception var8) {
       }
 
-      gn.aha();
+      TileMap.aha();
    }
 
    private void aea(fe var1) {
@@ -3016,7 +3016,7 @@ public final class Controller implements ay {
             int var2;
             byte var3;
             short var4;
-            fz var34;
+            Char var34;
             String var35;
             int var36;
             byte[] var47;
@@ -3033,7 +3033,7 @@ public final class Controller implements ay {
                var50.afa = new int[3];
                var50.aha = new String[3];
                var50.aia = new byte[3];
-               if (ab.afa) {
+               if (GameCanvas.afa) {
                   var50.aaa = -1;
                } else {
                   var50.aaa = 0;
@@ -3074,7 +3074,7 @@ public final class Controller implements ay {
                }
 
                cl.aea().aaa();
-               ab.ama();
+               GameCanvas.ama();
                cs.afa();
                return;
             case -125:
@@ -3221,7 +3221,7 @@ public final class Controller implements ay {
                var1.aaa().reset();
                var47 = new byte[var1.aaa().available()];
                var1.aaa().readFully(var47);
-               if (fz.ala().aea) {
+               if (Char.getMyChar().aea) {
                   fd.aaa("skill", var47);
                } else {
                   fd.aaa("skillnhanban", var47);
@@ -3256,13 +3256,13 @@ public final class Controller implements ay {
                   return;
                }
             case -117:
-               fz.ala().dka = var1.aaa().readByte();
-               dy.aaa(er.jha + " " + fz.ala().dka, 15, fw.ala);
-               fz.ala().aca(21);
+               Char.getMyChar().dka = var1.aaa().readByte();
+               dy.aaa(er.jha + " " + Char.getMyChar().dka, 15, fw.ala);
+               Char.getMyChar().aca(21);
                return;
             case -116:
-               fz.ala().cqa = var1.aaa().readInt();
-               fz.cha.aga = var1.aaa().readInt();
+               Char.getMyChar().cqa = var1.aaa().readInt();
+               Char.cha.aga = var1.aaa().readInt();
                return;
             case -115:
                var2 = var1.aaa().readInt();
@@ -3270,32 +3270,32 @@ public final class Controller implements ay {
                fo.aaa(var2, var39);
                return;
             case -114:
-               if (fz.cha == null) {
-                  fz.cha = new dj();
+               if (Char.cha == null) {
+                  Char.cha = new dj();
                }
 
-               fz.cha.aaa(var1.aaa().readUTF());
+               Char.cha.aaa(var1.aaa().readUTF());
                return;
             case -113:
-               if (fz.cha == null) {
-                  fz.cha = new dj();
+               if (Char.cha == null) {
+                  Char.cha = new dj();
                }
 
-               fz.cha.aaa = var1.aaa().readUTF();
-               fz.cha.aja = var1.aaa().readUTF();
+               Char.cha.aaa = var1.aaa().readUTF();
+               Char.cha.aja = var1.aaa().readUTF();
                var1.aaa().readUTF();
-               fz.cha.ana = var1.aaa().readShort();
-               fz.cha.afa = var1.aaa().readByte();
-               fz.cha.ada = var1.aaa().readByte();
-               fz.cha.aba = var1.aaa().readInt();
-               fz.cha.aca = var1.aaa().readInt();
-               fz.cha.aga = var1.aaa().readInt();
-               fz.cha.aha = var1.aaa().readInt();
-               fz.cha.aia = var1.aaa().readInt();
-               fz.cha.aka = var1.aaa().readUTF();
-               fz.cha.ama = var1.aaa().readUTF();
-               fz.cha.aoa = var1.aaa().readInt();
-               fz.cha.aea = var1.aaa().readByte();
+               Char.cha.ana = var1.aaa().readShort();
+               Char.cha.afa = var1.aaa().readByte();
+               Char.cha.ada = var1.aaa().readByte();
+               Char.cha.aba = var1.aaa().readInt();
+               Char.cha.aca = var1.aaa().readInt();
+               Char.cha.aga = var1.aaa().readInt();
+               Char.cha.aha = var1.aaa().readInt();
+               Char.cha.aia = var1.aaa().readInt();
+               Char.cha.aka = var1.aaa().readUTF();
+               Char.cha.ama = var1.aaa().readUTF();
+               Char.cha.aoa = var1.aaa().readInt();
+               Char.cha.aea = var1.aaa().readByte();
                return;
             case -112:
                GameScr.bea.removeAllElements();
@@ -3316,15 +3316,15 @@ public final class Controller implements ay {
                GameScr.bfa();
                return;
             case -111:
-               fz.cha.apa = new gg[30];
+               Char.cha.apa = new gg[30];
                var3 = var1.aaa().readByte();
 
                for(var2 = 0; var2 < var3; ++var2) {
-                  fz.cha.apa[var2] = new gg();
-                  fz.cha.apa[var2].ana = 39;
-                  fz.cha.apa[var2].ada = var2;
-                  fz.cha.apa[var2].aea = var1.aaa().readShort();
-                  fz.cha.apa[var2].aaa = gi.aaa(var1.aaa().readShort());
+                  Char.cha.apa[var2] = new gg();
+                  Char.cha.apa[var2].ana = 39;
+                  Char.cha.apa[var2].ada = var2;
+                  Char.cha.apa[var2].aea = var1.aaa().readShort();
+                  Char.cha.apa[var2].aaa = gi.aaa(var1.aaa().readShort());
                }
 
                GameScr.ava().bva();
@@ -3359,12 +3359,12 @@ public final class Controller implements ay {
                return;
             case -109:
                try {
-                  ab.aea = true;
-                  gn.afa = null;
-                  gn.aga = null;
+                  GameCanvas.aea = true;
+                  TileMap.afa = null;
+                  TileMap.aga = null;
                   System.gc();
-                  gn.aaa(gn.aoa, var1.aaa());
-                  gn.aia();
+                  TileMap.aaa(TileMap.mapID, var1.aaa());
+                  TileMap.aia();
                   ada(this.aba);
                } catch (Exception var26) {
                   var26.printStackTrace();
@@ -3463,68 +3463,68 @@ public final class Controller implements ay {
                GameScr.fga = var1.aaa().readByte();
                return;
             case -99:
-               ab.bla.aaa(er.bta, er.bua);
+               GameCanvas.bla.aaa(er.bta, er.bua);
                var35 = var1.aaa().readUTF();
-               ab.bla.aaa(var35, new ca(er.bma, ab.aja, 8882, (Object)null), new ca(er.bya, ab.aja, 88816, (Object)null), 0, 1);
+               GameCanvas.bla.aaa(var35, new ca(er.bma, GameCanvas.aja, 8882, (Object)null), new ca(er.bya, GameCanvas.aja, 88816, (Object)null), 0, 1);
                return;
             case -98:
-               fz.ala();
-               fz.bea();
+               Char.getMyChar();
+               Char.bea();
                return;
             case -97:
-               ab.aea = false;
-               ab.ama();
+               GameCanvas.aea = false;
+               GameCanvas.ama();
                Integer var7 = new Integer(var1.aaa().readInt());
-               ab.bka.aaa(er.fca, new ca(er.dca, ab.aja, 88829, var7), 0);
+               GameCanvas.bka.aaa(er.fca, new ca(er.dca, GameCanvas.aja, 88829, var7), 0);
                return;
             case -96:
-               fz.ala().cfa = var1.aaa().readUTF();
-               fz.ala().cga = 4;
-               fz.ala().cta = var1.aaa().readInt();
-               fz.ala().aca(21);
+               Char.getMyChar().cfa = var1.aaa().readUTF();
+               Char.getMyChar().cga = 4;
+               Char.getMyChar().cta = var1.aaa().readInt();
+               Char.getMyChar().aca(21);
                return;
             case -95:
-               if (fz.cha != null) {
-                  fz.cha.ama = var1.aaa().readUTF();
+               if (Char.cha != null) {
+                  Char.cha.ama = var1.aaa().readUTF();
                }
 
                return;
             case -93:
-               if ((var2 = var1.aaa().readInt()) == fz.ala().asa) {
+               if ((var2 = var1.aaa().readInt()) == Char.getMyChar().asa) {
                   GameScr.bea.removeAllElements();
-                  fz.ala().cfa = "";
-                  fz.ala().cga = -1;
-                  fz.cha = null;
+                  Char.getMyChar().cfa = "";
+                  Char.getMyChar().cga = -1;
+                  Char.cha = null;
                } else {
                   GameScr.bea.removeAllElements();
-                  fz var41;
+                  Char var41;
                   (var41 = GameScr.aea(var2)).cfa = "";
                   var41.cga = -1;
                }
 
                return;
             case -90:
-               fz.ala().cqa = var1.aaa().readInt();
+               Char.getMyChar().cqa = var1.aaa().readInt();
                GameScr.ava().bca();
                return;
             case -88:
                GameScr.ava().bca();
                gg var8;
-               (var8 = fz.ala().arrItemBag[var1.aaa().readByte()]).aga();
+               (var8 = Char.getMyChar().arrItemBag[var1.aaa().readByte()]).aga();
                var8.aga = true;
                var8.aia = var1.aaa().readByte();
-               (var8 = fz.ala().arrItemBag[var1.aaa().readByte()]).aga();
+               (var8 = Char.getMyChar().arrItemBag[var1.aaa().readByte()]).aga();
                var8.aga = true;
                var8.aia = var1.aaa().readByte();
                dy.aaa(er.nda, 20, fw.afa);
                return;
             case -86:
-               ab.ama();
+               GameCanvas.ama();
                GameScr.ava().bca();
                be.aaa(var1.aaa().readUTF(), 20, fw.ala);
                return;
             case -84:
-               fz.gaa = var1.aaa().readShort();
+               Char.gaa = var1.aaa().readShort();
                return;
             case -83:
                short var9 = var1.aaa().readShort();
@@ -3552,7 +3552,7 @@ public final class Controller implements ay {
 
                return;
             case -81:
-               fz.gba = var1.aaa().readShort();
+               Char.gba = var1.aaa().readShort();
                return;
             case -80:
                GameScr.ava().aaa(er.exa, var1.aaa().readUTF(), false);
@@ -3563,7 +3563,7 @@ public final class Controller implements ay {
 
                return;
             case -77:
-               ab.aaa(gn.ama = var1.aaa().readByte());
+               GameCanvas.aaa(TileMap.ama = var1.aaa().readByte());
                return;
             case -72:
                GameScr.ava().fla = new String[9];
@@ -3581,11 +3581,11 @@ public final class Controller implements ay {
                GameScr.ava().ala = new ca(er.cda, (ag)null, 1506, (Object)null);
                GameScr.ava().fha = System.currentTimeMillis();
                --GameScr.ava().dea;
-               ab.ama();
+               GameCanvas.ama();
                return;
             case -70:
                var35 = var1.aaa().readUTF();
-               ab.aaa(ex.aaa(er.rza, "#", var35), new ca(er.cma, ab.aja, 88842, (Object)null), new ca(er.cza, ab.aja, 8882, (Object)null));
+               GameCanvas.aaa(ex.aaa(er.rza, "#", var35), new ca(er.cma, GameCanvas.aja, 88842, (Object)null), new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
                return;
             case -67:
                ac var12 = null;
@@ -3596,8 +3596,8 @@ public final class Controller implements ay {
                }
 
                if (var12 != null) {
-                  if ((var2 = var1.aaa().readInt()) == fz.ala().asa) {
-                     GameScr.bda.addElement(new cd(var12.ada, var12.aea, fz.ala()));
+                  if ((var2 = var1.aaa().readInt()) == Char.getMyChar().asa) {
+                     GameScr.bda.addElement(new cd(var12.ada, var12.aea, Char.getMyChar()));
                   } else if ((var34 = GameScr.aea(var2)) != null) {
                      GameScr.bda.addElement(new cd(var12.ada, var12.aea, var34));
                      return;
@@ -3609,16 +3609,16 @@ public final class Controller implements ay {
                return;
             case -66:
                var2 = var1.aaa().readInt();
-               if (fz.ala().asa == var2) {
-                  GameScr.bda.addElement(new cd(fz.ala().ala, fz.ala().ama));
+               if (Char.getMyChar().asa == var2) {
+                  GameScr.bda.addElement(new cd(Char.getMyChar().cx, Char.getMyChar().cy));
                } else if ((var34 = GameScr.aea(var2)) != null) {
-                  GameScr.bda.addElement(new cd(var34.ala, var34.ama));
+                  GameScr.bda.addElement(new cd(var34.cx, var34.cy));
                   return;
                }
 
                return;
             case -62:
-               fz.cha.aea = var1.aaa().readByte();
+               Char.cha.aea = var1.aaa().readByte();
             }
          } catch (Exception var32) {
          }
@@ -3639,7 +3639,7 @@ public final class Controller implements ay {
          case -124:
             System.out.println("SEND SMS");
             String var6 = var0.ada.readUTF();
-            df.aaa(var0.ada.readUTF(), "sms://".concat(String.valueOf(var6)), new ca("", ab.aba(), 88825, (Object)null), new ca("", ab.aba(), 88826, (Object)null));
+            df.aaa(var0.ada.readUTF(), "sms://".concat(String.valueOf(var6)), new ca("", GameCanvas.aba(), 88825, (Object)null), new ca("", GameCanvas.aba(), 88826, (Object)null));
             break;
          case 2:
             fd.aaa();
@@ -3663,7 +3663,7 @@ public final class Controller implements ay {
          GameScr var10000;
          int var30;
          byte var32;
-         fz var33;
+         Char var33;
          Integer var35;
          short var37;
          short var40;
@@ -3673,7 +3673,7 @@ public final class Controller implements ay {
          String var47;
          Service var48;
          bu var51;
-         fz var55;
+         Char var55;
          switch(var0.aaa().readByte()) {
          case -128:
             if ((var33 = GameScr.aea(var0.aaa().readInt())) != null) {
@@ -3685,123 +3685,123 @@ public final class Controller implements ay {
 
             return;
          case -127:
-            GameScr.bla.removeAllElements();
+            GameScr.vCharInMap.removeAllElements();
             GameScr.bma.removeAllElements();
             GameScr.bla();
-            GameScr.dsa = fz.ala();
-            fz.ala().asa = var0.aaa().readInt();
-            fz.ala().cfa = var0.aaa().readUTF();
-            if (!fz.ala().cfa.equals("")) {
-               fz.ala().cga = var0.aaa().readByte();
+            GameScr.dsa = Char.getMyChar();
+            Char.getMyChar().asa = var0.aaa().readInt();
+            Char.getMyChar().cfa = var0.aaa().readUTF();
+            if (!Char.getMyChar().cfa.equals("")) {
+               Char.getMyChar().cga = var0.aaa().readByte();
             }
 
-            fz.ala().aua = var0.aaa().readByte();
-            fz.ala().ata = var0.aaa().readByte();
-            fz.ala().gsa = var0.aaa().readShort();
-            fz.ala().ava = var0.aaa().readByte();
-            fz.ala().cea = var0.aaa().readUTF();
-            fz.ala().dka = var0.aaa().readByte();
-            fz.ala().dla = var0.aaa().readByte();
-            fz.ala().bea = var0.aaa().readInt();
-            fz.ala().bba = var0.aaa().readInt();
-            fz.ala().baa = var0.aaa().readInt();
-            fz.ala().aza = var0.aaa().readInt();
-            fz.ala().aja = var0.aaa().readLong();
-            fz.ala().aka = var0.aaa().readLong();
-            GameScr.aaa(fz.ala().aja);
-            fz.ala().bfa = var0.aaa().readShort();
-            fz.ala().bga = var0.aaa().readShort();
-            fz.ala().cua = GameScr.bqa[var0.aaa().readByte()];
-            fz.ala().bia = var0.aaa().readShort();
-            fz.ala().cda[0] = var0.aaa().readShort();
-            fz.ala().cda[1] = var0.aaa().readShort();
-            fz.ala().cda[2] = var0.aaa().readInt();
-            fz.ala().cda[3] = var0.aaa().readInt();
-            fz.ala().bja = var0.aaa().readShort();
-            fz.ala().cva.removeAllElements();
-            fz.ala().cwa.removeAllElements();
+            Char.getMyChar().aua = var0.aaa().readByte();
+            Char.getMyChar().ata = var0.aaa().readByte();
+            Char.getMyChar().gsa = var0.aaa().readShort();
+            Char.getMyChar().ava = var0.aaa().readByte();
+            Char.getMyChar().cea = var0.aaa().readUTF();
+            Char.getMyChar().dka = var0.aaa().readByte();
+            Char.getMyChar().dla = var0.aaa().readByte();
+            Char.getMyChar().bea = var0.aaa().readInt();
+            Char.getMyChar().bba = var0.aaa().readInt();
+            Char.getMyChar().baa = var0.aaa().readInt();
+            Char.getMyChar().aza = var0.aaa().readInt();
+            Char.getMyChar().aja = var0.aaa().readLong();
+            Char.getMyChar().aka = var0.aaa().readLong();
+            GameScr.aaa(Char.getMyChar().aja);
+            Char.getMyChar().bfa = var0.aaa().readShort();
+            Char.getMyChar().bga = var0.aaa().readShort();
+            Char.getMyChar().cua = GameScr.bqa[var0.aaa().readByte()];
+            Char.getMyChar().bia = var0.aaa().readShort();
+            Char.getMyChar().cda[0] = var0.aaa().readShort();
+            Char.getMyChar().cda[1] = var0.aaa().readShort();
+            Char.getMyChar().cda[2] = var0.aaa().readInt();
+            Char.getMyChar().cda[3] = var0.aaa().readInt();
+            Char.getMyChar().bja = var0.aaa().readShort();
+            Char.getMyChar().cva.removeAllElements();
+            Char.getMyChar().cwa.removeAllElements();
             var1 = var0.aaa().readByte();
 
             for(var3 = 0; var3 < var1; ++var3) {
                var2 = bb.aaa(var0.aaa().readShort());
-               if (fz.ala().cya == null) {
-                  fz.ala().cya = var2;
+               if (Char.getMyChar().cya == null) {
+                  Char.getMyChar().cya = var2;
                }
 
                if (Code.aba != null && Auto.aqa != null && var2.aaa.aaa == Auto.aqa.aaa.aaa) {
                   Auto.aqa = var2;
                }
 
-               fz.ala().cva.addElement(var2);
+               Char.getMyChar().cva.addElement(var2);
                if ((var2.aaa.ada == 1 || var2.aaa.ada == 4 || var2.aaa.ada == 2 || var2.aaa.ada == 3) && (var2.aaa.aca == 0 || var2.aaa.aca > 0 && var2.aca > 0)) {
                   if (var2.aaa.aaa == 0) {
                      Service.aaa().afa(0);
                   }
 
-                  fz.ala().cwa.addElement(var2);
+                  Char.getMyChar().cwa.addElement(var2);
                }
             }
 
             GameScr.bga();
-            fz.ala().cqa = var0.aaa().readInt();
-            fz.ala().csa = var0.aaa().readInt();
-            fz.ala().cta = var0.aaa().readInt();
-            fz.ala().arrItemBag = new gg[var0.aaa().readUnsignedByte()];
+            Char.getMyChar().cqa = var0.aaa().readInt();
+            Char.getMyChar().csa = var0.aaa().readInt();
+            Char.getMyChar().cta = var0.aaa().readInt();
+            Char.getMyChar().arrItemBag = new gg[var0.aaa().readUnsignedByte()];
             GameScr.axa = 0;
             GameScr.aya = 0;
 
             short var52;
-            for(var4 = 0; var4 < fz.ala().arrItemBag.length; ++var4) {
+            for(var4 = 0; var4 < Char.getMyChar().arrItemBag.length; ++var4) {
                if ((var52 = var0.aaa().readShort()) != -1) {
-                  fz.ala().arrItemBag[var4] = new gg();
-                  fz.ala().arrItemBag[var4].ana = 3;
-                  fz.ala().arrItemBag[var4].ada = var4;
-                  fz.ala().arrItemBag[var4].aaa = gi.aaa(var52);
-                  fz.ala().arrItemBag[var4].aga = var0.aaa().readBoolean();
-                  if (fz.ala().arrItemBag[var4].aba() || fz.ala().arrItemBag[var4].aca() || fz.ala().arrItemBag[var4].ada()) {
-                     fz.ala().arrItemBag[var4].aia = var0.aaa().readByte();
+                  Char.getMyChar().arrItemBag[var4] = new gg();
+                  Char.getMyChar().arrItemBag[var4].ana = 3;
+                  Char.getMyChar().arrItemBag[var4].ada = var4;
+                  Char.getMyChar().arrItemBag[var4].aaa = gi.aaa(var52);
+                  Char.getMyChar().arrItemBag[var4].aga = var0.aaa().readBoolean();
+                  if (Char.getMyChar().arrItemBag[var4].aba() || Char.getMyChar().arrItemBag[var4].aca() || Char.getMyChar().arrItemBag[var4].ada()) {
+                     Char.getMyChar().arrItemBag[var4].aia = var0.aaa().readByte();
                   }
 
-                  fz.ala().arrItemBag[var4].aoa = var0.aaa().readBoolean();
-                  fz.ala().arrItemBag[var4].aea = var0.aaa().readUnsignedShort();
-                  if (fz.ala().arrItemBag[var4].aaa.aba == 16) {
-                     GameScr.aya += fz.ala().arrItemBag[var4].aea;
+                  Char.getMyChar().arrItemBag[var4].aoa = var0.aaa().readBoolean();
+                  Char.getMyChar().arrItemBag[var4].aea = var0.aaa().readUnsignedShort();
+                  if (Char.getMyChar().arrItemBag[var4].aaa.aba == 16) {
+                     GameScr.aya += Char.getMyChar().arrItemBag[var4].aea;
                   }
 
-                  if (fz.ala().arrItemBag[var4].aaa.aba == 17) {
-                     GameScr.axa += fz.ala().arrItemBag[var4].aea;
+                  if (Char.getMyChar().arrItemBag[var4].aaa.aba == 17) {
+                     GameScr.axa += Char.getMyChar().arrItemBag[var4].aea;
                   }
 
-                  if (fz.ala().arrItemBag[var4].aaa.aaa == 340) {
+                  if (Char.getMyChar().arrItemBag[var4].aaa.aaa == 340) {
                      var10000 = GameScr.ava();
-                     var10000.dea += fz.ala().arrItemBag[var4].aea;
+                     var10000.dea += Char.getMyChar().arrItemBag[var4].aea;
                   }
                }
             }
 
             Code.aka();
-            fz.ala().dca = new gg[16];
+            Char.getMyChar().dca = new gg[16];
 
             try {
-               fz.ala().aqa();
+               Char.getMyChar().aqa();
 
-               for(var4 = 0; var4 < fz.ala().dca.length; ++var4) {
+               for(var4 = 0; var4 < Char.getMyChar().dca.length; ++var4) {
                   if ((var52 = var0.aaa().readShort()) != -1) {
                      gh var53;
                      var1 = (var53 = gi.aaa(var52)).aba;
-                     fz.ala().dca[var1] = new gg();
-                     fz.ala().dca[var1].ada = var1;
-                     fz.ala().dca[var1].ana = 5;
-                     fz.ala().dca[var1].aaa = var53;
-                     fz.ala().dca[var1].aga = true;
-                     fz.ala().dca[var1].aia = var0.aaa().readByte();
-                     fz.ala().dca[var1].aha = var0.aaa().readByte();
+                     Char.getMyChar().dca[var1] = new gg();
+                     Char.getMyChar().dca[var1].ada = var1;
+                     Char.getMyChar().dca[var1].ana = 5;
+                     Char.getMyChar().dca[var1].aaa = var53;
+                     Char.getMyChar().dca[var1].aga = true;
+                     Char.getMyChar().dca[var1].aia = var0.aaa().readByte();
+                     Char.getMyChar().dca[var1].aha = var0.aaa().readByte();
                      if (var1 == 1) {
-                        fz.ala().gva = fz.ala().dca[var1].aaa.aha;
+                        Char.getMyChar().gva = Char.getMyChar().dca[var1].aaa.aha;
                      } else if (var1 == 2) {
-                        fz.ala().gua = fz.ala().dca[var1].aaa.aha;
+                        Char.getMyChar().gua = Char.getMyChar().dca[var1].aaa.aha;
                      } else if (var1 == 6) {
-                        fz.ala().gta = fz.ala().dca[var1].aaa.aha;
+                        Char.getMyChar().gta = Char.getMyChar().dca[var1].aaa.aha;
                      }
                   }
                }
@@ -3809,83 +3809,83 @@ public final class Controller implements ay {
                var27.printStackTrace();
             }
 
-            fz.ala().aea = var0.aaa().readBoolean();
-            fz.ala().afa = var0.aaa().readBoolean();
+            Char.getMyChar().aea = var0.aaa().readBoolean();
+            Char.getMyChar().afa = var0.aaa().readBoolean();
             short[] var54;
             if ((var54 = new short[]{var0.aaa().readShort(), var0.aaa().readShort(), var0.aaa().readShort(), var0.aaa().readShort()})[0] >= 0) {
-               fz.ala().gsa = var54[0];
+               Char.getMyChar().gsa = var54[0];
             }
 
             if (var54[1] >= 0) {
-               fz.ala().gva = var54[1];
+               Char.getMyChar().gva = var54[1];
             }
 
             if (var54[2] >= 0) {
-               fz.ala().gua = var54[2];
+               Char.getMyChar().gua = var54[2];
             }
 
             if (var54[3] >= 0) {
-               fz.ala().gta = var54[3];
+               Char.getMyChar().gta = var54[3];
             }
 
-            if (fz.ala().aea) {
+            if (Char.getMyChar().aea) {
                GameScr.aga();
-            } else if (fz.ala().afa) {
+            } else if (Char.getMyChar().afa) {
                GameScr.aha();
             }
 
-            fz.ala().aqa = 4;
-            GameScr.dia = fd.ada(fz.ala().cea + "vci") > 0;
+            Char.getMyChar().aqa = 4;
+            GameScr.dia = fd.ada(Char.getMyChar().cea + "vci") > 0;
             return;
          case -126:
-            fz.ala().aaa(var0);
-            fz.ala().cda[0] = var0.aaa().readShort();
-            fz.ala().cda[1] = var0.aaa().readShort();
-            fz.ala().cda[2] = var0.aaa().readInt();
-            fz.ala().cda[3] = var0.aaa().readInt();
-            fz.ala().aca(61);
-            fz.ala().cua = GameScr.bqa[var0.aaa().readByte()];
-            fz.ala().bja = var0.aaa().readShort();
-            fz.ala().bia = var0.aaa().readShort();
-            fz.ala().cva.removeAllElements();
-            fz.ala().cwa.removeAllElements();
-            fz.ala().cya = null;
+            Char.getMyChar().aaa(var0);
+            Char.getMyChar().cda[0] = var0.aaa().readShort();
+            Char.getMyChar().cda[1] = var0.aaa().readShort();
+            Char.getMyChar().cda[2] = var0.aaa().readInt();
+            Char.getMyChar().cda[3] = var0.aaa().readInt();
+            Char.getMyChar().aca(61);
+            Char.getMyChar().cua = GameScr.bqa[var0.aaa().readByte()];
+            Char.getMyChar().bja = var0.aaa().readShort();
+            Char.getMyChar().bia = var0.aaa().readShort();
+            Char.getMyChar().cva.removeAllElements();
+            Char.getMyChar().cwa.removeAllElements();
+            Char.getMyChar().cya = null;
             return;
          case -125:
-            fz.ala().aaa(var0);
-            if (fz.ala().aqa != 14 && fz.ala().aqa != 5) {
-               fz.ala().bba = fz.ala().bea;
-               fz.ala().aza = fz.ala().baa;
+            Char.getMyChar().aaa(var0);
+            if (Char.getMyChar().aqa != 14 && Char.getMyChar().aqa != 5) {
+               Char.getMyChar().bba = Char.getMyChar().bea;
+               Char.getMyChar().aza = Char.getMyChar().baa;
             }
 
             try {
-               fz.ala().bja = var0.aaa().readShort();
-               fz.ala().cva.removeAllElements();
-               fz.ala().cwa.removeAllElements();
+               Char.getMyChar().bja = var0.aaa().readShort();
+               Char.getMyChar().cva.removeAllElements();
+               Char.getMyChar().cwa.removeAllElements();
                var1 = var0.aaa().readByte();
 
                for(var32 = 0; var32 < var1; ++var32) {
                   bc var49 = bb.aaa(var0.aaa().readShort());
-                  if (fz.ala().cya == null) {
-                     fz.ala().cya = var49;
-                  } else if (var49.aaa.equals(fz.ala().cya.aaa)) {
-                     fz.ala().cya = var49;
+                  if (Char.getMyChar().cya == null) {
+                     Char.getMyChar().cya = var49;
+                  } else if (var49.aaa.equals(Char.getMyChar().cya.aaa)) {
+                     Char.getMyChar().cya = var49;
                   }
 
                   if (Code.aba != null && Auto.aqa != null && var49.aaa.aaa == Auto.aqa.aaa.aaa) {
                      Auto.aqa = var49;
                   }
 
-                  fz.ala().cva.addElement(var49);
+                  Char.getMyChar().cva.addElement(var49);
                   if ((var49.aaa.ada == 1 || var49.aaa.ada == 4 || var49.aaa.ada == 2 || var49.aaa.ada == 3) && (var49.aaa.aca == 0 || var49.aaa.aca > 0 && var49.aca > 0)) {
-                     fz.ala();
+                     Char.getMyChar();
                      if (var49.aaa.aaa == 0) {
                         var48 = Service.aaa();
-                        fz.ala();
+                        Char.getMyChar();
                         var48.afa(0);
                      }
 
-                     fz.ala().cwa.addElement(var49);
+                     Char.getMyChar().cwa.addElement(var49);
                   }
                }
 
@@ -3895,7 +3895,7 @@ public final class Controller implements ay {
                   GameScr.ava().bra();
                }
 
-               System.out.println("LOAD XONG ME LOAD SKILL " + fz.ala().cva.size());
+               System.out.println("LOAD XONG ME LOAD SKILL " + Char.getMyChar().cva.size());
             } catch (Exception var26) {
                var26.printStackTrace();
             }
@@ -3903,36 +3903,36 @@ public final class Controller implements ay {
             LockGame.awa();
             return;
          case -124:
-            fz.ala().aaa(var0);
-            fz.ala().aja = var0.aaa().readLong();
-            GameScr.aaa(fz.ala().aja);
-            fz.ala().bja = var0.aaa().readShort();
-            fz.ala().bia = var0.aaa().readShort();
-            fz.ala().cda[0] = var0.aaa().readShort();
-            fz.ala().cda[1] = var0.aaa().readShort();
-            fz.ala().cda[2] = var0.aaa().readInt();
-            fz.ala().cda[3] = var0.aaa().readInt();
+            Char.getMyChar().aaa(var0);
+            Char.getMyChar().aja = var0.aaa().readLong();
+            GameScr.aaa(Char.getMyChar().aja);
+            Char.getMyChar().bja = var0.aaa().readShort();
+            Char.getMyChar().bia = var0.aaa().readShort();
+            Char.getMyChar().cda[0] = var0.aaa().readShort();
+            Char.getMyChar().cda[1] = var0.aaa().readShort();
+            Char.getMyChar().cda[2] = var0.aaa().readInt();
+            Char.getMyChar().cda[3] = var0.aaa().readInt();
             return;
          case -123:
-            fz.ala().cqa = var0.aaa().readInt();
-            fz.ala().csa = var0.aaa().readInt();
-            fz.ala().cta = var0.aaa().readInt();
-            fz.ala().bba = var0.aaa().readInt();
-            fz.ala().aza = var0.aaa().readInt();
+            Char.getMyChar().cqa = var0.aaa().readInt();
+            Char.getMyChar().csa = var0.aaa().readInt();
+            Char.getMyChar().cta = var0.aaa().readInt();
+            Char.getMyChar().bba = var0.aaa().readInt();
+            Char.getMyChar().aza = var0.aaa().readInt();
             if (var0.aaa().readByte() == 1) {
                GameScr.ava().bua();
-               fz.ala().aga = true;
+               Char.getMyChar().aga = true;
             } else {
-               fz.ala().aga = false;
+               Char.getMyChar().aga = false;
                LockGame.aka();
             }
 
             return;
          case -122:
-            fz.ala().bba = var0.aaa().readInt();
+            Char.getMyChar().bba = var0.aaa().readInt();
             return;
          case -121:
-            fz.ala().aza = var0.aaa().readInt();
+            Char.getMyChar().aza = var0.aaa().readInt();
             return;
          case -120:
             System.out.println("PLAYER LOAD ALL");
@@ -4018,58 +4018,58 @@ public final class Controller implements ay {
 
             var33.bba = var0.aaa().readInt();
             var33.bea = var0.aaa().readInt();
-            var33.ala = var33.gga = var0.aaa().readShort();
-            var33.ama = var33.gha = var0.aaa().readShort();
+            var33.cx = var33.gga = var0.aaa().readShort();
+            var33.cy = var33.gha = var0.aaa().readShort();
             var33.aqa = 1;
             ef.aaa(20, var33, 2);
             return;
          case -109:
-            fz.ala().aaa(var0);
-            if (fz.ala().aqa != 14 && fz.ala().aqa != 5) {
-               fz.ala().bba = fz.ala().bea;
-               fz.ala().aza = fz.ala().baa;
+            Char.getMyChar().aaa(var0);
+            if (Char.getMyChar().aqa != 14 && Char.getMyChar().aqa != 5) {
+               Char.getMyChar().bba = Char.getMyChar().bea;
+               Char.getMyChar().aza = Char.getMyChar().baa;
             }
 
-            fz.ala().bia = var0.aaa().readShort();
-            fz.ala().cda[0] = var0.aaa().readShort();
-            fz.ala().cda[1] = var0.aaa().readShort();
-            fz.ala().cda[2] = var0.aaa().readInt();
-            fz.ala().cda[3] = var0.aaa().readInt();
+            Char.getMyChar().bia = var0.aaa().readShort();
+            Char.getMyChar().cda[0] = var0.aaa().readShort();
+            Char.getMyChar().cda[1] = var0.aaa().readShort();
+            Char.getMyChar().cda[2] = var0.aaa().readInt();
+            Char.getMyChar().cda[3] = var0.aaa().readInt();
             LockGame.aya();
             return;
          case -107:
-            fz.ala().ana();
+            Char.getMyChar().ana();
             return;
          case -106:
-            fz.ala().aoa();
+            Char.getMyChar().aoa();
             return;
          case -105:
             var45 = var0.aaa().readInt();
-            var55 = fz.ala();
+            var55 = Char.getMyChar();
             var55.cqa -= var45;
-            var55 = fz.ala();
+            var55 = Char.getMyChar();
             var55.cra += var45;
             return;
          case -104:
             var30 = var0.aaa().readInt();
-            var55 = fz.ala();
+            var55 = Char.getMyChar();
             var55.cra -= var30;
-            var55 = fz.ala();
+            var55 = Char.getMyChar();
             var55.cqa += var30;
             return;
          case -102:
-            fz.ala().arrItemBag[var0.aaa().readByte()] = null;
+            Char.getMyChar().arrItemBag[var0.aaa().readByte()] = null;
             var2 = bb.aaa(var0.aaa().readShort());
-            fz.ala().cva.addElement(var2);
+            Char.getMyChar().cva.addElement(var2);
             if ((var2.aaa.ada == 1 || var2.aaa.ada == 4 || var2.aaa.ada == 2 || var2.aaa.ada == 3) && (var2.aaa.aca == 0 || var2.aaa.aca > 0 && var2.aca > 0)) {
-               fz.ala();
+               Char.getMyChar();
                if (var2.aaa.aaa == 0) {
                   var48 = Service.aaa();
-                  fz.ala();
+                  Char.getMyChar();
                   var48.afa(0);
                }
 
-               fz.ala().cwa.addElement(var2);
+               Char.getMyChar().cwa.addElement(var2);
             }
 
             GameScr.bga();
@@ -4080,43 +4080,43 @@ public final class Controller implements ay {
             return;
          case -101:
             var51 = new bu(var0.aaa().readByte(), (int)(System.currentTimeMillis() / 1000L) - var0.aaa().readInt(), var0.aaa().readInt(), var0.aaa().readShort());
-            fz.ala().cxa.addElement(var51);
+            Char.getMyChar().cxa.addElement(var51);
             if (var51.aea.aba == 7) {
-               var55 = fz.ala();
+               var55 = Char.getMyChar();
                var55.dha += var51.ada;
                return;
             }
 
             if (var51.aea.aba != 12 && var51.aea.aba != 11) {
                if (var51.aea.aba == 14) {
-                  ab.aka();
-                  ab.ala();
-                  fz.ala().ala = var0.aaa().readShort();
-                  fz.ala().ama = var0.aaa().readShort();
-                  fz.ala().aqa = 1;
-                  fz.ala().gla = true;
-                  ef.aba(76, fz.ala(), var51.aca);
+                  GameCanvas.aka();
+                  GameCanvas.ala();
+                  Char.getMyChar().cx = var0.aaa().readShort();
+                  Char.getMyChar().cy = var0.aaa().readShort();
+                  Char.getMyChar().aqa = 1;
+                  Char.getMyChar().gla = true;
+                  ef.aba(76, Char.getMyChar(), var51.aca);
                   return;
                } else if (var51.aea.aba == 1) {
-                  ef.aba(48, fz.ala(), var51.aca);
+                  ef.aba(48, Char.getMyChar(), var51.aca);
                   return;
                } else {
                   if (var51.aea.aba == 2) {
-                     ab.aka();
-                     ab.ala();
-                     fz.ala().ala = var0.aaa().readShort();
-                     fz.ala().ama = var0.aaa().readShort();
-                     fz.ala().aqa = 1;
-                     fz.ala().gla = true;
-                     fz.ala().gma = true;
+                     GameCanvas.aka();
+                     GameCanvas.ala();
+                     Char.getMyChar().cx = var0.aaa().readShort();
+                     Char.getMyChar().cy = var0.aaa().readShort();
+                     Char.getMyChar().aqa = 1;
+                     Char.getMyChar().gla = true;
+                     Char.getMyChar().gma = true;
                   } else if (var51.aea.aba == 3) {
-                     ab.aka();
-                     ab.ala();
-                     fz.ala().ala = var0.aaa().readShort();
-                     fz.ala().ama = var0.aaa().readShort();
-                     fz.ala().aqa = 1;
-                     fz.gka = true;
-                     ef.aba(43, fz.ala(), var51.aca);
+                     GameCanvas.aka();
+                     GameCanvas.ala();
+                     Char.getMyChar().cx = var0.aaa().readShort();
+                     Char.getMyChar().cy = var0.aaa().readShort();
+                     Char.getMyChar().aqa = 1;
+                     Char.gka = true;
+                     ef.aba(43, Char.getMyChar(), var51.aca);
                      return;
                   }
 
@@ -4124,16 +4124,16 @@ public final class Controller implements ay {
                }
             }
 
-            fz.ala().eea = true;
-            ef.aaa(60, fz.ala().ala, fz.ala().ama, 1);
+            Char.getMyChar().eea = true;
+            ef.aaa(60, Char.getMyChar().cx, Char.getMyChar().cy, 1);
             return;
          case -100:
             var44 = bu.aaa[var0.aaa().readByte()];
 
-            for(var30 = 0; var30 < fz.ala().cxa.size(); ++var30) {
-               if ((var43 = (bu)fz.ala().cxa.elementAt(var30)).aea.aba == var44.aba) {
+            for(var30 = 0; var30 < Char.getMyChar().cxa.size(); ++var30) {
+               if ((var43 = (bu)Char.getMyChar().cxa.elementAt(var30)).aea.aba == var44.aba) {
                   if (var43.aea.aba == 7) {
-                     var55 = fz.ala();
+                     var55 = Char.getMyChar();
                      var55.dha -= var43.ada;
                   }
 
@@ -4142,7 +4142,7 @@ public final class Controller implements ay {
                   var43.aca = var0.aaa().readInt() / 1000;
                   var43.ada = var0.aaa().readShort();
                   if (var43.aea.aba == 7) {
-                     var55 = fz.ala();
+                     var55 = Char.getMyChar();
                      var55.dha += var43.ada;
                   }
                   break;
@@ -4158,14 +4158,14 @@ public final class Controller implements ay {
             var3 = var0.aaa().readByte();
             var43 = null;
 
-            for(var30 = 0; var30 < fz.ala().cxa.size(); ++var30) {
-               if ((var43 = (bu)fz.ala().cxa.elementAt(var30)).aea.aaa == var3) {
+            for(var30 = 0; var30 < Char.getMyChar().cxa.size(); ++var30) {
+               if ((var43 = (bu)Char.getMyChar().cxa.elementAt(var30)).aea.aaa == var3) {
                   if (var43.aea.aba == 7) {
-                     var55 = fz.ala();
+                     var55 = Char.getMyChar();
                      var55.dha -= var43.ada;
                   }
 
-                  fz.ala().cxa.removeElementAt(var30);
+                  Char.getMyChar().cxa.removeElementAt(var30);
                   break;
                }
             }
@@ -4173,23 +4173,23 @@ public final class Controller implements ay {
             if (var43.aea.aba != 0 && var43.aea.aba != 12) {
                if (var43.aea.aba != 4 && var43.aea.aba != 13 && var43.aea.aba != 17) {
                   if (var43.aea.aba == 23) {
-                     fz.ala().bba = var0.aaa().readInt();
-                     fz.ala().bea = var0.aaa().readInt();
+                     Char.getMyChar().bba = var0.aaa().readInt();
+                     Char.getMyChar().bea = var0.aaa().readInt();
                      return;
                   } else if (var43.aea.aba == 11) {
-                     fz.ala().eea = false;
-                     ef.aaa(60, fz.ala().ala, fz.ala().ama, 1);
+                     Char.getMyChar().eea = false;
+                     ef.aaa(60, Char.getMyChar().cx, Char.getMyChar().cy, 1);
                      return;
                   } else if (var43.aea.aba == 14) {
-                     fz.ala().gla = false;
+                     Char.getMyChar().gla = false;
                      return;
                   } else {
                      if (var43.aea.aba == 2) {
-                        fz.ala().gla = false;
-                        fz.ala().gma = false;
-                        ef.aaa(77, fz.ala().ala, fz.ala().ama - 9, 1);
+                        Char.getMyChar().gla = false;
+                        Char.getMyChar().gma = false;
+                        ef.aaa(77, Char.getMyChar().cx, Char.getMyChar().cy - 9, 1);
                      } else if (var43.aea.aba == 3) {
-                        fz.gka = false;
+                        Char.gka = false;
                         return;
                      }
 
@@ -4197,17 +4197,17 @@ public final class Controller implements ay {
                   }
                }
 
-               fz.ala().bba = var0.aaa().readInt();
+               Char.getMyChar().bba = var0.aaa().readInt();
                return;
             }
 
-            fz.ala().bba = var0.aaa().readInt();
-            fz.ala().aza = var0.aaa().readInt();
+            Char.getMyChar().bba = var0.aaa().readInt();
+            Char.getMyChar().aza = var0.aaa().readInt();
             if (var43.aea.aba == 0) {
                be.aaa(er.oaa);
             } else if (var43.aea.aba == 12) {
-               fz.ala().eea = false;
-               ef.aaa(60, fz.ala().ala, fz.ala().ama, 1);
+               Char.getMyChar().eea = false;
+               ef.aaa(60, Char.getMyChar().cx, Char.getMyChar().cy, 1);
                return;
             }
 
@@ -4222,8 +4222,8 @@ public final class Controller implements ay {
                var33.cxa.addElement(var51);
                if (var51.aea.aba != 12 && var51.aea.aba != 11) {
                   if (var51.aea.aba == 14) {
-                     var33.ala = var33.gga = var0.aaa().readShort();
-                     var33.ama = var33.gha = var0.aaa().readShort();
+                     var33.cx = var33.gga = var0.aaa().readShort();
+                     var33.cy = var33.gha = var0.aaa().readShort();
                      var33.aqa = 1;
                      ef.aba(76, var33, var51.aca);
                      return;
@@ -4232,13 +4232,13 @@ public final class Controller implements ay {
                      return;
                   } else {
                      if (var51.aea.aba == 2) {
-                        var33.ala = var33.gga = var0.aaa().readShort();
-                        var33.ama = var33.gha = var0.aaa().readShort();
+                        var33.cx = var33.gga = var0.aaa().readShort();
+                        var33.cy = var33.gha = var0.aaa().readShort();
                         var33.aqa = 1;
                         var33.gma = true;
                      } else if (var51.aea.aba == 3) {
-                        var33.ala = var33.gga = var0.aaa().readShort();
-                        var33.ama = var33.gha = var0.aaa().readShort();
+                        var33.cx = var33.gga = var0.aaa().readShort();
+                        var33.cy = var33.gha = var0.aaa().readShort();
                         var33.aqa = 1;
                         ef.aba(43, var33, var51.aca);
                         return;
@@ -4249,7 +4249,7 @@ public final class Controller implements ay {
                }
 
                var33.eea = true;
-               ef.aaa(60, var33.ala, var33.ama, 1);
+               ef.aaa(60, var33.cx, var33.cy, 1);
             } catch (Exception var24) {
             }
 
@@ -4303,10 +4303,10 @@ public final class Controller implements ay {
             }
 
             if (var51.aea.aba == 11) {
-               var33.ala = var33.gga = var0.aaa().readUnsignedShort();
-               var33.ama = var33.gha = var0.aaa().readUnsignedShort();
+               var33.cx = var33.gga = var0.aaa().readUnsignedShort();
+               var33.cy = var33.gha = var0.aaa().readUnsignedShort();
                var33.eea = false;
-               ef.aaa(60, var33.ala, var33.ama, 1);
+               ef.aaa(60, var33.cx, var33.cy, 1);
                return;
             }
 
@@ -4314,17 +4314,17 @@ public final class Controller implements ay {
                var33.bba = var0.aaa().readInt();
                var33.aza = var0.aaa().readInt();
                var33.eea = false;
-               ef.aaa(60, var33.ala, var33.ama, 1);
+               ef.aaa(60, var33.cx, var33.cy, 1);
                return;
             }
 
             if (var51.aea.aba != 4 && var51.aea.aba != 13 && var51.aea.aba != 17) {
                if (var51.aea.aba == 23) {
-                  fz.ala().bba = var0.aaa().readInt();
-                  fz.ala().bea = var0.aaa().readInt();
+                  Char.getMyChar().bba = var0.aaa().readInt();
+                  Char.getMyChar().bea = var0.aaa().readInt();
                } else if (var51.aea.aba == 2) {
                   var33.gma = false;
-                  ef.aaa(77, var33.ala, var33.ama - 9, 1);
+                  ef.aaa(77, var33.cx, var33.cy - 9, 1);
                   return;
                }
 
@@ -4339,16 +4339,16 @@ public final class Controller implements ay {
             return;
          case -94:
             var3 = var0.aaa().readByte();
-            av var39;
-            (var39 = (av)GameScr.boa.elementAt(var3)).aqa = var0.aaa().readByte();
-            if (var39.aaa.aaa == 31 && var39.aqa == 15) {
-               GameScr.aaa(var39.ala, var39.ama);
+            Npc var39;
+            (var39 = (Npc)GameScr.boa.elementAt(var3)).aqa = var0.aaa().readByte();
+            if (var39.template.aaa == 31 && var39.aqa == 15) {
+               GameScr.aaa(var39.cx, var39.cy);
             }
 
             return;
          case -92:
-            if ((var30 = var0.aaa().readInt()) == fz.ala().asa) {
-               var33 = fz.ala();
+            if ((var30 = var0.aaa().readInt()) == Char.getMyChar().asa) {
+               var33 = Char.getMyChar();
             } else {
                var33 = GameScr.aea(var30);
             }
@@ -4356,7 +4356,7 @@ public final class Controller implements ay {
             if (var33 != null) {
                var33.dla = var0.aaa().readByte();
                Auto.aba(var33);
-               if (var33 == fz.ala()) {
+               if (var33 == Char.getMyChar()) {
                   if (var33.dla == 4) {
                      GameScr.gwa = true;
                   } else if (var33.dla == 5) {
@@ -4372,18 +4372,18 @@ public final class Controller implements ay {
          case -91:
             gg[] var50 = new gg[var0.aaa().readUnsignedByte()];
 
-            for(var30 = 0; var30 < fz.ala().arrItemBag.length; ++var30) {
-               var50[var30] = fz.ala().arrItemBag[var30];
+            for(var30 = 0; var30 < Char.getMyChar().arrItemBag.length; ++var30) {
+               var50[var30] = Char.getMyChar().arrItemBag[var30];
             }
 
-            fz.ala().arrItemBag = var50;
-            fz.ala().arrItemBag[var0.aaa().readUnsignedByte()] = null;
-            be.aaa(er.fma + " " + fz.ala().arrItemBag.length + " " + er.gga);
+            Char.getMyChar().arrItemBag = var50;
+            Char.getMyChar().arrItemBag[var0.aaa().readUnsignedByte()] = null;
+            be.aaa(er.fma + " " + Char.getMyChar().arrItemBag.length + " " + er.gga);
             return;
          case -90:
             for(var30 = 0; var30 < GameScr.boa.size(); ++var30) {
-               av var42;
-               if ((var42 = (av)GameScr.boa.elementAt(var30)).aqa == 15) {
+               Npc var42;
+               if ((var42 = (Npc)GameScr.boa.elementAt(var30)).aqa == 15) {
                   var42.aqa = 1;
                   break;
                }
@@ -4398,7 +4398,7 @@ public final class Controller implements ay {
 
             return;
          case -89:
-            ab.aea = false;
+            GameCanvas.aea = false;
 
             try {
                be.aaa(var0.aaa().readUTF(), 20, fw.ala);
@@ -4406,7 +4406,7 @@ public final class Controller implements ay {
             }
 
             br.aca();
-            ab.ama();
+            GameCanvas.ama();
             return;
          case -87:
             var32 = var0.aaa().readByte();
@@ -4487,14 +4487,14 @@ public final class Controller implements ay {
             GameScr.aca((int)1);
             return;
          case -81:
-            fz.ala().dka = var0.aaa().readByte();
-            fz.ala().dsa = null;
+            Char.getMyChar().dka = var0.aaa().readByte();
+            Char.getMyChar().dsa = null;
             return;
          case -80:
-            fz.ala().dca[var0.aaa().readByte()] = null;
+            Char.getMyChar().dca[var0.aaa().readByte()] = null;
             return;
          case -78:
-            ef.aaa(var0.aaa().readShort(), fz.ala().ala, fz.ala().ama, 1);
+            ef.aaa(var0.aaa().readShort(), Char.getMyChar().cx, Char.getMyChar().cy, 1);
             return;
          case -77:
             try {
@@ -4511,7 +4511,7 @@ public final class Controller implements ay {
             ((ep)GameScr.bfa.firstElement()).aea = var0.aaa().readBoolean();
             return;
          case -75:
-            fz.ala().dba[var0.aaa().readByte()] = null;
+            Char.getMyChar().dba[var0.aaa().readByte()] = null;
             return;
          case -74:
             br.aaa(var0.aaa().readUTF());
@@ -4521,25 +4521,25 @@ public final class Controller implements ay {
             ef.aaa(67, var46.ada, var46.aea, 1);
             return;
          case -72:
-            fz.ala().cta = var0.aaa().readInt();
+            Char.getMyChar().cta = var0.aaa().readInt();
             return;
          case -71:
             var30 = var0.aaa().readInt();
-            var55 = fz.ala();
+            var55 = Char.getMyChar();
             var55.cta += var30;
-            GameScr.aaa("+".concat(String.valueOf(var30)), fz.ala().ala, fz.ala().ama - fz.ala().cja - 10, 6);
+            GameScr.aaa("+".concat(String.valueOf(var30)), Char.getMyChar().cx, Char.getMyChar().cy - Char.getMyChar().cja - 10, 6);
             be.aaa(er.loa + " " + var30 + " " + er.ira, 20, fw.ala);
             return;
          case -69:
             var4 = var0.aaa().readUnsignedByte();
             var1 = var0.aaa().readByte();
             if (var4 > 0) {
-               var40 = (short)fz.ala().ala;
-               var37 = (short)(fz.ala().ama - 40);
-               fz.ala().dqa = new ac((short)-1, false, false, false, false, false, var4, 1, 0, 0, 0, var40, var37, (byte)4, (byte)0, var1 != 0, false);
-               fz.ala().dqa.aga = 5;
+               var40 = (short)Char.getMyChar().cx;
+               var37 = (short)(Char.getMyChar().cy - 40);
+               Char.getMyChar().dqa = new ac((short)-1, false, false, false, false, false, var4, 1, 0, 0, 0, var40, var37, (byte)4, (byte)0, var1 != 0, false);
+               Char.getMyChar().dqa.aga = 5;
             } else {
-               fz.ala().dqa = null;
+               Char.getMyChar().dqa = null;
             }
 
             return;
@@ -4551,8 +4551,8 @@ public final class Controller implements ay {
             var4 = var0.aaa().readUnsignedByte();
             var1 = var0.aaa().readByte();
             if (var4 > 0) {
-               var37 = (short)var33.ala;
-               var40 = (short)(var33.ama - 40);
+               var37 = (short)var33.cx;
+               var40 = (short)(var33.cy - 40);
                var33.dqa = new ac((short)-1, false, false, false, false, false, var4, 1, 0, 0, 0, var37, var40, (byte)4, (byte)0, var1 != 0, false);
                var33.dqa.aga = 5;
             } else {
@@ -4603,16 +4603,16 @@ public final class Controller implements ay {
             return;
          case -63:
             if ((var33 = GameScr.aea(var35 = new Integer(var0.aaa().readInt()))) != null) {
-               ab.aaa(var33.cea + " " + er.aaa(er.mxa, var0.aaa().readUTF()), 88830, var35, 88811, (Object)null);
+               GameCanvas.aaa(var33.cea + " " + er.aaa(er.mxa, var0.aaa().readUTF()), 88830, var35, 88811, (Object)null);
             }
 
             return;
          case -62:
             var30 = var0.aaa().readInt();
-            if (fz.ala().asa == var30) {
-               fz.ala().cfa = var0.aaa().readUTF();
-               fz.ala().cga = var0.aaa().readByte();
-               fz.ala().aca(21);
+            if (Char.getMyChar().asa == var30) {
+               Char.getMyChar().cfa = var0.aaa().readUTF();
+               Char.getMyChar().cga = var0.aaa().readByte();
+               Char.getMyChar().aca(21);
             } else {
                (var33 = GameScr.aea(var30)).cfa = var0.aaa().readUTF();
                var33.cga = var0.aaa().readByte();
@@ -4621,13 +4621,13 @@ public final class Controller implements ay {
             return;
          case -61:
             if (GameScr.dia && (var33 = GameScr.aea(var35 = new Integer(var0.aaa().readInt()))) != null) {
-               ab.aaa(var33.cea + " " + er.mya, 88831, var35, 88811, (Object)null);
+               GameCanvas.aaa(var33.cea + " " + er.mya, 88831, var35, 88811, (Object)null);
             }
 
             return;
          case -59:
-            if ((var30 = var0.aaa().readInt()) == fz.ala().asa) {
-               var33 = fz.ala();
+            if ((var30 = var0.aaa().readInt()) == Char.getMyChar().asa) {
+               var33 = Char.getMyChar();
             } else {
                var33 = GameScr.aea(var30);
             }
@@ -4637,13 +4637,13 @@ public final class Controller implements ay {
             return;
          case -58:
             GameScr.ava().bca();
-            ab.bma = 70;
-            ab.ada = true;
+            GameCanvas.bma = 70;
+            GameCanvas.ada = true;
             ef.aaa(119, GameScr.ada + GameScr.aia, GameScr.afa + GameScr.aja, 1);
             return;
          case -57:
-            ab.bma = 40;
-            ab.ada = true;
+            GameCanvas.bma = 40;
+            GameCanvas.ada = true;
             return;
          case -56:
             if ((var33 = GameScr.aea(var0.aaa().readInt())) != null) {
@@ -4663,8 +4663,8 @@ public final class Controller implements ay {
             return;
          case -54:
             var30 = var0.aaa().readInt();
-            if (fz.ala().asa == var30) {
-               var33 = fz.ala();
+            if (Char.getMyChar().asa == var30) {
+               var33 = Char.getMyChar();
             } else {
                var33 = GameScr.aea(var30);
             }
@@ -4708,121 +4708,121 @@ public final class Controller implements ay {
             return;
          case 115:
             System.out.println("UPDATE INFO ME");
-            GameScr.dsa = fz.ala();
-            fz.ala().hha = null;
-            fz.ala().asa = var0.aaa().readInt();
-            fz.ala().cfa = var0.aaa().readUTF();
-            if (!fz.ala().cfa.equals("")) {
-               fz.ala().cga = var0.aaa().readByte();
+            GameScr.dsa = Char.getMyChar();
+            Char.getMyChar().hha = null;
+            Char.getMyChar().asa = var0.aaa().readInt();
+            Char.getMyChar().cfa = var0.aaa().readUTF();
+            if (!Char.getMyChar().cfa.equals("")) {
+               Char.getMyChar().cga = var0.aaa().readByte();
             }
 
-            fz.ala().aua = var0.aaa().readByte();
-            fz.ala().ata = var0.aaa().readByte();
-            fz.ala().gsa = var0.aaa().readShort();
-            fz.ala().ava = var0.aaa().readByte();
-            fz.ala().cea = var0.aaa().readUTF();
-            fz.ala().dka = var0.aaa().readByte();
-            fz.ala().dla = var0.aaa().readByte();
-            fz.ala().bea = var0.aaa().readInt();
-            fz.ala().bba = var0.aaa().readInt();
-            fz.ala().baa = var0.aaa().readInt();
-            fz.ala().aza = var0.aaa().readInt();
-            fz.ala().aja = var0.aaa().readLong();
-            fz.ala().aka = var0.aaa().readLong();
-            GameScr.aaa(fz.ala().aja);
-            fz.ala().bfa = var0.aaa().readShort();
-            fz.ala().bga = var0.aaa().readShort();
-            fz.ala().cua = GameScr.bqa[var0.aaa().readByte()];
-            fz.ala().bia = var0.aaa().readShort();
-            fz.ala().cda[0] = var0.aaa().readShort();
-            fz.ala().cda[1] = var0.aaa().readShort();
-            fz.ala().cda[2] = var0.aaa().readInt();
-            fz.ala().cda[3] = var0.aaa().readInt();
-            fz.ala().bja = var0.aaa().readShort();
-            fz.ala().cva.removeAllElements();
-            fz.ala().cwa.removeAllElements();
+            Char.getMyChar().aua = var0.aaa().readByte();
+            Char.getMyChar().ata = var0.aaa().readByte();
+            Char.getMyChar().gsa = var0.aaa().readShort();
+            Char.getMyChar().ava = var0.aaa().readByte();
+            Char.getMyChar().cea = var0.aaa().readUTF();
+            Char.getMyChar().dka = var0.aaa().readByte();
+            Char.getMyChar().dla = var0.aaa().readByte();
+            Char.getMyChar().bea = var0.aaa().readInt();
+            Char.getMyChar().bba = var0.aaa().readInt();
+            Char.getMyChar().baa = var0.aaa().readInt();
+            Char.getMyChar().aza = var0.aaa().readInt();
+            Char.getMyChar().aja = var0.aaa().readLong();
+            Char.getMyChar().aka = var0.aaa().readLong();
+            GameScr.aaa(Char.getMyChar().aja);
+            Char.getMyChar().bfa = var0.aaa().readShort();
+            Char.getMyChar().bga = var0.aaa().readShort();
+            Char.getMyChar().cua = GameScr.bqa[var0.aaa().readByte()];
+            Char.getMyChar().bia = var0.aaa().readShort();
+            Char.getMyChar().cda[0] = var0.aaa().readShort();
+            Char.getMyChar().cda[1] = var0.aaa().readShort();
+            Char.getMyChar().cda[2] = var0.aaa().readInt();
+            Char.getMyChar().cda[3] = var0.aaa().readInt();
+            Char.getMyChar().bja = var0.aaa().readShort();
+            Char.getMyChar().cva.removeAllElements();
+            Char.getMyChar().cwa.removeAllElements();
             var1 = var0.aaa().readByte();
 
             for(var3 = 0; var3 < var1; ++var3) {
                var2 = bb.aaa(var0.aaa().readShort());
-               if (fz.ala().cya == null) {
-                  fz.ala().cya = var2;
+               if (Char.getMyChar().cya == null) {
+                  Char.getMyChar().cya = var2;
                }
 
                if (Code.aba != null && Auto.aqa != null && var2.aaa.aaa == Auto.aqa.aaa.aaa) {
                   Auto.aqa = var2;
                }
 
-               fz.ala().cva.addElement(var2);
+               Char.getMyChar().cva.addElement(var2);
                if ((var2.aaa.ada == 1 || var2.aaa.ada == 4 || var2.aaa.ada == 2 || var2.aaa.ada == 3) && (var2.aaa.aca == 0 || var2.aaa.aca > 0 && var2.aca > 0)) {
                   if (var2.aaa.aaa == 0) {
                      Service.aaa().afa(0);
                   }
 
-                  fz.ala().cwa.addElement(var2);
+                  Char.getMyChar().cwa.addElement(var2);
                }
             }
 
             GameScr.bga();
-            fz.ala().cqa = var0.aaa().readInt();
-            fz.ala().csa = var0.aaa().readInt();
-            fz.ala().cta = var0.aaa().readInt();
-            fz.ala().arrItemBag = new gg[var0.aaa().readUnsignedByte()];
+            Char.getMyChar().cqa = var0.aaa().readInt();
+            Char.getMyChar().csa = var0.aaa().readInt();
+            Char.getMyChar().cta = var0.aaa().readInt();
+            Char.getMyChar().arrItemBag = new gg[var0.aaa().readUnsignedByte()];
             GameScr.axa = 0;
             GameScr.aya = 0;
 
             short var31;
-            for(var30 = 0; var30 < fz.ala().arrItemBag.length; ++var30) {
+            for(var30 = 0; var30 < Char.getMyChar().arrItemBag.length; ++var30) {
                if ((var31 = var0.aaa().readShort()) != -1) {
-                  fz.ala().arrItemBag[var30] = new gg();
-                  fz.ala().arrItemBag[var30].ana = 3;
-                  fz.ala().arrItemBag[var30].ada = var30;
-                  fz.ala().arrItemBag[var30].aaa = gi.aaa(var31);
-                  fz.ala().arrItemBag[var30].aga = var0.aaa().readBoolean();
-                  if (fz.ala().arrItemBag[var30].aba() || fz.ala().arrItemBag[var30].aca() || fz.ala().arrItemBag[var30].ada()) {
-                     fz.ala().arrItemBag[var30].aia = var0.aaa().readByte();
+                  Char.getMyChar().arrItemBag[var30] = new gg();
+                  Char.getMyChar().arrItemBag[var30].ana = 3;
+                  Char.getMyChar().arrItemBag[var30].ada = var30;
+                  Char.getMyChar().arrItemBag[var30].aaa = gi.aaa(var31);
+                  Char.getMyChar().arrItemBag[var30].aga = var0.aaa().readBoolean();
+                  if (Char.getMyChar().arrItemBag[var30].aba() || Char.getMyChar().arrItemBag[var30].aca() || Char.getMyChar().arrItemBag[var30].ada()) {
+                     Char.getMyChar().arrItemBag[var30].aia = var0.aaa().readByte();
                   }
 
-                  fz.ala().arrItemBag[var30].aoa = var0.aaa().readBoolean();
-                  fz.ala().arrItemBag[var30].aea = var0.aaa().readUnsignedShort();
-                  if (fz.ala().arrItemBag[var30].aaa.aba == 16) {
-                     GameScr.aya += fz.ala().arrItemBag[var30].aea;
+                  Char.getMyChar().arrItemBag[var30].aoa = var0.aaa().readBoolean();
+                  Char.getMyChar().arrItemBag[var30].aea = var0.aaa().readUnsignedShort();
+                  if (Char.getMyChar().arrItemBag[var30].aaa.aba == 16) {
+                     GameScr.aya += Char.getMyChar().arrItemBag[var30].aea;
                   }
 
-                  if (fz.ala().arrItemBag[var30].aaa.aba == 17) {
-                     GameScr.axa += fz.ala().arrItemBag[var30].aea;
+                  if (Char.getMyChar().arrItemBag[var30].aaa.aba == 17) {
+                     GameScr.axa += Char.getMyChar().arrItemBag[var30].aea;
                   }
 
-                  if (fz.ala().arrItemBag[var30].aaa.aaa == 340) {
+                  if (Char.getMyChar().arrItemBag[var30].aaa.aaa == 340) {
                      var10000 = GameScr.ava();
-                     var10000.dea += fz.ala().arrItemBag[var30].aea;
+                     var10000.dea += Char.getMyChar().arrItemBag[var30].aea;
                   }
                }
             }
 
             Code.aka();
-            fz.ala().dca = new gg[16];
+            Char.getMyChar().dca = new gg[16];
 
             try {
-               fz.ala().aqa();
+               Char.getMyChar().aqa();
 
-               for(var30 = 0; var30 < fz.ala().dca.length; ++var30) {
+               for(var30 = 0; var30 < Char.getMyChar().dca.length; ++var30) {
                   if ((var31 = var0.aaa().readShort()) != -1) {
                      gh var34;
                      var32 = (var34 = gi.aaa(var31)).aba;
-                     fz.ala().dca[var32] = new gg();
-                     fz.ala().dca[var32].ada = var32;
-                     fz.ala().dca[var32].ana = 5;
-                     fz.ala().dca[var32].aaa = var34;
-                     fz.ala().dca[var32].aga = true;
-                     fz.ala().dca[var32].aia = var0.aaa().readByte();
-                     fz.ala().dca[var32].aha = var0.aaa().readByte();
+                     Char.getMyChar().dca[var32] = new gg();
+                     Char.getMyChar().dca[var32].ada = var32;
+                     Char.getMyChar().dca[var32].ana = 5;
+                     Char.getMyChar().dca[var32].aaa = var34;
+                     Char.getMyChar().dca[var32].aga = true;
+                     Char.getMyChar().dca[var32].aia = var0.aaa().readByte();
+                     Char.getMyChar().dca[var32].aha = var0.aaa().readByte();
                      if (var32 == 1) {
-                        fz.ala().gva = fz.ala().dca[var32].aaa.aha;
+                        Char.getMyChar().gva = Char.getMyChar().dca[var32].aaa.aha;
                      } else if (var32 == 2) {
-                        fz.ala().gua = fz.ala().dca[var32].aaa.aha;
+                        Char.getMyChar().gua = Char.getMyChar().dca[var32].aaa.aha;
                      } else if (var32 == 6) {
-                        fz.ala().gta = fz.ala().dca[var32].aaa.aha;
+                        Char.getMyChar().gta = Char.getMyChar().dca[var32].aaa.aha;
                      }
                   }
                }
@@ -4830,37 +4830,37 @@ public final class Controller implements ay {
                var25.printStackTrace();
             }
 
-            fz.ala().aea = var0.aaa().readBoolean();
-            fz.ala().afa = var0.aaa().readBoolean();
+            Char.getMyChar().aea = var0.aaa().readBoolean();
+            Char.getMyChar().afa = var0.aaa().readBoolean();
             short[] var36;
             if ((var36 = new short[]{var0.aaa().readShort(), var0.aaa().readShort(), var0.aaa().readShort(), var0.aaa().readShort()})[0] >= 0) {
-               fz.ala().gsa = var36[0];
+               Char.getMyChar().gsa = var36[0];
             }
 
             if (var36[1] >= 0) {
-               fz.ala().gva = var36[1];
+               Char.getMyChar().gva = var36[1];
             }
 
             if (var36[2] >= 0) {
-               fz.ala().gua = var36[2];
+               Char.getMyChar().gua = var36[2];
             }
 
             if (var36[3] >= 0) {
-               fz.ala().gta = var36[3];
+               Char.getMyChar().gta = var36[3];
             }
 
             GameScr.ava();
             GameScr.bga();
-            if (fz.ala().aea) {
+            if (Char.getMyChar().aea) {
                GameScr.ava();
                GameScr.aga();
-            } else if (fz.ala().afa) {
+            } else if (Char.getMyChar().afa) {
                GameScr.ava();
                GameScr.aha();
             }
 
-            fz.ala().aqa = 4;
-            GameScr.dia = fd.ada(fz.ala().cea + "vci") > 0;
+            Char.getMyChar().aqa = 4;
+            GameScr.dia = fd.ada(Char.getMyChar().cea + "vci") > 0;
             return;
          default:
             return;
@@ -4875,7 +4875,7 @@ public final class Controller implements ay {
 
    }
 
-   private static boolean aaa(fz var0, fe var1) {
+   private static boolean aaa(Char var0, fe var1) {
       try {
          var0.cfa = var1.ada.readUTF();
          if (!var0.cfa.equals("")) {
@@ -4910,14 +4910,14 @@ public final class Controller implements ay {
          if (var2 == -1) {
             var0.dqa = null;
          } else {
-            short var3 = (short)var0.ala;
-            short var4 = (short)(var0.ama - 40);
+            short var3 = (short)var0.cx;
+            short var4 = (short)(var0.cy - 40);
             var0.dqa = new ac((short)-1, false, false, false, false, false, var2, 1, 0, 0, 0, var3, var4, (byte)4, (byte)0, false, false);
             var0.dqa.aga = 5;
          }
 
-         var0.ala = var0.gga = var1.ada.readShort();
-         var0.ama = var0.gha = var1.ada.readShort();
+         var0.cx = var0.gga = var1.ada.readShort();
+         var0.cy = var0.gha = var1.ada.readShort();
          var0.bfa = var1.ada.readShort();
          var0.bga = var1.ada.readShort();
          byte var10 = var1.ada.readByte();
@@ -4937,15 +4937,15 @@ public final class Controller implements ay {
 
          if (var0.bba == 0) {
             var0.aqa = 14;
-            if (fz.ala().asa == var0.asa) {
+            if (Char.getMyChar().asa == var0.asa) {
                GameScr.ava().bca();
             }
          }
 
-         if (var0.asa == -fz.ala().asa) {
+         if (var0.asa == -Char.getMyChar().asa) {
             for(var12 = 0; var12 < GameScr.boa.size(); ++var12) {
-               av var8;
-               if ((var8 = (av)GameScr.boa.elementAt(var12)).aaa.aba.equals(var0.cea)) {
+               Npc var8;
+               if ((var8 = (Npc)GameScr.boa.elementAt(var12)).template.aba.equals(var0.cea)) {
                   var8.aqa = 15;
                   var8.aia = null;
                   break;
@@ -4956,7 +4956,7 @@ public final class Controller implements ay {
          var0.aea = var1.ada.readBoolean();
          var0.afa = var1.ada.readBoolean();
          if (var0.afa) {
-            ef.aaa(141, var0.ala, var0.ama, 0);
+            ef.aaa(141, var0.cx, var0.cy, 0);
          }
 
          short[] var9;
@@ -5003,7 +5003,7 @@ public final class Controller implements ay {
             var3 = GameScr.cma[var2];
             break;
          case 3:
-            if ((var3 = fz.ala().arrItemBag[var2]) != null) {
+            if ((var3 = Char.getMyChar().arrItemBag[var2]) != null) {
                break;
             }
 
@@ -5075,10 +5075,10 @@ public final class Controller implements ay {
                ++var4;
             }
          case 4:
-            var3 = fz.ala().dba[var2];
+            var3 = Char.getMyChar().dba[var2];
             break;
          case 5:
-            var3 = fz.ala().dca[var2];
+            var3 = Char.getMyChar().dca[var2];
             break;
          case 6:
             var3 = GameScr.cna[var2];
@@ -5163,7 +5163,7 @@ public final class Controller implements ay {
             var3 = GameScr.csa[var2];
             break;
          case 39:
-            var3 = fz.cha.apa[GameScr.bra];
+            var3 = Char.cha.apa[GameScr.bra];
          }
 
          var3.afa = var0.ada.readLong();
@@ -5197,7 +5197,7 @@ public final class Controller implements ay {
 
          var3.asa = true;
          if (var1 == 5) {
-            fz.ala().bca();
+            Char.getMyChar().bca();
             return;
          }
       } catch (Exception var6) {
@@ -5283,9 +5283,9 @@ public final class Controller implements ay {
    private static void ama(fe var0) {
       try {
          byte var1 = var0.ada.readByte();
-         fz.ala().cta = var0.ada.readInt();
-         fz.ala().cqa = var0.ada.readInt();
-         fz.ala().csa = var0.ada.readInt();
+         Char.getMyChar().cta = var0.ada.readInt();
+         Char.getMyChar().cqa = var0.ada.readInt();
+         Char.getMyChar().csa = var0.ada.readInt();
          int var3;
          if (var1 == 0) {
             if (GameScr.dga != null) {
@@ -5318,7 +5318,7 @@ public final class Controller implements ay {
 
          GameScr.ava().ala = GameScr.ava().ama = null;
          GameScr.ava().bja();
-         ab.ama();
+         GameCanvas.ama();
       } catch (Exception var2) {
          var2.printStackTrace();
          System.out.println("err getImgEffAuto");
@@ -5331,8 +5331,8 @@ public final class Controller implements ay {
          int var2;
          if (var0.ada.readByte() == 1) {
             var1 = ac.aaa(var0.ada.readUnsignedByte());
-         } else if ((var2 = var0.ada.readInt()) == fz.ala().asa) {
-            var1 = fz.ala();
+         } else if ((var2 = var0.ada.readInt()) == Char.getMyChar().asa) {
+            var1 = Char.getMyChar();
          } else {
             var1 = GameScr.aea(var2);
          }

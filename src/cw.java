@@ -68,31 +68,31 @@ public final class cw {
          var3 = this.ada;
          var4 = this.aea;
          var5 = this.afa;
-         if (ab.ama) {
-            if (!this.ata && ab.aca(var2, var3, var4, var5)) {
+         if (GameCanvas.ama) {
+            if (!this.ata && GameCanvas.aca(var2, var3, var4, var5)) {
                for(var4 = 0; var4 < var1.asa.length; ++var4) {
-                  var1.asa[0] = ab.aqa;
+                  var1.asa[0] = GameCanvas.aqa;
                }
 
-               var1.ara = ab.aqa;
+               var1.ara = GameCanvas.aqa;
                var1.ata = true;
                var1.awa = -1;
                var1.aua = var1.ava != 0;
                var1.ava = 0;
             } else if (this.ata) {
                ++this.aqa;
-               if (this.aqa > 5 && this.ara == ab.aqa && !this.aua) {
+               if (this.aqa > 5 && this.ara == GameCanvas.aqa && !this.aua) {
                   this.ara = -1000;
                   if (this.axa > 1) {
-                     var4 = (this.aja + ab.aqa - var3) / this.aha;
-                     var5 = (this.aia + ab.apa - var2) / this.aha;
+                     var4 = (this.aja + GameCanvas.aqa - var3) / this.aha;
+                     var5 = (this.aia + GameCanvas.apa - var2) / this.aha;
                      this.awa = var4 * this.axa + var5;
                   } else {
-                     this.awa = (this.aja + ab.aqa - var3) / this.aha;
+                     this.awa = (this.aja + GameCanvas.aqa - var3) / this.aha;
                   }
                }
 
-               if ((var4 = ab.aqa - this.asa[0]) != 0 && this.awa != -1) {
+               if ((var4 = GameCanvas.aqa - this.asa[0]) != 0 && this.awa != -1) {
                   this.awa = -1;
                }
 
@@ -101,7 +101,7 @@ public final class cw {
                   var10002[var5] = var10002[var5 - 1];
                }
 
-               var1.asa[0] = ab.aqa;
+               var1.asa[0] = GameCanvas.aqa;
                var1.aja -= var4;
                if (var1.aja < 0) {
                   var1.aja = 0;
@@ -120,19 +120,19 @@ public final class cw {
          }
 
          var8 = false;
-         if (ab.aoa && var1.ata) {
-            var5 = ab.aqa - var1.asa[0];
-            ab.aoa = false;
-            if (ci.aea(var5) < 20 && ci.aea(ab.aqa - var1.ara) < 20 && !var1.aua) {
+         if (GameCanvas.aoa && var1.ata) {
+            var5 = GameCanvas.aqa - var1.asa[0];
+            GameCanvas.aoa = false;
+            if (ci.aea(var5) < 20 && ci.aea(GameCanvas.aqa - var1.ara) < 20 && !var1.aua) {
                var1.ava = 0;
                var1.aja = var1.aba;
                var1.ara = -1000;
                if (var1.axa > 1) {
-                  var3 = (var1.aja + ab.aqa - var3) / var1.aha;
-                  var2 = (var1.aia + ab.apa - var2) / var1.aha;
+                  var3 = (var1.aja + GameCanvas.aqa - var3) / var1.aha;
+                  var2 = (var1.aia + GameCanvas.apa - var2) / var1.aha;
                   var1.awa = var3 * var1.axa + var2;
                } else {
-                  var1.awa = (var1.aja + ab.aqa - var3) / var1.aha;
+                  var1.awa = (var1.aja + GameCanvas.aqa - var3) / var1.aha;
                }
 
                var1.aqa = 0;
@@ -146,7 +146,7 @@ public final class cw {
                } else if (var1.aba > var1.apa) {
                   var1.aja = var1.apa;
                } else {
-                  if ((var3 = ab.aqa - var1.asa[0] + (var1.asa[0] - var1.asa[1]) + (var1.asa[1] - var1.asa[2])) > 10) {
+                  if ((var3 = GameCanvas.aqa - var1.asa[0] + (var1.asa[0] - var1.asa[1]) + (var1.asa[1] - var1.asa[2])) > 10) {
                      var6 = 10;
                   } else if (var3 < -10) {
                      var6 = -10;
@@ -160,7 +160,7 @@ public final class cw {
 
             var1.ata = false;
             var1.aqa = 0;
-            ab.aoa = false;
+            GameCanvas.aoa = false;
          }
 
          (var7 = new au()).aba = var1.awa;
@@ -173,25 +173,25 @@ public final class cw {
          var3 = this.ada;
          var4 = this.aea;
          var5 = this.afa;
-         if (ab.ama) {
-            if (!this.ata && ab.aca(var2, var3, var4, var5)) {
+         if (GameCanvas.ama) {
+            if (!this.ata && GameCanvas.aca(var2, var3, var4, var5)) {
                for(var4 = 0; var4 < var1.asa.length; ++var4) {
-                  var1.asa[0] = ab.apa;
+                  var1.asa[0] = GameCanvas.apa;
                }
 
-               var1.ara = ab.apa;
+               var1.ara = GameCanvas.apa;
                var1.ata = true;
                var1.awa = -1;
                var1.aua = var1.ava != 0;
                var1.ava = 0;
             } else if (this.ata) {
                ++this.aqa;
-               if (this.aqa > 5 && this.ara == ab.apa && !this.aua) {
+               if (this.aqa > 5 && this.ara == GameCanvas.apa && !this.aua) {
                   this.ara = -1000;
-                  this.awa = (this.aia + ab.apa - var2) / this.aha;
+                  this.awa = (this.aia + GameCanvas.apa - var2) / this.aha;
                }
 
-               if ((var4 = ab.apa - this.asa[0]) != 0 && this.awa != -1) {
+               if ((var4 = GameCanvas.apa - this.asa[0]) != 0 && this.awa != -1) {
                   this.awa = -1;
                }
 
@@ -200,7 +200,7 @@ public final class cw {
                   var10002[var5] = var10002[var5 - 1];
                }
 
-               var1.asa[0] = ab.apa;
+               var1.asa[0] = GameCanvas.apa;
                var1.aia -= var4;
                if (var1.aia < 0) {
                   var1.aia = 0;
@@ -219,14 +219,14 @@ public final class cw {
          }
 
          var8 = false;
-         if (ab.aoa && var1.ata) {
-            var5 = ab.apa - var1.asa[0];
-            ab.aoa = false;
-            if (ci.aea(var5) < 20 && ci.aea(ab.apa - var1.ara) < 20 && !var1.aua) {
+         if (GameCanvas.aoa && var1.ata) {
+            var5 = GameCanvas.apa - var1.asa[0];
+            GameCanvas.aoa = false;
+            if (ci.aea(var5) < 20 && ci.aea(GameCanvas.apa - var1.ara) < 20 && !var1.aua) {
                var1.ava = 0;
                var1.aia = var1.aaa;
                var1.ara = -1000;
-               var1.awa = (var1.aia + ab.apa - var2) / var1.aha;
+               var1.awa = (var1.aia + GameCanvas.apa - var2) / var1.aha;
                var1.aqa = 0;
                var8 = true;
             } else if (var1.awa != -1 && var1.aqa > 5) {
@@ -238,7 +238,7 @@ public final class cw {
                } else if (var1.aaa > var1.aoa) {
                   var1.aia = var1.aoa;
                } else {
-                  if ((var3 = ab.apa - var1.asa[0] + (var1.asa[0] - var1.asa[1]) + (var1.asa[1] - var1.asa[2])) > 10) {
+                  if ((var3 = GameCanvas.apa - var1.asa[0] + (var1.asa[0] - var1.asa[1]) + (var1.asa[1] - var1.asa[2])) > 10) {
                      var6 = 10;
                   } else if (var3 < -10) {
                      var6 = -10;
@@ -252,7 +252,7 @@ public final class cw {
 
             var1.ata = false;
             var1.aqa = 0;
-            ab.aoa = false;
+            GameCanvas.aoa = false;
          }
 
          (var7 = new au()).aba = var1.awa;

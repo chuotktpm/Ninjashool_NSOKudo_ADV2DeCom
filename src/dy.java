@@ -21,10 +21,10 @@ public final class dy {
    }
 
    public static void aaa(as var0) {
-      int var1 = ab.aza;
+      int var1 = GameCanvas.aza;
       if (aca != null) {
-         var0.ada(0, 0, ab.aza, ab.baa);
-         if (!ab.afa) {
+         var0.ada(0, 0, GameCanvas.aza, GameCanvas.baa);
+         if (!GameCanvas.afa) {
             fk.aaa(-6, -4, var1 + 10, aaa + 8, var0);
          } else {
             var0.aaa(0);
@@ -38,7 +38,7 @@ public final class dy {
    }
 
    public static void aba() {
-      if (ab.afa) {
+      if (GameCanvas.afa) {
          aaa = 20;
       }
 
@@ -56,7 +56,7 @@ public final class dy {
             return;
          }
       } else if (ada == 3) {
-         if (afa + aga < aha + ab.aza - 160) {
+         if (afa + aga < aha + GameCanvas.aza - 160) {
             afa -= 6;
          } else {
             afa -= 2;
@@ -85,12 +85,12 @@ public final class dy {
             aga = var0.aba.aaa(aca.aaa);
             aea = 0;
             ada = 0;
-            afa = ab.aza;
+            afa = GameCanvas.aza;
             return;
          }
 
          aca = null;
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             aaa = 0;
          }
       }
@@ -147,7 +147,7 @@ public final class dy {
       }
 
       if (!var7) {
-         if (ab.aza == 128) {
+         if (GameCanvas.aza == 128) {
             aha = 1;
          }
 

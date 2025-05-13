@@ -283,7 +283,7 @@ public final class eq implements ag {
    }
 
    public final void aaa(as var1) {
-      var1.ada(0, 0, ab.aza, ab.baa);
+      var1.ada(0, 0, GameCanvas.aza, GameCanvas.baa);
       boolean var2 = this.aea;
       if (this.ara == 2) {
          this.aka = this.aja;
@@ -360,14 +360,14 @@ public final class eq implements ag {
          --this.aqa;
       }
 
-      if (ab.aoa) {
-         if (ab.bda == dl.aaa) {
+      if (GameCanvas.aoa) {
+         if (GameCanvas.bda == dl.aaa) {
             if (dl.aaa == null) {
                dl.aaa = new dl();
             }
 
             int var1 = dl.aaa.aba.aba;
-            if (!ab.aba(this.aaa, this.aba - var1, this.aca, this.ada)) {
+            if (!GameCanvas.aba(this.aaa, this.aba - var1, this.aca, this.ada)) {
                this.aea = false;
                return;
             }
@@ -376,7 +376,7 @@ public final class eq implements ag {
             return;
          }
 
-         if (ab.aba(this.aaa, this.aba, this.aca, this.ada)) {
+         if (GameCanvas.aba(this.aaa, this.aba, this.aca, this.ada)) {
             this.aba();
             return;
          }

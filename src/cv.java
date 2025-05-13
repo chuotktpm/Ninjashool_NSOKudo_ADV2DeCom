@@ -24,47 +24,47 @@ public final class cv extends Auto {
 
    public final void a_() {
       aca = 0;
-      this.ada = fz.ama(0);
+      this.ada = Char.ama(0);
       super.a_();
    }
 
    public final void b_() {
-      this.ada = fz.ama(0);
+      this.ada = Char.ama(0);
    }
 
    public final void aaa() {
       if (aca <= 20 && (!(super.aoa instanceof eu) || System.currentTimeMillis() - super.ana < 3600000L)) {
-         if (fz.ala().bba <= 0) {
+         if (Char.getMyChar().bba <= 0) {
             Auto.aaa(false);
             return;
          }
 
-         if (gn.afa(gn.aoa)) {
+         if (TileMap.afa(TileMap.mapID)) {
             if (this.ada == null) {
                GameScr.chatPopup("Nhận NV " + (aca + 1) + "/20");
-               GameScr.aba(25, GameScr.gva, 0);
+               GameScr.PickNpc(25, GameScr.gva, 0);
                LockGame.ala();
-               this.ada = fz.ama(0);
+               this.ada = Char.ama(0);
                return;
             }
 
             if (this.ada.aba < this.ada.aca) {
                GameScr.chatPopup("Đi làm NV " + aca + "/20");
-               GameScr.aba(25, GameScr.gva, 3);
-               gn.aga();
+               GameScr.PickNpc(25, GameScr.gva, 3);
+               TileMap.aga();
                this.aca(super.aha);
                return;
             }
 
-            if (fz.bja() <= 0) {
+            if (Char.bja() <= 0) {
                GameScr.chatPopup("Hành trang đầy");
                return;
             }
 
             GameScr.chatPopup("Hoàn thành NV " + aca + "/20");
-            GameScr.aba(25, GameScr.gva, 2);
+            GameScr.PickNpc(25, GameScr.gva, 2);
             this.ada = null;
-         } else if (this.ada != null && gn.aoa == this.ada.aga) {
+         } else if (this.ada != null && TileMap.mapID == this.ada.aga) {
             if (this.ada.aba >= this.ada.aca) {
                Auto.ala();
                return;

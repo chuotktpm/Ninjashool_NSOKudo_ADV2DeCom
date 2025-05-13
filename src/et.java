@@ -48,9 +48,9 @@ public final class et extends fb implements ag {
          super.ala = new ca("Chuyển đến", this, 14004, (Object)null);
       }
 
-      int var1 = as.aaa(gn.aha);
-      this.bja = (ab.aza - var1) / 2;
-      this.bka = (ab.baa - 20 - as.aba(gn.aha)) / 2;
+      int var1 = as.aaa(TileMap.aha);
+      this.bja = (GameCanvas.aza - var1) / 2;
+      this.bka = (GameCanvas.baa - 20 - as.aba(TileMap.aha)) / 2;
       if (this.bja < 0) {
          this.bja = 0;
       }
@@ -60,25 +60,25 @@ public final class et extends fb implements ag {
       }
 
       if (this.aba) {
-         baa = var1 + 20 - ab.aza;
-         bba = as.aba(gn.aha) + 40 - ab.baa;
+         baa = var1 + 20 - GameCanvas.aza;
+         bba = as.aba(TileMap.aha) + 40 - GameCanvas.baa;
          this.bha = var1 + 20;
          this.bia = var1 + 40;
-         if (this.bia < ab.baa - 26) {
-            this.bia = ab.baa - 26;
+         if (this.bia < GameCanvas.baa - 26) {
+            this.bia = GameCanvas.baa - 26;
          }
 
-         if (this.bha < ab.aza) {
-            this.bha = ab.aza;
+         if (this.bha < GameCanvas.aza) {
+            this.bha = GameCanvas.aza;
          }
 
-         aha = this.bja + fz.ala().ala / 12;
-         aia = this.bka + fz.ala().ama / 12;
+         aha = this.bja + Char.getMyChar().cx / 12;
+         aia = this.bka + Char.getMyChar().cy / 12;
       } else {
-         baa = 340 - ab.aza;
-         bba = 340 - ab.baa;
-         aha = bfa[gn.aoa] + bda;
-         aia = bga[gn.aoa] + bea;
+         baa = 340 - GameCanvas.aza;
+         bba = 340 - GameCanvas.baa;
+         aha = bfa[TileMap.mapID] + bda;
+         aia = bga[TileMap.mapID] + bea;
          this.bha = 330 + bda;
          this.bia = 310 + bea;
       }
@@ -97,8 +97,8 @@ public final class et extends fb implements ag {
       aya = 0;
       ata = 0;
       asa = 0;
-      asa = aha - ab.bba;
-      ata = aia - ab.bca;
+      asa = aha - GameCanvas.bba;
+      ata = aia - GameCanvas.bca;
    }
 
    public static et ada() {
@@ -112,24 +112,24 @@ public final class et extends fb implements ag {
    public final void aaa() {
       super.aaa();
       fo.aca();
-      gn.ada();
+      TileMap.ada();
       super.ana = new ca(er.bma, this, 1000, (Object)null);
       super.ama = new ca(er.gfa, this, 1001, (Object)null);
       super.ala = new ca("Chuyển đến", this, 14004, (Object)null);
       if (aca == null) {
-         aca = ab.aca("/wm.png");
-         ada = ab.aca("/u/x.png");
-         aea = ab.aca("/u/wpt1.png");
+         aca = GameCanvas.aca("/wm.png");
+         ada = GameCanvas.aca("/u/x.png");
+         aea = GameCanvas.aca("/u/wpt1.png");
          afa = as.aba(aca);
          aga = as.aba(aca);
       }
 
-      if (ab.aza > afa) {
-         bda = ab.bba - afa / 2 - 12;
+      if (GameCanvas.aza > afa) {
+         bda = GameCanvas.bba - afa / 2 - 12;
       }
 
-      if (ab.baa > aga) {
-         bea = ab.bca - aga / 2;
+      if (GameCanvas.baa > aga) {
+         bea = GameCanvas.bca - aga / 2;
       }
 
       this.aha();
@@ -150,7 +150,7 @@ public final class et extends fb implements ag {
       fw.aca.aba = null;
       fw.aga.aba = null;
       System.gc();
-      gn.apa = gn.aoa;
+      TileMap.apa = TileMap.mapID;
    }
 
    public final void d_() {
@@ -158,7 +158,7 @@ public final class et extends fb implements ag {
       aca = null;
       ada = null;
       System.gc();
-      gn.aka();
+      TileMap.aka();
       fo.ada();
       fw.ata.aba();
       fw.ava.aba();
@@ -180,7 +180,7 @@ public final class et extends fb implements ag {
    public final void aaa(as var1) {
       boolean var2 = false;
       var1.aaa(0);
-      var1.aca(0, 0, ab.aza, ab.baa);
+      var1.aca(0, 0, GameCanvas.aza, GameCanvas.baa);
       var1.aaa(10, 10);
       var1.aaa(-aya, -aza);
       int var3;
@@ -188,15 +188,15 @@ public final class et extends fb implements ag {
       int var5;
       int var6;
       if (this.aba) {
-         var1.aaa(gn.aha, this.bja, this.bka, 0);
+         var1.aaa(TileMap.aha, this.bja, this.bka, 0);
 
          for(var3 = 0; var3 < GameScr.bna.size(); ++var3) {
             ac var7;
             var4 = (var7 = (ac)GameScr.bna.elementAt(var3)).ada / 12;
             var5 = var7.aea / 12;
-            if (var7.awa < fz.ala().aya - 2) {
+            if (var7.awa < Char.getMyChar().aya - 2) {
                var1.aaa(11184810);
-            } else if (var7.awa > fz.ala().aya + 2) {
+            } else if (var7.awa > Char.getMyChar().aya + 2) {
                var1.aaa(16711680);
             } else {
                var1.aaa(16776960);
@@ -207,10 +207,10 @@ public final class et extends fb implements ag {
 
          for(var3 = 0; var3 < GameScr.bfa.size(); ++var3) {
             ep var9;
-            if ((var9 = (ep)GameScr.bfa.elementAt(var3)).afa != null && var9.afa != fz.ala()) {
-               var4 = var9.afa.ala / 12;
-               var5 = var9.afa.ama / 12;
-               if (ab.aua % 10 < 8) {
+            if ((var9 = (ep)GameScr.bfa.elementAt(var3)).afa != null && var9.afa != Char.getMyChar()) {
+               var4 = var9.afa.cx / 12;
+               var5 = var9.afa.cy / 12;
+               if (GameCanvas.aua % 10 < 8) {
                   var1.aaa(16777215);
                   var1.aca(this.bja + var4 - 2, this.bka + var5 - 2, 5, 5);
                   var1.aaa(65280);
@@ -223,9 +223,9 @@ public final class et extends fb implements ag {
          GameScr.bna();
 
          for(var6 = 0; var6 < GameScr.boa.size(); ++var6) {
-            av var10;
-            var4 = (var10 = (av)GameScr.boa.elementAt(var6)).ala / 12;
-            var5 = var10.ama / 12;
+            Npc var10;
+            var4 = (var10 = (Npc)GameScr.boa.elementAt(var6)).cx / 12;
+            var5 = var10.cy / 12;
             var1.aaa(16777215);
             var1.aca(this.bja + var4 - 2, this.bka + var5 - 2, 5, 5);
             var1.aaa(65280);
@@ -234,11 +234,11 @@ public final class et extends fb implements ag {
             var2 = true;
          }
 
-         for(byte var11 = 0; var11 < gn.aua.size(); ++var11) {
+         for(byte var11 = 0; var11 < TileMap.aua.size(); ++var11) {
             dn var8;
-            var4 = ((var8 = (dn)gn.aua.elementAt(var11)).aaa + var8.aca) / 2 / 12;
+            var4 = ((var8 = (dn)TileMap.aua.elementAt(var11)).aaa + var8.aca) / 2 / 12;
             var5 = (var8.aba + var8.ada) / 2 / 12;
-            if (ab.aua % 10 < 8) {
+            if (GameCanvas.aua % 10 < 8) {
                var1.aaa(0);
                var1.aca(this.bja + var4 - 2, this.bka + var5 - 2, 5, 5);
                var1.aaa(16777215);
@@ -246,11 +246,11 @@ public final class et extends fb implements ag {
             }
          }
 
-         var4 = fz.ala().ala / 12;
-         var5 = fz.ala().ama / 12;
+         var4 = Char.getMyChar().cx / 12;
+         var5 = Char.getMyChar().cy / 12;
          var1.aaa(16777215);
          var1.aca(this.bja + var4 - 2, this.bka + var5 - 2, 5, 5);
-         if (ab.aua % 10 > 5) {
+         if (GameCanvas.aua % 10 > 5) {
             var1.aaa(255);
             var1.aca(this.bja + var4 - 1, this.bka + var5 - 1, 3, 3);
          }
@@ -258,46 +258,46 @@ public final class et extends fb implements ag {
          var1.aaa(aea, aha - 2, aia, 0);
          super.aaa(var1);
          if (!var2) {
-            fw.aka.aaa(var1, gn.aka, 10, ab.baa - 17, 0);
+            fw.aka.aaa(var1, TileMap.aka, 10, GameCanvas.baa - 17, 0);
          }
       } else {
-         if (ab.aza > afa && ab.baa > aga) {
-            var1.aaa(aca, ab.bba, ab.bca, af.aga);
-         } else if (ab.aza > afa) {
-            var1.aaa(aca, ab.bba, 0, af.aaa);
-         } else if (ab.baa > aga) {
-            var1.aaa(aca, 0, ab.bca, af.aha);
+         if (GameCanvas.aza > afa && GameCanvas.baa > aga) {
+            var1.aaa(aca, GameCanvas.bba, GameCanvas.bca, af.aga);
+         } else if (GameCanvas.aza > afa) {
+            var1.aaa(aca, GameCanvas.bba, 0, af.aaa);
+         } else if (GameCanvas.baa > aga) {
+            var1.aaa(aca, 0, GameCanvas.bca, af.aha);
          } else {
             var1.aaa(aca, 0, 0, 0);
          }
 
-         if (gn.aoa < gn.ava.length && gn.aoa >= 0) {
+         if (TileMap.mapID < TileMap.ava.length && TileMap.mapID >= 0) {
             var4 = 0;
-            if (bfa[gn.aoa] != 1 || bga[gn.aoa] != 1) {
-               var4 = bfa[gn.aoa] < 100 ? 0 : (bfa[gn.aoa] > 200 ? 1 : 2);
-               ab.aaa(bfa[gn.aoa] + bda, bga[gn.aoa] + bea, var1);
+            if (bfa[TileMap.mapID] != 1 || bga[TileMap.mapID] != 1) {
+               var4 = bfa[TileMap.mapID] < 100 ? 0 : (bfa[TileMap.mapID] > 200 ? 1 : 2);
+               GameCanvas.aaa(bfa[TileMap.mapID] + bda, bga[TileMap.mapID] + bea, var1);
             }
 
             var3 = 0;
             if (bca >= 0) {
                var4 = bfa[bca] < 100 ? 0 : (bfa[bca] > 200 ? 1 : 2);
-               fw.aka.aaa(var1, gn.ava[bca], bfa[bca] + bda, bga[bca] + bea - 20, var4, fw.ama);
+               fw.aka.aaa(var1, TileMap.ava[bca], bfa[bca] + bda, bga[bca] + bea - 20, var4, fw.ama);
                var1.aaa(ada, bfa[bca] + bda, bga[bca] + bea, 3);
                var2 = true;
                var3 = bga[bca] - 20;
-            } else if (bfa[gn.aoa] != 1 || bga[gn.aoa] != 1) {
-               var3 = bga[gn.aoa] - 20;
-               fw.ala.aaa(var1, gn.ava[gn.aoa], bfa[gn.aoa] + bda, bga[gn.aoa] + bea - 20, var4, fw.ama);
+            } else if (bfa[TileMap.mapID] != 1 || bga[TileMap.mapID] != 1) {
+               var3 = bga[TileMap.mapID] - 20;
+               fw.ala.aaa(var1, TileMap.ava[TileMap.mapID], bfa[TileMap.mapID] + bda, bga[TileMap.mapID] + bea - 20, var4, fw.ama);
             }
 
-            for(var6 = 0; var6 < fz.ala().fza.size(); ++var6) {
+            for(var6 = 0; var6 < Char.getMyChar().fza.size(); ++var6) {
                aj var12;
-               if ((var12 = (aj)fz.ala().fza.elementAt(var6)).aga >= 0 && var12.aga < bfa.length) {
+               if ((var12 = (aj)Char.getMyChar().fza.elementAt(var6)).aga >= 0 && var12.aga < bfa.length) {
                   var1.aaa(ada, bfa[var12.aga] + bda, bga[var12.aga] + bea, 3);
                }
             }
 
-            if (aja >= 0 && (bca < 0 && gn.aoa != aja || bca >= 0 && aja != bca)) {
+            if (aja >= 0 && (bca < 0 && TileMap.mapID != aja || bca >= 0 && aja != bca)) {
                var4 = bfa[aja] < 100 ? 0 : (bfa[aja] > 200 ? 1 : 2);
                var6 = bfa[aja];
                if ((var5 = bga[aja] - 20) > var3 && var5 - var3 < 30) {
@@ -308,7 +308,7 @@ public final class et extends fb implements ag {
                   var5 -= 5;
                }
 
-               fw.ala.aaa(var1, gn.ava[aja], var6 + bda, var5 + bea, var4, fw.ama);
+               fw.ala.aaa(var1, TileMap.ava[aja], var6 + bda, var5 + bea, var4, fw.ama);
             }
          }
 
@@ -362,7 +362,7 @@ public final class et extends fb implements ag {
       }
 
       boolean var1 = false;
-      if (ab.ala[2]) {
+      if (GameCanvas.ala[2]) {
          if ((aia -= 4) < bea - 10) {
             aia = bea - 10;
          }
@@ -370,7 +370,7 @@ public final class et extends fb implements ag {
          var1 = true;
       }
 
-      if (ab.ala[8]) {
+      if (GameCanvas.ala[8]) {
          if ((aia += 4) > this.bia) {
             aia = this.bia;
          }
@@ -378,7 +378,7 @@ public final class et extends fb implements ag {
          var1 = true;
       }
 
-      if (ab.ala[4]) {
+      if (GameCanvas.ala[4]) {
          if ((aha -= 4) < bda - 10) {
             aha = bda - 10;
          }
@@ -386,7 +386,7 @@ public final class et extends fb implements ag {
          var1 = true;
       }
 
-      if (ab.ala[6]) {
+      if (GameCanvas.ala[6]) {
          if ((aha += 4) > this.bha) {
             aha = this.bha;
          }
@@ -395,21 +395,21 @@ public final class et extends fb implements ag {
       }
 
       if (var1) {
-         asa = aha - ab.bba;
-         ata = aia - ab.bca;
+         asa = aha - GameCanvas.bba;
+         ata = aia - GameCanvas.bca;
          ala();
       }
 
       GameScr.ava();
       bca = GameScr.bma();
-      if (ab.ana && ab.aqa < ab.baa - fb.aqa) {
-         ab.ana = false;
+      if (GameCanvas.ana && GameCanvas.aqa < GameCanvas.baa - fb.aqa) {
+         GameCanvas.ana = false;
          this.bla = true;
-         this.bma = ab.apa;
-         this.bna = ab.aqa;
-      } else if (ab.ama && this.bla) {
-         asa -= ab.apa - this.bma;
-         ata -= ab.aqa - this.bna;
+         this.bma = GameCanvas.apa;
+         this.bna = GameCanvas.aqa;
+      } else if (GameCanvas.ama && this.bla) {
+         asa -= GameCanvas.apa - this.bma;
+         ata -= GameCanvas.aqa - this.bna;
          if (asa < 0) {
             asa = 0;
          }
@@ -428,28 +428,28 @@ public final class et extends fb implements ag {
 
          aya = asa;
          aza = ata;
-         this.bma = ab.apa;
-         this.bna = ab.aqa;
+         this.bma = GameCanvas.apa;
+         this.bna = GameCanvas.aqa;
       }
 
-      if (ab.aoa) {
-         int var3 = ab.ara - ab.apa;
-         int var2 = ab.asa - ab.aqa;
+      if (GameCanvas.aoa) {
+         int var3 = GameCanvas.ara - GameCanvas.apa;
+         int var2 = GameCanvas.asa - GameCanvas.aqa;
          if (var3 < 10 && var2 < 10) {
-            aha = aya + ab.ara - 8;
-            aia = aza + ab.asa - 8;
+            aha = aya + GameCanvas.ara - 8;
+            aia = aza + GameCanvas.asa - 8;
             ala();
          }
 
          this.bla = false;
-         ab.aoa = false;
+         GameCanvas.aoa = false;
       }
 
-      if (ab.afa && ab.aza >= 320) {
-         super.ala.afa = ab.aza / 2 - 160;
-         super.ama.afa = ab.aza / 2 - 35;
-         super.ana.afa = ab.aza / 2 + 88;
-         super.ala.aga = super.ama.aga = super.ana.aga = ab.baa - 26;
+      if (GameCanvas.afa && GameCanvas.aza >= 320) {
+         super.ala.afa = GameCanvas.aza / 2 - 160;
+         super.ama.afa = GameCanvas.aza / 2 - 35;
+         super.ana.afa = GameCanvas.aza / 2 + 88;
+         super.ala.aga = super.ama.aga = super.ana.aga = GameCanvas.baa - 26;
       }
 
    }
@@ -469,9 +469,9 @@ public final class et extends fb implements ag {
    public final void aaa(int var1, Object var2) {
       switch(var1) {
       case 1000:
-         if (fz.ala().bba <= 0 || fz.ala().aqa == 14) {
+         if (Char.getMyChar().bba <= 0 || Char.getMyChar().aqa == 14) {
             super.ama = GameScr.ava().gna;
-            fz.ala().bba = 0;
+            Char.getMyChar().bba = 0;
          }
 
          GameScr.ava().aaa();
@@ -481,7 +481,7 @@ public final class et extends fb implements ag {
          this.aha();
          return;
       case 14004:
-         gn.ala(aja);
+         TileMap.ala(aja);
       default:
       }
    }

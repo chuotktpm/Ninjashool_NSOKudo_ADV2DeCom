@@ -8,22 +8,22 @@ public final class gl implements Runnable {
    }
 
    public final void run() {
-      if (fz.ala().csa >= 1000 && fz.ala().aua >= 30) {
+      if (Char.getMyChar().csa >= 1000 && Char.getMyChar().aua >= 30) {
          gg var1;
-         if ((var1 = fz.afa(37)) == null && (var1 = fz.afa(35)) == null) {
-            GameScr.aba(4, 0, 0);
+         if ((var1 = Char.afa(37)) == null && (var1 = Char.afa(35)) == null) {
+            GameScr.PickNpc(4, 0, 0);
             Service.aaa().aba(9, 6, 1);
             LockGame.aha();
             Auto.aaa(100L);
-            var1 = fz.afa(35);
+            var1 = Char.afa(35);
          }
 
          if (var1 != null) {
             Service.aaa().aia(var1.ada, this.aaa);
-            gn.aga();
+            TileMap.aga();
          }
       } else {
-         gn.ala(this.aba);
+         TileMap.ala(this.aba);
       }
 
    }

@@ -12,11 +12,11 @@ public final class bx implements Runnable {
             var1 = 0;
          }
 
-         if (var1 >= gn.aua.size()) {
-            var1 = gn.aua.size() - 1;
+         if (var1 >= TileMap.aua.size()) {
+            var1 = TileMap.aua.size() - 1;
          }
 
-         gn.aja(var1);
+         TileMap.aja(var1);
       } catch (Exception var2) {
          var2.printStackTrace();
       }
@@ -26,7 +26,7 @@ public final class bx implements Runnable {
          GameScr.ava().aaa();
       }
 
-      ab.ama();
-      ab.aea = false;
+      GameCanvas.ama();
+      GameCanvas.aea = false;
    }
 }

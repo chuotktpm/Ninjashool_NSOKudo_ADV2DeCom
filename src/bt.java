@@ -32,11 +32,11 @@ public class bt extends ds {
       this.aaa = var1;
    }
 
-   public boolean aaa(fz var1) {
+   public boolean aaa(Char var1) {
       return var1.aya >= 20;
    }
 
-   public void aaa(fz var1, byte var2, byte var3) {
+   public void aaa(Char var1, byte var2, byte var3) {
       if (var1.aua < 9) {
          super.aaa(var1, var2, var3);
       } else {
@@ -53,12 +53,12 @@ public class bt extends ds {
          switch(var1.aua) {
          case 9:
             if (var1.cua.aaa != 0) {
-               if (gn.aoa == 28) {
+               if (TileMap.mapID == 28) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                } else {
-                  this.aaa(28, -1, -1, -1);
+                  this.goMap(28, -1, -1, -1);
                   return;
                }
             } else if (this.aaa == 0) {
@@ -67,11 +67,11 @@ public class bt extends ds {
                return;
             } else {
                var20 = aba[this.aaa];
-               if (gn.aoa != var20) {
-                  this.aaa(var20, -2, -1, -1);
+               if (TileMap.mapID != var20) {
+                  this.goMap(var20, -2, -1, -1);
                   return;
                } else {
-                  GameScr.aba(5, 1, 0);
+                  GameScr.PickNpc(5, 1, 0);
 
                   for(var5 = 0; var5 < var1.arrItemBag.length; ++var5) {
                      if ((var11 = var1.arrItemBag[var5]) != null && (var11.aaa.aba == 22 || var11.aaa.aba == 27)) {
@@ -85,22 +85,22 @@ public class bt extends ds {
                      LockGame.ara();
                   }
 
-                  GameScr.aba(aca[this.aaa], 1, ada[this.aaa]);
+                  GameScr.PickNpc(aca[this.aaa], 1, ada[this.aaa]);
 
                   do {
                      Thread.sleep(1000L);
-                  } while(fz.afa(aea[this.aaa]) == null);
+                  } while(Char.afa(aea[this.aaa]) == null);
 
-                  if ((var21 = fz.afa(bha[this.aaa])) != null) {
+                  if ((var21 = Char.afa(bha[this.aaa])) != null) {
                      Service.aaa().aea(var21.ada);
                   }
 
-                  if ((var21 = fz.afa(aea[this.aaa])) != null) {
+                  if ((var21 = Char.afa(aea[this.aaa])) != null) {
                      Service.aaa().aea(var21.ada);
                   }
 
                   Thread.sleep(1000L);
-                  GameScr.aba(4, 0, 0);
+                  GameScr.PickNpc(4, 0, 0);
 
                   for(var15 = 0; var15 < var1.arrItemBag.length; ++var15) {
                      if ((var21 = var1.arrItemBag[var15]) != null && (var21.aaa.aba < 10 || var21.aaa.aba == 16 || var21.aaa.aba == 17 || var21.aaa.aaa == 23)) {
@@ -115,64 +115,64 @@ public class bt extends ds {
             }
          case 10:
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 28) {
+               if (TileMap.mapID == 28) {
                   this.ada(-1);
                   this.aca(5, 1);
                   return;
                }
 
-               this.aaa(28, -1, -1, -1);
+               this.goMap(28, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 1) {
-               if (gn.aoa == 4) {
+               if (TileMap.mapID == 4) {
                   this.ada(-1);
                   this.aca(6, 1);
                   return;
                }
 
-               this.aaa(4, -1, -1, -1);
+               this.goMap(4, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 2) {
-               if (gn.aoa == 46) {
+               if (TileMap.mapID == 46) {
                   this.ada(-1);
                   this.aca(7, 1);
                   return;
                }
 
-               this.aaa(46, -1, -1, -1);
+               this.goMap(46, -1, -1, -1);
                return;
             }
             break;
          case 11:
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 28) {
+               if (TileMap.mapID == 28) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(28, -1, -1, -1);
+               this.goMap(28, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 1) {
-               for(var20 = 0; var20 < GameScr.bla.size(); ++var20) {
-                  fz var23;
-                  if ((var23 = (fz)GameScr.bla.elementAt(var20)) != null) {
+               for(var20 = 0; var20 < GameScr.vCharInMap.size(); ++var20) {
+                  Char var23;
+                  if ((var23 = (Char)GameScr.vCharInMap.elementAt(var20)) != null) {
                      Service.aaa().aaa(var23.cea);
                   }
                }
 
                var15 = super.aha;
                GameScr var19 = GameScr.ava();
-               av var22;
-               if ((var22 = GameScr.aia(13)) != null && var22.aqa != 15) {
-                  if (Math.abs(var22.ala - fz.ala().ala) > 22 || Math.abs(var22.ama - fz.ala().ama) > 22) {
-                     fz.aca(var22.ala, var22.ama);
+               Npc var22;
+               if ((var22 = GameScr.findNpc(13)) != null && var22.aqa != 15) {
+                  if (Math.abs(var22.cx - Char.getMyChar().cx) > 22 || Math.abs(var22.cy - Char.getMyChar().cy) > 22) {
+                     Char.charMove(var22.cx, var22.cy);
                   }
 
                   Service.aaa().aea();
@@ -195,24 +195,24 @@ public class bt extends ds {
 
                   super.aha = var20;
                   Service.aaa().aaa((int)var20, (int)-1);
-                  gn.aga();
+                  TileMap.aga();
                   Thread.sleep(100L);
                   return;
                }
 
-               super.aha = gn.ala;
+               super.aha = TileMap.zoneID;
                return;
             }
             break;
          case 12:
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 3) {
+               if (TileMap.mapID == 3) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(3, -1, -1, -1);
+               this.goMap(3, -1, -1, -1);
                return;
             }
 
@@ -224,32 +224,32 @@ public class bt extends ds {
                var5 = (new int[]{194, 94, 114, 99, 109, 105, 119})[var1.cua.aaa];
                if ((var11 = var1.dca[1]) == null) {
                   var16 = false;
-                  var11 = fz.afa(var5);
+                  var11 = Char.afa(var5);
                }
             } else if (var1.cza.aaa == 2) {
                var16 = true;
                var5 = 174;
                if ((var11 = var1.dca[9]) == null) {
                   var16 = false;
-                  var11 = fz.afa(174);
+                  var11 = Char.afa(174);
                }
             } else if (var1.cza.aaa == 3) {
                var16 = true;
                var5 = var1.ata == 1 ? 124 : 125;
                if ((var11 = var1.dca[8]) == null) {
                   var16 = false;
-                  var11 = fz.afa(var5);
+                  var11 = Char.afa(var5);
                }
             }
 
             if (var11 == null) {
-               if (gn.aoa == 4) {
+               if (TileMap.mapID == 4) {
                   this.ada(var5);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(4, -1, -1, -1);
+               this.goMap(4, -1, -1, -1);
                return;
             }
 
@@ -266,19 +266,19 @@ public class bt extends ds {
                var18 = GameScr.eba[var11.aia];
             }
 
-            if (var13 << 1 > fz.bia() || var18 << 1 > var1.csa) {
-               if (gn.aoa == 46) {
+            if (var13 << 1 > Char.bia() || var18 << 1 > var1.csa) {
+               if (TileMap.mapID == 46) {
                   this.ada(1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(46, -1, -1, -1);
+               this.goMap(46, -1, -1, -1);
                return;
             }
 
-            if (gn.aoa != 22) {
-               this.aaa(22, -2, -1, -1);
+            if (TileMap.mapID != 22) {
+               this.goMap(22, -2, -1, -1);
                return;
             }
 
@@ -288,7 +288,7 @@ public class bt extends ds {
             }
 
             var7 = var11.aia;
-            GameScr.aba(6, 0, 0);
+            GameScr.PickNpc(6, 0, 0);
             LockGame.ara();
             GameScr.dfa = var11;
 
@@ -324,16 +324,16 @@ public class bt extends ds {
             if ((var4 = var1.dca[1]) != null && var4.aia < 2) {
                var5 = GameScr.dxa[var4.aia] / 2;
                var15 = GameScr.eba[var4.aia];
-               if (var5 << 1 <= fz.bia() && var15 << 1 <= var1.csa) {
-                  if (gn.aoa != 22) {
-                     this.aaa(22, -2, -1, -1);
+               if (var5 << 1 <= Char.bia() && var15 << 1 <= var1.csa) {
+                  if (TileMap.mapID != 22) {
+                     this.goMap(22, -2, -1, -1);
                      return;
                   }
 
                   Service.aaa().aaa((int)var4.aaa.aba);
                   LockGame.ara();
                   var13 = var4.aia;
-                  GameScr.aba(6, 0, 0);
+                  GameScr.PickNpc(6, 0, 0);
                   LockGame.ara();
                   GameScr.dfa = var4;
 
@@ -363,44 +363,44 @@ public class bt extends ds {
                   return;
                }
 
-               if (gn.aoa == 4) {
+               if (TileMap.mapID == 4) {
                   this.ada(1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(4, -1, -1, -1);
+               this.goMap(4, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 4) {
+               if (TileMap.mapID == 4) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(4, -1, -1, -1);
+               this.goMap(4, -1, -1, -1);
                return;
             }
 
             var5 = var1.cza.aaa == 1 ? 56 : (var1.cza.aaa == 2 ? 0 : 73);
-            if (gn.aoa != var5) {
-               if (gn.aoa != var2) {
-                  super.aaa(var2, -2, -1, -1);
+            if (TileMap.mapID != var5) {
+               if (TileMap.mapID != var2) {
+                  super.goMap(var2, -2, -1, -1);
                   return;
                }
 
                if (GameScr.aya < 10 && var1.csa >= 300 * (10 - GameScr.aya)) {
-                  GameScr.aba(3, 0, 0);
+                  GameScr.PickNpc(3, 0, 0);
                   Service.aaa().aaa(7, 1, 10 - GameScr.aya);
                   LockGame.aha();
                   return;
                }
 
-               GameScr.aba(var3, 0, 0);
+               GameScr.PickNpc(var3, 0, 0);
                Service.aaa().aja(var3, 0);
-               gn.aga();
+               TileMap.aga();
                return;
             }
 
@@ -412,11 +412,11 @@ public class bt extends ds {
                var1.aea(17);
             }
 
-            fz var14;
-            if (GameScr.bla.size() > 0 && (var14 = (fz)GameScr.bla.elementAt(0)) != null) {
+            Char var14;
+            if (GameScr.vCharInMap.size() > 0 && (var14 = (Char)GameScr.vCharInMap.elementAt(0)) != null) {
                bc var17 = Auto.aqa;
-               if (ci.aea(var1.ala - var14.ala) > var17.aga || ci.aea(var1.ama - var14.ama) > var17.aha) {
-                  fz.aca(var14.ala < gn.aca ? var14.ala : gn.aca - 50, var14.ama);
+               if (ci.aea(var1.cx - var14.cx) > var17.aga || ci.aea(var1.cy - var14.cy) > var17.aha) {
+                  Char.charMove(var14.cx < TileMap.aca ? var14.cx : TileMap.aca - 50, var14.cy);
                }
 
                Auto.aya.removeAllElements();
@@ -432,25 +432,25 @@ public class bt extends ds {
             }
             break;
          case 14:
-            if (var1.aya >= 15 && (var11 = fz.afa(bia[var1.cua.aaa])) != null) {
+            if (var1.aya >= 15 && (var11 = Char.afa(bia[var1.cua.aaa])) != null) {
                GameScr.chatPopup("Học sách kĩ năng");
                Service.aaa().aea(var11.ada);
                Thread.sleep(1000L);
             }
 
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 29) {
+               if (TileMap.mapID == 29) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(29, -1, -1, -1);
+               this.goMap(29, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 1) {
-               if (gn.aoa == 29 && super.aha == gn.ala) {
+               if (TileMap.mapID == 29 && super.aha == TileMap.zoneID) {
                   int var10000;
                   if (Code.ama < 0) {
                      var10000 = -1;
@@ -464,10 +464,10 @@ public class bt extends ds {
 
                   for(var13 = 0; var13 < GameScr.bma.size(); ++var13) {
                      am var6;
-                     var7 = Math.abs((var6 = (am)GameScr.bma.elementAt(var13)).aaa - var1.ala);
-                     var8 = Math.abs(var6.aba - var1.ama);
+                     var7 = Math.abs((var6 = (am)GameScr.bma.elementAt(var13)).aaa - var1.cx);
+                     var8 = Math.abs(var6.aba - var1.cy);
                      var9 = var7 * var7 + var8 * var8;
-                     if (!var6.aka && var6.aha.aaa == 212 && (fz.bja() > 2 || fz.aja(212)) && (var5 < 0 || var9 < var5)) {
+                     if (!var6.aka && var6.aha.aaa == 212 && (Char.bja() > 2 || Char.aja(212)) && (var5 < 0 || var9 < var5)) {
                         var5 = var9;
                         var12 = var6;
                      }
@@ -478,7 +478,7 @@ public class bt extends ds {
                      return;
                   }
 
-                  fz.aca(var12.aca, var12.ada);
+                  Char.charMove(var12.aca, var12.ada);
                   Service.aaa().aoa(var12.aga);
 
                   for(var13 = 0; var13 < 5 && !LockGame.ada(); ++var13) {
@@ -488,79 +488,79 @@ public class bt extends ds {
                   return;
                }
 
-               this.aaa(29, super.aha, -1, -1);
+               this.goMap(29, super.aha, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 2) {
-               if (gn.aoa == 40) {
+               if (TileMap.mapID == 40) {
                   this.aca(15, 1);
                   this.ada(213);
                   return;
                }
 
-               this.aaa(40, -1, -1, -1);
+               this.goMap(40, -1, -1, -1);
                return;
             }
             break;
          case 15:
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 8) {
+               if (TileMap.mapID == 8) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(8, -1, -1, -1);
+               this.goMap(8, -1, -1, -1);
                return;
             }
 
-            if (gn.aoa != var2) {
-               super.aaa(var2, -2, -1, -1);
+            if (TileMap.mapID != var2) {
+               super.goMap(var2, -2, -1, -1);
                return;
             }
 
-            GameScr.aba(var3, 0, 0);
+            GameScr.PickNpc(var3, 0, 0);
             LockGame.apa();
             Auto.ala();
             return;
          case 16:
-            if (var1.aya >= 20 && (var11 = fz.afa(bja[var1.cua.aaa])) != null) {
+            if (var1.aya >= 20 && (var11 = Char.afa(bja[var1.cua.aaa])) != null) {
                GameScr.chatPopup("Học sách kĩ năng");
                Service.aaa().aea(var11.ada);
                Thread.sleep(1000L);
             }
 
             if (var1.cza.aaa == 0) {
-               if (gn.aoa == 8) {
+               if (TileMap.mapID == 8) {
                   this.ada(-1);
                   this.aca(-1, 1);
                   return;
                }
 
-               this.aaa(8, -1, -1, -1);
+               this.goMap(8, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 1) {
-               if (gn.aoa == 63) {
+               if (TileMap.mapID == 63) {
                   this.ada(-1);
                   this.aca(23, 1);
                   return;
                }
 
-               this.aaa(63, -1, -1, -1);
+               this.goMap(63, -1, -1, -1);
                return;
             }
 
             if (var1.cza.aaa == 2) {
-               if (gn.aoa == 47) {
+               if (TileMap.mapID == 47) {
                   this.ada(-1);
                   this.aca(24, 1);
                   return;
                }
 
-               this.aaa(47, -1, -1, -1);
+               this.goMap(47, -1, -1, -1);
             }
          }
 

@@ -4,7 +4,7 @@ public final class az implements Runnable {
 
    public final void run() {
       try {
-         fz var1 = fz.ala();
+         Char var1 = Char.getMyChar();
 
          for(int var2 = 0; var2 < var1.arrItemBag.length; ++var2) {
             gg var3;

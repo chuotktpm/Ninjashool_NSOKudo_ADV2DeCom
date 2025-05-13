@@ -14,7 +14,7 @@ public final class AutoLoiDai extends Auto {
 
    public final void aaa() {
       if (aka()) {
-         if (gn.aoa == 160) {
+         if (TileMap.mapID == 160) {
             try {
                Thread.sleep(500L);
             } catch (InterruptedException var6) {
@@ -26,25 +26,25 @@ public final class AutoLoiDai extends Auto {
          int var2;
          String[] var3;
          int var4;
-         av var11;
+         Npc var11;
          if (!aaa && !aba) {
-            if (gn.aoa == 110) {
+            if (TileMap.mapID == 110) {
                aaa = true;
                aba = false;
                return;
             }
 
-            if (gn.aoa == Code.bqa && gn.ala == Code.bra) {
-               var11 = GameScr.aia(0);
-               if (fz.ala().ala == var11.ala && fz.ala().ama == var11.ama) {
-                  for(var2 = 0; var2 < GameScr.bla.size(); ++var2) {
+            if (TileMap.mapID == Code.bqa && TileMap.zoneID == Code.bra) {
+               var11 = GameScr.findNpc(0);
+               if (Char.getMyChar().cx == var11.cx && Char.getMyChar().cy == var11.cy) {
+                  for(var2 = 0; var2 < GameScr.vCharInMap.size(); ++var2) {
                      var3 = Code.aca(Code.bpa, ",");
 
                      for(var4 = 0; var4 < var3.length; ++var4) {
-                        if (var3[var4].equals(((fz)GameScr.bla.elementAt(var2)).cea) && System.currentTimeMillis() - this.ada >= 5000L) {
-                           GameScr.aba(0, 3, 0);
+                        if (var3[var4].equals(((Char)GameScr.vCharInMap.elementAt(var2)).cea) && System.currentTimeMillis() - this.ada >= 5000L) {
+                           GameScr.PickNpc(0, 3, 0);
                            Service.aaa().aaa((short)11211, (String)var3[var4]);
-                           ab.ama();
+                           GameCanvas.ama();
                            this.ada = System.currentTimeMillis();
                         }
                      }
@@ -53,7 +53,7 @@ public final class AutoLoiDai extends Auto {
                   return;
                }
 
-               fz.aca(var11.ala, var11.ama);
+               Char.charMove(var11.cx, var11.cy);
 
                try {
                   Thread.sleep(1000L);
@@ -63,9 +63,9 @@ public final class AutoLoiDai extends Auto {
                }
             }
 
-            if (gn.aoa != Code.bqa) {
-               if (gn.aoa != 160 && gn.aoa != 129 && gn.aoa != 149) {
-                  this.aaa(Code.bqa, Code.bra, -1, -1);
+            if (TileMap.mapID != Code.bqa) {
+               if (TileMap.mapID != 160 && TileMap.mapID != 129 && TileMap.mapID != 149) {
+                  this.goMap(Code.bqa, Code.bra, -1, -1);
                   return;
                }
 
@@ -79,17 +79,17 @@ public final class AutoLoiDai extends Auto {
                Auto.aba(Code.bra);
             }
          } else if (aaa && !aba) {
-            if (gn.aoa == 160) {
+            if (TileMap.mapID == 160) {
                this.aca = System.currentTimeMillis();
                aaa = true;
                aba = true;
                return;
             }
 
-            if (gn.aoa == 110) {
-               var11 = GameScr.aia(0);
-               if (fz.ala().ala != var11.ala || fz.ala().ama != var11.ama) {
-                  fz.aca(var11.ala, var11.ama);
+            if (TileMap.mapID == 110) {
+               var11 = GameScr.findNpc(0);
+               if (Char.getMyChar().cx != var11.cx || Char.getMyChar().cy != var11.cy) {
+                  Char.charMove(var11.cx, var11.cy);
 
                   try {
                      Thread.sleep(1000L);
@@ -101,9 +101,9 @@ public final class AutoLoiDai extends Auto {
                }
 
                if (System.currentTimeMillis() - this.aea >= 3000L) {
-                  GameScr.aba(0, 1, 0);
+                  GameScr.PickNpc(0, 1, 0);
                   Service.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
-                  ab.ama();
+                  GameCanvas.ama();
 
                   try {
                      Thread.sleep(3000L);
@@ -114,7 +114,7 @@ public final class AutoLoiDai extends Auto {
                }
             }
          } else if (aaa && aba) {
-            if (gn.aoa != 160) {
+            if (TileMap.mapID != 160) {
                aaa = false;
                aba = false;
                this.aca = System.currentTimeMillis();
@@ -122,14 +122,14 @@ public final class AutoLoiDai extends Auto {
             }
 
             if (System.currentTimeMillis() - this.aca >= 59000L) {
-               fz var1 = null;
+               Char var1 = null;
 
-               for(var2 = 0; var2 < GameScr.bla.size(); ++var2) {
+               for(var2 = 0; var2 < GameScr.vCharInMap.size(); ++var2) {
                   var3 = Code.aca(Code.bpa, ",");
 
                   for(var4 = 0; var4 < var3.length; ++var4) {
-                     fz var5;
-                     if ((var5 = (fz)GameScr.bla.elementAt(var2)).cea.equals(var3[var4])) {
+                     Char var5;
+                     if ((var5 = (Char)GameScr.vCharInMap.elementAt(var2)).cea.equals(var3[var4])) {
                         var1 = var5;
                         break;
                      }
@@ -145,12 +145,12 @@ public final class AutoLoiDai extends Auto {
 
                if (Auto.aqa != null && var1.bba > 0) {
                   bc var12 = Auto.aqa;
-                  fz var13 = fz.ala();
+                  Char var13 = Char.getMyChar();
                   if (var12.aaa.ada == 2) {
                      Service.aaa().afa(var12.aaa.aaa);
                      Service.aaa().ara();
                   } else {
-                     if ((var12.aaa.ada == 1 || var12.aaa.ada == 3) && (ci.aea(var13.ala - var1.ala) > var12.aga + 30 || ci.aea(var13.ama - var1.ama) > var12.aha + 30) && System.currentTimeMillis() - this.bha > 1500L) {
+                     if ((var12.aaa.ada == 1 || var12.aaa.ada == 3) && (ci.aea(var13.cx - var1.cx) > var12.aga + 30 || ci.aea(var13.cy - var1.cy) > var12.aha + 30) && System.currentTimeMillis() - this.bha > 1500L) {
                         Auto.ada(var1);
                         this.bha = System.currentTimeMillis();
                      }

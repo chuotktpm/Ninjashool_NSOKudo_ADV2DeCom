@@ -1,13 +1,13 @@
 public final class cg extends Auto {
    public cg() {
       super.a_();
-      super.aha = gn.ala;
+      super.aha = TileMap.zoneID;
    }
 
-   private static void aaa(fz var0) {
+   private static void aaa(Char var0) {
       if (var0 != null) {
-         fz var1 = fz.ala();
-         fz.aca(var0.ala, var0.ama);
+         Char var1 = Char.getMyChar();
+         Char.charMove(var0.cx, var0.cy);
          var1.dsa = var0;
          Thread.sleep(100L);
       }
@@ -15,32 +15,32 @@ public final class cg extends Auto {
    }
 
    protected final void aaa() {
-      if (fz.ala().bba <= 0) {
+      if (Char.getMyChar().bba <= 0) {
          Auto.aaa(true);
       } else {
-         if (gn.aoa == 33) {
-            fz var1;
-            if ((var1 = fz.ala()).aua != 17 || var1.cza.aaa >= var1.cza.aea.length - 1) {
+         if (TileMap.mapID == 33) {
+            Char var1;
+            if ((var1 = Char.getMyChar()).aua != 17 || var1.cza.aaa >= var1.cza.aea.length - 1) {
                Code.aga();
                return;
             }
 
             if (var1.ada == null) {
-               GameScr.aba(17, 0, 0);
+               GameScr.PickNpc(17, 0, 0);
                Thread.sleep(2000L);
                return;
             }
 
-            if (ci.aaa(var1.ala, var1.ama, var1.ada.ala, var1.ada.ama) > 200) {
+            if (ci.aaa(var1.cx, var1.cy, var1.ada.cx, var1.ada.cy) > 200) {
                aaa(var1.ada);
             }
 
-            fz var2 = fz.ala();
+            Char var2 = Char.getMyChar();
             bc var3 = Auto.aqa;
-            if (fz.eia) {
+            if (Char.eia) {
                for(int var4 = 0; var4 < var2.cwa.size(); ++var4) {
                   bc var5;
-                  if ((var5 = (bc)var2.cwa.elementAt(var4)) != null && !var5.aaa() && var5.aaa.ada == 2 && (var5.aaa.aaa != 47 || var2.bba < var2.bea * fz.fra / 100)) {
+                  if ((var5 = (bc)var2.cwa.elementAt(var4)) != null && !var5.aaa() && var5.aaa.ada == 2 && (var5.aaa.aaa != 47 || var2.bba < var2.bea * Char.fra / 100)) {
                      boolean var6 = false;
 
                      for(int var7 = 0; var7 < var2.cxa.size(); ++var7) {
@@ -64,17 +64,17 @@ public final class cg extends Auto {
                if (var3.aaa.ada == 2) {
                   Service.aaa().ara();
                } else {
-                  fz var12;
+                  Char var12;
                   ev var13;
                   int var15;
-                  fz var10000;
+                  Char var10000;
                   label170: {
-                     if ((var12 = fz.ala()).ada != null) {
-                        var13 = GameScr.bla;
+                     if ((var12 = Char.getMyChar()).ada != null) {
+                        var13 = GameScr.vCharInMap;
 
                         for(var15 = 0; var15 < var13.size(); ++var15) {
-                           fz var16;
-                           if ((var16 = (fz)var13.elementAt(var15)) != null && var16.aqa != 14 && var16.aqa != 5 && var16.aqa != 15 && (var16.dla == 3 || var12.dla == 3 || var16.dla == 1 && var12.dla == 1 || var12.dza >= 0 && var12.dza == var16.asa || var12.dya >= 0 && var12.dya == var16.asa) && ci.aaa(var16.ala, var16.ama, var12.ada.ala, var12.ada.ama) < 200) {
+                           Char var16;
+                           if ((var16 = (Char)var13.elementAt(var15)) != null && var16.aqa != 14 && var16.aqa != 5 && var16.aqa != 15 && (var16.dla == 3 || var12.dla == 3 || var16.dla == 1 && var12.dla == 1 || var12.dza >= 0 && var12.dza == var16.asa || var12.dya >= 0 && var12.dya == var16.asa) && ci.aaa(var16.cx, var16.cy, var12.ada.cx, var12.ada.cy) < 200) {
                               var10000 = var16;
                               break label170;
                            }
@@ -86,7 +86,7 @@ public final class cg extends Auto {
 
                   var12 = var10000;
                   if (var10000 != null) {
-                     if (ci.aaa(var12.ala, var12.ama, var2.ada.ala, var2.ada.ama) < 200 && (ci.aea(var2.ala - var12.ala) > var3.aga || ci.aea(var2.ama - var12.ama) > var3.aha)) {
+                     if (ci.aaa(var12.cx, var12.cy, var2.ada.cx, var2.ada.cy) < 200 && (ci.aea(var2.cx - var12.cx) > var3.aga || ci.aea(var2.cy - var12.cy) > var3.aha)) {
                         aaa(var12);
                      }
 
@@ -98,12 +98,12 @@ public final class cg extends Auto {
                   } else {
                      ac var18;
                      label128: {
-                        if ((var12 = fz.ala()).ada != null) {
+                        if ((var12 = Char.getMyChar()).ada != null) {
                            var13 = GameScr.bna;
 
                            for(var15 = 0; var15 < var13.size(); ++var15) {
                               ac var17;
-                              if ((var17 = (ac)var13.elementAt(var15)) != null && var17.aba > 0 && var17.aga != 0 && var17.aga != 1 && ci.aaa(var17.ada, var17.aea, var12.ada.ala, var12.ada.ama) < 200) {
+                              if ((var17 = (ac)var13.elementAt(var15)) != null && var17.aba > 0 && var17.aga != 0 && var17.aga != 1 && ci.aaa(var17.ada, var17.aea, var12.ada.cx, var12.ada.cy) < 200) {
                                  var18 = var17;
                                  break label128;
                               }
@@ -118,7 +118,7 @@ public final class cg extends Auto {
                         break label173;
                      }
 
-                     if (ci.aaa(var14.ada, var14.aea, var2.ada.ala, var2.ada.ama) < 200 && (ci.aea(var2.ala - var14.ada) > var3.aga || ci.aea(var2.ama - var14.aea) > var3.aha)) {
+                     if (ci.aaa(var14.ada, var14.aea, var2.ada.cx, var2.ada.cy) < 200 && (ci.aea(var2.cx - var14.ada) > var3.aga || ci.aea(var2.cy - var14.aea) > var3.aha)) {
                         this.aca(var14);
                      }
 
@@ -139,25 +139,25 @@ public final class cg extends Auto {
                }
             }
 
-            if (fz.ala().aza < fz.ala().baa * fz.fsa / 100) {
-               fz.ala().aea(17);
+            if (Char.getMyChar().aza < Char.getMyChar().baa * Char.fsa / 100) {
+               Char.getMyChar().aea(17);
             }
 
-            if (fz.ala().bba < fz.ala().bea * fz.fra / 100) {
+            if (Char.getMyChar().bba < Char.getMyChar().bea * Char.fra / 100) {
                int var9 = (int)(System.currentTimeMillis() / 1000L);
 
-               for(int var10 = 0; var10 < fz.ala().cxa.size(); ++var10) {
+               for(int var10 = 0; var10 < Char.getMyChar().cxa.size(); ++var10) {
                   bu var11;
-                  if ((var11 = (bu)fz.ala().cxa.elementAt(var10)).aea.aaa == 21 && var11.aca - (var9 - var11.aba) >= 2) {
+                  if ((var11 = (bu)Char.getMyChar().cxa.elementAt(var10)).aea.aaa == 21 && var11.aca - (var9 - var11.aba) >= 2) {
                      return;
                   }
                }
 
-               fz.ala().aea(16);
+               Char.getMyChar().aea(16);
                return;
             }
          } else {
-            this.aaa(33, super.aha, -1, -1);
+            this.goMap(33, super.aha, -1, -1);
          }
 
       }

@@ -7,7 +7,7 @@ public final class bk implements Runnable {
 
    public final void run() {
       try {
-         gn.aka(this.aaa);
+         TileMap.aka(this.aaa);
       } catch (Exception var1) {
          var1.printStackTrace();
       }
@@ -17,7 +17,7 @@ public final class bk implements Runnable {
          GameScr.ava().aaa();
       }
 
-      ab.ama();
-      ab.aea = false;
+      GameCanvas.ama();
+      GameCanvas.aea = false;
    }
 }

@@ -22,24 +22,24 @@ public final class be {
 
    public static void aaa(as var0) {
       int var1 = aga;
-      int var2 = ab.baa - 23;
-      int var3 = ab.aza;
-      if (ab.afa) {
-         if (ab.aza >= 450) {
+      int var2 = GameCanvas.baa - 23;
+      int var3 = GameCanvas.aza;
+      if (GameCanvas.afa) {
+         if (GameCanvas.aza >= 450) {
             var1 = 130;
-            var3 = ab.aza - 260;
+            var3 = GameCanvas.aza - 260;
          } else {
             var1 = 80;
-            var3 = ab.aza - 160 - 10;
+            var3 = GameCanvas.aza - 160 - 10;
          }
 
-         var2 = ab.baa - 60;
+         var2 = GameCanvas.baa - 60;
          aga = var1 + 2;
       }
 
-      if (aba != null && (ab.bia == null || ab.bia.ada == null)) {
-         var0.ada(0, 0, ab.aza, ab.baa);
-         if (ab.afa) {
+      if (aba != null && (GameCanvas.bia == null || GameCanvas.bia.ada == null)) {
+         var0.ada(0, 0, GameCanvas.aza, GameCanvas.baa);
+         if (GameCanvas.afa) {
             fk.aaa(var1, var2 - 4, var3 + 10, aha + 8, var0);
          } else {
             var0.aaa(0);
@@ -67,7 +67,7 @@ public final class be {
             return;
          }
       } else if (aca == 3) {
-         if (aea + afa < aga + ab.aza - 20) {
+         if (aea + afa < aga + GameCanvas.aza - 20) {
             aea -= 6;
          } else {
             aea -= 2;
@@ -96,7 +96,7 @@ public final class be {
             afa = var0.aba.aaa(aba.aaa);
             ada = 0;
             aca = 0;
-            aea = ab.aza;
+            aea = GameCanvas.aza;
             return;
          }
 
@@ -107,7 +107,7 @@ public final class be {
 
    public static void aaa(String var0) {
       if (!aba(var0)) {
-         if (ab.aza == 128) {
+         if (GameCanvas.aza == 128) {
             aga = 1;
          }
 
@@ -166,7 +166,7 @@ public final class be {
 
    public static void aaa(String var0, int var1, fw var2) {
       if (!aba(var0)) {
-         if (ab.aza == 128) {
+         if (GameCanvas.aza == 128) {
             aga = 1;
          }
 

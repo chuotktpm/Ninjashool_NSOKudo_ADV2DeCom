@@ -8,7 +8,7 @@ public final class du {
    private int aga;
    private int aha;
    private int aia;
-   private fz aja;
+   private Char aja;
    private dw aka = null;
    private static byte[] ala;
    private static int[] ama;
@@ -25,7 +25,7 @@ public final class du {
       aaa();
    }
 
-   public du(fz var1, dw var2) {
+   public du(Char var1, dw var2) {
       this.aja = var1;
       this.aka = var2;
    }
@@ -36,8 +36,8 @@ public final class du {
             this.ada = this.aja.dpa.ada;
             this.aea = this.aja.dpa.aea - this.aja.dpa.aka / 4;
          } else if (this.aja.dsa != null) {
-            this.ada = this.aja.dsa.ala;
-            this.aea = this.aja.dsa.ama - this.aja.dsa.cja / 4;
+            this.ada = this.aja.dsa.cx;
+            this.aea = this.aja.dsa.cy - this.aja.dsa.cja / 4;
          }
 
          int var1 = this.ada - this.aba;

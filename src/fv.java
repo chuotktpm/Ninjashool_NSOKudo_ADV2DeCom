@@ -53,7 +53,7 @@ public final class fv extends Auto {
                var8 = var15[var6];
                var9 = var15[var6 + 1];
                if ((var10 = aw.aaa(var8)) != null && var10.aca > 0) {
-                  if (var10.aca > 0 && fz.aka(var10.aaa.aaa) <= var10.aea) {
+                  if (var10.aca > 0 && Char.aka(var10.aaa.aaa) <= var10.aea) {
                      Code.aaa(var1, "<" + var8 + " hết hàng>");
                   } else {
                      try {
@@ -126,7 +126,7 @@ public final class fv extends Auto {
             for(var7 = var15.length - 1; var6 <= var7; var6 += 2) {
                var8 = var15[var6];
                if ((var10 = aw.aaa(var9 = var15[var6 + 1])) != null && var10.aca > 0) {
-                  if (var10.aca > 0 && fz.aka(var10.aaa.aaa) <= var10.aea) {
+                  if (var10.aca > 0 && Char.aka(var10.aaa.aaa) <= var10.aea) {
                      Code.aaa(var1, "<" + var9 + " hết hàng>");
                   } else {
                      try {
@@ -170,21 +170,21 @@ public final class fv extends Auto {
 
    public final void a_() {
       super.a_();
-      super.aga = gn.aoa;
-      super.aha = gn.ala;
-      this.aba = fz.ala().ala;
-      this.aca = fz.ala().ama;
+      super.aga = TileMap.mapID;
+      super.aha = TileMap.zoneID;
+      this.aba = Char.getMyChar().cx;
+      this.aca = Char.getMyChar().cy;
       this.bla = 0L;
       this.ada = false;
       aw.aaa = -1;
    }
 
-   private void aaa(fz var1) {
+   private void aaa(Char var1) {
       gg[] var2 = new gg[12];
       aaa = false;
       long var3;
       if (!this.aea) {
-         if (!fz.ada(var1.ala, var1.ama)) {
+         if (!Char.ada(var1.cx, var1.cy)) {
             Code.aaa(this.bia, "<Hãy đứng ở nơi dễ GD>");
             return;
          }
@@ -267,7 +267,7 @@ public final class fv extends Auto {
          for(var10 = 0; var10 < var8.size(); ++var10) {
             fd var11 = (fd)var8.elementAt(var10);
             var7 = (Integer)var9.elementAt(var10);
-            if (fz.aka(var11.aaa.aaa) + var7 > var11.aha) {
+            if (Char.aka(var11.aaa.aaa) + var7 > var11.aha) {
                if (GameScr.dpa) {
                   Service.aaa().aia();
                   Thread.sleep(1000L);
@@ -280,7 +280,7 @@ public final class fv extends Auto {
             var4 += var7 * var11.aga * 1000 / var11.afa;
          }
 
-         if (var4 > fz.ala().cqa) {
+         if (var4 > Char.getMyChar().cqa) {
             if (GameScr.dpa) {
                Service.aaa().aia();
             }
@@ -323,7 +323,7 @@ public final class fv extends Auto {
       }
    }
 
-   private void afa(fz var1) {
+   private void afa(Char var1) {
       gg[] var2 = new gg[12];
       int var3 = 0;
       int var4 = 0;
@@ -336,14 +336,14 @@ public final class fv extends Auto {
             var8 = (Integer)this.bka.elementAt(var6);
             if (var7.aaa.aia) {
                gg var15;
-               if ((var15 = fz.afa(var7.aaa.aaa)) == null) {
+               if ((var15 = Char.afa(var7.aaa.aaa)) == null) {
                   Code.aaa(this.bia, "<Xin lỗi, có lỗi chọn item>");
                   return;
                }
 
                Service.aaa().aka(var15.ada, var8);
                LockGame.ata();
-               if ((var15 = fz.aba(var7.aaa.aaa, var8)) == null) {
+               if ((var15 = Char.aba(var7.aaa.aaa, var8)) == null) {
                   Code.aaa(this.bia, "<Xin lỗi, có lỗi chọn item>");
                   return;
                }
@@ -351,7 +351,7 @@ public final class fv extends Auto {
                var2[var3++] = var15;
                var5 = true;
             } else {
-               fz var9 = fz.ala();
+               Char var9 = Char.getMyChar();
                int var10 = 0;
 
                label184:
@@ -381,7 +381,7 @@ public final class fv extends Auto {
       }
 
       aaa = false;
-      if (!fz.ada(var1.ala, var1.ama)) {
+      if (!Char.ada(var1.cx, var1.cy)) {
          Code.aaa(this.bia, "<Hãy đứng ở nơi dễ GD>");
          if (var5) {
             Service.aaa().afa();
@@ -408,9 +408,9 @@ public final class fv extends Auto {
 
             for(var6 = 0; var6 < 12; ++var6) {
                GameScr.cza[var6] = var2[var6];
-               if (var2[var6] != null && var2[var6].ada >= 0 && var2[var6].ada < fz.ala().arrItemBag.length) {
+               if (var2[var6] != null && var2[var6].ada >= 0 && var2[var6].ada < Char.getMyChar().arrItemBag.length) {
                   int var10001 = var2[var6].ada;
-                  fz.ala().arrItemBag[var10001] = null;
+                  Char.getMyChar().arrItemBag[var10001] = null;
                }
             }
 
@@ -512,20 +512,20 @@ public final class fv extends Auto {
    public final void aaa() {
       if (Auto.aka()) {
          Auto.aaa(true);
-      } else if (super.aga == gn.aoa && super.aha == gn.ala) {
+      } else if (super.aga == TileMap.mapID && super.aha == TileMap.zoneID) {
          if (this.ada) {
             String var1 = this.bia;
             int var5 = 0;
 
-            fz var10000;
+            Char var10000;
             while(true) {
-               if (var5 >= GameScr.bla.size()) {
+               if (var5 >= GameScr.vCharInMap.size()) {
                   var10000 = null;
                   break;
                }
 
-               fz var3;
-               if ((var3 = (fz)GameScr.bla.elementAt(var5)).cea.equals(var1)) {
+               Char var3;
+               if ((var3 = (Char)GameScr.vCharInMap.elementAt(var5)).cea.equals(var1)) {
                   var10000 = var3;
                   break;
                }
@@ -533,10 +533,10 @@ public final class fv extends Auto {
                ++var5;
             }
 
-            fz var4 = var10000;
+            Char var4 = var10000;
             if (var10000 == null) {
                if (this.bia != null) {
-                  Code.aaa(this.bia, "<Hãy đến " + gn.ava[gn.aoa] + " khu " + gn.ala + " để giao dịch>");
+                  Code.aaa(this.bia, "<Hãy đến " + TileMap.ava[TileMap.mapID] + " khu " + TileMap.zoneID + " để giao dịch>");
                }
 
                this.ada = false;
@@ -551,8 +551,8 @@ public final class fv extends Auto {
                this.ada = false;
             }
          } else {
-            if (fz.ala().ala != this.aba || fz.ala().ama != this.aca) {
-               fz.aca(this.aba, this.aca);
+            if (Char.getMyChar().cx != this.aba || Char.getMyChar().cy != this.aca) {
+               Char.charMove(this.aba, this.aca);
                Thread.sleep(500L);
             }
 
@@ -564,7 +564,7 @@ public final class fv extends Auto {
 
          }
       } else {
-         this.aaa(super.aga, super.aha, -1, -1);
+         this.goMap(super.aga, super.aha, -1, -1);
       }
    }
 

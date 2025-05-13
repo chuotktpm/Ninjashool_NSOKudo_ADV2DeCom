@@ -95,7 +95,7 @@ public final class fw {
    }
 
    public final void aba() {
-      this.aba = ab.aca(this.baa);
+      this.aba = GameCanvas.aca(this.baa);
    }
 
    private void ada() {

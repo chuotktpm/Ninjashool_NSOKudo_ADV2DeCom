@@ -12,11 +12,11 @@ public final class fu {
 
    private Object aaa() {
       Object var1;
-      return (var1 = gn.axa.get(String.valueOf(this.aaa))) != null ? var1 : null;
+      return (var1 = TileMap.axa.get(String.valueOf(this.aaa))) != null ? var1 : null;
    }
 
    public final void aaa(as var1) {
-      if (!ab.aaa && this.aaa() != null) {
+      if (!GameCanvas.aaa && this.aaa() != null) {
          var1.aaa((Image)this.aaa(), this.aba, this.aca, 33);
       }
 

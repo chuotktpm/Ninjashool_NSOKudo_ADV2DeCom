@@ -104,12 +104,12 @@ public final class ca {
 
    public final boolean aba() {
       this.aka = false;
-      if (ab.aba(this.afa - 3, this.aga - 3, this.aha + 6, this.aia + 6)) {
-         if (ab.ama) {
+      if (GameCanvas.aba(this.afa - 3, this.aga - 3, this.aha + 6, this.aia + 6)) {
+         if (GameCanvas.ama) {
             this.aka = true;
          }
 
-         if (ab.aoa && ab.ana) {
+         if (GameCanvas.aoa && GameCanvas.ana) {
             return true;
          }
       }
@@ -120,7 +120,7 @@ public final class ca {
    public final void aca() {
       if (this.afa > 0 && this.aga > 0 && this.aba()) {
          this.aaa();
-         ab.ama = false;
+         GameCanvas.ama = false;
          this.aka = false;
       }
 

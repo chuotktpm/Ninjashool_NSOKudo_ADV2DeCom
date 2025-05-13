@@ -174,7 +174,7 @@ public final class en extends cu {
          cu.ada.addElement(this);
       } else {
          try {
-            if (ab.aua % 2 == 1) {
+            if (GameCanvas.aua % 2 == 1) {
                this.aha.aca = -1;
                this.aha.ada = -1;
 
@@ -218,7 +218,7 @@ public final class en extends cu {
                er var4;
                if ((var4 = (er)this.aga[var2].elementAt(var3)).aca >= 0 && var4.aca < this.aga[var2].size()) {
                   er var5 = (er)this.aga[var2].elementAt(var4.aca);
-                  if (ab.aea(var4.aaa, var4.aba) && ab.aea(var5.aaa, var5.aba)) {
+                  if (GameCanvas.aea(var4.aaa, var4.aba) && GameCanvas.aea(var5.aaa, var5.aba)) {
                      var1.aaa(this.aaa[0]);
                      var1.aaa(var4.aaa, var4.aba, var5.aaa, var5.aba);
                      if (var4.ada == -1) {

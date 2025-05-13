@@ -4,7 +4,7 @@ public final class ep {
    public short aca;
    public String ada;
    public boolean aea;
-   public fz afa;
+   public Char afa;
    public int aga;
 
    public ep(byte var1, int var2, String var3, int var4) {
@@ -63,8 +63,8 @@ public final class ep {
       }
 
       this.ada = var3;
-      if (var1 == fz.ala().asa) {
-         this.afa = fz.ala();
+      if (var1 == Char.getMyChar().asa) {
+         this.afa = Char.getMyChar();
       } else {
          this.afa = GameScr.aea(var1);
       }
@@ -73,7 +73,7 @@ public final class ep {
    public static void aaa() {
       for(int var0 = 0; var0 < GameScr.bfa.size(); ++var0) {
          ep var1;
-         if ((var1 = (ep)GameScr.bfa.elementAt(var0)).aaa != fz.ala().asa) {
+         if ((var1 = (ep)GameScr.bfa.elementAt(var0)).aaa != Char.getMyChar().asa) {
             var1.afa = GameScr.aea(var1.aaa);
          }
       }

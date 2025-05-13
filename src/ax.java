@@ -4,32 +4,32 @@ public final class ax extends Auto {
    }
 
    protected final void aaa() {
-      fz var1;
-      if ((var1 = fz.ala()).bba <= 0) {
+      Char var1;
+      if ((var1 = Char.getMyChar()).bba <= 0) {
          Auto.aaa(true);
       } else if (var1.aua == 20 && var1.cza.aaa < var1.cza.aea.length - 1) {
-         if (gn.aoa == 74) {
+         if (TileMap.mapID == 74) {
             this.aca(69, -1);
             this.ada(221);
-            if (fz.ala().aza < fz.ala().baa / 2) {
-               fz.ala().aea(17);
+            if (Char.getMyChar().aza < Char.getMyChar().baa / 2) {
+               Char.getMyChar().aea(17);
             }
 
-            if (fz.ala().bba < fz.ala().bea * 3 / 4) {
+            if (Char.getMyChar().bba < Char.getMyChar().bea * 3 / 4) {
                int var4 = (int)(System.currentTimeMillis() / 1000L);
 
-               for(int var2 = 0; var2 < fz.ala().cxa.size(); ++var2) {
+               for(int var2 = 0; var2 < Char.getMyChar().cxa.size(); ++var2) {
                   bu var3;
-                  if ((var3 = (bu)fz.ala().cxa.elementAt(var2)).aea.aaa == 21 && var3.aca - (var4 - var3.aba) >= 2) {
+                  if ((var3 = (bu)Char.getMyChar().cxa.elementAt(var2)).aea.aaa == 21 && var3.aca - (var4 - var3.aba) >= 2) {
                      return;
                   }
                }
 
-               fz.ala().aea(16);
+               Char.getMyChar().aea(16);
                return;
             }
          } else {
-            this.aaa(74, -2, -1, -1);
+            this.goMap(74, -2, -1, -1);
          }
 
       } else {

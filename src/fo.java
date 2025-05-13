@@ -52,7 +52,7 @@ public final class fo {
    public static void ada() {
       afa = null;
       System.gc();
-      afa = new Image[]{ab.aca("/img/Big0.png"), ab.aca("/img/Big1.png"), ab.aca("/img/Big2.png"), ab.aca("/img/Big3.png"), ab.aca("/img/Big4.png")};
+      afa = new Image[]{GameCanvas.aca("/img/Big0.png"), GameCanvas.aca("/img/Big1.png"), GameCanvas.aca("/img/Big2.png"), GameCanvas.aca("/img/Big3.png"), GameCanvas.aca("/img/Big4.png")};
       Image.createRGBImage(new int[]{-2013265920}, 1, 1, true);
    }
 

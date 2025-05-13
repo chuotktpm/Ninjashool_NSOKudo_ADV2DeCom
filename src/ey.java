@@ -4,13 +4,13 @@ public final class ey extends fb {
    public final void aba() {
       if (aaa++ > 5) {
          if (fd.ada("indLanguage") >= 0) {
-            ab.ada();
-            ab.bfa.aaa();
+            GameCanvas.ada();
+            GameCanvas.bfa.aaa();
             return;
          }
 
-         ab.ada();
-         ab.bha.aaa();
+         GameCanvas.ada();
+         GameCanvas.bha.aaa();
       }
 
    }

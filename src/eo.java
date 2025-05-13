@@ -12,7 +12,7 @@ public final class eo extends Auto {
 
       this.aga = Code.bwa;
       this.aha = Code.bva;
-      this.aia = gn.aga(Code.bwa);
+      this.aia = TileMap.aga(Code.bwa);
    }
 
    protected final void aaa() {
@@ -24,13 +24,13 @@ public final class eo extends Auto {
          } catch (InterruptedException var4) {
          }
       } else {
-         if (this.aga == gn.aoa && this.aha == gn.ala) {
-            if (fz.ala().ala != Code.bxa || fz.ala().ama != Code.bya) {
+         if (this.aga == TileMap.mapID && this.aha == TileMap.zoneID) {
+            if (Char.getMyChar().cx != Code.bxa || Char.getMyChar().cy != Code.bya) {
                if (Code.bxa != -1 && Code.bya != -1) {
-                  fz.aca(Code.bxa, Code.bya);
+                  Char.charMove(Code.bxa, Code.bya);
                } else {
-                  Code.bxa = fz.ala().ala;
-                  Code.bya = fz.ala().ama;
+                  Code.bxa = Char.getMyChar().cx;
+                  Code.bya = Char.getMyChar().cy;
                }
 
                try {
@@ -44,11 +44,11 @@ public final class eo extends Auto {
             if (System.currentTimeMillis() - aba >= 300L) {
                ev var1 = new ev();
 
-               for(int var2 = 0; var2 < GameScr.bla.size(); ++var2) {
-                  fz var3;
-                  if ((var3 = (fz)GameScr.bla.elementAt(var2)).bba > 0 && var3.dla == 3 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50 && var1.size() <= aqa.aia) {
+               for(int var2 = 0; var2 < GameScr.vCharInMap.size(); ++var2) {
+                  Char var3;
+                  if ((var3 = (Char)GameScr.vCharInMap.elementAt(var2)).bba > 0 && var3.dla == 3 && Math.abs(Char.getMyChar().cx - var3.cx) <= 50 && Math.abs(Char.getMyChar().cy - var3.cy) <= 50 && var1.size() <= aqa.aia) {
                      var1.addElement(var3);
-                     if (var3.bba > 0 && var3.dla == 3 && Math.abs(fz.ala().ala - var3.ala) <= 50) {
+                     if (var3.bba > 0 && var3.dla == 3 && Math.abs(Char.getMyChar().cx - var3.cx) <= 50) {
                         Service.aaa().aaa((ev)(new ev()), (ev)var1, (int)2);
                         aba = System.currentTimeMillis();
                      }
@@ -64,7 +64,7 @@ public final class eo extends Auto {
                return;
             }
          } else {
-            this.aaa(this.aga, this.aha, this.aja, this.aka);
+            this.goMap(this.aga, this.aha, this.aja, this.aka);
          }
 
       }

@@ -5,11 +5,11 @@ public final class gp extends Auto {
 
    public final void aaa() {
       if (Auto.aka()) {
-         if (fz.eza) {
+         if (Char.eza) {
             Auto.aaa(true);
          }
-      } else if (fz.eza) {
-         this.aaa(dm.aba, dm.aca, -1, -1);
+      } else if (Char.eza) {
+         this.goMap(dm.aba, dm.aca, -1, -1);
       }
 
    }

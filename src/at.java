@@ -9,11 +9,11 @@ public final class at extends bt {
       this.aaa = var1;
    }
 
-   public final boolean aaa(fz var1) {
+   public final boolean aaa(Char var1) {
       return var1.aua >= 17;
    }
 
-   public final void aaa(fz var1, byte var2, byte var3) {
+   public final void aaa(Char var1, byte var2, byte var3) {
       if (var1.aua == 3 && !this.aba) {
          Service.aaa().aba();
          Service var10000 = Service.aaa();

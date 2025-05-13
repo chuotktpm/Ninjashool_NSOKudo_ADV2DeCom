@@ -80,7 +80,7 @@ public final class dc {
 
    public final fa aba(String var1) {
       fa var2 = new fa(var1, 2);
-      if (!ab.afa) {
+      if (!GameCanvas.afa) {
          var2.aaa("c2" + er.pka);
       }
 

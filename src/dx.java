@@ -11,7 +11,7 @@ public final class dx extends cu {
    private int ala;
    private int ama;
    private int ana;
-   private fz aoa;
+   private Char aoa;
    private fn apa;
    private boolean aqa;
    private int ara;
@@ -44,7 +44,7 @@ public final class dx extends cu {
       this.aga = this.aha * ci.aaa(var1) >> 10;
    }
 
-   public static void aaa(int var0, int var1, boolean var2, short var3, int var4, int var5, int var6, fz var7) {
+   public static void aaa(int var0, int var1, boolean var2, short var3, int var4, int var5, int var6, Char var7) {
       ata = var3;
       cu.aca.addElement(new dx(var0, var1, var2, var4, var5, var6, var7));
    }
@@ -53,7 +53,7 @@ public final class dx extends cu {
       cu.aca.addElement(new dx(var0, var1, var2));
    }
 
-   private dx(int var1, int var2, boolean var3, int var4, int var5, int var6, fz var7) {
+   private dx(int var1, int var2, boolean var3, int var4, int var5, int var6, Char var7) {
       this.ana = 0;
       this.aia = var1;
       this.aja = var2;
@@ -70,7 +70,7 @@ public final class dx extends cu {
             return;
          }
       } else {
-         if (var1 > var7.ala) {
+         if (var1 > var7.cx) {
             this.aaa(240);
             return;
          }
@@ -117,8 +117,8 @@ public final class dx extends cu {
       int var3;
       int var4;
       if (this.aoa != null) {
-         var4 = this.aoa.ala - this.aia;
-         var2 = this.aoa.ama - (this.aoa.cja >> 1) - this.aja;
+         var4 = this.aoa.cx - this.aia;
+         var2 = this.aoa.cy - (this.aoa.cja >> 1) - this.aja;
          ++this.aka;
          if ((ci.aea(var4) >= 16 || ci.aea(var2) >= 16) && this.aka <= 60) {
             if (Math.abs((var3 = ci.aaa(var4, var2)) - this.aaa) < 90 || var4 * var4 + var2 * var2 > 4096) {
@@ -178,12 +178,12 @@ public final class dx extends cu {
             }
          }
       } else {
-         var3 = this.aoa.ala - this.aia;
-         var4 = this.aoa.ama - 10 - this.aja;
+         var3 = this.aoa.cx - this.aia;
+         var4 = this.aoa.cy - 10 - this.aja;
          ++this.aka;
          if (this.aoa.aqa == 5 || this.aoa.aqa == 14) {
-            this.aia += (this.aoa.ala - this.aia) / 2;
-            this.aja += (this.aoa.ama - this.aja) / 2;
+            this.aia += (this.aoa.cx - this.aia) / 2;
+            this.aja += (this.aoa.cy - this.aja) / 2;
          }
 
          if (ci.aea(var3) < 16 && ci.aea(var4) < 16 || this.aka > 60) {
@@ -220,7 +220,7 @@ public final class dx extends cu {
    public final void aaa(as var1) {
       int var2;
       if (this.aqa) {
-         var2 = ab.aua % 7;
+         var2 = GameCanvas.aua % 7;
          if (this.ara == 114) {
             if (var2 < 4) {
                fo.aaa(var1, 1299, this.aia, this.aja, 0, 3);
@@ -232,7 +232,7 @@ public final class dx extends cu {
          }
 
          if (this.ara == 115) {
-            if ((var2 = ab.aua % 20) < 4) {
+            if ((var2 = GameCanvas.aua % 20) < 4) {
                fo.aaa(var1, 1379, this.aia, this.aja, 0, 3);
                return;
             }
@@ -252,7 +252,7 @@ public final class dx extends cu {
                return;
             }
          } else if (this.ara == 116) {
-            if ((var2 = ab.aua % 17) < 4) {
+            if ((var2 = GameCanvas.aua % 17) < 4) {
                fo.aaa(var1, 1399, this.aia, this.aja, 0, 3);
                return;
             }
@@ -272,7 +272,7 @@ public final class dx extends cu {
                return;
             }
          } else if (this.ara == 139) {
-            if ((var2 = ab.aua % 20) < 4) {
+            if ((var2 = GameCanvas.aua % 20) < 4) {
                fo.aaa(var1, 1459, this.aia, this.aja, 0, 3);
                return;
             }
@@ -292,7 +292,7 @@ public final class dx extends cu {
                return;
             }
          } else if (this.ara == 144 || this.ara == 163) {
-            if ((var2 = ab.aua % 20) < 4) {
+            if ((var2 = GameCanvas.aua % 20) < 4) {
                fo.aaa(var1, 1459, this.aia, this.aja, 0, 3);
                return;
             }

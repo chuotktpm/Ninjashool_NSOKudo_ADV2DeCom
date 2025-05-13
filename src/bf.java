@@ -51,7 +51,7 @@ public final class bf {
             if (var1.aaa == null && System.currentTimeMillis() / 1000L - var1.aba > 10L) {
                var1.aba = (long)((int)(System.currentTimeMillis() / 1000L));
                if (var0 >= 0) {
-                  var1.aaa = ab.aca("/eff_auto/" + var0 + ".png");
+                  var1.aaa = GameCanvas.aca("/eff_auto/" + var0 + ".png");
                }
 
                if (var1.aaa == null && cs.aba().afa) {

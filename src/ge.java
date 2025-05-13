@@ -123,7 +123,7 @@ public final class ge implements CommandListener {
             } catch (Exception var4) {
             }
 
-            ab.aaa("Lưu cài đặt thành công");
+            GameCanvas.aaa("Lưu cài đặt thành công");
          } catch (NumberFormatException var5) {
          }
       }

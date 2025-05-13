@@ -21,24 +21,24 @@ public final class fk {
    }
 
    public static void aaa(as var0, ca var1, ca var2, ca var3) {
-      fw var4 = ab.afa ? fw.afa : fw.aqa;
-      int var5 = ab.afa ? 3 : 1;
-      if (!ab.afa) {
+      fw var4 = GameCanvas.afa ? fw.afa : fw.aqa;
+      int var5 = GameCanvas.afa ? 3 : 1;
+      if (!GameCanvas.afa) {
          if (var1 != null) {
-            var4.aaa(var0, var1.aaa, 5, ab.baa - fb.aqa + 4 + var5, 0);
+            var4.aaa(var0, var1.aaa, 5, GameCanvas.baa - fb.aqa + 4 + var5, 0);
          }
 
          if (var2 != null) {
-            var4.aaa(var0, var2.aaa, ab.bba, ab.baa - fb.aqa + 4 + var5, 2);
+            var4.aaa(var0, var2.aaa, GameCanvas.bba, GameCanvas.baa - fb.aqa + 4 + var5, 2);
          }
 
          if (var3 != null) {
             if (var3.aea != null) {
-               var0.aaa(var3.aea, ab.aza - 5, ab.baa - 11, 10);
+               var0.aaa(var3.aea, GameCanvas.aza - 5, GameCanvas.baa - 11, 10);
                return;
             }
 
-            var4.aaa(var0, var3.aaa, ab.aza - 5, ab.baa - fb.aqa + 4 + var5, 1);
+            var4.aaa(var0, var3.aaa, GameCanvas.aza - 5, GameCanvas.baa - fb.aqa + 4 + var5, 1);
             return;
          }
       } else {
@@ -47,12 +47,12 @@ public final class fk {
                var1.aaa(var0);
             } else {
                if (fb.ara == 0) {
-                  var0.aaa(GameScr.eza, 1, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eza, 1, GameCanvas.baa - fb.aqa + 1, 0);
                } else {
-                  var0.aaa(GameScr.eya, 1, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eya, 1, GameCanvas.baa - fb.aqa + 1, 0);
                }
 
-               var4.aaa(var0, var1.aaa, 35, ab.baa - fb.aqa + 4 + var5, 2);
+               var4.aaa(var0, var1.aaa, 35, GameCanvas.baa - fb.aqa + 4 + var5, 2);
             }
          }
 
@@ -61,12 +61,12 @@ public final class fk {
                var2.aaa(var0);
             } else {
                if (fb.ara == 1) {
-                  var0.aaa(GameScr.eza, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eza, GameCanvas.bba - 35, GameCanvas.baa - fb.aqa + 1, 0);
                } else {
-                  var0.aaa(GameScr.eya, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eya, GameCanvas.bba - 35, GameCanvas.baa - fb.aqa + 1, 0);
                }
 
-               var4.aaa(var0, var2.aaa, ab.bba, ab.baa - fb.aqa + 4 + var5, 2);
+               var4.aaa(var0, var2.aaa, GameCanvas.bba, GameCanvas.baa - fb.aqa + 4 + var5, 2);
             }
          }
 
@@ -77,23 +77,23 @@ public final class fk {
             }
 
             if (fb.ara == 2) {
-               var0.aaa(GameScr.eza, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
+               var0.aaa(GameScr.eza, GameCanvas.aza - 71, GameCanvas.baa - fb.aqa + 1, 0);
             } else {
-               var0.aaa(GameScr.eya, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
+               var0.aaa(GameScr.eya, GameCanvas.aza - 71, GameCanvas.baa - fb.aqa + 1, 0);
             }
 
-            var4.aaa(var0, var3.aaa, ab.aza - 35, ab.baa - fb.aqa + 4 + var5, 2);
+            var4.aaa(var0, var3.aaa, GameCanvas.aza - 35, GameCanvas.baa - fb.aqa + 4 + var5, 2);
          }
       }
 
    }
 
    public static void aaa(as var0) {
-      if (!ab.afa) {
+      if (!GameCanvas.afa) {
          var0.aaa(0);
-         var0.aca(0, ab.baa - afa, ab.aza, afa + 1);
+         var0.aca(0, GameCanvas.baa - afa, GameCanvas.aza, afa + 1);
          var0.aaa(8947848);
-         var0.aca(0, ab.baa - (afa - 1), ab.aza, 1);
+         var0.aca(0, GameCanvas.baa - (afa - 1), GameCanvas.aza, 1);
       }
 
    }
@@ -167,12 +167,12 @@ public final class fk {
       var4.aba(var0 - 1, var1 - 1, var2 + 1, var3 + 1);
       var4.aaa(5720393);
       var4.aba(var0, var1, var2 - 1, var3 - 1);
-      if (ab.afa) {
-         var4.aaa(ab.bna[0], var0 - 4, var1 - 3, 20);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 2, var0 + var2 + 4, var1 - 3, af.aca);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 1, var0 - 4, var1 + var3 + 3, af.aea);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 3, var0 + var2 + 4, var1 + var3 + 3, af.afa);
-         var4.aaa(ab.bna[1], var0 + var2 / 2, var1 - 4, af.aaa);
+      if (GameCanvas.afa) {
+         var4.aaa(GameCanvas.bna[0], var0 - 4, var1 - 3, 20);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 2, var0 + var2 + 4, var1 - 3, af.aca);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 1, var0 - 4, var1 + var3 + 3, af.aea);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 3, var0 + var2 + 4, var1 + var3 + 3, af.afa);
+         var4.aaa(GameCanvas.bna[1], var0 + var2 / 2, var1 - 4, af.aaa);
       }
 
    }
@@ -184,12 +184,12 @@ public final class fk {
       var4.aba(var0 - 1, var1 - 1, var2 + 1, var3 + 1);
       var4.aaa(5720393);
       var4.aba(var0, var1, var2 - 1, var3 - 1);
-      if (ab.afa) {
-         var4.aaa(ab.bna[0], var0 - 4, var1 - 3, 20);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 2, var0 + var2 + 4, var1 - 3, af.aca);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 1, var0 - 4, var1 + var3 + 3, af.aea);
-         var4.aaa(ab.bna[0], 0, 0, ab.boa, ab.bpa, 3, var0 + var2 + 4, var1 + var3 + 3, af.afa);
-         var4.aaa(ab.bna[1], var0 + var2 / 2, var1 - 4, af.aaa);
+      if (GameCanvas.afa) {
+         var4.aaa(GameCanvas.bna[0], var0 - 4, var1 - 3, 20);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 2, var0 + var2 + 4, var1 - 3, af.aca);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 1, var0 - 4, var1 + var3 + 3, af.aea);
+         var4.aaa(GameCanvas.bna[0], 0, 0, GameCanvas.boa, GameCanvas.bpa, 3, var0 + var2 + 4, var1 + var3 + 3, af.afa);
+         var4.aaa(GameCanvas.bna[1], var0 + var2 / 2, var1 - 4, af.aaa);
       }
 
    }

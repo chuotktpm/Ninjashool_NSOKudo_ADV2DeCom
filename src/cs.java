@@ -47,8 +47,8 @@ public final class cs implements ag {
 
    public final void aaa(String var1, int var2) {
       String var3 = "socket://" + var1 + ":" + var2;
-      if (ab.aya) {
-         if (!ab.aca) {
+      if (GameCanvas.aya) {
+         if (!GameCanvas.aca) {
             var3 = var3 + ";interface=wifi";
          } else {
             var3 = var3 + ";deviceside=true";
@@ -193,8 +193,8 @@ public final class cs implements ag {
    }
 
    public final void aea() {
-      if (ab.bda != ab.bfa) {
-         ab.aja.afa();
+      if (GameCanvas.bda != GameCanvas.bfa) {
+         GameCanvas.aja.afa();
       }
 
       if (apa) {

@@ -127,15 +127,15 @@ public final class fd {
    }
 
    public final boolean aba() {
-      return this.aca > 0 && fz.aka(this.aaa.aaa) > this.aea;
+      return this.aca > 0 && Char.aka(this.aaa.aaa) > this.aea;
    }
 
    public final boolean aca() {
-      return this.afa > 0 && fz.aka(this.aaa.aaa) < this.aha;
+      return this.afa > 0 && Char.aka(this.aaa.aaa) < this.aha;
    }
 
    public final int ada() {
-      return this.aca > 0 && fz.aka(this.aaa.aaa) > this.aea ? fz.aka(this.aaa.aaa) - this.aea : 0;
+      return this.aca > 0 && Char.aka(this.aaa.aaa) > this.aea ? Char.aka(this.aaa.aaa) - this.aea : 0;
    }
 
    public final String aea() {

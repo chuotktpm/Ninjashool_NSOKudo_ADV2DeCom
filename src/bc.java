@@ -17,7 +17,7 @@ public final class bc {
       long var4;
       if ((var4 = System.currentTimeMillis() - this.afa) < (long)this.aea) {
          var3.aaa(3355443);
-         if (this.ala && ab.aua % 6 > 2) {
+         if (this.ala && GameCanvas.aua % 6 > 2) {
             var3.aaa(4473924);
          }
 

@@ -21,15 +21,15 @@ public final class br {
    public static boolean aia;
 
    private static boolean afa() {
-      if (fz.ala().aqa != 3) {
+      if (Char.getMyChar().aqa != 3) {
          for(int var0 = 2; var0 > 0; --var0) {
             int var1;
             try {
-               if (ci.aea(ab.ata[var0].aaa - ab.ata[var0 - 1].aaa) <= 2) {
+               if (ci.aea(GameCanvas.ata[var0].aaa - GameCanvas.ata[var0 - 1].aaa) <= 2) {
                   continue;
                }
 
-               var1 = ci.aea(ab.ata[var0].aba - ab.ata[var0 - 1].aba);
+               var1 = ci.aea(GameCanvas.ata[var0].aba - GameCanvas.ata[var0 - 1].aba);
             } catch (Exception var2) {
                var2.printStackTrace();
                return true;
@@ -45,31 +45,31 @@ public final class br {
    }
 
    private static void aga() {
-      ab.ala[1] = false;
-      ab.ala[2] = false;
-      ab.ala[3] = false;
-      ab.ala[4] = false;
-      ab.ala[6] = false;
+      GameCanvas.ala[1] = false;
+      GameCanvas.ala[2] = false;
+      GameCanvas.ala[3] = false;
+      GameCanvas.ala[4] = false;
+      GameCanvas.ala[6] = false;
    }
 
    public final void aaa() {
-      if (ab.ama && !ab.aoa) {
-         this.aja = ab.ara;
-         this.aka = ab.asa;
-         if (this.aja <= (ab.aza >> 1) - 100 && this.aka >= ab.baa >> 1) {
+      if (GameCanvas.ama && !GameCanvas.aoa) {
+         this.aja = GameCanvas.ara;
+         this.aka = GameCanvas.asa;
+         if (this.aja <= (GameCanvas.aza >> 1) - 100 && this.aka >= GameCanvas.baa >> 1) {
             if (!this.ata) {
                this.aaa = this.aca = this.aja;
                this.aba = this.ada = this.aka;
             }
 
             this.ata = true;
-            this.apa = ab.apa - this.aaa;
-            this.aqa = ab.aqa - this.aba;
+            this.apa = GameCanvas.apa - this.aaa;
+            this.aqa = GameCanvas.aqa - this.aba;
             this.ara = this.apa * this.apa + this.aqa * this.aqa;
             this.aoa = ci.afa(this.ara);
             if (Math.abs(this.apa) > 4 || Math.abs(this.aqa) > 4) {
                this.asa = ci.aaa(this.apa, this.aqa);
-               if (!ab.aba(this.aaa - this.ana, this.aba - this.ana, this.ana << 1, this.ana << 1)) {
+               if (!GameCanvas.aba(this.aaa - this.ana, this.aba - this.ana, this.ana << 1, this.ana << 1)) {
                   if (this.aoa != 0) {
                      this.ada = this.aqa * this.ana / this.aoa;
                      this.aca = this.apa * this.ana / this.aoa;
@@ -87,8 +87,8 @@ public final class br {
                      this.ada = this.ama;
                   }
                } else {
-                  this.aca = ab.apa;
-                  this.ada = ab.aqa;
+                  this.aca = GameCanvas.apa;
+                  this.ada = GameCanvas.aqa;
                }
 
                aga();
@@ -99,43 +99,43 @@ public final class br {
 
                if (this.asa <= 360 && this.asa > 340 || this.asa > 0 && this.asa <= 90) {
                   GameScr.fza = 0;
-                  ab.ala[6] = true;
-                  ab.aka[6] = true;
+                  GameCanvas.ala[6] = true;
+                  GameCanvas.aka[6] = true;
                   return;
                }
 
                if (this.asa > 290 && this.asa <= 340) {
                   GameScr.fza = 0;
-                  ab.ala[3] = true;
-                  ab.aka[3] = true;
+                  GameCanvas.ala[3] = true;
+                  GameCanvas.aka[3] = true;
                   return;
                }
 
                if (this.asa > 250 && this.asa <= 290) {
                   GameScr.fza = 0;
-                  ab.ala[2] = true;
-                  ab.aka[2] = true;
+                  GameCanvas.ala[2] = true;
+                  GameCanvas.aka[2] = true;
                   return;
                }
 
                if (this.asa > 200 && this.asa <= 250) {
                   GameScr.fza = 0;
-                  ab.ala[1] = true;
-                  ab.aka[1] = true;
+                  GameCanvas.ala[1] = true;
+                  GameCanvas.aka[1] = true;
                   return;
                }
 
                if (this.asa > 90 && this.asa <= 200) {
                   GameScr.fza = 0;
-                  ab.ala[4] = true;
-                  ab.aka[4] = true;
+                  GameCanvas.ala[4] = true;
+                  GameCanvas.aka[4] = true;
                   return;
                }
             }
          }
       } else {
          this.aaa = this.aca = 50;
-         this.aba = this.ada = ab.baa - 50;
+         this.aba = this.ada = GameCanvas.baa - 50;
          this.ata = false;
          aga();
       }
@@ -164,25 +164,25 @@ public final class br {
 
    private static void aaa(as var0) {
       String var1 = afa;
-      if (gn.aja != null) {
-         var1 = gn.aja;
+      if (TileMap.aja != null) {
+         var1 = TileMap.aja;
       }
 
       if (aea && (!aia || aha <= 4990) && !GameScr.dla) {
-         fk.aaa(ab.bba - 64, 10, 128, 40, var0);
+         fk.aaa(GameCanvas.bba - 64, 10, 128, 40, var0);
          if (aia) {
-            ab.aaa(ab.bba - fw.aqa.aaa(var1) / 2 - 10, 30, var0);
-            fw.aqa.aaa(var0, var1, ab.bba + 5, 23, 2);
+            GameCanvas.aaa(GameCanvas.bba - fw.aqa.aaa(var1) / 2 - 10, 30, var0);
+            fw.aqa.aaa(var0, var1, GameCanvas.bba + 5, 23, 2);
             return;
          }
 
          if (aga != null) {
-            fw.aqa.aaa(var0, var1, ab.bba, 18, 2);
-            fw.aka.aaa(var0, aga, ab.bba, 32, 2);
+            fw.aqa.aaa(var0, var1, GameCanvas.bba, 18, 2);
+            fw.aka.aaa(var0, aga, GameCanvas.bba, 32, 2);
             return;
          }
 
-         fw.aqa.aaa(var0, var1, ab.bba, 23, 2);
+         fw.aqa.aaa(var0, var1, GameCanvas.bba, 23, 2);
       }
 
    }

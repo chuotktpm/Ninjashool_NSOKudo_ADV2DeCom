@@ -275,17 +275,17 @@ public final class Code implements Runnable {
    }
 
    public static void aaa(int var0, int var1) {
-      cia.aaa(var0, var1, fz.faa ? -1 : gn.ala);
+      cia.aaa(var0, var1, Char.faa ? -1 : TileMap.zoneID);
       aaa((Auto)cia);
    }
 
    private static void aca(int var0, int var1) {
-      aca.aaa(var0, var1, fz.faa ? -1 : gn.ala, false, false);
+      aca.aaa(var0, var1, Char.faa ? -1 : TileMap.zoneID, false, false);
       aaa((Auto)aca);
    }
 
    private static void aaa(boolean var0, boolean var1) {
-      aca.aaa(-1, gn.aoa, gn.ala, var0, var1);
+      aca.aaa(-1, TileMap.mapID, TileMap.zoneID, var0, var1);
       aca.afa = true;
       aaa((Auto)aca);
    }
@@ -306,7 +306,7 @@ public final class Code implements Runnable {
    }
 
    private static void aba(boolean var0, boolean var1) {
-      cka.aaa(gn.aoa, gn.ala, var0, var1);
+      cka.aaa(TileMap.mapID, TileMap.zoneID, var0, var1);
       aaa((Auto)cka);
    }
 
@@ -402,9 +402,9 @@ public final class Code implements Runnable {
             switch((var2 = aba).bea) {
             case 60:
             case 61:
-               if (fz.ala().cya != null && fz.ala().asa == var2.bga.readInt() && fz.ala().aza > fz.ala().cya.aja) {
-                  fz var3 = fz.ala();
-                  var3.aza -= fz.ala().cya.aja;
+               if (Char.getMyChar().cya != null && Char.getMyChar().asa == var2.bga.readInt() && Char.getMyChar().aza > Char.getMyChar().cya.aja) {
+                  Char var3 = Char.getMyChar();
+                  var3.aza -= Char.getMyChar().cya.aja;
                }
             default:
                return;
@@ -418,7 +418,7 @@ public final class Code implements Runnable {
    public static boolean aba(String var0) {
       if (aha != null && !ada(var0)) {
          String var1;
-         if ((var1 = fz.ala().cea).equals(aha)) {
+         if ((var1 = Char.getMyChar().cea).equals(aha)) {
             if (aca(var0)) {
                return true;
             }
@@ -443,7 +443,7 @@ public final class Code implements Runnable {
    }
 
    public static boolean ada(String var0) {
-      if (var0.equals(fz.ala().cea)) {
+      if (var0.equals(Char.getMyChar().cea)) {
          return true;
       } else {
          for(int var1 = 0; var1 < GameScr.bfa.size(); ++var1) {
@@ -457,8 +457,8 @@ public final class Code implements Runnable {
    }
 
    public static boolean aia() {
-      for(int var0 = 0; var0 < fz.fwa - 1; ++var0) {
-         if (fz.aka(var0) >= 4) {
+      for(int var0 = 0; var0 < Char.fwa - 1; ++var0) {
+         if (Char.aka(var0) >= 4) {
             return true;
          }
       }
@@ -468,7 +468,7 @@ public final class Code implements Runnable {
 
    private static int aga(int var0) {
       int var1 = 0;
-      fz var2 = fz.ala();
+      Char var2 = Char.getMyChar();
 
       for(int var3 = 0; var3 < var2.arrItemBag.length; ++var3) {
          gg var4;
@@ -488,13 +488,13 @@ public final class Code implements Runnable {
 
                try {
                   dg.aaa();
-                  fz var3 = fz.ala();
-                  int var4 = fz.bja();
+                  Char var3 = Char.getMyChar();
+                  int var4 = Char.bja();
                   int var5;
                   int var6;
                   int var7;
                   if (aba != null) {
-                     if (aya && !(aba instanceof cj) && (!(aba instanceof eu) || aca.aaa != 2) && fz.ala().bha * 100L / GameScr.dta[fz.ala().aya] >= bza) {
+                     if (aya && !(aba instanceof cj) && (!(aba instanceof eu) || aca.aaa != 2) && Char.getMyChar().bha * 100L / GameScr.dta[Char.getMyChar().aya] >= bza) {
                         cj.aaa = aba;
                         awa();
                      }
@@ -531,40 +531,40 @@ public final class Code implements Runnable {
                         var3.cya = Auto.aqa;
                      }
 
-                     if (fz.fca && Auto.ava) {
+                     if (Char.fca && Auto.ava) {
                         Auto.ava = false;
-                        if (!(aba instanceof fl) && !(aba instanceof ej) && !gn.aea(gn.aoa) && var3.dca[15] == null) {
+                        if (!(aba instanceof fl) && !(aba instanceof ej) && !TileMap.aea(TileMap.mapID) && var3.dca[15] == null) {
                            Auto.ala();
                         }
                      }
 
                      int var19;
                      if (var3.aqa != 14 && var3.aqa != 5 && var3.bba > 0) {
-                        if (fz.ega && System.currentTimeMillis() - cra > 500L && fz.ala().aza < fz.ala().baa * fz.fsa / 100) {
-                           fz.ala().aea(17);
+                        if (Char.ega && System.currentTimeMillis() - cra > 500L && Char.getMyChar().aza < Char.getMyChar().baa * Char.fsa / 100) {
+                           Char.getMyChar().aea(17);
                            cra = System.currentTimeMillis();
                         }
 
-                        if (fz.efa && System.currentTimeMillis() - var3.gpa > 2000L && fz.ala().bba < fz.ala().bea * fz.fra / 100) {
+                        if (Char.efa && System.currentTimeMillis() - var3.gpa > 2000L && Char.getMyChar().bba < Char.getMyChar().bea * Char.fra / 100) {
                            boolean var9 = false;
                            var5 = (int)(System.currentTimeMillis() / 1000L);
 
-                           for(var19 = 0; var19 < fz.ala().cxa.size(); ++var19) {
+                           for(var19 = 0; var19 < Char.getMyChar().cxa.size(); ++var19) {
                               bu var10;
-                              if ((var10 = (bu)fz.ala().cxa.elementAt(var19)).aea.aaa == 21 && var10.aca - (var5 - var10.aba) >= 2) {
+                              if ((var10 = (bu)Char.getMyChar().cxa.elementAt(var19)).aea.aaa == 21 && var10.aca - (var5 - var10.aba) >= 2) {
                                  var9 = true;
                                  break;
                               }
                            }
 
                            if (!var9) {
-                              fz.ala().aea(16);
+                              Char.getMyChar().aea(16);
                               var3.gpa = System.currentTimeMillis();
                            }
                         }
                      }
 
-                     if (var3.bja > 0 && (fz.fka || aba instanceof bt) && Auto.aqa != null && Auto.aqa.aca < Auto.aqa.aaa.aca) {
+                     if (var3.bja > 0 && (Char.fka || aba instanceof bt) && Auto.aqa != null && Auto.aqa.aca < Auto.aqa.aaa.aca) {
                         dk var20 = Auto.aqa.aaa;
                         var5 = 0;
 
@@ -581,7 +581,7 @@ public final class Code implements Runnable {
                         }
                      }
 
-                     if (var3.bia > 0 && (fz.fja || aba instanceof bt)) {
+                     if (var3.bia > 0 && (Char.fja || aba instanceof bt)) {
                         var6 = var3.aka() ? 3 : 0;
                         if (var3.bia >= 100) {
                            GameScr.chatPopup("Cộng tiềm năng " + er.jxa[var6] + " 60 điểm, " + er.jxa[2] + " 40 điểm");
@@ -595,7 +595,7 @@ public final class Code implements Runnable {
                         LockGame.axa();
                      }
 
-                     gn.bda[138] = new short[]{(short)gh.aja};
+                     TileMap.bda[138] = new short[]{(short)gh.aja};
                      gg var21;
                      int var22;
                      if (cua.size() > 0) {
@@ -609,7 +609,7 @@ public final class Code implements Runnable {
                                  var21.ava = false;
                               }
                            } else if (var5 >= 0 && var5 < 9) {
-                              ev var13 = fz.aha(var5 < 3 ? 455 : (var5 < 6 ? 456 : 457));
+                              ev var13 = Char.aha(var5 < 3 ? 455 : (var5 < 6 ? 456 : 457));
                               var22 = var11[var5];
                               byte var14 = var12[var5];
                               if (var3.csa >= var22 && var13.size() >= var14) {
@@ -635,8 +635,8 @@ public final class Code implements Runnable {
 
                      ev var23;
                      gg[] var26;
-                     if (fz.exa && var4 > 0) {
-                        var23 = fz.aha(455);
+                     if (Char.exa && var4 > 0) {
+                        var23 = Char.aha(455);
 
                         while(var23.size() >= 9) {
                            var26 = new gg[24];
@@ -651,11 +651,11 @@ public final class Code implements Runnable {
                            Service.aaa().ada(var26);
                         }
 
-                        var4 = fz.bja();
+                        var4 = Char.bja();
                      }
 
-                     if (fz.eya && var4 > 0) {
-                        var23 = fz.aha(456);
+                     if (Char.eya && var4 > 0) {
+                        var23 = Char.aha(456);
 
                         while(var23.size() >= 9) {
                            var26 = new gg[24];
@@ -670,7 +670,7 @@ public final class Code implements Runnable {
                            Service.aaa().ada(var26);
                         }
 
-                        var4 = fz.bja();
+                        var4 = Char.bja();
                      }
 
                      if (System.currentTimeMillis() - cva > 2000L) {
@@ -680,25 +680,25 @@ public final class Code implements Runnable {
                               baa.removeElementAt(var6);
                               bba.removeElementAt(var6);
                               --var6;
-                           } else if ((var21 = fz.aga(var5)) != null) {
+                           } else if ((var21 = Char.aga(var5)) != null) {
                               Service.aaa().aaa(var21, var19);
                            }
                         }
 
-                        var4 = fz.bja();
+                        var4 = Char.bja();
                         cva = System.currentTimeMillis();
                      }
 
-                     if (gn.aoa != 138 && gn.aea(gn.aoa) && (!fz.aja(35) && !fz.aja(37) || fz.eha && fz.fba && fz.fta <= 50 && var4 > 1 && aga(fz.fta) == 0)) {
-                        gn.aja(0);
-                        gn.aga();
+                     if (TileMap.mapID != 138 && TileMap.aea(TileMap.mapID) && (!Char.aja(35) && !Char.aja(37) || Char.eha && Char.fba && Char.fta <= 50 && var4 > 1 && aga(Char.fta) == 0)) {
+                        TileMap.aja(0);
+                        TileMap.aga();
                      }
 
-                     if (var4 < 4 && !(aba instanceof ds) && fz.epa && var3.aua > 9 && var4 > 0 && aia()) {
+                     if (var4 < 4 && !(aba instanceof ds) && Char.epa && var3.aua > 9 && var4 > 0 && aia()) {
                         Vector var27 = new Vector();
 
                         label375:
-                        for(var19 = 0; var19 < fz.fwa - 1; ++var19) {
+                        for(var19 = 0; var19 < Char.fwa - 1; ++var19) {
                            var27.removeAllElements();
 
                            gg var29;
@@ -711,7 +711,7 @@ public final class Code implements Runnable {
                            while(var27.size() >= 4) {
                               var7 = 1;
 
-                              for(var5 = var19; var5 < fz.fwa - 1 && GameScr.dya[var5] <= var3.csa && var7 << 2 <= var27.size() && var7 < 16; ++var5) {
+                              for(var5 = var19; var5 < Char.fwa - 1 && GameScr.dya[var5] <= var3.csa && var7 << 2 <= var27.size() && var7 < 16; ++var5) {
                                  var7 <<= 2;
                               }
 
@@ -740,8 +740,8 @@ public final class Code implements Runnable {
                         GameScr.ava().ada((int)4);
                         var5 = 0;
 
-                        for(var19 = fz.bka(); var5 < var3.arrItemBag.length; ++var5) {
-                           if ((var21 = var3.arrItemBag[var5]) != null && var21.aaa.aaa == fz.fwa - 1 && var19 > 0) {
+                        for(var19 = Char.bka(); var5 < var3.arrItemBag.length; ++var5) {
+                           if ((var21 = var3.arrItemBag[var5]) != null && var21.aaa.aaa == Char.fwa - 1 && var19 > 0) {
                               Service.aaa().ada(var21.ada);
                               --var19;
                            }
@@ -753,8 +753,8 @@ public final class Code implements Runnable {
                         Controller.aea().aba();
                      }
 
-                     if (gn.ada(gn.aoa) || gn.afa(gn.aoa)) {
-                        if ((fz.fba || aba instanceof ds) && var4 > 1 && var3.aua > 3 && (var19 = aba instanceof ds ? (var3.aua >= 9 ? 10 : 1) : fz.fta) <= 50 && aga(var19) == 0) {
+                     if (TileMap.ada(TileMap.mapID) || TileMap.afa(TileMap.mapID)) {
+                        if ((Char.fba || aba instanceof ds) && var4 > 1 && var3.aua > 3 && (var19 = aba instanceof ds ? (var3.aua >= 9 ? 10 : 1) : Char.fta) <= 50 && aga(var19) == 0) {
                            var5 = 2;
 
                            for(var6 = 0; var6 < var3.cxa.size(); ++var6) {
@@ -764,7 +764,7 @@ public final class Code implements Runnable {
                               }
                            }
 
-                           GameScr.aba(4, 0, 0);
+                           GameScr.PickNpc(4, 0, 0);
                            if (var19 == 50) {
                               Service.aaa().aba(9, 7, var5);
                            } else {
@@ -774,8 +774,8 @@ public final class Code implements Runnable {
                            LockGame.aha();
                         }
 
-                        if (gn.aoa == 138 && var4 > 1 && !fz.aja(35) && !fz.aja(37)) {
-                           GameScr.aba(4, 0, 0);
+                        if (TileMap.mapID == 138 && var4 > 1 && !Char.aja(35) && !Char.aja(37)) {
+                           GameScr.PickNpc(4, 0, 0);
                            Service.aaa().aba(9, 6, 1);
                            LockGame.aha();
                            ++var4;
@@ -798,8 +798,8 @@ public final class Code implements Runnable {
                         }
 
                         am var24 = (am)GameScr.bma.elementAt(var7);
-                        var5 = ci.aaa(var3.ala, var3.ama, var24.aca, var24.ada);
-                        if ((var6 == -1 || var5 < var6) && (aaa(var24.aha) || var3.cua.aaa == 1 && var24.aha.aaa == 218) && (var4 > 2 || var24.aha.aba == 19 || var24.aha.aia && fz.aja(var24.aha.aaa))) {
+                        var5 = ci.aaa(var3.cx, var3.cy, var24.aca, var24.ada);
+                        if ((var6 == -1 || var5 < var6) && (aaa(var24.aha) || var3.cua.aaa == 1 && var24.aha.aaa == 218) && (var4 > 2 || var24.aha.aba == 19 || var24.aha.aia && Char.aja(var24.aha.aaa))) {
                            var6 = var5;
                            var28 = var24;
                         }
@@ -812,7 +812,7 @@ public final class Code implements Runnable {
                      LockGame.bla();
                      aba = null;
                      cs.aba().aca();
-                     ab.aja.aqa();
+                     GameCanvas.aja.aqa();
                   }
 
                   if (caa.size() > 0) {
@@ -830,7 +830,7 @@ public final class Code implements Runnable {
 
                         label574: {
                            gh var30 = gi.aaa((short)(var5 = (Integer)cta.elementAt(var6)));
-                           if (fz.aja(var5)) {
+                           if (Char.aja(var5)) {
                               for(var7 = 0; var7 < var3.cxa.size(); ++var7) {
                                  bu var25;
                                  if ((var25 = (bu)var3.cxa.elementAt(var7)) != null && var25.aea.aca == var30.aga) {
@@ -838,7 +838,7 @@ public final class Code implements Runnable {
                                  }
                               }
 
-                              if ((var7 = fz.aia(var5)) >= 0) {
+                              if ((var7 = Char.aia(var5)) >= 0) {
                                  Service.aaa().aea(var7);
                                  break label574;
                               }
@@ -854,7 +854,7 @@ public final class Code implements Runnable {
                } catch (Exception var17) {
                }
 
-               if (fz.ala().aga) {
+               if (Char.getMyChar().aga) {
                   LockGame.aja();
                }
 
@@ -938,7 +938,7 @@ public final class Code implements Runnable {
    }
 
    public static void aka() {
-      fz var0 = fz.ala();
+      Char var0 = Char.getMyChar();
 
       for(int var1 = 0; var1 < cua.size(); ++var1) {
          gg var2;
@@ -1099,38 +1099,38 @@ public final class Code implements Runnable {
          } else if ((var0.aba == 16 || var0.aba == 17) && var0.afa == 10) {
             return true;
          } else {
-            fz var3 = fz.ala();
-            if (fz.bja() <= 6) {
+            Char var3 = Char.getMyChar();
+            if (Char.bja() <= 6) {
                return false;
             } else if ((var3.aua < 13 || var3.aua == 13 && var3.dca[1] != null && var3.dca[1].aia < 2) && var0.aba == 26 && var0.aaa > 0) {
                return true;
             } else {
                int var2 = var3.ata == 1 ? 124 : 125;
-               return var3.aua <= 12 && (var0.aaa == 174 && !fz.aja(174) || var0.aaa == var2 && !fz.aja(var2));
+               return var3.aua <= 12 && (var0.aaa == 174 && !Char.aja(174) || var0.aaa == var2 && !Char.aja(var2));
             }
          }
       } else if (aba instanceof ds) {
          return var0.aba == 19;
       } else if (var0.aba == 19) {
-         return fz.ema;
+         return Char.ema;
       } else if (var0.aba != 16 && var0.aba != 17) {
          if (var0.aba == 26) {
-            return fz.eoa && var0.aaa >= fz.fva - 1;
+            return Char.eoa && var0.aaa >= Char.fva - 1;
          } else if (var0.aaa()) {
-            return (fz.eqa || aba instanceof eu) && var0.afa >= fz.fxa;
+            return (Char.eqa || aba instanceof eu) && var0.afa >= Char.fxa;
          } else if (var0.aba()) {
-            return fz.esa;
+            return Char.esa;
          } else {
             if (var0.aba == 27) {
                if (var0.aea.startsWith("Vật phẩm sự kiện") || var0.aea.startsWith("Vật phẩm Sự kiện")) {
-                  return fz.eta;
+                  return Char.eta;
                }
 
                if (var0.ada.startsWith("Sách võ công")) {
-                  return fz.eva;
+                  return Char.eva;
                }
 
-               if (gn.aea(gn.aoa) && var0.aaa == 38) {
+               if (TileMap.aea(TileMap.mapID) && var0.aaa == 38) {
                   return false;
                }
             }
@@ -1141,10 +1141,10 @@ public final class Code implements Runnable {
                }
             }
 
-            return fz.eua;
+            return Char.eua;
          }
       } else {
-         return fz.ena && var0.afa >= fz.fua;
+         return Char.ena && var0.afa >= Char.fua;
       }
    }
 
@@ -1164,15 +1164,15 @@ public final class Code implements Runnable {
          }
 
          if (!var0.aua && System.currentTimeMillis() >= 5000L) {
-            if (aba instanceof eu && !fz.eqa && var0.aaa.aba < 10 && var0.aaa.afa < 70) {
+            if (aba instanceof eu && !Char.eqa && var0.aaa.aba < 10 && var0.aaa.afa < 70) {
                return true;
             } else if (aba instanceof ADV && var0.aaa.aba < 10) {
                return var0.aaa.afa < 50 && var0.aaa.aba != 1 && (ADV.aaa == null || var0.aaa.aaa != ADV.aaa.aaa);
-            } else if (var0.aaa.aba == 26 && var0.aaa.aaa < (fz.eoa ? fz.fva : fz.fwa) - 1) {
+            } else if (var0.aaa.aba == 26 && var0.aaa.aaa < (Char.eoa ? Char.fva : Char.fwa) - 1) {
                return true;
             } else {
                if (var0.aaa.aba < 10 || var0.aaa.aba >= 29 && var0.aaa.aba <= 32) {
-                  if (var0.aaa.aba < 10 && !fz.eqa) {
+                  if (var0.aaa.aba < 10 && !Char.eqa) {
                      if (var0.aaa.afa < 50) {
                         return true;
                      }
@@ -1255,7 +1255,7 @@ public final class Code implements Runnable {
                      return true;
                   }
 
-                  if (fz.era) {
+                  if (Char.era) {
                      if (var0.aca(0) <= 2 && var0.aca(1) <= 2 && var0.aca(2) <= 2 && var0.aca(3) <= 1 && var0.aca(4) <= 1 && var0.aca(5) <= 1 && var0.aca(6) <= 1 && var0.aca(7) <= 1) {
                         return true;
                      }
@@ -1275,16 +1275,16 @@ public final class Code implements Runnable {
    }
 
    public static void aoa() {
-      fz var0 = fz.ala();
-      if (!fz.aja(37) && !fz.aja(35)) {
-         av var1;
-         if ((var1 = GameScr.aia(13)) != null && Math.abs(var1.ala - var0.ala) <= 200 && Math.abs(var1.ama - var0.ama) <= 200) {
-            fz.aca(var1.ala > 200 ? var1.ala - 200 : var1.ala + 200, var1.ama);
+      Char var0 = Char.getMyChar();
+      if (!Char.aja(37) && !Char.aja(35)) {
+         Npc var1;
+         if ((var1 = GameScr.findNpc(13)) != null && Math.abs(var1.cx - var0.cx) <= 200 && Math.abs(var1.cy - var0.cy) <= 200) {
+            Char.charMove(var1.cx > 200 ? var1.cx - 200 : var1.cx + 200, var1.cy);
          }
 
          Service.aaa().aea();
       } else {
-         fz.aca(var0.ala, gn.ada);
+         Char.charMove(var0.cx, TileMap.ada);
       }
 
    }
@@ -1325,7 +1325,7 @@ public final class Code implements Runnable {
          GameScr.chatPopup("Vị trí truyền thuyết lệnh: " + cfa);
          return true;
       } else if (var26.equals("akn")) {
-         cea.aaa(gn.aoa, gn.ala);
+         cea.aaa(TileMap.mapID, TileMap.zoneID);
          aaa((Auto)cea);
          return true;
       } else if (var26.equals("uppk")) {
@@ -1429,7 +1429,7 @@ public final class Code implements Runnable {
          (new ge()).aaa();
          return true;
       } else if (var26.equals("check")) {
-         Service.aaa().aja(fz.ala().cea);
+         Service.aaa().aja(Char.getMyChar().cea);
          return true;
       } else if (!var26.equals("bang") && !var26.equals("fz")) {
          if (!var26.equals("bangb") && !var26.equals("fb")) {
@@ -1441,7 +1441,7 @@ public final class Code implements Runnable {
                      }
 
                      GameScr.chatPopup("Khinh kông ".concat(String.valueOf(var1)));
-                     fz.aca(fz.ala().ala, fz.ala().ama - var1);
+                     Char.charMove(Char.getMyChar().cx, Char.getMyChar().cy - var1);
                      return true;
                   } else if (var26.equals("d")) {
                      if (var1 == 0) {
@@ -1449,7 +1449,7 @@ public final class Code implements Runnable {
                      }
 
                      GameScr.chatPopup("Độn thổ ".concat(String.valueOf(var1)));
-                     fz.aca(fz.ala().ala, fz.ala().ama + var1);
+                     Char.charMove(Char.getMyChar().cx, Char.getMyChar().cy + var1);
                      return true;
                   } else if (var26.equals("l")) {
                      if (var1 == 0) {
@@ -1457,7 +1457,7 @@ public final class Code implements Runnable {
                      }
 
                      GameScr.chatPopup("Dịch trái ".concat(String.valueOf(var1)));
-                     fz.aca(fz.ala().ala - var1, fz.ala().ama);
+                     Char.charMove(Char.getMyChar().cx - var1, Char.getMyChar().cy);
                      return true;
                   } else if (var26.equals("r")) {
                      if (var1 == 0) {
@@ -1465,23 +1465,23 @@ public final class Code implements Runnable {
                      }
 
                      GameScr.chatPopup("Dịch phải ".concat(String.valueOf(var1)));
-                     fz.aca(fz.ala().ala + var1, fz.ala().ama);
+                     Char.charMove(Char.getMyChar().cx + var1, Char.getMyChar().cy);
                      return true;
                   } else {
-                     fz var6;
+                     Char var6;
                      if (var26.equals("g")) {
-                        if ((var6 = fz.ala()).dsa != null) {
+                        if ((var6 = Char.getMyChar()).dsa != null) {
                            GameScr.chatPopup("MoveTo " + var6.dsa.cea);
-                           fz.aca(var6.dsa.ala, var6.dsa.ama);
+                           Char.charMove(var6.dsa.cx, var6.dsa.cy);
                         } else if (var6.dra != null) {
                            GameScr.chatPopup("MoveTo " + var6.dra.cea);
-                           fz.aca(var6.dra.ala, var6.dra.ama);
+                           Char.charMove(var6.dra.cx, var6.dra.cy);
                         } else if (var6.dpa != null) {
                            GameScr.chatPopup("MoveTo " + var6.dpa.ada().aga);
-                           fz.aca(var6.dpa.aha, var6.dpa.aia);
+                           Char.charMove(var6.dpa.aha, var6.dpa.aia);
                         } else if (var6.dta != null) {
                            GameScr.chatPopup("MoveTo " + var6.dta.aha.ada);
-                           fz.aca(var6.dta.aaa, var6.dta.aba);
+                           Char.charMove(var6.dta.aaa, var6.dta.aba);
                         }
 
                         return true;
@@ -1495,18 +1495,18 @@ public final class Code implements Runnable {
                         cc.aaa().aba();
                         return true;
                      } else if (var26.equals("aq")) {
-                        if ((var6 = fz.ala()).dpa != null) {
+                        if ((var6 = Char.getMyChar()).dpa != null) {
                            GameScr.bna.removeElement(var6.dpa);
                         }
 
                         return true;
                      } else if (var26.equals("z")) {
-                        GameScr.chatPopup((fz.fea ? "Tắt" : "Bật") + " auto chuyển map");
-                        fz.fea = !fz.fea;
+                        GameScr.chatPopup((Char.fea ? "Tắt" : "Bật") + " auto chuyển map");
+                        Char.fea = !Char.fea;
                         return true;
                      } else if (var26.equals("rm")) {
-                        GameScr.chatPopup((fz.eza ? "Tắt" : "Bật") + " auto next map");
-                        fz.eza = !fz.eza;
+                        GameScr.chatPopup((Char.eza ? "Tắt" : "Bật") + " auto next map");
+                        Char.eza = !Char.eza;
                         return true;
                      } else if (var26.equals("x")) {
                         if (var1 == 0) {
@@ -1522,8 +1522,8 @@ public final class Code implements Runnable {
                         }
 
                         GameScr.chatPopup("KC Tàn sát ".concat(String.valueOf(var1)));
-                        aoa = fz.ala().ala;
-                        apa = fz.ala().ama;
+                        aoa = Char.getMyChar().cx;
+                        apa = Char.getMyChar().cy;
                         ana = var1;
                         return true;
                      } else {
@@ -1531,10 +1531,10 @@ public final class Code implements Runnable {
                         if (var26.equals("ts")) {
                            if ((var7 = ac.aba(var1)) == null) {
                               GameScr.chatPopup("Tàn sát all");
-                              aaa(-1, gn.aoa);
+                              aaa(-1, TileMap.mapID);
                            } else {
                               GameScr.chatPopup("Tàn sát " + var7.ada().aga + " lv " + var1);
-                              aaa(var7.ara, gn.aoa);
+                              aaa(var7.ara, TileMap.mapID);
                            }
 
                            return true;
@@ -1544,19 +1544,19 @@ public final class Code implements Runnable {
                               var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                               if (var8 == null) {
                                  GameScr.chatPopup("Tàn sát all");
-                                 aaa(-1, gn.aoa);
+                                 aaa(-1, TileMap.mapID);
                               } else {
                                  GameScr.chatPopup("Tàn sát " + var8.aga + " id " + var1);
-                                 aaa(var8.aea, gn.aoa);
+                                 aaa(var8.aea, TileMap.mapID);
                               }
 
                               return true;
                            } else if (var26.equals("tsa")) {
                               GameScr.chatPopup("Tàn sát all");
-                              aaa(-1, gn.aoa);
+                              aaa(-1, TileMap.mapID);
                               return true;
                            } else if (var26.equals("anv")) {
-                              if (gn.aoa != 1 && gn.aoa != 27 && gn.aoa != 72) {
+                              if (TileMap.mapID != 1 && TileMap.mapID != 27 && TileMap.mapID != 72) {
                                  GameScr.chatPopup("Bạn phải đứng ở trường để Auto");
                                  return true;
                               } else {
@@ -1616,7 +1616,7 @@ public final class Code implements Runnable {
                                  GameScr.aja(var1);
                                  return true;
                               } else if (var26.equals("ltd")) {
-                                 if (!gn.afa(gn.aoa) && !gn.ada(gn.aoa)) {
+                                 if (!TileMap.afa(TileMap.mapID) && !TileMap.ada(TileMap.mapID)) {
                                     GameScr.chatPopup("Hãy đứng ở làng hoặc trường để lưu tọa độ");
                                  } else {
                                     GameScr.aha(5);
@@ -1627,19 +1627,19 @@ public final class Code implements Runnable {
                                  return true;
                               } else if (var26.equals("nm")) {
                                  GameScr.chatPopup("Next map: ".concat(String.valueOf(var1)));
-                                 gn.ama(var1);
+                                 TileMap.ama(var1);
                                  return true;
                               } else if (var26.equals("gm")) {
-                                 if (var1 < gn.ava.length && var1 >= 0) {
-                                    GameScr.chatPopup("Go to: " + gn.ava[var1]);
-                                    gn.ala(var1);
+                                 if (var1 < TileMap.ava.length && var1 >= 0) {
+                                    GameScr.chatPopup("Go to: " + TileMap.ava[var1]);
+                                    TileMap.ala(var1);
                                     return true;
                                  } else {
                                     return true;
                                  }
                               } else if (var26.equals("npc")) {
-                                 if (var1 < av.aba.length) {
-                                    GameScr.chatPopup("Act NPC: " + av.aba[var1].aba);
+                                 if (var1 < Npc.arrNpcTemplate.length) {
+                                    GameScr.chatPopup("Act NPC: " + Npc.arrNpcTemplate[var1].aba);
                                     GameScr.aha(var1);
                                  }
 
@@ -1686,13 +1686,13 @@ public final class Code implements Runnable {
                                  return true;
                               } else if (var26.equals("mnv")) {
                                  GameScr.chatPopup("Next to Map Nhiệm Vụ");
-                                 gn.ala(GameScr.bma());
+                                 TileMap.ala(GameScr.bma());
                                  return true;
                               } else if (var26.equals("mnvp")) {
                                  GameScr.chatPopup("Next to Map Nhiệm Vụ Phụ");
                                  aj var27;
-                                 if ((var27 = fz.ama(0)) != null) {
-                                    gn.ala(var27.aga);
+                                 if ((var27 = Char.ama(0)) != null) {
+                                    TileMap.ala(var27.aga);
                                  }
 
                                  return true;
@@ -1700,14 +1700,14 @@ public final class Code implements Runnable {
                                  am var10;
                                  if (var26.equals("add")) {
                                     GameScr.chatPopup("Thêm vật phẩm vào ds nhặt");
-                                    if ((var10 = fz.ala().dta) != null) {
+                                    if ((var10 = Char.getMyChar().dta) != null) {
                                        aaa(var10.aha.aaa);
                                     }
 
                                     return true;
                                  } else if (var26.equals("del")) {
                                     GameScr.chatPopup("Xóa vật phẩm khỏi ds nhặt");
-                                    if ((var10 = fz.ala().dta) != null) {
+                                    if ((var10 = Char.getMyChar().dta) != null) {
                                        aba(var10.aha.aaa);
                                     }
 
@@ -1768,17 +1768,17 @@ public final class Code implements Runnable {
                                        }
 
                                        ara = !ara;
-                                       if (fz.fla) {
+                                       if (Char.fla) {
                                           Service.aaa().aka("dcvt " + (ara ? 1 : 0));
                                        }
 
                                        return true;
                                     } else if (var26.equals("avt")) {
                                        GameScr.chatPopup("Thêm vị trí " + ata.size());
-                                       ata.addElement(new Integer(fz.ala().ala));
-                                       aua.addElement(new Integer(fz.ala().ama));
-                                       if (fz.fla) {
-                                          Service.aaa().aka("avt " + fz.ala().ala + " " + fz.ala().ama);
+                                       ata.addElement(new Integer(Char.getMyChar().cx));
+                                       aua.addElement(new Integer(Char.getMyChar().cy));
+                                       if (Char.fla) {
+                                          Service.aaa().aka("avt " + Char.getMyChar().cx + " " + Char.getMyChar().cy);
                                        }
 
                                        return true;
@@ -1786,7 +1786,7 @@ public final class Code implements Runnable {
                                        GameScr.chatPopup("Xóa hết vị trí");
                                        ata.removeAllElements();
                                        aua.removeAllElements();
-                                       if (fz.fla) {
+                                       if (Char.fla) {
                                           Service.aaa().aka("dvt");
                                        }
 
@@ -1795,7 +1795,7 @@ public final class Code implements Runnable {
                                        GameScr.chatPopup("Xóa vị trí ".concat(String.valueOf(var1)));
                                        ata.removeElementAt(var1);
                                        aua.removeElementAt(var1);
-                                       if (fz.fla) {
+                                       if (Char.fla) {
                                           Service.aaa().aka("dtvx ".concat(String.valueOf(var1)));
                                        }
 
@@ -1805,8 +1805,8 @@ public final class Code implements Runnable {
                                           GameScr.chatPopup("Tắt đánh chuyển khu");
                                        } else {
                                           GameScr.chatPopup("Bật đánh chuyển khu");
-                                          ab.bka.aaa("Khu", new ca("Đặt", 1100090), 1);
-                                          ab.bka.aaa.aaa(ala());
+                                          GameCanvas.bka.aaa("Khu", new ca("Đặt", 1100090), 1);
+                                          GameCanvas.bka.aaa.aaa(ala());
                                        }
 
                                        return true;
@@ -1821,7 +1821,7 @@ public final class Code implements Runnable {
                                        return true;
                                     } else if (var26.equals("addn")) {
                                        GameScr.chatPopup("Thêm nhóm");
-                                       if ((var6 = fz.ala().dsa) != null) {
+                                       if ((var6 = Char.getMyChar().dsa) != null) {
                                           if (!aca(var6.cea)) {
                                              aia.addElement(var6.cea);
                                           }
@@ -1837,7 +1837,7 @@ public final class Code implements Runnable {
                                        aya();
                                        return true;
                                     } else if (var26.equals("pt")) {
-                                       if (!fz.ala().cea.equals(aha)) {
+                                       if (!Char.getMyChar().cea.equals(aha)) {
                                           GameScr.chatPopup("Bạn không là nhóm trưởng");
                                           return true;
                                        } else {
@@ -1864,13 +1864,13 @@ public final class Code implements Runnable {
                                        aya();
                                        return true;
                                     } else if (var26.equals("tsn")) {
-                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                           if ((var7 = ac.aba(var1)) == null) {
                                              GameScr.chatPopup("Tàn sát nhóm all");
-                                             aaa(-1, gn.aoa);
+                                             aaa(-1, TileMap.mapID);
                                           } else {
                                              GameScr.chatPopup("Tàn sát nhóm " + var7.ada().aga + " lv " + var1);
-                                             aaa(var7.ara, gn.aoa);
+                                             aaa(var7.ara, TileMap.mapID);
                                           }
 
                                           cia.afa = true;
@@ -1881,14 +1881,14 @@ public final class Code implements Runnable {
                                           return true;
                                        }
                                     } else if (var26.equals("tsnx")) {
-                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
                                              GameScr.chatPopup("Tàn sát nhóm all");
-                                             aaa(-1, gn.aoa);
+                                             aaa(-1, TileMap.mapID);
                                           } else {
                                              GameScr.chatPopup("Tàn sát nhóm " + var8.aga + " id " + var1);
-                                             aaa(var8.aea, gn.aoa);
+                                             aaa(var8.aea, TileMap.mapID);
                                           }
 
                                           cia.afa = true;
@@ -1899,9 +1899,9 @@ public final class Code implements Runnable {
                                           return true;
                                        }
                                     } else if (var26.equals("tsan")) {
-                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                           GameScr.chatPopup("Tàn sát nhóm all");
-                                          aaa(-1, gn.aoa);
+                                          aaa(-1, TileMap.mapID);
                                           cia.afa = true;
                                           Service.aaa().aka("tsa " + cia.aga + " " + cia.aha);
                                           return true;
@@ -1910,7 +1910,7 @@ public final class Code implements Runnable {
                                           return true;
                                        }
                                     } else if (var26.equals("attn")) {
-                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                           GameScr.chatPopup("Auto Tà Thú Nhóm");
                                           aea();
                                           aea.afa = true;
@@ -1938,7 +1938,7 @@ public final class Code implements Runnable {
                                           if (aba == null) {
                                              GameScr.chatPopup("Bạn chưa up yên");
                                           } else {
-                                             var12 = fz.ala().csa - aba.ala;
+                                             var12 = Char.getMyChar().csa - aba.ala;
                                              var1 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                                              GameScr.chatPopup("Up " + var12 + " trong " + ex.aba(var1) + " perh=" + var12 / var1 * 3600);
                                           }
@@ -1949,10 +1949,10 @@ public final class Code implements Runnable {
                                              GameScr.chatPopup("Bạn chưa up level");
                                           } else {
                                              long var33;
-                                             float var30 = (float)((var33 = fz.ala().aja - aba.ama) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
+                                             float var30 = (float)((var33 = Char.getMyChar().aja - aba.ama) * 10000L / GameScr.dta[Char.getMyChar().aya]) / 100.0F;
                                              var12 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                                              long var35;
-                                             float var18 = (float)((var35 = var33 * 3600L / (long)var12) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
+                                             float var18 = (float)((var35 = var33 * 3600L / (long)var12) * 10000L / GameScr.dta[Char.getMyChar().aya]) / 100.0F;
                                              GameScr.chatPopup("Up " + var33 + " - " + var30 + "% trong " + ex.aba(var12) + " perh=" + var35 + " - " + var18 + "%");
                                           }
 
@@ -1960,25 +1960,25 @@ public final class Code implements Runnable {
                                        } else if (var26.equals("st")) {
                                           if ((var7 = ac.aba(var1)) == null) {
                                              GameScr.chatPopup("Stanima all");
-                                             aca(-1, gn.aoa);
+                                             aca(-1, TileMap.mapID);
                                           } else {
                                              GameScr.chatPopup("Stanima " + var7.ada().aga + " lv " + var1);
-                                             aca(var7.ara, gn.aoa);
+                                             aca(var7.ara, TileMap.mapID);
                                           }
 
                                           return true;
                                        } else if (var26.equals("sta")) {
                                           GameScr.chatPopup("Stanima all");
-                                          aca(-1, gn.aoa);
+                                          aca(-1, TileMap.mapID);
                                           return true;
                                        } else if (var26.equals("stn")) {
-                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                              if ((var7 = ac.aba(var1)) == null) {
                                                 GameScr.chatPopup("Stanima nhóm all");
-                                                aca(-1, gn.aoa);
+                                                aca(-1, TileMap.mapID);
                                              } else {
                                                 GameScr.chatPopup("Stanima nhóm " + var7.ada().aga + " lv " + var1);
-                                                aca(var7.ara, gn.aoa);
+                                                aca(var7.ara, TileMap.mapID);
                                              }
 
                                              aca.afa = true;
@@ -1989,9 +1989,9 @@ public final class Code implements Runnable {
                                              return true;
                                           }
                                        } else if (var26.equals("stan")) {
-                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                              GameScr.chatPopup("Stanima nhóm all");
-                                             aca(-1, gn.aoa);
+                                             aca(-1, TileMap.mapID);
                                              aca.afa = true;
                                              Service.aaa().aka("sta " + aca.aga + " " + aca.aha);
                                              return true;
@@ -2003,10 +2003,10 @@ public final class Code implements Runnable {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
                                              GameScr.chatPopup("Tàn sát all");
-                                             aaa(-1, gn.aoa);
+                                             aaa(-1, TileMap.mapID);
                                           } else {
                                              GameScr.chatPopup("Tàn sát " + var8.aga + " id " + var1);
-                                             aca(var8.aea, gn.aoa);
+                                             aca(var8.aea, TileMap.mapID);
                                           }
 
                                           return true;
@@ -2014,14 +2014,14 @@ public final class Code implements Runnable {
                                           if (var26.equals("sts")) {
                                              GameScr.chatPopup("Step Stanima");
                                              aca.aea();
-                                             if (fz.ala().cea.equals(aha) && GameScr.bfa.size() > 0) {
+                                             if (Char.getMyChar().cea.equals(aha) && GameScr.bfa.size() > 0) {
                                                 Service.aaa().aka("sts");
                                              }
 
                                              return true;
                                           } else if (var26.equals("stb")) {
-                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
-                                                if (fz.ala().cua.aaa != 6) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != Char.getMyChar().asa) {
+                                                if (Char.getMyChar().cua.aaa != 6) {
                                                    GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
@@ -2034,8 +2034,8 @@ public final class Code implements Runnable {
                                                 return true;
                                              }
                                           } else if (var26.equals("stbx")) {
-                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
-                                                if (fz.ala().cua.aaa != 6) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != Char.getMyChar().asa) {
+                                                if (Char.getMyChar().cua.aaa != 6) {
                                                    GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
@@ -2048,8 +2048,8 @@ public final class Code implements Runnable {
                                                 return true;
                                              }
                                           } else if (var26.equals("sths")) {
-                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
-                                                if (fz.ala().cua.aaa != 6) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != Char.getMyChar().asa) {
+                                                if (Char.getMyChar().cua.aaa != 6) {
                                                    GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
@@ -2063,19 +2063,19 @@ public final class Code implements Runnable {
                                              }
                                           } else if (var26.equals("pkb")) {
                                              GameScr.chatPopup("PK Thần Thú");
-                                             aaa((Auto)(new ej(gn.aoa)));
-                                             if (aha != null && fz.ala().cea.equals(aha) && GameScr.bfa.size() > 1) {
-                                                Service.aaa().aka("pkm " + gn.aoa);
+                                             aaa((Auto)(new ej(TileMap.mapID)));
+                                             if (aha != null && Char.getMyChar().cea.equals(aha) && GameScr.bfa.size() > 1) {
+                                                Service.aaa().aka("pkm " + TileMap.mapID);
                                              }
 
                                              return true;
                                           } else if (var26.equals("pkk")) {
                                              GameScr.chatPopup("PK Thần Thú");
                                              ej var32;
-                                             (var32 = new ej(gn.aoa)).aha = var1;
+                                             (var32 = new ej(TileMap.mapID)).aha = var1;
                                              aaa((Auto)var32);
-                                             if (aha != null && fz.ala().cea.equals(aha) && GameScr.bfa.size() > 1) {
-                                                Service.aaa().aka("pkm " + gn.aoa);
+                                             if (aha != null && Char.getMyChar().cea.equals(aha) && GameScr.bfa.size() > 1) {
+                                                Service.aaa().aka("pkm " + TileMap.mapID);
                                                 Service.aaa().aka("pkk ".concat(String.valueOf(var1)));
                                              }
 
@@ -2121,7 +2121,7 @@ public final class Code implements Runnable {
                                           } else if (var0.equals("hd9x")) {
                                              GameScr.chatPopup("Hang động 9x");
                                              aaa((Auto)(new bj()));
-                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                                 Service.aaa().aka("hd9x");
                                              }
 
@@ -2191,9 +2191,9 @@ public final class Code implements Runnable {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
                                                       GameScr.chatPopup("Thêm " + var13[1] + " vào ds PK");
                                                       ff.aaa(var13[1]);
-                                                   } else if (fz.ala().dsa != null) {
-                                                      GameScr.chatPopup("Thêm " + fz.ala().dsa.cea + " vào ds PK");
-                                                      ff.aaa(fz.ala().dsa.cea);
+                                                   } else if (Char.getMyChar().dsa != null) {
+                                                      GameScr.chatPopup("Thêm " + Char.getMyChar().dsa.cea + " vào ds PK");
+                                                      ff.aaa(Char.getMyChar().dsa.cea);
                                                    }
 
                                                    return true;
@@ -2203,9 +2203,9 @@ public final class Code implements Runnable {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
                                                       GameScr.chatPopup("Xóa " + var13[1] + " khỏi ds PK");
                                                       ff.aba(var13[1]);
-                                                   } else if (fz.ala().dsa != null) {
-                                                      GameScr.chatPopup("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
-                                                      ff.aba(fz.ala().dsa.cea);
+                                                   } else if (Char.getMyChar().dsa != null) {
+                                                      GameScr.chatPopup("Xóa " + Char.getMyChar().dsa.cea + " khỏi ds PK");
+                                                      ff.aba(Char.getMyChar().dsa.cea);
                                                    }
 
                                                    return true;
@@ -2221,9 +2221,9 @@ public final class Code implements Runnable {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
                                                       GameScr.chatPopup("Thêm " + var13[1] + " vào ds HS");
                                                       aja(var13[1]);
-                                                   } else if (fz.ala().dsa != null) {
-                                                      GameScr.chatPopup("Thêm " + fz.ala().dsa.cea + " vào ds HS");
-                                                      aja(fz.ala().dsa.cea);
+                                                   } else if (Char.getMyChar().dsa != null) {
+                                                      GameScr.chatPopup("Thêm " + Char.getMyChar().dsa.cea + " vào ds HS");
+                                                      aja(Char.getMyChar().dsa.cea);
                                                    }
 
                                                    return true;
@@ -2233,9 +2233,9 @@ public final class Code implements Runnable {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
                                                       GameScr.chatPopup("Xóa " + var13[1] + " khỏi ds HS");
                                                       aka(var13[1]);
-                                                   } else if (fz.ala().dsa != null) {
-                                                      GameScr.chatPopup("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
-                                                      aka(fz.ala().dsa.cea);
+                                                   } else if (Char.getMyChar().dsa != null) {
+                                                      GameScr.chatPopup("Xóa " + Char.getMyChar().dsa.cea + " khỏi ds PK");
+                                                      aka(Char.getMyChar().dsa.cea);
                                                    }
 
                                                    return true;
@@ -2299,7 +2299,7 @@ public final class Code implements Runnable {
                                                 }
 
                                                 if (var0.startsWith("tnx")) {
-                                                   if (gn.afa(gn.aoa)) {
+                                                   if (TileMap.afa(TileMap.mapID)) {
                                                       var13 = aca(var0, " ");
 
                                                       try {
@@ -2332,14 +2332,14 @@ public final class Code implements Runnable {
 
                                              return false;
                                           }
-                                       } else if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       } else if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == Char.getMyChar().asa) {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
                                              GameScr.chatPopup("Stanima nhóm all");
-                                             aca(-1, gn.aoa);
+                                             aca(-1, TileMap.mapID);
                                           } else {
                                              GameScr.chatPopup("Stanima nhóm " + var8.aga + " id " + var1);
-                                             aca(var8.aea, gn.aoa);
+                                             aca(var8.aea, TileMap.mapID);
                                           }
 
                                           aca.afa = true;
@@ -2355,7 +2355,7 @@ public final class Code implements Runnable {
                            } else {
                               GameScr.chatPopup("End Auto");
                               aga();
-                              if (fz.fla) {
+                              if (Char.fla) {
                                  Service.aaa().aka("pe");
                               }
 
@@ -2399,7 +2399,7 @@ public final class Code implements Runnable {
       if (System.currentTimeMillis() - daa > 60000L) {
          daa = System.currentTimeMillis();
          ev var0;
-         (var0 = new ev()).addElement(fz.ala());
+         (var0 = new ev()).addElement(Char.getMyChar());
          Service.aaa().aaa((ev)(new ev()), (ev)var0, (int)2);
       }
 
@@ -2417,7 +2417,7 @@ public final class Code implements Runnable {
    }
 
    public static void aaa(String var0, String var1) {
-      dc.ada().aaa(var0, fz.ala().cea, var1);
+      dc.ada().aaa(var0, Char.getMyChar().cea, var1);
       Service.aaa().aaa(var0, var1);
       Auto.aaa(20L);
    }
@@ -2437,7 +2437,7 @@ public final class Code implements Runnable {
    }
 
    public static void aba(String var0, String var1) {
-      if (fz.fla && aha != null && var0.equals(aha) && !fz.ala().cea.equals(aha)) {
+      if (Char.fla && aha != null && var0.equals(aha) && !Char.getMyChar().cea.equals(aha)) {
          ada(var0, var1);
       }
 
@@ -2453,7 +2453,7 @@ public final class Code implements Runnable {
       }
 
       if (var3) {
-         fz var4 = fz.ala();
+         Char var4 = Char.getMyChar();
          String[] var5 = aca(bpa, ",");
 
          int var6;
@@ -2475,7 +2475,7 @@ public final class Code implements Runnable {
          if (var1.toLowerCase().equals("yenxu")) {
             aaa(var0, "Yên: " + var4.csa + " Xu: " + var4.cqa + " Lượng: " + var4.cta);
             if (aba != null) {
-               var6 = fz.ala().csa - aba.ala;
+               var6 = Char.getMyChar().csa - aba.ala;
                int var7 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                aaa(var0, "Up " + var6 + " trong " + ex.aba(var7) + " perh=" + var6 / var7 * 3600);
                return;
@@ -2483,14 +2483,14 @@ public final class Code implements Runnable {
          } else {
             if (var1.toLowerCase().equals("level")) {
                long var18;
-               long var8 = (var18 = (fz.ala().aka > 0L ? fz.ala().aka : fz.ala().bha) * 10000L / GameScr.dta[fz.ala().aya]) % 100L;
-               aaa(var0, "LV: " + var4.aya + " + " + (fz.ala().aka > 0L ? "-" : "") + var18 / 100L + "." + (var8 < 10L ? "0".concat(String.valueOf(var8)) : String.valueOf(var8)) + "%");
+               long var8 = (var18 = (Char.getMyChar().aka > 0L ? Char.getMyChar().aka : Char.getMyChar().bha) * 10000L / GameScr.dta[Char.getMyChar().aya]) % 100L;
+               aaa(var0, "LV: " + var4.aya + " + " + (Char.getMyChar().aka > 0L ? "-" : "") + var18 / 100L + "." + (var8 < 10L ? "0".concat(String.valueOf(var8)) : String.valueOf(var8)) + "%");
                if (aba != null) {
                   long var10;
-                  float var12 = (float)((var10 = fz.ala().aja - aba.ama) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
+                  float var12 = (float)((var10 = Char.getMyChar().aja - aba.ama) * 10000L / GameScr.dta[Char.getMyChar().aya]) / 100.0F;
                   int var13 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                   long var14;
-                  float var16 = (float)((var14 = var10 * 3600L / (long)var13) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
+                  float var16 = (float)((var14 = var10 * 3600L / (long)var13) * 10000L / GameScr.dta[Char.getMyChar().aya]) / 100.0F;
                   aaa(var0, "Up " + var10 + " - " + var12 + "% trong " + ex.aba(var13) + " perh=" + var14 + " - " + var16 + "%");
                   return;
                }
@@ -2548,7 +2548,7 @@ public final class Code implements Runnable {
    }
 
    public static void ada(String var0, String var1) {
-      if (fz.fla && aha != null && var0.equals(aha) && !fz.ala().cea.equals(aha)) {
+      if (Char.fla && aha != null && var0.equals(aha) && !Char.getMyChar().cea.equals(aha)) {
          String[] var2 = aca(var1, " ");
 
          try {
@@ -2623,7 +2623,7 @@ public final class Code implements Runnable {
                var3 = Integer.parseInt(var2[1]);
                int var8 = Integer.parseInt(var2[3]);
                aj var5;
-               if ((var5 = fz.ama(1)) != null && var5.aga == var3) {
+               if ((var5 = Char.ama(1)) != null && var5.aga == var3) {
                   aea.a_();
                } else {
                   aea.aaa(var3, var8);
@@ -2762,7 +2762,7 @@ public final class Code implements Runnable {
             var3 = GameScr.eba[((gg)var1).aia];
          }
 
-         if (var2 << 1 <= fz.bia() && var3 << 1 <= fz.ala().csa && ((gg)var1).aia < cba) {
+         if (var2 << 1 <= Char.bia() && var3 << 1 <= Char.getMyChar().csa && ((gg)var1).aia < cba) {
             int var4 = ((gg)var1).aia;
             if (cda) {
                GameScr.ava().ada((int)10);
@@ -2775,11 +2775,11 @@ public final class Code implements Runnable {
                int var6 = 0;
                int var7 = 0;
 
-               for(int var8 = 0; var8 < fz.ala().arrItemBag.length && var7 < var2; ++var8) {
-                  gg var9 = fz.ala().arrItemBag[var8];
+               for(int var8 = 0; var8 < Char.getMyChar().arrItemBag.length && var7 < var2; ++var8) {
+                  gg var9 = Char.getMyChar().arrItemBag[var8];
                   if (((gg)var1).aia == 7) {
-                     if (fz.aia(242) < 0) {
-                        if (fz.ala().cta >= 10) {
+                     if (Char.aia(242) < 0) {
+                        if (Char.getMyChar().cta >= 10) {
                            Service.aaa().aba(14, 23, 1);
                            LockGame.aha();
                         } else {
@@ -2791,7 +2791,7 @@ public final class Code implements Runnable {
                   }
 
                   if (var9 != null && var9.aaa.aba == 26 && var9.aaa.aaa <= cca - 1) {
-                     fz.ala().arrItemBag[var8] = null;
+                     Char.getMyChar().arrItemBag[var8] = null;
                      GameScr.cxa[var6++] = var9;
                      var7 += GameScr.dva[var9.aaa.aaa];
                   }
@@ -2804,7 +2804,7 @@ public final class Code implements Runnable {
                   }
 
                   Service.aaa().aaa((gg)var1, GameScr.cxa);
-                  Service.aaa().aja(fz.ala().cea);
+                  Service.aaa().aja(Char.getMyChar().cea);
                   LockGame.ara();
                } while(GameScr.cxa[0] != null);
             }

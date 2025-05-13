@@ -444,7 +444,7 @@ public final class LockGame {
          for(int var2 = 0; var2 < GameScr.bfa.size(); ++var2) {
             ep var3;
             if ((var3 = (ep)GameScr.bfa.elementAt(var2)).ada.equals(var1)) {
-               if (var3.afa == null || ci.aaa(fz.ala().ala, fz.ala().ama, var3.afa.ala, var3.afa.ama) > 100) {
+               if (var3.afa == null || ci.aaa(Char.getMyChar().cx, Char.getMyChar().cy, var3.afa.cx, var3.afa.cy) > 100) {
                   return false;
                }
 
@@ -562,8 +562,8 @@ public final class LockGame {
       ana = false;
       aoa = false;
       apa = false;
-      gn.bfa = false;
-      gn.aha();
+      TileMap.bfa = false;
+      TileMap.aha();
    }
 
    public static void bma() {

@@ -92,15 +92,15 @@ public final class aw {
             boolean var2 = (var1 = (fd)aba.elementAt(aaa = (aaa + 1) % aba.size())).aba();
             boolean var3 = var1.aca();
             if (var2 && var3) {
-               return "" + fz.ala().cea + " bán " + var1.aba + " " + var1.ada + "k " + var1.aca + " cái, mua " + var1.aga + "k " + var1.afa + " cai, mua bán pm";
+               return "" + Char.getMyChar().cea + " bán " + var1.aba + " " + var1.ada + "k " + var1.aca + " cái, mua " + var1.aga + "k " + var1.afa + " cai, mua bán pm";
             }
 
             if (var2) {
-               return "" + fz.ala().cea + " bán " + var1.aba + " " + var1.ada + "k " + var1.aca + " cái, mua pm";
+               return "" + Char.getMyChar().cea + " bán " + var1.aba + " " + var1.ada + "k " + var1.aca + " cái, mua pm";
             }
 
             if (var3) {
-               return "" + fz.ala().cea + " mua " + var1.aba + " " + var1.aga + "k " + var1.afa + " cái, bán pm hoặc gd";
+               return "" + Char.getMyChar().cea + " mua " + var1.aba + " " + var1.aga + "k " + var1.afa + " cái, bán pm hoặc gd";
             }
          } while(var0 != aaa);
 
@@ -111,7 +111,7 @@ public final class aw {
    public static void aba(String var0) {
       for(int var1 = 0; var1 < aba.size(); ++var1) {
          fd var2;
-         if (fz.afa((var2 = (fd)aba.elementAt(var1)).aaa.aaa) != null) {
+         if (Char.afa((var2 = (fd)aba.elementAt(var1)).aaa.aaa) != null) {
             boolean var3 = var2.aba();
             boolean var4 = var2.aca();
             if (var3 && var4) {
@@ -119,7 +119,7 @@ public final class aw {
             } else if (var3) {
                Code.aaa(var0, "id: " + var2.aba + " " + var2.aaa.ada + " bán: " + var2.ada + "k/" + var2.aca + "cái. Còn " + var2.ada() + " cái.");
             } else if (var4) {
-               Code.aaa(var0, "id: " + var2.aba + " " + var2.aaa.ada + " mua: " + var2.aga + "k/" + var2.afa + " cái. Còn mua: " + (var2.afa > 0 && fz.aka(var2.aaa.aaa) < var2.aha ? var2.aha - fz.aka(var2.aaa.aaa) : 0));
+               Code.aaa(var0, "id: " + var2.aba + " " + var2.aaa.ada + " mua: " + var2.aga + "k/" + var2.afa + " cái. Còn mua: " + (var2.afa > 0 && Char.aka(var2.aaa.aaa) < var2.aha ? var2.aha - Char.aka(var2.aaa.aaa) : 0));
             }
          }
       }

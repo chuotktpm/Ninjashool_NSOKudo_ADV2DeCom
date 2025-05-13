@@ -14,12 +14,12 @@ public final class dl extends fb implements ag {
 
    public dl() {
       aaa = this;
-      this.aca = ab.bba - 100;
+      this.aca = GameCanvas.bba - 100;
       this.ada = 10;
       this.aea = 200;
-      this.afa = ab.baa - 40;
+      this.afa = GameCanvas.baa - 40;
       this.aga = this.aea - 40;
-      this.aha = ab.bba - this.aga / 2;
+      this.aha = GameCanvas.bba - this.aga / 2;
 
       for(int var1 = 0; var1 < this.aja.length; ++var1) {
          this.aja[var1] = new eq();
@@ -41,7 +41,7 @@ public final class dl extends fb implements ag {
 
    public final void aba() {
       super.aba();
-      if (++GameScr.aia > ab.aza * 3 + 100) {
+      if (++GameScr.aia > GameCanvas.aza * 3 + 100) {
          GameScr.aia = 100;
       }
 
@@ -77,14 +77,14 @@ public final class dl extends fb implements ag {
    }
 
    public final void aca() {
-      if (ab.aka[2]) {
+      if (GameCanvas.aka[2]) {
          --this.aia;
          if (this.aia < 0) {
             this.aia = this.aka.length;
          }
 
          this.aba.aaa(this.aia * this.aba.aha);
-      } else if (ab.aka[8]) {
+      } else if (GameCanvas.aka[8]) {
          ++this.aia;
          if (this.aia > this.aka.length) {
             this.aia = 0;
@@ -94,8 +94,8 @@ public final class dl extends fb implements ag {
       }
 
       int var1;
-      if (ab.aka[2] || ab.aka[8]) {
-         ab.aka();
+      if (GameCanvas.aka[2] || GameCanvas.aka[8]) {
+         GameCanvas.aka();
 
          for(var1 = 0; var1 < this.aja.length; ++var1) {
             this.aja[var1].aea = false;
@@ -108,33 +108,33 @@ public final class dl extends fb implements ag {
          this.aba.aaa(this.aia * this.aba.aha);
       }
 
-      if (ab.aba(this.aca, this.ada, this.aea, this.afa) && ab.aoa) {
+      if (GameCanvas.aba(this.aca, this.ada, this.aea, this.afa) && GameCanvas.aoa) {
          for(var1 = 0; var1 < this.aja.length; ++var1) {
-            if (ab.aba(this.aja[var1].aaa, this.aja[var1].aba, this.aja[var1].aca, this.aja[var1].ada)) {
+            if (GameCanvas.aba(this.aja[var1].aaa, this.aja[var1].aba, this.aja[var1].aca, this.aja[var1].ada)) {
                this.aia = var1;
             }
          }
       }
 
       super.aca();
-      ab.aka();
+      GameCanvas.aka();
    }
 
    public final void aaa(as var1) {
       var1.aaa(0);
-      var1.aca(0, 0, ab.aza, ab.baa);
-      ab.aaa(var1);
+      var1.aca(0, 0, GameCanvas.aza, GameCanvas.baa);
+      GameCanvas.aaa(var1);
       fk.aaa(this.aca, this.ada, this.aea, this.afa, var1);
-      fw.aga.aaa(var1, er.dna, ab.bba, this.ada + 10, 2);
+      fw.aga.aaa(var1, er.dna, GameCanvas.bba, this.ada + 10, 2);
       this.aba.aaa(this.aka.length, 50, this.aca, this.ada + 25, this.aea, this.afa - 25, true, 0);
       this.aba.aaa(var1, this.aca, this.ada + 25, this.aea, this.afa - 25);
 
       int var2;
       for(var2 = 0; var2 < this.aka.length; ++var2) {
          if (var2 != this.aka.length - 1) {
-            fw.ala.aaa(var1, this.aka[var2], ab.bba, (var2 + 1) * 50 - 13, 2);
+            fw.ala.aaa(var1, this.aka[var2], GameCanvas.bba, (var2 + 1) * 50 - 13, 2);
          } else {
-            fw.ana.aaa(var1, this.aka[var2], ab.bba, (var2 + 1) * 50 - 13, 2);
+            fw.ana.aaa(var1, this.aka[var2], GameCanvas.bba, (var2 + 1) * 50 - 13, 2);
          }
       }
 
@@ -195,7 +195,7 @@ public final class dl extends fb implements ag {
             var10.printStackTrace();
          }
 
-         ab.bsa = false;
+         GameCanvas.bsa = false;
          GameScr.ava().aaa();
       default:
       }

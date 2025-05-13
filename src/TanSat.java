@@ -13,7 +13,7 @@ public final class TanSat extends Auto {
       super.a_();
       super.aga = var2;
       super.aha = var3;
-      super.aia = gn.aga(var2);
+      super.aia = TileMap.aga(var2);
       this.aaa = var1;
    }
 
@@ -23,7 +23,7 @@ public final class TanSat extends Auto {
       }
 
       if (Auto.aka()) {
-         if (fz.eza) {
+         if (Char.eza) {
             Auto.aaa(true);
          }
       } else {
@@ -36,13 +36,13 @@ public final class TanSat extends Auto {
             return;
          }
 
-         if (!Auto.apa && fz.ala().aea) {
+         if (!Auto.apa && Char.getMyChar().aea) {
             this.ana();
             return;
          }
 
          if (aba && !(Code.aba instanceof ADV)) {
-            fz var4 = fz.ala();
+            Char var4 = Char.getMyChar();
 
             for(int var5 = 0; var5 < var4.arrItemBag.length; ++var5) {
                gg var6;
@@ -53,11 +53,11 @@ public final class TanSat extends Auto {
             }
          }
 
-         if (super.aga == gn.aoa && (super.aia || super.aha == gn.ala)) {
-            this.aca(this.aaa, this.aaa(fz.fga, fz.fha, fz.fia));
+         if (super.aga == TileMap.mapID && (super.aia || super.aha == TileMap.zoneID)) {
+            this.aca(this.aaa, this.aaa(Char.fga, Char.fha, Char.fia));
             this.ada(-1);
          } else {
-            this.aaa(super.aga, super.aha, super.aja, super.aka);
+            this.goMap(super.aga, super.aha, super.aja, super.aka);
          }
       }
 

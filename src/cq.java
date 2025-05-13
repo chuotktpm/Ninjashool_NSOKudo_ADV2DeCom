@@ -6,13 +6,13 @@ public final class cq extends cu implements ag {
    private int aka;
    private int ala;
    private int ama;
-   private fz ana;
+   private Char ana;
    private int aoa;
    private String[] apa;
    public ca aaa;
    public static cq aba;
 
-   public static void aaa(String var0, fz var1) {
+   public static void aaa(String var0, Char var1) {
       String[] var2;
       if ((var2 = ci.aaa(var0, "\n", 0)).length == 1) {
          aaa(var2[0], 1000, var1);
@@ -23,21 +23,21 @@ public final class cq extends cu implements ag {
       }
    }
 
-   public static cq aaa(String var0, int var1, fz var2) {
+   public static cq aaa(String var0, int var1, Char var2) {
       cq var3 = new cq();
       if (var0.length() < 10) {
          var3.aga = 64;
       }
 
-      if (ab.aza == 128) {
+      if (GameCanvas.aza == 128) {
          var3.aga = 128;
       }
 
       var3.aja = fw.ana.aba(var0, var3.aga - 10);
       var3.aha = var1;
       var3.ana = var2;
-      var3.aka = var2.ala;
-      var3.ala = var2.ama;
+      var3.aka = var2.cx;
+      var3.ala = var2.cy;
       var2.aia = var3;
       var3.aia = 7;
       cu.aca.addElement(var3);
@@ -46,8 +46,8 @@ public final class cq extends cu implements ag {
 
    public final void aba() {
       if (this.ana != null) {
-         this.aka = this.ana.ala;
-         this.ala = this.ana.ama;
+         this.aka = this.ana.cx;
+         this.ala = this.ana.cy;
          this.ama = this.ana.cja + 10;
       }
 

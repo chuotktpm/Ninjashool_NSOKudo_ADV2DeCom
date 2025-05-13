@@ -4,7 +4,7 @@ public final class ef extends cu {
    private int aga;
    private int aha;
    private int aia = 1;
-   private fz aja;
+   private Char aja;
    private short aka = 0;
    private long ala = 0L;
 
@@ -27,7 +27,7 @@ public final class ef extends cu {
       cu.aca.addElement(var5);
    }
 
-   public static void aaa(int var0, fz var1, int var2) {
+   public static void aaa(int var0, Char var1, int var2) {
       ef var3;
       (var3 = new ef()).aaa = GameScr.bca[var0];
       var3.aja = var1;
@@ -35,7 +35,7 @@ public final class ef extends cu {
       cu.aca.addElement(var3);
    }
 
-   public static void aba(int var0, fz var1, int var2) {
+   public static void aba(int var0, Char var1, int var2) {
       ef var3;
       (var3 = new ef()).aaa = GameScr.bca[var0];
       var3.aja = var1;
@@ -45,13 +45,13 @@ public final class ef extends cu {
 
    public final void aaa(as var1) {
       if (this.aja != null) {
-         this.aga = this.aja.ala;
-         this.aha = this.aja.ama;
+         this.aga = this.aja.cx;
+         this.aha = this.aja.cy;
       }
 
       int var2 = this.aga + this.aaa.aba[this.aba].aaa * this.aia;
       int var3 = this.aha + this.aaa.aba[this.aba].aba;
-      if (ab.aea(var2, var3)) {
+      if (GameCanvas.aea(var2, var3)) {
          fo.aaa(var1, this.aaa.aba[this.aba].aca, var2, var3, this.aia == 1 ? 0 : 2, 3);
       }
 
@@ -66,7 +66,7 @@ public final class ef extends cu {
 
          if (System.currentTimeMillis() - this.ala > 0L) {
             if (this.aaa.aaa == 120) {
-               ab.ada = false;
+               GameCanvas.ada = false;
             }
 
             cu.aca.removeElement(this);
@@ -77,7 +77,7 @@ public final class ef extends cu {
             --this.aka;
             if (this.aka <= 0) {
                if (this.aaa.aaa == 120) {
-                  ab.ada = false;
+                  GameCanvas.ada = false;
                }
 
                cu.aca.removeElement(this);
@@ -87,7 +87,7 @@ public final class ef extends cu {
          }
       }
 
-      if (ab.aua % 11 == 0 && this.aja != null && this.aja != fz.ala() && !GameScr.bla.contains(this.aja)) {
+      if (GameCanvas.aua % 11 == 0 && this.aja != null && this.aja != Char.getMyChar() && !GameScr.vCharInMap.contains(this.aja)) {
          cu.aca.removeElement(this);
       }
 

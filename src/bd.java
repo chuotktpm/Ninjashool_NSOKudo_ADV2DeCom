@@ -1,7 +1,7 @@
 public final class bd {
    public int aaa;
    public ac aba;
-   public fz aca;
+   public Char aca;
    public fx ada;
    public boolean aea;
 

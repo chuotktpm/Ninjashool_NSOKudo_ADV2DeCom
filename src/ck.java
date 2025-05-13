@@ -31,8 +31,8 @@ public final class ck implements ag {
    public int bba;
 
    public static void aaa() {
-      apa = ab.aca("/hd/btnlBig0.png");
-      aqa = ab.aca("/hd/btnlBig1.png");
+      apa = GameCanvas.aca("/hd/btnlBig0.png");
+      aqa = GameCanvas.aca("/hd/btnlBig1.png");
    }
 
    static {
@@ -42,7 +42,7 @@ public final class ck implements ag {
 
    public ck() {
       this.ama = new ca(er.eta, 0);
-      this.ana = ab.afa ? null : new ca(er.bma, ab.aza - 71, ab.baa - fb.aqa + 1);
+      this.ana = GameCanvas.afa ? null : new ca(er.bma, GameCanvas.aza - 71, GameCanvas.baa - fb.aqa + 1);
       this.aoa = null;
       this.ava = new int[3];
    }
@@ -63,20 +63,20 @@ public final class ck implements ag {
             }
          }
 
-         this.ada = (ab.aza - var1.size() * this.afa) / 2;
+         this.ada = (GameCanvas.aza - var1.size() * this.afa) / 2;
          if (this.ada <= 0) {
             this.ada = 1;
          }
 
-         this.aea = ab.baa - this.aga - (fk.afa + 1);
-         if (ab.afa) {
+         this.aea = GameCanvas.baa - this.aga - (fk.afa + 1);
+         if (GameCanvas.afa) {
             this.aea -= 3;
          }
 
          this.aha = this.aea;
          this.aaa = true;
          this.aca = 0;
-         if ((aka = this.aba.size() * this.afa - ab.aza) < 0) {
+         if ((aka = this.aba.size() * this.afa - GameCanvas.aza) < 0) {
             aka = 0;
          }
 
@@ -84,11 +84,11 @@ public final class ck implements ag {
          aja = 0;
          ala = 50;
          this.asa = var1.size() * this.afa - 1;
-         if (this.asa > ab.aza - 2) {
-            this.asa = ab.aza - 2;
+         if (this.asa > GameCanvas.aza - 2) {
+            this.asa = GameCanvas.aza - 2;
          }
 
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             this.aca = -1;
          }
       }
@@ -98,9 +98,9 @@ public final class ck implements ag {
    private void aca() {
       if (this.aaa) {
          boolean var1 = false;
-         if (!ab.aka[2] && !ab.aka[4]) {
-            if (!ab.aka[8] && !ab.aka[6]) {
-               if (ab.aka[5]) {
+         if (!GameCanvas.aka[2] && !GameCanvas.aka[4]) {
+            if (!GameCanvas.aka[8] && !GameCanvas.aka[6]) {
+               if (GameCanvas.aka[5]) {
                   if (this.aoa != null) {
                      if (this.aoa.ada > 0) {
                         if (this.aoa.aca == GameScr.ava()) {
@@ -112,13 +112,13 @@ public final class ck implements ag {
                   } else {
                      this.aya = 2;
                   }
-               } else if (ab.aka[12]) {
+               } else if (GameCanvas.aka[12]) {
                   if (this.ama.ada > 0) {
                      this.aaa(this.ama.ada, this.ama.aja);
                   } else {
                      this.aya = 2;
                   }
-               } else if (!this.ara && (ab.aka[13] || fb.aaa(this.ana))) {
+               } else if (!this.ara && (GameCanvas.aka[13] || fb.aaa(this.ana))) {
                   this.aaa = false;
                   br.aca();
                }
@@ -138,7 +138,7 @@ public final class ck implements ag {
          }
 
          this.aoa = null;
-         if (GameScr.dja && !ab.afa && this.aca != -1) {
+         if (GameScr.dja && !GameCanvas.afa && this.aca != -1) {
             ca var2 = (ca)this.aba.elementAt(this.aca);
             fa var3;
             if ((var3 = dc.ada().aaa(var2.aaa)) != null && var3.aaa == 2) {
@@ -147,7 +147,7 @@ public final class ck implements ag {
          }
 
          if (var1) {
-            if ((aia = this.aca * this.afa + this.afa - ab.aza / 2) > aka) {
+            if ((aia = this.aca * this.afa + this.afa - GameCanvas.aza / 2) > aka) {
                aia = aka;
             }
 
@@ -160,34 +160,34 @@ public final class ck implements ag {
             }
          }
 
-         if (!this.ara && ab.aoa && !ab.aca(this.ada, this.aea, this.asa, this.aga) && !this.awa) {
+         if (!this.ara && GameCanvas.aoa && !GameCanvas.aca(this.ada, this.aea, this.asa, this.aga) && !this.awa) {
             this.ata = this.aua = 0;
             this.awa = false;
             this.aaa = false;
-            ab.aoa = false;
+            GameCanvas.aoa = false;
             return;
          }
 
          int var4;
          int var6;
-         if (ab.ama) {
-            if (!this.awa && ab.aca(this.ada, this.aea, this.asa, this.aga)) {
+         if (GameCanvas.ama) {
+            if (!this.awa && GameCanvas.aca(this.ada, this.aea, this.asa, this.aga)) {
                for(var4 = 0; var4 < this.ava.length; ++var4) {
-                  this.ava[0] = ab.apa;
+                  this.ava[0] = GameCanvas.apa;
                }
 
-               this.aua = ab.apa;
+               this.aua = GameCanvas.apa;
                this.awa = true;
                this.axa = this.aza != 0;
                this.aza = 0;
             } else if (this.awa) {
                ++this.ata;
-               if (this.ata > 5 && this.aua == ab.apa && !this.axa) {
+               if (this.ata > 5 && this.aua == GameCanvas.apa && !this.axa) {
                   this.aua = -1000;
-                  this.aca = (aia + ab.apa - this.ada) / this.afa;
+                  this.aca = (aia + GameCanvas.apa - this.ada) / this.afa;
                }
 
-               if ((var4 = ab.apa - this.ava[0]) != 0 && this.aca != -1) {
+               if ((var4 = GameCanvas.apa - this.ava[0]) != 0 && this.aca != -1) {
                   this.aca = -1;
                }
 
@@ -196,7 +196,7 @@ public final class ck implements ag {
                   var10002[var6] = var10002[var6 - 1];
                }
 
-               this.ava[0] = ab.apa;
+               this.ava[0] = GameCanvas.apa;
                if ((aia -= var4) < 0) {
                   aia = 0;
                }
@@ -213,14 +213,14 @@ public final class ck implements ag {
             }
          }
 
-         if (ab.aoa && this.awa) {
-            var4 = ab.apa - this.ava[0];
-            ab.aoa = false;
-            if (ci.aea(var4) < 20 && ci.aea(ab.apa - this.aua) < 20 && !this.axa) {
+         if (GameCanvas.aoa && this.awa) {
+            var4 = GameCanvas.apa - this.ava[0];
+            GameCanvas.aoa = false;
+            if (ci.aea(var4) < 20 && ci.aea(GameCanvas.apa - this.aua) < 20 && !this.axa) {
                this.aza = 0;
                aia = aja;
                this.aua = -1000;
-               this.aca = (aia + ab.apa - this.ada) / this.afa;
+               this.aca = (aia + GameCanvas.apa - this.ada) / this.afa;
                this.ata = 0;
                this.aya = 10;
             } else if (this.aca != -1 && this.ata > 5) {
@@ -233,7 +233,7 @@ public final class ck implements ag {
                   aia = aka;
                } else {
                   byte var5;
-                  if ((var6 = ab.apa - this.ava[0] + (this.ava[0] - this.ava[1]) + (this.ava[1] - this.ava[2])) > 10) {
+                  if ((var6 = GameCanvas.apa - this.ava[0] + (this.ava[0] - this.ava[1]) + (this.ava[1] - this.ava[2])) > 10) {
                      var5 = 10;
                   } else if (var6 < -10) {
                      var5 = -10;
@@ -247,11 +247,11 @@ public final class ck implements ag {
 
             this.awa = false;
             this.ata = 0;
-            ab.aoa = false;
+            GameCanvas.aoa = false;
          }
 
-         ab.aka();
-         ab.ala();
+         GameCanvas.aka();
+         GameCanvas.ala();
       }
 
    }
@@ -264,7 +264,7 @@ public final class ck implements ag {
          String[] var3;
          int var4;
          int var5;
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             for(var2 = 0; var2 < this.aba.size(); ++var2) {
                if (var2 == this.aca) {
                   var1.aaa(aqa, this.ada + var2 * this.afa + 1, this.aha + 1, 0);
@@ -281,7 +281,7 @@ public final class ck implements ag {
                for(var5 = 0; var5 < var3.length; ++var5) {
                   if (GameScr.dja) {
                      if (dc.ada().ada(var3[var5])) {
-                        if (ab.aua % 10 > 5) {
+                        if (GameCanvas.aua % 10 > 5) {
                            fw.ana.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
                         } else {
                            fw.ala.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
@@ -311,7 +311,7 @@ public final class ck implements ag {
                for(var5 = 0; var5 < var3.length; ++var5) {
                   if (GameScr.dja) {
                      if (dc.ada().ada(var3[var5])) {
-                        if (ab.aua % 10 > 5) {
+                        if (GameCanvas.aua % 10 > 5) {
                            fw.ana.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
                         } else {
                            fw.ala.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
@@ -404,8 +404,8 @@ public final class ck implements ag {
             }
          }
 
-         aka = this.aba.size() * this.afa - ab.aza;
-         if ((aia = this.aca * this.afa + this.afa - ab.aza / 2) > aka) {
+         aka = this.aba.size() * this.afa - GameCanvas.aza;
+         if ((aia = this.aca * this.afa + this.afa - GameCanvas.aza / 2) > aka) {
             aia = aka;
          }
 

@@ -129,7 +129,7 @@ public final class ci {
 
    public static void aaa(as var0) {
       var0.aaa(-var0.aba(), -var0.aca());
-      var0.ada(0, 0, ab.aza, ab.baa);
+      var0.ada(0, 0, GameCanvas.aza, GameCanvas.baa);
    }
 
    public static String[] aaa(String var0, String var1, int var2) {

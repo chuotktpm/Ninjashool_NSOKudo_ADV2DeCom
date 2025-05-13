@@ -6,7 +6,7 @@ public final class al implements Runnable {
    }
 
    public final void run() {
-      cq.aaa("Diệt ma", fz.ala());
+      cq.aaa("Diệt ma", Char.getMyChar());
 
       for(int var1 = 0; var1 < 6; ++var1) {
          try {
@@ -42,7 +42,7 @@ public final class al implements Runnable {
             }
          }
 
-         cq.aaa("Diệt ma: " + this.aaa.gta[var2], fz.ala());
+         cq.aaa("Diệt ma: " + this.aaa.gta[var2], Char.getMyChar());
          GameScr.aaa(this.aaa, var2);
       }
 

@@ -3,9 +3,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
-public class fz extends dz {
-   public fz aca;
-   public fz ada;
+public class Char extends dz {
+   public Char aca;
+   public Char ada;
    public boolean aea;
    public boolean afa;
    public boolean aga;
@@ -17,8 +17,8 @@ public class fz extends dz {
    public long aka;
    private int hja;
    private int hka;
-   public int ala = 24;
-   public int ama = 24;
+   public int cx = 24;
+   public int cy = 24;
    public int ana;
    public int aoa;
    public int apa;
@@ -110,12 +110,12 @@ public class fz extends dz {
    public short doa;
    public ac dpa;
    public ac dqa;
-   public av dra;
-   public fz dsa;
+   public Npc dra;
+   public Char dsa;
    public am dta;
    public ev dua = new ev();
    public ac[] dva;
-   public fz[] dwa;
+   public Char[] dwa;
    public short[] dxa;
    public int dya = -9999;
    public int dza = -9999;
@@ -179,7 +179,7 @@ public class fz extends dz {
    private long hya;
    public long gca;
    public static final int[][][] gda;
-   private static fz hza;
+   private static Char hza;
    private int iaa;
    public int gea;
    public int gfa;
@@ -489,7 +489,7 @@ public class fz extends dz {
       return this.cya != null ? this.cya.aca() : 0;
    }
 
-   public fz() {
+   public Char() {
       this.aqa = 6;
    }
 
@@ -517,9 +517,9 @@ public class fz extends dz {
       return this.cua.aaa == 2 || this.cua.aaa == 4 || this.cua.aaa == 6;
    }
 
-   public static fz ala() {
+   public static Char getMyChar() {
       if (hza == null) {
-         (hza = new fz()).cla = true;
+         (hza = new Char()).cla = true;
          hza.hqa = true;
          hza.ila = System.currentTimeMillis();
       }
@@ -706,11 +706,11 @@ public class fz extends dz {
    }
 
    private boolean aca() {
-      int var1 = gn.aua.size();
+      int var1 = TileMap.aua.size();
 
       for(byte var2 = 0; var2 < var1; ++var2) {
-         dn var3 = (dn)gn.aua.elementAt(var2);
-         if (this.ala >= var3.aaa && this.ala <= var3.aca && this.ama >= var3.aba && this.ama <= var3.ada) {
+         dn var3 = (dn)TileMap.aua.elementAt(var2);
+         if (this.cx >= var3.aaa && this.cx <= var3.aca && this.cy >= var3.aba && this.cy <= var3.ada) {
             return true;
          }
       }
@@ -719,13 +719,13 @@ public class fz extends dz {
    }
 
    public void aba() {
-      this.ifa = this.ala;
-      this.iga = this.ama;
+      this.ifa = this.cx;
+      this.iga = this.cy;
       int var1;
       int var2;
       if (this.cla && this.bba > 0) {
-         var1 = ci.aea(this.gea - this.ala);
-         var2 = ci.aea(this.gfa - this.ama);
+         var1 = ci.aea(this.gea - this.cx);
+         var2 = ci.aea(this.gfa - this.cy);
          if ((var1 > 0 || var2 > 0) && System.currentTimeMillis() - this.ida >= 250L) {
             iea = true;
          }
@@ -733,12 +733,12 @@ public class fz extends dz {
          if (iea) {
             iea = false;
             if (!gja) {
-               Service.aaa().aba(this.ala, this.ama);
+               Service.aaa().aba(this.cx, this.cy);
             }
 
             this.ida = System.currentTimeMillis();
-            this.gea = this.ala;
-            this.gfa = this.ama;
+            this.gea = this.cx;
+            this.gfa = this.cy;
          }
       }
 
@@ -747,15 +747,15 @@ public class fz extends dz {
          if (this.dqa.ara != 122 && this.dqa.ara != 70 && (this.dqa.ada() == null || this.dqa.ada().ada != 1)) {
             if (this.dqa.aga != 3) {
                if (this.ara == -1) {
-                  this.dqa.aha = this.ala + 20;
-                  this.dqa.aia = this.ama;
+                  this.dqa.aha = this.cx + 20;
+                  this.dqa.aia = this.cy;
                   this.dqa.afa = this.ara;
-                  this.dqa.aea = this.ama - 20;
+                  this.dqa.aea = this.cy - 20;
                } else {
-                  this.dqa.aha = this.ala - 20;
-                  this.dqa.aia = this.ama;
+                  this.dqa.aha = this.cx - 20;
+                  this.dqa.aia = this.cy;
                   this.dqa.afa = this.ara;
-                  this.dqa.aea = this.ama - 20;
+                  this.dqa.aea = this.cy - 20;
                }
 
                var1 = this.dqa.aha - this.dqa.ada;
@@ -777,8 +777,8 @@ public class fz extends dz {
             this.dqa.aba();
          } else {
             if (this.dqa.aga != 3) {
-               this.dqa.aha = this.ala + (3 - ab.aua % 6) * 6;
-               this.dqa.aia = this.ama - 60;
+               this.dqa.aha = this.cx + (3 - GameCanvas.aua % 6) * 6;
+               this.dqa.aia = this.cy - 60;
                var1 = this.dqa.aha - this.dqa.ada;
                var2 = this.dqa.aia - this.dqa.aea;
                if (var1 > 50 || var1 < -50) {
@@ -797,7 +797,7 @@ public class fz extends dz {
       }
 
       this.ica = false;
-      if (this.eaa > 0 && ab.aua % 2 == 0) {
+      if (this.eaa > 0 && GameCanvas.aua % 2 == 0) {
          --this.eaa;
          if (this.eaa == 30 || this.eaa == 60) {
             this.eaa = 0;
@@ -868,7 +868,7 @@ public class fz extends dz {
                var3 = new eb(this.jma, this.jna, 1);
             }
 
-            if ((this.aqa == 2 || this.aqa == 10) && ab.aua % 3 == 0) {
+            if ((this.aqa == 2 || this.aqa == 10) && GameCanvas.aua % 3 == 0) {
                this.hta.addElement(var8);
                this.hta.addElement(var3);
             }
@@ -893,7 +893,7 @@ public class fz extends dz {
                }
             }
          } else {
-            for(var1 = 0; var1 < this.cxa.size() && ((bu)ala().cxa.elementAt(var1)).aea.aba != 17; ++var1) {
+            for(var1 = 0; var1 < this.cxa.size() && ((bu)getMyChar().cxa.elementAt(var1)).aea.aba != 17; ++var1) {
                if (var1 == this.cxa.size() - 1) {
                   GameScr.bea();
                   this.gpa = System.currentTimeMillis();
@@ -902,7 +902,7 @@ public class fz extends dz {
          }
       }
 
-      if (this.cla && (eha || Code.aba instanceof ds) && ab.aua % 10 == 0 && !GameScr.dqa && this.aqa != 14 && this.aqa != 5 && this.bba > 0) {
+      if (this.cla && (eha || Code.aba instanceof ds) && GameCanvas.aua % 10 == 0 && !GameScr.dqa && this.aqa != 14 && this.aqa != 5 && this.bba > 0) {
          int var10 = Code.aba instanceof ds ? (this.aua >= 9 ? 10 : 1) : fta;
          if (this.cxa.size() == 0) {
             for(var1 = 0; var1 < this.arrItemBag.length; ++var1) {
@@ -912,7 +912,7 @@ public class fz extends dz {
                }
             }
          } else {
-            for(var1 = 0; var1 < this.cxa.size() && ((bu)ala().cxa.elementAt(var1)).aea.aba != 0; ++var1) {
+            for(var1 = 0; var1 < this.cxa.size() && ((bu)getMyChar().cxa.elementAt(var1)).aea.aba != 0; ++var1) {
                if (var1 == this.cxa.size() - 1) {
                   for(var2 = 0; var2 < this.arrItemBag.length; ++var2) {
                      gg var4;
@@ -928,7 +928,7 @@ public class fz extends dz {
 
       int var5;
       bc var12;
-      if (this.cla && eia && Code.aba == null && !gn.bfa && ala().aqa != 14 && ala().aqa != 5 && this.bba > 0 && System.currentTimeMillis() - this.hxa > 500L) {
+      if (this.cla && eia && Code.aba == null && !TileMap.bfa && getMyChar().aqa != 14 && getMyChar().aqa != 5 && this.bba > 0 && System.currentTimeMillis() - this.hxa > 500L) {
          for(var1 = 0; var1 < this.cva.size(); ++var1) {
             boolean var9 = false;
             if (((var12 = (bc)this.cva.elementAt(var1)).aaa.aaa < 67 || var12.aaa.aaa > 72) && var12 != null && var12.aaa.ada == 2 && !var12.aaa()) {
@@ -951,16 +951,16 @@ public class fz extends dz {
          }
       }
 
-      if (this.cla && ega && Code.aba == null && this.aza < this.baa * fsa / 100 && ab.aua % 4 == 0 && this.aqa != 14 && this.aqa != 5 && this.bba > 0) {
+      if (this.cla && ega && Code.aba == null && this.aza < this.baa * fsa / 100 && GameCanvas.aua % 4 == 0 && this.aqa != 14 && this.aqa != 5 && this.bba > 0) {
          GameScr.bda();
       }
 
-      fz var11;
-      if (this.cla && fpa && this.cua.aaa == 6 && fya > 0 && ala().aqa != 14 && ala().aqa != 5 && (var11 = GameScr.aea(fya)) != null && (var11.bba <= 0 || var11.aqa == 14 || var11.aqa == 5 || fqa)) {
+      Char var11;
+      if (this.cla && fpa && this.cua.aaa == 6 && fya > 0 && getMyChar().aqa != 14 && getMyChar().aqa != 5 && (var11 = GameScr.aea(fya)) != null && (var11.bba <= 0 || var11.aqa == 14 || var11.aqa == 5 || fqa)) {
          for(var1 = 0; var1 < this.cva.size(); ++var1) {
-            if ((var12 = (bc)ala().cva.elementAt(var1)) != null && var12.aaa.ada == 4) {
-               if (ci.aea(this.ala - var11.ala) < var12.aba() && ci.aea(this.ama - var11.ama) < var12.aca()) {
-                  ala().cya = var12;
+            if ((var12 = (bc)getMyChar().cva.elementAt(var1)) != null && var12.aaa.ada == 4) {
+               if (ci.aea(this.cx - var11.cx) < var12.aba() && ci.aea(this.cy - var11.cy) < var12.aca()) {
+                  getMyChar().cya = var12;
                   GameScr.ava().aga(fya);
                   fqa = false;
                   this.apa();
@@ -978,7 +978,7 @@ public class fz extends dz {
             if ((var13 = (bu)this.cxa.elementAt(var1)).aea.aba != 0 && var13.aea.aba != 12) {
                if (var13.aea.aba != 4 && var13.aea.aba != 17) {
                   if (var13.aea.aba == 13) {
-                     if (ab.awa) {
+                     if (GameCanvas.awa) {
                         this.bba -= this.bea * 3 / 100;
                         if (this.bba <= 0) {
                            this.bba = 1;
@@ -987,10 +987,10 @@ public class fz extends dz {
                   } else if (var13.aea.aba == 7) {
                      this.ica = true;
                   }
-               } else if (ab.awa) {
+               } else if (GameCanvas.awa) {
                   this.bba += var13.ada;
                }
-            } else if (ab.awa) {
+            } else if (GameCanvas.awa) {
                this.bba += var13.ada;
                this.aza += var13.ada;
             }
@@ -1002,11 +1002,11 @@ public class fz extends dz {
             this.iba = 0;
          }
 
-         if (this.bfa > 0 && ab.axa) {
+         if (this.bfa > 0 && GameCanvas.axa) {
             this.bba += this.bfa;
          }
 
-         if (this.bga > 0 && ab.axa) {
+         if (this.bga > 0 && GameCanvas.axa) {
             this.aza += this.bga;
          }
 
@@ -1020,21 +1020,21 @@ public class fz extends dz {
       }
 
       if (this.hqa) {
-         GameScr.aka = this.ala - GameScr.ada + GameScr.aha * this.ara;
-         GameScr.asa = this.ama - GameScr.aea;
+         GameScr.aka = this.cx - GameScr.ada + GameScr.aha * this.ara;
+         GameScr.asa = this.cy - GameScr.aea;
       }
 
       this.hra = (this.hra + 1) % 100;
       if (this.cla) {
-         if (this.dsa != null && (this.dsa.afa || !GameScr.bla.contains(this.dsa))) {
+         if (this.dsa != null && (this.dsa.afa || !GameScr.vCharInMap.contains(this.dsa))) {
             this.dsa = null;
          }
 
-         if (this.ala < 10) {
+         if (this.cx < 10) {
             this.ana = 0;
-            this.ala = 10;
-         } else if (this.ala > gn.aca - 10) {
-            this.ala = gn.aca - 10;
+            this.cx = 10;
+         } else if (this.cx > TileMap.aca - 10) {
+            this.cx = TileMap.aca - 10;
             this.ana = 0;
          }
 
@@ -1042,8 +1042,8 @@ public class fz extends dz {
             gka = true;
             gja = true;
             Service.aaa().aca();
-            ab.ala();
-            ab.aka();
+            GameCanvas.ala();
+            GameCanvas.aka();
             return;
          }
 
@@ -1057,14 +1057,14 @@ public class fz extends dz {
 
          if (this.goa != null && (this.aqa == 1 || this.aqa == 2)) {
             this.aqa = 2;
-            if (this.ala - this.goa.aaa > 0) {
+            if (this.cx - this.goa.aaa > 0) {
                this.ara = -1;
-               if (this.ala - this.goa.aaa <= 10) {
+               if (this.cx - this.goa.aaa <= 10) {
                   this.goa = null;
                }
             } else {
                this.ara = 1;
-               if (this.ala - this.goa.aaa >= -10) {
+               if (this.cx - this.goa.aaa >= -10) {
                   this.goa = null;
                }
             }
@@ -1085,18 +1085,18 @@ public class fz extends dz {
             this.iia = System.currentTimeMillis();
          }
       } else {
-         if (ab.aua % 20 == 0 && this.asa >= 0) {
+         if (GameCanvas.aua % 20 == 0 && this.asa >= 0) {
             this.hua = true;
 
-            for(var1 = 0; var1 < GameScr.bla.size(); ++var1) {
-               fz var15 = null;
+            for(var1 = 0; var1 < GameScr.vCharInMap.size(); ++var1) {
+               Char var15 = null;
 
                try {
-                  var15 = (fz)GameScr.bla.elementAt(var1);
+                  var15 = (Char)GameScr.vCharInMap.elementAt(var1);
                } catch (Exception var6) {
                }
 
-               if (var15 != null && !var15.equals(this) && (var15.ama == this.ama && ci.aea(var15.ala - this.ala) < 35 || this.ama - var15.ama < 32 && this.ama - var15.ama > 0 && ci.aea(var15.ala - this.ala) < 24)) {
+               if (var15 != null && !var15.equals(this) && (var15.cy == this.cy && ci.aea(var15.cx - this.cx) < 35 || this.cy - var15.cy < 32 && this.cy - var15.cy > 0 && ci.aea(var15.cx - this.cx) < 24)) {
                   this.hua = false;
                }
             }
@@ -1105,46 +1105,46 @@ public class fz extends dz {
          if (this.aqa == 1 || this.aqa == 6) {
             boolean var18 = false;
             if (this.goa != null) {
-               if (ana(this.goa.aaa - this.ala) < 4 && ana(this.goa.aba - this.ama) < 4) {
-                  this.ala = this.goa.aaa;
-                  this.ama = this.goa.aba;
+               if (ana(this.goa.aaa - this.cx) < 4 && ana(this.goa.aba - this.cy) < 4) {
+                  this.cx = this.goa.aaa;
+                  this.cy = this.goa.aba;
                   this.goa = null;
-                  if ((gn.aaa(this.ala, this.ama) & 2) == 2) {
+                  if ((TileMap.aaa(this.cx, this.cy) & 2) == 2) {
                      this.cba();
-                     ab.aba().aaa(-1, this.ala - -8, this.ama);
-                     ab.aba().aaa(1, this.ala - 8, this.ama);
+                     GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+                     GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
                   } else {
                      this.aqa = 4;
                      this.aoa = 0;
                   }
 
                   var18 = true;
-               } else if (this.ama == this.goa.aba) {
-                  if (this.ala != this.goa.aaa) {
-                     this.ala = (this.ala + this.goa.aaa) / 2;
-                     this.cma = ab.aua % 5 + 2;
+               } else if (this.cy == this.goa.aba) {
+                  if (this.cx != this.goa.aaa) {
+                     this.cx = (this.cx + this.goa.aaa) / 2;
+                     this.cma = GameCanvas.aua % 5 + 2;
                   }
-               } else if (this.ama < this.goa.aba) {
+               } else if (this.cy < this.goa.aba) {
                   this.cma = 12;
-                  this.ala = (this.ala + this.goa.aaa) / 2;
+                  this.cx = (this.cx + this.goa.aaa) / 2;
                   if (this.aoa < 0) {
                      this.aoa = 0;
                   }
 
-                  this.ama += this.aoa;
-                  if ((gn.aaa(this.ala, this.ama) & 2) == 2) {
-                     ab.aba().aaa(-1, this.ala - -8, this.ama);
-                     ab.aba().aaa(1, this.ala - 8, this.ama);
+                  this.cy += this.aoa;
+                  if ((TileMap.aaa(this.cx, this.cy) & 2) == 2) {
+                     GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+                     GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
                   }
 
                   ++this.aoa;
                   if (this.aoa > 16) {
-                     this.ama = (this.ama + this.goa.aba) / 2;
+                     this.cy = (this.cy + this.goa.aba) / 2;
                   }
                } else {
                   this.cma = 7;
-                  this.ala = (this.ala + this.goa.aaa) / 2;
-                  this.ama = (this.ama + this.goa.aba) / 2;
+                  this.cx = (this.cx + this.goa.aaa) / 2;
+                  this.cy = (this.cy + this.goa.aba) / 2;
                }
             } else {
                var18 = true;
@@ -1154,8 +1154,8 @@ public class fz extends dz {
                if (this.gia.size() > 5) {
                   this.goa = (bh)this.gia.lastElement();
                   this.gia.removeElementAt(0);
-                  this.ala = this.goa.aaa;
-                  this.ama = this.goa.aba;
+                  this.cx = this.goa.aaa;
+                  this.cy = this.goa.aba;
                   this.gia.removeAllElements();
                   this.aqa = 6;
                   this.goa = null;
@@ -1166,9 +1166,9 @@ public class fz extends dz {
                this.gia.removeElementAt(0);
                if (this.goa.aca == 2) {
                   this.aqa = 2;
-                  if (this.ala - this.goa.aaa > 0) {
+                  if (this.cx - this.goa.aaa > 0) {
                      this.ara = -1;
-                  } else if (this.ala - this.goa.aaa < 0) {
+                  } else if (this.cx - this.goa.aaa < 0) {
                      this.ara = 1;
                   }
 
@@ -1176,29 +1176,29 @@ public class fz extends dz {
                   this.aoa = 0;
                } else if (this.goa.aca == 3) {
                   this.aqa = 3;
-                  ab.aba().aaa(-1, this.ala - -8, this.ama);
-                  ab.aba().aaa(1, this.ala - 8, this.ama);
-                  if (this.ala - this.goa.aaa > 0) {
+                  GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+                  GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
+                  if (this.cx - this.goa.aaa > 0) {
                      this.ara = -1;
-                  } else if (this.ala - this.goa.aaa < 0) {
+                  } else if (this.cx - this.goa.aaa < 0) {
                      this.ara = 1;
                   }
 
-                  this.ana = ana(this.ala - this.goa.aaa) / 9 * this.ara;
+                  this.ana = ana(this.cx - this.goa.aaa) / 9 * this.ara;
                   this.aoa = -10;
                } else if (this.goa.aca == 4) {
                   this.aqa = 4;
-                  if (this.ala - this.goa.aaa > 0) {
+                  if (this.cx - this.goa.aaa > 0) {
                      this.ara = -1;
-                  } else if (this.ala - this.goa.aaa < 0) {
+                  } else if (this.cx - this.goa.aaa < 0) {
                      this.ara = 1;
                   }
 
-                  this.ana = ana(this.ala - this.goa.aaa) / 9 * this.ara;
+                  this.ana = ana(this.cx - this.goa.aaa) / 9 * this.ara;
                   this.aoa = 0;
                } else {
-                  this.ala = this.goa.aaa;
-                  this.ama = this.goa.aba;
+                  this.cx = this.goa.aaa;
+                  this.cy = this.goa.aba;
                   this.goa = null;
                }
             }
@@ -1230,8 +1230,8 @@ public class fz extends dz {
                }
             }
 
-            this.hja = this.ala;
-            this.hka = this.ama;
+            this.hja = this.cx;
+            this.hka = this.cy;
             if (System.currentTimeMillis() - this.gca > 7000L) {
                if (!this.coa && this.ava() && this.gqa >= 500) {
                   this.coa = true;
@@ -1256,11 +1256,11 @@ public class fz extends dz {
             this.aba = 0;
             if (this.coa) {
                if (this.ara == 1) {
-                  this.jka = this.ala + 21 + 4;
-                  this.jla = this.ama - 15;
+                  this.jka = this.cx + 21 + 4;
+                  this.jla = this.cy - 15;
                } else {
-                  this.jka = this.ala - 24 - 4;
-                  this.jla = this.ama - 15;
+                  this.jka = this.cx - 24 - 4;
+                  this.jla = this.cy - 15;
                }
             }
 
@@ -1276,8 +1276,8 @@ public class fz extends dz {
             var11.ana = 0;
             var11.aoa = 0;
             ++var11.apa;
-            var11.hja = var11.ala;
-            var11.hka = var11.ama;
+            var11.hja = var11.cx;
+            var11.hka = var11.cy;
             if (var11.apa > 30) {
                var11.apa = 0;
             }
@@ -1316,36 +1316,36 @@ public class fz extends dz {
             if (this.coa) {
                if (this.ara == 1) {
                   if (this.jja[this.jia] == 1737) {
-                     this.jka = this.ala + 21 + 4;
-                     this.jla = this.ama - 19;
+                     this.jka = this.cx + 21 + 4;
+                     this.jla = this.cy - 19;
                   } else {
-                     this.jka = this.ala + 21 + 4;
-                     this.jla = this.ama - 16;
+                     this.jka = this.cx + 21 + 4;
+                     this.jla = this.cy - 16;
                   }
                } else if (this.jja[this.jia] == 1737) {
-                  this.jka = this.ala - 24 - 4;
-                  this.jla = this.ama - 19;
+                  this.jka = this.cx - 24 - 4;
+                  this.jla = this.cy - 19;
                } else {
-                  this.jka = this.ala - 24 - 4;
-                  this.jla = this.ama - 16;
+                  this.jka = this.cx - 24 - 4;
+                  this.jla = this.cy - 16;
                }
             } else if (this.cna) {
                if (this.ara == 1) {
-                  this.jka = this.ala + 15;
-                  this.jma = this.ala - 25;
-                  this.jla = this.ama;
-                  this.jna = this.ama;
+                  this.jka = this.cx + 15;
+                  this.jma = this.cx - 25;
+                  this.jla = this.cy;
+                  this.jna = this.cy;
                } else {
-                  this.jka = this.ala - 18;
-                  this.jma = this.ala + 25;
-                  this.jla = this.ama;
-                  this.jna = this.ama;
+                  this.jka = this.cx - 18;
+                  this.jma = this.cx + 25;
+                  this.jla = this.cy;
+                  this.jna = this.cy;
                }
             }
 
             var1 = 0;
             if (!this.cla && this.goa != null) {
-               var1 = ana(this.ala - this.goa.aaa);
+               var1 = ana(this.cx - this.goa.aaa);
             }
 
             ++this.apa;
@@ -1354,23 +1354,23 @@ public class fz extends dz {
             }
 
             this.cma = (this.apa >> 1) + 2;
-            if ((gn.aaa(this.ala, this.ama - 1) & 64) == 64) {
-               this.ala += this.ana >> 1;
+            if ((TileMap.aaa(this.cx, this.cy - 1) & 64) == 64) {
+               this.cx += this.ana >> 1;
             } else {
-               this.ala += this.ana;
+               this.cx += this.ana;
             }
 
             if (this.ara == 1) {
                if (GameScr.fza != 1) {
-                  if (gn.aaa(this.ala + this.hoa, this.ama - this.hpa, 4)) {
+                  if (TileMap.aaa(this.cx + this.hoa, this.cy - this.hpa, 4)) {
                      if (this.cla) {
                         this.ana = 0;
-                        this.ala = gn.aca(this.ala + this.hoa) - this.hoa;
+                        this.cx = TileMap.aca(this.cx + this.hoa) - this.hoa;
                      } else {
                         this.boa();
                      }
                   }
-               } else if (gn.aaa(this.ala + this.hoa, this.ama - this.hpa, 4)) {
+               } else if (TileMap.aaa(this.cx + this.hoa, this.cy - this.hpa, 4)) {
                   if (this.cla) {
                      this.aqa = 3;
                      if (this.aqa == 3) {
@@ -1381,15 +1381,15 @@ public class fz extends dz {
                   }
                }
             } else if (GameScr.fza != 1) {
-               if (gn.aaa(this.ala - this.hoa - 1, this.ama - this.hpa, 8)) {
+               if (TileMap.aaa(this.cx - this.hoa - 1, this.cy - this.hpa, 8)) {
                   if (this.cla) {
                      this.ana = 0;
-                     this.ala = gn.aca(this.ala - this.hoa - 1) + gn.aia + this.hoa;
+                     this.cx = TileMap.aca(this.cx - this.hoa - 1) + TileMap.aia + this.hoa;
                   } else {
                      this.boa();
                   }
                }
-            } else if (gn.aaa(this.ala - this.hoa - 1, this.ama - this.hpa, 8)) {
+            } else if (TileMap.aaa(this.cx - this.hoa - 1, this.cy - this.hpa, 8)) {
                if (this.cla) {
                   this.aqa = 3;
                   if (this.aqa == 3) {
@@ -1406,8 +1406,8 @@ public class fz extends dz {
             }
 
             if (!this.coa && this.ava() && this.gqa >= 500) {
-               this.ita = ci.aea(this.ala - this.hja);
-               this.iwa = ci.aea(this.ama - this.hka);
+               this.ita = ci.aea(this.cx - this.hja);
+               this.iwa = ci.aea(this.cy - this.hka);
                this.ita = this.ita > this.iwa ? this.ita : this.iwa;
                if (this.cla && this.ita > 150 || !this.cla && this.ita > 40) {
                   this.coa = true;
@@ -1427,9 +1427,9 @@ public class fz extends dz {
                }
             }
 
-            if ((gn.aaa(this.ala, this.ama) & 2) != 2) {
+            if ((TileMap.aaa(this.cx, this.cy) & 2) != 2) {
                if (this.cla) {
-                  if ((this.ala - this.gea != 0 || this.ama - this.gfa != 0) && this.cla) {
+                  if ((this.cx - this.gea != 0 || this.cy - this.gfa != 0) && this.cla) {
                      this.cma = 7;
                      this.aqa = 4;
                      this.ana = 3 * this.ara;
@@ -1440,22 +1440,22 @@ public class fz extends dz {
                }
             }
 
-            if (!this.cla && this.goa != null && ana(this.ala - this.goa.aaa) > var1) {
+            if (!this.cla && this.goa != null && ana(this.cx - this.goa.aaa) > var1) {
                this.boa();
             }
 
             if (this.cna) {
-               if (ab.aua % 5 == 0) {
-                  ef.aaa(120, this.ala - (this.ara << 5), this.ama, 0, (byte)this.ara);
+               if (GameCanvas.aua % 5 == 0) {
+                  ef.aaa(120, this.cx - (this.ara << 5), this.cy, 0, (byte)this.ara);
                }
             } else {
-               ab.aba().aaa(this.ara, this.ala - (this.ara << 3), this.ama);
+               GameCanvas.aba().aaa(this.ara, this.cx - (this.ara << 3), this.cy);
             }
 
             this.caa();
-            var5 = this.ala - (this.ara << 4);
-            var2 = this.ama;
-            if (this.coa && this.dda[4].aha >= 4 && this.aia() > 0 && ab.aua % 8 == 0) {
+            var5 = this.cx - (this.ara << 4);
+            var2 = this.cy;
+            if (this.coa && this.dda[4].aha >= 4 && this.aia() > 0 && GameCanvas.aua % 8 == 0) {
                if (this.aia() == 1) {
                   ef.aaa(116, var5, var2, 2);
                } else if (this.aia() == 2) {
@@ -1470,11 +1470,11 @@ public class fz extends dz {
             this.aba = 0;
             if (this.coa) {
                if (this.ara == 1) {
-                  this.jka = this.ala + 21 + 4;
-                  this.jla = this.ama - 30;
+                  this.jka = this.cx + 21 + 4;
+                  this.jla = this.cy - 30;
                } else {
-                  this.jka = this.ala - 23 - 4;
-                  this.jla = this.ama - 30;
+                  this.jka = this.cx - 23 - 4;
+                  this.jla = this.cy - 30;
                }
             }
 
@@ -1491,17 +1491,17 @@ public class fz extends dz {
                this.cpa = false;
             }
 
-            this.ala += this.ana;
-            this.ama += this.aoa;
-            if (this.ama < 0) {
-               this.ama = 0;
+            this.cx += this.ana;
+            this.cy += this.aoa;
+            if (this.cy < 0) {
+               this.cy = 0;
                this.aoa = -1;
             }
 
             ++this.aoa;
             if (!this.cla && this.goa != null) {
                label1356: {
-                  if ((var1 = this.goa.aaa - this.ala) > 0) {
+                  if ((var1 = this.goa.aaa - this.cx) > 0) {
                      if (this.ana > var1) {
                         this.ana = var1;
                      }
@@ -1542,18 +1542,18 @@ public class fz extends dz {
             }
 
             if (this.ara == 1) {
-               if ((gn.aaa(this.ala + this.hoa, this.ama - 1) & 4) == 4 && this.ala <= gn.aca(this.ala + this.hoa) + 12) {
-                  this.ala = gn.aca(this.ala + this.hoa) - this.hoa;
+               if ((TileMap.aaa(this.cx + this.hoa, this.cy - 1) & 4) == 4 && this.cx <= TileMap.aca(this.cx + this.hoa) + 12) {
+                  this.cx = TileMap.aca(this.cx + this.hoa) - this.hoa;
                   this.ana = 0;
                }
-            } else if ((gn.aaa(this.ala - this.hoa, this.ama - 1) & 8) == 8 && this.ala >= gn.aca(this.ala - this.hoa) + 12) {
-               this.ala = gn.aca(this.ala + 24 - this.hoa) + this.hoa;
+            } else if ((TileMap.aaa(this.cx - this.hoa, this.cy - 1) & 8) == 8 && this.cx >= TileMap.aca(this.cx - this.hoa) + 12) {
+               this.cx = TileMap.aca(this.cx + 24 - this.hoa) + this.hoa;
                this.ana = 0;
             }
 
             if (this.aoa == 0) {
                if (this.cla) {
-                  this.hna = this.ama;
+                  this.hna = this.cy;
                   this.aqa = 4;
                   this.apa = 0;
                   if (this.cka) {
@@ -1572,14 +1572,14 @@ public class fz extends dz {
                gja = true;
                gka = true;
                Service.aaa().aca();
-               ab.ala();
-               ab.aka();
+               GameCanvas.ala();
+               GameCanvas.aka();
             } else {
                if (this.hma < 0) {
                   ++this.hma;
                }
 
-               if (this.ama > this.cja && gn.aaa(this.ala, this.ama - this.cja, 8192)) {
+               if (this.cy > this.cja && TileMap.aaa(this.cx, this.cy - this.cja, 8192)) {
                   if (this.cla) {
                      this.aqa = 4;
                      this.apa = 0;
@@ -1590,7 +1590,7 @@ public class fz extends dz {
                   }
                }
 
-               if (!this.cla && this.goa != null && this.ama < this.goa.aba) {
+               if (!this.cla && this.goa != null && this.cy < this.goa.aba) {
                   this.boa();
                }
             }
@@ -1600,11 +1600,11 @@ public class fz extends dz {
             this.aba = 0;
             if (this.coa) {
                if (this.ara == 1) {
-                  this.jka = this.ala + 21 + 4;
-                  this.jla = this.ama - 19;
+                  this.jka = this.cx + 21 + 4;
+                  this.jla = this.cy - 19;
                } else {
-                  this.jka = this.ala - 24;
-                  this.jla = this.ama - 20;
+                  this.jka = this.cx - 24;
+                  this.jla = this.cy - 20;
                }
             }
 
@@ -1614,16 +1614,16 @@ public class fz extends dz {
             this.hsa = false;
             this.aba = 0;
             ++this.apa;
-            this.ala += (this.hla - this.ala) / 4;
+            this.cx += (this.hla - this.cx) / 4;
             if (this.apa > 7) {
-               this.ama += (this.hma - this.ama) / 4;
+               this.cy += (this.hma - this.cy) / 4;
             } else {
-               this.ama += this.apa - 10;
+               this.cy += this.apa - 10;
             }
 
-            if (ci.aea(this.hla - this.ala) < 4 && ci.aea(this.hma - this.ama) < 10) {
-               this.ala = this.hla;
-               this.ama = this.hma;
+            if (ci.aea(this.hla - this.cx) < 4 && ci.aea(this.hma - this.cy) < 10) {
+               this.cx = this.hla;
+               this.cy = this.hma;
                this.aqa = 14;
                this.aoa(60);
                if (this.cla) {
@@ -1646,8 +1646,8 @@ public class fz extends dz {
          case 9:
             this.hsa = false;
             this.aba = 0;
-            this.ala += this.ana * this.ara;
-            this.ama += this.iaa;
+            this.cx += this.ana * this.ara;
+            this.cy += this.iaa;
             ++this.iaa;
             if (this.apa == 0) {
                this.cma = 7;
@@ -1677,7 +1677,7 @@ public class fz extends dz {
          case 10:
             this.hsa = false;
             this.aba = 0;
-            if (!gn.aaa(this.ala, this.ama, 64)) {
+            if (!TileMap.aaa(this.cx, this.cy, 64)) {
                this.aqa = 4;
             }
 
@@ -1688,21 +1688,21 @@ public class fz extends dz {
 
             this.cma = this.apa + 2;
             if (this.ara == 1) {
-               if (gn.aaa(this.ala + this.hoa, this.ama - 1, 4)) {
+               if (TileMap.aaa(this.cx + this.hoa, this.cy - 1, 4)) {
                   this.ana = 0;
-                  this.ala = gn.aca(this.ala + this.hoa) - this.hoa;
+                  this.cx = TileMap.aca(this.cx + this.hoa) - this.hoa;
                }
-            } else if (gn.aaa(this.ala - this.hoa - 1, this.ama - 1, 8)) {
+            } else if (TileMap.aaa(this.cx - this.hoa - 1, this.cy - 1, 8)) {
                this.ana = 0;
-               this.ala = gn.aca(this.ala - this.hoa - 1) + gn.aia + this.hoa;
+               this.cx = TileMap.aca(this.cx - this.hoa - 1) + TileMap.aia + this.hoa;
             }
 
-            this.ala += this.ana;
+            this.cx += this.ana;
             if (this.ana > 0) {
                --this.ana;
             } else if (this.ana < 0) {
                ++this.ana;
-            } else if (this.ala - this.gea != 0) {
+            } else if (this.cx - this.gea != 0) {
                if (this.cla && System.currentTimeMillis() - (this.ila + (long)ima) >= 0L) {
                   iea = true;
                }
@@ -1710,9 +1710,9 @@ public class fz extends dz {
                this.aqa = 11;
             }
 
-            ab.aba();
-            ab.ada(this.ala, this.ama);
-            ab.aba().aaa(this.ara, this.ala - (this.ara << 3), this.ama);
+            GameCanvas.aba();
+            GameCanvas.ada(this.cx, this.cy);
+            GameCanvas.aba().aaa(this.ara, this.cx - (this.ara << 3), this.cy);
             break;
          case 11:
             this.hsa = false;
@@ -1740,8 +1740,8 @@ public class fz extends dz {
          if (this.cla) {
             gka = true;
 
-            for(int var16 = 0; var16 < GameScr.bla.size(); ++var16) {
-               ((fz)GameScr.bla.elementAt(var16)).dza = -9999;
+            for(int var16 = 0; var16 < GameScr.vCharInMap.size(); ++var16) {
+               ((Char)GameScr.vCharInMap.elementAt(var16)).dza = -9999;
             }
          }
 
@@ -1763,28 +1763,28 @@ public class fz extends dz {
          } else if (this.dxa[0] < 10) {
             ++this.dxa[0];
          } else {
-            this.ala = this.dxa[1];
-            this.ama = this.dxa[2];
+            this.cx = this.dxa[1];
+            this.cy = this.dxa[2];
             this.dxa = null;
             ef.aaa(60, this, 1);
             if (this.cla) {
-               if ((gn.aaa(this.ala, this.ama) & 2) != 2) {
+               if ((TileMap.aaa(this.cx, this.cy) & 2) != 2) {
                   this.aqa = 4;
-                  ala().aba(GameScr.aza[38], 1);
+                  getMyChar().aba(GameScr.aza[38], 1);
                } else {
-                  ala().aba(GameScr.aza[38], 0);
+                  getMyChar().aba(GameScr.aza[38], 0);
                }
             }
          }
       }
 
       if (!this.cla && this.gia.size() == 0 && this.gga != 0 && this.gha != 0 && this.goa == null) {
-         if (this.gga != this.ala) {
-            this.ala = this.gga;
+         if (this.gga != this.cx) {
+            this.cx = this.gga;
          }
 
-         if (this.gha != this.ama) {
-            this.ama = this.gha;
+         if (this.gha != this.cy) {
+            this.cy = this.gha;
          }
 
          if (this.bba > 0) {
@@ -1803,19 +1803,19 @@ public class fz extends dz {
 
    private void ada() {
       if (!this.cla) {
-         if (this.cma == 12 && this.ifa == this.ala && this.iga == this.ama) {
+         if (this.cma == 12 && this.ifa == this.cx && this.iga == this.cy) {
             ++this.iha;
-         } else if (this.cma == 0 && (gn.aaa(this.ala, this.ama) & 2) != 2) {
+         } else if (this.cma == 0 && (TileMap.aaa(this.cx, this.cy) & 2) != 2) {
             ++this.iha;
          } else {
             this.iha = 0;
          }
 
          if (this.iha > 1) {
-            for(int var1 = this.ama; var1 < this.ama + 150; var1 += 24) {
-               if ((gn.aaa(this.ala, var1) & 2) != 2) {
-                  if ((var1 = gn.aba(var1) + 24) - this.ama > 24) {
-                     this.ama += (var1 - this.ama) / 2;
+            for(int var1 = this.cy; var1 < this.cy + 150; var1 += 24) {
+               if ((TileMap.aaa(this.cx, var1) & 2) != 2) {
+                  if ((var1 = TileMap.aba(var1) + 24) - this.cy > 24) {
+                     this.cy += (var1 - this.cy) / 2;
                      if (!this.cna && !this.coa) {
                         this.cma = 12;
                      }
@@ -1834,10 +1834,10 @@ public class fz extends dz {
                      this.iha = 0;
                      this.gga = 0;
                      this.gha = 0;
-                     this.ama = var1;
+                     this.cy = var1;
                   }
 
-                  this.hka = this.ama;
+                  this.hka = this.cy;
                   return;
                }
             }
@@ -1850,7 +1850,7 @@ public class fz extends dz {
       if (this.aqa != 14 && this.aqa != 5) {
          if (this.hba != null && this.dpa != null && this.dpa.aga == 0) {
             if (!this.cla) {
-               if ((gn.aaa(this.ala, this.ama) & 2) == 2) {
+               if ((TileMap.aaa(this.cx, this.cy) & 2) == 2) {
                   this.cba();
                } else {
                   this.aqa = 6;
@@ -1868,7 +1868,7 @@ public class fz extends dz {
 
          if (this.hba != null && this.haa == null && this.ipa >= this.bra().length) {
             if (!this.cla) {
-               if ((gn.aaa(this.ala, this.ama) & 2) == 2) {
+               if ((TileMap.aaa(this.cx, this.cy) & 2) == 2) {
                   this.cba();
                } else {
                   this.aqa = 6;
@@ -1925,32 +1925,32 @@ public class fz extends dz {
    private void bna() {
       ++this.apa;
       if (this.ara == 1) {
-         if ((gn.aaa(this.ala + this.hoa, this.ama - this.hpa) & 4) == 4) {
+         if ((TileMap.aaa(this.cx + this.hoa, this.cy - this.hpa) & 4) == 4) {
             this.ana = 0;
          }
-      } else if ((gn.aaa(this.ala - this.hoa, this.ama - this.hpa) & 8) == 8) {
+      } else if ((TileMap.aaa(this.cx - this.hoa, this.cy - this.hpa) & 8) == 8) {
          this.ana = 0;
       }
 
-      if (this.ama > this.cja && gn.aaa(this.ala, this.ama - this.cja, 8192)) {
-         if (!gn.aaa(this.ala, this.ama, 2)) {
+      if (this.cy > this.cja && TileMap.aaa(this.cx, this.cy - this.cja, 8192)) {
+         if (!TileMap.aaa(this.cx, this.cy, 2)) {
             this.aqa = 4;
             this.apa = 0;
             this.hla = 0;
             this.aoa = 1;
          } else {
-            this.ama = gn.aba(this.ama);
+            this.cy = TileMap.aba(this.cy);
          }
       }
 
-      this.ala += this.ana;
-      this.ama += this.aoa;
-      if (this.ama < 0) {
-         this.ama = this.aoa = 0;
+      this.cx += this.ana;
+      this.cy += this.aoa;
+      if (this.cy < 0) {
+         this.cy = this.aoa = 0;
       }
 
       if (this.aoa == 0) {
-         if ((gn.aaa(this.ala, this.ama) & 2) != 2) {
+         if ((TileMap.aaa(this.cx, this.cy) & 2) != 2) {
             this.aqa = 4;
             this.ana = (this.aja() >> 1) * this.ara;
             this.apa = this.hla = 0;
@@ -1969,21 +1969,21 @@ public class fz extends dz {
             this.aoa = 3;
          }
 
-         if ((gn.aaa(this.ala, this.ama + 3) & 2) == 2 && this.ama <= gn.aca(this.ama + 3)) {
+         if ((TileMap.aaa(this.cx, this.cy + 3) & 2) == 2 && this.cy <= TileMap.aca(this.cy + 3)) {
             this.ana = this.aoa = 0;
-            this.ama = gn.aca(this.ama + 3);
+            this.cy = TileMap.aca(this.cy + 3);
          }
 
-         if (gn.aaa(this.ala, this.ama, 64) && this.ama % gn.aia > 8) {
+         if (TileMap.aaa(this.cx, this.cy, 64) && this.cy % TileMap.aia > 8) {
             this.aqa = 10;
             this.ana = this.ara << 1;
             this.aoa >>= 2;
-            this.ama = gn.aba(this.ama) + 12;
+            this.cy = TileMap.aba(this.cy) + 12;
             this.aqa = 11;
             return;
          }
 
-         if (gn.aaa(this.ala, this.ama, 2048)) {
+         if (TileMap.aaa(this.cx, this.cy, 2048)) {
             this.aqa = 11;
             return;
          }
@@ -2011,11 +2011,11 @@ public class fz extends dz {
    }
 
    private void bpa() {
-      if (this.ama + 4 >= gn.ada) {
+      if (this.cy + 4 >= TileMap.ada) {
          this.cba();
          this.ana = this.aoa = 0;
       } else {
-         if (this.ama % 24 == 0 && (gn.aaa(this.ala, this.ama) & 2) == 2) {
+         if (this.cy % 24 == 0 && (TileMap.aaa(this.cx, this.cy) & 2) == 2) {
             if (this.cla) {
                this.ana = this.aoa = 0;
                this.apa = this.hla = 0;
@@ -2025,16 +2025,16 @@ public class fz extends dz {
 
             this.boa();
             this.cma = 0;
-            ab.aba().aaa(-1, this.ala - -8, this.ama);
-            ab.aba().aaa(1, this.ala - 8, this.ama);
+            GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+            GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
          }
 
          this.cma = 12;
-         this.ala += this.ana;
+         this.cx += this.ana;
          if (!this.cla && this.goa != null) {
             label106: {
                int var1;
-               if ((var1 = this.goa.aaa - this.ala) > 0) {
+               if ((var1 = this.goa.aaa - this.cx) > 0) {
                   if (this.ana > var1) {
                      this.ana = var1;
                   }
@@ -2056,36 +2056,36 @@ public class fz extends dz {
             }
          }
 
-         this.ama += this.aoa;
+         this.cy += this.aoa;
          if (this.aoa < 20) {
             ++this.aoa;
          }
 
          if (this.ara == 1) {
-            if ((gn.aaa(this.ala + this.hoa, this.ama - 1) & 4) == 4 && this.ala <= gn.aca(this.ala + this.hoa) + 12) {
-               this.ala = gn.aca(this.ala + this.hoa) - this.hoa;
+            if ((TileMap.aaa(this.cx + this.hoa, this.cy - 1) & 4) == 4 && this.cx <= TileMap.aca(this.cx + this.hoa) + 12) {
+               this.cx = TileMap.aca(this.cx + this.hoa) - this.hoa;
                this.ana = 0;
             }
-         } else if ((gn.aaa(this.ala - this.hoa, this.ama - 1) & 8) == 8 && this.ala >= gn.aca(this.ala - this.hoa) + 12) {
-            this.ala = gn.aca(this.ala + 24 - this.hoa) + this.hoa;
+         } else if ((TileMap.aaa(this.cx - this.hoa, this.cy - 1) & 8) == 8 && this.cx >= TileMap.aca(this.cx - this.hoa) + 12) {
+            this.cx = TileMap.aca(this.cx + 24 - this.hoa) + this.hoa;
             this.ana = 0;
          }
 
-         if (this.aoa > 4 && (this.hna == 0 || this.hna <= gn.aba(this.ama + 3)) && (gn.aaa(this.ala, this.ama + 3) & 2) == 2) {
+         if (this.aoa > 4 && (this.hna == 0 || this.hna <= TileMap.aba(this.cy + 3)) && (TileMap.aaa(this.cx, this.cy + 3) & 2) == 2) {
             if (this.cla) {
                this.hna = 0;
                this.ana = this.aoa = 0;
                this.apa = this.hla = 0;
-               this.ama = gn.aca(this.ama + 3);
+               this.cy = TileMap.aca(this.cy + 3);
                this.cba();
-               ab.aba().aaa(-1, this.ala - -8, this.ama);
-               ab.aba().aaa(1, this.ala - 8, this.ama);
+               GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+               GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
             } else {
                this.boa();
-               this.ama = gn.aca(this.ama + 3);
+               this.cy = TileMap.aca(this.cy + 3);
                this.cma = 0;
-               ab.aba().aaa(-1, this.ala - -8, this.ama);
-               ab.aba().aaa(1, this.ala - 8, this.ama);
+               GameCanvas.aba().aaa(-1, this.cx - -8, this.cy);
+               GameCanvas.aba().aaa(1, this.cx - 8, this.cy);
             }
          } else {
             if (this.hla == 1) {
@@ -2102,20 +2102,20 @@ public class fz extends dz {
                this.cma = 12;
             }
 
-            if (this.aoa > 6 && gn.aaa(this.ala, this.ama, 64) && this.ama % gn.aia > 8) {
-               this.ama = gn.aba(this.ama) + 8;
+            if (this.aoa > 6 && TileMap.aaa(this.cx, this.cy, 64) && this.cy % TileMap.aia > 8) {
+               this.cy = TileMap.aba(this.cy) + 8;
                this.aqa = 10;
                this.ana = this.ara << 1;
                this.aoa >>= 2;
-               this.ama = gn.aba(this.ama) + 12;
+               this.cy = TileMap.aba(this.cy) + 12;
             }
 
             if (!this.cla) {
-               if ((gn.aaa(this.ala, this.ama + 1) & 2) == 2) {
+               if ((TileMap.aaa(this.cx, this.cy + 1) & 2) == 2) {
                   this.cma = 0;
                }
 
-               if (this.goa != null && this.ama > this.goa.aba) {
+               if (this.goa != null && this.cy > this.goa.aba) {
                   this.boa();
                }
             }
@@ -2125,22 +2125,22 @@ public class fz extends dz {
    }
 
    private void bqa() {
-      this.ama += this.aoa;
-      if (this.aoa < 20 && ab.aua % 2 == 0) {
+      this.cy += this.aoa;
+      if (this.aoa < 20 && GameCanvas.aua % 2 == 0) {
          ++this.aoa;
       }
 
       this.cma = 7;
-      if (this.ama >= gn.ada) {
+      if (this.cy >= TileMap.ada) {
          this.bba = 0;
          this.aqa = 5;
-      } else if (gn.aaa(this.ala, this.ama, 2)) {
+      } else if (TileMap.aaa(this.cx, this.cy, 2)) {
          this.cba();
          this.ana = this.aoa = 0;
          this.apa = this.hla = 0;
-         this.ama = gn.aca(this.ama);
+         this.cy = TileMap.aca(this.cy);
       } else {
-         if (gn.aaa(this.ala, this.ama, 2048)) {
+         if (TileMap.aaa(this.cx, this.cy, 2048)) {
             this.bba = 0;
             this.aqa = 5;
          }
@@ -2245,18 +2245,18 @@ public class fz extends dz {
                ev var4 = new ev();
                int var5;
                ac var6;
-               fz var11;
+               Char var11;
                if (this.dsa != null) {
                   var4.addElement(this.dsa);
 
-                  for(var5 = 0; var5 < GameScr.bla.size() && var3.size() + var4.size() < this.cya.ada(); ++var5) {
-                     if ((var11 = (fz)GameScr.bla.elementAt(var5)).aqa != 14 && var11.aqa != 5 && var11.aqa != 15 && !var11.eea && !var11.equals(this.dsa) && aba(var11) && this.dsa.ala - var1 <= var11.ala && var11.ala <= this.dsa.ala + var1 && this.dsa.ama - var2 <= var11.ama && var11.ama <= this.dsa.ama + var2 && (this.ara == -1 && var11.ala <= this.ala || this.ara == 1 && var11.ala >= this.ala)) {
+                  for(var5 = 0; var5 < GameScr.vCharInMap.size() && var3.size() + var4.size() < this.cya.ada(); ++var5) {
+                     if ((var11 = (Char)GameScr.vCharInMap.elementAt(var5)).aqa != 14 && var11.aqa != 5 && var11.aqa != 15 && !var11.eea && !var11.equals(this.dsa) && aba(var11) && this.dsa.cx - var1 <= var11.cx && var11.cx <= this.dsa.cx + var1 && this.dsa.cy - var2 <= var11.cy && var11.cy <= this.dsa.cy + var2 && (this.ara == -1 && var11.cx <= this.cx || this.ara == 1 && var11.cx >= this.cx)) {
                         var4.addElement(var11);
                      }
                   }
 
                   for(var5 = 0; var5 < GameScr.bna.size() && var3.size() + var4.size() < this.cya.ada(); ++var5) {
-                     if ((var6 = (ac)GameScr.bna.elementAt(var5)).aga != 1 && var6.aga != 0 && this.dsa.ala - var1 <= var6.ada && var6.ada <= this.dsa.ala + var1 && this.dsa.ama - var2 <= var6.aea && var6.aea <= this.dsa.ama + var2 && (this.ara == -1 && var6.ada <= this.ala || this.ara == 1 && var6.ada >= this.ala)) {
+                     if ((var6 = (ac)GameScr.bna.elementAt(var5)).aga != 1 && var6.aga != 0 && this.dsa.cx - var1 <= var6.ada && var6.ada <= this.dsa.cx + var1 && this.dsa.cy - var2 <= var6.aea && var6.aea <= this.dsa.cy + var2 && (this.ara == -1 && var6.ada <= this.cx || this.ara == 1 && var6.ada >= this.cx)) {
                         var3.addElement(var6);
                      }
                   }
@@ -2269,8 +2269,8 @@ public class fz extends dz {
                      }
                   }
 
-                  for(var5 = 0; var5 < GameScr.bla.size() && var3.size() + var4.size() < this.cya.ada(); ++var5) {
-                     if ((var11 = (fz)GameScr.bla.elementAt(var5)).aqa != 14 && var11.aqa != 5 && var11.aqa != 15 && !var11.eea && (this.dla == 4 && var11.dla == 5 || this.dla == 5 && var11.dla == 4 || var11.dla == 3 || this.dla == 3 || var11.dla == 1 && this.dla == 1 || this.dya >= 0 && this.dya == var11.asa || this.dza >= 0 && this.dza == var11.asa) && this.dpa.ada - var1 <= var11.ala && var11.ala <= this.dpa.ada + var1 && this.dpa.aea - var2 <= var11.ama && var11.ama <= this.dpa.aea + var2 && (this.ara == -1 && var11.ala <= this.ala || this.ara == 1 && var11.ala >= this.ala)) {
+                  for(var5 = 0; var5 < GameScr.vCharInMap.size() && var3.size() + var4.size() < this.cya.ada(); ++var5) {
+                     if ((var11 = (Char)GameScr.vCharInMap.elementAt(var5)).aqa != 14 && var11.aqa != 5 && var11.aqa != 15 && !var11.eea && (this.dla == 4 && var11.dla == 5 || this.dla == 5 && var11.dla == 4 || var11.dla == 3 || this.dla == 3 || var11.dla == 1 && this.dla == 1 || this.dya >= 0 && this.dya == var11.asa || this.dza >= 0 && this.dza == var11.asa) && this.dpa.ada - var1 <= var11.cx && var11.cx <= this.dpa.ada + var1 && this.dpa.aea - var2 <= var11.cy && var11.cy <= this.dpa.aea + var2 && (this.ara == -1 && var11.cx <= this.cx || this.ara == 1 && var11.cx >= this.cx)) {
                         var4.addElement(var11);
                      }
                   }
@@ -2287,7 +2287,7 @@ public class fz extends dz {
                for(var5 = 0; var5 < var4.size(); ++var5) {
                   this.hca[var5 + var3.size()] = new bd();
                   this.hca[var5 + var3.size()].ada = GameScr.bca[this.hba.aaa - 1];
-                  this.hca[var5 + var3.size()].aca = (fz)var4.elementAt(var5);
+                  this.hca[var5 + var3.size()].aca = (Char)var4.elementAt(var5);
                }
 
                if (this.hca.length > 1) {
@@ -2295,7 +2295,7 @@ public class fz extends dz {
                   if (this.hca[0].aba != null) {
                      var8 = new er(this.hca[0].aba.ada, this.hca[0].aba.aea);
                   } else if (this.hca[0].aca != null) {
-                     var8 = new er(this.hca[0].aca.ala, this.hca[0].aca.ama);
+                     var8 = new er(this.hca[0].aca.cx, this.hca[0].aca.cy);
                   }
 
                   ev var12 = new ev();
@@ -2304,7 +2304,7 @@ public class fz extends dz {
                      if (this.hca[var1].aba != null) {
                         var12.addElement(new er(this.hca[var1].aba.ada, this.hca[var1].aba.aea));
                      } else if (this.hca[var1].aca != null) {
-                        var12.addElement(new er(this.hca[var1].aca.ala, this.hca[var1].aca.ama));
+                        var12.addElement(new er(this.hca[var1].aca.cx, this.hca[var1].aca.cy));
                      }
 
                      if (var1 > 5) {
@@ -2372,7 +2372,7 @@ public class fz extends dz {
                if (this.hca[0].aba != null) {
                   var8 = new er(this.hca[0].aba.ada, this.hca[0].aba.aea);
                } else if (this.hca[0].aca != null) {
-                  var8 = new er(this.hca[0].aca.ala, this.hca[0].aca.ama);
+                  var8 = new er(this.hca[0].aca.cx, this.hca[0].aca.cy);
                }
 
                var3 = new ev();
@@ -2381,7 +2381,7 @@ public class fz extends dz {
                   if (this.hca[var10].aba != null) {
                      var3.addElement(new er(this.hca[var10].aba.ada, this.hca[var10].aba.aea));
                   } else if (this.hca[var10].aca != null) {
-                     var3.addElement(new er(this.hca[var10].aca.ala, this.hca[var10].aca.ama));
+                     var3.addElement(new er(this.hca[var10].aca.cx, this.hca[var10].aca.cy));
                   }
 
                   if (var10 > 5) {
@@ -2408,7 +2408,7 @@ public class fz extends dz {
    }
 
    public final boolean axa() {
-      return this.ala >= GameScr.aia && this.ala <= GameScr.aia + GameScr.aba && this.ama >= GameScr.aja && this.ama <= GameScr.aja + GameScr.aca + 30;
+      return this.cx >= GameScr.aia && this.cx <= GameScr.aia + GameScr.aba && this.cy >= GameScr.aja && this.cy <= GameScr.aja + GameScr.aca + 30;
    }
 
    public void aaa(as var1) {
@@ -2424,10 +2424,10 @@ public class fz extends dz {
             return;
          }
       } else {
-         this.aba(var1, this.ala, this.ama);
+         this.aba(var1, this.cx, this.cy);
          if (this.aqa != 15 && (this.dxa == null || this.dxa[0] <= 0)) {
             this.aca(var1);
-            fz var3;
+            Char var3;
             if (this.hba != null && this.ipa < this.bra().length) {
                as var2 = var1;
                var3 = this;
@@ -2453,8 +2453,8 @@ public class fz extends dz {
                   if (var4 != null && var4[var3.ipa] != null && var4[var3.ipa].aka != 0) {
                      var3.haa = new du(var3, GameScr.baa[var4[var3.ipa].aka - 1]);
                      var3.haa.aaa = 10;
-                     var3.haa.aba = var3.ala + var4[var3.ipa].ala;
-                     var3.haa.aca = var3.ama + var4[var3.ipa].ama;
+                     var3.haa.aba = var3.cx + var4[var3.ipa].ala;
+                     var3.haa.aca = var3.cy + var4[var3.ipa].ama;
                   }
 
                   var3.ada(var2);
@@ -2468,7 +2468,7 @@ public class fz extends dz {
                            var3.iwa = var4[var3.ipa].ada;
                         }
 
-                        fo.aaa(var2, var3.iza.aba[var3.iqa].aca, var3.ala + var3.ita + var3.iza.aba[var3.iqa].aaa, var3.ama + var3.iwa + var3.iza.aba[var3.iqa].aba, 0, 3);
+                        fo.aaa(var2, var3.iza.aba[var3.iqa].aca, var3.cx + var3.ita + var3.iza.aba[var3.iqa].aaa, var3.cy + var3.iwa + var3.iza.aba[var3.iqa].aba, 0, 3);
                         ++var3.iqa;
                         if (var3.iqa >= var3.iza.aba.length) {
                            var3.iza = null;
@@ -2485,7 +2485,7 @@ public class fz extends dz {
                            var3.ixa = var4[var3.ipa].aga;
                         }
 
-                        fo.aaa(var2, var3.jaa.aba[var3.ira].aca, var3.ala + var3.iua + var3.jaa.aba[var3.ira].aaa, var3.ama + var3.ixa + var3.jaa.aba[var3.ira].aba, 0, 3);
+                        fo.aaa(var2, var3.jaa.aba[var3.ira].aca, var3.cx + var3.iua + var3.jaa.aba[var3.ira].aaa, var3.cy + var3.ixa + var3.jaa.aba[var3.ira].aba, 0, 3);
                         ++var3.ira;
                         if (var3.ira >= var3.jaa.aba.length) {
                            var3.jaa = null;
@@ -2502,7 +2502,7 @@ public class fz extends dz {
                            var3.iya = var4[var3.ipa].aja;
                         }
 
-                        fo.aaa(var2, var3.jba.aba[var3.isa].aca, var3.ala + var3.iva + var3.jba.aba[var3.isa].aaa, var3.ama + var3.iya + var3.jba.aba[var3.isa].aba, 0, 3);
+                        fo.aaa(var2, var3.jba.aba[var3.isa].aca, var3.cx + var3.iva + var3.jba.aba[var3.isa].aaa, var3.cy + var3.iya + var3.jba.aba[var3.isa].aba, 0, 3);
                         ++var3.isa;
                         if (var3.jba.aba != null && var3.isa >= var3.jba.aba.length) {
                            var3.jba = null;
@@ -2519,7 +2519,7 @@ public class fz extends dz {
                            var3.iwa = var4[var3.ipa].ada;
                         }
 
-                        fo.aaa(var2, var3.iza.aba[var3.iqa].aca, var3.ala - var3.ita - var3.iza.aba[var3.iqa].aaa, var3.ama + var3.iwa + var3.iza.aba[var3.iqa].aba, 2, 3);
+                        fo.aaa(var2, var3.iza.aba[var3.iqa].aca, var3.cx - var3.ita - var3.iza.aba[var3.iqa].aaa, var3.cy + var3.iwa + var3.iza.aba[var3.iqa].aba, 2, 3);
                         ++var3.iqa;
                         if (var3.iqa >= var3.iza.aba.length) {
                            var3.iza = null;
@@ -2538,7 +2538,7 @@ public class fz extends dz {
                            var3.ixa = var4[var3.ipa].aga;
                         }
 
-                        fo.aaa(var2, var3.jaa.aba[var3.ira].aca, var3.ala - var3.iua - var3.jaa.aba[var3.ira].aaa, var3.ama + var3.ixa + var3.jaa.aba[var3.ira].aba, 2, 3);
+                        fo.aaa(var2, var3.jaa.aba[var3.ira].aca, var3.cx - var3.iua - var3.jaa.aba[var3.ira].aaa, var3.cy + var3.ixa + var3.jaa.aba[var3.ira].aba, 2, 3);
                         ++var3.ira;
                         if (var3.ira >= var3.jaa.aba.length) {
                            var3.jaa = null;
@@ -2557,7 +2557,7 @@ public class fz extends dz {
                            var3.iya = var4[var3.ipa].aja;
                         }
 
-                        fo.aaa(var2, var3.jba.aba[var3.isa].aca, var3.ala - var3.iva - var3.jba.aba[var3.isa].aaa, var3.ama + var3.iya + var3.jba.aba[var3.isa].aba, 2, 3);
+                        fo.aaa(var2, var3.jba.aba[var3.isa].aca, var3.cx - var3.iva - var3.jba.aba[var3.isa].aaa, var3.cy + var3.iya + var3.jba.aba[var3.isa].aba, 2, 3);
                         ++var3.isa;
                         if (var3.jba.aba != null && var3.isa >= var3.jba.aba.length) {
                            var3.jba = null;
@@ -2590,8 +2590,8 @@ public class fz extends dz {
                               this.hca[var8].aba.aca();
                               this.hca[var8].aba.bba = this;
                               if (this.cla) {
-                                 ala();
-                                 ala();
+                                 getMyChar();
+                                 getMyChar();
                                  ex.aaa(11);
                               }
 
@@ -2610,11 +2610,11 @@ public class fz extends dz {
                                  var3.aoa(49);
                               }
 
-                              GameScr.aaa(this.hca[var8].aca.ala, this.hca[var8].aca.ama - (this.hca[var8].aca.cja >> 1), this.ara);
+                              GameScr.aaa(this.hca[var8].aca.cx, this.hca[var8].aca.cy - (this.hca[var8].aca.cja >> 1), this.ara);
                               this.hca[var8].aea = true;
                            }
 
-                           fo.aaa(var1, this.hca[var8].aaa(), this.hca[var8].aca.ala, this.hca[var8].aca.ama, 0, 33);
+                           fo.aaa(var1, this.hca[var8].aaa(), this.hca[var8].aca.cx, this.hca[var8].aca.cy, 0, 33);
                         }
 
                         if (++this.hca[var8].aaa >= this.hca[var8].ada.aba.length) {
@@ -2627,8 +2627,8 @@ public class fz extends dz {
             }
 
             if (this.ina >= 0 && this.ioa != null) {
-               fo.aaa(var1, this.ioa.aba[this.ina].aca, this.ala + this.ioa.aba[this.ina].aaa, this.ama + this.ioa.aba[this.ina].aba, 0, 3);
-               if (ab.aua % 2 == 0) {
+               fo.aaa(var1, this.ioa.aba[this.ina].aca, this.cx + this.ioa.aba[this.ina].aaa, this.cy + this.ioa.aba[this.ina].aba, 0, 3);
+               if (GameCanvas.aua % 2 == 0) {
                   ++this.ina;
                   if (this.ina >= this.ioa.aba.length) {
                      this.ina = -1;
@@ -2638,8 +2638,8 @@ public class fz extends dz {
             }
 
             if (this.gya >= 0 && this.gza != null) {
-               fo.aaa(var1, this.gza.aba[this.gya].aca, this.ala + this.gza.aba[this.gya].aaa, this.ama + this.gza.aba[this.gya].aba, 0, 3);
-               if (ab.aua % 2 == 0) {
+               fo.aaa(var1, this.gza.aba[this.gya].aca, this.cx + this.gza.aba[this.gya].aaa, this.cy + this.gza.aba[this.gya].aba, 0, 3);
+               if (GameCanvas.aua % 2 == 0) {
                   ++this.gya;
                   if (this.gya >= this.gza.aba.length) {
                      this.gya = -1;
@@ -2650,15 +2650,15 @@ public class fz extends dz {
 
             if (this.ica) {
                if (this.iba < 2) {
-                  fo.aaa(var1, 1366, this.ala, this.ama - this.hpa, 0, 3);
+                  fo.aaa(var1, 1366, this.cx, this.cy - this.hpa, 0, 3);
                } else if (this.iba < 4) {
-                  fo.aaa(var1, 1367, this.ala, this.ama - this.hpa, 0, 3);
+                  fo.aaa(var1, 1367, this.cx, this.cy - this.hpa, 0, 3);
                } else if (this.iba < 8) {
-                  fo.aaa(var1, 1368, this.ala, this.ama - this.hpa, 0, 3);
-               } else if (ab.aua % 2 == 0) {
-                  fo.aaa(var1, 1369, this.ala, this.ama - this.hpa, 0, 3);
+                  fo.aaa(var1, 1368, this.cx, this.cy - this.hpa, 0, 3);
+               } else if (GameCanvas.aua % 2 == 0) {
+                  fo.aaa(var1, 1369, this.cx, this.cy - this.hpa, 0, 3);
                } else {
-                  fo.aaa(var1, 1370, this.ala, this.ama - this.hpa, 0, 3);
+                  fo.aaa(var1, 1370, this.cx, this.cy - this.hpa, 0, 3);
                }
             }
 
@@ -2676,7 +2676,7 @@ public class fz extends dz {
                }
             }
 
-            this.aaa(var1, this.ala, this.ama);
+            this.aaa(var1, this.cx, this.cy);
          }
       }
 
@@ -2786,13 +2786,13 @@ public class fz extends dz {
 
    public final void aba(as var1) {
       if (this.axa()) {
-         if (ala().dsa == null || !ala().dsa.equals(this)) {
-            fw.ala.aaa(var1, this.cea, this.ala, this.ama - this.cja - fw.apa.aaa - 5, 2, fw.ama);
+         if (getMyChar().dsa == null || !getMyChar().dsa.equals(this)) {
+            fw.ala.aaa(var1, this.cea, this.cx, this.cy - this.cja - fw.apa.aaa - 5, 2, fw.ama);
             return;
          }
 
-         if (ala().dsa != null && ala().dsa.equals(this)) {
-            fw.ala.aaa(var1, this.cea, this.ala, this.ama - this.cja - fw.apa.aaa - 10, 2, fw.ama);
+         if (getMyChar().dsa != null && getMyChar().dsa.equals(this)) {
+            fw.ala.aaa(var1, this.cea, this.cx, this.cy - this.cja - fw.apa.aaa - 10, 2, fw.ama);
          }
       }
 
@@ -2811,9 +2811,9 @@ public class fz extends dz {
                      var3 = true;
                      var2 += fw.aia.aaa;
                      if (!this.aea) {
-                        fw.aja.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                        fw.aja.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                      } else {
-                        fw.aka.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                        fw.aka.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                      }
 
                      ++var2;
@@ -2823,21 +2823,21 @@ public class fz extends dz {
 
                if (!GameScr.ava().gaa) {
                   var2 += fw.aia.aaa;
-                  fw.ala.aaa(var1, er.boa, this.ala, this.ama - var2, 2, fw.ama);
+                  fw.ala.aaa(var1, er.boa, this.cx, this.cy - var2, 2, fw.ama);
                } else {
                   var2 += fw.aia.aaa;
-                  fw.ala.aaa(var1, er.bpa, this.ala, this.ama - var2, 2, fw.ama);
+                  fw.ala.aaa(var1, er.bpa, this.cx, this.cy - var2, 2, fw.ama);
                }
             } else {
-               if (ala().dsa != null && ala().dsa.equals(this)) {
+               if (getMyChar().dsa != null && getMyChar().dsa.equals(this)) {
                   var3 = true;
                   var2 += 5;
-                  this.aca(var1, this.ala - 13, this.ama - var2);
+                  this.aca(var1, this.cx - 13, this.cy - var2);
                   var2 += fw.aia.aaa;
                   if (!this.aea) {
-                     fw.aja.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                     fw.aja.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                   } else {
-                     fw.aka.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                     fw.aka.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                   }
 
                   ++var2;
@@ -2851,18 +2851,18 @@ public class fz extends dz {
                var3 = true;
                var2 += fw.aia.aaa;
                if (!this.aea) {
-                  fw.aja.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                  fw.aja.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                } else {
-                  fw.aka.aaa(var1, this.cea, this.ala, this.ama - var2, 2, fw.ama);
+                  fw.aka.aaa(var1, this.cea, this.cx, this.cy - var2, 2, fw.ama);
                }
             }
 
             ++var2;
          }
 
-         if (this.asa == -ala().asa) {
+         if (this.asa == -getMyChar().asa) {
             var2 += fw.aia.aaa;
-            fw.ala.aaa(var1, er.bqa + " " + ala().cea + " " + er.eba, this.ala, this.ama - var2, 2, fw.ama);
+            fw.ala.aaa(var1, er.bqa + " " + getMyChar().cea + " " + er.eba, this.cx, this.cy - var2, 2, fw.ama);
             ++var2;
          }
 
@@ -2873,13 +2873,13 @@ public class fz extends dz {
                var4 = 5;
             }
 
-            fw.aka.aaa(var1, this.cfa, this.ala + var4, this.ama - var2, 2, fw.aoa);
+            fw.aka.aaa(var1, this.cfa, this.cx + var4, this.cy - var2, 2, fw.aoa);
             if (this.cga == 3) {
-               fo.aaa(var1, 1215, this.ala - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.ama - var2 + 1, 0, 17);
+               fo.aaa(var1, 1215, this.cx - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.cy - var2 + 1, 0, 17);
             } else if (this.cga == 4) {
-               fo.aaa(var1, 1216, this.ala - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.ama - var2 + 1, 0, 17);
+               fo.aaa(var1, 1216, this.cx - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.cy - var2 + 1, 0, 17);
             } else if (this.cga == 2) {
-               fo.aaa(var1, 1217, this.ala - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.ama - var2 + 1, 0, 17);
+               fo.aaa(var1, 1217, this.cx - (fw.aka.aaa(this.cfa) / 2 + (7 - var4)), this.cy - var2 + 1, 0, 17);
             }
 
             ++var2;
@@ -2887,62 +2887,62 @@ public class fz extends dz {
 
          if (this.eaa > 0 && this.eaa < 30) {
             var2 += fo.aaa[1117][4];
-            fo.aaa(var1, 1117, this.ala, this.ama - var2, 0, 17);
+            fo.aaa(var1, 1117, this.cx, this.cy - var2, 0, 17);
             return;
          }
 
          if (this.eaa > 30 && this.eaa < 60) {
             var2 += fo.aaa[1117][4];
-            fo.aaa(var1, 1126, this.ala, this.ama - var2, 0, 17);
+            fo.aaa(var1, 1126, this.cx, this.cy - var2, 0, 17);
             return;
          }
 
          if (this.eaa > 60 && this.eaa < 90) {
             var2 += fo.aaa[1117][4];
-            fo.aaa(var1, 1118, this.ala, this.ama - var2, 0, 17);
+            fo.aaa(var1, 1118, this.cx, this.cy - var2, 0, 17);
             return;
          }
 
          if (this.asa >= 0) {
             if (this.dza >= 0) {
                var2 += fo.aaa[1122][4];
-               fo.aaa(var1, 1122, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1122, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dla == 3) {
                var2 += fo.aaa[1121][4];
-               fo.aaa(var1, 1121, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1121, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dla == 2) {
                var2 += fo.aaa[1124][4];
-               fo.aaa(var1, 1124, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1124, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dla == 1) {
                var2 += fo.aaa[1123][4];
-               fo.aaa(var1, 1123, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1123, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dla == 4) {
                var2 += fo.aaa[1240][4];
-               fo.aaa(var1, 1240, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1240, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dla == 5) {
                var2 += fo.aaa[1241][4];
-               fo.aaa(var1, 1241, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1241, this.cx, this.cy - var2, 0, 17);
                return;
             }
 
             if (this.dya > 0) {
                var2 += fo.aaa[1116][4];
-               fo.aaa(var1, 1116, this.ala, this.ama - var2, 0, 17);
+               fo.aaa(var1, 1116, this.cx, this.cy - var2, 0, 17);
             }
          }
       }
@@ -2973,7 +2973,7 @@ public class fz extends dz {
          }
 
          int[] var7 = var2.aaa[gda[this.cma][0][0]].aaa <= 4 ? null : (var2.aaa[gda[this.cma][0][0]].aaa <= 4 ? null : this.aya());
-         if (((this.aqa == 1 || this.aqa == 6) && ab.aua % 10 == 0 || (this.aqa == 2 || this.aqa == 10) && ab.aua % 2 == 0 || ab.aua % 3 == 0 && (this.aqa == 4 || this.aqa == 3)) && var7 != null) {
+         if (((this.aqa == 1 || this.aqa == 6) && GameCanvas.aua % 10 == 0 || (this.aqa == 2 || this.aqa == 10) && GameCanvas.aua % 2 == 0 || GameCanvas.aua % 3 == 0 && (this.aqa == 4 || this.aqa == 3)) && var7 != null) {
             ++this.eda;
             if (this.eda >= var7.length) {
                this.eda = 0;
@@ -2997,13 +2997,13 @@ public class fz extends dz {
                }
             }
 
-            fo.aaa(var1, 1040, this.ala, this.ama, 0, 33);
+            fo.aaa(var1, 1040, this.cx, this.cy, 0, 33);
          } else if (this.eea) {
             if (this.cla) {
-               if (ab.aua % 50 != 48 && ab.aua % 50 != 90) {
-                  fo.aaa(var1, 1195, this.ala, this.ama - 18, 0, 3);
+               if (GameCanvas.aua % 50 != 48 && GameCanvas.aua % 50 != 90) {
+                  fo.aaa(var1, 1195, this.cx, this.cy - 18, 0, 3);
                } else {
-                  fo.aaa(var1, 1196, this.ala, this.ama - 18, 0, 3);
+                  fo.aaa(var1, 1196, this.cx, this.cy - 18, 0, 3);
                }
             }
          } else {
@@ -3024,10 +3024,10 @@ public class fz extends dz {
                   if (this.dda[4].aha < 2) {
                      if (this.aqa != 1 && this.aqa != 6) {
                         if (this.aqa == 2 || this.aqa == 10) {
-                           var6 = ab.aua % 6 > 3 ? 1 : 0;
+                           var6 = GameCanvas.aua % 6 > 3 ? 1 : 0;
                         }
                      } else {
-                        var6 = ab.aua % 20 > 12 ? 1 : 0;
+                        var6 = GameCanvas.aua % 20 > 12 ? 1 : 0;
                      }
 
                      if (this.aqa == 3) {
@@ -3036,30 +3036,30 @@ public class fz extends dz {
 
                      if (this.ara == 1) {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 1711, this.ala, this.ama + 2, 0, 33);
+                           fo.aaa(var1, 1711, this.cx, this.cy + 2, 0, 33);
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 1709 : 1710, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 1709 : 1710, this.cx, this.cy, 0, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                      } else {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 1711, this.ala, this.ama + 2, 2, 33);
+                           fo.aaa(var1, 1711, this.cx, this.cy + 2, 2, 33);
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 1709 : 1710, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 1709 : 1710, this.cx, this.cy, 2, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
                      }
                   } else {
                      if (this.aqa != 1 && this.aqa != 6) {
                         if (this.aqa == 2 || this.aqa == 10) {
-                           var6 = ab.aua % 6 > 3 ? 1 : 0;
+                           var6 = GameCanvas.aua % 6 > 3 ? 1 : 0;
                         }
                      } else {
-                        var6 = ab.aua % 20 > 12 ? 1 : 0;
+                        var6 = GameCanvas.aua % 20 > 12 ? 1 : 0;
                      }
 
                      if (this.aqa == 3) {
@@ -3068,49 +3068,49 @@ public class fz extends dz {
 
                      if (this.ara == 1) {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2057, this.ala, this.ama + 2, 0, 33);
+                           fo.aaa(var1, 2057, this.cx, this.cy + 2, 0, 33);
                         } else if (!this.hsa) {
-                           fo.aaa(var1, var6 == 0 ? 2056 : 2055, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2056 : 2055, this.cx, this.cy, 0, 33);
                         } else {
-                           fo.aaa(var1, 2057, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, 2057, this.cx, this.cy, 0, 33);
                         }
 
                         if (this.aqa == 2 && var11 != null) {
-                           fo.aaa(var1, var11[this.hva], this.ala - 25, this.ama - 2, 0, 33);
+                           fo.aaa(var1, var11[this.hva], this.cx - 25, this.cy - 2, 0, 33);
                         }
 
                         if (!this.hsa) {
-                           fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                           fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                           fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                           fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                         } else {
-                           fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara - 3, this.ama - 1 - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                           fo.aaa(var1, this.bwa(), this.ala - 3 + this.jga * this.ara, this.ama - 1 - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                           fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara - 3, this.cy - 1 - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                           fo.aaa(var1, this.bwa(), this.cx - 3 + this.jga * this.ara, this.cy - 1 - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                         }
                      } else {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2057, this.ala, this.ama + 2, 2, 33);
+                           fo.aaa(var1, 2057, this.cx, this.cy + 2, 2, 33);
                         } else if (!this.hsa) {
-                           fo.aaa(var1, var6 == 0 ? 2056 : 2055, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2056 : 2055, this.cx, this.cy, 2, 33);
                         } else {
-                           fo.aaa(var1, 2057, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, 2057, this.cx, this.cy, 2, 33);
                         }
 
                         if (this.aqa == 2 && var11 != null) {
-                           fo.aaa(var1, var11[this.hva], this.ala + 25, this.ama - 2, 2, 33);
+                           fo.aaa(var1, var11[this.hva], this.cx + 25, this.cy - 2, 2, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
                      }
                   }
                } else if (this.dda[4].aaa.aaa == 524) {
                   if (this.dda[4].aha < 2) {
                      if (this.aqa != 1 && this.aqa != 6) {
                         if (this.aqa == 2 || this.aqa == 10) {
-                           var6 = ab.aua % 6 > 3 ? 1 : 0;
+                           var6 = GameCanvas.aua % 6 > 3 ? 1 : 0;
                         }
                      } else {
-                        var6 = ab.aua % 20 > 12 ? 1 : 0;
+                        var6 = GameCanvas.aua % 20 > 12 ? 1 : 0;
                      }
 
                      if (this.aqa == 3) {
@@ -3119,22 +3119,22 @@ public class fz extends dz {
 
                      if (this.ara == 1) {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2066, this.ala, this.ama + 2, 0, 33);
+                           fo.aaa(var1, 2066, this.cx, this.cy + 2, 0, 33);
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2064 : 2065, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2064 : 2065, this.cx, this.cy, 0, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                      } else {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2066, this.ala, this.ama + 2, 2, 33);
+                           fo.aaa(var1, 2066, this.cx, this.cy + 2, 2, 33);
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2064 : 2065, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2064 : 2065, this.cx, this.cy, 2, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
                      }
                   } else if (this.dda[4].aha >= 2 && this.dda[4].aha < 4) {
                      if ((var7 = this.bta()) != null) {
@@ -3146,10 +3146,10 @@ public class fz extends dz {
 
                      if (this.aqa != 1 && this.aqa != 6) {
                         if (this.aqa == 2 || this.aqa == 10) {
-                           var6 = ab.aua % 6 > 3 ? 1 : 0;
+                           var6 = GameCanvas.aua % 6 > 3 ? 1 : 0;
                         }
                      } else {
-                        var6 = ab.aua % 20 > 12 ? 1 : 0;
+                        var6 = GameCanvas.aua % 20 > 12 ? 1 : 0;
                      }
 
                      if (this.aqa == 3) {
@@ -3158,36 +3158,36 @@ public class fz extends dz {
 
                      if (this.ara == 1) {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2070, this.ala, this.ama + 2, 0, 33);
+                           fo.aaa(var1, 2070, this.cx, this.cy + 2, 0, 33);
                         } else if (this.aqa == 4) {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
                         } else if (this.aqa != 2 && this.aqa != 10) {
                            if (this.aqa == 1 || this.aqa == 6) {
-                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
+                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
                            }
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                      } else {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2070, this.ala, this.ama + 2, 2, 33);
+                           fo.aaa(var1, 2070, this.cx, this.cy + 2, 2, 33);
                         }
 
                         if (this.aqa == 4) {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
                         } else if (this.aqa != 2 && this.aqa != 10) {
                            if (this.aqa == 1 || this.aqa == 6) {
-                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
+                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
                            }
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
                      }
                   } else {
                      if ((var7 = this.bta()) != null) {
@@ -3199,10 +3199,10 @@ public class fz extends dz {
 
                      if (this.aqa != 1 && this.aqa != 6) {
                         if (this.aqa == 2 || this.aqa == 10) {
-                           var6 = ab.aua % 6 > 3 ? 1 : 0;
+                           var6 = GameCanvas.aua % 6 > 3 ? 1 : 0;
                         }
                      } else {
-                        var6 = ab.aua % 20 > 12 ? 1 : 0;
+                        var6 = GameCanvas.aua % 20 > 12 ? 1 : 0;
                      }
 
                      if (this.aqa == 3) {
@@ -3211,52 +3211,52 @@ public class fz extends dz {
 
                      if (this.ara == 1) {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2070, this.ala, this.ama + 2, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 13, this.ama - 17, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 24, this.ama + 2, 0, 33);
+                           fo.aaa(var1, 2070, this.cx, this.cy + 2, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 13, this.cy - 17, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 24, this.cy + 2, 0, 33);
                         } else if (this.aqa == 4) {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 15, this.ama, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 27, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 15, this.cy, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 27, this.cy, 0, 33);
                         } else if (this.aqa != 2 && this.aqa != 10) {
                            if (this.aqa == 1 || this.aqa == 6) {
-                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
-                              fo.aaa(var1, var7[this.hva], this.ala + 15, this.ama, 0, 33);
-                              fo.aaa(var1, var7[this.hva], this.ala - 27, this.ama, 0, 33);
+                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
+                              fo.aaa(var1, var7[this.hva], this.cx + 15, this.cy, 0, 33);
+                              fo.aaa(var1, var7[this.hva], this.cx - 27, this.cy, 0, 33);
                            }
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 15, this.ama, 0, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 27, this.ama, 0, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 15, this.cy, 0, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 27, this.cy, 0, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 0, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 0, 33);
                      } else {
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2070, this.ala, this.ama + 2, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 12, this.ama - 17, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 25, this.ama + 3, 2, 33);
+                           fo.aaa(var1, 2070, this.cx, this.cy + 2, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 12, this.cy - 17, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 25, this.cy + 3, 2, 33);
                         }
 
                         if (this.aqa == 4) {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 15, this.ama, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 27, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 15, this.cy, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 27, this.cy, 2, 33);
                         } else if (this.aqa != 2 && this.aqa != 10) {
                            if (this.aqa == 1 || this.aqa == 6) {
-                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
-                              fo.aaa(var1, var7[this.hva], this.ala - 15, this.ama, 2, 33);
-                              fo.aaa(var1, var7[this.hva], this.ala + 27, this.ama, 2, 33);
+                              fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
+                              fo.aaa(var1, var7[this.hva], this.cx - 15, this.cy, 2, 33);
+                              fo.aaa(var1, var7[this.hva], this.cx + 27, this.cy, 2, 33);
                            }
                         } else {
-                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.ala, this.ama, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala - 15, this.ama, 2, 33);
-                           fo.aaa(var1, var7[this.hva], this.ala + 27, this.ama, 2, 33);
+                           fo.aaa(var1, var6 == 0 ? 2068 : 2069, this.cx, this.cy, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx - 15, this.cy, 2, 33);
+                           fo.aaa(var1, var7[this.hva], this.cx + 27, this.cy, 2, 33);
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 + var6 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 8 + var6 + this.jha, 2, 33);
                      }
                   }
                }
@@ -3270,12 +3270,12 @@ public class fz extends dz {
 
                if (this.aqa != 1 && this.aqa != 6) {
                   if (this.aqa == 2 || this.aqa == 10) {
-                     if (ab.aua % 12 <= 3) {
+                     if (GameCanvas.aua % 12 <= 3) {
                         this.jia = 0;
-                     } else if (ab.aua % 12 <= 6) {
+                     } else if (GameCanvas.aua % 12 <= 6) {
                         this.jia = 1;
                         var8 = 2;
-                     } else if (ab.aua % 12 <= 9) {
+                     } else if (GameCanvas.aua % 12 <= 9) {
                         this.jia = 2;
                         var8 = 4;
                      } else {
@@ -3284,14 +3284,14 @@ public class fz extends dz {
                      }
                   }
                } else {
-                  this.jia = ab.aua % 20 > 12 ? 1 : 0;
+                  this.jia = GameCanvas.aua % 20 > 12 ? 1 : 0;
                   var8 = -this.jia;
                }
 
                var7 = new int[]{2050, 2053, 2049, 2052};
                int[] var13 = new int[]{2075, 2078, 2074, 2079};
-               int[] var14 = new int[]{this.ama - 22, this.ama - 23, this.ama - 22, this.ama - 23};
-               int[] var15 = new int[]{this.ama - 22, this.ama - 23, this.ama - 22, this.ama - 22};
+               int[] var14 = new int[]{this.cy - 22, this.cy - 23, this.cy - 22, this.cy - 23};
+               int[] var15 = new int[]{this.cy - 22, this.cy - 23, this.cy - 22, this.cy - 22};
                if (this.aqa == 3) {
                   var9 = -5 * this.ara;
                   var10 = 5;
@@ -3304,7 +3304,7 @@ public class fz extends dz {
                if (this.dda[4].aaa.aaa == 523) {
                   if (this.ara == 1) {
                      label711: {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
                         if (this.aqa == 3) {
                            var10000 = var1;
                            var10001 = 2051;
@@ -3314,7 +3314,7 @@ public class fz extends dz {
                         } else {
                            if (this.aqa != 1 && this.aqa != 6) {
                               if (this.aqa == 2 || this.aqa == 10) {
-                                 fo.aaa(var1, var7[this.jia], this.ala, this.ama - var8, 0, 33);
+                                 fo.aaa(var1, var7[this.jia], this.cx, this.cy - var8, 0, 33);
                               }
                               break label711;
                            }
@@ -3323,14 +3323,14 @@ public class fz extends dz {
                            var10001 = this.jia == 0 ? 2047 : 2048;
                         }
 
-                        fo.aaa(var10000, var10001, this.ala, this.ama, 0, 33);
+                        fo.aaa(var10000, var10001, this.cx, this.cy, 0, 33);
                      }
 
-                     fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
-                     fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
+                     fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
+                     fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
                   } else {
                      label724: {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
                         if (this.aqa == 3) {
                            var10000 = var1;
                            var10001 = 2051;
@@ -3340,7 +3340,7 @@ public class fz extends dz {
                         } else {
                            if (this.aqa != 1 && this.aqa != 6) {
                               if (this.aqa == 2 || this.aqa == 10) {
-                                 fo.aaa(var1, var7[this.jia], this.ala, this.ama - var8, 2, 33);
+                                 fo.aaa(var1, var7[this.jia], this.cx, this.cy - var8, 2, 33);
                               }
                               break label724;
                            }
@@ -3349,19 +3349,19 @@ public class fz extends dz {
                            var10001 = this.jia == 0 ? 2047 : 2048;
                         }
 
-                        fo.aaa(var10000, var10001, this.ala, this.ama, 2, 33);
+                        fo.aaa(var10000, var10001, this.cx, this.cy, 2, 33);
                      }
 
-                     fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
-                     fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
+                     fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
+                     fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
                   }
                } else if (this.dda[4].aaa.aaa == 443) {
                   if (this.dda[4].aha >= 3) {
                      if (this.ara == 1) {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2077, this.ala, this.ama, 0, 33);
-                           var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala + 21, this.ama - 30, 0);
+                           fo.aaa(var1, 2077, this.cx, this.cy, 0, 33);
+                           var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx + 21, this.cy - 30, 0);
                         } else {
                            label736: {
                               if (this.aqa == 4) {
@@ -3370,8 +3370,8 @@ public class fz extends dz {
                               } else {
                                  if (this.aqa != 1 && this.aqa != 6) {
                                     if (this.aqa == 2 || this.aqa == 10) {
-                                       fo.aaa(var1, var13[this.jia], this.ala, this.ama - var8, 0, 33);
-                                       var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala + 21, var14[this.jia], 0);
+                                       fo.aaa(var1, var13[this.jia], this.cx, this.cy - var8, 0, 33);
+                                       var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx + 21, var14[this.jia], 0);
                                     }
                                     break label736;
                                  }
@@ -3380,18 +3380,18 @@ public class fz extends dz {
                                  var10001 = this.jia == 0 ? 2073 : 2072;
                               }
 
-                              fo.aaa(var10000, var10001, this.ala, this.ama, 0, 33);
-                              var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala + 21, this.ama - 19, 0);
+                              fo.aaa(var10000, var10001, this.cx, this.cy, 0, 33);
+                              var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx + 21, this.cy - 19, 0);
                            }
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
                      } else {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
                         if (this.aqa == 3) {
-                           fo.aaa(var1, 2077, this.ala, this.ama, 2, 33);
-                           var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala - 23, this.ama - 30, 0);
+                           fo.aaa(var1, 2077, this.cx, this.cy, 2, 33);
+                           var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx - 23, this.cy - 30, 0);
                         } else {
                            label749: {
                               if (this.aqa == 4) {
@@ -3400,8 +3400,8 @@ public class fz extends dz {
                               } else {
                                  if (this.aqa != 1 && this.aqa != 6) {
                                     if (this.aqa == 2 || this.aqa == 10) {
-                                       fo.aaa(var1, var13[this.jia], this.ala, this.ama - var8, 2, 33);
-                                       var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala - 24, var15[this.jia], 0);
+                                       fo.aaa(var1, var13[this.jia], this.cx, this.cy - var8, 2, 33);
+                                       var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx - 24, var15[this.jia], 0);
                                     }
                                     break label749;
                                  }
@@ -3410,17 +3410,17 @@ public class fz extends dz {
                                  var10001 = this.jia == 0 ? 2073 : 2072;
                               }
 
-                              fo.aaa(var10000, var10001, this.ala, this.ama, 2, 33);
-                              var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.ala - 24, this.ama - 20, 0);
+                              fo.aaa(var10000, var10001, this.cx, this.cy, 2, 33);
+                              var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.cx - 24, this.cy - 20, 0);
                            }
                         }
 
-                        fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
-                        fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
+                        fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
+                        fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
                      }
                   } else if (this.ara == 1) {
                      label765: {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 0, 0);
                         if (this.aqa == 3) {
                            var10000 = var1;
                            var10001 = 1716;
@@ -3430,7 +3430,7 @@ public class fz extends dz {
                         } else {
                            if (this.aqa != 1 && this.aqa != 6) {
                               if (this.aqa == 2 || this.aqa == 10) {
-                                 fo.aaa(var1, this.jja[this.jia], this.ala, this.ama - var8, 0, 33);
+                                 fo.aaa(var1, this.jja[this.jia], this.cx, this.cy - var8, 0, 33);
                               }
                               break label765;
                            }
@@ -3439,14 +3439,14 @@ public class fz extends dz {
                            var10001 = this.jia == 0 ? 1712 : 1713;
                         }
 
-                        fo.aaa(var10000, var10001, this.ala, this.ama, 0, 33);
+                        fo.aaa(var10000, var10001, this.cx, this.cy, 0, 33);
                      }
 
-                     fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
-                     fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
+                     fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 0, 17);
+                     fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 0, 33);
                   } else {
                      label779: {
-                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
+                        fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca - 10, 2, 24);
                         if (this.aqa == 3) {
                            var10000 = var1;
                            var10001 = 1716;
@@ -3456,7 +3456,7 @@ public class fz extends dz {
                         } else {
                            if (this.aqa != 1 && this.aqa != 6) {
                               if (this.aqa == 2 || this.aqa == 10) {
-                                 fo.aaa(var1, this.jja[this.jia], this.ala, this.ama - var8, 2, 33);
+                                 fo.aaa(var1, this.jja[this.jia], this.cx, this.cy - var8, 2, 33);
                               }
                               break label779;
                            }
@@ -3465,11 +3465,11 @@ public class fz extends dz {
                            var10001 = this.jia == 0 ? 1712 : 1713;
                         }
 
-                        fo.aaa(var10000, var10001, this.ala, this.ama, 2, 33);
+                        fo.aaa(var10000, var10001, this.cx, this.cy, 2, 33);
                      }
 
-                     fo.aaa(var1, this.bxa(), this.ala + var9 + this.jea * this.ara, this.ama - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
-                     fo.aaa(var1, this.bwa(), this.ala + var9 + this.jga * this.ara, this.ama - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
+                     fo.aaa(var1, this.bxa(), this.cx + var9 + this.jea * this.ara, this.cy - gda[0][0][2] + var2.aaa[gda[0][0][0]].aca - 12 - var10 - var8 + this.jfa, 2, 17);
+                     fo.aaa(var1, this.bwa(), this.cx + var9 + this.jga * this.ara, this.cy - fo.aba(this.bva()) - 9 - var10 - var8 + this.jha, 2, 33);
                   }
                }
             } else if (this.ara == 1) {
@@ -3491,28 +3491,28 @@ public class fz extends dz {
 
                if (var7 != null) {
                   if (this.eda == 0) {
-                     fo.aaa(var1, var7[this.eda], this.ala - 14, this.ama - 18, 0, 20);
+                     fo.aaa(var1, var7[this.eda], this.cx - 14, this.cy - 18, 0, 20);
                   } else if (this.eda != 1 && this.eda == 2) {
-                     fo.aaa(var1, var7[this.eda], this.ala - 25, this.ama - 18, 0, 20);
+                     fo.aaa(var1, var7[this.eda], this.cx - 25, this.cy - 18, 0, 20);
                   } else {
-                     fo.aaa(var1, var7[this.eda], this.ala - 22, this.ama - 18, 0, 20);
+                     fo.aaa(var1, var7[this.eda], this.cx - 22, this.cy - 18, 0, 20);
                   }
                }
 
-               fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca, 0, 0);
-               fo.aaa(var1, var3.aaa[gda[this.cma][1][0]].aaa, this.ala + gda[this.cma][1][1] + var3.aaa[gda[this.cma][1][0]].aba, this.ama - gda[this.cma][1][2] + var3.aaa[gda[this.cma][1][0]].aca, 0, 0);
+               fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx + gda[this.cma][3][1] + var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca, 0, 0);
+               fo.aaa(var1, var3.aaa[gda[this.cma][1][0]].aaa, this.cx + gda[this.cma][1][1] + var3.aaa[gda[this.cma][1][0]].aba, this.cy - gda[this.cma][1][2] + var3.aaa[gda[this.cma][1][0]].aca, 0, 0);
                if (this.aqa != 2) {
-                  this.ada(var1, this.ala + 7, this.ama - 2);
+                  this.ada(var1, this.cx + 7, this.cy - 2);
                }
 
-               fo.aaa(var1, var2.aaa[gda[this.cma][0][0]].aaa, this.ala + gda[this.cma][0][1] + var2.aaa[gda[this.cma][0][0]].aba, this.ama - gda[this.cma][0][2] + var2.aaa[gda[this.cma][0][0]].aca, 0, 0);
-               fo.aaa(var1, var4.aaa[gda[this.cma][2][0]].aaa, this.ala + gda[this.cma][2][1] + var4.aaa[gda[this.cma][2][0]].aba, this.ama - gda[this.cma][2][2] + var4.aaa[gda[this.cma][2][0]].aca, 0, 0);
+               fo.aaa(var1, var2.aaa[gda[this.cma][0][0]].aaa, this.cx + gda[this.cma][0][1] + var2.aaa[gda[this.cma][0][0]].aba, this.cy - gda[this.cma][0][2] + var2.aaa[gda[this.cma][0][0]].aca, 0, 0);
+               fo.aaa(var1, var4.aaa[gda[this.cma][2][0]].aaa, this.cx + gda[this.cma][2][1] + var4.aaa[gda[this.cma][2][0]].aba, this.cy - gda[this.cma][2][2] + var4.aaa[gda[this.cma][2][0]].aca, 0, 0);
                if (this.aqa == 2) {
-                  this.afa(var1, this.ala - 14, this.ama - 2);
-                  this.aea(var1, this.ala + 7, this.ama - 1);
+                  this.afa(var1, this.cx - 14, this.cy - 2);
+                  this.aea(var1, this.cx + 7, this.cy - 1);
                } else {
-                  this.ada(var1, this.ala - 7, this.ama - 2);
-                  this.aea(var1, this.ala + 11, this.ama - 2);
+                  this.ada(var1, this.cx - 7, this.cy - 2);
+                  this.aea(var1, this.cx + 11, this.cy - 2);
                }
             } else {
                if (this.cpa && !this.cna && !this.coa) {
@@ -3532,29 +3532,29 @@ public class fz extends dz {
                }
 
                if (var7 != null) {
-                  fo.aaa(var1, var7[this.eda], this.ala - 7, this.ama - 18, 2, 20);
+                  fo.aaa(var1, var7[this.eda], this.cx - 7, this.cy - 18, 2, 20);
                }
 
-               fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.ala - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.ama - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca, 2, 24);
-               fo.aaa(var1, var3.aaa[gda[this.cma][1][0]].aaa, this.ala - gda[this.cma][1][1] - var3.aaa[gda[this.cma][1][0]].aba, this.ama - gda[this.cma][1][2] + var3.aaa[gda[this.cma][1][0]].aca, 2, 24);
+               fo.aaa(var1, var5.aaa[gda[this.cma][3][0]].aaa, this.cx - gda[this.cma][3][1] - var5.aaa[gda[this.cma][3][0]].aba, this.cy - gda[this.cma][3][2] + var5.aaa[gda[this.cma][3][0]].aca, 2, 24);
+               fo.aaa(var1, var3.aaa[gda[this.cma][1][0]].aaa, this.cx - gda[this.cma][1][1] - var3.aaa[gda[this.cma][1][0]].aba, this.cy - gda[this.cma][1][2] + var3.aaa[gda[this.cma][1][0]].aca, 2, 24);
                if (this.aqa != 2) {
-                  this.ada(var1, this.ala - 7, this.ama - 2);
+                  this.ada(var1, this.cx - 7, this.cy - 2);
                }
 
-               fo.aaa(var1, var2.aaa[gda[this.cma][0][0]].aaa, this.ala - gda[this.cma][0][1] - var2.aaa[gda[this.cma][0][0]].aba, this.ama - gda[this.cma][0][2] + var2.aaa[gda[this.cma][0][0]].aca, 2, 24);
-               fo.aaa(var1, var4.aaa[gda[this.cma][2][0]].aaa, this.ala - gda[this.cma][2][1] - var4.aaa[gda[this.cma][2][0]].aba, this.ama - gda[this.cma][2][2] + var4.aaa[gda[this.cma][2][0]].aca, 2, 24);
+               fo.aaa(var1, var2.aaa[gda[this.cma][0][0]].aaa, this.cx - gda[this.cma][0][1] - var2.aaa[gda[this.cma][0][0]].aba, this.cy - gda[this.cma][0][2] + var2.aaa[gda[this.cma][0][0]].aca, 2, 24);
+               fo.aaa(var1, var4.aaa[gda[this.cma][2][0]].aaa, this.cx - gda[this.cma][2][1] - var4.aaa[gda[this.cma][2][0]].aba, this.cy - gda[this.cma][2][2] + var4.aaa[gda[this.cma][2][0]].aca, 2, 24);
                if (this.aqa == 2) {
-                  this.afa(var1, this.ala + 14, this.ama - 2);
-                  this.aea(var1, this.ala - 3, this.ama - 2);
+                  this.afa(var1, this.cx + 14, this.cy - 2);
+                  this.aea(var1, this.cx - 3, this.cy - 2);
                } else {
-                  this.ada(var1, this.ala + 5, this.ama - 2);
-                  this.aea(var1, this.ala - 7, this.ama - 2);
+                  this.ada(var1, this.cx + 5, this.cy - 2);
+                  this.aea(var1, this.cx - 7, this.cy - 2);
                }
             }
          }
 
          if (this.gma) {
-            fo.aaa(var1, 290, this.ala, this.ama, 0, 33);
+            fo.aaa(var1, 290, this.cx, this.cy, 0, 33);
             return;
          }
       } catch (Exception var12) {
@@ -6786,7 +6786,7 @@ public class fz extends dz {
       int[] var4;
       if ((var4 = this.bya()) != null) {
          int var5;
-         if ((var5 = ab.aua % 13) > 9) {
+         if ((var5 = GameCanvas.aua % 13) > 9) {
             fo.aaa(var1, var4[0], var2, var3, 0, 33);
             return;
          }
@@ -6812,7 +6812,7 @@ public class fz extends dz {
          int var5 = this.ara == 1 ? 6 : 5;
          int var6 = this.ara == -1 ? 40 : 36;
          int var7;
-         if ((var7 = ab.aua % 13) > 9) {
+         if ((var7 = GameCanvas.aua % 13) > 9) {
             fo.aaa(var1, var4[0], var2, var3, var5, var6);
             return;
          }
@@ -6851,8 +6851,8 @@ public class fz extends dz {
    }
 
    public static int ada(int var0) {
-      for(int var1 = 0; var1 < GameScr.bla.size(); ++var1) {
-         if (((fz)GameScr.bla.elementAt(var1)).asa == var0) {
+      for(int var1 = 0; var1 < GameScr.vCharInMap.size(); ++var1) {
+         if (((Char)GameScr.vCharInMap.elementAt(var1)).asa == var0) {
             return var1;
          }
       }
@@ -6862,8 +6862,8 @@ public class fz extends dz {
 
    public final void aaa(int var1, int var2) {
       byte var3 = 0;
-      var1 -= this.ala;
-      var2 -= this.ama;
+      var1 -= this.cx;
+      var2 -= this.cy;
       if (var1 == 0 && var2 == 0) {
          var3 = 1;
       } else if (var2 == 0) {
@@ -6876,7 +6876,7 @@ public class fz extends dz {
             } catch (Exception var5) {
             }
 
-            if (var4 != null && gn.aaa(var4.aaa, var4.aba, 64) && var4.aba % gn.aia > 8) {
+            if (var4 != null && TileMap.aaa(var4.aaa, var4.aba, 64) && var4.aba % TileMap.aia > 8) {
                var3 = 10;
             }
          }
@@ -6893,8 +6893,8 @@ public class fz extends dz {
          }
       }
 
-      int var6 = this.ala + var1;
-      var1 = this.ama + var2;
+      int var6 = this.cx + var1;
+      var1 = this.cy + var2;
       this.gia.addElement(new bh(var6, var1, var3));
       this.aqa = 6;
    }
@@ -6908,7 +6908,7 @@ public class fz extends dz {
          this.dsa = null;
       }
 
-      if (ab.aua % 2 != 0 && !aba(this.dsa)) {
+      if (GameCanvas.aua % 2 != 0 && !aba(this.dsa)) {
          byte var1 = 0;
          if (this.cua.aaa == 0 || this.cua.aaa == 1 || this.cua.aaa == 3 || this.cua.aaa == 5) {
             if (GameScr.fza != 1) {
@@ -6920,11 +6920,11 @@ public class fz extends dz {
 
          int[] var2 = new int[]{-1, -1, -1, -1};
          int var3 = GameScr.aia - 10;
-         int var4 = GameScr.aia + ab.aza + 10;
+         int var4 = GameScr.aia + GameCanvas.aza + 10;
          int var5 = GameScr.aja;
-         int var6 = GameScr.aja + ab.baa - GameScr.aga + 10;
+         int var6 = GameScr.aja + GameCanvas.baa - GameScr.aga + 10;
          if (hda) {
-            if (this.dpa != null && this.dpa.aga != 1 && this.dpa.aga != 8 && this.dpa.aga != 0 && var3 <= this.dpa.ada && this.dpa.ada <= var4 && var5 <= this.dpa.aea && this.dpa.aea <= var6 || this.dra != null && var3 <= this.dra.ala && this.dra.ala <= var4 && var5 <= this.dra.ama && this.dra.ama <= var6 || this.dsa != null && var3 <= this.dsa.ala && this.dsa.ala <= var4 && var5 <= this.dsa.ama && this.dsa.ama <= var6 || this.dta != null && var3 <= this.dta.aaa && this.dta.aaa <= var4 && var5 <= this.dta.aba && this.dta.aba <= var6) {
+            if (this.dpa != null && this.dpa.aga != 1 && this.dpa.aga != 8 && this.dpa.aga != 0 && var3 <= this.dpa.ada && this.dpa.ada <= var4 && var5 <= this.dpa.aea && this.dpa.aea <= var6 || this.dra != null && var3 <= this.dra.cx && this.dra.cx <= var4 && var5 <= this.dra.cy && this.dra.cy <= var6 || this.dsa != null && var3 <= this.dsa.cx && this.dsa.cx <= var4 && var5 <= this.dsa.cy && this.dsa.cy <= var6 || this.dta != null && var3 <= this.dta.aaa && this.dta.aaa <= var4 && var5 <= this.dta.aba && this.dta.aba <= var6) {
                return;
             }
 
@@ -6939,8 +6939,8 @@ public class fz extends dz {
          if (this.dta == null) {
             for(var7 = 0; var7 < GameScr.bma.size(); ++var7) {
                var8 = (am)GameScr.bma.elementAt(var7);
-               var9 = Math.abs(ala().ala - var8.aaa);
-               var10 = Math.abs(ala().ama - var8.aba);
+               var9 = Math.abs(getMyChar().cx - var8.aaa);
+               var10 = Math.abs(getMyChar().cy - var8.aba);
                var11 = var9 > var10 ? var9 : var10;
                if (var9 <= 48 && var10 <= 48 && (this.dta == null || var11 < var2[3])) {
                   if (GameScr.fza != 0 && GameScr.ala()) {
@@ -6982,8 +6982,8 @@ public class fz extends dz {
 
             for(var7 = 0; var7 < GameScr.bma.size(); ++var7) {
                var8 = (am)GameScr.bma.elementAt(var7);
-               var9 = Math.abs(ala().ala - var8.aaa);
-               var10 = Math.abs(ala().ama - var8.aba);
+               var9 = Math.abs(getMyChar().cx - var8.aaa);
+               var10 = Math.abs(getMyChar().cy - var8.aba);
                var11 = var9 > var10 ? var9 : var10;
                if (var3 <= var8.aaa && var8.aaa <= var4 && var5 <= var8.aba && var8.aba <= var6 && (this.dta == null || var11 < var2[3])) {
                   GameScr.ava();
@@ -7025,24 +7025,24 @@ public class fz extends dz {
          }
 
          ac var12;
-         av var13;
-         fz var14;
+         Npc var13;
+         Char var14;
          int var15;
-         if (gn.ana != 3 && gn.aoa != 111) {
-            var3 = ala().ala - ala().aga() - 10;
-            var4 = ala().ala + ala().aga() + 10;
-            var5 = ala().ama - ala().aha() - var1;
-            if ((var6 = ala().ama + ala().aha()) > ala().ama + 30) {
-               var6 = ala().ama + 30;
+         if (TileMap.ana != 3 && TileMap.mapID != 111) {
+            var3 = getMyChar().cx - getMyChar().aga() - 10;
+            var4 = getMyChar().cx + getMyChar().aga() + 10;
+            var5 = getMyChar().cy - getMyChar().aha() - var1;
+            if ((var6 = getMyChar().cy + getMyChar().aha()) > getMyChar().cy + 30) {
+               var6 = getMyChar().cy + 30;
             }
 
             if (this.dpa == null) {
                for(var7 = 0; var7 < GameScr.bna.size(); ++var7) {
                   var12 = (ac)GameScr.bna.elementAt(var7);
-                  var9 = Math.abs(ala().ala - var12.ada);
-                  var10 = Math.abs(ala().ama - var12.aea);
+                  var9 = Math.abs(getMyChar().cx - var12.ada);
+                  var10 = Math.abs(getMyChar().cy - var12.aea);
                   var11 = var9 > var10 ? var9 : var10;
-                  if ((var12.ara != 97 || ala().dla != 4) && (var12.ara != 96 || ala().dla != 5) && (var12.ara != 98 || ala().dla != 4) && (var12.ara != 167 || ala().dla != 4) && (var12.ara != 99 || ala().dla != 5) && (var12.ara != 166 || ala().dla != 5) && (var12.ara != 202 || var12.aga != 8 || var12.aea()) && (!GameScr.fua || var12.ava != 3) && var12.ara != 202 && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
+                  if ((var12.ara != 97 || getMyChar().dla != 4) && (var12.ara != 96 || getMyChar().dla != 5) && (var12.ara != 98 || getMyChar().dla != 4) && (var12.ara != 167 || getMyChar().dla != 4) && (var12.ara != 99 || getMyChar().dla != 5) && (var12.ara != 166 || getMyChar().dla != 5) && (var12.ara != 202 || var12.aga != 8 || var12.aea()) && (!GameScr.fua || var12.ava != 3) && var12.ara != 202 && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
                      this.dpa = var12;
                      var2[0] = var11;
                   }
@@ -7057,45 +7057,45 @@ public class fz extends dz {
 
                for(var7 = 0; var7 < GameScr.bna.size(); ++var7) {
                   var12 = (ac)GameScr.bna.elementAt(var7);
-                  var9 = Math.abs(ala().ala - var12.ada);
-                  var10 = Math.abs(ala().ama - var12.aea);
+                  var9 = Math.abs(getMyChar().cx - var12.ada);
+                  var10 = Math.abs(getMyChar().cy - var12.aea);
                   var11 = var9 > var10 ? var9 : var10;
-                  if ((var12.ara != 97 || ala().dla != 4) && (var12.ara != 96 || ala().dla != 5) && (var12.ara != 98 || ala().dla != 4) && (var12.ara != 167 || ala().dla != 4) && (var12.ara != 99 || ala().dla != 5) && (var12.ara != 166 || ala().dla != 5) && (var12.ara != 202 || var12.aga != 8 || var12.aea()) && (!GameScr.fua || var12.ava != 3) && var12.ara != 202 && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
+                  if ((var12.ara != 97 || getMyChar().dla != 4) && (var12.ara != 96 || getMyChar().dla != 5) && (var12.ara != 98 || getMyChar().dla != 4) && (var12.ara != 167 || getMyChar().dla != 4) && (var12.ara != 99 || getMyChar().dla != 5) && (var12.ara != 166 || getMyChar().dla != 5) && (var12.ara != 202 || var12.aga != 8 || var12.aea()) && (!GameScr.fua || var12.ava != 3) && var12.ara != 202 && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
                      this.dpa = var12;
                      var2[0] = var11;
                   }
                }
             }
 
-            var3 = ala().ala - 80;
-            var4 = ala().ala + 80;
-            var5 = ala().ama - 30;
-            var6 = ala().ama + 30;
-            if (this.dra != null && this.dra.aaa.aaa == 13) {
-               var3 = ala().ala - 20;
-               var4 = ala().ala + 20;
-               var5 = ala().ama - 10;
-               var6 = ala().ama + 10;
+            var3 = getMyChar().cx - 80;
+            var4 = getMyChar().cx + 80;
+            var5 = getMyChar().cy - 30;
+            var6 = getMyChar().cy + 30;
+            if (this.dra != null && this.dra.template.aaa == 13) {
+               var3 = getMyChar().cx - 20;
+               var4 = getMyChar().cx + 20;
+               var5 = getMyChar().cy - 10;
+               var6 = getMyChar().cy + 10;
             }
 
             if (this.dra == null) {
                for(var7 = 0; var7 < GameScr.boa.size(); ++var7) {
-                  if ((var13 = (av)GameScr.boa.elementAt(var7)).aqa != 15 && gn.ana != 1) {
-                     var9 = Math.abs(ala().ala - var13.ala);
-                     var10 = Math.abs(ala().ama - var13.ama);
+                  if ((var13 = (Npc)GameScr.boa.elementAt(var7)).aqa != 15 && TileMap.ana != 1) {
+                     var9 = Math.abs(getMyChar().cx - var13.cx);
+                     var10 = Math.abs(getMyChar().cy - var13.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     var3 = ala().ala - 80;
-                     var4 = ala().ala + 80;
-                     var5 = ala().ama - 30;
-                     var6 = ala().ama + 30;
-                     if (var13.aaa.aaa == 13) {
-                        var3 = ala().ala - 20;
-                        var4 = ala().ala + 20;
-                        var5 = ala().ama - 10;
-                        var6 = ala().ama + 10;
+                     var3 = getMyChar().cx - 80;
+                     var4 = getMyChar().cx + 80;
+                     var5 = getMyChar().cy - 30;
+                     var6 = getMyChar().cy + 30;
+                     if (var13.template.aaa == 13) {
+                        var3 = getMyChar().cx - 20;
+                        var4 = getMyChar().cx + 20;
+                        var5 = getMyChar().cy - 10;
+                        var6 = getMyChar().cy + 10;
                      }
 
-                     if (var3 <= var13.ala && var13.ala <= var4 && var5 <= var13.ama && var13.ama <= var6 && (this.dra == null || var11 < var2[1])) {
+                     if (var3 <= var13.cx && var13.cx <= var4 && var5 <= var13.cy && var13.cy <= var6 && (this.dra == null || var11 < var2[1])) {
                         if (GameScr.fua && GameScr.fza == 1) {
                            break;
                         }
@@ -7106,7 +7106,7 @@ public class fz extends dz {
                   }
                }
             } else {
-               if (var3 <= this.dra.ala && this.dra.ala <= var4 && var5 <= this.dra.ama && this.dra.ama <= var6) {
+               if (var3 <= this.dra.cx && this.dra.cx <= var4 && var5 <= this.dra.cy && this.dra.cy <= var6) {
                   this.apa(1);
                   return;
                }
@@ -7114,22 +7114,22 @@ public class fz extends dz {
                this.bba();
 
                for(var7 = 0; var7 < GameScr.boa.size(); ++var7) {
-                  if ((var13 = (av)GameScr.boa.elementAt(var7)).aqa != 15 && gn.ana != 1) {
-                     var9 = Math.abs(ala().ala - var13.ala);
-                     var10 = Math.abs(ala().ama - var13.ama);
+                  if ((var13 = (Npc)GameScr.boa.elementAt(var7)).aqa != 15 && TileMap.ana != 1) {
+                     var9 = Math.abs(getMyChar().cx - var13.cx);
+                     var10 = Math.abs(getMyChar().cy - var13.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     var3 = ala().ala - 80;
-                     var4 = ala().ala + 80;
-                     var5 = ala().ama - 30;
-                     var6 = ala().ama + 30;
-                     if (var13.aaa.aaa == 13) {
-                        var3 = ala().ala - 20;
-                        var4 = ala().ala + 20;
-                        var5 = ala().ama - 10;
-                        var6 = ala().ama + 10;
+                     var3 = getMyChar().cx - 80;
+                     var4 = getMyChar().cx + 80;
+                     var5 = getMyChar().cy - 30;
+                     var6 = getMyChar().cy + 30;
+                     if (var13.template.aaa == 13) {
+                        var3 = getMyChar().cx - 20;
+                        var4 = getMyChar().cx + 20;
+                        var5 = getMyChar().cy - 10;
+                        var6 = getMyChar().cy + 10;
                      }
 
-                     if (var3 <= var13.ala && var13.ala <= var4 && var5 <= var13.ama && var13.ama <= var6 && (this.dra == null || var11 < var2[1])) {
+                     if (var3 <= var13.cx && var13.cx <= var4 && var5 <= var13.cy && var13.cy <= var6 && (this.dra == null || var11 < var2[1])) {
                         if (GameScr.fua && GameScr.fza == 1) {
                            break;
                         }
@@ -7142,31 +7142,31 @@ public class fz extends dz {
             }
 
             if (this.dsa == null) {
-               for(var7 = 0; var7 < GameScr.bla.size(); ++var7) {
-                  if (!(var14 = (fz)GameScr.bla.elementAt(var7)).afa && var14.aqa != 15 && !var14.eea && var14.asa < -1 && this.hea == 0 && this.hfa == 0 && var14.aqa != 14 && var14.aqa != 5) {
-                     var9 = Math.abs(ala().ala - var14.ala);
-                     var10 = Math.abs(ala().ama - var14.ama);
+               for(var7 = 0; var7 < GameScr.vCharInMap.size(); ++var7) {
+                  if (!(var14 = (Char)GameScr.vCharInMap.elementAt(var7)).afa && var14.aqa != 15 && !var14.eea && var14.asa < -1 && this.hea == 0 && this.hfa == 0 && var14.aqa != 14 && var14.aqa != 5) {
+                     var9 = Math.abs(getMyChar().cx - var14.cx);
+                     var10 = Math.abs(getMyChar().cy - var14.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     if (var3 <= var14.ala && var14.ala <= var4 && var5 <= var14.ama && var14.ama <= var6 && (this.dsa == null || var11 < var2[2])) {
+                     if (var3 <= var14.cx && var14.cx <= var4 && var5 <= var14.cy && var14.cy <= var6 && (this.dsa == null || var11 < var2[2])) {
                         this.dsa = var14;
                         var2[2] = var11;
                      }
                   }
                }
             } else {
-               if (var3 <= this.dsa.ala && this.dsa.ala <= var4 && var5 <= this.dsa.ama && this.dsa.ama <= var6 && this.dsa.aqa != 15 && !this.dsa.eea) {
+               if (var3 <= this.dsa.cx && this.dsa.cx <= var4 && var5 <= this.dsa.cy && this.dsa.cy <= var6 && this.dsa.aqa != 15 && !this.dsa.eea) {
                   this.apa(2);
                   return;
                }
 
                this.dsa = null;
 
-               for(var7 = 0; var7 < GameScr.bla.size(); ++var7) {
-                  if (!(var14 = (fz)GameScr.bla.elementAt(var7)).afa && var14.aqa != 15 && !var14.eea && var14.asa < 0 && this.hea == 0 && this.hfa == 0 && var14.aqa != 14 && var14.aqa != 5) {
-                     var9 = Math.abs(ala().ala - var14.ala);
-                     var10 = Math.abs(ala().ama - var14.ama);
+               for(var7 = 0; var7 < GameScr.vCharInMap.size(); ++var7) {
+                  if (!(var14 = (Char)GameScr.vCharInMap.elementAt(var7)).afa && var14.aqa != 15 && !var14.eea && var14.asa < 0 && this.hea == 0 && this.hfa == 0 && var14.aqa != 14 && var14.aqa != 5) {
+                     var9 = Math.abs(getMyChar().cx - var14.cx);
+                     var10 = Math.abs(getMyChar().cy - var14.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     if (var3 <= var14.ala && var14.ala <= var4 && var5 <= var14.ama && var14.ama <= var6 && (this.dsa == null || var11 < var2[2])) {
+                     if (var3 <= var14.cx && var14.cx <= var4 && var5 <= var14.cy && var14.cy <= var6 && (this.dsa == null || var11 < var2[2])) {
                         this.dsa = var14;
                         var2[2] = var11;
                      }
@@ -7190,20 +7190,20 @@ public class fz extends dz {
                GameScr.bta();
             }
          } else {
-            var3 = ala().ala - ala().aga();
-            var4 = ala().ala + ala().aga();
-            var5 = ala().ama - ala().aha() - var1;
-            if ((var6 = ala().ama + ala().aha()) > ala().ama + 30) {
-               var6 = ala().ama + 30;
+            var3 = getMyChar().cx - getMyChar().aga();
+            var4 = getMyChar().cx + getMyChar().aga();
+            var5 = getMyChar().cy - getMyChar().aha() - var1;
+            if ((var6 = getMyChar().cy + getMyChar().aha()) > getMyChar().cy + 30) {
+               var6 = getMyChar().cy + 30;
             }
 
             if (this.dpa == null) {
                for(var7 = 0; var7 < GameScr.bna.size(); ++var7) {
                   var12 = (ac)GameScr.bna.elementAt(var7);
-                  var9 = Math.abs(ala().ala - var12.ada);
-                  var10 = Math.abs(ala().ama - var12.aea);
+                  var9 = Math.abs(getMyChar().cx - var12.ada);
+                  var10 = Math.abs(getMyChar().cy - var12.aea);
                   var11 = var9 > var10 ? var9 : var10;
-                  if ((var12.ara != 97 || ala().dla != 4) && (var12.ara != 96 || ala().dla != 5) && (var12.ara != 98 || ala().dla != 4) && (var12.ara != 167 || ala().dla != 4) && (var12.ara != 99 || ala().dla != 5) && (var12.ara != 166 || ala().dla != 5) && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
+                  if ((var12.ara != 97 || getMyChar().dla != 4) && (var12.ara != 96 || getMyChar().dla != 5) && (var12.ara != 98 || getMyChar().dla != 4) && (var12.ara != 167 || getMyChar().dla != 4) && (var12.ara != 99 || getMyChar().dla != 5) && (var12.ara != 166 || getMyChar().dla != 5) && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
                      this.dpa = var12;
                      var2[0] = var11;
                   }
@@ -7218,45 +7218,45 @@ public class fz extends dz {
 
                for(var7 = 0; var7 < GameScr.bna.size(); ++var7) {
                   var12 = (ac)GameScr.bna.elementAt(var7);
-                  var9 = Math.abs(ala().ala - var12.ada);
-                  var10 = Math.abs(ala().ama - var12.aea);
+                  var9 = Math.abs(getMyChar().cx - var12.ada);
+                  var10 = Math.abs(getMyChar().cy - var12.aea);
                   var11 = var9 > var10 ? var9 : var10;
-                  if ((var12.ara != 97 || ala().dla != 4) && (var12.ara != 96 || ala().dla != 5) && (var12.ara != 98 || ala().dla != 4) && (var12.ara != 167 || ala().dla != 4) && (var12.ara != 99 || ala().dla != 5) && (var12.ara != 166 || ala().dla != 5) && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
+                  if ((var12.ara != 97 || getMyChar().dla != 4) && (var12.ara != 96 || getMyChar().dla != 5) && (var12.ara != 98 || getMyChar().dla != 4) && (var12.ara != 167 || getMyChar().dla != 4) && (var12.ara != 99 || getMyChar().dla != 5) && (var12.ara != 166 || getMyChar().dla != 5) && var3 <= var12.ada && var12.ada <= var4 && var5 <= var12.aea && var12.aea <= var6 && var12.aga != 0 && var12.aga != 1 && (this.dpa == null || var11 < var2[0])) {
                      this.dpa = var12;
                      var2[0] = var11;
                   }
                }
             }
 
-            var3 = ala().ala - 80;
-            var4 = ala().ala + 80;
-            var5 = ala().ama - 30;
-            var6 = ala().ama + 30;
-            if (this.dra != null && this.dra.aaa.aaa == 13) {
-               var3 = ala().ala - 20;
-               var4 = ala().ala + 20;
-               var5 = ala().ama - 10;
-               var6 = ala().ama + 10;
+            var3 = getMyChar().cx - 80;
+            var4 = getMyChar().cx + 80;
+            var5 = getMyChar().cy - 30;
+            var6 = getMyChar().cy + 30;
+            if (this.dra != null && this.dra.template.aaa == 13) {
+               var3 = getMyChar().cx - 20;
+               var4 = getMyChar().cx + 20;
+               var5 = getMyChar().cy - 10;
+               var6 = getMyChar().cy + 10;
             }
 
             if (this.dra == null) {
                for(var7 = 0; var7 < GameScr.boa.size(); ++var7) {
-                  if ((var13 = (av)GameScr.boa.elementAt(var7)).aqa != 15) {
-                     var9 = Math.abs(ala().ala - var13.ala);
-                     var10 = Math.abs(ala().ama - var13.ama);
+                  if ((var13 = (Npc)GameScr.boa.elementAt(var7)).aqa != 15) {
+                     var9 = Math.abs(getMyChar().cx - var13.cx);
+                     var10 = Math.abs(getMyChar().cy - var13.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     var3 = ala().ala - 80;
-                     var4 = ala().ala + 80;
-                     var5 = ala().ama - 30;
-                     var6 = ala().ama + 30;
-                     if (var13.aaa.aaa == 13) {
-                        var3 = ala().ala - 20;
-                        var4 = ala().ala + 20;
-                        var5 = ala().ama - 10;
-                        var6 = ala().ama + 10;
+                     var3 = getMyChar().cx - 80;
+                     var4 = getMyChar().cx + 80;
+                     var5 = getMyChar().cy - 30;
+                     var6 = getMyChar().cy + 30;
+                     if (var13.template.aaa == 13) {
+                        var3 = getMyChar().cx - 20;
+                        var4 = getMyChar().cx + 20;
+                        var5 = getMyChar().cy - 10;
+                        var6 = getMyChar().cy + 10;
                      }
 
-                     if (var3 <= var13.ala && var13.ala <= var4 && var5 <= var13.ama && var13.ama <= var6 && (this.dra == null || var11 < var2[1])) {
+                     if (var3 <= var13.cx && var13.cx <= var4 && var5 <= var13.cy && var13.cy <= var6 && (this.dra == null || var11 < var2[1])) {
                         if (GameScr.fua && GameScr.fza == 1) {
                            break;
                         }
@@ -7267,7 +7267,7 @@ public class fz extends dz {
                   }
                }
             } else {
-               if (var3 <= this.dra.ala && this.dra.ala <= var4 && var5 <= this.dra.ama && this.dra.ama <= var6) {
+               if (var3 <= this.dra.cx && this.dra.cx <= var4 && var5 <= this.dra.cy && this.dra.cy <= var6) {
                   this.apa(1);
                   return;
                }
@@ -7275,22 +7275,22 @@ public class fz extends dz {
                this.bba();
 
                for(var7 = 0; var7 < GameScr.boa.size(); ++var7) {
-                  if ((var13 = (av)GameScr.boa.elementAt(var7)).aqa != 15) {
-                     var9 = Math.abs(ala().ala - var13.ala);
-                     var10 = Math.abs(ala().ama - var13.ama);
+                  if ((var13 = (Npc)GameScr.boa.elementAt(var7)).aqa != 15) {
+                     var9 = Math.abs(getMyChar().cx - var13.cx);
+                     var10 = Math.abs(getMyChar().cy - var13.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     var3 = ala().ala - 80;
-                     var4 = ala().ala + 80;
-                     var5 = ala().ama - 30;
-                     var6 = ala().ama + 30;
-                     if (var13.aaa.aaa == 13) {
-                        var3 = ala().ala - 20;
-                        var4 = ala().ala + 20;
-                        var5 = ala().ama - 10;
-                        var6 = ala().ama + 10;
+                     var3 = getMyChar().cx - 80;
+                     var4 = getMyChar().cx + 80;
+                     var5 = getMyChar().cy - 30;
+                     var6 = getMyChar().cy + 30;
+                     if (var13.template.aaa == 13) {
+                        var3 = getMyChar().cx - 20;
+                        var4 = getMyChar().cx + 20;
+                        var5 = getMyChar().cy - 10;
+                        var6 = getMyChar().cy + 10;
                      }
 
-                     if (var3 <= var13.ala && var13.ala <= var4 && var5 <= var13.ama && var13.ama <= var6 && (this.dra == null || var11 < var2[1])) {
+                     if (var3 <= var13.cx && var13.cx <= var4 && var5 <= var13.cy && var13.cy <= var6 && (this.dra == null || var11 < var2[1])) {
                         if (GameScr.fua && GameScr.fza == 1) {
                            break;
                         }
@@ -7302,14 +7302,14 @@ public class fz extends dz {
                }
             }
 
-            var3 = ala().ala - 40;
-            var4 = ala().ala + 40;
-            var5 = ala().ama - 30;
-            var6 = ala().ama + 30;
+            var3 = getMyChar().cx - 40;
+            var4 = getMyChar().cx + 40;
+            var5 = getMyChar().cy - 30;
+            var6 = getMyChar().cy + 30;
             if (this.dsa == null) {
-               for(var7 = 0; var7 < GameScr.bla.size(); ++var7) {
-                  if (!(var14 = (fz)GameScr.bla.elementAt(var7)).afa) {
-                     if (gn.aoa != 111) {
+               for(var7 = 0; var7 < GameScr.vCharInMap.size(); ++var7) {
+                  if (!(var14 = (Char)GameScr.vCharInMap.elementAt(var7)).afa) {
+                     if (TileMap.mapID != 111) {
                         if (var14.aqa == 15 || var14.eea || var14.dla == hza.dla || this.hea != 0 || this.hfa != 0 || var14.aqa == 14 || var14.aqa == 5) {
                            continue;
                         }
@@ -7331,26 +7331,26 @@ public class fz extends dz {
                         }
                      }
 
-                     var9 = Math.abs(ala().ala - var14.ala);
-                     var10 = Math.abs(ala().ama - var14.ama);
+                     var9 = Math.abs(getMyChar().cx - var14.cx);
+                     var10 = Math.abs(getMyChar().cy - var14.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     if (var3 <= var14.ala && var14.ala <= var4 && var5 <= var14.ama && var14.ama <= var6 && (this.dsa == null || var11 < var2[2])) {
+                     if (var3 <= var14.cx && var14.cx <= var4 && var5 <= var14.cy && var14.cy <= var6 && (this.dsa == null || var11 < var2[2])) {
                         this.dsa = var14;
                         var2[2] = var11;
                      }
                   }
                }
             } else {
-               if (var3 <= this.dsa.ala && this.dsa.ala <= var4 && var5 <= this.dsa.ama && this.dsa.ama <= var6 && this.dsa.aqa != 15 && !this.dsa.eea && this.dsa.aqa != 14 && this.dsa.aqa != 5) {
+               if (var3 <= this.dsa.cx && this.dsa.cx <= var4 && var5 <= this.dsa.cy && this.dsa.cy <= var6 && this.dsa.aqa != 15 && !this.dsa.eea && this.dsa.aqa != 14 && this.dsa.aqa != 5) {
                   this.apa(2);
                   return;
                }
 
                this.dsa = null;
 
-               for(var7 = 0; var7 < GameScr.bla.size(); ++var7) {
-                  if (!(var14 = (fz)GameScr.bla.elementAt(var7)).afa) {
-                     if (gn.aoa != 111) {
+               for(var7 = 0; var7 < GameScr.vCharInMap.size(); ++var7) {
+                  if (!(var14 = (Char)GameScr.vCharInMap.elementAt(var7)).afa) {
+                     if (TileMap.mapID != 111) {
                         if (var14.aqa == 15 || var14.eea || var14.dla == hza.dla || this.hea != 0 || this.hfa != 0 || var14.aqa == 14 || var14.aqa == 5) {
                            continue;
                         }
@@ -7372,10 +7372,10 @@ public class fz extends dz {
                         }
                      }
 
-                     var9 = Math.abs(ala().ala - var14.ala);
-                     var10 = Math.abs(ala().ama - var14.ama);
+                     var9 = Math.abs(getMyChar().cx - var14.cx);
+                     var10 = Math.abs(getMyChar().cy - var14.cy);
                      var11 = var9 > var10 ? var9 : var10;
-                     if (var3 <= var14.ala && var14.ala <= var4 && var5 <= var14.ama && var14.ama <= var6 && (this.dsa == null || var11 < var2[2])) {
+                     if (var3 <= var14.cx && var14.cx <= var4 && var5 <= var14.cy && var14.cy <= var6 && (this.dsa == null || var11 < var2[2])) {
                         this.dsa = var14;
                         var2[2] = var11;
                      }
@@ -7424,12 +7424,12 @@ public class fz extends dz {
       }
    }
 
-   public static boolean aaa(fz var0) {
+   public static boolean aaa(Char var0) {
       int var1 = GameScr.aia;
-      int var2 = GameScr.aia + ab.aza;
+      int var2 = GameScr.aia + GameCanvas.aza;
       int var3 = GameScr.aja + 10;
       int var4 = GameScr.aja + GameScr.aca;
-      return var0.aqa != 15 && !var0.eea && var1 <= var0.ala && var0.ala <= var2 && var3 <= var0.ama && var0.ama <= var4;
+      return var0.aqa != 15 && !var0.eea && var1 <= var0.cx && var0.cx <= var2 && var3 <= var0.cy && var0.cy <= var4;
    }
 
    public final void baa() {
@@ -7437,19 +7437,19 @@ public class fz extends dz {
          this.dsa = null;
       }
 
-      if (ala().hba == null && ala().haa == null) {
+      if (getMyChar().hba == null && getMyChar().haa == null) {
          this.dua.removeAllElements();
          int var1 = 0;
          int var2 = GameScr.aia + 10;
-         int var3 = GameScr.aia + ab.aza - 10;
+         int var3 = GameScr.aia + GameCanvas.aza - 10;
          int var4 = GameScr.aja + 10;
          int var5 = GameScr.aja + GameScr.aca;
          int var6;
-         fz var7;
+         Char var7;
          am var8;
          ac var9;
-         av var10;
-         if (gn.ana != 3 && gn.aoa != 111) {
+         Npc var10;
+         if (TileMap.ana != 3 && TileMap.mapID != 111) {
             for(var6 = 0; var6 < GameScr.bma.size(); ++var6) {
                var8 = (am)GameScr.bma.elementAt(var6);
                if (var2 <= var8.aaa && var8.aaa <= var3 && var4 <= var8.aba && var8.aba <= var5) {
@@ -7461,7 +7461,7 @@ public class fz extends dz {
             }
 
             for(var6 = 0; var6 < GameScr.bna.size(); ++var6) {
-               if (((var9 = (ac)GameScr.bna.elementAt(var6)).ara != 97 || ala().dla != 4) && (var9.ara != 96 || ala().dla != 5) && (var9.ara != 98 || ala().dla != 4) && (var9.ara != 167 || ala().dla != 4) && (var9.ara != 99 || ala().dla != 5) && (var9.ara != 166 || ala().dla != 5) && (var9.ara != 202 || var9.aga != 8 || var9.aea()) && var9.aga != 1 && var9.aga != 0 && var2 <= var9.ada && var9.ada <= var3 && var4 <= var9.aea && var9.aea <= var5) {
+               if (((var9 = (ac)GameScr.bna.elementAt(var6)).ara != 97 || getMyChar().dla != 4) && (var9.ara != 96 || getMyChar().dla != 5) && (var9.ara != 98 || getMyChar().dla != 4) && (var9.ara != 167 || getMyChar().dla != 4) && (var9.ara != 99 || getMyChar().dla != 5) && (var9.ara != 166 || getMyChar().dla != 5) && (var9.ara != 202 || var9.aga != 8 || var9.aea()) && var9.aga != 1 && var9.aga != 0 && var2 <= var9.ada && var9.ada <= var3 && var4 <= var9.aea && var9.aea <= var5) {
                   this.dua.addElement(var9);
                   if (this.dpa != null && var9.equals(this.dpa)) {
                      var1 = this.dua.size();
@@ -7470,7 +7470,7 @@ public class fz extends dz {
             }
 
             for(var6 = 0; var6 < GameScr.boa.size(); ++var6) {
-               if ((var10 = (av)GameScr.boa.elementAt(var6)).aqa != 15 && var2 <= var10.ala && var10.ala <= var3 && var4 <= var10.ama && var10.ama <= var5) {
+               if ((var10 = (Npc)GameScr.boa.elementAt(var6)).aqa != 15 && var2 <= var10.cx && var10.cx <= var3 && var4 <= var10.cy && var10.cy <= var5) {
                   this.dua.addElement(var10);
                   if (this.dra != null && var10.equals(this.dra)) {
                      var1 = this.dua.size();
@@ -7478,8 +7478,8 @@ public class fz extends dz {
                }
             }
 
-            for(var6 = 0; var6 < GameScr.bla.size(); ++var6) {
-               if (!(var7 = (fz)GameScr.bla.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.ala && var7.ala <= var3 && var4 <= var7.ama && var7.ama <= var5) {
+            for(var6 = 0; var6 < GameScr.vCharInMap.size(); ++var6) {
+               if (!(var7 = (Char)GameScr.vCharInMap.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.cx && var7.cx <= var3 && var4 <= var7.cy && var7.cy <= var5) {
                   this.dua.addElement(var7);
                   if (this.dsa != null && var7.equals(this.dsa)) {
                      var1 = this.dua.size();
@@ -7509,20 +7509,20 @@ public class fz extends dz {
                return;
             }
 
-            if (this.dua.elementAt(var1) instanceof av) {
+            if (this.dua.elementAt(var1) instanceof Npc) {
                this.dpa = null;
                this.bba();
-               this.dra = (av)this.dua.elementAt(var1);
+               this.dra = (Npc)this.dua.elementAt(var1);
                this.dsa = null;
                this.dta = null;
                hda = true;
                return;
             }
 
-            if (this.dua.elementAt(var1) instanceof fz) {
+            if (this.dua.elementAt(var1) instanceof Char) {
                this.dpa = null;
                this.bba();
-               this.dsa = (fz)this.dua.elementAt(var1);
+               this.dsa = (Char)this.dua.elementAt(var1);
                this.dta = null;
                hda = true;
                return;
@@ -7537,11 +7537,11 @@ public class fz extends dz {
                return;
             }
          } else {
-            if (gn.aoa != 98 && gn.aoa != 104) {
-               for(var6 = 0; var6 < GameScr.bla.size(); ++var6) {
-                  if (!(var7 = (fz)GameScr.bla.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.ala && var7.ala <= var3 && var4 <= var7.ama && var7.ama <= var5) {
-                     if (gn.aoa != 111) {
-                        if (var7.dla != ala().dla && var7.aqa != 14 && var7.aqa != 5) {
+            if (TileMap.mapID != 98 && TileMap.mapID != 104) {
+               for(var6 = 0; var6 < GameScr.vCharInMap.size(); ++var6) {
+                  if (!(var7 = (Char)GameScr.vCharInMap.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.cx && var7.cx <= var3 && var4 <= var7.cy && var7.cy <= var5) {
+                     if (TileMap.mapID != 111) {
+                        if (var7.dla != getMyChar().dla && var7.aqa != 14 && var7.aqa != 5) {
                            this.dua.addElement(var7);
                            if (this.dsa != null && var7.equals(this.dsa)) {
                               var1 = this.dua.size();
@@ -7575,8 +7575,8 @@ public class fz extends dz {
                   }
                }
             } else {
-               for(var6 = 0; var6 < GameScr.bla.size(); ++var6) {
-                  if (!(var7 = (fz)GameScr.bla.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.ala && var7.ala <= var3 && var4 <= var7.ama && var7.ama <= var5) {
+               for(var6 = 0; var6 < GameScr.vCharInMap.size(); ++var6) {
+                  if (!(var7 = (Char)GameScr.vCharInMap.elementAt(var6)).afa && var7.aqa != 15 && !var7.eea && var2 <= var7.cx && var7.cx <= var3 && var4 <= var7.cy && var7.cy <= var5) {
                      this.dua.addElement(var7);
                      if (this.dsa != null && var7.equals(this.dsa)) {
                         var1 = this.dua.size();
@@ -7596,7 +7596,7 @@ public class fz extends dz {
             }
 
             for(var6 = 0; var6 < GameScr.bna.size(); ++var6) {
-               if (((var9 = (ac)GameScr.bna.elementAt(var6)).ara != 97 || ala().dla != 4) && (var9.ara != 96 || ala().dla != 5) && (var9.ara != 98 || ala().dla != 4) && (var9.ara != 167 || ala().dla != 4) && (var9.ara != 99 || ala().dla != 5) && (var9.ara != 166 || ala().dla != 5) && var9.aga != 1 && var9.aga != 0 && var2 <= var9.ada && var9.ada <= var3 && var4 <= var9.aea && var9.aea <= var5) {
+               if (((var9 = (ac)GameScr.bna.elementAt(var6)).ara != 97 || getMyChar().dla != 4) && (var9.ara != 96 || getMyChar().dla != 5) && (var9.ara != 98 || getMyChar().dla != 4) && (var9.ara != 167 || getMyChar().dla != 4) && (var9.ara != 99 || getMyChar().dla != 5) && (var9.ara != 166 || getMyChar().dla != 5) && var9.aga != 1 && var9.aga != 0 && var2 <= var9.ada && var9.ada <= var3 && var4 <= var9.aea && var9.aea <= var5) {
                   this.dua.addElement(var9);
                   if (this.dpa != null && var9.equals(this.dpa)) {
                      var1 = this.dua.size();
@@ -7605,7 +7605,7 @@ public class fz extends dz {
             }
 
             for(var6 = 0; var6 < GameScr.boa.size(); ++var6) {
-               if ((var10 = (av)GameScr.boa.elementAt(var6)).aqa != 15 && var2 <= var10.ala && var10.ala <= var3 && var4 <= var10.ama && var10.ama <= var5) {
+               if ((var10 = (Npc)GameScr.boa.elementAt(var6)).aqa != 15 && var2 <= var10.cx && var10.cx <= var3 && var4 <= var10.cy && var10.cy <= var5) {
                   this.dua.addElement(var10);
                   if (this.dra != null && var10.equals(this.dra)) {
                      var1 = this.dua.size();
@@ -7626,19 +7626,19 @@ public class fz extends dz {
                var1 = 0;
             }
 
-            if (this.dua.elementAt(var1) instanceof fz) {
+            if (this.dua.elementAt(var1) instanceof Char) {
                this.dpa = null;
                this.bba();
-               this.dsa = (fz)this.dua.elementAt(var1);
+               this.dsa = (Char)this.dua.elementAt(var1);
                this.dta = null;
                hda = true;
                return;
             }
 
-            if (this.dua.elementAt(var1) instanceof av) {
+            if (this.dua.elementAt(var1) instanceof Npc) {
                this.dpa = null;
                this.bba();
-               this.dra = (av)this.dua.elementAt(var1);
+               this.dra = (Npc)this.dua.elementAt(var1);
                this.dsa = null;
                this.dta = null;
                hda = true;
@@ -7676,20 +7676,20 @@ public class fz extends dz {
    }
 
    private void caa() {
-      if (!ab.aaa) {
-         if (gn.aaa(this.ala, this.ama + 1, 1024)) {
-            gn.aba(this.ala, this.ama + 1);
-            gn.aba(this.ala, this.ama - 2);
+      if (!GameCanvas.aaa) {
+         if (TileMap.aaa(this.cx, this.cy + 1, 1024)) {
+            TileMap.aba(this.cx, this.cy + 1);
+            TileMap.aba(this.cx, this.cy - 2);
          }
 
-         if (gn.aaa(this.ala - gn.aia, this.ama + 1, 512)) {
-            gn.aca(this.ala - gn.aia, this.ama + 1);
-            gn.aca(this.ala - gn.aia, this.ama - 2);
+         if (TileMap.aaa(this.cx - TileMap.aia, this.cy + 1, 512)) {
+            TileMap.aca(this.cx - TileMap.aia, this.cy + 1);
+            TileMap.aca(this.cx - TileMap.aia, this.cy - 2);
          }
 
-         if (gn.aaa(this.ala + gn.aia, this.ama + 1, 512)) {
-            gn.aca(this.ala + gn.aia, this.ama + 1);
-            gn.aca(this.ala + gn.aia, this.ama - 2);
+         if (TileMap.aaa(this.cx + TileMap.aia, this.cy + 1, 512)) {
+            TileMap.aca(this.cx + TileMap.aia, this.cy + 1);
+            TileMap.aca(this.cx + TileMap.aia, this.cy - 2);
          }
       }
 
@@ -7698,8 +7698,8 @@ public class fz extends dz {
    public final void aba(fe var1) {
       try {
          this.aaa(var1);
-         ala().bfa = var1.ada.readShort();
-         ala().bga = var1.ada.readShort();
+         getMyChar().bfa = var1.ada.readShort();
+         getMyChar().bga = var1.ada.readShort();
          int var2 = var1.ada.readUnsignedByte();
          gg var3;
          (var3 = this.dda[var2]).ana = 3;
@@ -7720,8 +7720,8 @@ public class fz extends dz {
    public final void aca(fe var1) {
       try {
          this.aaa(var1);
-         ala().bfa = var1.ada.readShort();
-         ala().bga = var1.ada.readShort();
+         getMyChar().bfa = var1.ada.readShort();
+         getMyChar().bga = var1.ada.readShort();
          gg var2;
          (var2 = this.dca[var1.ada.readUnsignedByte()]).ana = 3;
          if (var2.ada == 1) {
@@ -7734,7 +7734,7 @@ public class fz extends dz {
 
          this.dca[var2.ada] = null;
          var2.ada = var1.ada.readUnsignedByte();
-         ala().gsa = var1.ada.readShort();
+         getMyChar().gsa = var1.ada.readShort();
          this.arrItemBag[var2.ada] = var2;
          GameScr.ava().ala = GameScr.ava().ama = null;
          GameScr.ava().bra();
@@ -7825,12 +7825,12 @@ public class fz extends dz {
          var3.aoa = var0.ada.readBoolean();
          var3.aea = 1;
          if (var1) {
-            ala().cqa = var0.ada.readInt();
+            getMyChar().cqa = var0.ada.readInt();
          } else {
-            ala().csa = var0.ada.readInt();
+            getMyChar().csa = var0.ada.readInt();
 
             try {
-               ala().cqa = var0.ada.readInt();
+               getMyChar().cqa = var0.ada.readInt();
             } catch (Exception var4) {
             }
          }
@@ -7840,9 +7840,9 @@ public class fz extends dz {
          GameScr.gla = 0;
          GameScr.ava().ala = GameScr.ava().ama = null;
          GameScr.ava().bka();
-         ab.ama();
+         GameCanvas.ama();
          if (var6 == 1) {
-            ala().arrItemBag[var3.ada] = var3;
+            getMyChar().arrItemBag[var3.ada] = var3;
             be.aaa(er.fua + " " + var3.aaa.ada);
          } else {
             be.aaa(er.fta + " " + gi.aaa((short)(var3.aaa.aaa + 1)).ada + " " + er.fwa + " " + var3.aaa.ada, 25, fw.ana);
@@ -7974,12 +7974,12 @@ public class fz extends dz {
 
       if (var1 <= 0) {
          if (this.cla) {
-            GameScr.aaa("", this.ala, this.ama - this.cja, 7);
+            GameScr.aaa("", this.cx, this.cy - this.cja, 7);
          } else {
-            GameScr.aaa("", this.ala, this.ama - this.cja, 4);
+            GameScr.aaa("", this.cx, this.cy - this.cja, 4);
          }
       } else {
-         GameScr.aaa("-".concat(String.valueOf(var1)), this.ala, this.ama - this.cja, 0);
+         GameScr.aaa("-".concat(String.valueOf(var1)), this.cx, this.cy - this.cja, 0);
       }
 
       if (var1 > 0) {
@@ -7988,12 +7988,12 @@ public class fz extends dz {
 
       if (var3) {
          if (var4 == 114) {
-            ef.aaa(32, this.ala, this.ama - this.hpa, 1);
+            ef.aaa(32, this.cx, this.cy - this.hpa, 1);
             return;
          }
 
          if (var4 == 115) {
-            ef.aaa(85, this.ala, this.ama, 1);
+            ef.aaa(85, this.cx, this.cy, 1);
             return;
          }
 
@@ -8050,14 +8050,14 @@ public class fz extends dz {
    }
 
    private static boolean cca() {
-      return gn.aoa == 1 || gn.aoa == 27 || gn.aoa == 72 || gn.aoa == 10 || gn.aoa == 17 || gn.aoa == 22 || gn.aoa == 32 || gn.aoa == 38 || gn.aoa == 43 || gn.aoa == 48;
+      return TileMap.mapID == 1 || TileMap.mapID == 27 || TileMap.mapID == 72 || TileMap.mapID == 10 || TileMap.mapID == 17 || TileMap.mapID == 22 || TileMap.mapID == 32 || TileMap.mapID == 38 || TileMap.mapID == 43 || TileMap.mapID == 48;
    }
 
-   public static boolean aba(fz var0) {
+   public static boolean aba(Char var0) {
       if (var0 != null && var0.afa) {
          return false;
-      } else if (var0 != null && ala().cya != null && ala().cya.aaa.ada != 2 && ala().cya.aaa.ada != 3 && (ala().cya.aaa.ada != 4 || var0.aqa == 14 || var0.aqa == 5)) {
-         if ((ala().dla == 4 && var0.dla == 5 || ala().dla == 5 && var0.dla == 4) && !aca(var0) && !cca() || var0.dla == 3 && !aca(var0) && !cca() || ala().dla == 3 && !aca(var0) && !cca() || ala().dla == 1 && var0.dla == 1 && !aca(var0) && !cca() || ala().dya >= 0 && ala().dya == var0.asa || ala().dza >= 0 && ala().dza == var0.asa && !cca() || var0.dza >= 0 && var0.dza == ala().asa && !cca()) {
+      } else if (var0 != null && getMyChar().cya != null && getMyChar().cya.aaa.ada != 2 && getMyChar().cya.aaa.ada != 3 && (getMyChar().cya.aaa.ada != 4 || var0.aqa == 14 || var0.aqa == 5)) {
+         if ((getMyChar().dla == 4 && var0.dla == 5 || getMyChar().dla == 5 && var0.dla == 4) && !aca(var0) && !cca() || var0.dla == 3 && !aca(var0) && !cca() || getMyChar().dla == 3 && !aca(var0) && !cca() || getMyChar().dla == 1 && var0.dla == 1 && !aca(var0) && !cca() || getMyChar().dya >= 0 && getMyChar().dya == var0.asa || getMyChar().dza >= 0 && getMyChar().dza == var0.asa && !cca() || var0.dza >= 0 && var0.dza == getMyChar().asa && !cca()) {
             return var0.aqa != 14 && var0.aqa != 5;
          } else {
             return false;
@@ -8067,7 +8067,7 @@ public class fz extends dz {
       }
    }
 
-   private static boolean aca(fz var0) {
+   private static boolean aca(Char var0) {
       for(int var1 = 0; var1 < GameScr.bfa.size(); ++var1) {
          ep var2 = (ep)GameScr.bfa.elementAt(var1);
          if (var0.asa == var2.aaa) {
@@ -8079,16 +8079,16 @@ public class fz extends dz {
    }
 
    public static void bea() {
-      ala().aca(21);
-      ala().cza = null;
+      getMyChar().aca(21);
+      getMyChar().cza = null;
 
-      for(int var0 = 0; var0 < ala().arrItemBag.length; ++var0) {
-         if (ala().arrItemBag[var0] != null && (ala().arrItemBag[var0].aaa.aba == 25 || ala().arrItemBag[var0].aaa.aba == 23 || ala().arrItemBag[var0].aaa.aba == 24)) {
-            ala().arrItemBag[var0] = null;
+      for(int var0 = 0; var0 < getMyChar().arrItemBag.length; ++var0) {
+         if (getMyChar().arrItemBag[var0] != null && (getMyChar().arrItemBag[var0].aaa.aba == 25 || getMyChar().arrItemBag[var0].aaa.aba == 23 || getMyChar().arrItemBag[var0].aaa.aba == 24)) {
+            getMyChar().arrItemBag[var0] = null;
          }
       }
 
-      av.aaa();
+      Npc.aaa();
    }
 
    public static int bfa() {
@@ -8112,7 +8112,7 @@ public class fz extends dz {
    }
 
    public static int bia() {
-      gg[] var0 = ala().arrItemBag;
+      gg[] var0 = getMyChar().arrItemBag;
       int var1 = 0;
 
       for(int var2 = 0; var2 < var0.length; ++var2) {
@@ -8126,7 +8126,7 @@ public class fz extends dz {
    }
 
    public static gg aba(int var0, int var1) {
-      gg[] var2 = ala().arrItemBag;
+      gg[] var2 = getMyChar().arrItemBag;
 
       for(int var3 = 0; var3 < var2.length; ++var3) {
          gg var4;
@@ -8139,7 +8139,7 @@ public class fz extends dz {
    }
 
    public static gg afa(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
 
       for(int var2 = 0; var2 < var1.length; ++var2) {
          gg var3;
@@ -8152,7 +8152,7 @@ public class fz extends dz {
    }
 
    public static gg aga(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
 
       for(int var2 = 0; var2 < var1.length; ++var2) {
          gg var3;
@@ -8165,7 +8165,7 @@ public class fz extends dz {
    }
 
    public static ev aha(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
       ev var2 = new ev();
 
       for(int var3 = 0; var3 < var1.length; ++var3) {
@@ -8179,7 +8179,7 @@ public class fz extends dz {
    }
 
    public static int aia(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
 
       for(int var2 = 0; var2 < var1.length; ++var2) {
          if (var1[var2] != null && var1[var2].aaa.aaa == var0) {
@@ -8191,7 +8191,7 @@ public class fz extends dz {
    }
 
    public static boolean aja(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
 
       for(int var2 = 0; var2 < var1.length; ++var2) {
          if (var1[var2] != null && var1[var2].aaa.aaa == var0) {
@@ -8203,7 +8203,7 @@ public class fz extends dz {
    }
 
    public static int aka(int var0) {
-      gg[] var1 = ala().arrItemBag;
+      gg[] var1 = getMyChar().arrItemBag;
       int var2 = 0;
 
       for(int var3 = 0; var3 < var1.length; ++var3) {
@@ -8220,7 +8220,7 @@ public class fz extends dz {
    }
 
    public static int bja() {
-      gg[] var0 = ala().arrItemBag;
+      gg[] var0 = getMyChar().arrItemBag;
       int var1 = 0;
 
       for(int var2 = 0; var2 < var0.length; ++var2) {
@@ -8233,7 +8233,7 @@ public class fz extends dz {
    }
 
    public static int bka() {
-      gg[] var0 = ala().dba;
+      gg[] var0 = getMyChar().dba;
       int var1 = 0;
       if (var0 != null) {
          for(int var2 = 0; var2 < var0.length; ++var2) {
@@ -8247,13 +8247,13 @@ public class fz extends dz {
    }
 
    public static gg ala(int var0) {
-      if (ala().dba == null) {
+      if (getMyChar().dba == null) {
          Service.aaa().aha(4);
          LockGame.ata();
-         System.out.println("Get box " + ala().dba);
+         System.out.println("Get box " + getMyChar().dba);
       }
 
-      gg[] var1 = ala().dba;
+      gg[] var1 = getMyChar().dba;
 
       for(int var2 = 0; var2 < var1.length; ++var2) {
          gg var3;
@@ -8266,9 +8266,9 @@ public class fz extends dz {
    }
 
    public static aj ama(int var0) {
-      for(int var1 = 0; var1 < ala().fza.size(); ++var1) {
+      for(int var1 = 0; var1 < getMyChar().fza.size(); ++var1) {
          aj var2;
-         if ((var2 = (aj)ala().fza.elementAt(var1)) != null && var2.aaa == var0) {
+         if ((var2 = (aj)getMyChar().fza.elementAt(var1)) != null && var2.aaa == var0) {
             return var2;
          }
       }
@@ -8276,22 +8276,22 @@ public class fz extends dz {
       return null;
    }
 
-   public static boolean aca(int var0, int var1) {
-      fz var2 = ala();
+   public static boolean charMove(int var0, int var1) {
+      Char var2 = getMyChar();
       if (var0 == -1) {
-         var0 = var2.ala;
+         var0 = var2.cx;
       }
 
       if (var1 == -1) {
-         var1 = var2.ama;
+         var1 = var2.cy;
       }
 
-      if (var0 == var2.ala && var1 == var2.ama) {
+      if (var0 == var2.cx && var1 == var2.cy) {
          return false;
       } else {
          int var3 = 0;
-         int var4 = var2.ala;
-         int var5 = gn.aaa(var0, var1 - 12, 64) ? gn.aba(var1) - 24 : var1;
+         int var4 = var2.cx;
+         int var5 = TileMap.aaa(var0, var1 - 12, 64) ? TileMap.aba(var1) - 24 : var1;
          int var6;
          if (var0 > var4) {
             while(true) {
@@ -8300,7 +8300,7 @@ public class fz extends dz {
                   break;
                }
 
-               var6 = gn.aea(var4, var5);
+               var6 = TileMap.aea(var4, var5);
                Service.aaa().aba(var4, var6);
                ++var3;
                if (var3 > 50) {
@@ -8318,7 +8318,7 @@ public class fz extends dz {
                   break;
                }
 
-               var6 = gn.aea(var4, var5);
+               var6 = TileMap.aea(var4, var5);
                Service.aaa().aba(var4, var6);
                ++var3;
                if (var3 > 50) {
@@ -8333,38 +8333,38 @@ public class fz extends dz {
 
          Service.aaa().aba(var0, var1);
          var2.ida = System.currentTimeMillis();
-         var2.ala = var2.gea = var0;
-         var2.ama = var2.gfa = var1;
+         var2.cx = var2.gea = var0;
+         var2.cy = var2.gfa = var1;
          return true;
       }
    }
 
    public static boolean ada(int var0, int var1) {
       if (var0 == -1) {
-         var0 = hza.ala;
+         var0 = hza.cx;
       }
 
       if (var1 == -1) {
-         var1 = hza.ama;
+         var1 = hza.cy;
       }
 
       int[] var2 = new int[2];
-      return !gn.aaa(var0, var1, var2) ? false : aca(var2[0], var2[1]);
+      return !TileMap.aaa(var0, var1, var2) ? false : charMove(var2[0], var2[1]);
    }
 
    public static void aea(int var0, int var1) {
-      int var4 = ci.aea(var0 - hza.ala) / 50;
-      int var3 = ci.aea(var1 - hza.ama) / 10;
-      int var2 = hza.ala;
-      int var5 = hza.ama;
+      int var4 = ci.aea(var0 - hza.cx) / 50;
+      int var3 = ci.aea(var1 - hza.cy) / 10;
+      int var2 = hza.cx;
+      int var5 = hza.cy;
       if (var3 < 3) {
-         Service.aaa().aba(hza.ala, var5 = var1 - 60);
+         Service.aaa().aba(hza.cx, var5 = var1 - 60);
          var3 = 3;
       }
 
       int var6;
       for(var6 = 0; var6 < var4; ++var6) {
-         if (var0 > hza.ala) {
+         if (var0 > hza.cx) {
             var2 += 50;
          } else {
             var2 -= 50;
@@ -8376,7 +8376,7 @@ public class fz extends dz {
       Service.aaa().aba(var0, var5);
 
       for(var6 = 0; var6 < var3; ++var6) {
-         if (var1 > hza.ama) {
+         if (var1 > hza.cy) {
             var5 += 10;
          } else {
             var5 -= 10;
@@ -8387,10 +8387,10 @@ public class fz extends dz {
 
       Service.aaa().aba(var0, var1);
       hza.ida = System.currentTimeMillis();
-      fz var10000 = hza;
-      var10000.ala = var10000.gea = var0;
+      Char var10000 = hza;
+      var10000.cx = var10000.gea = var0;
       var10000 = hza;
-      var10000.ama = var10000.gfa = var1;
+      var10000.cy = var10000.gfa = var1;
    }
 
    public static void bla() {

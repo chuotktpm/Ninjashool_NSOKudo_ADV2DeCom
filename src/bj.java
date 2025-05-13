@@ -16,10 +16,10 @@ public final class bj extends Auto {
    public final void aaa() {
       if (Auto.aka()) {
          Auto.aaa(true);
-      } else if (super.aga != gn.aoa) {
-         this.aaa(super.aga, super.aha, super.aja, super.aka);
+      } else if (super.aga != TileMap.mapID) {
+         this.goMap(super.aga, super.aha, super.aja, super.aka);
       } else {
-         fz var2 = fz.ala();
+         Char var2 = Char.getMyChar();
          if (!Auto.aoa()) {
             label387: {
                ac var3;
@@ -94,7 +94,7 @@ public final class bj extends Auto {
                   }
                }
 
-               if (fz.fla && GameScr.bfa.size() > 0 && var2.cua.aaa == 6 && var2.bba > 0) {
+               if (Char.fla && GameScr.bfa.size() > 0 && var2.cua.aaa == 6 && var2.bba > 0) {
                   for(int var11 = 0; var11 < var2.cwa.size(); ++var11) {
                      bc var13;
                      if ((var13 = (bc)var2.cwa.elementAt(var11)) != null && var13.aaa.ada == 4) {
@@ -102,9 +102,9 @@ public final class bj extends Auto {
                            for(int var14 = 0; var14 < GameScr.bfa.size(); ++var14) {
                               ep var7;
                               if ((var7 = (ep)GameScr.bfa.elementAt(var14)).aaa != var2.asa && var7.afa != null && var7.afa.bba <= 0) {
-                                 fz var8 = var7.afa;
-                                 if (Math.abs(var2.ala - var8.ala) > 50 || Math.abs(var2.ama - var8.ama) > 50) {
-                                    fz.aca(var8.ala, var8.ama);
+                                 Char var8 = var7.afa;
+                                 if (Math.abs(var2.cx - var8.cx) > 50 || Math.abs(var2.cy - var8.cy) > 50) {
+                                    Char.charMove(var8.cx, var8.cy);
                                  }
 
                                  Thread.sleep(500L);
@@ -124,7 +124,7 @@ public final class bj extends Auto {
 
                if (Auto.aqa != null && var3 != null && var3.axa && var3.ara == this.aaa && var3.ava == this.aba) {
                   bc var12;
-                  if ((var12 = Auto.aqa).aaa() && fz.eia) {
+                  if ((var12 = Auto.aqa).aaa() && Char.eia) {
                      label371: {
                         var5 = 0;
 
@@ -137,7 +137,7 @@ public final class bj extends Auto {
 
                            if ((var15 = (bc)var2.cwa.elementAt(var5)) != null && System.currentTimeMillis() - var15.afa >= (long)var15.aea - 300L) {
                               if (var15.aaa.ada == 2) {
-                                 if ((var2.aca == null && fz.eja || var15.aaa.aaa < 67 || var15.aaa.aaa > 72) && (fz.eka || var15.aaa.aaa != 31) && (var15.aaa.aaa != 15 || var2.bba < var2.bea * fz.fra / 100)) {
+                                 if ((var2.aca == null && Char.eja || var15.aaa.aaa < 67 || var15.aaa.aaa > 72) && (Char.eka || var15.aaa.aaa != 31) && (var15.aaa.aaa != 15 || var2.bba < var2.bea * Char.fra / 100)) {
                                     int var16 = (int)(System.currentTimeMillis() / 1000L);
                                     int var17 = 0;
 
@@ -155,7 +155,7 @@ public final class bj extends Auto {
                                     }
                                  }
                               } else if (var15.aaa.ada == 3 && var3.ava == 0 && var3.aba > var3.aca / 2) {
-                                 if (var15.aaa.aaa != 4 || fz.ela && var2.bba < var2.bea * fz.fra / 100) {
+                                 if (var15.aaa.aaa != 4 || Char.ela && var2.bba < var2.bea * Char.fra / 100) {
                                     break;
                                  }
                               } else if ((var15.aaa.aaa == 7 || var15.aaa.aaa == 16 || var15.aaa.aaa == 25 || var15.aaa.aaa == 34 || var15.aaa.aaa == 43) && (var3.ava != 0 || var3.aba >= var3.aca / 2) && (var15.aaa.aaa != 7 && var15.aaa.aaa != 16 || !var3.aoa) && (var15.aaa.aaa != 25 && var15.aaa.aaa != 34 || var3.apa) && (var15.aaa.aaa != 43 || var3.aqa)) {
@@ -171,7 +171,7 @@ public final class bj extends Auto {
                      }
                   }
 
-                  if ((var12.aaa.ada == 1 || var12.aaa.ada == 3) && (ci.aea(var2.ala - var3.aha) > var12.aga || ci.aea(var2.ama - var3.aia) > var12.aha)) {
+                  if ((var12.aaa.ada == 1 || var12.aaa.ada == 3) && (ci.aea(var2.cx - var3.aha) > var12.aga || ci.aea(var2.cy - var3.aia) > var12.aha)) {
                      this.aca(var3);
                   }
 

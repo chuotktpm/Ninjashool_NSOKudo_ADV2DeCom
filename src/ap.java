@@ -11,7 +11,7 @@ public final class ap extends Auto {
 
       this.aga = Code.bwa;
       this.aha = Code.bua;
-      this.aia = gn.aga(Code.bwa);
+      this.aia = TileMap.aga(Code.bwa);
    }
 
    protected final void aaa() {
@@ -23,13 +23,13 @@ public final class ap extends Auto {
          } catch (InterruptedException var1) {
          }
       } else {
-         if (this.aga == gn.aoa && this.aha == gn.ala) {
-            if (fz.ala().ala != Code.bxa || fz.ala().ama != Code.bya) {
+         if (this.aga == TileMap.mapID && this.aha == TileMap.zoneID) {
+            if (Char.getMyChar().cx != Code.bxa || Char.getMyChar().cy != Code.bya) {
                if (Code.bxa != -1 && Code.bya != -1) {
-                  fz.aca(Code.bxa, Code.bya);
+                  Char.charMove(Code.bxa, Code.bya);
                } else {
-                  Code.bxa = fz.ala().ala;
-                  Code.bya = fz.ala().ama;
+                  Code.bxa = Char.getMyChar().cx;
+                  Code.bya = Char.getMyChar().cy;
                }
 
                try {
@@ -48,7 +48,7 @@ public final class ap extends Auto {
                return;
             }
          } else {
-            this.aaa(this.aga, this.aha, this.aja, this.aka);
+            this.goMap(this.aga, this.aha, this.aja, this.aka);
          }
 
       }

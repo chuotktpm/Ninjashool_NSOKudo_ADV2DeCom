@@ -14,8 +14,8 @@ public final class bp implements ag {
    }
 
    protected bp() {
-      this.ada = new ca(er.dba, this, 8000, 1, ab.baa - fb.aqa + 1);
-      this.aea = new ca(er.cba, this, 8001, ab.aza - 53, ab.baa - fb.aqa + 1);
+      this.ada = new ca(er.dba, this, 8000, 1, GameCanvas.baa - fb.aqa + 1);
+      this.aea = new ca(er.cba, this, 8001, GameCanvas.aza - 53, GameCanvas.baa - fb.aqa + 1);
       this.afa = null;
       this.aaa = new eq();
       this.aaa.aua = "chat";
@@ -30,7 +30,7 @@ public final class bp implements ag {
       this.aea.aaa = er.bma;
       this.aga = var3;
       this.aaa.aaa(var1);
-      if (!this.aaa.aia.equals("") && ab.bia == null) {
+      if (!this.aaa.aia.equals("") && GameCanvas.bia == null) {
          this.aca = var2;
          this.aba = true;
       }
@@ -41,9 +41,9 @@ public final class bp implements ag {
    public final void aaa(String var1) {
       this.aea.aaa = er.bma;
       this.aga = var1;
-      if (ab.bia == null) {
+      if (GameCanvas.bia == null) {
          this.aba = true;
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             this.aaa.aba();
          }
       }

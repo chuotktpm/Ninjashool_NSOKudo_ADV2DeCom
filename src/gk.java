@@ -13,7 +13,7 @@ public final class gk extends Auto {
 
    public final void aaa() {
       if (aka()) {
-         if (gn.aoa == 160) {
+         if (TileMap.mapID == 160) {
             try {
                Thread.sleep(500L);
             } catch (InterruptedException var3) {
@@ -30,15 +30,15 @@ public final class gk extends Auto {
 
          Code.apa();
          if (!aaa && !aba) {
-            if (gn.aoa == 110) {
+            if (TileMap.mapID == 110) {
                aaa = true;
                aba = false;
                return;
             }
 
-            if (gn.aoa != Code.bqa) {
-               if (gn.aoa != 160 && gn.aoa != 129 && gn.aoa != 149) {
-                  this.aaa(Code.bqa, Code.bra, -1, -1);
+            if (TileMap.mapID != Code.bqa) {
+               if (TileMap.mapID != 160 && TileMap.mapID != 129 && TileMap.mapID != 149) {
+                  this.goMap(Code.bqa, Code.bra, -1, -1);
                   return;
                }
 
@@ -51,11 +51,11 @@ public final class gk extends Auto {
                return;
             }
 
-            if (gn.ala != Code.bra) {
+            if (TileMap.zoneID != Code.bra) {
                Auto.aba(Code.bra);
             }
          } else if (aaa && !aba) {
-            if (gn.aoa == 160) {
+            if (TileMap.mapID == 160) {
                aaa = true;
                aba = true;
                cs.aaa.ada();
@@ -63,10 +63,10 @@ public final class gk extends Auto {
                return;
             }
 
-            if (gn.aoa == 110) {
-               av var7 = GameScr.aia(0);
-               if (fz.ala().ala != var7.ala || fz.ala().ama != var7.ama) {
-                  fz.aca(var7.ala, var7.ama);
+            if (TileMap.mapID == 110) {
+               Npc var7 = GameScr.findNpc(0);
+               if (Char.getMyChar().cx != var7.cx || Char.getMyChar().cy != var7.cy) {
+                  Char.charMove(var7.cx, var7.cy);
 
                   try {
                      Thread.sleep(1000L);
@@ -78,9 +78,9 @@ public final class gk extends Auto {
                }
 
                if (System.currentTimeMillis() - this.aca >= 2000L) {
-                  GameScr.aba(0, 1, 0);
+                  GameScr.PickNpc(0, 1, 0);
                   Service.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
-                  ab.ama();
+                  GameCanvas.ama();
 
                   try {
                      Thread.sleep(3000L);
@@ -90,7 +90,7 @@ public final class gk extends Auto {
                   this.aca = System.currentTimeMillis();
                }
             }
-         } else if (aaa && aba && gn.aoa != 160) {
+         } else if (aaa && aba && TileMap.mapID != 160) {
             aaa = false;
             aba = false;
          }

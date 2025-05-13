@@ -3,7 +3,7 @@ import java.io.DataInputStream;
 import java.io.InputStream;
 import javax.microedition.lcdui.Image;
 
-public final class gn {
+public final class TileMap {
    public static int aaa;
    public static int aba;
    public static int aca;
@@ -24,10 +24,10 @@ public final class gn {
    private static int bpa;
    public static String aja;
    public static String aka;
-   public static byte ala;
+   public static byte zoneID;
    public static byte ama;
    public static byte ana;
-   public static short aoa;
+   public static short mapID;
    public static short apa;
    private static int bqa;
    private static int bra;
@@ -280,8 +280,8 @@ public final class gn {
    }
 
    public static void aba() {
-      bua = fz.ala().ala / 12;
-      bqa = fz.ala().ama / 12;
+      bua = Char.getMyChar().cx / 12;
+      bqa = Char.getMyChar().cy / 12;
       if (bua > aaa * aya - aqa / 2) {
          bua = aaa * aya - aqa;
       } else if (bua < aqa / 2) {
@@ -328,23 +328,23 @@ public final class gn {
 
    static final void aea() {
       if (bma == null) {
-         bma = ab.aca("/t/uwt.png");
+         bma = GameCanvas.aca("/t/uwt.png");
       }
 
       if (bja == null) {
-         bja = ab.aca("/t/wtf.png");
+         bja = GameCanvas.aca("/t/wtf.png");
       }
 
       if (bka == null) {
-         bka = ab.aca("/t/twtf.png");
+         bka = GameCanvas.aca("/t/twtf.png");
       }
 
       if (bla == null) {
-         bla = ab.aca("/t/wts.png");
+         bla = GameCanvas.aca("/t/wts.png");
       }
 
       if (bna == null) {
-         bna = ab.aca("/t/wts1.png");
+         bna = GameCanvas.aca("/t/wts1.png");
       }
 
       System.gc();
@@ -653,12 +653,12 @@ public final class gn {
             }
          }
 
-         if (!ab.aaa) {
-            if (aoa == 0 || aoa <= 4 || aoa >= 16 && aoa <= 18 || aoa >= 24 && aoa <= 27 || aoa == 22 || aoa == 33 || aoa == 34 || aoa == 38 || aoa == 57 || aoa == 58 || aoa == 60 || aoa == 68 || aoa >= 70 && aoa <= 75 || aoa == 81) {
+         if (!GameCanvas.aaa) {
+            if (mapID == 0 || mapID <= 4 || mapID >= 16 && mapID <= 18 || mapID >= 24 && mapID <= 27 || mapID == 22 || mapID == 33 || mapID == 34 || mapID == 38 || mapID == 57 || mapID == 58 || mapID == 60 || mapID == 68 || mapID >= 70 && mapID <= 75 || mapID == 81) {
                cu.afa.addElement(new bm((byte)1, 10));
             }
 
-            if (aoa >= 39 && aoa <= 44 || aoa >= 46 && aoa <= 48 || aoa == 56 || aoa >= 62 && aoa <= 65) {
+            if (mapID >= 39 && mapID <= 44 || mapID >= 46 && mapID <= 48 || mapID == 56 || mapID >= 62 && mapID <= 65) {
                cu.afa.addElement(new bm((byte)3, ci.aba(150, 200)));
                return;
             }
@@ -714,13 +714,13 @@ public final class gn {
 
                if (aea == 1) {
                   if ((aga(var1, var2) & 32) == 32) {
-                     var0.aaa(bja, 0, 24 * (ab.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                     var0.aaa(bja, 0, 24 * (GameCanvas.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
                      continue;
                   }
 
                   if ((aga(var1, var2) & 64) == 64 || (aga(var1, var2) & 2048) == 2048) {
                      if ((aga(var1, var2 - 1) & 32) == 32) {
-                        var0.aaa(bja, 0, 24 * (ab.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                        var0.aaa(bja, 0, 24 * (GameCanvas.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
                         continue;
                      }
 
@@ -733,12 +733,12 @@ public final class gn {
 
                if (aea == 2) {
                   if ((aga(var1, var2) & 32) == 32) {
-                     var0.aaa(bja, 0, 24 * (ab.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                     var0.aaa(bja, 0, 24 * (GameCanvas.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
                      continue;
                   }
 
                   if (var3 == 17) {
-                     var0.aaa(bka, 0, 24 * (ab.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                     var0.aaa(bka, 0, 24 * (GameCanvas.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
                      continue;
                   }
 
@@ -749,7 +749,7 @@ public final class gn {
 
                   if ((aga(var1, var2) & 64) == 64 || (aga(var1, var2) & 2048) == 2048) {
                      if ((aga(var1, var2 - 1) & 32) == 32) {
-                        var0.aaa(bja, 0, 24 * (ab.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                        var0.aaa(bja, 0, 24 * (GameCanvas.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
                         continue;
                      }
 
@@ -776,18 +776,18 @@ public final class gn {
 
                if (aea == 3) {
                   if ((aga(var1, var2) & 32) == 32) {
-                     var0.aaa(bja, 0, 24 * (ab.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                     var0.aaa(bja, 0, 24 * (GameCanvas.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
                      continue;
                   }
 
                   if (var3 == 23) {
-                     var0.aaa(bka, 0, 24 * (ab.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                     var0.aaa(bka, 0, 24 * (GameCanvas.aua % 8 >> 1), 24, 24, 0, var1 * aia, var2 * aia, 0);
                      continue;
                   }
 
                   if ((aga(var1, var2) & 64) == 64 || (aga(var1, var2) & 2048) == 2048) {
                      if ((aga(var1, var2 - 1) & 32) == 32) {
-                        var0.aaa(bja, 0, 24 * (ab.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
+                        var0.aaa(bja, 0, 24 * (GameCanvas.aua % 4), 24, 24, 0, var1 * aia, var2 * aia, 0);
                         continue;
                      }
 
@@ -826,7 +826,7 @@ public final class gn {
    }
 
    public static final void aba(as var0) {
-      if (ab.aza > 176) {
+      if (GameCanvas.aza > 176) {
          ci.aaa(var0);
          var0.aaa(asa + 1, ata + 2);
          var0.aaa(0);
@@ -868,7 +868,7 @@ public final class gn {
                var4 = bta + ara;
             }
 
-            if (ab.aua % 10 < 8) {
+            if (GameCanvas.aua % 10 < 8) {
                var0.aaa(16777215);
                var0.aca(var1 - 2, var4 - 2, 5, 5);
                var0.aaa(var3.ava == 1 ? 255 : (var3.ava == 2 ? 16711935 : '\uffff'));
@@ -876,8 +876,8 @@ public final class gn {
             }
          }
 
-         var1 = fz.ala().ala / 12;
-         var4 = fz.ala().ama / 12;
+         var1 = Char.getMyChar().cx / 12;
+         var4 = Char.getMyChar().cy / 12;
          var0.aaa(16777215);
          var0.aca(var1 - 2, var4 - 2, 5, 5);
          var0.aaa(16711680);
@@ -898,9 +898,9 @@ public final class gn {
 
          for(var2 = 0; var2 < GameScr.bfa.size(); ++var2) {
             ep var5;
-            if ((var5 = (ep)GameScr.bfa.elementAt(var2)).afa != null && var5.afa != fz.ala()) {
-               var1 = var5.afa.ala / 12;
-               var4 = var5.afa.ama / 12;
+            if ((var5 = (ep)GameScr.bfa.elementAt(var2)).afa != null && var5.afa != Char.getMyChar()) {
+               var1 = var5.afa.cx / 12;
+               var4 = var5.afa.cy / 12;
                if (var1 < bxa) {
                   var1 = bxa;
                }
@@ -917,7 +917,7 @@ public final class gn {
                   var4 = bta + ara;
                }
 
-               if (ab.aua % 10 < 8) {
+               if (GameCanvas.aua % 10 < 8) {
                   var0.aaa(16777215);
                   var0.aca(var1 - 2, var4 - 2, 5, 5);
                   var0.aaa(65280);
@@ -927,7 +927,7 @@ public final class gn {
          }
 
          ci.aaa(var0);
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             var0.aaa(GameScr.exa, asa - 1, ata, 0);
          }
       }
@@ -935,7 +935,7 @@ public final class gn {
    }
 
    public static final void aca(as var0) {
-      if (!ab.aaa) {
+      if (!GameCanvas.aaa) {
          int var1;
          int var2;
          for(var1 = GameScr.ata; var1 < GameScr.ava; ++var1) {
@@ -952,7 +952,7 @@ public final class gn {
                }
 
                if ((aga(var1, var2) & 64) == 64) {
-                  var0.aaa(var3, 0, (ab.aua % 8 >> 2) * 24, 24, 24, 0, var1 * aia, var2 * aia, 0);
+                  var0.aaa(var3, 0, (GameCanvas.aua % 8 >> 2) * 24, 24, 24, 0, var1 * aia, var2 * aia, 0);
                }
 
                if ((aga(var1, var2) & 256) == 256) {
@@ -961,17 +961,17 @@ public final class gn {
             }
          }
 
-         if (aea != 4 && ab.afa && ab.aga && GameScr.awa >= aba - 2) {
+         if (aea != 4 && GameCanvas.afa && GameCanvas.aga && GameScr.awa >= aba - 2) {
             for(var1 = GameScr.ata; var1 < GameScr.ava; ++var1) {
                var2 = aba - 2;
                int var5 = afa[var2 * aaa + var1] - 1;
                int var4;
                if ((aga(var1, var2) & 32) == 32) {
                   for(var4 = 1; var4 <= 4; ++var4) {
-                     var0.aaa(bja, 0, 24 * (ab.aua % 4), 24, 24, 0, var1 * aia, (var2 + var4) * aia, 0);
+                     var0.aaa(bja, 0, 24 * (GameCanvas.aua % 4), 24, 24, 0, var1 * aia, (var2 + var4) * aia, 0);
                   }
                } else {
-                  if (aoa == 64) {
+                  if (mapID == 64) {
                      bya = 115;
                   }
 
@@ -1044,20 +1044,20 @@ public final class gn {
    }
 
    public static void afa() {
-      if (ab.aua % 700 == 0 && aoa != 0 && aoa > 4 && (aoa < 16 || aoa > 18) && (aoa < 24 || aoa > 27) && aoa != 22 && aoa != 33 && aoa != 34 && aoa != 38 && aoa != 57 && aoa != 58 && aoa != 60 && aoa != 68 && (aoa < 70 || aoa > 75) && aoa != 81) {
-         if (aoa >= 39 && aoa <= 44 || aoa >= 46 && aoa <= 48 || aoa == 56 || aoa >= 62 && aoa <= 65) {
+      if (GameCanvas.aua % 700 == 0 && mapID != 0 && mapID > 4 && (mapID < 16 || mapID > 18) && (mapID < 24 || mapID > 27) && mapID != 22 && mapID != 33 && mapID != 34 && mapID != 38 && mapID != 57 && mapID != 58 && mapID != 60 && mapID != 68 && (mapID < 70 || mapID > 75) && mapID != 81) {
+         if (mapID >= 39 && mapID <= 44 || mapID >= 46 && mapID <= 48 || mapID == 56 || mapID >= 62 && mapID <= 65) {
             return;
          }
 
-         if (aoa == 29 || aoa == 35) {
+         if (mapID == 29 || mapID == 35) {
             return;
          }
 
-         if (aoa == 50 || aoa == 51 || aoa == 52) {
+         if (mapID == 50 || mapID == 51 || mapID == 52) {
             return;
          }
 
-         if (aoa == 64) {
+         if (mapID == 64) {
             if (ci.aba(0, 8) % 2 == 0) {
                return;
             }
@@ -1188,10 +1188,10 @@ public final class gn {
          var2 = var3.ada - 48;
       }
 
-      if (aoa != 114 && aoa != 115 && aoa != 116) {
-         fz.aca(var1, var2);
+      if (mapID != 114 && mapID != 115 && mapID != 116) {
+         Char.charMove(var1, var2);
       } else {
-         fz.aea(var1, var2);
+         Char.aea(var1, var2);
       }
 
       Thread.sleep(10L);
@@ -1219,7 +1219,7 @@ public final class gn {
    }
 
    public static boolean aka(int var0) {
-      short var10000 = aoa;
+      short var10000 = mapID;
       bea = var0;
       short var2 = var10000;
       int var4;
@@ -1231,7 +1231,7 @@ public final class gn {
          if (bda[var2].length <= 0) {
             var22 = null;
          } else {
-            aj var3 = fz.ama(0);
+            aj var3 = Char.ama(0);
 
             for(var4 = 0; var4 < caa.length; ++var4) {
                caa[var4] = true;
@@ -1371,8 +1371,8 @@ public final class gn {
                         if (caa[var7]) {
                            boolean var23;
                            label346: {
-                              if (fz.ala().aea) {
-                                 int var9 = fz.ala().aua;
+                              if (Char.getMyChar().aea) {
+                                 int var9 = Char.getMyChar().aua;
                                  if ((var7 == 1 || var7 == 27 || var7 == 72) && var9 < 6) {
                                     var23 = false;
                                     break label346;
@@ -1407,7 +1407,7 @@ public final class gn {
                               var23 = true;
                            }
 
-                           if (var23 && (!var17 || !afa(var7) || fz.ala().aua >= 9) && (cba[var7] == -1 || cba[var7] > cba[var6] + 1)) {
+                           if (var23 && (!var17 || !afa(var7) || Char.getMyChar().aua >= 9) && (cba[var7] == -1 || cba[var7] > cba[var6] + 1)) {
                               var10002 = cba;
                               var10002[var7] = var10002[var6] + 1;
                               cca[var7] = var6;
@@ -1428,7 +1428,7 @@ public final class gn {
                            cca[var7] = var6;
                         }
                      }
-                  } while(!fz.fna);
+                  } while(!Char.fna);
                } while(cba[138] != -1 && cba[138] <= cba[var6] + 1);
 
                cba[138] = cba[var6] + 1;
@@ -1447,9 +1447,9 @@ public final class gn {
          bfa = true;
 
          try {
-            var19 = aoa;
+            var19 = mapID;
 
-            for(var11 = 1; var11 < var12.size() && bfa && var19 == aoa; ++var11) {
+            for(var11 = 1; var11 < var12.size() && bfa && var19 == mapID; ++var11) {
                var5 = (Integer)var12.elementAt(var11 - 1);
                var19 = (Integer)var12.elementAt(var11) & '\uffff';
                int var15;
@@ -1457,16 +1457,16 @@ public final class gn {
                   var15 = var5 >> 24 & 127;
                   var4 = var5 >> 20 & 15;
                   var5 = var5 >> 16 & 15;
-                  GameScr.aba(var15, var4, var5);
+                  GameScr.PickNpc(var15, var4, var5);
                } else if ((var5 < 134 || var5 > 138) && var19 == 138) {
-                  if (fz.ala().dka > 0) {
+                  if (Char.getMyChar().dka > 0) {
                      be.aaa("Hiếu chiến quá cao!", 50, fw.ala);
                      return false;
                   }
 
                   gg var16;
-                  if ((var16 = fz.afa(490)) == null || var16.aaa.aaa != 490) {
-                     if (fz.foa && fz.ala().cta >= 20) {
+                  if ((var16 = Char.afa(490)) == null || var16.aaa.aaa != 490) {
+                     if (Char.foa && Char.getMyChar().cta >= 20) {
                         Service.aaa().aba(14, 28, 2);
                         LockGame.aha();
                         return false;
@@ -1495,17 +1495,17 @@ public final class gn {
 
                   aja(var4);
                } else {
-                  av var14;
-                  if ((var14 = (av)GameScr.boa.elementAt(0)) != null && var14.aqa != 15) {
-                     fz.aca(var14.ala, var14.ama);
-                     fz.ala().dra = var14;
-                     Service.aaa().aha(var14.aaa.aaa);
-                     Service.aaa().aca(var14.aaa.aaa, 0, 0);
-                     Service.aaa().aja(var14.aaa.aaa, 0);
+                  Npc var14;
+                  if ((var14 = (Npc)GameScr.boa.elementAt(0)) != null && var14.aqa != 15) {
+                     Char.charMove(var14.cx, var14.cy);
+                     Char.getMyChar().dra = var14;
+                     Service.aaa().aha(var14.template.aaa);
+                     Service.aaa().aca(var14.template.aaa, 0, 0);
+                     Service.aaa().aja(var14.template.aaa, 0);
                   }
                }
 
-               if (aoa != var19) {
+               if (mapID != var19) {
                   aga();
                   Thread.sleep(1000L * (long)eg.aba / 10L);
                } else {
@@ -1518,17 +1518,17 @@ public final class gn {
          }
 
          bfa = false;
-         return aoa == var0;
+         return mapID == var0;
       }
    }
 
    public static void ala(int var0) {
-      ab.aoa();
+      GameCanvas.aoa();
       (new Thread(new bk(var0))).start();
    }
 
    public static void ama(int var0) {
-      ab.aoa();
+      GameCanvas.aoa();
       (new Thread(new bx(var0))).start();
    }
 
@@ -1609,7 +1609,7 @@ public final class gn {
    }
 
    public static void aia() {
-      ByteArrayInputStream var0 = new ByteArrayInputStream(cea[aoa]);
+      ByteArrayInputStream var0 = new ByteArrayInputStream(cea[mapID]);
       DataInputStream var2;
       aaa = (char)(var2 = new DataInputStream(var0)).readUnsignedByte();
       aba = (char)var2.readUnsignedByte();
@@ -1624,8 +1624,8 @@ public final class gn {
 
    public static void aja() {
       for(int var0 = 1; var0 < cfa.length; ++var0) {
-         cfa[var0] = ab.aca("/t/" + var0 + ".png");
-         cga[var0] = ab.aca("/t/mini_" + var0 + ".png");
+         cfa[var0] = GameCanvas.aca("/t/" + var0 + ".png");
+         cga[var0] = GameCanvas.aca("/t/mini_" + var0 + ".png");
       }
 
    }
@@ -1662,10 +1662,10 @@ public final class gn {
       bpa = 0;
       aja = null;
       aka = null;
-      ala = 0;
+      zoneID = 0;
       ama = 0;
       ana = 0;
-      aoa = 0;
+      mapID = 0;
       apa = 0;
       bqa = 0;
       bra = 0;

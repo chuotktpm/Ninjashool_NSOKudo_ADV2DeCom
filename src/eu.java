@@ -33,10 +33,10 @@ public final class eu extends Auto {
    }
 
    public final void aaa(String var1) {
-      if (Code.aha != null && !gn.aea(super.aga)) {
+      if (Code.aha != null && !TileMap.aea(super.aga)) {
          if (var1.startsWith("Thần thú đã xuất hiện tại")) {
-            if (fz.ala().cea.equals(Code.aha)) {
-               int var2 = fz.ala().aya;
+            if (Char.getMyChar().cea.equals(Code.aha)) {
+               int var2 = Char.getMyChar().aya;
                ev var3 = new ev();
                ev var4 = new ev();
                if (var2 >= 40 && var2 <= 60) {
@@ -159,7 +159,7 @@ public final class eu extends Auto {
    public final void aea() {
       if (this.aaa == 0) {
          this.boa = ci.aca().get(5);
-         if (!gn.aea(super.aga)) {
+         if (!TileMap.aea(super.aga)) {
             this.aaa = 2;
             this.bqa = System.currentTimeMillis();
             this.bla = super.aga;
@@ -206,7 +206,7 @@ public final class eu extends Auto {
    }
 
    public final boolean afa() {
-      return Code.aba instanceof eu && this.aaa == 2 && fz.ala().aya >= 60 && fz.ala().aya < 70;
+      return Code.aba instanceof eu && this.aaa == 2 && Char.getMyChar().aya >= 60 && Char.getMyChar().aya < 70;
    }
 
    public final void aaa() {
@@ -220,12 +220,12 @@ public final class eu extends Auto {
          switch(this.aaa) {
          case 0:
             if (!this.bka && this.bja > 0) {
-               if (gn.aoa != this.bja) {
-                  this.aaa(this.bja, -2, -1, -1);
+               if (TileMap.mapID != this.bja) {
+                  this.goMap(this.bja, -2, -1, -1);
                   return;
                }
 
-               GameScr.aba(5, 1, 0);
+               GameScr.PickNpc(5, 1, 0);
                if (LockGame.aza()) {
                   this.bka = true;
                   super.aga = this.bla;
@@ -238,27 +238,27 @@ public final class eu extends Auto {
                return;
             }
 
-            if (this.bja < 0 && (gn.ada(gn.aoa) || gn.afa(gn.aoa))) {
-               this.bja = gn.aoa;
+            if (this.bja < 0 && (TileMap.ada(TileMap.mapID) || TileMap.afa(TileMap.mapID))) {
+               this.bja = TileMap.mapID;
             }
 
             if (var2 == this.boa || var3 < 2 || var4 < 30) {
-               if (super.aga != gn.aoa || !super.aia && super.aha != gn.ala) {
-                  this.aaa(super.aga, super.aha, super.aja, super.aka);
+               if (super.aga != TileMap.mapID || !super.aia && super.aha != TileMap.zoneID) {
+                  this.goMap(super.aga, super.aha, super.aja, super.aka);
                   return;
                }
 
-               if (fz.epa && Code.aia() && fz.bja() < 5 && !gn.aea(gn.aoa)) {
+               if (Char.epa && Code.aia() && Char.bja() < 5 && !TileMap.aea(TileMap.mapID)) {
                   Auto.ala();
                   return;
                }
 
                if (!this.bia && !this.bha) {
-                  this.aca(this.aba, this.aaa(fz.fga, fz.fha, fz.fia));
+                  this.aca(this.aba, this.aaa(Char.fga, Char.fha, Char.fia));
                   this.ada(-1);
                } else {
-                  fz var12 = fz.ala();
-                  fz var8 = GameScr.bfa.size() > 0 ? ((ep)GameScr.bfa.firstElement()).afa : null;
+                  Char var12 = Char.getMyChar();
+                  Char var8 = GameScr.bfa.size() > 0 ? ((ep)GameScr.bfa.firstElement()).afa : null;
                   bc var15;
                   if (this.bia && GameScr.bfa.size() > 0 && var12.cua.aaa == 6) {
                      for(var3 = 0; var3 < var12.cwa.size(); ++var3) {
@@ -267,17 +267,17 @@ public final class eu extends Auto {
                               for(var3 = 0; var3 < GameScr.bfa.size(); ++var3) {
                                  ep var5;
                                  if ((var5 = (ep)GameScr.bfa.elementAt(var3)).aaa != var12.asa && var5.afa != null && var5.afa.bba <= 0) {
-                                    var3 = var12.ala;
-                                    int var9 = var12.ama;
-                                    fz var6;
-                                    fz.aca((var6 = var5.afa).ala, var6.ama);
+                                    var3 = var12.cx;
+                                    int var9 = var12.cy;
+                                    Char var6;
+                                    Char.charMove((var6 = var5.afa).cx, var6.cy);
                                     Thread.sleep(500L);
                                     Service.aaa().aua(var5.aaa);
                                     var15.afa = System.currentTimeMillis();
                                     var15.ala = true;
                                     var12.aba(GameScr.aza[var15.aaa.aaa], 0);
                                     Thread.sleep(1000L);
-                                    fz.aca(var3, var9);
+                                    Char.charMove(var3, var9);
                                     return;
                                  }
                               }
@@ -289,22 +289,22 @@ public final class eu extends Auto {
 
                   if (this.bha && this.ama() && var8 != null && var12.cua.aaa == 6) {
                      for(var3 = 0; var3 < var12.cwa.size(); ++var3) {
-                        if ((var15 = (bc)var12.cwa.elementAt(var3)) != null && !var15.aaa() && var15.aaa.ada == 2 && (var15.aaa.aaa < 67 || var15.aaa.aaa > 72) && (var15.aaa.aaa != 47 || var8.bba < var8.bea * fz.fra / 100)) {
+                        if ((var15 = (bc)var12.cwa.elementAt(var3)) != null && !var15.aaa() && var15.aaa.ada == 2 && (var15.aaa.aaa < 67 || var15.aaa.aaa > 72) && (var15.aaa.aaa != 47 || var8.bba < var8.bea * Char.fra / 100)) {
                            int var16;
                            for(var16 = 0; var16 < var8.cxa.size(); ++var16) {
                               var8.cxa.elementAt(var16);
                            }
 
-                           var16 = var12.ala;
-                           var3 = var12.ama;
-                           fz.aca(var8.ala, var8.ama);
+                           var16 = var12.cx;
+                           var3 = var12.cy;
+                           Char.charMove(var8.cx, var8.cy);
                            Service.aaa().afa(var15.aaa.aaa);
                            Service.aaa().ara();
                            var15.afa = System.currentTimeMillis();
                            var15.ala = true;
                            var12.aba(GameScr.aza[var15.aaa.aaa], 0);
                            Thread.sleep(1000L);
-                           fz.aca(var16, var3);
+                           Char.charMove(var16, var3);
                            break;
                         }
                      }
@@ -312,7 +312,7 @@ public final class eu extends Auto {
                }
 
                gg var14;
-               if (System.currentTimeMillis() - this.bpa > 602000L && fz.bja() > 1 && (var14 = fz.afa(38)) != null) {
+               if (System.currentTimeMillis() - this.bpa > 602000L && Char.bja() > 1 && (var14 = Char.afa(38)) != null) {
                   Service.aaa().aea(var14.ada);
                   this.bpa = System.currentTimeMillis();
                   return;
@@ -327,13 +327,13 @@ public final class eu extends Auto {
                return;
             }
 
-            if (gn.aoa != 1 || gn.ala != 21) {
-               this.aaa(1, 21, -1, -1);
+            if (TileMap.mapID != 1 || TileMap.zoneID != 21) {
+               this.goMap(1, 21, -1, -1);
                return;
             }
 
-            aj var10 = fz.ama(1);
-            boolean var7 = fz.ala().cea.equals(Code.aha);
+            aj var10 = Char.ama(1);
+            boolean var7 = Char.getMyChar().cea.equals(Code.aha);
             if (aca && var7) {
                this.aea();
                Service.aaa().aka("sts");
@@ -341,18 +341,18 @@ public final class eu extends Auto {
             }
 
             if (var10 == null) {
-               av var11;
-               fz.aca((var11 = GameScr.aia(25)).ala, var11.ama);
+               Npc var11;
+               Char.charMove((var11 = GameScr.findNpc(25)).cx, var11.cy);
                LockGame.aaa(300000L);
                if (var7) {
-                  GameScr.aba(25, GameScr.gva + 1, 0);
+                  GameScr.PickNpc(25, GameScr.gva + 1, 0);
                   LockGame.ala();
                   Thread.sleep(2000L);
                   return;
                }
             } else {
                if (var10.aba >= var10.aca) {
-                  GameScr.aba(25, GameScr.gva + 1, 2);
+                  GameScr.PickNpc(25, GameScr.gva + 1, 2);
                   LockGame.ana();
                   Thread.sleep(2000L);
                   return;
@@ -370,26 +370,26 @@ public final class eu extends Auto {
 
             return;
          case 2:
-            if (fz.ala().aya < 30 || System.currentTimeMillis() - this.bqa >= 10800000L) {
+            if (Char.getMyChar().aya < 30 || System.currentTimeMillis() - this.bqa >= 10800000L) {
                this.aea();
                return;
             }
 
             if (!this.bka) {
-               if (gn.aoa != 1 || gn.ala != 21) {
-                  this.aaa(1, 21, -1, -1);
+               if (TileMap.mapID != 1 || TileMap.zoneID != 21) {
+                  this.goMap(1, 21, -1, -1);
                   return;
                }
 
-               if (fz.fta <= 50) {
-                  int var10000 = (var2 = fz.aka(fz.fta == 50 ? 29 : 23 + fz.fta / 10)) >= 2 ? 0 : 2 - var2;
+               if (Char.fta <= 50) {
+                  int var10000 = (var2 = Char.aka(Char.fta == 50 ? 29 : 23 + Char.fta / 10)) >= 2 ? 0 : 2 - var2;
                   var2 = var10000;
                   if (var10000 > 0) {
-                     GameScr.aba(4, 0, 0);
-                     if (fz.fta == 50) {
+                     GameScr.PickNpc(4, 0, 0);
+                     if (Char.fta == 50) {
                         Service.aaa().aaa(9, 7, var2);
                      } else {
-                        Service.aaa().aaa(9, fz.fta / 10, var2);
+                        Service.aaa().aaa(9, Char.fta / 10, var2);
                      }
 
                      LockGame.aha();
@@ -397,12 +397,12 @@ public final class eu extends Auto {
                }
 
                if (var1.get(7) == 2) {
-                  GameScr.aba(24, 1, 0);
+                  GameScr.PickNpc(24, 1, 0);
                   Thread.sleep(2000L);
                }
 
                this.bka = true;
-               if ((var2 = fz.ala().aya) >= 90) {
+               if ((var2 = Char.getMyChar().aya) >= 90) {
                   LockGame.bja();
                   Code.aaa((Auto)(new bj()));
                   ada = true;
@@ -427,21 +427,21 @@ public final class eu extends Auto {
                }
             } else {
                if (!ada) {
-                  if (gn.aoa == super.aga) {
+                  if (TileMap.mapID == super.aga) {
                      this.aca(-1, -1);
                      this.ada(-1);
                      return;
                   }
 
-                  this.aaa(super.aga, -2, -1, -1);
+                  this.goMap(super.aga, -2, -1, -1);
                   return;
                }
 
-               if (!gn.afa(gn.aoa)) {
+               if (!TileMap.afa(TileMap.mapID)) {
                   return;
                }
 
-               GameScr.aba(0, 2, 0);
+               GameScr.PickNpc(0, 2, 0);
                Service.aaa().bda();
                this.bka = false;
                ada = false;
@@ -452,15 +452,15 @@ public final class eu extends Auto {
             break;
          case 3:
             if (!this.bka) {
-               if (gn.aoa != 1 || gn.ala != 21) {
-                  this.aaa(1, 21, -1, -1);
+               if (TileMap.mapID != 1 || TileMap.zoneID != 21) {
+                  this.goMap(1, 21, -1, -1);
                   return;
                }
 
-               GameScr.aba(5, 1, 0);
+               GameScr.PickNpc(5, 1, 0);
                if (LockGame.aza()) {
                   if (var1.get(7) == 2) {
-                     GameScr.aba(24, 1, 0);
+                     GameScr.PickNpc(24, 1, 0);
                      Thread.sleep(2000L);
                   }
 

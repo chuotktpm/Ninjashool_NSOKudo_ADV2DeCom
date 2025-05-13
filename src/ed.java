@@ -36,11 +36,11 @@ public final class ed extends fb implements ag {
 
       this.aka = -50;
       this.aua = false;
-      GameScr.aca = ab.baa;
-      if (ab.bqa == 2) {
-         ab.aaa(0);
+      GameScr.aca = GameCanvas.baa;
+      if (GameCanvas.bqa == 2) {
+         GameCanvas.aaa(0);
       } else {
-         ab.aaa(gn.ama);
+         GameCanvas.aaa(TileMap.ama);
       }
 
       super.aaa();
@@ -48,11 +48,11 @@ public final class ed extends fb implements ag {
          GameScr.aaa = null;
       }
 
-      if (ab.bea != null) {
-         ab.bea = new ck();
+      if (GameCanvas.bea != null) {
+         GameCanvas.bea = new ck();
       }
 
-      ab.aca = false;
+      GameCanvas.aca = false;
       int var1;
       if ((var1 = fd.ada("isSoftKey")) <= 0) {
          fd.aaa("isSoftKey", 1);
@@ -78,11 +78,11 @@ public final class ed extends fb implements ag {
    public final void ada() {
       this.aua = true;
       this.aka = -50;
-      GameScr.aca = ab.baa;
-      if (ab.bqa == 2) {
-         ab.aaa(0);
+      GameScr.aca = GameCanvas.baa;
+      if (GameCanvas.bqa == 2) {
+         GameCanvas.aaa(0);
       } else {
-         ab.aaa(gn.ama);
+         GameCanvas.aaa(TileMap.ama);
       }
 
       super.aaa();
@@ -90,31 +90,31 @@ public final class ed extends fb implements ag {
          GameScr.aaa = null;
       }
 
-      if (ab.bea != null) {
-         ab.bea = new ck();
+      if (GameCanvas.bea != null) {
+         GameCanvas.bea = new ck();
       }
 
-      ab.aca = false;
+      GameCanvas.aca = false;
       super.ala = this.aya = new ca("Hủy", this, 20051, (Object)null);
    }
 
    public ed() {
       aha = this;
       this.aua = false;
-      if ((gn.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || gn.ama == 6) {
-         gn.ama = 4;
+      if ((TileMap.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || TileMap.ama == 6) {
+         TileMap.ama = 4;
       }
 
       GameScr.aaa(true);
       GameScr.aia = 100;
-      if (ab.baa > 200) {
-         this.asa = ab.bca - 80;
+      if (GameCanvas.baa > 200) {
+         this.asa = GameCanvas.bca - 80;
       } else {
-         this.asa = ab.bca - 65;
+         this.asa = GameCanvas.bca - 65;
       }
 
       this.aka = -50;
-      this.aja = ab.aza - 30;
+      this.aja = GameCanvas.aza - 30;
       if (this.aja < 135) {
          this.aja = 135;
       }
@@ -123,14 +123,14 @@ public final class ed extends fb implements ag {
          this.aja = 155;
       }
 
-      this.aza = ab.bca - fb.aoa - 5;
-      if (ab.baa <= 160) {
+      this.aza = GameCanvas.bca - fb.aoa - 5;
+      if (GameCanvas.baa <= 160) {
          this.aza = 20;
       }
 
       this.ada = new eq();
       this.ada.aua = er.dda;
-      this.ada.aaa = ab.bba - 20 - 57;
+      this.ada.aaa = GameCanvas.bba - 20 - 57;
       this.ada.aba = this.aza;
       this.ada.aca = this.aja;
       this.ada.ada = fb.aoa + 2;
@@ -138,7 +138,7 @@ public final class ed extends fb implements ag {
       this.ada.ara = 3;
       this.aea = new eq();
       this.aea.aua = er.dea;
-      this.aea.aaa = ab.bba - 20 - 57;
+      this.aea.aaa = GameCanvas.bba - 20 - 57;
       this.aea.aba = this.aza += 35;
       this.aea.aca = this.aja;
       this.aea.ada = fb.aoa + 2;
@@ -146,7 +146,7 @@ public final class ed extends fb implements ag {
       this.aea.ara = 2;
       this.afa = new eq();
       this.afa.aua = er.dka;
-      this.afa.aaa = ab.bba - 20 - 57;
+      this.afa.aaa = GameCanvas.bba - 20 - 57;
       this.afa.aba = this.aza += 35;
       this.afa.aca = this.aja;
       this.afa.ada = fb.aoa + 2;
@@ -154,7 +154,7 @@ public final class ed extends fb implements ag {
       this.afa.ara = 2;
       this.aga = new eq();
       this.aga.aua = "Email/Số di động";
-      this.aga.aaa = ab.bba - 20 - 57;
+      this.aga.aaa = GameCanvas.bba - 20 - 57;
       this.aga.aba = this.aza += 35;
       this.aga.aca = this.aja;
       this.aga.ada = fb.aoa + 2;
@@ -181,7 +181,7 @@ public final class ed extends fb implements ag {
          super.ala = this.aya = new ca("Hủy", this, 20051, (Object)null);
       }
 
-      if (ab.afa && ab.aza >= 320) {
+      if (GameCanvas.afa && GameCanvas.aza >= 320) {
          super.ama = null;
          super.ana = this.ava;
       } else {
@@ -195,15 +195,15 @@ public final class ed extends fb implements ag {
    }
 
    private static void aaa(boolean var0) {
-      ab.aca = var0;
+      GameCanvas.aca = var0;
       fd.aaa("isGPRS", var0 ? 1 : 2);
    }
 
    private void aaa(String var1) {
       Class_ab.aga = Class_ab.aaa[0];
-      ab.aba(er.ena);
-      ab.aca();
-      ab.aba(er.eoa);
+      GameCanvas.aba(er.ena);
+      GameCanvas.aca();
+      GameCanvas.aba(er.eoa);
       Service.aaa().aba();
       Service var10000 = Service.aaa();
       String var4 = this.aga.aia;
@@ -224,8 +224,8 @@ public final class ed extends fb implements ag {
    }
 
    private void ala() {
-      this.bba = ab.aua % er.bca.length;
-      this.baa = fw.aka.aba(er.bca[this.bba], ab.aza - 40);
+      this.bba = GameCanvas.aua % er.bca.length;
+      this.baa = fw.aka.aba(er.bca[this.bba], GameCanvas.aza - 40);
       String var1 = this.ada.aia.toLowerCase().trim();
       String var2 = this.aea.aia.toLowerCase().trim();
       if (var1.equals("a") && var2.equals("a")) {
@@ -243,9 +243,9 @@ public final class ed extends fb implements ag {
             return;
          }
 
-         ab.aba(er.ena);
-         ab.aca();
-         ab.aba(er.epa);
+         GameCanvas.aba(er.ena);
+         GameCanvas.aca();
+         GameCanvas.aba(er.epa);
          Service.aaa().aaa(var1, var2, "1.4.8");
          aca = true;
          if (this.ata) {
@@ -264,7 +264,7 @@ public final class ed extends fb implements ag {
    }
 
    public final void aba() {
-      if (++GameScr.aia > ab.aza * 3 + 100) {
+      if (++GameScr.aia > GameCanvas.aza * 3 + 100) {
          GameScr.aia = 100;
       }
 
@@ -279,7 +279,7 @@ public final class ed extends fb implements ag {
          this.aka += this.asa - this.aka >> 1;
       }
 
-      if (ab.afa) {
+      if (GameCanvas.afa) {
          super.ama = null;
          if (this.aua) {
             super.ana = this.axa;
@@ -312,13 +312,13 @@ public final class ed extends fb implements ag {
          }
       }
 
-      if (this.bba >= 0 && ab.aua % 100 == 0) {
+      if (this.bba >= 0 && GameCanvas.aua % 100 == 0) {
          ++this.bba;
          if (this.bba >= er.bca.length) {
             this.bba = 0;
          }
 
-         this.baa = fw.aka.aba(er.bca[this.bba], ab.aza - 40);
+         this.baa = fw.aka.aba(er.bca[this.bba], GameCanvas.aza - 40);
       }
 
    }
@@ -343,22 +343,22 @@ public final class ed extends fb implements ag {
 
    public final void aaa(as var1) {
       var1.aaa(0);
-      var1.aca(0, 0, ab.aza, ab.baa);
-      ab.aaa(var1);
+      var1.aca(0, 0, GameCanvas.aza, GameCanvas.baa);
+      GameCanvas.aaa(var1);
       int var2 = this.ada.aba - 45;
-      if (ab.baa <= 220) {
+      if (GameCanvas.baa <= 220) {
          var2 += 5;
       }
 
-      if (ab.bia == null) {
+      if (GameCanvas.bia == null) {
          if (this.aua) {
-            fk.aaa(ab.bba - 85, this.ada.aba - 15, 170, 150, var1);
+            fk.aaa(GameCanvas.bba - 85, this.ada.aba - 15, 170, 150, var1);
          } else {
-            fk.aaa(ab.bba - 85, this.ada.aba - 15, 170, 90, var1);
+            fk.aaa(GameCanvas.bba - 85, this.ada.aba - 15, 170, 90, var1);
          }
 
-         if (ab.baa > 160 && aba != null) {
-            var1.aaa(aba, ab.bba, var2 - 2, 3);
+         if (GameCanvas.baa > 160 && aba != null) {
+            var1.aaa(aba, GameCanvas.bba, var2 - 2, 3);
          }
 
          this.ada.aaa(var1);
@@ -368,8 +368,8 @@ public final class ed extends fb implements ag {
             this.aga.aaa(var1);
          }
 
-         var1.ada(0, 0, ab.aza, ab.baa);
-         if (ab.aza > 200) {
+         var1.ada(0, 0, GameCanvas.aza, GameCanvas.baa);
+         if (GameCanvas.aza > 200) {
             if (this.ada.aia.equals("")) {
                if (!this.ada.aea) {
                   fw.aga.aaa(var1, er.dda, this.ada.aaa + 5, this.ada.aba + 7, 0);
@@ -422,7 +422,7 @@ public final class ed extends fb implements ag {
          }
       } else if (this.baa != null) {
          for(var2 = 0; var2 < this.baa.length; ++var2) {
-            fw.aka.aaa(var1, this.baa[var2], ab.aza / 2, this.ada.aba - 15 + var2 * 10, 2, fw.ama);
+            fw.aka.aaa(var1, this.baa[var2], GameCanvas.aza / 2, this.ada.aba - 15 + var2 * 10, 2, fw.ama);
          }
       }
 
@@ -431,25 +431,25 @@ public final class ed extends fb implements ag {
          var3 = cs.aba().ala;
       }
 
-      fw.ama.aaa(var1, var3, ab.aza - 5, 5, 1);
+      fw.ama.aaa(var1, var3, GameCanvas.aza - 5, 5, 1);
       super.aaa(var1);
    }
 
    public final void aca() {
-      if (ab.aka[2]) {
+      if (GameCanvas.aka[2]) {
          --this.aia;
          if (this.aia < 0) {
             this.aia = 3;
          }
-      } else if (ab.aka[8]) {
+      } else if (GameCanvas.aka[8]) {
          ++this.aia;
          if (this.aia > 3) {
             this.aia = 0;
          }
       }
 
-      if (ab.aka[2] || ab.aka[8]) {
-         ab.aka();
+      if (GameCanvas.aka[2] || GameCanvas.aka[8]) {
+         GameCanvas.aka();
          if (this.aia == 1) {
             this.ada.aea = false;
             this.aea.aea = true;
@@ -479,19 +479,19 @@ public final class ed extends fb implements ag {
          }
       }
 
-      if (ab.aoa) {
-         if (ab.aba(this.ada.aaa, this.ada.aba, this.ada.aca, this.ada.ada)) {
+      if (GameCanvas.aoa) {
+         if (GameCanvas.aba(this.ada.aaa, this.ada.aba, this.ada.aca, this.ada.ada)) {
             this.aia = 0;
-         } else if (ab.aba(this.aea.aaa, this.aea.aba, this.aea.aca, this.aea.ada)) {
+         } else if (GameCanvas.aba(this.aea.aaa, this.aea.aba, this.aea.aca, this.aea.ada)) {
             this.aia = 1;
          } else {
             if (this.aua) {
-               if (ab.aba(this.afa.aaa, this.afa.aba, this.afa.aca, this.afa.ada)) {
+               if (GameCanvas.aba(this.afa.aaa, this.afa.aba, this.afa.aca, this.afa.ada)) {
                   this.aia = 2;
-               } else if (ab.aba(this.aga.aaa, this.aga.aba, this.aga.aca, this.aga.ada)) {
+               } else if (GameCanvas.aba(this.aga.aaa, this.aga.aba, this.aga.aca, this.aga.ada)) {
                   this.aia = 3;
                }
-            } else if (ab.aba(this.ada.aaa - 20, ab.bca + 40, 80, 20)) {
+            } else if (GameCanvas.aba(this.ada.aaa - 20, GameCanvas.bca + 40, 80, 20)) {
                this.ata = !this.ata;
             }
 
@@ -500,7 +500,7 @@ public final class ed extends fb implements ag {
       }
 
       super.aca();
-      ab.aka();
+      GameCanvas.aka();
    }
 
    public final void aaa(int var1, Object var2) {
@@ -525,7 +525,7 @@ public final class ed extends fb implements ag {
       case 1004:
          ev var6 = new ev();
          var8 = fd.ada("lowGraphic");
-         if (!ab.afa) {
+         if (!GameCanvas.afa) {
             if (var8 == 1) {
                var6.addElement(new ca(er.doa, this, 10041, (Object)null));
             } else {
@@ -534,17 +534,17 @@ public final class ed extends fb implements ag {
          }
 
          var6.addElement(new ca(er.bia, this, 1006, (Object)null));
-         if (ab.bda == this) {
+         if (GameCanvas.bda == this) {
             var6.addElement(new ca(er.bja, this, 1009, (Object)null));
          }
 
-         ab.bea.aaa(var6);
+         GameCanvas.bea.aaa(var6);
          return;
       case 1005:
-         ab.aaa(er.dxa, new ca("3G/Wifi", this, 3000, (Object)null), new ca("GPRS", this, 3001, (Object)null));
+         GameCanvas.aaa(er.dxa, new ca("3G/Wifi", this, 3000, (Object)null), new ca("GPRS", this, 3001, (Object)null));
          return;
       case 1006:
-         ab.aaa(er.bla, new ca(er.ega, this, 10061, (Object)null), new ca(er.cza, ab.aba(), 8882, (Object)null));
+         GameCanvas.aaa(er.bla, new ca(er.ega, this, 10061, (Object)null), new ca(er.cza, GameCanvas.aba(), 8882, (Object)null));
          return;
       case 1007:
          if (ec.aaa = !ec.aaa) {
@@ -564,7 +564,7 @@ public final class ed extends fb implements ag {
             ez.ada = this.aea.aia;
          }
 
-         ab.bfa.aaa();
+         GameCanvas.bfa.aaa();
          return;
       case 2001:
          if (this.ata) {
@@ -576,38 +576,38 @@ public final class ed extends fb implements ag {
          return;
       case 2002:
          if (this.ada.aia.equals("")) {
-            ab.aaa(er.dqa);
+            GameCanvas.aaa(er.dqa);
             return;
          } else {
             char[] var5 = this.ada.aia.toCharArray();
 
             for(var8 = 0; var8 < var5.length; ++var8) {
                if (!eq.aaa(var5[var8])) {
-                  ab.aaa(er.dra);
+                  GameCanvas.aaa(er.dra);
                   return;
                }
             }
 
             if (this.aea.aia.equals("")) {
-               ab.aaa(er.dsa);
+               GameCanvas.aaa(er.dsa);
                return;
             } else if (this.afa.aia.equals("")) {
-               ab.aaa(er.dta);
+               GameCanvas.aaa(er.dta);
                return;
             } else if (this.ada.aia.length() < 5) {
-               ab.aaa(er.dua);
+               GameCanvas.aaa(er.dua);
                return;
             } else if (!this.aea.aia.equals(this.afa.aia)) {
-               ab.aaa(er.dva);
+               GameCanvas.aaa(er.dva);
                return;
             } else {
                if (!this.aga.aia.equals("")) {
-                  ab.bja.aaa(er.dwa[0] + " " + this.ada.aia + ", " + er.dwa[1], new ca(er.ega, this, 4000, (Object)null), (ca)null, new ca(er.cza, ab.aja, 8882, (Object)null));
-                  ab.bia = ab.bja;
+                  GameCanvas.bja.aaa(er.dwa[0] + " " + this.ada.aia + ", " + er.dwa[1], new ca(er.ega, this, 4000, (Object)null), (ca)null, new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
+                  GameCanvas.bia = GameCanvas.bja;
                   return;
                }
 
-               ab.aaa("Bạn chưa nhập Email/số di động, Email/số di động giúp bạn lấy lại mật khẩu khi mất mật khẩu", new ca("Tiếp Tục", this, 4001, (Object)null), new ca(er.cza, ab.aja, 8882, (Object)null));
+               GameCanvas.aaa("Bạn chưa nhập Email/số di động, Email/số di động giúp bạn lấy lại mật khẩu khi mất mật khẩu", new ca("Tiếp Tục", this, 4001, (Object)null), new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
                return;
             }
          }
@@ -615,18 +615,18 @@ public final class ed extends fb implements ag {
          Class_ab.aaa("http://dd.ninjaschool.vn/app/index.php?for=event&do=resetpass");
          return;
       case 2004:
-         ab.bka.aaa(er.lba, new ca(er.dca, this, 20041, (Object)null), 0);
+         GameCanvas.bka.aaa(er.lba, new ca(er.dca, this, 20041, (Object)null), 0);
          return;
       case 2005:
-         ab.aaa("Bạn có muốn reset mật khẩu không?", new ca(er.dca, this, 20052, (Object)null), new ca(er.cza, ab.aja, 8882, (Object)null));
+         GameCanvas.aaa("Bạn có muốn reset mật khẩu không?", new ca(er.dca, this, 20052, (Object)null), new ca(er.cza, GameCanvas.aja, 8882, (Object)null));
          return;
       case 3000:
          aaa(false);
-         ab.ama();
+         GameCanvas.ama();
          return;
       case 3001:
          aaa(true);
-         ab.ama();
+         GameCanvas.ama();
          return;
       case 4000:
          this.aaa(this.ada.aia);
@@ -644,11 +644,11 @@ public final class ed extends fb implements ag {
          return;
       case 10041:
          fd.aaa("lowGraphic", 0);
-         ab.aaa(er.dja, 8885);
+         GameCanvas.aaa(er.dja, 8885);
          return;
       case 10042:
          fd.aaa("lowGraphic", 1);
-         ab.aaa(er.dja, 8885);
+         GameCanvas.aaa(er.dja, 8885);
          return;
       case 10051:
          fd.aaa("isSoftKey", 1);
@@ -659,12 +659,12 @@ public final class ed extends fb implements ag {
          GameScr.gsa = false;
          return;
       case 10061:
-         ab.ama();
+         GameCanvas.ama();
          fd.aaa("indLanguage", -1);
          Class_ab.aja.notifyDestroyed();
          return;
       case 20000:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = Class_ab.aba[0];
          Class_ab.aka = Class_ab.aca[0];
@@ -672,7 +672,7 @@ public final class ed extends fb implements ag {
          this.ala();
          return;
       case 20001:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[1];
          Class_ab.afa = Class_ab.aba[1];
          Class_ab.aka = Class_ab.aca[1];
@@ -680,14 +680,14 @@ public final class ed extends fb implements ag {
          this.ala();
          return;
       case 20041:
-         this.bga = ab.bka.aaa.aia.toString();
-         ab.ama();
+         this.bga = GameCanvas.bka.aaa.aia.toString();
+         GameCanvas.ama();
          if (this.bga.equals("")) {
-            ab.aaa(er.dqa);
+            GameCanvas.aaa(er.dqa);
             return;
          }
 
-         ab.aaa(er.dya, new ca(er.cma, this, 200421, (Object)null), new ca(er.cza, this, 200422, (Object)null));
+         GameCanvas.aaa(er.dya, new ca(er.cma, this, 200421, (Object)null), new ca(er.cza, this, 200422, (Object)null));
          return;
       case 20051:
          GameScr.ava().aaa();
@@ -696,38 +696,38 @@ public final class ed extends fb implements ag {
          Class_ab.aaa("http://dd.ninjaschool.vn/app/index.php?for=event&do=resetpass");
          return;
       case 200041:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = 14444;
          fd.aaa("indServer", Class_ab.ada[0]);
          this.ala();
          return;
       case 200042:
-         ab.bea.aaa = false;
+         GameCanvas.bea.aaa = false;
          Class_ab.aga = Class_ab.aaa[0];
          Class_ab.afa = 14444;
          fd.aaa("indServer", Class_ab.aaa[0]);
          this.ala();
          return;
       case 200421:
-         ab.ama();
+         GameCanvas.ama();
          String var4 = this.bga;
          Class_ab.aga = Class_ab.aaa[0];
-         ab.aba(er.ena);
-         ab.aca();
-         ab.aba(er.bda);
+         GameCanvas.aba(er.ena);
+         GameCanvas.aca();
+         GameCanvas.aba(er.bda);
          Service.aaa().aaa(var4);
          return;
       case 200422:
          String var7 = this.bga;
-         ab.aaa(ex.aaa(er.qda, "#", var7));
+         GameCanvas.aaa(ex.aaa(er.qda, "#", var7));
       default:
       }
    }
 
    public static void aga() {
       aaa = 0;
-      aba = ab.aca("/tt.png");
+      aba = GameCanvas.aca("/tt.png");
    }
 
    static {

@@ -39,13 +39,13 @@ public final class eg implements ag {
 
    public final void aaa(int var1, Object var2) {
       if (var1 == 1) {
-         ab.bka.aaa("Tốc độ NextMap", new ca("Đặt", aaa(), 2, (Object)null), 1);
-         ab.bka.aaa.aaa(String.valueOf(aba));
+         GameCanvas.bka.aaa("Tốc độ NextMap", new ca("Đặt", aaa(), 2, (Object)null), 1);
+         GameCanvas.bka.aaa.aaa(String.valueOf(aba));
       } else if (var1 == 2) {
          var1 = aba;
 
          try {
-            var1 = Integer.parseInt(ab.bka.aaa.aea());
+            var1 = Integer.parseInt(GameCanvas.bka.aaa.aea());
          } catch (Exception var3) {
          }
 
@@ -56,15 +56,15 @@ public final class eg implements ag {
             GameScr.chatPopup("Tốc độ nextmap từ 1 đến 99");
          }
 
-         ab.ama();
+         GameCanvas.ama();
       } else if (var1 == 3) {
-         ab.bka.aaa("Màu nền Background", new ca("Đặt", aaa(), 4, (Object)null), 1);
-         ab.bka.aaa.aaa(String.valueOf(aha));
+         GameCanvas.bka.aaa("Màu nền Background", new ca("Đặt", aaa(), 4, (Object)null), 1);
+         GameCanvas.bka.aaa.aaa(String.valueOf(aha));
       } else if (var1 == 4) {
          var1 = aha;
 
          try {
-            var1 = Integer.parseInt(ab.bka.aaa.aea());
+            var1 = Integer.parseInt(GameCanvas.bka.aaa.aea());
          } catch (Exception var4) {
          }
 
@@ -75,7 +75,7 @@ public final class eg implements ag {
             GameScr.chatPopup("Màu nền từ -1 đến 16777216");
          }
 
-         ab.ama();
+         GameCanvas.ama();
       } else if (var1 == 5) {
          String var5 = aaa("hd.txt");
          GameScr.ava().aaa("Hướng dẫn", var5, true);

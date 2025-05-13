@@ -22,18 +22,18 @@ public final class dv extends Auto {
    }
 
    protected final void aaa() {
-      if (fz.ala().bba <= 0) {
+      if (Char.getMyChar().bba <= 0) {
          Auto.aaa(true);
       } else {
          switch(this.aaa) {
          case 0:
-            if (gn.aoa == 38 && gn.ala == 21) {
+            if (TileMap.mapID == 38 && TileMap.zoneID == 21) {
                LockGame.bka();
                this.aaa = 2;
                return;
             }
 
-            this.aaa(38, 21, -1, -1);
+            this.goMap(38, 21, -1, -1);
             return;
          case 1:
             if (System.currentTimeMillis() - this.bha > 180000L) {
@@ -41,8 +41,8 @@ public final class dv extends Auto {
                return;
             }
 
-            if (gn.aoa != 38 || gn.ala != 21) {
-               this.aaa(38, 21, -1, -1);
+            if (TileMap.mapID != 38 || TileMap.zoneID != 21) {
+               this.goMap(38, 21, -1, -1);
                return;
             }
             break;
@@ -63,12 +63,12 @@ public final class dv extends Auto {
             return;
          case 3:
             if (this.aba > 0) {
-               if (gn.aoa != this.aba) {
-                  this.aaa(this.aba, -2, -1, -1);
+               if (TileMap.mapID != this.aba) {
+                  this.goMap(this.aba, -2, -1, -1);
                   return;
                }
 
-               GameScr.aba(5, 1, 0);
+               GameScr.PickNpc(5, 1, 0);
                if (LockGame.aza()) {
                   this.aaa = 5;
                   Code.aaa((Auto)(new ej(super.aga)));
@@ -78,12 +78,12 @@ public final class dv extends Auto {
             break;
          case 4:
             if (this.aca > 0) {
-               if (gn.aoa != this.aca) {
-                  this.aaa(this.aca, -2, -1, -1);
+               if (TileMap.mapID != this.aca) {
+                  this.goMap(this.aca, -2, -1, -1);
                   return;
                }
 
-               GameScr.aba(5, 1, 0);
+               GameScr.PickNpc(5, 1, 0);
                if (LockGame.aza()) {
                   Code.aca();
                   return;
@@ -94,7 +94,7 @@ public final class dv extends Auto {
             break;
          case 5:
             Thread.sleep(10000L);
-            if (Code.aha != null && !fz.ala().cea.equals(Code.aha)) {
+            if (Code.aha != null && !Char.getMyChar().cea.equals(Code.aha)) {
                this.aaa = 1;
                this.bha = System.currentTimeMillis();
                return;

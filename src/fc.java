@@ -31,14 +31,14 @@ public final class fc extends fb implements ag {
    }
 
    public fc() {
-      if (ab.aza == 128) {
+      if (GameCanvas.aza == 128) {
          GameScr.aba(128, 120);
-         GameScr.gia = (ab.aza - 128) / 2;
+         GameScr.gia = (GameCanvas.aza - 128) / 2;
          GameScr.gha = 0;
       } else {
          GameScr.aba(170, 190);
-         GameScr.gia = (ab.aza - 170) / 2;
-         GameScr.gha = (ab.baa - 220) / 2;
+         GameScr.gia = (GameCanvas.aza - 170) / 2;
+         GameScr.gha = (GameCanvas.baa - 220) / 2;
       }
 
       aca = 1;
@@ -47,7 +47,7 @@ public final class fc extends fb implements ag {
       aba.aaa = GameScr.gia + 45;
       aba.aaa = GameScr.gia + GameScr.gja / 2 - aba.aca / 2;
       aba.aba = GameScr.gha + 62;
-      if (ab.aza == 128) {
+      if (GameCanvas.aza == 128) {
          aba.aca = 60;
       }
 
@@ -64,8 +64,8 @@ public final class fc extends fb implements ag {
    }
 
    public final void aaa() {
-      aca = ab.aua % 2;
-      ada = ab.aua % 4;
+      aca = GameCanvas.aua % 2;
+      ada = GameCanvas.aua % 4;
       super.aaa();
    }
 
@@ -74,24 +74,24 @@ public final class fc extends fb implements ag {
    }
 
    public final void aba() {
-      if (++GameScr.aia > ab.aza * 3 + 100) {
+      if (++GameScr.aia > GameCanvas.aza * 3 + 100) {
          GameScr.aia = 100;
       }
 
-      if (ab.afa && ab.aza >= 320) {
+      if (GameCanvas.afa && GameCanvas.aza >= 320) {
          if (super.ala != null) {
-            super.ala.afa = ab.aza / 2 - 160;
-            super.ala.aga = ab.baa - 26;
+            super.ala.afa = GameCanvas.aza / 2 - 160;
+            super.ala.aga = GameCanvas.baa - 26;
          }
 
          if (super.ama != null) {
-            super.ama.afa = ab.aza / 2 - 35;
-            super.ama.aga = ab.baa - 26;
+            super.ama.afa = GameCanvas.aza / 2 - 35;
+            super.ama.aga = GameCanvas.baa - 26;
          }
 
          if (super.ana != null) {
-            super.ana.afa = ab.aza / 2 + 88;
-            super.ana.aga = ab.baa - 26;
+            super.ana.afa = GameCanvas.aza / 2 + 88;
+            super.ana.aga = GameCanvas.baa - 26;
          }
       }
 
@@ -106,11 +106,11 @@ public final class fc extends fb implements ag {
    }
 
    public final void aca() {
-      if (ab.aka[2] && --aea < 0) {
+      if (GameCanvas.aka[2] && --aea < 0) {
          aea = er.jva.length - 1;
       }
 
-      if (ab.aka[8] && ++aea >= er.jva.length) {
+      if (GameCanvas.aka[8] && ++aea >= er.jva.length) {
          aea = 0;
       }
 
@@ -120,11 +120,11 @@ public final class fc extends fb implements ag {
       }
 
       if (aea == 1) {
-         if (ab.aka[4] && --aca < 0) {
+         if (GameCanvas.aka[4] && --aca < 0) {
             aca = er.jwa.length - 1;
          }
 
-         if (ab.aka[6] && ++aca > er.jwa.length - 1) {
+         if (GameCanvas.aka[6] && ++aca > er.jwa.length - 1) {
             aca = 0;
          }
 
@@ -132,30 +132,30 @@ public final class fc extends fb implements ag {
       }
 
       if (aea == 2) {
-         if (ab.aka[4] && --ada < 0) {
+         if (GameCanvas.aka[4] && --ada < 0) {
             ada = er.gka[0].length - 1;
          }
 
-         if (ab.aka[6] && ++ada > er.gka[0].length - 1) {
+         if (GameCanvas.aka[6] && ++ada > er.gka[0].length - 1) {
             ada = 0;
          }
       }
 
-      if (ab.aoa && ab.aba(GameScr.gia + 5, GameScr.gha + 65, GameScr.gja - 5, fb.aoa)) {
+      if (GameCanvas.aoa && GameCanvas.aba(GameScr.gia + 5, GameScr.gha + 65, GameScr.gja - 5, fb.aoa)) {
          aea = 0;
       }
 
       super.aca();
-      ab.ala();
-      ab.aka();
+      GameCanvas.ala();
+      GameCanvas.aka();
    }
 
    public final void aaa(as var1) {
       try {
-         ab.aaa(var1);
+         GameCanvas.aaa(var1);
          fk.aaa(GameScr.gia, GameScr.gha, GameScr.gja, GameScr.gka, var1);
          byte var2 = 40;
-         if (ab.aza == 128) {
+         if (GameCanvas.aza == 128) {
             var2 = 20;
          }
 
@@ -165,22 +165,22 @@ public final class fc extends fb implements ag {
          fj var9 = GameScr.bba[var3];
          fj var10 = GameScr.bba[var4];
          fj var11 = GameScr.bba[var5];
-         int var6 = ab.aza / 2;
+         int var6 = GameCanvas.aza / 2;
          int var7 = GameScr.gha + 50;
-         fo.aaa(var1, var9.aaa[fz.gda[0][0][0]].aaa, var6 + fz.gda[0][0][1] + var9.aaa[fz.gda[0][0][0]].aba, var7 - fz.gda[0][0][2] + var9.aaa[fz.gda[0][0][0]].aca, 0, 0);
-         fo.aaa(var1, var10.aaa[fz.gda[0][1][0]].aaa, var6 + fz.gda[0][1][1] + var10.aaa[fz.gda[0][1][0]].aba, var7 - fz.gda[0][1][2] + var10.aaa[fz.gda[0][1][0]].aca, 0, 0);
-         fo.aaa(var1, var11.aaa[fz.gda[0][2][0]].aaa, var6 + fz.gda[0][2][1] + var11.aaa[fz.gda[0][2][0]].aba, var7 - fz.gda[0][2][2] + var11.aaa[fz.gda[0][2][0]].aca, 0, 0);
-         if (!ab.afa) {
+         fo.aaa(var1, var9.aaa[Char.gda[0][0][0]].aaa, var6 + Char.gda[0][0][1] + var9.aaa[Char.gda[0][0][0]].aba, var7 - Char.gda[0][0][2] + var9.aaa[Char.gda[0][0][0]].aca, 0, 0);
+         fo.aaa(var1, var10.aaa[Char.gda[0][1][0]].aaa, var6 + Char.gda[0][1][1] + var10.aaa[Char.gda[0][1][0]].aba, var7 - Char.gda[0][1][2] + var10.aaa[Char.gda[0][1][0]].aca, 0, 0);
+         fo.aaa(var1, var11.aaa[Char.gda[0][2][0]].aaa, var6 + Char.gda[0][2][1] + var11.aaa[Char.gda[0][2][0]].aba, var7 - Char.gda[0][2][2] + var11.aaa[Char.gda[0][2][0]].aca, 0, 0);
+         if (!GameCanvas.afa) {
             for(var3 = 0; var3 < er.jva.length; ++var3) {
                if (aea == var3) {
                   var4 = var3 > 0 ? -5 : 0;
-                  fo.aaa(var1, 989, GameScr.gia + 10 + (ab.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 2, af.aga);
-                  fo.aaa(var1, 989, GameScr.gia + GameScr.gja - 15 - (ab.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 0, af.aga);
+                  fo.aaa(var1, 989, GameScr.gia + 10 + (GameCanvas.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 2, af.aga);
+                  fo.aaa(var1, 989, GameScr.gia + GameScr.gja - 15 - (GameCanvas.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 0, af.aga);
                }
             }
          }
 
-         if (ab.afa) {
+         if (GameCanvas.afa) {
             this.aia.aaa = er.jwa[aca];
             this.aia.aaa(var1);
             this.aja.aaa = er.gka[aca][ada];
@@ -239,7 +239,7 @@ public final class fc extends fb implements ag {
          return;
       case 8001:
          if (cl.aea().aja) {
-            ab.bfa.aaa();
+            GameCanvas.bfa.aaa();
             return;
          }
 

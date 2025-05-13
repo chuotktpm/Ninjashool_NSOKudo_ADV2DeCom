@@ -38,11 +38,11 @@ public final class Service {
          fe var1;
          (var1 = aaa((byte)-125)).aca.writeByte(Class_ab.aea);
          var1.aca.writeByte(as.aba);
-         var1.aca.writeBoolean(ab.aca);
-         var1.aca.writeInt(ab.aza);
-         var1.aca.writeInt(ab.baa);
+         var1.aca.writeBoolean(GameCanvas.aca);
+         var1.aca.writeInt(GameCanvas.aza);
+         var1.aca.writeInt(GameCanvas.baa);
          var1.aca.writeBoolean(eq.asa);
-         var1.aca.writeBoolean(ab.afa);
+         var1.aca.writeBoolean(GameCanvas.afa);
          var1.aca.writeUTF(System.getProperty("microedition.platform"));
          var1.aca.writeByte(0);
          var1.aca.writeInt(0);
@@ -314,7 +314,7 @@ public final class Service {
          var2.aca();
       }
 
-      if (fz.ala().arrItemBag[var1] != null && fz.ala().arrItemBag[var1].aaa.aba == 24) {
+      if (Char.getMyChar().arrItemBag[var1] != null && Char.getMyChar().arrItemBag[var1].aaa.aba == 24) {
          GameScr.ava().bca();
          br.aaa("");
       }
@@ -322,7 +322,7 @@ public final class Service {
    }
 
    public final void aga(int var1, int var2) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var3 = null;
 
       try {
@@ -361,7 +361,7 @@ public final class Service {
    }
 
    public final void aaa(int var1, int var2, int var3) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var4 = null;
 
       try {
@@ -601,7 +601,7 @@ public final class Service {
    }
 
    public final void aaa(gg[] var1) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var2 = null;
 
       try {
@@ -624,7 +624,7 @@ public final class Service {
    }
 
    public final void aaa(gg var1, gg[] var2, boolean var3) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var4 = null;
 
       try {
@@ -671,7 +671,7 @@ public final class Service {
    }
 
    public final void aba(gg[] var1) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var2 = null;
 
       try {
@@ -887,7 +887,7 @@ public final class Service {
       if (var3 != 0) {
          try {
             ac var5;
-            fz var7;
+            Char var7;
             if (var1.size() > 0 && var2.size() > 0) {
                if (var3 == 1) {
                   var4 = new fe((byte)4);
@@ -903,7 +903,7 @@ public final class Service {
                }
 
                for(var3 = 0; var3 < var2.size(); ++var3) {
-                  if ((var7 = (fz)var2.elementAt(var3)) != null) {
+                  if ((var7 = (Char)var2.elementAt(var3)) != null) {
                      var4.aca.writeInt(var7.asa);
                   } else {
                      var4.aca.writeInt(-1);
@@ -920,7 +920,7 @@ public final class Service {
                var4 = new fe((byte)61);
 
                for(var3 = 0; var3 < var2.size(); ++var3) {
-                  var7 = (fz)var2.elementAt(var3);
+                  var7 = (Char)var2.elementAt(var3);
                   var4.aca.writeInt(var7.asa);
                }
             }
@@ -1361,7 +1361,7 @@ public final class Service {
       fe var1 = null;
 
       try {
-         (var1 = new fe((byte)74)).aca.writeByte(fz.ala().ara);
+         (var1 = new fe((byte)74)).aca.writeByte(Char.getMyChar().ara);
          this.aaa.aaa(var1);
          return;
       } catch (Exception var5) {
@@ -1454,7 +1454,7 @@ public final class Service {
          (var2 = new fe((byte)25)).aca.writeByte(var1.size());
 
          for(int var3 = 0; var3 < var1.size(); ++var3) {
-            fz var4 = (fz)var1.elementAt(var3);
+            Char var4 = (Char)var1.elementAt(var3);
             var2.aca.writeInt(var4.asa);
          }
 
@@ -2203,7 +2203,7 @@ public final class Service {
    }
 
    private void afa(gg[] var1) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var2 = null;
 
       try {
@@ -2264,7 +2264,7 @@ public final class Service {
    }
 
    public final void aba(gg var1, gg[] var2) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var3 = null;
 
       try {
@@ -2309,7 +2309,7 @@ public final class Service {
    }
 
    public final void ada(gg var1, gg[] var2) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var3 = null;
 
       try {
@@ -2328,7 +2328,7 @@ public final class Service {
             return;
          }
 
-         ab.aaa(er.swa);
+         GameCanvas.aaa(er.swa);
       } catch (Exception var7) {
          var7.printStackTrace();
          return;
@@ -2496,7 +2496,7 @@ public final class Service {
    }
 
    public final void aaa(byte var1, gg var2, gg var3, gg[] var4) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var5 = null;
 
       try {
@@ -2534,7 +2534,7 @@ public final class Service {
    }
 
    public final void aea(gg[] var1) {
-      ab.bja.aba();
+      GameCanvas.bja.aba();
       fe var2 = null;
 
       try {

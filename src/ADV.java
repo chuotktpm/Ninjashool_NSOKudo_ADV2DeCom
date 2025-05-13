@@ -37,11 +37,11 @@ public final class ADV extends Auto {
       super.b_();
       if (bma != null) {
          if (bma.ana == 5) {
-            bma = fz.ala().dca[bma.aaa.aba];
+            bma = Char.getMyChar().dca[bma.aaa.aba];
          } else if (bma.ana == 3) {
-            bma = fz.ala().arrItemBag[bma.ada];
+            bma = Char.getMyChar().arrItemBag[bma.ada];
          } else if (bma.ana == 4) {
-            bma = fz.ala().dba[bma.ada];
+            bma = Char.getMyChar().dba[bma.ada];
          } else {
             System.out.println("Loi reset itemNV");
          }
@@ -49,12 +49,12 @@ public final class ADV extends Auto {
 
       if (bla != null) {
          if (bla.ana == 5) {
-            bla = fz.ala().dca[bla.aaa.aba];
+            bla = Char.getMyChar().dca[bla.aaa.aba];
             return;
          }
 
          if (bla.ana == 3) {
-            bla = fz.ala().arrItemBag[bla.ada];
+            bla = Char.getMyChar().arrItemBag[bla.ada];
             return;
          }
 
@@ -93,26 +93,26 @@ public final class ADV extends Auto {
          int var2;
          gg var3;
          if (var1[0].equals("Tiêu diệt quái") && ge.aaa == 0 && ge.aaa == 0) {
-            for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-               var3 = fz.ala().arrItemBag[var2];
+            for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+               var3 = Char.getMyChar().arrItemBag[var2];
                if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 4) {
                   Service.aaa().aha(var3.ada, 1);
                }
             }
 
             ada = 1;
-         } else if (var1[0].equals("Tiêu diệt tinh anh") && fz.fha && ge.aba == 0) {
-            for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-               var3 = fz.ala().arrItemBag[var2];
+         } else if (var1[0].equals("Tiêu diệt tinh anh") && Char.fha && ge.aba == 0) {
+            for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+               var3 = Char.getMyChar().arrItemBag[var2];
                if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 4) {
                   Service.aaa().aha(var3.ada, 1);
                }
             }
 
             ada = 2;
-         } else if (var1[0].equals("Tiêu diệt thủ lĩnh") && fz.fia && ge.aca == 0) {
-            for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-               var3 = fz.ala().arrItemBag[var2];
+         } else if (var1[0].equals("Tiêu diệt thủ lĩnh") && Char.fia && ge.aca == 0) {
+            for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+               var3 = Char.getMyChar().arrItemBag[var2];
                if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 4) {
                   Service.aaa().aha(var3.ada, 1);
                }
@@ -120,8 +120,8 @@ public final class ADV extends Auto {
 
             ada = 3;
          } else if (var1[0].equals("Nâng cấp vật phẩm") && ge.ada == 0) {
-            for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-               var3 = fz.ala().arrItemBag[var2];
+            for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+               var3 = Char.getMyChar().arrItemBag[var2];
                if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 3) {
                   Service.aaa().aha(var3.ada, 1);
                }
@@ -138,8 +138,8 @@ public final class ADV extends Auto {
                   Code.aaa(var13[var14], "lodai");
                }
 
-               for(var14 = 0; var14 < fz.ala().arrItemBag.length; ++var14) {
-                  gg var4 = fz.ala().arrItemBag[var14];
+               for(var14 = 0; var14 < Char.getMyChar().arrItemBag.length; ++var14) {
+                  gg var4 = Char.getMyChar().arrItemBag[var14];
                   if (var4 != null && var4.aaa.aba == 26 && var4.aaa.aaa <= 4) {
                      Service.aaa().aha(var4.ada, 1);
                   }
@@ -147,8 +147,8 @@ public final class ADV extends Auto {
 
                ada = 5;
             } else if (var1[0].equals("Nông dân chăm chỉ") && ge.aia == 0) {
-               for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-                  var3 = fz.ala().arrItemBag[var2];
+               for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+                  var3 = Char.getMyChar().arrItemBag[var2];
                   if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 4) {
                      Service.aaa().aha(var3.ada, 1);
                   }
@@ -158,8 +158,8 @@ public final class ADV extends Auto {
             } else if (!var1[0].equals("Cừu sát người khác")) {
                ada = 0;
             } else {
-               for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
-                  var3 = fz.ala().arrItemBag[var2];
+               for(var2 = 0; var2 < Char.getMyChar().arrItemBag.length; ++var2) {
+                  var3 = Char.getMyChar().arrItemBag[var2];
                   if (var3 != null && var3.aaa.aba == 26 && var3.aaa.aaa <= 4) {
                      Service.aaa().aha(var3.ada, 1);
                   }
@@ -191,7 +191,7 @@ public final class ADV extends Auto {
             int var15;
             if (ada < 4) {
                if (var1[1].startsWith("- Sử dụng ") && var1[2].startsWith("- Tiêu diệt ")) {
-                  fz.eoa = false;
+                  Char.eoa = false;
                   var16 = var1[1].substring(10, var1[1].length());
                   var15 = (var17 = var1[2].substring(12).trim()).indexOf(47);
                   var5 = var17.substring(0, var15);
@@ -200,8 +200,8 @@ public final class ADV extends Auto {
                   try {
                      bsa = bia = Integer.parseInt(var5);
                      bua = bja = Integer.parseInt(var6);
-                     System.out.println("TB=" + var16 + " gender=" + fz.ala().ata);
-                     if ((aaa = gi.aaa(var16, (byte)fz.ala().ata)) == null) {
+                     System.out.println("TB=" + var16 + " gender=" + Char.getMyChar().ata);
+                     if ((aaa = gi.aaa(var16, (byte)Char.getMyChar().ata)) == null) {
                         throw new Exception();
                      }
 
@@ -219,8 +219,8 @@ public final class ADV extends Auto {
                }
             } else if (ada == 4) {
                if (var1[1].startsWith("- Sử dụng ") && var1[2].startsWith("- Nâng cấp ")) {
-                  fz.eoa = true;
-                  fz.fva = 4;
+                  Char.eoa = true;
+                  Char.fva = 4;
                   var16 = var1[1].substring(10, var1[1].length());
                   var15 = (var17 = var1[2].substring(11).trim()).indexOf(47);
                   var5 = var17.substring(0, var15);
@@ -229,12 +229,12 @@ public final class ADV extends Auto {
                   try {
                      bsa = bia = Integer.parseInt(var5);
                      bua = bja = Integer.parseInt(var6);
-                     System.out.println("TB=" + var16 + " gender=" + fz.ala().ata);
-                     if ((aaa = gi.aaa(var16, (byte)fz.ala().ata)) == null) {
+                     System.out.println("TB=" + var16 + " gender=" + Char.getMyChar().ata);
+                     if ((aaa = gi.aaa(var16, (byte)Char.getMyChar().ata)) == null) {
                         throw new Exception();
                      }
 
-                     if ((aba = gi.aaa("Giày Thô Ma", (byte)fz.ala().ata)) == null) {
+                     if ((aba = gi.aaa("Giày Thô Ma", (byte)Char.getMyChar().ata)) == null) {
                         throw new Exception();
                      }
 
@@ -252,7 +252,7 @@ public final class ADV extends Auto {
                }
             } else if (ada == 5) {
                label258: {
-                  fz.eoa = false;
+                  Char.eoa = false;
                   if (var1[1].startsWith("- Sử dụng ") && var1[2].startsWith("- Chiến thắng ")) {
                      var16 = var1[1].substring(10, var1[1].length());
                      var15 = (var17 = var1[2].substring(14).trim()).indexOf(47);
@@ -262,8 +262,8 @@ public final class ADV extends Auto {
                      try {
                         bia = Integer.parseInt(var5);
                         bja = Integer.parseInt(var6);
-                        System.out.println("TB=" + var16 + " gender=" + fz.ala().ata);
-                        if ((aaa = gi.aaa(var16, (byte)fz.ala().ata)) == null) {
+                        System.out.println("TB=" + var16 + " gender=" + Char.getMyChar().ata);
+                        if ((aaa = gi.aaa(var16, (byte)Char.getMyChar().ata)) == null) {
                            throw new Exception();
                         }
 
@@ -283,7 +283,7 @@ public final class ADV extends Auto {
                }
             } else if (ada == 6) {
                if (var1[1].startsWith("- Sử dụng ") && var1[2].startsWith("- Kiếm ")) {
-                  fz.eoa = false;
+                  Char.eoa = false;
                   var16 = var1[1].substring(10, var1[1].length());
                   var15 = (var17 = var1[2].substring(6).trim()).indexOf(47);
                   var5 = var17.substring(0, var15);
@@ -292,8 +292,8 @@ public final class ADV extends Auto {
                   try {
                      bsa = bia = Integer.parseInt(var5);
                      bua = bja = Integer.parseInt(var6);
-                     System.out.println("TB=" + var16 + " gender=" + fz.ala().ata);
-                     if ((aaa = gi.aaa(var16, (byte)fz.ala().ata)) == null) {
+                     System.out.println("TB=" + var16 + " gender=" + Char.getMyChar().ata);
+                     if ((aaa = gi.aaa(var16, (byte)Char.getMyChar().ata)) == null) {
                         throw new Exception();
                      }
 
@@ -311,7 +311,7 @@ public final class ADV extends Auto {
                }
             } else if (ada == 7) {
                if (var1[1].startsWith("- Sử dụng ") && var1[2].startsWith("- Cừu sát ")) {
-                  fz.eoa = false;
+                  Char.eoa = false;
                   var16 = var1[1].substring(10, var1[1].length());
                   var15 = (var17 = var1[2].substring(9).trim()).indexOf(47);
                   var5 = var17.substring(0, var15);
@@ -320,8 +320,8 @@ public final class ADV extends Auto {
                   try {
                      bsa = bia = Integer.parseInt(var5);
                      bua = bja = Integer.parseInt(var6);
-                     System.out.println("TB=" + var16 + " gender=" + fz.ala().ata);
-                     if ((aaa = gi.aaa(var16, (byte)fz.ala().ata)) == null) {
+                     System.out.println("TB=" + var16 + " gender=" + Char.getMyChar().ata);
+                     if ((aaa = gi.aaa(var16, (byte)Char.getMyChar().ata)) == null) {
                         throw new Exception();
                      }
 
@@ -339,7 +339,7 @@ public final class ADV extends Auto {
                }
             }
 
-            if (aaa != null && aaa.afa > fz.ala().aya) {
+            if (aaa != null && aaa.afa > Char.getMyChar().aya) {
                ada = 0;
             }
          }
@@ -357,15 +357,15 @@ public final class ADV extends Auto {
          if (var0.contains(bpa)) {
             if (ada >= 4 && ada != 6) {
                if (ada == 4) {
-                  Service.aaa().aja(fz.ala().cea);
+                  Service.aaa().aja(Char.getMyChar().cea);
                   LockGame.ara();
 
-                  for(int var1 = 0; var1 < fz.ala().arrItemBag.length; ++var1) {
-                     gg var2 = fz.ala().arrItemBag[var1];
-                     if (var2 != null && var2.aia == 8 && (fz.ala().arrItemBag[var1].aaa.aaa == 126 || fz.ala().arrItemBag[var1].aaa.aaa == 127)) {
+                  for(int var1 = 0; var1 < Char.getMyChar().arrItemBag.length; ++var1) {
+                     gg var2 = Char.getMyChar().arrItemBag[var1];
+                     if (var2 != null && var2.aia == 8 && (Char.getMyChar().arrItemBag[var1].aaa.aaa == 126 || Char.getMyChar().arrItemBag[var1].aaa.aaa == 127)) {
                         Service.aaa().aaa(var2);
                         LockGame.ara();
-                        Service.aaa().aja(fz.ala().cea);
+                        Service.aaa().aja(Char.getMyChar().cea);
                         LockGame.ara();
                         break;
                      }
@@ -482,37 +482,37 @@ public final class ADV extends Auto {
    private boolean aha() {
       if (aaa.afa >= 50) {
          return true;
-      } else if (!gn.afa(gn.aoa)) {
-         this.aaa(Code.bqa, -2, -1, -1);
+      } else if (!TileMap.afa(TileMap.mapID)) {
+         this.goMap(Code.bqa, -2, -1, -1);
          return false;
       } else {
          System.out.println("Buy " + aaa.ada);
-         gg[] var1 = aaa(aaa.aba, fz.ala().ata);
+         gg[] var1 = aaa(aaa.aba, Char.getMyChar().ata);
          if (aaa.aba == 1) {
-            GameScr.aba(0, 0, 0);
+            GameScr.PickNpc(0, 0, 0);
          } else if (aaa.aba == 8) {
-            GameScr.aba(1, 0, 4);
+            GameScr.PickNpc(1, 0, 4);
          } else if (aaa.aba == 6) {
-            GameScr.aba(1, 0, 3);
+            GameScr.PickNpc(1, 0, 3);
          } else if (aaa.aba == 4) {
-            GameScr.aba(1, 0, 2);
+            GameScr.PickNpc(1, 0, 2);
          } else if (aaa.aba == 2) {
-            GameScr.aba(1, 0, 1);
+            GameScr.PickNpc(1, 0, 1);
          } else if (aaa.aba == 0) {
-            GameScr.aba(1, 0, 0);
+            GameScr.PickNpc(1, 0, 0);
          } else if (aaa.aba == 9) {
-            GameScr.aba(2, 0, 3);
+            GameScr.PickNpc(2, 0, 3);
          } else if (aaa.aba == 7) {
-            GameScr.aba(2, 0, 2);
+            GameScr.PickNpc(2, 0, 2);
          } else if (aaa.aba == 5) {
-            GameScr.aba(2, 0, 1);
+            GameScr.PickNpc(2, 0, 1);
          } else if (aaa.aba == 3) {
-            GameScr.aba(2, 0, 0);
+            GameScr.PickNpc(2, 0, 0);
          }
 
          if (var1 == null) {
             LockGame.bfa();
-            var1 = aaa(aaa.aba, fz.ala().ata);
+            var1 = aaa(aaa.aba, Char.getMyChar().ata);
          }
 
          if (var1 != null) {
@@ -538,19 +538,19 @@ public final class ADV extends Auto {
    }
 
    private boolean ara() {
-      if (!gn.afa(gn.aoa)) {
-         this.aaa(Code.bqa, -2, -1, -1);
+      if (!TileMap.afa(TileMap.mapID)) {
+         this.goMap(Code.bqa, -2, -1, -1);
          return false;
       } else {
          System.out.println("Buy Item Up" + aba.ada);
-         gg[] var1 = aaa(aba.aba, fz.ala().ata);
+         gg[] var1 = aaa(aba.aba, Char.getMyChar().ata);
          if (aba.aba == 8) {
-            GameScr.aba(1, 0, 4);
+            GameScr.PickNpc(1, 0, 4);
          }
 
          if (var1 == null) {
             LockGame.bfa();
-            var1 = aaa(aba.aba, fz.ala().ata);
+            var1 = aaa(aba.aba, Char.getMyChar().ata);
          }
 
          if (var1 != null) {
@@ -577,8 +577,8 @@ public final class ADV extends Auto {
 
    private boolean asa() {
       if (bma == null) {
-         if ((bma = fz.afa(aaa.aaa)) == null) {
-            if ((bma = fz.ala(aaa.aaa)) == null) {
+         if ((bma = Char.afa(aaa.aaa)) == null) {
+            if ((bma = Char.ala(aaa.aaa)) == null) {
                return this.aha();
             }
 
@@ -591,8 +591,8 @@ public final class ADV extends Auto {
          return false;
       } else {
          if (bma.ana == 4) {
-            GameScr.aba(5, 0, 0);
-            if (fz.bja() > 0) {
+            GameScr.PickNpc(5, 0, 0);
+            if (Char.bja() > 0) {
                Service.aaa().aca(bma.ada);
 
                try {
@@ -602,7 +602,7 @@ public final class ADV extends Auto {
             }
          } else {
             if (bla == null) {
-               bla = fz.ala().dca[aaa.aba];
+               bla = Char.getMyChar().dca[aaa.aba];
             }
 
             if (bla != null) {
@@ -639,8 +639,8 @@ public final class ADV extends Auto {
             int var19;
             short var20;
             if (ada < 4) {
-               if (fz.ala().dca[aaa.aba] != null && fz.ala().dca[aaa.aba].aaa.aaa == aaa.aaa) {
-                  var19 = Code.bsa > 0 ? (var1 = Code.bsa) : ((var18 = fz.ama(0)) != null ? (var1 = var18.aga) : (var1 = -1));
+               if (Char.getMyChar().dca[aaa.aba] != null && Char.getMyChar().dca[aaa.aba].aaa.aaa == aaa.aaa) {
+                  var19 = Code.bsa > 0 ? (var1 = Code.bsa) : ((var18 = Char.ama(0)) != null ? (var1 = var18.aga) : (var1 = -1));
                   var20 = (short)var1;
                   if (var19 <= 0) {
                      GameScr.chatPopup("Chưa đặt map hoặc k có nvhn");
@@ -648,8 +648,8 @@ public final class ADV extends Auto {
                      return;
                   }
 
-                  if (gn.aoa != var20) {
-                     this.aaa(var20, Code.bta, -1, -1);
+                  if (TileMap.mapID != var20) {
+                     this.goMap(var20, Code.bta, -1, -1);
                      return;
                   }
 
@@ -666,21 +666,21 @@ public final class ADV extends Auto {
                   boa = true;
                }
             } else {
-               fz var2;
+               Char var2;
                gg var3;
                if (ada == 4 && ge.ada == 0) {
-                  if (fz.ala().dca[aaa.aba] != null && fz.ala().dca[aaa.aba].aaa.aaa == aaa.aaa) {
-                     if ((var1 = fz.aia(aba.aaa)) < 0) {
+                  if (Char.getMyChar().dca[aaa.aba] != null && Char.getMyChar().dca[aaa.aba].aaa.aaa == aaa.aaa) {
+                     if ((var1 = Char.aia(aba.aaa)) < 0) {
                         if (this.ara()) {
                            GameScr.chatPopup("Thiếu item: " + aba.ada);
                            boa = true;
                         }
                      } else if (bia < bja) {
-                        var3 = (var2 = fz.ala()).arrItemBag[var1];
+                        var3 = (var2 = Char.getMyChar()).arrItemBag[var1];
                         if (var3.aia == 8) {
                            Service.aaa().aaa(var3);
                            LockGame.ara();
-                           Service.aaa().aja(fz.ala().cea);
+                           Service.aaa().aja(Char.getMyChar().cea);
                            LockGame.ara();
                         }
 
@@ -698,26 +698,26 @@ public final class ADV extends Auto {
                         }
 
                         int var6;
-                        for(var6 = 0; var6 < fz.ala().arrItemBag.length; ++var6) {
-                           gg var7 = fz.ala().arrItemBag[var6];
+                        for(var6 = 0; var6 < Char.getMyChar().arrItemBag.length; ++var6) {
+                           gg var7 = Char.getMyChar().arrItemBag[var6];
                            if (var7 != null && var7.aaa.aba == 26 && (var7.aaa.aaa <= 2 || var7.aaa.aaa == 5)) {
                               Service.aaa().aha(var7.ada, 1);
                            }
                         }
 
                         int var8;
-                        if (var4 << 1 <= fz.bia() && var5 << 1 <= var2.csa) {
-                           if (gn.aoa != 22) {
-                              if (!gn.ana(gn.aoa) && fz.ala().aua < 42) {
+                        if (var4 << 1 <= Char.bia() && var5 << 1 <= var2.csa) {
+                           if (TileMap.mapID != 22) {
+                              if (!TileMap.ana(TileMap.mapID) && Char.getMyChar().aua < 42) {
                                  Auto.ala();
                               }
 
-                              this.aaa(22, -2, -1, -1);
+                              this.goMap(22, -2, -1, -1);
                               return;
                            }
 
                            var6 = var3.aia;
-                           GameScr.aba(6, 0, 0);
+                           GameScr.PickNpc(6, 0, 0);
                            LockGame.ara();
                            GameScr.dfa = var3;
 
@@ -729,8 +729,8 @@ public final class ADV extends Auto {
                               for(int var10 = 0; var10 < var2.arrItemBag.length && var23 < var4; ++var10) {
                                  gg var11 = var2.arrItemBag[var10];
                                  if (var3.aia == 6 && ge.aga == 0) {
-                                    if (fz.aia(242) < 0) {
-                                       if (fz.ala().cta >= 10) {
+                                    if (Char.aia(242) < 0) {
+                                       if (Char.getMyChar().cta >= 10) {
                                           Service.aaa().aba(14, 23, 1);
                                           LockGame.aha();
                                        } else {
@@ -742,8 +742,8 @@ public final class ADV extends Auto {
                                  }
 
                                  if (var3.aia == 7 && ge.aha == 0) {
-                                    if (fz.aia(242) < 0) {
-                                       if (fz.ala().cta >= 10) {
+                                    if (Char.aia(242) < 0) {
+                                       if (Char.getMyChar().cta >= 10) {
                                           Service.aaa().aba(14, 23, 1);
                                           LockGame.aha();
                                        } else {
@@ -768,7 +768,7 @@ public final class ADV extends Auto {
                                  }
 
                                  Service.aaa().aaa(var3, GameScr.cxa);
-                                 Service.aaa().aja(fz.ala().cea);
+                                 Service.aaa().aja(Char.getMyChar().cea);
                                  LockGame.ara();
                               } while(GameScr.cxa[0] != null);
                            }
@@ -776,7 +776,7 @@ public final class ADV extends Auto {
                            GameScr.dfa = null;
                         } else {
                            aj var21;
-                           var8 = Code.bsa > 0 ? (var6 = Code.bsa) : ((var21 = fz.ama(0)) != null ? (var6 = var21.aga) : (var6 = -1));
+                           var8 = Code.bsa > 0 ? (var6 = Code.bsa) : ((var21 = Char.ama(0)) != null ? (var6 = var21.aga) : (var6 = -1));
                            short var9 = (short)var6;
                            if (var8 <= 0) {
                               GameScr.chatPopup("Chưa đặt map hoặc k có nvhn");
@@ -784,14 +784,14 @@ public final class ADV extends Auto {
                               return;
                            }
 
-                           if (gn.aoa == var9) {
+                           if (TileMap.mapID == var9) {
                               gb.aba();
                               this.ada(-2);
                               this.aca(-1, 1);
                               return;
                            }
 
-                           this.aaa(var9, Code.bta, -1, -1);
+                           this.goMap(var9, Code.bta, -1, -1);
                         }
                      }
                   } else if (this.asa()) {
@@ -810,7 +810,7 @@ public final class ADV extends Auto {
                         return;
                      }
 
-                     if (fz.ala().dca[aaa.aba] != null && fz.ala().dca[aaa.aba].aaa.aaa == aaa.aaa) {
+                     if (Char.getMyChar().dca[aaa.aba] != null && Char.getMyChar().dca[aaa.aba].aaa.aaa == aaa.aaa) {
                         if (bia < bja) {
                            Code.aga.aaa();
                         }
@@ -822,8 +822,8 @@ public final class ADV extends Auto {
                }
 
                if (ada == 6 && ge.aia == 0) {
-                  if (fz.ala().dca[aaa.aba] != null && fz.ala().dca[aaa.aba].aaa.aaa == aaa.aaa) {
-                     var19 = Code.bsa > 0 ? (var1 = Code.bsa) : ((var18 = fz.ama(0)) != null ? (var1 = var18.aga) : (var1 = -1));
+                  if (Char.getMyChar().dca[aaa.aba] != null && Char.getMyChar().dca[aaa.aba].aaa.aaa == aaa.aaa) {
+                     var19 = Code.bsa > 0 ? (var1 = Code.bsa) : ((var18 = Char.ama(0)) != null ? (var1 = var18.aga) : (var1 = -1));
                      var20 = (short)var1;
                      if (var19 <= 0) {
                         GameScr.chatPopup("Chưa đặt map hoặc k có nvhn");
@@ -831,13 +831,13 @@ public final class ADV extends Auto {
                         return;
                      }
 
-                     if (gn.aoa != var20) {
-                        this.aaa(var20, Code.bta, -1, -1);
+                     if (TileMap.mapID != var20) {
+                        this.goMap(var20, Code.bta, -1, -1);
                         return;
                      }
 
                      if (bia < bja) {
-                        this.aca(-1, this.aaa(fz.fga, fz.fha, fz.fia));
+                        this.aca(-1, this.aaa(Char.fga, Char.fha, Char.fia));
                         this.ada(-1);
                         return;
                      }
@@ -852,26 +852,26 @@ public final class ADV extends Auto {
 
                if (ada == 7) {
                   if (ge.afa == 0) {
-                     if (fz.ala().dca[aaa.aba] != null && fz.ala().dca[aaa.aba].aaa.aaa == aaa.aaa) {
-                        if (gn.aoa != dm.aba) {
-                           this.aaa(dm.aba, dm.aca, -1, -1);
+                     if (Char.getMyChar().dca[aaa.aba] != null && Char.getMyChar().dca[aaa.aba].aaa.aaa == aaa.aaa) {
+                        if (TileMap.mapID != dm.aba) {
+                           this.goMap(dm.aba, dm.aca, -1, -1);
                            return;
                         }
 
                         if (bia < bja) {
-                           for(var1 = 0; var1 < GameScr.bla.size(); ++var1) {
-                              var2 = (fz)GameScr.bla.elementAt(var1);
-                              if (fz.ala().aya - 10 <= var2.aya && var2.aya <= fz.ala().aya + 10 && var2.bba > 0) {
+                           for(var1 = 0; var1 < GameScr.vCharInMap.size(); ++var1) {
+                              var2 = (Char)GameScr.vCharInMap.elementAt(var1);
+                              if (Char.getMyChar().aya - 10 <= var2.aya && var2.aya <= Char.getMyChar().aya + 10 && var2.bba > 0) {
                                  if (System.currentTimeMillis() - this.bva >= 1500L) {
-                                    fz.aca(var2.ala, var2.ama);
+                                    Char.charMove(var2.cx, var2.cy);
                                     this.bva = System.currentTimeMillis();
                                  }
 
-                                 if (fz.ala().dla != 3) {
+                                 if (Char.getMyChar().dla != 3) {
                                     Service.aaa().awa(3);
                                  }
 
-                                 if (fz.ala().dka >= 5 && (var3 = fz.afa(257)) != null && var3.aaa.aaa == 257) {
+                                 if (Char.getMyChar().dka >= 5 && (var3 = Char.afa(257)) != null && var3.aaa.aaa == 257) {
                                     Service.aaa().aea(var3.ada);
                                  }
 
@@ -884,7 +884,7 @@ public final class ADV extends Auto {
                                     aqa.afa = System.currentTimeMillis();
                                     aqa.ala = true;
                                     if (!Code.bfa) {
-                                       fz.ala().aba(GameScr.aza[aqa.aaa.aaa], 0);
+                                       Char.getMyChar().aba(GameScr.aza[aqa.aaa.aaa], 0);
                                     }
                                  }
                               }
@@ -905,8 +905,8 @@ public final class ADV extends Auto {
                }
             }
          } else {
-            if (!gn.afa(gn.aoa)) {
-               this.aaa(Code.bqa, -2, -1, -1);
+            if (!TileMap.afa(TileMap.mapID)) {
+               this.goMap(Code.bqa, -2, -1, -1);
                return;
             }
 
@@ -914,21 +914,21 @@ public final class ADV extends Auto {
                System.out.println("InfoNV");
                GameScr.chatPopup("Xem Info NVDV " + (aea + 1));
                aea();
-               if (fz.aia(705) > 0 && !bta) {
+               if (Char.aia(705) > 0 && !bta) {
                   for(var1 = 0; var1 < 5; ++var1) {
-                     Service.aaa().aea(fz.aia(705));
+                     Service.aaa().aea(Char.aia(705));
                   }
                }
 
-               if (fz.aia(35) < 0 && fz.aia(37) < 0) {
-                  if (fz.ala().cta >= 20) {
+               if (Char.aia(35) < 0 && Char.aia(37) < 0) {
+                  if (Char.getMyChar().cta >= 20) {
                      Service.aaa().aba(14, 1, 1);
                   } else {
                      Service.aaa().aba(9, 6, 1);
                   }
                }
 
-               GameScr.aba(2, 1, 6);
+               GameScr.PickNpc(2, 1, 6);
                LockGame.bfa();
                return;
             }
@@ -936,21 +936,21 @@ public final class ADV extends Auto {
             if (ada == -1) {
                System.out.println("NhanNV");
                GameScr.chatPopup("Nhận NVDV " + (aea + 1));
-               if (fz.aia(705) > 0 && !bta) {
+               if (Char.aia(705) > 0 && !bta) {
                   for(var1 = 0; var1 < 5; ++var1) {
-                     Service.aaa().aea(fz.aia(705));
+                     Service.aaa().aea(Char.aia(705));
                   }
                }
 
-               if (fz.aia(35) < 0 && fz.aia(37) < 0) {
-                  if (fz.ala().cta >= 20) {
+               if (Char.aia(35) < 0 && Char.aia(37) < 0) {
+                  if (Char.getMyChar().cta >= 20) {
                      Service.aaa().aba(14, 1, 1);
                   } else {
                      Service.aaa().aba(9, 6, 1);
                   }
                }
 
-               GameScr.aba(2, 1, 0);
+               GameScr.PickNpc(2, 1, 0);
                aea();
                LockGame.bfa();
                return;
@@ -959,7 +959,7 @@ public final class ADV extends Auto {
             if (ada == 0) {
                System.out.println("HuyNV");
                GameScr.chatPopup("Hủy NVDV " + (aea + 1));
-               GameScr.aba(2, 1, 2);
+               GameScr.PickNpc(2, 1, 2);
                GameScr.aha(2);
                Service.aaa().ana(4);
                LockGame.bfa();
@@ -977,7 +977,7 @@ public final class ADV extends Auto {
                      return;
                   }
 
-                  if (fz.ala().dca[bla.aaa.aba].aia < 12) {
+                  if (Char.getMyChar().dca[bla.aaa.aba].aia < 12) {
                      System.out.println("Loi item: " + bla.aaa.aba);
                   }
 
@@ -990,8 +990,8 @@ public final class ADV extends Auto {
 
                   if (bma.ana == 3) {
                      System.out.println("Cat item " + bma.aaa.ada + " vao ruong");
-                     GameScr.aba(5, 0, 0);
-                     if (fz.bka() > 0) {
+                     GameScr.PickNpc(5, 0, 0);
+                     if (Char.bka() > 0) {
                         Service.aaa().ada(bma.ana);
 
                         try {
@@ -1008,18 +1008,18 @@ public final class ADV extends Auto {
 
                   bma = null;
                } else if (bna) {
-                  if (fz.bja() <= 0) {
+                  if (Char.bja() <= 0) {
                      GameScr.chatPopup("Hành trang đầy");
                      return;
                   }
 
                   System.out.println("HoanThanhNV");
-                  if (fz.ala().dla == 3) {
+                  if (Char.getMyChar().dla == 3) {
                      Service.aaa().awa(0);
                   }
 
                   GameScr.chatPopup("Hoàn thành NVDV " + (aea + 1));
-                  GameScr.aba(2, 1, 1);
+                  GameScr.PickNpc(2, 1, 1);
                   LockGame.bfa();
                   ++aea;
                   ++bha;
@@ -1039,8 +1039,8 @@ public final class ADV extends Auto {
    }
 
    public static void aea() {
-      for(int var0 = 0; var0 < fz.ala().arrItemBag.length; ++var0) {
-         gg var1 = fz.ala().arrItemBag[var0];
+      for(int var0 = 0; var0 < Char.getMyChar().arrItemBag.length; ++var0) {
+         gg var1 = Char.getMyChar().arrItemBag[var0];
          if (var1 != null && var1.aaa.afa < 50 && var1.aaa.aba < 10 && var1.aia == 0) {
             Service.aaa().aha(var1.ada, 1);
          }
@@ -1067,8 +1067,8 @@ public final class ADV extends Auto {
    }
 
    public static gg aea(int var0) {
-      for(int var1 = 0; var1 < fz.ala().arrItemBag.length; ++var1) {
-         gg var2 = fz.ala().arrItemBag[var1];
+      for(int var1 = 0; var1 < Char.getMyChar().arrItemBag.length; ++var1) {
+         gg var2 = Char.getMyChar().arrItemBag[var1];
          if (var2 != null && var2.aaa.aba == 28 && var2.aaa.aaa == var0) {
             return var2;
          }

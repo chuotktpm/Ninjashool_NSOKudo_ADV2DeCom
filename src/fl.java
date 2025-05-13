@@ -6,12 +6,12 @@ public final class fl extends Auto {
 
    public final void a_() {
       super.a_();
-      this.ada = fz.ama(1);
+      this.ada = Char.ama(1);
       if (this.ada != null) {
          this.aaa = this.ada.afa;
          super.aga = this.ada.aga;
-         if (gn.aoa == this.ada.aga && gn.ala % 5 == 0) {
-            super.aha = gn.ala;
+         if (TileMap.mapID == this.ada.aga && TileMap.zoneID % 5 == 0) {
+            super.aha = TileMap.zoneID;
             return;
          }
       }
@@ -25,15 +25,15 @@ public final class fl extends Auto {
       this.ada = null;
       this.aaa = var2;
       super.aga = var1;
-      if (gn.aoa == var1 && gn.ala % 5 == 0) {
-         super.aha = gn.ala;
+      if (TileMap.mapID == var1 && TileMap.zoneID % 5 == 0) {
+         super.aha = TileMap.zoneID;
       } else {
          super.aha = 5;
       }
    }
 
    public final void b_() {
-      this.ada = fz.ama(1);
+      this.ada = Char.ama(1);
       super.b_();
    }
 
@@ -42,7 +42,7 @@ public final class fl extends Auto {
          boolean var10000;
          int var1;
          if (Auto.aka()) {
-            if (fz.fla && gn.aoa == super.aga && gn.ala == super.aha && fz.ala().dpa != null && fz.ala().dpa.aba < fz.ala().dpa.aca / 20) {
+            if (Char.fla && TileMap.mapID == super.aga && TileMap.zoneID == super.aha && Char.getMyChar().dpa != null && Char.getMyChar().dpa.aba < Char.getMyChar().dpa.aca / 20) {
                var1 = 0;
 
                while(true) {
@@ -67,15 +67,15 @@ public final class fl extends Auto {
                Auto.aaa(true);
                return;
             }
-         } else if (gn.aoa == super.aga && gn.ala == super.aha) {
+         } else if (TileMap.mapID == super.aga && TileMap.zoneID == super.aha) {
             if (this.ada != null && this.ada.aba >= this.ada.aca) {
                GameScr.chatPopup("Xong Tà Thú");
                Code.aca();
                return;
             }
 
-            if (fz.ala().cea.equals(Code.aha)) {
-               if (fz.ala().dpa != null && fz.ala().dpa.aba < fz.ala().dpa.aca / 10) {
+            if (Char.getMyChar().cea.equals(Code.aha)) {
+               if (Char.getMyChar().dpa != null && Char.getMyChar().dpa.aba < Char.getMyChar().dpa.aca / 10) {
                   if (!LockGame.bha()) {
                      Service.aaa().aka("waitGr");
                      LockGame.aaa(200000L);
@@ -98,25 +98,25 @@ public final class fl extends Auto {
                this.aca(this.aaa, 8);
             }
 
-            if (fz.ala().aza < fz.ala().baa * fz.fsa / 100) {
-               fz.ala().aea(17);
+            if (Char.getMyChar().aza < Char.getMyChar().baa * Char.fsa / 100) {
+               Char.getMyChar().aea(17);
             }
 
-            if (fz.ala().bba < fz.ala().bea * fz.fra / 100) {
+            if (Char.getMyChar().bba < Char.getMyChar().bea * Char.fra / 100) {
                var1 = (int)(System.currentTimeMillis() / 1000L);
 
-               for(int var4 = 0; var4 < fz.ala().cxa.size(); ++var4) {
+               for(int var4 = 0; var4 < Char.getMyChar().cxa.size(); ++var4) {
                   bu var3;
-                  if ((var3 = (bu)fz.ala().cxa.elementAt(var4)).aea.aaa == 21 && var3.aca - (var1 - var3.aba) >= 2) {
+                  if ((var3 = (bu)Char.getMyChar().cxa.elementAt(var4)).aea.aaa == 21 && var3.aca - (var1 - var3.aba) >= 2) {
                      return;
                   }
                }
 
-               fz.ala().aea(16);
+               Char.getMyChar().aea(16);
                return;
             }
          } else {
-            this.aaa(super.aga, super.aha, super.aja, super.aka);
+            this.goMap(super.aga, super.aha, super.aja, super.aka);
          }
 
       } else {

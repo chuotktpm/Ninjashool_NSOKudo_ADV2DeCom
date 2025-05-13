@@ -25,8 +25,8 @@ public class Class_ab extends MIDlet {
       aha = Byte.parseByte(aba("provider.txt"));
       System.out.println("AGENT: " + aia + ", PROVIDER: " + aha);
       ey.aaa = 0;
-      ab.bda = new ey();
-      fg.aaa().aba = ab.aba();
+      GameCanvas.bda = new ey();
+      fg.aaa().aba = GameCanvas.aba();
       if (!fg.aca) {
          (new Thread(fg.aaa())).start();
       }

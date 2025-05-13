@@ -89,7 +89,7 @@ public final class ex {
    }
 
    public static void aaa(String var0, short var1) {
-      df.aaa(var0, "sms://".concat(String.valueOf(var1)), new ca("", ab.aba(), 88827, (Object)null), new ca("", ab.aba(), 88828, (Object)null));
+      df.aaa(var0, "sms://".concat(String.valueOf(var1)), new ca("", GameCanvas.aba(), 88827, (Object)null), new ca("", GameCanvas.aba(), 88828, (Object)null));
    }
 
    public static void aba(String var0) {
