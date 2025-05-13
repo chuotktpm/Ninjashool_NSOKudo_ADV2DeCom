@@ -36,7 +36,7 @@ public final class ed extends fb implements ag {
 
       this.aka = -50;
       this.aua = false;
-      gf.aca = ab.baa;
+      GameScr.aca = ab.baa;
       if (ab.bqa == 2) {
          ab.aaa(0);
       } else {
@@ -44,8 +44,8 @@ public final class ed extends fb implements ag {
       }
 
       super.aaa();
-      if (gf.aaa != null) {
-         gf.aaa = null;
+      if (GameScr.aaa != null) {
+         GameScr.aaa = null;
       }
 
       if (ab.bea != null) {
@@ -56,11 +56,11 @@ public final class ed extends fb implements ag {
       int var1;
       if ((var1 = fd.ada("isSoftKey")) <= 0) {
          fd.aaa("isSoftKey", 1);
-         gf.gsa = true;
+         GameScr.gsa = true;
       } else if (var1 == 1) {
-         gf.gsa = true;
+         GameScr.gsa = true;
       } else if (var1 == 2) {
-         gf.gsa = false;
+         GameScr.gsa = false;
       }
 
       if ((var1 = fd.ada("isSound")) < 0) {
@@ -78,7 +78,7 @@ public final class ed extends fb implements ag {
    public final void ada() {
       this.aua = true;
       this.aka = -50;
-      gf.aca = ab.baa;
+      GameScr.aca = ab.baa;
       if (ab.bqa == 2) {
          ab.aaa(0);
       } else {
@@ -86,8 +86,8 @@ public final class ed extends fb implements ag {
       }
 
       super.aaa();
-      if (gf.aaa != null) {
-         gf.aaa = null;
+      if (GameScr.aaa != null) {
+         GameScr.aaa = null;
       }
 
       if (ab.bea != null) {
@@ -105,8 +105,8 @@ public final class ed extends fb implements ag {
          gn.ama = 4;
       }
 
-      gf.aaa(true);
-      gf.aia = 100;
+      GameScr.aaa(true);
+      GameScr.aia = 100;
       if (ab.baa > 200) {
          this.asa = ab.bca - 80;
       } else {
@@ -204,12 +204,12 @@ public final class ed extends fb implements ag {
       ab.aba(er.ena);
       ab.aca();
       ab.aba(er.eoa);
-      gm.aaa().aba();
-      gm var10000 = gm.aaa();
+      Service.aaa().aba();
+      Service var10000 = Service.aaa();
       String var4 = this.aga.aia;
       String var3 = this.aea.aia;
       String var2 = var1;
-      gm var7 = var10000;
+      Service var7 = var10000;
 
       try {
          fe var5;
@@ -246,7 +246,7 @@ public final class ed extends fb implements ag {
          ab.aba(er.ena);
          ab.aca();
          ab.aba(er.epa);
-         gm.aaa().aaa(var1, var2, "1.4.8");
+         Service.aaa().aaa(var1, var2, "1.4.8");
          aca = true;
          if (this.ata) {
             fd.aaa("check", 1);
@@ -264,8 +264,8 @@ public final class ed extends fb implements ag {
    }
 
    public final void aba() {
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       this.ada.ada();
@@ -652,11 +652,11 @@ public final class ed extends fb implements ag {
          return;
       case 10051:
          fd.aaa("isSoftKey", 1);
-         gf.gsa = true;
+         GameScr.gsa = true;
          return;
       case 10052:
          fd.aaa("isSoftKey", 2);
-         gf.gsa = false;
+         GameScr.gsa = false;
          return;
       case 10061:
          ab.ama();
@@ -690,7 +690,7 @@ public final class ed extends fb implements ag {
          ab.aaa(er.dya, new ca(er.cma, this, 200421, (Object)null), new ca(er.cza, this, 200422, (Object)null));
          return;
       case 20051:
-         gf.ava().aaa();
+         GameScr.ava().aaa();
          return;
       case 20052:
          Class_ab.aaa("http://dd.ninjaschool.vn/app/index.php?for=event&do=resetpass");
@@ -716,7 +716,7 @@ public final class ed extends fb implements ag {
          ab.aba(er.ena);
          ab.aca();
          ab.aba(er.bda);
-         gm.aaa().aaa(var4);
+         Service.aaa().aaa(var4);
          return;
       case 200422:
          String var7 = this.bga;

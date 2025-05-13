@@ -44,10 +44,10 @@ public final class TanSat extends Auto {
          if (aba && !(Code.aba instanceof ADV)) {
             fz var4 = fz.ala();
 
-            for(int var5 = 0; var5 < var4.daa.length; ++var5) {
+            for(int var5 = 0; var5 < var4.arrItemBag.length; ++var5) {
                gg var6;
-               if (Code.ada(var6 = var4.daa[var5])) {
-                  gm.aaa().aha(var6.ada, 1);
+               if (Code.ada(var6 = var4.arrItemBag[var5])) {
+                  Service.aaa().aha(var6.ada, 1);
                   return;
                }
             }

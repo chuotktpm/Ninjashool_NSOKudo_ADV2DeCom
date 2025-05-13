@@ -18,12 +18,12 @@ public final class cj extends Auto {
    }
 
    protected final void aaa() {
-      long var1 = (fz.ala().aka > 0L ? fz.ala().aka : fz.ala().bha) * 100L / gf.dta[fz.ala().aya];
+      long var1 = (fz.ala().aka > 0L ? fz.ala().aka : fz.ala().bha) * 100L / GameScr.dta[fz.ala().aya];
       if ((fz.ala().aka <= 0L || Math.abs(var1) > 15L) && (fz.ala().aka > 0L || Math.abs(var1) < 0L)) {
-         gm.aaa().awa(0);
-         gf.aca("Đã pk xong!!");
+         Service.aaa().awa(0);
+         GameScr.chatPopup("Đã pk xong!!");
          if (aaa != null) {
-            gj.bla();
+            LockGame.bla();
             Code.aba = aaa;
             aaa = null;
          } else {
@@ -42,12 +42,12 @@ public final class cj extends Auto {
                if (System.currentTimeMillis() - aba >= 300L) {
                   ev var8 = new ev();
 
-                  for(int var2 = 0; var2 < gf.bla.size(); ++var2) {
+                  for(int var2 = 0; var2 < GameScr.bla.size(); ++var2) {
                      fz var3;
-                     if ((var3 = (fz)gf.bla.elementAt(var2)).bba > 0 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50 && var8.size() <= aqa.aia) {
+                     if ((var3 = (fz)GameScr.bla.elementAt(var2)).bba > 0 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50 && var8.size() <= aqa.aia) {
                         var8.addElement(var3);
                         if (var3.bba > 0 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50) {
-                           gm.aaa().aaa((ev)(new ev()), (ev)var8, (int)2);
+                           Service.aaa().aaa((ev)(new ev()), (ev)var8, (int)2);
                            aba = System.currentTimeMillis();
                         }
                      }
@@ -59,7 +59,7 @@ public final class cj extends Auto {
                } catch (InterruptedException var5) {
                }
             } else {
-               gm.aaa().awa(3);
+               Service.aaa().awa(3);
                if (Code.bxa != -1 && Code.bya != -1) {
                   fz.aca(Code.bxa, Code.bya);
                } else {
@@ -88,7 +88,7 @@ public final class cj extends Auto {
                   this.aca = System.currentTimeMillis();
                }
             } else {
-               gm.aaa().awa(3);
+               Service.aaa().awa(3);
                if (Code.bxa != -1 && Code.bya != -1) {
                   fz.aca(Code.bxa, Code.bya);
                } else {

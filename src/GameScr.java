@@ -4,8 +4,8 @@ import java.io.IOException;
 import javax.microedition.io.ConnectionNotFoundException;
 import javax.microedition.lcdui.Image;
 
-public final class gf extends fb implements ag {
-   public static gf aaa;
+public final class GameScr extends fb implements ag {
+   public static GameScr aaa;
    public static int aba;
    public static int aca;
    public static int ada;
@@ -643,15 +643,15 @@ public final class gf extends fb implements ag {
    }
 
    public static void aga() {
-      gm.aaa().ala("KSkill");
-      gm.aaa().ala("OSkill");
-      gm.aaa().ala("CSkill");
+      Service.aaa().ala("KSkill");
+      Service.aaa().ala("OSkill");
+      Service.aaa().ala("CSkill");
    }
 
    public static void aha() {
-      gm.aaa().ala("KSkill");
-      gm.aaa().ala("OSkill");
-      gm.aaa().ala("CSkill");
+      Service.aaa().ala("KSkill");
+      Service.aaa().ala("OSkill");
+      Service.aaa().ala("CSkill");
    }
 
    public static void aaa(byte[] var0) {
@@ -741,7 +741,7 @@ public final class gf extends fb implements ag {
       }
 
       if (fz.ala().cya != null) {
-         gm.aaa().afa(fz.ala().cya.aaa.aaa);
+         Service.aaa().afa(fz.ala().cya.aaa.aaa);
          fz.ala();
       }
 
@@ -796,9 +796,9 @@ public final class gf extends fb implements ag {
       }
 
       if (fz.ala().aea) {
-         gm.aaa().aaa((String)"OSkill", (byte[])var0, (byte)0);
+         Service.aaa().aaa((String)"OSkill", (byte[])var0, (byte)0);
       } else {
-         gm.aaa().aaa((String)"OSkill", (byte[])var0, (byte)1);
+         Service.aaa().aaa((String)"OSkill", (byte[])var0, (byte)1);
       }
    }
 
@@ -814,9 +814,9 @@ public final class gf extends fb implements ag {
       }
 
       if (fz.ala().aea) {
-         gm.aaa().aaa((String)"KSkill", (byte[])var0, (byte)0);
+         Service.aaa().aaa((String)"KSkill", (byte[])var0, (byte)0);
       } else {
-         gm.aaa().aaa((String)"KSkill", (byte[])var0, (byte)1);
+         Service.aaa().aaa((String)"KSkill", (byte[])var0, (byte)1);
       }
    }
 
@@ -851,8 +851,8 @@ public final class gf extends fb implements ag {
    }
 
    public static boolean ala() {
-      for(int var0 = fz.ala().daa.length - 1; var0 >= 0; --var0) {
-         if (fz.ala().daa[var0] == null) {
+      for(int var0 = fz.ala().arrItemBag.length - 1; var0 >= 0; --var0) {
+         if (fz.ala().arrItemBag[var0] == null) {
             return false;
          }
       }
@@ -1088,9 +1088,9 @@ public final class gf extends fb implements ag {
       fz.ala().bha = var5[1];
    }
 
-   public static gf ava() {
+   public static GameScr ava() {
       if (aaa == null) {
-         aaa = new gf();
+         aaa = new GameScr();
       }
 
       return aaa;
@@ -1126,7 +1126,7 @@ public final class gf extends fb implements ag {
       ci.aba();
    }
 
-   public gf() {
+   public GameScr() {
       this.gna = new ca(er.oha[0], 11038);
       this.pqa = 30;
       this.pra = 0;
@@ -1252,7 +1252,7 @@ public final class gf extends fb implements ag {
       aba(175, 200);
       this.bra();
       if (bta == 3 && dsa.asa == fz.ala().asa) {
-         gm.aaa().aja(dsa.cea);
+         Service.aaa().aja(dsa.cea);
       }
 
       if (bta == 5) {
@@ -1376,7 +1376,7 @@ public final class gf extends fb implements ag {
       this.kca = true;
       aba(175, 200);
       super.ana = this.nva;
-      gm.aaa().ada();
+      Service.aaa().ada();
       this.aza();
    }
 
@@ -1433,11 +1433,11 @@ public final class gf extends fb implements ag {
       super.ala = new ca(er.eia, 11044);
       super.ama = null;
       bsa = 0;
-      gm var1 = gm.aaa();
+      Service var1 = Service.aaa();
       fe var2 = null;
 
       try {
-         var2 = gm.aca((byte)-85);
+         var2 = Service.aca((byte)-85);
          var1.aaa.aaa(var2);
          return;
       } catch (Exception var5) {
@@ -1457,11 +1457,11 @@ public final class gf extends fb implements ag {
       super.ala = new ca(er.eia, 14017);
       super.ama = null;
       bsa = 0;
-      gm var1 = gm.aaa();
+      Service var1 = Service.aaa();
       fe var2 = null;
 
       try {
-         var2 = gm.aca((byte)-84);
+         var2 = Service.aca((byte)-84);
          var1.aaa.aaa(var2);
          return;
       } catch (Exception var5) {
@@ -1758,14 +1758,14 @@ public final class gf extends fb implements ag {
    }
 
    public final void bca() {
-      if (fz.ala().daa != null) {
+      if (fz.ala().arrItemBag != null) {
          int var10001;
          int var1;
          if ((jda || jma) && cwa != null) {
             for(var1 = 0; var1 < cwa.length; ++var1) {
                if (cwa[var1] != null) {
                   var10001 = cwa[var1].ada;
-                  fz.ala().daa[var10001] = cwa[var1];
+                  fz.ala().arrItemBag[var10001] = cwa[var1];
                   cwa[var1] = null;
                }
             }
@@ -1773,7 +1773,7 @@ public final class gf extends fb implements ag {
 
          if (jaa) {
             if (dfa != null) {
-               fz.ala().daa[dfa.ada] = dfa;
+               fz.ala().arrItemBag[dfa.ada] = dfa;
                dfa = null;
             }
 
@@ -1781,7 +1781,7 @@ public final class gf extends fb implements ag {
                for(var1 = 0; var1 < cxa.length; ++var1) {
                   if (cxa[var1] != null) {
                      var10001 = cxa[var1].ada;
-                     fz.ala().daa[var10001] = cxa[var1];
+                     fz.ala().arrItemBag[var10001] = cxa[var1];
                      cxa[var1] = null;
                   }
                }
@@ -1790,12 +1790,12 @@ public final class gf extends fb implements ag {
 
          if (jqa) {
             if (dfa != null) {
-               fz.ala().daa[dfa.ada] = dfa;
+               fz.ala().arrItemBag[dfa.ada] = dfa;
                dfa = null;
             }
 
             if (dga != null) {
-               fz.ala().daa[dga.ada] = dga;
+               fz.ala().arrItemBag[dga.ada] = dga;
                dga = null;
             }
 
@@ -1803,7 +1803,7 @@ public final class gf extends fb implements ag {
                for(var1 = 0; var1 < cxa.length; ++var1) {
                   if (cxa[var1] != null) {
                      var10001 = cxa[var1].ada;
-                     fz.ala().daa[var10001] = cxa[var1];
+                     fz.ala().arrItemBag[var10001] = cxa[var1];
                      cxa[var1] = null;
                   }
                }
@@ -1814,14 +1814,14 @@ public final class gf extends fb implements ag {
             for(var1 = 0; var1 < cxa.length; ++var1) {
                if (cxa[var1] != null) {
                   var10001 = cxa[var1].ada;
-                  fz.ala().daa[var10001] = cxa[var1];
+                  fz.ala().arrItemBag[var10001] = cxa[var1];
                   cxa[var1] = null;
                }
             }
          }
 
          if (dka && dha != null) {
-            fz.ala().daa[dha.ada] = dha;
+            fz.ala().arrItemBag[dha.ada] = dha;
             dha = null;
          }
 
@@ -1829,7 +1829,7 @@ public final class gf extends fb implements ag {
             for(var1 = 0; var1 < dba.length; ++var1) {
                if (dba[var1] != null) {
                   var10001 = dba[var1].ada;
-                  fz.ala().daa[var10001] = dba[var1];
+                  fz.ala().arrItemBag[var10001] = dba[var1];
                   dba[var1] = null;
                }
             }
@@ -1837,7 +1837,7 @@ public final class gf extends fb implements ag {
 
          if (jfa || joa || jna || jpa) {
             if (dga != null) {
-               fz.ala().daa[dga.ada] = dga;
+               fz.ala().arrItemBag[dga.ada] = dga;
                dga = null;
             }
 
@@ -1846,7 +1846,7 @@ public final class gf extends fb implements ag {
                   if (cya[var1] != null) {
                      if (jna || joa || jpa) {
                         var10001 = cya[var1].ada;
-                        fz.ala().daa[var10001] = cya[var1];
+                        fz.ala().arrItemBag[var10001] = cya[var1];
                      }
 
                      cya[var1] = null;
@@ -1859,7 +1859,7 @@ public final class gf extends fb implements ag {
             for(var1 = 0; var1 < cya.length; ++var1) {
                if (cya[var1] != null) {
                   var10001 = cya[var1].ada;
-                  fz.ala().daa[var10001] = cya[var1];
+                  fz.ala().arrItemBag[var10001] = cya[var1];
                   cya[var1] = null;
                }
             }
@@ -1876,7 +1876,7 @@ public final class gf extends fb implements ag {
                for(var1 = 0; var1 < cza.length; ++var1) {
                   if (cza[var1] != null) {
                      var10001 = cza[var1].ada;
-                     fz.ala().daa[var10001] = cza[var1];
+                     fz.ala().arrItemBag[var10001] = cza[var1];
                      cza[var1] = null;
                   }
                }
@@ -1890,7 +1890,7 @@ public final class gf extends fb implements ag {
          }
 
          if ((jra || jsa) && dga != null) {
-            fz.ala().daa[dga.ada] = dga;
+            fz.ala().arrItemBag[dga.ada] = dga;
             dga = null;
          }
       }
@@ -1900,7 +1900,7 @@ public final class gf extends fb implements ag {
       }
 
       if (dpa) {
-         gm.aaa().aia();
+         Service.aaa().aia();
       }
 
       ab.bea.aaa = false;
@@ -2008,7 +2008,7 @@ public final class gf extends fb implements ag {
          int var3;
          boolean var12;
          if (ab.afa && !bp.aaa().aba && !ab.bea.aaa) {
-            gf var1 = this;
+            GameScr var1 = this;
             int var2 = -1;
             if (ab.ana) {
                for(var3 = 0; var3 < var1.kwa.length; ++var3) {
@@ -2679,14 +2679,14 @@ public final class gf extends fb implements ag {
             } else if (bta == 0) {
                if (ab.aka[4]) {
                   if (--bra < 0) {
-                     bra = fz.ala().daa.length - 1;
+                     bra = fz.ala().arrItemBag.length - 1;
                   }
 
                   super.ala = super.ama = null;
                   this.bra();
                   bxa.aaa(bra / oza * bxa.aha);
                } else if (ab.aka[6]) {
-                  if (++bra >= fz.ala().daa.length) {
+                  if (++bra >= fz.ala().arrItemBag.length) {
                      bra = 0;
                   }
 
@@ -2694,7 +2694,7 @@ public final class gf extends fb implements ag {
                   this.bra();
                   bxa.aaa(bra / oza * bxa.aha);
                } else if (ab.aka[8]) {
-                  if (bra + oza <= fz.ala().daa.length - 1) {
+                  if (bra + oza <= fz.ala().arrItemBag.length - 1) {
                      bra += oza;
                   }
 
@@ -3312,8 +3312,8 @@ public final class gf extends fb implements ag {
 
    public static void bda() {
       if (!fz.ala().aea(17)) {
-         for(int var0 = 0; var0 < fz.ala().daa.length; ++var0) {
-            if (fz.ala().daa[var0] != null && fz.ala().daa[var0].aaa.aba == 17) {
+         for(int var0 = 0; var0 < fz.ala().arrItemBag.length; ++var0) {
+            if (fz.ala().arrItemBag[var0] != null && fz.ala().arrItemBag[var0].aaa.aba == 17) {
                be.aaa(er.oba);
                return;
             }
@@ -3338,8 +3338,8 @@ public final class gf extends fb implements ag {
       }
 
       if (!fz.ala().aea(16)) {
-         for(var1 = 0; var1 < fz.ala().daa.length; ++var1) {
-            if (fz.ala().daa[var1] != null && fz.ala().daa[var1].aaa.aba == 16) {
+         for(var1 = 0; var1 < fz.ala().arrItemBag.length; ++var1) {
+            if (fz.ala().arrItemBag[var1] != null && fz.ala().arrItemBag[var1].aaa.aba == 16) {
                be.aaa(er.oba);
                return;
             }
@@ -3458,9 +3458,9 @@ public final class gf extends fb implements ag {
                               ab.aka();
                               if (fz.ala().dra.aaa.aaa == 13) {
                                  br.aba();
-                                 gm.aaa().aea();
+                                 Service.aaa().aea();
                               } else {
-                                 gm.aaa().aga(fz.ala().dra.aaa.aaa);
+                                 Service.aaa().aga(fz.ala().dra.aaa.aaa);
                                  br.aba();
                               }
                            } else {
@@ -3583,7 +3583,7 @@ public final class gf extends fb implements ag {
                               if (var2 <= 35 && var3 < 35 || fza != 0 && var2 <= 48 && var3 <= 48) {
                                  ab.ala();
                                  ab.aka();
-                                 gm.aaa().aoa(fz.ala().dta.aga);
+                                 Service.aaa().aoa(fz.ala().dta.aga);
                               } else {
                                  fz.ala().goa = new bh(fz.ala().dta.aaa, fz.ala().ama);
                                  ab.ala();
@@ -3691,7 +3691,7 @@ public final class gf extends fb implements ag {
             }
 
             if (fz.ala().dsa.aqa == 14 || fz.ala().dsa.aqa == 5) {
-               gm.aaa().aua(fz.ala().dsa.asa);
+               Service.aaa().aua(fz.ala().dsa.asa);
                if ((gn.aaa(fz.ala().ala, fz.ala().ama) & 2) == 2) {
                   fz.ala().aaa((em)aza[49], 0);
                } else {
@@ -3699,7 +3699,7 @@ public final class gf extends fb implements ag {
                }
             }
          } else {
-            gm.aaa().afa(var1.aaa.aaa);
+            Service.aaa().afa(var1.aaa.aaa);
          }
       }
 
@@ -4042,7 +4042,7 @@ public final class gf extends fb implements ag {
          }
 
          if (var2.size() > 0) {
-            gm.aaa().aaa(var2);
+            Service.aaa().aaa(var2);
             this.lla = var3;
          }
       } else {
@@ -4052,7 +4052,7 @@ public final class gf extends fb implements ag {
       }
 
       fz.ala().aba();
-      if (fz.ala().bba <= 0 && gn.bga && !gj.aaa) {
+      if (fz.ala().bba <= 0 && gn.bga && !LockGame.aaa) {
          gn.aha();
       }
 
@@ -4312,7 +4312,7 @@ public final class gf extends fb implements ag {
          }
 
          as var13 = var1;
-         gf var14 = this;
+         GameScr var14 = this;
 
          int var5;
          int var7;
@@ -6896,14 +6896,14 @@ public final class gf extends fb implements ag {
                }
 
                if (bta == 1 && jja) {
-                  gm.aaa().ava();
+                  Service.aaa().ava();
                   jja = false;
                } else if (bta == 2) {
-                  gm.aaa().awa();
+                  Service.aaa().awa();
                } else if (bta == 3) {
-                  gm.aaa().axa();
+                  Service.aaa().axa();
                } else if (bta == 4) {
-                  gm.aaa().awa();
+                  Service.aaa().awa();
                }
 
                aba(175, 200);
@@ -6924,14 +6924,14 @@ public final class gf extends fb implements ag {
                }
 
                if (bta == 1 && jja) {
-                  gm.aaa().ava();
+                  Service.aaa().ava();
                   jja = false;
                } else if (bta == 2) {
-                  gm.aaa().awa();
+                  Service.aaa().awa();
                } else if (bta == 3) {
-                  gm.aaa().axa();
+                  Service.aaa().axa();
                } else if (bta == 4) {
-                  gm.aaa().awa();
+                  Service.aaa().awa();
                }
 
                aba(175, 200);
@@ -7025,7 +7025,7 @@ public final class gf extends fb implements ag {
 
                bxa.aaa(bsa * bxa.aha);
                if (bta == 1 && jja) {
-                  gm.aaa().ava();
+                  Service.aaa().ava();
                   jja = false;
                }
             } else if (ab.aka[8]) {
@@ -7068,18 +7068,18 @@ public final class gf extends fb implements ag {
 
                      hpa = 1;
                      if (bta == 1 && jja) {
-                        gm.aaa().ava();
+                        Service.aaa().ava();
                         jja = false;
                      } else if (bta == 2 && fz.cha != null && fz.cha.apa == null) {
-                        gm.aaa().awa();
+                        Service.aaa().awa();
                      }
 
                      if (bta == 3) {
-                        gm.aaa().axa();
+                        Service.aaa().axa();
                      }
 
                      if (bta == 4) {
-                        gm.aaa().awa();
+                        Service.aaa().awa();
                      }
 
                      aba(175, 200);
@@ -7435,7 +7435,7 @@ public final class gf extends fb implements ag {
          int var3;
          int var4;
          if (hpa == 0) {
-            gf var8 = this;
+            GameScr var8 = this;
             super.ala = super.ama = null;
             if (!jka) {
                if (jea) {
@@ -7558,7 +7558,7 @@ public final class gf extends fb implements ag {
                         bta = er.rqa.length - 1;
                      }
 
-                     gm.aaa().aca(28, 0, bta);
+                     Service.aaa().aca(28, 0, bta);
                      dca = null;
                      bra = -1;
                   } else if (!iga && !dqa) {
@@ -7579,7 +7579,7 @@ public final class gf extends fb implements ag {
                   }
 
                   if (iga && csa == null && bta == 0) {
-                     gm.aaa().aha(35);
+                     Service.aaa().aha(35);
                   }
                }
 
@@ -7594,7 +7594,7 @@ public final class gf extends fb implements ag {
                         bta = 0;
                      }
 
-                     gm.aaa().aca(28, 0, bta);
+                     Service.aaa().aca(28, 0, bta);
                      dca = null;
                      bra = -1;
                   } else {
@@ -7619,7 +7619,7 @@ public final class gf extends fb implements ag {
                   }
 
                   if (iga && csa == null && bta == 0) {
-                     gm.aaa().aha(35);
+                     Service.aaa().aha(35);
                   }
                }
             }
@@ -8052,7 +8052,7 @@ public final class gf extends fb implements ag {
                            bta = 0;
                         }
 
-                        gm.aaa().aca(28, 0, bta);
+                        Service.aaa().aca(28, 0, bta);
                         bra = -1;
                      } else {
                         label1440: {
@@ -8701,7 +8701,7 @@ public final class gf extends fb implements ag {
          }
 
          if (bta == 1 && !ifa) {
-            var0 = fz.ala().daa.length;
+            var0 = fz.ala().arrItemBag.length;
          }
       } catch (Exception var1) {
       }
@@ -8719,21 +8719,21 @@ public final class gf extends fb implements ag {
 
    private static void dta() {
       if (bta == 0) {
-         gm.aaa().aha(14);
+         Service.aaa().aha(14);
       } else if (bta == 1) {
-         gm.aaa().aha(15);
+         Service.aaa().aha(15);
       } else if (bta == 2) {
-         gm.aaa().aha(32);
+         Service.aaa().aha(32);
       } else {
          if (bta == 3) {
-            gm.aaa().aha(34);
+            Service.aaa().aha(34);
          }
 
       }
    }
 
    private void dua() {
-      if (fz.ala().daa[bra].aea > 1) {
+      if (fz.ala().arrItemBag[bra].aea > 1) {
          super.ala = new ca(er.cta, 11072);
       } else {
          super.ala = new ca(er.cta, 11073);
@@ -8820,7 +8820,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)20);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else if (iia) {
@@ -8833,7 +8833,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)21);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else if (ija) {
@@ -8846,7 +8846,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)22);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else if (ika) {
@@ -8859,7 +8859,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)23);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else if (ila) {
@@ -8872,7 +8872,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)24);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else if (ima) {
@@ -8885,7 +8885,7 @@ public final class gf extends fb implements ag {
                         this.ada((byte)25);
                      }
                   }
-               } else if (bta == 1 && fz.ala().daa[bra] != null) {
+               } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                   this.dua();
                }
             } else {
@@ -8900,7 +8900,7 @@ public final class gf extends fb implements ag {
                            this.aaa((int)26, (gg)var10);
                         }
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (ioa) {
@@ -8913,7 +8913,7 @@ public final class gf extends fb implements ag {
                            this.aaa((int)27, (gg)var10);
                         }
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (ipa) {
@@ -8926,7 +8926,7 @@ public final class gf extends fb implements ag {
                            this.aaa((int)28, (gg)var10);
                         }
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (iqa) {
@@ -8939,7 +8939,7 @@ public final class gf extends fb implements ag {
                            this.aaa((int)29, (gg)var10);
                         }
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (ira) {
@@ -8954,7 +8954,7 @@ public final class gf extends fb implements ag {
                      } else {
                         dna = false;
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (isa) {
@@ -8969,7 +8969,7 @@ public final class gf extends fb implements ag {
                      } else {
                         dna = false;
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (ita) {
@@ -8984,7 +8984,7 @@ public final class gf extends fb implements ag {
                      } else {
                         dna = false;
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (iua) {
@@ -8999,7 +8999,7 @@ public final class gf extends fb implements ag {
                      } else {
                         dna = false;
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (iva) {
@@ -9014,7 +9014,7 @@ public final class gf extends fb implements ag {
                      } else {
                         dna = false;
                      }
-                  } else if (bta == 1 && fz.ala().daa[bra] != null) {
+                  } else if (bta == 1 && fz.ala().arrItemBag[bra] != null) {
                      this.dua();
                   }
                } else if (iwa) {
@@ -9028,7 +9028,7 @@ public final class gf extends fb implements ag {
                         }
                      }
                   } else if (bta == 1) {
-                     if (fz.ala().daa[bra] != null) {
+                     if (fz.ala().arrItemBag[bra] != null) {
                         this.dua();
                      } else {
                         super.ala = this.pka;
@@ -9045,7 +9045,7 @@ public final class gf extends fb implements ag {
                         }
                      }
                   } else if (bta == 1) {
-                     if (fz.ala().daa[bra] != null) {
+                     if (fz.ala().arrItemBag[bra] != null) {
                         this.dua();
                      } else {
                         super.ala = this.pka;
@@ -9062,7 +9062,7 @@ public final class gf extends fb implements ag {
                         }
                      }
                   } else if (bta == 1) {
-                     if (fz.ala().daa[bra] != null) {
+                     if (fz.ala().arrItemBag[bra] != null) {
                         this.dua();
                      } else {
                         super.ala = this.pka;
@@ -9079,7 +9079,7 @@ public final class gf extends fb implements ag {
                         }
                      }
                   } else if (bta == 1) {
-                     if (fz.ala().daa[bra] != null) {
+                     if (fz.ala().arrItemBag[bra] != null) {
                         this.dua();
                      } else {
                         super.ala = this.pka;
@@ -9134,7 +9134,7 @@ public final class gf extends fb implements ag {
                            }
                         }
                      } else if (bta == 1) {
-                        if (fz.ala().daa[bra] != null) {
+                        if (fz.ala().arrItemBag[bra] != null) {
                            super.ala = new ca(er.eta, 11102);
                         } else {
                            super.ala = null;
@@ -9145,7 +9145,7 @@ public final class gf extends fb implements ag {
                      if (jba) {
                         if (bta != 0) {
                            if (bta == 1) {
-                              if (fz.ala().daa[bra] != null) {
+                              if (fz.ala().arrItemBag[bra] != null) {
                                  super.ala = new ca(er.eta, 14012);
                               } else {
                                  super.ala = null;
@@ -9232,7 +9232,7 @@ public final class gf extends fb implements ag {
                               }
                            } else if (bta == 1) {
                               super.ana = this.nva;
-                              if (fz.ala().daa[bra] != null) {
+                              if (fz.ala().arrItemBag[bra] != null) {
                                  super.ala = new ca(er.eta, 1503);
                               } else {
                                  super.ala = null;
@@ -9288,7 +9288,7 @@ public final class gf extends fb implements ag {
                                     }
                                  }
                               } else if (bta == 1) {
-                                 if (fz.ala().daa[bra] == null) {
+                                 if (fz.ala().arrItemBag[bra] == null) {
                                     super.ala = null;
                                     dna = false;
                                  } else {
@@ -9328,7 +9328,7 @@ public final class gf extends fb implements ag {
                                        }
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] == null) {
+                                    if (fz.ala().arrItemBag[bra] == null) {
                                        super.ala = null;
                                        dna = false;
                                     } else {
@@ -9371,7 +9371,7 @@ public final class gf extends fb implements ag {
                                     }
                                  }
                               } else if (bta == 1) {
-                                 if (fz.ala().daa[bra] == null) {
+                                 if (fz.ala().arrItemBag[bra] == null) {
                                     super.ala = null;
                                     dna = false;
                                  } else {
@@ -9381,7 +9381,7 @@ public final class gf extends fb implements ag {
                            } else if (jda) {
                               if (bta != 0) {
                                  if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.eta, 11109);
                                     } else {
                                        dna = false;
@@ -9459,7 +9459,7 @@ public final class gf extends fb implements ag {
                                        }
                                     }
                                  } else if (bta == 1 && this.efa == 0) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = this.nta;
                                     } else {
                                        super.ala = this.npa;
@@ -9478,7 +9478,7 @@ public final class gf extends fb implements ag {
                                        super.ala = new ca(er.cia, 11112);
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.csa, 11113);
                                     } else {
                                        super.ala = this.pka;
@@ -9492,7 +9492,7 @@ public final class gf extends fb implements ag {
                                        super.ala = new ca(er.cia, 1100078);
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.tna, 1100079);
                                     } else {
                                        super.ala = this.pka;
@@ -9506,14 +9506,14 @@ public final class gf extends fb implements ag {
                                        super.ala = new ca(er.cia, 11000781);
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.tna, 11000791);
                                     } else {
                                        super.ala = this.pka;
                                     }
                                  }
                               } else if (jpa) {
-                                 gf var12 = this;
+                                 GameScr var12 = this;
 
                                  try {
                                     if (bta == 0) {
@@ -9547,7 +9547,7 @@ public final class gf extends fb implements ag {
                                           }
                                        }
                                     } else if (bta == 1) {
-                                       if (fz.ala().daa[bra] == null) {
+                                       if (fz.ala().arrItemBag[bra] == null) {
                                           var12.ala = null;
                                           dna = false;
                                        } else {
@@ -9606,7 +9606,7 @@ public final class gf extends fb implements ag {
                                        }
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.eta, 337);
                                     } else {
                                        super.ala = null;
@@ -9632,7 +9632,7 @@ public final class gf extends fb implements ag {
                                        }
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] != null) {
+                                    if (fz.ala().arrItemBag[bra] != null) {
                                        super.ala = new ca(er.eta, 400);
                                     } else {
                                        super.ala = null;
@@ -9652,7 +9652,7 @@ public final class gf extends fb implements ag {
                                        super.ama = new ca(ab.afa ? er.cca : "", 11104, dga);
                                     }
                                  } else if (bta == 1) {
-                                    if (fz.ala().daa[bra] == null) {
+                                    if (fz.ala().arrItemBag[bra] == null) {
                                        super.ala = null;
                                        dna = false;
                                     } else {
@@ -9662,7 +9662,7 @@ public final class gf extends fb implements ag {
                               }
                            } else if (bta != 0) {
                               if (bta == 1) {
-                                 if (fz.ala().daa[bra] != null) {
+                                 if (fz.ala().arrItemBag[bra] != null) {
                                     super.ala = new ca(er.eta, 1603);
                                  } else {
                                     dna = false;
@@ -9719,9 +9719,9 @@ public final class gf extends fb implements ag {
                }
             }
 
-            if (bia() && bta == 1 && fz.ala().daa[bra] != null) {
+            if (bia() && bta == 1 && fz.ala().arrItemBag[bra] != null) {
                if (ab.aia) {
-                  this.aaa((int)3, (gg)fz.ala().daa[bra]);
+                  this.aaa((int)3, (gg)fz.ala().arrItemBag[bra]);
                   return;
                }
 
@@ -9746,7 +9746,7 @@ public final class gf extends fb implements ag {
          gha -= 10;
       }
 
-      if (ab.aia && !doa() && ab.bda instanceof gf) {
+      if (ab.aia && !doa() && ab.bda instanceof GameScr) {
          gja = 310;
          gia = aba / 2 - gja / 2;
       }
@@ -9929,7 +9929,7 @@ public final class gf extends fb implements ag {
       try {
          aba(var1);
          aaa(var1, var2, true);
-         this.aaa(var1, fz.ala().daa);
+         this.aaa(var1, fz.ala().arrItemBag);
       } catch (Exception var3) {
          var3.printStackTrace();
       }
@@ -10373,7 +10373,7 @@ public final class gf extends fb implements ag {
                var6 = var3 + hoa / 2;
                int var7 = var4 + hoa / 2;
                as var8 = var1;
-               gf var9 = this;
+               GameScr var9 = this;
                int var10 = hoa - 2;
                int var11 = var5 < 4 ? 0 : (var5 < 8 ? 1 : (var5 < 12 ? 2 : (var5 <= 14 ? 3 : 4)));
 
@@ -10850,7 +10850,7 @@ public final class gf extends fb implements ag {
       if (dka) {
          if (bta == 0) {
             String[] var2 = er.hca;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                paa = 5;
@@ -10915,7 +10915,7 @@ public final class gf extends fb implements ag {
       if (jba) {
          if (bta == 0) {
             String[] var2 = er.hda;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                paa = 3;
@@ -11079,7 +11079,7 @@ public final class gf extends fb implements ag {
       if (dpa) {
          if (bta == 0) {
             String[] var2 = er.hja;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                fk.aaa(gia, gha, gja, gka, var1);
@@ -11298,7 +11298,7 @@ public final class gf extends fb implements ag {
       if (jea) {
          if (bta == 0) {
             String[] var2 = er.hfa;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                aba(var1);
@@ -11413,7 +11413,7 @@ public final class gf extends fb implements ag {
 
             return null;
          case 3:
-            return fz.ala().daa[bra];
+            return fz.ala().arrItemBag[bra];
          case 4:
             return fz.ala().dba[bra];
          case 5:
@@ -11721,7 +11721,7 @@ public final class gf extends fb implements ag {
             } else if (var2) {
                ab.aaa(er.mma, 88813, cwa, 8882, (Object)null);
             } else {
-               gm.aaa().aaa(cwa);
+               Service.aaa().aaa(cwa);
             }
          } else if (dya[var4 + 1] > fz.ala().cqa + fz.ala().csa) {
             ab.bja.aaa(er.mna, (ca)null, new ca(er.bma, 1), (ca)null);
@@ -11729,7 +11729,7 @@ public final class gf extends fb implements ag {
          } else if (var3) {
             ab.aaa(er.mma, 88814, cwa, 8882, (Object)null);
          } else {
-            gm.aaa().aba(cwa);
+            Service.aaa().aba(cwa);
          }
       }
    }
@@ -11762,9 +11762,9 @@ public final class gf extends fb implements ag {
          } else if (var3 == 10 && var1 == 3 || var3 == 11 && var0 == 3) {
             ab.aaa(er.sqa);
          } else {
-            gm var10000 = gm.aaa();
+            Service var10000 = Service.aaa();
             gg[] var11 = cwa;
-            gm var10 = var10000;
+            Service var10 = var10000;
             ab.bja.aba();
             fe var12 = null;
 
@@ -11920,17 +11920,17 @@ public final class gf extends fb implements ag {
       if (!dfa.aga) {
          ab.aaa(er.mra, new ca(er.cma, 11063), new ca(er.cza, 1));
       } else {
-         gm.aaa().aaa(dfa, cxa, jca);
+         Service.aaa().aaa(dfa, cxa, jca);
       }
    }
 
    private static void dya() {
       if (jpa) {
-         gm.aaa().aaa((byte)1, (gg)null, dga, cya);
+         Service.aaa().aaa((byte)1, (gg)null, dga, cya);
       } else if (jna) {
-         gm.aaa().aba(dga, cya);
+         Service.aaa().aba(dga, cya);
       } else if (joa) {
-         gm.aaa().ada(dga, cya);
+         Service.aaa().ada(dga, cya);
       } else if (dga.aia == 0) {
          ab.bja.aaa(er.msa, (ca)null, new ca(er.bma, 1), (ca)null);
          ab.bia = ab.bja;
@@ -11939,8 +11939,8 @@ public final class gf extends fb implements ag {
          int var1 = 0;
 
          int var2;
-         for(var2 = 0; var2 < fz.ala().daa.length; ++var2) {
-            if (fz.ala().daa[var2] == null) {
+         for(var2 = 0; var2 < fz.ala().arrItemBag.length; ++var2) {
+            if (fz.ala().arrItemBag[var2] == null) {
                ++var0;
             }
          }
@@ -11982,15 +11982,15 @@ public final class gf extends fb implements ag {
          bsa = 0;
          if (var2.afa == 0L) {
             if (jna || joa || jpa || jqa || jsa || jra) {
-               gm.aaa().aca(var2.ana, var2.ada);
+               Service.aaa().aca(var2.ana, var2.ada);
             }
 
             if (jla) {
-               gm.aaa().bka(var2.aca);
+               Service.aaa().bka(var2.aca);
             } else if (dsa.asa == fz.ala().asa) {
-               gm.aaa().aca(var1, var2.ada);
+               Service.aaa().aca(var1, var2.ada);
             } else {
-               gm.aaa().ada(dsa.asa, var2.ada);
+               Service.aaa().ada(dsa.asa, var2.ada);
             }
          }
 
@@ -13071,7 +13071,7 @@ public final class gf extends fb implements ag {
                      this.aaa(var1, fw.apa, var2.aia() ? var7.aba() : var7.aaa(), pfa + 8, this.pba += 12, 0);
                   } else {
                      label962: {
-                        gf var10000;
+                        GameScr var10000;
                         as var10001;
                         fw var10002;
                         String var10003;
@@ -13263,7 +13263,7 @@ public final class gf extends fb implements ag {
          bta = 0;
          iva = true;
          if (cma == null) {
-            gm.aaa().aha(2);
+            Service.aaa().aha(2);
          }
       case 3:
       case 5:
@@ -13277,35 +13277,35 @@ public final class gf extends fb implements ag {
          bta = 0;
          jea = true;
          if (fz.ala().dba == null) {
-            gm.aaa().aha(4);
+            Service.aaa().aha(4);
          }
          break;
       case 6:
          bta = 0;
          iwa = true;
          if (cna == null) {
-            gm.aaa().aha(6);
+            Service.aaa().aha(6);
          }
          break;
       case 7:
          bta = 0;
          ixa = true;
          if (coa == null) {
-            gm.aaa().aha(7);
+            Service.aaa().aha(7);
          }
          break;
       case 8:
          bta = 0;
          iya = true;
          if (cpa == null) {
-            gm.aaa().aha(8);
+            Service.aaa().aha(8);
          }
          break;
       case 9:
          bta = 0;
          iza = true;
          if (cqa == null) {
-            gm.aaa().aha(9);
+            Service.aaa().aha(9);
          }
          break;
       case 10:
@@ -13334,112 +13334,112 @@ public final class gf extends fb implements ag {
          ifa = true;
          bta = 0;
          if (cra == null) {
-            gm.aaa().aha(14);
+            Service.aaa().aha(14);
          }
          break;
       case 15:
          ifa = true;
          bta = 1;
          if (cua == null) {
-            gm.aaa().aha(15);
+            Service.aaa().aha(15);
          }
          break;
       case 16:
          bta = 0;
          ira = true;
          if (cia == null) {
-            gm.aaa().aha(16);
+            Service.aaa().aha(16);
          }
          break;
       case 17:
          bta = 0;
          isa = true;
          if (cja == null) {
-            gm.aaa().aha(17);
+            Service.aaa().aha(17);
          }
          break;
       case 18:
          bta = 0;
          ita = true;
          if (cka == null) {
-            gm.aaa().aha(18);
+            Service.aaa().aha(18);
          }
          break;
       case 19:
          bta = 0;
          iua = true;
          if (cla == null) {
-            gm.aaa().aha(19);
+            Service.aaa().aha(19);
          }
          break;
       case 20:
          bta = 0;
          iha = true;
          if (bya == null) {
-            gm.aaa().aha(20);
+            Service.aaa().aha(20);
          }
          break;
       case 21:
          bta = 0;
          iia = true;
          if (bza == null) {
-            gm.aaa().aha(21);
+            Service.aaa().aha(21);
          }
          break;
       case 22:
          bta = 0;
          ija = true;
          if (caa == null) {
-            gm.aaa().aha(22);
+            Service.aaa().aha(22);
          }
          break;
       case 23:
          bta = 0;
          ika = true;
          if (cba == null) {
-            gm.aaa().aha(23);
+            Service.aaa().aha(23);
          }
          break;
       case 24:
          bta = 0;
          ila = true;
          if (cca == null) {
-            gm.aaa().aha(24);
+            Service.aaa().aha(24);
          }
          break;
       case 25:
          bta = 0;
          ima = true;
          if (cda == null) {
-            gm.aaa().aha(25);
+            Service.aaa().aha(25);
          }
          break;
       case 26:
          bta = 0;
          ina = true;
          if (cea == null) {
-            gm.aaa().aha(26);
+            Service.aaa().aha(26);
          }
          break;
       case 27:
          bta = 0;
          ioa = true;
          if (cfa == null) {
-            gm.aaa().aha(27);
+            Service.aaa().aha(27);
          }
          break;
       case 28:
          bta = 0;
          ipa = true;
          if (cga == null) {
-            gm.aaa().aha(28);
+            Service.aaa().aha(28);
          }
          break;
       case 29:
          bta = 0;
          iqa = true;
          if (cha == null) {
-            gm.aaa().aha(29);
+            Service.aaa().aha(29);
          }
          break;
       case 31:
@@ -13452,7 +13452,7 @@ public final class gf extends fb implements ag {
          ifa = true;
          bta = 2;
          if (cva == null) {
-            gm.aaa().aha(32);
+            Service.aaa().aha(32);
          }
          break;
       case 33:
@@ -13464,14 +13464,14 @@ public final class gf extends fb implements ag {
          ifa = true;
          bta = 3;
          if (cta == null) {
-            gm.aaa().aha(34);
+            Service.aaa().aha(34);
          }
          break;
       case 35:
          iga = true;
          bta = 0;
          if (csa == null) {
-            gm.aaa().aha(35);
+            Service.aaa().aha(35);
          }
          break;
       case 36:
@@ -13579,7 +13579,7 @@ public final class gf extends fb implements ag {
          if (var2.equals(er.pla[0])) {
             Code var10000 = Code.aaa;
             if (!Code.afa(var1)) {
-               gm.aaa().aca(var1);
+               Service.aaa().aca(var1);
                return;
             }
          } else {
@@ -13589,15 +13589,15 @@ public final class gf extends fb implements ag {
                   return;
                }
 
-               gm.aaa().aka(var1);
+               Service.aaa().aka(var1);
                return;
             }
 
-            gm var16;
-            gm var17;
+            Service var16;
+            Service var17;
             fe var3;
             if (var2.equals(er.pna[0])) {
-               var17 = gm.aaa();
+               var17 = Service.aaa();
                var2 = var1;
                var16 = var17;
                var3 = null;
@@ -13621,7 +13621,7 @@ public final class gf extends fb implements ag {
                   return;
                }
 
-               var17 = gm.aaa();
+               var17 = Service.aaa();
                var2 = var1;
                var16 = var17;
                var3 = null;
@@ -13640,7 +13640,7 @@ public final class gf extends fb implements ag {
             }
 
             dc.ada().aaa(var2, fz.ala().cea, var1);
-            gm.aaa().aaa(var2, var1);
+            Service.aaa().aaa(var2, var1);
          }
       }
 
@@ -13770,7 +13770,7 @@ public final class gf extends fb implements ag {
          this.ada((int)35);
          return;
       case 1000:
-         gm.aaa().bda();
+         Service.aaa().bda();
          this.bca();
          return;
       case 1500:
@@ -13807,7 +13807,7 @@ public final class gf extends fb implements ag {
          }
 
          bua = bra;
-         gm.aaa().bfa();
+         Service.aaa().bfa();
          ab.aoa();
          return;
       case 1507:
@@ -13883,7 +13883,7 @@ public final class gf extends fb implements ag {
          this.aaa((int)41, (gg)dsa.dda[bra]);
          return;
       case 1516:
-         gm.aaa().aba(bra);
+         Service.aaa().aba(bra);
          return;
       case 1600:
          dwa();
@@ -13923,7 +13923,7 @@ public final class gf extends fb implements ag {
          this.ioa();
          return;
       case 2000:
-         gm.aaa().bea();
+         Service.aaa().bea();
          this.bca();
          return;
       case 11000:
@@ -14078,7 +14078,7 @@ public final class gf extends fb implements ag {
          return;
       case 11052:
          var14 = (gg)var2;
-         gm.aaa().aia(var14.ada, ab.bea.aca);
+         Service.aaa().aia(var14.ada, ab.bea.aca);
          return;
       case 11053:
          aga((gg)var2);
@@ -14091,12 +14091,12 @@ public final class gf extends fb implements ag {
          return;
       case 11057:
          var25 = (av)var2;
-         gm.aaa().aja(var25.aaa.aaa, ab.bea.aca);
+         Service.aaa().aja(var25.aaa.aaa, ab.bea.aca);
          return;
       case 11058:
          var14 = (gg)var2;
          ab.ama();
-         gm.aaa().aga(var14.ada, Integer.parseInt(ab.bka.aaa.aea()));
+         Service.aaa().aga(var14.ada, Integer.parseInt(ab.bka.aaa.aea()));
          return;
       case 11059:
          this.gla();
@@ -14114,7 +14114,7 @@ public final class gf extends fb implements ag {
          gja();
          return;
       case 11064:
-         gm.aaa().aea(hpa - 1, 1);
+         Service.aaa().aea(hpa - 1, 1);
          this.bra();
          return;
       case 11065:
@@ -14128,7 +14128,7 @@ public final class gf extends fb implements ag {
          return;
       case 11067:
          if (gn.ala != bra) {
-            gm.aaa().aaa(bra, this.kba);
+            Service.aaa().aaa(bra, this.kba);
             br.aba();
             return;
          }
@@ -14146,13 +14146,13 @@ public final class gf extends fb implements ag {
          aaa((ep)var2);
          return;
       case 11071:
-         gm.aaa().ata();
+         Service.aaa().ata();
          return;
       case 11072:
          gha();
          return;
       case 11073:
-         aba(fz.ala().daa[bra]);
+         aba(fz.ala().arrItemBag[bra]);
          return;
       case 11074:
          short var22 = Short.parseShort(String.valueOf((var23 = (ev)var2).elementAt(0)));
@@ -14164,7 +14164,7 @@ public final class gf extends fb implements ag {
          return;
       case 11076:
          var16 = (String)var2;
-         gm.aaa().afa(var16);
+         Service.aaa().afa(var16);
          return;
       case 11077:
          aga((String)var2);
@@ -14199,7 +14199,7 @@ public final class gf extends fb implements ag {
       case 11087:
          var14 = (gg)var2;
          ab.ama();
-         gm.aaa().aaa(var14);
+         Service.aaa().aaa(var14);
          return;
       case 11088:
          this.ada((byte)26);
@@ -14278,13 +14278,13 @@ public final class gf extends fb implements ag {
          this.aaa((int)4, (gg)var14);
          return;
       case 11112:
-         gm.aaa().aga();
+         Service.aaa().aga();
          return;
       case 11113:
-         gm.aaa().ada(fz.ala().daa[bra].ada);
+         Service.aaa().ada(fz.ala().arrItemBag[bra].ada);
          return;
       case 11114:
-         this.aaa((int)3, (gg)fz.ala().daa[bra]);
+         this.aaa((int)3, (gg)fz.ala().arrItemBag[bra]);
          return;
       case 11115:
          fga();
@@ -14428,7 +14428,7 @@ public final class gf extends fb implements ag {
       case 14020:
          if (eya()) {
             var16 = (String)var2;
-            gm.aaa().aaa((short)1, (String)var16);
+            Service.aaa().aaa((short)1, (String)var16);
             return;
          }
 
@@ -14471,7 +14471,7 @@ public final class gf extends fb implements ag {
          ab.aaa(er.aaa(er.rla, ex.aaa(String.valueOf(dca[bra].aba))), new ca(er.cma, 150421), new ca(er.cza, 1));
          return;
       case 15081:
-         gm.aaa().bga();
+         Service.aaa().bga();
          return;
       case 15082:
          ab.bka.aaa(er.saa, new ca(er.dca, ab.aja, 88843, bra), 0);
@@ -14633,7 +14633,7 @@ public final class gf extends fb implements ag {
                fz.aca(var25.ala, var25.ama);
             }
 
-            gm.aaa().aea();
+            Service.aaa().aea();
             return;
          }
 
@@ -14643,7 +14643,7 @@ public final class gf extends fb implements ag {
 
          if (var1 >= 0) {
             this.kba = var1;
-            gm.aaa().aea();
+            Service.aaa().aea();
          }
 
          return;
@@ -14763,7 +14763,7 @@ public final class gf extends fb implements ag {
             }
 
             if (var18 < 5000) {
-               aca("Giá > 5000k");
+               chatPopup("Giá > 5000k");
             } else {
                Code.aba(var14.aaa.aaa, var18);
             }
@@ -14775,10 +14775,10 @@ public final class gf extends fb implements ag {
          this.gya();
          return;
       case 110382:
-         gm.aaa().aka();
+         Service.aaa().aka();
          return;
       case 110383:
-         gm.aaa().ala();
+         Service.aaa().ala();
          return;
       case 110391:
          this.aqa(1);
@@ -14821,7 +14821,7 @@ public final class gf extends fb implements ag {
          return;
       case 110531:
          var14 = (gg)var2;
-         gm.aaa().aia(var14.ada, ab.bea.aca + 3);
+         Service.aaa().aia(var14.ada, ab.bea.aca + 3);
          return;
       case 110561:
          ab.ama();
@@ -14831,44 +14831,44 @@ public final class gf extends fb implements ag {
          aea((gg)var2);
          return;
       case 110701:
-         gm.aaa().ata();
+         Service.aaa().ata();
          return;
       case 110702:
-         gm.aaa().aaa(true);
+         Service.aaa().aaa(true);
          return;
       case 110703:
-         gm.aaa().aaa(false);
+         Service.aaa().aaa(false);
          return;
       case 110721:
-         gm.aaa().aga(bra, 1);
+         Service.aaa().aga(bra, 1);
          return;
       case 110722:
-         aba(fz.ala().daa[bra]);
+         aba(fz.ala().arrItemBag[bra]);
          return;
       case 110723:
-         gm.aaa().aga(bra, fz.ala().daa[bra].aea);
+         Service.aaa().aga(bra, fz.ala().arrItemBag[bra].aea);
          return;
       case 110771:
          var16 = (String)var2;
          ab.ama();
-         gm.aaa().aga(var16);
+         Service.aaa().aga(var16);
          return;
       case 110791:
          var16 = (String)var2;
-         gm.aaa().afa(var16);
+         Service.aaa().afa(var16);
          return;
       case 110792:
          afa((String)var2);
          return;
       case 110801:
-         gm.aaa().aya(bsa);
+         Service.aaa().aya(bsa);
          return;
       case 110802:
-         gm.aaa().axa(bsa);
+         Service.aaa().axa(bsa);
          return;
       case 110803:
          var16 = (String)var2;
-         gm.aaa().aea(var16);
+         Service.aaa().aea(var16);
          return;
       case 110804:
          fea();
@@ -14883,10 +14883,10 @@ public final class gf extends fb implements ag {
          aaa(fz.ala().cua.aca[bra]);
          return;
       case 110821:
-         gm.aaa().aaa(bra);
+         Service.aaa().aaa(bra);
          return;
       case 110841:
-         gm.aaa().aea(hpa - 1, 1);
+         Service.aaa().aea(hpa - 1, 1);
          this.bra();
          return;
       case 110842:
@@ -14894,7 +14894,7 @@ public final class gf extends fb implements ag {
          return;
       case 110851:
          var14 = (gg)var2;
-         gm.aaa().aaa(var14.ana, var14.ada, 1);
+         Service.aaa().aaa(var14.ana, var14.ada, 1);
          return;
       case 110852:
          aaa((gg)var2);
@@ -14904,7 +14904,7 @@ public final class gf extends fb implements ag {
          return;
       case 110921:
          var14 = (gg)var2;
-         gm.aaa().aaa(var14.ana, var14.ada, 1);
+         Service.aaa().aaa(var14.ana, var14.ada, 1);
          return;
       case 110922:
          aaa((gg)var2);
@@ -14933,27 +14933,27 @@ public final class gf extends fb implements ag {
          return;
       case 111031:
          if (jna) {
-            gm.aaa().aba(dga, cya);
+            Service.aaa().aba(dga, cya);
             return;
          }
 
          if (joa) {
-            gm.aaa().ada(dga, cya);
+            Service.aaa().ada(dga, cya);
             return;
          }
 
          if (jpa) {
-            gm.aaa().aaa((byte)1, (gg)null, dga, cya);
+            Service.aaa().aaa((byte)1, (gg)null, dga, cya);
             return;
          }
 
          if (jra) {
-            gm.aaa().aaa((byte)2, (gg)null, dga, (gg[])null);
+            Service.aaa().aaa((byte)2, (gg)null, dga, (gg[])null);
             return;
          }
 
          if (jsa) {
-            gm.aaa().aaa((byte)3, (gg)null, dga, (gg[])null);
+            Service.aaa().aaa((byte)3, (gg)null, dga, (gg[])null);
             return;
          }
          break;
@@ -14962,7 +14962,7 @@ public final class gf extends fb implements ag {
          return;
       case 111101:
          var14 = ana(4);
-         gm.aaa().aca(var14.ada);
+         Service.aaa().aca(var14.ada);
          return;
       case 120051:
          fa var28 = (fa)var2;
@@ -15017,7 +15017,7 @@ public final class gf extends fb implements ag {
 
          this.psa = this.psa + ", Số seri: " + ab.bla.aaa.aea();
          this.psa = this.psa + ", Khoảng thời gian nạp: " + ab.bla.aba.aea();
-         gm.aaa().ada(this.psa);
+         Service.aaa().ada(this.psa);
          ab.ama();
          return;
       case 120081:
@@ -15030,12 +15030,12 @@ public final class gf extends fb implements ag {
             return;
          }
 
-         gm.aaa().ada("Số điện thoại đăng ký: ".concat(String.valueOf(var16)));
+         Service.aaa().ada("Số điện thoại đăng ký: ".concat(String.valueOf(var16)));
          ab.ama();
          return;
       case 130011:
          var25 = (av)var2;
-         gm.aaa().aja(var25.aaa.aaa, 0);
+         Service.aaa().aja(var25.aaa.aaa, 0);
          var25.aia = null;
          this.bca();
          return;
@@ -15050,7 +15050,7 @@ public final class gf extends fb implements ag {
          aca((byte)32);
          return;
       case 140011:
-         gm.aaa().afa(fz.ala().cua.aca[bra].aaa, 1);
+         Service.aaa().afa(fz.ala().cua.aca[bra].aaa, 1);
          this.bra();
          return;
       case 140012:
@@ -15061,13 +15061,13 @@ public final class gf extends fb implements ag {
          ab.bka.aaa(er.qja, new ca(er.ega, ab.aja, 88832, (Object)null), 0);
          return;
       case 140042:
-         gm.aaa().aza();
+         Service.aaa().aza();
          return;
       case 140043:
          ab.bka.aaa(er.qka, new ca(er.ega, ab.aja, 88834, (Object)null), 0);
          return;
       case 140044:
-         gm.aaa().bca();
+         Service.aaa().bca();
          return;
       case 140071:
          bsa = 0;
@@ -15084,14 +15084,14 @@ public final class gf extends fb implements ag {
          bfa();
          return;
       case 140081:
-         gm.aaa().aya();
+         Service.aaa().aya();
          ab.ama();
          return;
       case 140091:
-         gm.aaa().aba(((cn)bea.elementAt(bsa)).ada, 3);
+         Service.aaa().aba(((cn)bea.elementAt(bsa)).ada, 3);
          return;
       case 140092:
-         gm.aaa().aba(((cn)bea.elementAt(bsa)).ada, 2);
+         Service.aaa().aba(((cn)bea.elementAt(bsa)).ada, 2);
          return;
       case 140093:
          ab.aaa(er.lga, new ca(er.cma, 1400931), new ca(er.cza, 1));
@@ -15101,7 +15101,7 @@ public final class gf extends fb implements ag {
          return;
       case 140095:
          var15 = (cn)bea.elementAt(bsa);
-         gm.aaa().aoa(var15.ada);
+         Service.aaa().aoa(var15.ada);
          return;
       case 140096:
          (var23 = new ev()).addElement(new ca(er.rxa, 1400961));
@@ -15146,7 +15146,7 @@ public final class gf extends fb implements ag {
          } catch (Exception var9) {
          }
 
-         gm.aaa().aaa(dha, var1);
+         Service.aaa().aaa(dha, var1);
          return;
       case 150411:
          this.jza = 0;
@@ -15189,10 +15189,10 @@ public final class gf extends fb implements ag {
          return;
       case 150421:
          ab.ama();
-         gm.aaa().bla(dca[bra].aaa.aca);
+         Service.aaa().bla(dca[bra].aaa.aca);
          return;
       case 151301:
-         gm.aaa().bma(fz.ala().dpa.ada().aea);
+         Service.aaa().bma(fz.ala().dpa.ada().aea);
          return;
       case 151710:
          fz.fwa = 10;
@@ -15292,7 +15292,7 @@ public final class gf extends fb implements ag {
                fz.aca(var17.ala, var17.ama);
             }
 
-            gm.aaa().aga(var17.aaa.aaa);
+            Service.aaa().aga(var17.aaa.aaa);
          }
 
          return;
@@ -15318,7 +15318,7 @@ public final class gf extends fb implements ag {
          Code.ama();
          return;
       case 1100079:
-         Code.aaa(fz.ala().daa[bra].aaa.aaa);
+         Code.aaa(fz.ala().arrItemBag[bra].aaa.aaa);
          return;
       case 1100080:
          Code.aqa = !Code.aqa;
@@ -15368,7 +15368,7 @@ public final class gf extends fb implements ag {
          if (var4 >= 0 && var4 < 100) {
             Code.aza = var4;
          } else {
-            aca("Tốc độ game từ 0 đến 99");
+            chatPopup("Tốc độ game từ 0 đến 99");
          }
 
          ab.ama();
@@ -15462,35 +15462,35 @@ public final class gf extends fb implements ag {
       case 1107921:
          var16 = (String)var2;
          ab.ama();
-         gm.aaa().aga(var16);
+         Service.aaa().aga(var16);
          aba(var16);
          return;
       case 1107931:
          var16 = (String)var2;
-         gm.aaa().aea(var16);
+         Service.aaa().aea(var16);
          return;
       case 1107932:
          aba((String)var2);
          return;
       case 1108041:
          var16 = (String)var2;
-         gm.aaa().aja(var16);
+         Service.aaa().aja(var16);
          ava().bca();
          return;
       case 1400931:
-         gm.aaa().aba(((cn)bea.elementAt(bsa)).ada, 0);
+         Service.aaa().aba(((cn)bea.elementAt(bsa)).ada, 0);
          ab.ama();
          return;
       case 1400941:
-         gm.aaa().ana(((cn)bea.elementAt(bsa)).ada);
+         Service.aaa().ana(((cn)bea.elementAt(bsa)).ada);
          ab.ama();
          return;
       case 1400961:
          var15 = (cn)bea.elementAt(bsa);
-         gm.aaa().apa(var15.ada);
+         Service.aaa().apa(var15.ada);
          return;
       case 1400962:
-         gm.aaa().bba();
+         Service.aaa().bba();
          return;
       case 11000601:
          this.ada((int)36);
@@ -15520,17 +15520,17 @@ public final class gf extends fb implements ag {
       case 11000662:
          bta = 1;
          this.eza();
-         gm.aaa().ava();
+         Service.aaa().ava();
          return;
       case 11000663:
          bta = 2;
          this.eza();
-         gm.aaa().awa();
+         Service.aaa().awa();
          return;
       case 11000664:
          bta = 3;
          this.eza();
-         gm.aaa().axa();
+         Service.aaa().axa();
          return;
       case 11000665:
          if (dia = !dia) {
@@ -15543,7 +15543,7 @@ public final class gf extends fb implements ag {
       case 11000666:
          bta = 4;
          this.eza();
-         gm.aaa().awa();
+         Service.aaa().awa();
          return;
       case 11000671:
          ab.aaa(er.pza, 88836, (Object)null, 8882, (Object)null);
@@ -15575,7 +15575,7 @@ public final class gf extends fb implements ag {
          Code.ana();
          return;
       case 11000791:
-         Code.aca(fz.ala().daa[bra].aaa.aaa);
+         Code.aca(fz.ala().arrItemBag[bra].aaa.aaa);
          return;
       case 11000792:
          if ((var14 = ana(3)) != null) {
@@ -15595,7 +15595,7 @@ public final class gf extends fb implements ag {
 
    private void eaa() {
       try {
-         if (fz.ala().daa[bra].aaa.aaa == 454) {
+         if (fz.ala().arrItemBag[bra].aaa.aaa == 454) {
             if (cya == null) {
                cya = new gg[24];
             }
@@ -15607,26 +15607,26 @@ public final class gf extends fb implements ag {
                }
 
                if (cya[var3] == null) {
-                  cya[var3] = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  cya[var3] = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                   super.ala = super.ama = null;
                   this.bka();
                   return;
                }
             }
 
-         } else if (fz.ala().daa[bra].aia > 11) {
+         } else if (fz.ala().arrItemBag[bra].aia > 11) {
             if (dga == null) {
-               dga = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               dga = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
             } else {
-               gg var1 = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
-               fz.ala().daa[dga.ada] = dga;
+               gg var1 = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
+               fz.ala().arrItemBag[dga.ada] = dga;
                dga = var1;
             }
 
-            gm.aaa().aca(dga.ana, dga.ada);
+            Service.aaa().aca(dga.ana, dga.ada);
          } else {
             ab.aaa(er.sxa);
          }
@@ -15638,7 +15638,7 @@ public final class gf extends fb implements ag {
    private void eba() {
       gg var1 = ana(44);
       cya[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -15889,24 +15889,24 @@ public final class gf extends fb implements ag {
    }
 
    private void eha() {
-      fz.ala().daa[dha.ada] = dha;
+      fz.ala().arrItemBag[dha.ada] = dha;
       dha = null;
       super.ala = super.ama = null;
    }
 
    private static void eia() {
       gg var0;
-      if ((var0 = fz.ala().daa[bra]) != null) {
+      if ((var0 = fz.ala().arrItemBag[bra]) != null) {
          if (!var0.aga && !var0.aoa) {
             if (dha == null) {
-               dha = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               dha = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                return;
             }
 
-            var0 = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
-            fz.ala().daa[dha.ada] = dha;
+            var0 = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
+            fz.ala().arrItemBag[dha.ada] = dha;
             dha = var0;
             return;
          }
@@ -16004,7 +16004,7 @@ public final class gf extends fb implements ag {
 
    private static void era() {
       ab.ama();
-      gm.aaa().ada(dba[0].ada, dba[1].ada, dba[2].ada);
+      Service.aaa().ada(dba[0].ada, dba[1].ada, dba[2].ada);
    }
 
    private static void esa() {
@@ -16059,7 +16059,7 @@ public final class gf extends fb implements ag {
    private static void ewa() {
       cn var0;
       if (bsa >= 0 && bsa < bea.size() && (var0 = dba()) != null && !var0.ada.equals("")) {
-         gm.aaa().aja(var0.ada);
+         Service.aaa().aja(var0.ada);
          jia = false;
          ava().bca();
       }
@@ -16108,9 +16108,9 @@ public final class gf extends fb implements ag {
    }
 
    private static boolean eya() {
-      for(int var0 = 0; var0 < fz.ala().daa.length; ++var0) {
+      for(int var0 = 0; var0 < fz.ala().arrItemBag.length; ++var0) {
          gg var1;
-         if ((var1 = fz.ala().daa[var0]) != null && var1.aaa.aaa == 279 && var1.aaa.afa <= fz.ala().aya) {
+         if ((var1 = fz.ala().arrItemBag[var0]) != null && var1.aaa.aaa == 279 && var1.aaa.afa <= fz.ala().aya) {
             return true;
          }
       }
@@ -16136,7 +16136,7 @@ public final class gf extends fb implements ag {
       aba(175, 200);
       this.bka();
       super.ana = this.nva;
-      gm.aaa().aua();
+      Service.aaa().aua();
    }
 
    private static void faa() {
@@ -16187,7 +16187,7 @@ public final class gf extends fb implements ag {
    private static void fea() {
       ep var0;
       if ((var0 = (ep)bfa.elementAt(bsa)).afa != null && var0.afa != fz.ala()) {
-         gm.aaa().aja(var0.afa.cea);
+         Service.aaa().aja(var0.afa.cea);
          iaa = false;
          ava().bca();
       }
@@ -16209,14 +16209,14 @@ public final class gf extends fb implements ag {
    }
 
    private void fha() {
-      if (fz.ala().daa[bra].aaa.aba != 26 && fz.ala().daa[bra].aaa.aaa != 455 && fz.ala().daa[bra].aaa.aaa != 456) {
-         if (fz.ala().daa[bra].aaa.aaa == 457) {
+      if (fz.ala().arrItemBag[bra].aaa.aba != 26 && fz.ala().arrItemBag[bra].aaa.aaa != 455 && fz.ala().arrItemBag[bra].aaa.aaa != 456) {
+         if (fz.ala().arrItemBag[bra].aaa.aaa == 457) {
             ab.bja.aaa(er.sna, (ca)null, new ca(er.bma, 2), (ca)null);
          } else {
             ab.bja.aaa(er.soa, (ca)null, new ca(er.bma, 2), (ca)null);
          }
       } else {
-         if (fz.ala().daa[bra].aaa.aba == 26 && fz.ala().daa[bra].aaa.aaa < 10) {
+         if (fz.ala().arrItemBag[bra].aaa.aba == 26 && fz.ala().arrItemBag[bra].aaa.aaa < 10) {
             ab.aaa(er.sra);
             return;
          }
@@ -16235,21 +16235,21 @@ public final class gf extends fb implements ag {
 
          for(var4 = 0; var4 < cwa.length; ++var4) {
             if (cwa[var4] == null) {
-               if (fz.ala().daa[bra].aaa.aba == 26) {
+               if (fz.ala().arrItemBag[bra].aaa.aba == 26) {
                   if (cwa[12] == null) {
-                     cwa[12] = fz.ala().daa[bra];
-                     fz.ala().daa[bra] = null;
+                     cwa[12] = fz.ala().arrItemBag[bra];
+                     fz.ala().arrItemBag[bra] = null;
                   } else {
-                     gg var5 = fz.ala().daa[bra];
-                     fz.ala().daa[bra] = null;
-                     fz.ala().daa[cwa[12].ada] = cwa[12];
+                     gg var5 = fz.ala().arrItemBag[bra];
+                     fz.ala().arrItemBag[bra] = null;
+                     fz.ala().arrItemBag[cwa[12].ada] = cwa[12];
                      cwa[12] = var5;
                   }
-               } else if (var1 > 0 && fz.ala().daa[bra].aaa.aaa != var1) {
+               } else if (var1 > 0 && fz.ala().arrItemBag[bra].aaa.aaa != var1) {
                   ab.aaa(er.ssa);
                } else if ((!var3 || var2 < 3) && var2 < 9) {
-                  cwa[var4] = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  cwa[var4] = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                } else {
                   ab.aaa(er.sua);
                }
@@ -16267,14 +16267,14 @@ public final class gf extends fb implements ag {
    }
 
    private void fia() {
-      if (fz.ala().daa[bra].aaa.aba != 26) {
+      if (fz.ala().arrItemBag[bra].aaa.aba != 26) {
          ab.bja.aaa(er.kja, (ca)null, new ca(er.bma, 2), (ca)null);
          ab.bia = ab.bja;
       } else {
          for(int var1 = 0; var1 < cwa.length; ++var1) {
             if (cwa[var1] == null) {
-               cwa[var1] = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               cwa[var1] = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                super.ala = super.ama = null;
                this.bka();
                return;
@@ -16289,7 +16289,7 @@ public final class gf extends fb implements ag {
    private void fja() {
       gg var1 = ana(11);
       cwa[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -16327,13 +16327,13 @@ public final class gf extends fb implements ag {
          int var2;
          int var3;
          if (jna) {
-            if (!fz.ala().daa[bra].aba() && !fz.ala().daa[bra].aca() && fz.ala().daa[bra].aaa.aaa != 455 && fz.ala().daa[bra].aaa.aaa != 456 && fz.ala().daa[bra].aaa.aaa != 457) {
+            if (!fz.ala().arrItemBag[bra].aba() && !fz.ala().arrItemBag[bra].aca() && fz.ala().arrItemBag[bra].aaa.aaa != 455 && fz.ala().arrItemBag[bra].aaa.aaa != 456 && fz.ala().arrItemBag[bra].aaa.aaa != 457) {
                ab.bja.aaa(er.sva, (ca)null, new ca(er.bma, 2), (ca)null);
                ab.bia = ab.bja;
-            } else if (fz.ala().daa[bra].aaa.aaa != 455 && fz.ala().daa[bra].aaa.aaa != 456 && fz.ala().daa[bra].aaa.aaa != 457) {
+            } else if (fz.ala().arrItemBag[bra].aaa.aaa != 455 && fz.ala().arrItemBag[bra].aaa.aaa != 456 && fz.ala().arrItemBag[bra].aaa.aaa != 457) {
                bq var6 = null;
 
-               for(var2 = 0; var2 < fz.ala().daa[bra].aba.size() && (var6 = (bq)fz.ala().daa[bra].aba.elementAt(var2)).aca.aaa != 85; ++var2) {
+               for(var2 = 0; var2 < fz.ala().arrItemBag[bra].aba.size() && (var6 = (bq)fz.ala().arrItemBag[bra].aba.elementAt(var2)).aca.aaa != 85; ++var2) {
                   var6 = null;
                }
 
@@ -16341,16 +16341,16 @@ public final class gf extends fb implements ag {
                   ab.aaa(er.tea);
                } else {
                   if (dga == null) {
-                     dga = fz.ala().daa[bra];
-                     fz.ala().daa[bra] = null;
+                     dga = fz.ala().arrItemBag[bra];
+                     fz.ala().arrItemBag[bra] = null;
                   } else {
-                     gg var7 = fz.ala().daa[bra];
-                     fz.ala().daa[bra] = null;
-                     fz.ala().daa[dga.ada] = dga;
+                     gg var7 = fz.ala().arrItemBag[bra];
+                     fz.ala().arrItemBag[bra] = null;
+                     fz.ala().arrItemBag[dga.ada] = dga;
                      dga = var7;
                   }
 
-                  gm.aaa().aca(dga.ana, dga.ada);
+                  Service.aaa().aca(dga.ana, dga.ada);
                }
             } else {
                if (cya == null) {
@@ -16359,8 +16359,8 @@ public final class gf extends fb implements ag {
 
                for(var3 = 0; var3 < cya.length; ++var3) {
                   if (cya[var3] == null) {
-                     cya[var3] = fz.ala().daa[bra];
-                     fz.ala().daa[bra] = null;
+                     cya[var3] = fz.ala().arrItemBag[bra];
+                     fz.ala().arrItemBag[bra] = null;
                      super.ala = super.ama = null;
                      this.bka();
                      return;
@@ -16372,14 +16372,14 @@ public final class gf extends fb implements ag {
                }
 
             }
-         } else if (fz.ala().daa[bra].aba() && fz.ala().daa[bra].aia > 0) {
+         } else if (fz.ala().arrItemBag[bra].aba() && fz.ala().arrItemBag[bra].aia > 0) {
             if (dga == null) {
-               dga = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               dga = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
             } else {
-               gg var1 = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
-               fz.ala().daa[dga.ada] = dga;
+               gg var1 = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
+               fz.ala().arrItemBag[dga.ada] = dga;
                dga = var1;
             }
 
@@ -16440,19 +16440,19 @@ public final class gf extends fb implements ag {
    }
 
    private void foa() {
-      if (fz.ala().daa[bra].aba()) {
-         if (fz.ala().daa[bra].aaa.afa >= 10 && fz.ala().daa[bra].aaa.aba < 10) {
-            if (fz.ala().daa[bra].aia >= fz.ala().daa[bra].aqa()) {
+      if (fz.ala().arrItemBag[bra].aba()) {
+         if (fz.ala().arrItemBag[bra].aaa.afa >= 10 && fz.ala().arrItemBag[bra].aaa.aba < 10) {
+            if (fz.ala().arrItemBag[bra].aia >= fz.ala().arrItemBag[bra].aqa()) {
                ab.bja.aaa(er.kna, (ca)null, new ca(er.bma, 2), (ca)null);
                ab.bia = ab.bja;
             } else {
                if (dfa == null) {
-                  dfa = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  dfa = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                } else {
-                  gg var3 = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
-                  fz.ala().daa[dfa.ada] = dfa;
+                  gg var3 = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
+                  fz.ala().arrItemBag[dfa.ada] = dfa;
                   dfa = var3;
                }
 
@@ -16463,18 +16463,18 @@ public final class gf extends fb implements ag {
             ab.bja.aaa(er.kma, (ca)null, new ca(er.bma, 2), (ca)null);
             ab.bia = ab.bja;
          }
-      } else if (fz.ala().daa[bra].aaa.aba != 26 && fz.ala().daa[bra].aaa.aba != 28) {
+      } else if (fz.ala().arrItemBag[bra].aaa.aba != 26 && fz.ala().arrItemBag[bra].aaa.aba != 28) {
          ab.bja.aaa(er.kka, (ca)null, new ca(er.bma, 2), (ca)null);
          ab.bia = ab.bja;
       } else {
          int var1;
-         if (fz.ala().daa[bra].aaa.aba == 28) {
+         if (fz.ala().arrItemBag[bra].aaa.aba == 28) {
             for(var1 = 0; var1 < cxa.length; ++var1) {
                if (cxa[var1] != null && cxa[var1].aaa.aba == 28) {
-                  gg var2 = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  gg var2 = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                   int var10001 = cxa[var1].ada;
-                  fz.ala().daa[var10001] = cxa[var1];
+                  fz.ala().arrItemBag[var10001] = cxa[var1];
                   cxa[var1] = var2;
                   return;
                }
@@ -16483,8 +16483,8 @@ public final class gf extends fb implements ag {
 
          for(var1 = 0; var1 < cxa.length; ++var1) {
             if (cxa[var1] == null) {
-               cxa[var1] = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               cxa[var1] = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                super.ala = super.ama = null;
                this.bka();
                return;
@@ -16498,13 +16498,13 @@ public final class gf extends fb implements ag {
 
    private void aoa(int var1) {
       if (dba[var1] == null) {
-         dba[var1] = fz.ala().daa[bra];
-         fz.ala().daa[bra] = null;
+         dba[var1] = fz.ala().arrItemBag[bra];
+         fz.ala().arrItemBag[bra] = null;
       } else {
-         gg var2 = fz.ala().daa[bra];
-         fz.ala().daa[bra] = null;
+         gg var2 = fz.ala().arrItemBag[bra];
+         fz.ala().arrItemBag[bra] = null;
          int var10001 = dba[var1].ada;
-         fz.ala().daa[var10001] = dba[var1];
+         fz.ala().arrItemBag[var10001] = dba[var1];
          dba[var1] = var2;
       }
 
@@ -16513,13 +16513,13 @@ public final class gf extends fb implements ag {
    }
 
    private void fpa() {
-      if (fz.ala().daa[bra].aba()) {
-         if (fz.ala().daa[bra].aia > 0) {
+      if (fz.ala().arrItemBag[bra].aba()) {
+         if (fz.ala().arrItemBag[bra].aia > 0) {
             this.aoa(0);
          } else {
             this.aoa(1);
          }
-      } else if (fz.ala().daa[bra].aaa.aaa != 269 && fz.ala().daa[bra].aaa.aaa != 270 && fz.ala().daa[bra].aaa.aaa != 271) {
+      } else if (fz.ala().arrItemBag[bra].aaa.aaa != 269 && fz.ala().arrItemBag[bra].aaa.aaa != 270 && fz.ala().arrItemBag[bra].aaa.aaa != 271) {
          ab.bja.aaa(er.kla, (ca)null, new ca(er.bma, 2), (ca)null);
          ab.bia = ab.bja;
       } else {
@@ -16530,7 +16530,7 @@ public final class gf extends fb implements ag {
    private void fqa() {
       gg var1 = dba[2];
       dba[2] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -16538,7 +16538,7 @@ public final class gf extends fb implements ag {
    private void fra() {
       gg var1 = dba[bra];
       dba[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -16546,7 +16546,7 @@ public final class gf extends fb implements ag {
    private void fsa() {
       gg var1 = ana(10);
       cxa[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -16702,7 +16702,7 @@ public final class gf extends fb implements ag {
                var4 = "raned=null";
             }
 
-            gm.aaa().aaa(var1, var4);
+            Service.aaa().aaa(var1, var4);
             this.bca();
             return;
          } catch (Exception var3) {
@@ -16714,7 +16714,7 @@ public final class gf extends fb implements ag {
    private static void gea() {
       if (bsa >= 0 && bsa < bia.size()) {
          int var0 = ((dp)bia.elementAt(bsa)).aaa;
-         gm.aaa().aza(var0);
+         Service.aaa().aza(var0);
       }
 
    }
@@ -16790,12 +16790,12 @@ public final class gf extends fb implements ag {
 
    private static void gja() {
       ab.ama();
-      gm.aaa().aaa(dfa, cxa, jca);
+      Service.aaa().aaa(dfa, cxa, jca);
    }
 
    private static void ada(gg var0) {
       ab.ama();
-      gm.aaa().aga(var0.ada, 1);
+      Service.aaa().aga(var0.ada, 1);
    }
 
    private void gka() {
@@ -16860,7 +16860,7 @@ public final class gf extends fb implements ag {
          if (var3 <= 0) {
             ab.ama();
          } else {
-            gm.aaa().aaa(var0.ana, var0.ada, var3);
+            Service.aaa().aaa(var0.ana, var0.ada, var3);
             ab.ama();
          }
       }
@@ -16870,7 +16870,7 @@ public final class gf extends fb implements ag {
       int var1 = bra;
       this.bca();
       this.kba = var1;
-      gm.aaa().aea();
+      Service.aaa().aea();
    }
 
    private static void aga(gg var0) {
@@ -16975,26 +16975,26 @@ public final class gf extends fb implements ag {
 
    private static void gsa() {
       ab.ama();
-      gm.aaa().aea(bra);
+      Service.aaa().aea(bra);
    }
 
    private static void gta() {
-      gm.aaa().aga();
+      Service.aaa().aga();
    }
 
    private static void gua() {
-      gm.aaa().asa();
+      Service.aaa().asa();
    }
 
    private static void gva() {
       bsa = 0;
-      gm.aaa().ada();
+      Service.aaa().ada();
    }
 
    private static void gwa() {
       ep var0;
       if (bsa >= 0 && bsa < bga.size() && (var0 = (ep)bga.elementAt(bsa)) != null) {
-         gm.aaa().aha(var0.ada);
+         Service.aaa().aha(var0.ada);
       }
 
    }
@@ -17002,13 +17002,13 @@ public final class gf extends fb implements ag {
    private static void apa(int var0) {
       switch(var0) {
       case 1:
-         gm.aaa().awa(0);
+         Service.aaa().awa(0);
          return;
       case 2:
-         gm.aaa().awa(1);
+         Service.aaa().awa(1);
          return;
       case 3:
-         gm.aaa().awa(3);
+         Service.aaa().awa(3);
       default:
       }
    }
@@ -17029,7 +17029,7 @@ public final class gf extends fb implements ag {
          if (var2 <= 0) {
             ab.ama();
          } else if (fz.ala().cqa != 0 && var2 <= fz.ala().cqa) {
-            gm.aaa().aia(var2);
+            Service.aaa().aia(var2);
             ab.ama();
          } else {
             ab.aaa(er.lsa);
@@ -17079,7 +17079,7 @@ public final class gf extends fb implements ag {
          if (var2 <= 0) {
             ab.ama();
          } else if (fz.ala().cra != 0 && var2 <= fz.ala().cra) {
-            gm.aaa().aja(var2);
+            Service.aaa().aja(var2);
             ab.ama();
          } else {
             ab.aaa(er.lta);
@@ -17130,32 +17130,32 @@ public final class gf extends fb implements ag {
       if (fz.ala().dsa != null && !fz.ala().dsa.afa) {
          switch(var1) {
          case 1:
-            gm.aaa().afa(fz.ala().dsa.cea);
+            Service.aaa().afa(fz.ala().dsa.cea);
             return;
          case 2:
-            gm.aaa().aqa(fz.ala().dsa.asa);
+            Service.aaa().aqa(fz.ala().dsa.asa);
             return;
          case 3:
-            gm.aaa().asa(fz.ala().dsa.asa);
+            Service.aaa().asa(fz.ala().dsa.asa);
             return;
          case 4:
-            gm.aaa().ata(fz.ala().dsa.asa);
+            Service.aaa().ata(fz.ala().dsa.asa);
             return;
          case 5:
             this.aga(fz.ala().dsa.asa);
             return;
          case 6:
-            gm.aaa().aea(fz.ala().dsa.cea);
+            Service.aaa().aea(fz.ala().dsa.cea);
             return;
          case 7:
-            gm.aaa().aja(fz.ala().dsa.cea);
+            Service.aaa().aja(fz.ala().dsa.cea);
             ava().bca();
             return;
          case 8:
-            gm.aaa().bba(fz.ala().dsa.asa);
+            Service.aaa().bba(fz.ala().dsa.asa);
             return;
          case 9:
-            gm.aaa().bca(fz.ala().dsa.asa);
+            Service.aaa().bca(fz.ala().dsa.asa);
             return;
          case 10:
             fz.fpa = !fz.fpa;
@@ -17167,7 +17167,7 @@ public final class gf extends fb implements ag {
 
    public final void aga(int var1) {
       if (System.currentTimeMillis() - this.pta > 500L) {
-         gm.aaa().aua(var1);
+         Service.aaa().aua(var1);
          this.pta = System.currentTimeMillis();
       }
 
@@ -17202,20 +17202,20 @@ public final class gf extends fb implements ag {
    }
 
    private static void hha() {
-      gm.aaa().afa();
+      Service.aaa().afa();
    }
 
    private void hia() {
       gg var1 = cza[bra];
       cza[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
 
    private void hja() {
       gg var1 = dga;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       dga = null;
       if (!jna && !joa && !jpa && cya != null) {
          for(int var2 = 0; var2 < cya.length; ++var2) {
@@ -17229,7 +17229,7 @@ public final class gf extends fb implements ag {
 
    private void hka() {
       gg var1 = dfa;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       dfa = null;
       super.ala = super.ama = null;
       this.bka();
@@ -17237,14 +17237,14 @@ public final class gf extends fb implements ag {
 
    private void hla() {
       gg var1 = dba[bra];
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       dba[bra] = null;
       super.ala = super.ama = null;
       this.bka();
    }
 
    private void hma() {
-      gm.aaa().aja();
+      Service.aaa().aja();
       this.efa = 2;
       if (ava().efa >= 2 && ava().ega >= 2) {
          br.aba();
@@ -17253,7 +17253,7 @@ public final class gf extends fb implements ag {
    }
 
    private void hna() {
-      gm.aaa().aaa(this.eha, cza);
+      Service.aaa().aaa(this.eha, cza);
       this.efa = 1;
       if (ava().efa == 1 && ava().ega == 1) {
          ava().eja = (int)(System.currentTimeMillis() / 1000L + 5L);
@@ -17268,14 +17268,14 @@ public final class gf extends fb implements ag {
    }
 
    private void hpa() {
-      if (fz.ala().daa[bra].aga) {
+      if (fz.ala().arrItemBag[bra].aga) {
          ab.bja.aaa(er.kha, (ca)null, new ca(er.bma, 2), (ca)null);
          ab.bia = ab.bja;
       } else {
          for(int var1 = 0; var1 < cza.length; ++var1) {
             if (cza[var1] == null) {
-               cza[var1] = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               cza[var1] = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                super.ala = super.ama = null;
                this.bka();
                return;
@@ -17325,7 +17325,7 @@ public final class gf extends fb implements ag {
                ab.bla.aaa("Đến: ", "Lời chúc: ");
                ab.bla.aaa("Chúc tết", new ca(er.bma, ab.aja, 8882, (Object)null), new ca("Gửi", ab.aja, 16081, (Object)null), 0, 0);
             } else {
-               gm.aaa().aea(bra);
+               Service.aaa().aea(bra);
             }
          } else {
             ev var1 = new ev();
@@ -17357,20 +17357,20 @@ public final class gf extends fb implements ag {
    }
 
    private static void hua() {
-      if (fz.ala().daa[bra] != null && fz.ala().daa[bra].aea > 1) {
+      if (fz.ala().arrItemBag[bra] != null && fz.ala().arrItemBag[bra].aea > 1) {
          ab.bka.aaa(er.qoa, new ca(er.dca, ab.aja, 88835, String.valueOf(bra)), 1);
       }
 
    }
 
    private static void hva() {
-      if (fz.ala().daa[bra] != null) {
-         if (fz.ala().daa[bra].aga) {
+      if (fz.ala().arrItemBag[bra] != null) {
+         if (fz.ala().arrItemBag[bra].aga) {
             be.aaa(er.nwa);
             return;
          }
 
-         gm.aaa().apa(bra);
+         Service.aaa().apa(bra);
       }
 
    }
@@ -17391,9 +17391,9 @@ public final class gf extends fb implements ag {
    private void hxa() {
       ev var1;
       (var1 = new ev()).addElement(this.pja);
-      if (fz.ala().daa[bra] != null) {
+      if (fz.ala().arrItemBag[bra] != null) {
          gg var2;
-         if (Code.aaa((int)(var2 = fz.ala().daa[bra]).aaa.aaa)) {
+         if (Code.aaa((int)(var2 = fz.ala().arrItemBag[bra]).aaa.aaa)) {
             var1.addElement(new ca("Tắt Tự Dùng", 110263));
          } else {
             var1.addElement(new ca("Tự Dùng", 110262));
@@ -17418,15 +17418,15 @@ public final class gf extends fb implements ag {
          }
       }
 
-      if (fz.ala().daa[bra] != null && fz.ala().daa[bra].aea > 1) {
+      if (fz.ala().arrItemBag[bra] != null && fz.ala().arrItemBag[bra].aea > 1) {
          var1.addElement(new ca("Mở all", 110261));
          var1.addElement(this.pna);
       }
 
-      var1.addElement(new ca(er.cta, fz.ala().daa[bra].aea > 1 ? 11072 : 11073));
+      var1.addElement(new ca(er.cta, fz.ala().arrItemBag[bra].aea > 1 ? 11072 : 11073));
       var1.addElement(this.pma);
-      if (fz.ala().daa[bra] != null) {
-         fd var3 = aw.aaa(fz.ala().daa[bra].aaa.aaa);
+      if (fz.ala().arrItemBag[bra] != null) {
+         fd var3 = aw.aaa(fz.ala().arrItemBag[bra].aaa.aaa);
          var1.addElement(new ca(var3 == null ? "Đặt giá" : var3.aba, 1102211));
          if (var3 != null) {
             var1.addElement(new ca("Hủy Mua Bán", 1102213));
@@ -17509,7 +17509,7 @@ public final class gf extends fb implements ag {
 
    private static void aba(byte var0) {
       gg var1 = ana(var0);
-      gm.aaa().aaa(var1.ana, var1.ada, 1);
+      Service.aaa().aaa(var1.ana, var1.ada, 1);
    }
 
    private static void aca(byte var0) {
@@ -17537,7 +17537,7 @@ public final class gf extends fb implements ag {
          if (var2 <= 0) {
             ab.ama();
          } else if (fz.ala().bia != 0 && var2 <= fz.ala().bia) {
-            gm.aaa().aea(hpa - 1, var2);
+            Service.aaa().aea(hpa - 1, var2);
             ab.ama();
          } else {
             ab.aaa(er.kra);
@@ -17559,7 +17559,7 @@ public final class gf extends fb implements ag {
          }
 
          if (fz.ala().bja != 0 && var2 <= fz.ala().bja) {
-            gm.aaa().afa(fz.ala().cua.aca[bra].aaa, var2);
+            Service.aaa().afa(fz.ala().cua.aca[bra].aaa, var2);
             ab.ama();
          } else {
             ab.aaa(er.ksa);
@@ -17573,7 +17573,7 @@ public final class gf extends fb implements ag {
       if ((var0 = ab.bka.aaa.aia).trim().equals("")) {
          ab.aaa(er.kxa);
       } else {
-         gm.aaa().aea(var0);
+         Service.aaa().aea(var0);
          ab.ama();
       }
    }
@@ -17632,7 +17632,7 @@ public final class gf extends fb implements ag {
                ef.aaa(141, fz.ala().ala, fz.ala().ama, 2);
                fz.ala().gea = var1.aha;
                fz.ala().gfa = var1.aia;
-               gm.aaa().aaa(var1.ala);
+               Service.aaa().aaa(var1.ala);
                pva = var0;
                pua = System.currentTimeMillis();
             }
@@ -17691,12 +17691,12 @@ public final class gf extends fb implements ag {
    }
 
    private static void ila() {
-      gm.aaa().aaa((short)102, "", gra);
+      Service.aaa().aaa((short)102, "", gra);
    }
 
    private void ima() {
       this.qha = true;
-      gm.aaa().aaa((short)101, "", gra);
+      Service.aaa().aaa((short)101, "", gra);
    }
 
    private static void ina() {
@@ -17904,7 +17904,7 @@ public final class gf extends fb implements ag {
             var10002[var2] = var10002[var2 + 1];
          } else {
             this.qja[var2] = var1;
-            gm.aaa().ada(var1);
+            Service.aaa().ada(var1);
          }
       }
 
@@ -17958,7 +17958,7 @@ public final class gf extends fb implements ag {
                } else {
                   --this.rba;
                   if (this.rba <= 0) {
-                     gm.aaa().awa();
+                     Service.aaa().awa();
                      this.rba = 100;
                   }
                }
@@ -18018,11 +18018,11 @@ public final class gf extends fb implements ag {
 
    private void ipa() {
       try {
-         if (jpa && fz.ala().daa[bra].ada()) {
+         if (jpa && fz.ala().arrItemBag[bra].ada()) {
             if (dga == null) {
-               if (fz.ala().daa[bra].aia < 10) {
-                  dga = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+               if (fz.ala().arrItemBag[bra].aia < 10) {
+                  dga = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                   return;
                }
 
@@ -18037,8 +18037,8 @@ public final class gf extends fb implements ag {
 
             for(int var1 = 0; var1 < cya.length; ++var1) {
                if (cya[var1] == null) {
-                  cya[var1] = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  cya[var1] = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                   super.ala = super.ama = null;
                   this.bka();
                   return;
@@ -18061,44 +18061,44 @@ public final class gf extends fb implements ag {
 
    private void iqa() {
       gg var3;
-      if (fz.ala().daa[bra].ada()) {
+      if (fz.ala().arrItemBag[bra].ada()) {
          if (dga == null) {
-            dga = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
+            dga = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
          } else {
-            var3 = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
-            fz.ala().daa[dga.ada] = dga;
+            var3 = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
+            fz.ala().arrItemBag[dga.ada] = dga;
             dga = var3;
          }
 
          super.ala = super.ama = null;
          this.bka();
-      } else if (fz.ala().daa[bra].aba()) {
+      } else if (fz.ala().arrItemBag[bra].aba()) {
          if (dfa == null) {
-            dfa = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
+            dfa = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
          } else {
-            var3 = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
-            fz.ala().daa[dfa.ada] = dfa;
+            var3 = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
+            fz.ala().arrItemBag[dfa.ada] = dfa;
             dfa = var3;
          }
 
          super.ala = super.ama = null;
          this.bka();
-      } else if (fz.ala().daa[bra].aaa.aba != 26 && fz.ala().daa[bra].aaa.aba != 28) {
+      } else if (fz.ala().arrItemBag[bra].aaa.aba != 26 && fz.ala().arrItemBag[bra].aaa.aba != 28) {
          ab.bja.aaa(er.kka, (ca)null, new ca(er.bma, 2), (ca)null);
          ab.bia = ab.bja;
       } else {
          int var1;
-         if (fz.ala().daa[bra].aaa.aba == 28) {
+         if (fz.ala().arrItemBag[bra].aaa.aba == 28) {
             for(var1 = 0; var1 < cxa.length; ++var1) {
                if (cxa[var1] != null && cxa[var1].aaa.aba == 28) {
-                  gg var2 = fz.ala().daa[bra];
-                  fz.ala().daa[bra] = null;
+                  gg var2 = fz.ala().arrItemBag[bra];
+                  fz.ala().arrItemBag[bra] = null;
                   int var10001 = cxa[var1].ada;
-                  fz.ala().daa[var10001] = cxa[var1];
+                  fz.ala().arrItemBag[var10001] = cxa[var1];
                   cxa[var1] = var2;
                   return;
                }
@@ -18107,8 +18107,8 @@ public final class gf extends fb implements ag {
 
          for(var1 = 0; var1 < cxa.length; ++var1) {
             if (cxa[var1] == null) {
-               cxa[var1] = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+               cxa[var1] = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                super.ala = super.ama = null;
                this.bka();
                return;
@@ -18154,7 +18154,7 @@ public final class gf extends fb implements ag {
          dga = null;
       }
 
-      fz.ala().daa[var2.ada] = var2;
+      fz.ala().arrItemBag[var2.ada] = var2;
       super.ala = super.ama = null;
       this.bka();
    }
@@ -18189,7 +18189,7 @@ public final class gf extends fb implements ag {
                return;
             }
 
-            gm.aaa().aaa((byte)0, dfa, dga, cxa);
+            Service.aaa().aaa((byte)0, dfa, dga, cxa);
          }
 
       }
@@ -18198,7 +18198,7 @@ public final class gf extends fb implements ag {
    private static void isa() {
       ab.ama();
       if (dga != null && dfa != null && cxa.length > 0) {
-         gm.aaa().aaa((byte)0, dfa, dga, cxa);
+         Service.aaa().aaa((byte)0, dfa, dga, cxa);
       }
 
    }
@@ -18207,7 +18207,7 @@ public final class gf extends fb implements ag {
       if (jpa) {
          if (bta == 0) {
             String[] var2 = er.hoa;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                fk.aaa(gia, gha, gja, gka, var1);
@@ -18227,7 +18227,7 @@ public final class gf extends fb implements ag {
                   var3.aaa(var1, dga, var14, var4);
                   var5 = var14 + 35;
                   var6 = var4 + 25;
-                  gf var7 = var3;
+                  GameScr var7 = var3;
                   int var8 = var3.rda[dga.aia][0];
                   int var9 = 0;
                   int var10;
@@ -18342,7 +18342,7 @@ public final class gf extends fb implements ag {
       if (jqa) {
          if (bta == 0) {
             String[] var2 = er.hna;
-            gf var3 = this;
+            GameScr var3 = this;
 
             try {
                paa = 3;
@@ -18461,7 +18461,7 @@ public final class gf extends fb implements ag {
                         }
                      }
                   } else {
-                     gm.aaa().aca(dga.ana, dga.ada);
+                     Service.aaa().aca(dga.ana, dga.ada);
                   }
 
                   if (var8 > fz.ala().cqa + fz.ala().csa) {
@@ -18571,7 +18571,7 @@ public final class gf extends fb implements ag {
                   }
                }
             } else {
-               gm.aaa().aca(dga.ana, dga.ada);
+               Service.aaa().aca(dga.ana, dga.ada);
             }
 
             String var12 = er.nza;
@@ -18602,14 +18602,14 @@ public final class gf extends fb implements ag {
    private static void ita() {
       try {
          if (jra) {
-            if (fz.ala().daa[bra].ada()) {
-               dga = fz.ala().daa[bra];
-               fz.ala().daa[bra] = null;
+            if (fz.ala().arrItemBag[bra].ada()) {
+               dga = fz.ala().arrItemBag[bra];
+               fz.ala().arrItemBag[bra] = null;
                return;
             }
-         } else if (jsa && fz.ala().daa[bra].aba()) {
-            dga = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
+         } else if (jsa && fz.ala().arrItemBag[bra].aba()) {
+            dga = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
             return;
          }
       } catch (Exception var0) {
@@ -18703,8 +18703,8 @@ public final class gf extends fb implements ag {
    private void iua() {
       for(int var1 = 0; var1 < cya.length; ++var1) {
          if (cya[var1] == null) {
-            cya[var1] = fz.ala().daa[bra];
-            fz.ala().daa[bra] = null;
+            cya[var1] = fz.ala().arrItemBag[bra];
+            fz.ala().arrItemBag[bra] = null;
             super.ala = super.ama = null;
             this.bka();
             return;
@@ -18733,13 +18733,13 @@ public final class gf extends fb implements ag {
    private void iwa() {
       gg var1 = ana(48);
       cya[bra] = null;
-      fz.ala().daa[var1.ada] = var1;
+      fz.ala().arrItemBag[var1.ada] = var1;
       super.ala = super.ama = null;
       this.bka();
    }
 
    private static void ixa() {
-      gm.aaa().aea(cya);
+      Service.aaa().aea(cya);
    }
 
    public static void aaa(ac var0, int var1) {
@@ -18762,7 +18762,7 @@ public final class gf extends fb implements ag {
       if ((var1 = aia(var0)) != null) {
          fz.aca(var1.ala, var1.ama);
          fz.ala().dra = var1;
-         gm.aaa().aga(var1.aaa.aaa);
+         Service.aaa().aga(var1.aaa.aaa);
       }
 
    }
@@ -18776,12 +18776,12 @@ public final class gf extends fb implements ag {
       if ((var3 = aia(var0)) != null) {
          fz.aca(var3.ala, var3.ama);
          fz.ala().dra = var3;
-         gm.aaa().aga(var3.aaa.aaa);
+         Service.aaa().aga(var3.aaa.aaa);
          if (var0 == 8) {
-            gm.aaa().aca(var0, var1, var2);
+            Service.aaa().aca(var0, var1, var2);
          } else {
-            gm.aaa().aca(var0, var1, 0);
-            gm.aaa().aca(var0, var2, 0);
+            Service.aaa().aca(var0, var1, 0);
+            Service.aaa().aca(var0, var2, 0);
          }
       }
 
@@ -18807,7 +18807,7 @@ public final class gf extends fb implements ag {
       return var4;
    }
 
-   public static void aca(String var0) {
+   public static void chatPopup(String var0) {
       cq.aaa("[" + er.bda + "] " + var0, fz.ala());
    }
 
@@ -18815,7 +18815,7 @@ public final class gf extends fb implements ag {
       (new Thread(new ad(var0))).start();
    }
 
-   static void aaa(gf var0, byte var1) {
+   static void aaa(GameScr var0, byte var1) {
       var0.aea(var1);
    }
 

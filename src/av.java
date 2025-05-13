@@ -10,9 +10,9 @@ public final class av extends fz {
    }
 
    public static void aaa() {
-      for(int var0 = 0; var0 < gf.boa.size(); ++var0) {
+      for(int var0 = 0; var0 < GameScr.boa.size(); ++var0) {
          av var1;
-         (var1 = (av)gf.boa.elementAt(var0)).gza = null;
+         (var1 = (av)GameScr.boa.elementAt(var0)).gza = null;
          var1.gya = -1;
       }
 
@@ -29,25 +29,25 @@ public final class av extends fz {
                         break label45;
                      }
 
-                     super.gza = gf.bca[62];
+                     super.gza = GameScr.bca[62];
                      break label51;
                   }
                } else {
-                  gf.ava();
-                  byte var2 = gf.bna();
+                  GameScr.ava();
+                  byte var2 = GameScr.bna();
                   if (fz.ala().cza != null || var2 != this.aaa.aaa) {
                      if (fz.ala().cza == null || var2 != this.aaa.aaa) {
                         break label45;
                      }
 
                      if (fz.ala().cza.aaa + 1 == fz.ala().cza.aea.length) {
-                        super.gza = gf.bca[62];
+                        super.gza = GameScr.bca[62];
                         break label51;
                      }
                   }
                }
 
-               super.gza = gf.bca[57];
+               super.gza = GameScr.bca[57];
             }
 
             super.gya = 0;
@@ -93,9 +93,9 @@ public final class av extends fz {
                return;
             }
 
-            fj var2 = gf.bba[this.aaa.aca];
-            fj var3 = gf.bba[this.aaa.aea];
-            fj var4 = gf.bba[this.aaa.ada];
+            fj var2 = GameScr.bba[this.aaa.aca];
+            fj var3 = GameScr.bba[this.aaa.aea];
+            fj var4 = GameScr.bba[this.aaa.ada];
             if (super.ara == 1) {
                fo.aaa(var1, var2.aaa[fz.gda[super.cma][0][0]].aaa, super.ala + fz.gda[super.cma][0][1] + var2.aaa[fz.gda[super.cma][0][0]].aba, super.ama - fz.gda[super.cma][0][2] + var2.aaa[fz.gda[super.cma][0][0]].aca, 0, 0);
                fo.aaa(var1, var3.aaa[fz.gda[super.cma][1][0]].aaa, super.ala + fz.gda[super.cma][1][1] + var3.aaa[fz.gda[super.cma][1][0]].aba, super.ama - fz.gda[super.cma][1][2] + var3.aaa[fz.gda[super.cma][1][0]].aca, 0, 0);

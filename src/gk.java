@@ -64,7 +64,7 @@ public final class gk extends Auto {
             }
 
             if (gn.aoa == 110) {
-               av var7 = gf.aia(0);
+               av var7 = GameScr.aia(0);
                if (fz.ala().ala != var7.ala || fz.ala().ama != var7.ama) {
                   fz.aca(var7.ala, var7.ama);
 
@@ -78,8 +78,8 @@ public final class gk extends Auto {
                }
 
                if (System.currentTimeMillis() - this.aca >= 2000L) {
-                  gf.aba(0, 1, 0);
-                  gm.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
+                  GameScr.aba(0, 1, 0);
+                  Service.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
                   ab.ama();
 
                   try {

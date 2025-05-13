@@ -66,24 +66,24 @@ public final class ep {
       if (var1 == fz.ala().asa) {
          this.afa = fz.ala();
       } else {
-         this.afa = gf.aea(var1);
+         this.afa = GameScr.aea(var1);
       }
    }
 
    public static void aaa() {
-      for(int var0 = 0; var0 < gf.bfa.size(); ++var0) {
+      for(int var0 = 0; var0 < GameScr.bfa.size(); ++var0) {
          ep var1;
-         if ((var1 = (ep)gf.bfa.elementAt(var0)).aaa != fz.ala().asa) {
-            var1.afa = gf.aea(var1.aaa);
+         if ((var1 = (ep)GameScr.bfa.elementAt(var0)).aaa != fz.ala().asa) {
+            var1.afa = GameScr.aea(var1.aaa);
          }
       }
 
    }
 
    public static void aaa(int var0) {
-      for(int var1 = 0; var1 < gf.bfa.size(); ++var1) {
+      for(int var1 = 0; var1 < GameScr.bfa.size(); ++var1) {
          ep var2;
-         if ((var2 = (ep)gf.bfa.elementAt(var1)).aaa == var0) {
+         if ((var2 = (ep)GameScr.bfa.elementAt(var1)).aaa == var0) {
             var2.afa = null;
             return;
          }

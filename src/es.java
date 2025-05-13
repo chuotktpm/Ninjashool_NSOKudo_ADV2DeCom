@@ -23,14 +23,14 @@ public final class es extends Auto {
             int var5;
             int var6;
             fz var9;
-            if (this.aba && (gf.bfa.size() > 1 || Code.aja.size() > 0) && var1.cua.aaa == 6) {
+            if (this.aba && (GameScr.bfa.size() > 1 || Code.aja.size() > 0) && var1.cua.aaa == 6) {
                for(int var2 = 0; var2 < var1.cwa.size(); ++var2) {
                   bc var3;
                   if ((var3 = (bc)var1.cwa.elementAt(var2)) != null && var3.aaa.ada == 4) {
                      if (System.currentTimeMillis() - this.aca > 3000L) {
-                        for(var4 = 0; var4 < gf.bfa.size(); ++var4) {
+                        for(var4 = 0; var4 < GameScr.bfa.size(); ++var4) {
                            ep var8;
-                           if ((var8 = (ep)gf.bfa.elementAt(var4)).aaa != var1.asa && var8.afa != null && var8.afa.bba <= 0) {
+                           if ((var8 = (ep)GameScr.bfa.elementAt(var4)).aaa != var1.asa && var8.afa != null && var8.afa.bba <= 0) {
                               var5 = var1.ala;
                               var6 = var1.ama;
                               fz var14;
@@ -38,10 +38,10 @@ public final class es extends Auto {
                               Thread.sleep(500L);
                               if (Auto.aca(var14)) {
                                  this.aca = System.currentTimeMillis();
-                                 gm.aaa().aua(var8.aaa);
+                                 Service.aaa().aua(var8.aaa);
                                  var3.afa = System.currentTimeMillis();
                                  var3.ala = true;
-                                 var1.aba(gf.aza[var3.aaa.aaa], 0);
+                                 var1.aba(GameScr.aza[var3.aaa.aaa], 0);
                                  Thread.sleep(1000L);
                               }
 
@@ -50,18 +50,18 @@ public final class es extends Auto {
                            }
                         }
 
-                        for(var4 = 0; var4 < gf.bla.size(); ++var4) {
-                           if ((var9 = (fz)gf.bla.elementAt(var4)) != null && Auto.aca(var9) && Code.aaa(var9.cea)) {
+                        for(var4 = 0; var4 < GameScr.bla.size(); ++var4) {
+                           if ((var9 = (fz)GameScr.bla.elementAt(var4)) != null && Auto.aca(var9) && Code.aaa(var9.cea)) {
                               var5 = var1.ala;
                               var6 = var1.ama;
                               fz.aca(var9.ala, var9.ama);
                               Thread.sleep(500L);
                               if (Auto.aca(var9)) {
                                  this.aca = System.currentTimeMillis();
-                                 gm.aaa().aua(var9.asa);
+                                 Service.aaa().aua(var9.asa);
                                  var3.afa = System.currentTimeMillis();
                                  var3.ala = true;
-                                 var1.aba(gf.aza[var3.aaa.aaa], 0);
+                                 var1.aba(GameScr.aza[var3.aaa.aaa], 0);
                                  Thread.sleep(1000L);
                               }
 
@@ -75,7 +75,7 @@ public final class es extends Auto {
                }
             }
 
-            var9 = gf.bfa.size() > 0 ? ((ep)gf.bfa.firstElement()).afa : null;
+            var9 = GameScr.bfa.size() > 0 ? ((ep)GameScr.bfa.firstElement()).afa : null;
             if (this.aaa && this.ama() && var9 != null && var1.cua.aaa == 6) {
                for(int var10 = 0; var10 < var1.cwa.size(); ++var10) {
                   bc var15;
@@ -87,11 +87,11 @@ public final class es extends Auto {
                      var5 = var1.ala;
                      var6 = var1.ama;
                      fz.aca(var9.ala, var9.ama);
-                     gm.aaa().afa(var15.aaa.aaa);
-                     gm.aaa().ara();
+                     Service.aaa().afa(var15.aaa.aaa);
+                     Service.aaa().ara();
                      var15.afa = System.currentTimeMillis();
                      var15.ala = true;
-                     var1.aba(gf.aza[var15.aaa.aaa], 0);
+                     var1.aba(GameScr.aza[var15.aaa.aaa], 0);
                      Thread.sleep(1000L);
                      fz.aca(var5, var6);
                      return;
@@ -107,14 +107,14 @@ public final class es extends Auto {
 
                boolean var16 = var12 != null && ff.aca(var12.cea);
                if (var12 == null && super.bda) {
-                  gm.aaa().awa(0);
+                  Service.aaa().awa(0);
                   super.bda = false;
                }
 
                if (var1.dka >= 5 && System.currentTimeMillis() - super.bca > 5000L) {
                   gg var11;
                   if ((var11 = fz.afa(257)) != null && var11.aaa.aaa == 257) {
-                     gm.aaa().aea(var11.ada);
+                     Service.aaa().aea(var11.ada);
                   }
 
                   super.bca = System.currentTimeMillis();
@@ -130,7 +130,7 @@ public final class es extends Auto {
 
                      if (var12.dza != var1.asa && var12.dla != 3) {
                         super.bda = true;
-                        gm.aaa().awa(3);
+                        Service.aaa().awa(3);
                      }
                   }
 
@@ -140,19 +140,19 @@ public final class es extends Auto {
                   Auto.aza.removeAllElements();
                   Auto.aza.addElement(var12);
 
-                  for(var4 = 0; var4 < gf.bla.size() && Auto.aya.size() + Auto.aza.size() < var13.aia; ++var4) {
+                  for(var4 = 0; var4 < GameScr.bla.size() && Auto.aya.size() + Auto.aza.size() < var13.aia; ++var4) {
                      fz var7;
-                     if ((var7 = (fz)gf.bla.elementAt(var4)).bba > 0 && var7.aqa != 14 && var7.aqa != 5 && var7.aqa != 15 && !var7.equals(var12) && (var7.dla == 3 || var1.dla == 3 || var7.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var7.asa || var1.dya >= 0 && var1.dya == var7.asa) && !Code.ada(var7.cea) && var12.ala - var5 <= var7.ala && var7.ala <= var12.ala + var5 && var12.ama - var6 <= var7.ama && var7.ama <= var12.ama + var6) {
+                     if ((var7 = (fz)GameScr.bla.elementAt(var4)).bba > 0 && var7.aqa != 14 && var7.aqa != 5 && var7.aqa != 15 && !var7.equals(var12) && (var7.dla == 3 || var1.dla == 3 || var7.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var7.asa || var1.dya >= 0 && var1.dya == var7.asa) && !Code.ada(var7.cea) && var12.ala - var5 <= var7.ala && var7.ala <= var12.ala + var5 && var12.ama - var6 <= var7.ama && var7.ama <= var12.ama + var6) {
                         Auto.aza.addElement(var7);
                      }
                   }
 
-                  gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
+                  Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
                   if (System.currentTimeMillis() - var13.afa >= (long)var13.aea) {
                      var13.afa = System.currentTimeMillis();
                      var13.ala = true;
                      if (!Code.bfa) {
-                        var1.aba(gf.aza[var13.aaa.aaa], 0);
+                        var1.aba(GameScr.aza[var13.aaa.aaa], 0);
                      }
                   }
 

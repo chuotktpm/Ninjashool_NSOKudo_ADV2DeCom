@@ -325,7 +325,7 @@ public final class ab extends ee implements ag {
 
             if (var6.aya > 0) {
                --var6.aya;
-               gf.dja = false;
+               GameScr.dja = false;
                if (var6.aya == 0) {
                   var6.aaa = false;
                   ca var7;
@@ -342,8 +342,8 @@ public final class ab extends ee implements ag {
                      if (aka[5]) {
                         if (var6.aoa != null) {
                            if (var6.aoa.ada > 0) {
-                              if (var6.aoa.aca == gf.ava()) {
-                                 gf.ava().aba(var6.aoa.ada, var6.aoa.aja);
+                              if (var6.aoa.aca == GameScr.ava()) {
+                                 GameScr.ava().aba(var6.aoa.ada, var6.aoa.aja);
                               } else {
                                  var6.aaa(var6.aoa.ada, var6.aoa.aja);
                               }
@@ -377,7 +377,7 @@ public final class ab extends ee implements ag {
                }
 
                var6.aoa = null;
-               if (gf.dja && !afa && var6.aca != -1) {
+               if (GameScr.dja && !afa && var6.aca != -1) {
                   ca var3 = (ca)var6.aba.elementAt(var6.aca);
                   fa var4;
                   if ((var4 = dc.ada().aaa(var3.aaa)) != null && var4.aaa == 2) {
@@ -506,7 +506,7 @@ public final class ab extends ee implements ag {
 
          try {
             if (fd.aia > 0) {
-               gf.ava();
+               GameScr.ava();
                aja.aqa();
             }
          } catch (Exception var5) {
@@ -532,17 +532,17 @@ public final class ab extends ee implements ag {
 
       try {
          fz.ama();
-         gf.awa();
-         gf.aea();
+         GameScr.awa();
+         GameScr.aea();
          ama();
          br.aca();
-         gf.aaa(true);
-         gf.aia = 100;
+         GameScr.aaa(true);
+         GameScr.aia = 100;
          aaa(gn.ama);
-         gf.bfa.removeAllElements();
-         gf.bea.removeAllElements();
-         gf.bha.removeAllElements();
-         gf.bka.removeAllElements();
+         GameScr.bfa.removeAllElements();
+         GameScr.bea.removeAllElements();
+         GameScr.bha.removeAllElements();
+         GameScr.bka.removeAllElements();
          fz.cha = null;
       } catch (Exception var1) {
          var1.printStackTrace();
@@ -561,7 +561,7 @@ public final class ab extends ee implements ag {
          for(int var0 = 0; var0 < coa.length; ++var0) {
             if (aua % (var0 + 2 << 3) == 0) {
                int var10002 = coa[var0]++;
-               if (coa[var0] > gf.aba + (as.aaa(cma) >> 1)) {
+               if (coa[var0] > GameScr.aba + (as.aaa(cma) >> 1)) {
                   coa[var0] = -(as.aaa(cma) >> 1);
                }
             }
@@ -578,7 +578,7 @@ public final class ab extends ee implements ag {
             var0.aaa(0);
          }
 
-         var0.aca(0, 0, gf.aba, gf.aca);
+         var0.aca(0, 0, GameScr.aba, GameScr.aca);
       } else {
          boolean var10000;
          int var2;
@@ -593,23 +593,23 @@ public final class ab extends ee implements ag {
          if (!var10000) {
             if (cea && !aaa && bza != null) {
                var0.aaa(caa);
-               var0.aca(0, 0, gf.aba, cfa);
+               var0.aca(0, 0, GameScr.aba, cfa);
                int var1;
                if (bqa >= 0 && bqa <= 1) {
                   if (bza[0] != null) {
-                     for(var1 = -((gf.aia >> 1) % 24); var1 < gf.aba; var1 += 24) {
+                     for(var1 = -((GameScr.aia >> 1) % 24); var1 < GameScr.aba; var1 += 24) {
                         var0.aaa(bza[0], var1, cga, 0);
                      }
                   }
 
                   if (bza[1] != null) {
-                     for(var1 = -((gf.aia >> 2) % 24); var1 < gf.aba; var1 += 24) {
+                     for(var1 = -((GameScr.aia >> 2) % 24); var1 < GameScr.aba; var1 += 24) {
                         var0.aaa(bza[1], var1, cha, 0);
                      }
                   }
 
                   if (bza[3] != null) {
-                     for(var1 = -((gf.aia >> 4) % 64); var1 < gf.aba; var1 += 64) {
+                     for(var1 = -((GameScr.aia >> 4) % 64); var1 < GameScr.aba; var1 += 64) {
                         var0.aaa(bza[3], var1, cja, 0);
                      }
                   }
@@ -625,7 +625,7 @@ public final class ab extends ee implements ag {
                   }
 
                   if (bza[2] != null) {
-                     for(var1 = -((gf.aia >> 3) % 192); var1 < gf.aba; var1 += 192) {
+                     for(var1 = -((GameScr.aia >> 3) % 192); var1 < GameScr.aba; var1 += 192) {
                         var0.aaa(bza[2], var1, cia, 0);
                      }
 
@@ -644,25 +644,25 @@ public final class ab extends ee implements ag {
 
                   if (bqa != 2) {
                      if (bza[3] != null) {
-                        for(var1 = -((gf.aia >> cta[3]) % cca[3]); var1 < gf.aba; var1 += cca[3]) {
+                        for(var1 = -((GameScr.aia >> cta[3]) % cca[3]); var1 < GameScr.aba; var1 += cca[3]) {
                            var0.aaa(bza[3], var1, cja, 0);
                         }
                      }
 
                      if (bza[2] != null) {
-                        for(var1 = -((gf.aia >> cta[2]) % cca[2]); var1 < gf.aba; var1 += cca[2]) {
+                        for(var1 = -((GameScr.aia >> cta[2]) % cca[2]); var1 < GameScr.aba; var1 += cca[2]) {
                            var0.aaa(bza[2], var1, cia, 0);
                         }
                      }
 
                      if (bza[1] != null) {
-                        for(var1 = -((gf.aia >> cta[1]) % cca[1]); var1 < gf.aba; var1 += cca[1]) {
+                        for(var1 = -((GameScr.aia >> cta[1]) % cca[1]); var1 < GameScr.aba; var1 += cca[1]) {
                            var0.aaa(bza[1], var1, cla, 0);
                         }
                      }
 
                      if (bza[0] != null) {
-                        for(var1 = -((gf.aia >> cta[0]) % cca[0]); var1 < gf.aba; var1 += cca[0]) {
+                        for(var1 = -((GameScr.aia >> cta[0]) % cca[0]); var1 < GameScr.aba; var1 += cca[0]) {
                            var0.aaa(bza[0], var1, cka, 0);
                         }
 
@@ -671,22 +671,22 @@ public final class ab extends ee implements ag {
                   }
                } else if (bqa >= 7 && bqa <= 16) {
                   var0.aaa(caa);
-                  var0.aca(0, 0, gf.aba, gf.aca);
+                  var0.aca(0, 0, GameScr.aba, GameScr.aca);
                   if (bqa != 8 && bza[3] != null) {
-                     for(var1 = -((gf.aia >> cta[3]) % cca[3]); var1 < gf.aba; var1 += cca[3]) {
+                     for(var1 = -((GameScr.aia >> cta[3]) % cca[3]); var1 < GameScr.aba; var1 += cca[3]) {
                         if (bqa != 11 && bqa != 12) {
                            var0.aaa(bza[3], var1, cja, 0);
                         } else {
-                           var0.aaa(bza[3], var1, gf.aca - as.aba(bza[3]), 0);
+                           var0.aaa(bza[3], var1, GameScr.aca - as.aba(bza[3]), 0);
                         }
                      }
                   }
 
                   if (bqa != 8 && bqa != 11 && bqa != 12 && bza[2] != null) {
                      if (gn.aoa == 45) {
-                        var0.aaa(bza[2], gf.aba, cia, 0);
+                        var0.aaa(bza[2], GameScr.aba, cia, 0);
                      } else {
-                        for(var1 = -((gf.aia >> cta[2]) % cca[2]); var1 < gf.aba; var1 += cca[2]) {
+                        for(var1 = -((GameScr.aia >> cta[2]) % cca[2]); var1 < GameScr.aba; var1 += cca[2]) {
                            if (bqa == 14) {
                               var0.aaa(bza[2], var1, cia + 12, 0);
                            } else {
@@ -697,18 +697,18 @@ public final class ab extends ee implements ag {
                   }
 
                   if (bqa != 11 && bqa != 12 && bza[1] != null && gn.aoa != 52) {
-                     for(var1 = -((gf.aia >> cta[1]) % cca[1]); var1 < gf.aba; var1 += cca[1]) {
+                     for(var1 = -((GameScr.aia >> cta[1]) % cca[1]); var1 < GameScr.aba; var1 += cca[1]) {
                         var0.aaa(bza[1], var1, cla, 0);
                      }
                   }
 
                   if (gn.aoa == 45 || gn.aoa == 55) {
                      var0.aaa(1114112);
-                     var0.aca(0, cka + 20, gf.aba, gf.aca);
+                     var0.aca(0, cka + 20, GameScr.aba, GameScr.aca);
                   }
 
                   if (bza[0] != null) {
-                     for(var1 = -((gf.aia >> cta[0]) % cca[0]); var1 < gf.aba; var1 += cca[0]) {
+                     for(var1 = -((GameScr.aia >> cta[0]) % cca[0]); var1 < GameScr.aba; var1 += cca[0]) {
                         var0.aaa(bza[0], var1, cka, 0);
                      }
                   }
@@ -731,7 +731,7 @@ public final class ab extends ee implements ag {
                }
             } else {
                var0.aaa(caa);
-               var0.aca(0, 0, gf.aba, gf.aca);
+               var0.aca(0, 0, GameScr.aba, GameScr.aca);
             }
 
          }
@@ -895,11 +895,11 @@ public final class ab extends ee implements ag {
       if (!aaa) {
          cea = true;
          if (bza[0] != null && bza[1] != null && bza[2] != null) {
-            cfa = gf.aca - (as.aba(bza[0]) + as.aba(bza[1]) + as.aba(bza[2])) + 11;
+            cfa = GameScr.aca - (as.aba(bza[0]) + as.aba(bza[1]) + as.aba(bza[2])) + 11;
          }
 
          if (bza[0] != null) {
-            cga = gf.aca - as.aba(bza[0]);
+            cga = GameScr.aca - as.aba(bza[0]);
          }
 
          if (bza[1] != null) {
@@ -915,7 +915,7 @@ public final class ab extends ee implements ag {
          }
 
          if (bqa >= 2 && bqa <= 13) {
-            cka = var4 = gf.aca - as.aba(bza[0]);
+            cka = var4 = GameScr.aca - as.aba(bza[0]);
             if (bza[1] != null) {
                var4 = var4 - as.aba(bza[1]) + var1;
             }
@@ -938,9 +938,9 @@ public final class ab extends ee implements ag {
       }
 
       if (bqa >= 2 && bqa <= 12) {
-         var4 = 2 * gf.aca / 3 - cla;
+         var4 = 2 * GameScr.aca / 3 - cla;
       } else {
-         var4 = 2 * gf.aca / 3 - cha;
+         var4 = 2 * GameScr.aca / 3 - cha;
       }
 
       if (var4 < 0) {
@@ -960,33 +960,33 @@ public final class ab extends ee implements ag {
       cha += var4;
       cia += var4;
       cja += var4;
-      cqa = 3 * gf.aba / 4;
+      cqa = 3 * GameScr.aba / 4;
       cra = cfa / 3;
       coa = new int[2];
       cpa = new int[2];
-      coa[0] = gf.aba / 3;
+      coa[0] = GameScr.aba / 3;
       cpa[0] = cfa / 2 - 8;
-      coa[1] = 2 * gf.aba / 3;
+      coa[1] = 2 * GameScr.aba / 3;
       cpa[1] = cfa / 2 + 8;
       if (bqa == 2) {
          cra = cfa / 5;
          coa = new int[5];
          cpa = new int[5];
-         coa[0] = gf.aba / 3;
+         coa[0] = GameScr.aba / 3;
          cpa[0] = cfa / 3 - 35;
-         coa[1] = 3 * gf.aba / 4;
+         coa[1] = 3 * GameScr.aba / 4;
          cpa[1] = cfa / 3 + 12;
-         coa[2] = gf.aba / 3 - 15;
+         coa[2] = GameScr.aba / 3 - 15;
          cpa[2] = cfa / 3 + 12;
-         coa[3] = gf.aba / 15;
+         coa[3] = GameScr.aba / 15;
          cpa[3] = cfa / 2 + 12;
-         coa[4] = 2 * gf.aba / 3 + 25;
+         coa[4] = 2 * GameScr.aba / 3 + 25;
          cpa[4] = cfa / 3 + 12;
       }
 
       if (!aaa) {
          if (bqa == 8) {
-            cka = cla = gf.afa - 50;
+            cka = cla = GameScr.afa - 50;
          }
 
          if (bqa == 10 && bza[3] != null) {
@@ -1058,42 +1058,42 @@ public final class ab extends ee implements ag {
             aka[0] = true;
             return;
          case 49:
-            if (bda == gf.aaa && aba && !bp.aaa().aba) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
                ala[1] = true;
                aka[1] = true;
             }
 
             return;
          case 50:
-            if (bda == gf.aaa && aba && !bp.aaa().aba && !gf.dka) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba && !GameScr.dka) {
                ala[2] = true;
                aka[2] = true;
             }
 
             return;
          case 51:
-            if (bda == gf.aaa && aba && !bp.aaa().aba) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
                ala[3] = true;
                aka[3] = true;
             }
 
             return;
          case 52:
-            if (bda == gf.aaa && aba && !bp.aaa().aba && !gf.dka) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba && !GameScr.dka) {
                ala[4] = true;
                aka[4] = true;
             }
 
             return;
          case 53:
-            if (bda == gf.aaa && aba && !bp.aaa().aba && !gf.dka) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba && !GameScr.dka) {
                ala[5] = true;
                aka[5] = true;
             }
 
             return;
          case 54:
-            if (bda == gf.aaa && aba && !bp.aaa().aba && !gf.dka) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba && !GameScr.dka) {
                ala[6] = true;
                aka[6] = true;
             }
@@ -1104,7 +1104,7 @@ public final class ab extends ee implements ag {
             aka[7] = true;
             return;
          case 56:
-            if (bda == gf.aaa && aba && !bp.aaa().aba && !gf.dka) {
+            if (bda == GameScr.aaa && aba && !bp.aaa().aba && !GameScr.dka) {
                ala[8] = true;
                aka[8] = true;
             }
@@ -1164,42 +1164,42 @@ public final class ab extends ee implements ag {
          bwa[0] = true;
          return;
       case 49:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[1] = false;
             bwa[1] = true;
          }
 
          return;
       case 50:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[2] = false;
             bwa[2] = true;
          }
 
          return;
       case 51:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[3] = false;
             bwa[3] = true;
          }
 
          return;
       case 52:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[4] = false;
             bwa[4] = true;
          }
 
          return;
       case 53:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[5] = false;
             bwa[5] = true;
          }
 
          return;
       case 54:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[6] = false;
             bwa[6] = true;
          }
@@ -1210,7 +1210,7 @@ public final class ab extends ee implements ag {
          bwa[7] = true;
          return;
       case 56:
-         if (bda == gf.aaa && aba && !bp.aaa().aba) {
+         if (bda == GameScr.aaa && aba && !bp.aaa().aba) {
             ala[8] = false;
             bwa[8] = true;
          }
@@ -1261,8 +1261,8 @@ public final class ab extends ee implements ag {
    }
 
    public static boolean aaa(int var0, int var1, int var2, int var3) {
-      int var4 = apa + gf.aia;
-      int var5 = gf.aja + aqa;
+      int var4 = apa + GameScr.aia;
+      int var5 = GameScr.aja + aqa;
       return (ama || aoa) && var4 >= var0 && var4 <= var0 + var2 && var5 >= var1 && var5 <= var1 + var3;
    }
 
@@ -1308,7 +1308,7 @@ public final class ab extends ee implements ag {
             var2 = gn.aja;
          }
 
-         if (br.aea && (!br.aia || br.aha <= 4990) && !gf.dla) {
+         if (br.aea && (!br.aia || br.aha <= 4990) && !GameScr.dla) {
             fk.aaa(bba - 64, 10, 128, 40, var9);
             if (br.aia) {
                aaa(bba - fw.aqa.aaa(var2) / 2 - 10, 30, var9);
@@ -1349,7 +1349,7 @@ public final class ab extends ee implements ag {
                      var5 = var10.aha + (var10.aga - var4.length * 14) / 2 + 1;
 
                      for(var6 = 0; var6 < var4.length; ++var6) {
-                        if (gf.dja) {
+                        if (GameScr.dja) {
                            if (dc.ada().ada(var4[var6])) {
                               if (aua % 10 > 5) {
                                  fw.ana.aaa(var11, var4[var6], var10.ada + var3 * var10.afa + var10.afa / 2 - 2, var5 + var6 * 14, 2);
@@ -1379,7 +1379,7 @@ public final class ab extends ee implements ag {
                      var5 = var10.aha + (var10.aga - var4.length * 14) / 2 + 1 - 23;
 
                      for(var6 = 0; var6 < var4.length; ++var6) {
-                        if (gf.dja) {
+                        if (GameScr.dja) {
                            if (dc.ada().ada(var4[var6])) {
                               if (aua % 10 > 5) {
                                  fw.ana.aaa(var11, var4[var6], var10.ada + var3 * var10.afa + var10.afa / 2 - 2, var5 + var6 * 14, 2);
@@ -1402,7 +1402,7 @@ public final class ab extends ee implements ag {
             }
          }
 
-         gf.aba(this.cda);
+         GameScr.aba(this.cda);
          if (bta > 0) {
             fk.aaa(30, baa - 118, aza - 60, 80, this.cda);
             aaa(bba, baa - 98, this.cda);
@@ -1554,7 +1554,7 @@ public final class ab extends ee implements ag {
    }
 
    public static boolean aea(int var0, int var1) {
-      return var0 >= gf.aia && var0 <= gf.aia + gf.aba && var1 >= gf.aja && var1 <= gf.aja + gf.aca + 30;
+      return var0 >= GameScr.aia && var0 <= GameScr.aia + GameScr.aba && var1 >= GameScr.aja && var1 <= GameScr.aja + GameScr.aca + 30;
    }
 
    public final void aba(as var1) {
@@ -1584,22 +1584,22 @@ public final class ab extends ee implements ag {
 
    public final void aaa(int var1, Object var2) {
       int var4;
-      gm var10000;
+      Service var10000;
       String var80;
       short var81;
       fz var82;
       int var83;
       String var84;
       fe var85;
-      gm var91;
+      Service var91;
       gg[] var92;
       switch(var1) {
       case 1608:
-         gm.aaa().aaa((String)bla.aaa.aea(), (String)bla.aba.aea(), (byte)0);
+         Service.aaa().aaa((String)bla.aaa.aea(), (String)bla.aba.aea(), (byte)0);
          ama();
          return;
       case 1700:
-         gm.aaa().aaa((short)100, bka.aaa.aea(), gf.gra);
+         Service.aaa().aaa((short)100, bka.aaa.aea(), GameScr.gra);
          ama();
          return;
       case 8881:
@@ -1624,11 +1624,11 @@ public final class ab extends ee implements ag {
       case 8887:
          ama();
          var1 = (Integer)var2;
-         gm.aaa().ara(var1);
+         Service.aaa().ara(var1);
          return;
       case 8888:
          var1 = (Integer)var2;
-         var10000 = gm.aaa();
+         var10000 = Service.aaa();
          var83 = var1;
          var91 = var10000;
          var85 = null;
@@ -1647,29 +1647,29 @@ public final class ab extends ee implements ag {
       case 8889:
          var80 = (String)var2;
          ama();
-         gm.aaa().aia(var80);
+         Service.aaa().aia(var80);
          return;
       case 8890:
          ama();
-         gm.aaa().ana((Integer)var2);
+         Service.aaa().ana((Integer)var2);
          return;
       case 16081:
-         gm.aaa().aaa((String)bla.aaa.aea(), (String)bla.aba.aea(), (byte)1);
+         Service.aaa().aaa((String)bla.aaa.aea(), (String)bla.aba.aea(), (byte)1);
          ama();
          return;
       case 88810:
          var1 = (Integer)var2;
          ama();
-         gm.aaa().aka(var1);
+         Service.aaa().aka(var1);
          return;
       case 88811:
          ama();
-         gm.aaa().aha();
+         Service.aaa().aha();
          return;
       case 88812:
          var82 = (fz)var2;
          ama();
-         var10000 = gm.aaa();
+         var10000 = Service.aaa();
          var83 = var82.asa;
          var91 = var10000;
          var85 = null;
@@ -1688,19 +1688,19 @@ public final class ab extends ee implements ag {
       case 88813:
          ama();
          var92 = (gg[])var2;
-         gm.aaa().aaa(var92);
+         Service.aaa().aaa(var92);
          return;
       case 88814:
          var92 = (gg[])var2;
          ama();
-         gm.aaa().aba(var92);
+         Service.aaa().aba(var92);
          return;
       case 88815:
-         gf.ava();
-         gf.boa();
+         GameScr.ava();
+         GameScr.boa();
          return;
       case 88816:
-         var10000 = gm.aaa();
+         var10000 = Service.aaa();
          String var10001 = bla.aaa.aea();
          String var87 = bla.aba.aea();
          var84 = var10001;
@@ -1708,7 +1708,7 @@ public final class ab extends ee implements ag {
          fe var89 = null;
 
          try {
-            (var89 = gm.aba((byte)-99)).aba().writeUTF(var84);
+            (var89 = Service.aba((byte)-99)).aba().writeUTF(var84);
             var89.aba().writeUTF(var87);
             var91.aaa.aaa(var89);
          } catch (Exception var74) {
@@ -1721,20 +1721,20 @@ public final class ab extends ee implements ag {
          return;
       case 88817:
          if (fz.ala().dra != null) {
-            gm.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
+            Service.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
             return;
          }
 
-         gm.aaa().aca(0, bea.aca, 0);
+         Service.aaa().aca(0, bea.aca, 0);
          return;
       case 88818:
          var81 = (Short)var2;
-         gm.aaa().aaa(var81, bka.aaa.aea());
+         Service.aaa().aaa(var81, bka.aaa.aea());
          ama();
          return;
       case 88819:
          var81 = (Short)var2;
-         var10000 = gm.aaa();
+         var10000 = Service.aaa();
          short var88 = var81;
          var91 = var10000;
          var85 = null;
@@ -1748,7 +1748,7 @@ public final class ab extends ee implements ag {
             var85.aca();
          }
 
-         gf.ava().bpa();
+         GameScr.ava().bpa();
          return;
       case 88820:
          String[] var90 = (String[])var2;
@@ -1759,7 +1759,7 @@ public final class ab extends ee implements ag {
          Integer var86 = new Integer(bea.aca);
          if (var90.length <= 1) {
             cq.aaa("", 1, fz.ala().dra);
-            gm.aaa().aca(fz.ala().dra.aaa.aaa, var86, 0);
+            Service.aaa().aca(fz.ala().dra.aaa.aaa, var86, 0);
             return;
          }
 
@@ -1774,11 +1774,11 @@ public final class ab extends ee implements ag {
       case 88821:
          var4 = (Integer)var2;
          cq.aaa("", 1, fz.ala().dra);
-         gm.aaa().aca(fz.ala().dra.aaa.aaa, var4, bea.aca);
+         Service.aaa().aca(fz.ala().dra.aaa.aaa, var4, bea.aca);
          return;
       case 88822:
          cq.aaa("", 1, fz.ala().dra);
-         gm.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
+         Service.aaa().aca(fz.ala().dra.aaa.aaa, bea.aca, 0);
          return;
       case 88823:
          aaa(er.fxa);
@@ -1803,24 +1803,24 @@ public final class ab extends ee implements ag {
             return;
          }
 
-         gm.aaa().aaa(var80, (Integer)var2);
+         Service.aaa().aaa(var80, (Integer)var2);
          aba(er.bda);
          return;
       case 88830:
          var1 = (Integer)var2;
          ama();
-         gm.aaa().bda(var1);
+         Service.aaa().bda(var1);
          return;
       case 88831:
          var1 = (Integer)var2;
          ama();
-         gm.aaa().bea(var1);
+         Service.aaa().bea(var1);
          return;
       case 88832:
          var80 = bka.aaa.aea();
          ama();
          if (!var80.equals("")) {
-            gm.aaa().ama(var80);
+            Service.aaa().ama(var80);
             return;
          }
          break;
@@ -1831,7 +1831,7 @@ public final class ab extends ee implements ag {
             try {
                var1 = Integer.parseInt(var80);
                if (fz.ala().cqa >= var1 && var1 >= 0) {
-                  gm.aaa().bfa(var1);
+                  Service.aaa().bfa(var1);
                   return;
                }
 
@@ -1851,7 +1851,7 @@ public final class ab extends ee implements ag {
                   return;
                }
 
-               gm.aaa().bga(var1);
+               Service.aaa().bga(var1);
                return;
             } catch (Exception var70) {
                return;
@@ -1862,8 +1862,8 @@ public final class ab extends ee implements ag {
          var1 = Integer.parseInt((String)var2);
          var83 = Integer.parseInt(bka.aaa.aea());
          bia = null;
-         if (var83 > 0 && var83 < fz.ala().daa[var1].aea) {
-            gm.aaa().aka(var1, var83);
+         if (var83 > 0 && var83 < fz.ala().arrItemBag[var1].aea) {
+            Service.aaa().aka(var1, var83);
             return;
          }
 
@@ -1878,7 +1878,7 @@ public final class ab extends ee implements ag {
          ama();
 
          try {
-            gm.aaa().bja(Integer.parseInt(var80.trim()));
+            Service.aaa().bja(Integer.parseInt(var80.trim()));
             return;
          } catch (Exception var69) {
             return;
@@ -1892,7 +1892,7 @@ public final class ab extends ee implements ag {
                var1 = Integer.parseInt(var80);
                var83 = Integer.parseInt(var84);
                if (var1 >= 99999 && var83 >= 99999) {
-                  gm.aaa().ala(var1, var83);
+                  Service.aaa().ala(var1, var83);
                   return;
                }
 
@@ -1921,15 +1921,15 @@ public final class ab extends ee implements ag {
       case 88840:
          var82 = (fz)var2;
          ama();
-         gm.aaa().ala(var82.asa);
+         Service.aaa().ala(var82.asa);
          return;
       case 88841:
          var82 = (fz)var2;
          ama();
-         gm.aaa().ama(var82.asa);
+         Service.aaa().ama(var82.asa);
          return;
       case 88842:
-         gm.aaa().baa();
+         Service.aaa().baa();
          return;
       case 88843:
          var84 = bka.aaa.aea();
@@ -1939,11 +1939,11 @@ public final class ab extends ee implements ag {
             return;
          }
 
-         gm.aaa().aqa(var84);
+         Service.aaa().aqa(var84);
          return;
       case 888181:
          var81 = (Short)var2;
-         gm.aaa().aba(var81, bka.aaa.aea());
+         Service.aaa().aba(var81, bka.aaa.aea());
          ama();
          return;
       case 888361:
@@ -1951,7 +1951,7 @@ public final class ab extends ee implements ag {
          ama();
          if (var80.length() >= 6 && !var80.equals("")) {
             try {
-               gm.aaa().bha(Integer.parseInt(var80));
+               Service.aaa().bha(Integer.parseInt(var80));
                return;
             } catch (Exception var66) {
                aaa(er.pva);
@@ -1965,7 +1965,7 @@ public final class ab extends ee implements ag {
          try {
             ama();
             var83 = Integer.parseInt((String)var2);
-            gm.aaa().bia(var83);
+            Service.aaa().bia(var83);
             return;
          } catch (Exception var65) {
             return;

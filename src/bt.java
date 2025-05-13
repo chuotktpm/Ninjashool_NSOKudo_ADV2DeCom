@@ -62,7 +62,7 @@ public class bt extends ds {
                   return;
                }
             } else if (this.aaa == 0) {
-               gf.aca("Hãy vào lớp!");
+               GameScr.chatPopup("Hãy vào lớp!");
                Code.aga();
                return;
             } else {
@@ -71,45 +71,45 @@ public class bt extends ds {
                   this.aaa(var20, -2, -1, -1);
                   return;
                } else {
-                  gf.aba(5, 1, 0);
+                  GameScr.aba(5, 1, 0);
 
-                  for(var5 = 0; var5 < var1.daa.length; ++var5) {
-                     if ((var11 = var1.daa[var5]) != null && (var11.aaa.aba == 22 || var11.aaa.aba == 27)) {
-                        gm.aaa().aea(var11.ada);
+                  for(var5 = 0; var5 < var1.arrItemBag.length; ++var5) {
+                     if ((var11 = var1.arrItemBag[var5]) != null && (var11.aaa.aba == 22 || var11.aaa.aba == 27)) {
+                        Service.aaa().aea(var11.ada);
                      }
                   }
 
                   Thread.sleep(1000L);
                   if ((var21 = var1.dca[1]) != null) {
-                     gm.aaa().aaa((short)var21.aaa.aba);
-                     gj.ara();
+                     Service.aaa().aaa((short)var21.aaa.aba);
+                     LockGame.ara();
                   }
 
-                  gf.aba(aca[this.aaa], 1, ada[this.aaa]);
+                  GameScr.aba(aca[this.aaa], 1, ada[this.aaa]);
 
                   do {
                      Thread.sleep(1000L);
                   } while(fz.afa(aea[this.aaa]) == null);
 
                   if ((var21 = fz.afa(bha[this.aaa])) != null) {
-                     gm.aaa().aea(var21.ada);
+                     Service.aaa().aea(var21.ada);
                   }
 
                   if ((var21 = fz.afa(aea[this.aaa])) != null) {
-                     gm.aaa().aea(var21.ada);
+                     Service.aaa().aea(var21.ada);
                   }
 
                   Thread.sleep(1000L);
-                  gf.aba(4, 0, 0);
+                  GameScr.aba(4, 0, 0);
 
-                  for(var15 = 0; var15 < var1.daa.length; ++var15) {
-                     if ((var21 = var1.daa[var15]) != null && (var21.aaa.aba < 10 || var21.aaa.aba == 16 || var21.aaa.aba == 17 || var21.aaa.aaa == 23)) {
-                        gm.aaa().aha(var21.ada, var21.ada);
+                  for(var15 = 0; var15 < var1.arrItemBag.length; ++var15) {
+                     if ((var21 = var1.arrItemBag[var15]) != null && (var21.aaa.aba < 10 || var21.aaa.aba == 16 || var21.aaa.aba == 17 || var21.aaa.aaa == 23)) {
+                        Service.aaa().aha(var21.ada, var21.ada);
                      }
                   }
 
-                  gm.aaa().afa();
-                  gj.ata();
+                  Service.aaa().afa();
+                  LockGame.ata();
                   return;
                }
             }
@@ -160,23 +160,23 @@ public class bt extends ds {
             }
 
             if (var1.cza.aaa == 1) {
-               for(var20 = 0; var20 < gf.bla.size(); ++var20) {
+               for(var20 = 0; var20 < GameScr.bla.size(); ++var20) {
                   fz var23;
-                  if ((var23 = (fz)gf.bla.elementAt(var20)) != null) {
-                     gm.aaa().aaa(var23.cea);
+                  if ((var23 = (fz)GameScr.bla.elementAt(var20)) != null) {
+                     Service.aaa().aaa(var23.cea);
                   }
                }
 
                var15 = super.aha;
-               gf var19 = gf.ava();
+               GameScr var19 = GameScr.ava();
                av var22;
-               if ((var22 = gf.aia(13)) != null && var22.aqa != 15) {
+               if ((var22 = GameScr.aia(13)) != null && var22.aqa != 15) {
                   if (Math.abs(var22.ala - fz.ala().ala) > 22 || Math.abs(var22.ama - fz.ala().ama) > 22) {
                      fz.aca(var22.ala, var22.ama);
                   }
 
-                  gm.aaa().aea();
-                  gj.afa();
+                  Service.aaa().aea();
+                  LockGame.afa();
                   var20 = -1;
                   if (var15 < 0) {
                      var15 = var19.eea.length - 1;
@@ -194,7 +194,7 @@ public class bt extends ds {
                   }
 
                   super.aha = var20;
-                  gm.aaa().aaa((int)var20, (int)-1);
+                  Service.aaa().aaa((int)var20, (int)-1);
                   gn.aga();
                   Thread.sleep(100L);
                   return;
@@ -256,14 +256,14 @@ public class bt extends ds {
             var13 = 0;
             var18 = 0;
             if (var11.ara()) {
-               var13 = gf.dva[var11.aia] / 2;
-               var18 = gf.dza[var11.aia];
+               var13 = GameScr.dva[var11.aia] / 2;
+               var18 = GameScr.dza[var11.aia];
             } else if (var11.asa()) {
-               var13 = gf.dwa[var11.aia] / 2;
-               var18 = gf.eaa[var11.aia];
+               var13 = GameScr.dwa[var11.aia] / 2;
+               var18 = GameScr.eaa[var11.aia];
             } else if (var11.ata()) {
-               var13 = gf.dxa[var11.aia] / 2;
-               var18 = gf.eba[var11.aia];
+               var13 = GameScr.dxa[var11.aia] / 2;
+               var18 = GameScr.eba[var11.aia];
             }
 
             if (var13 << 1 > fz.bia() || var18 << 1 > var1.csa) {
@@ -283,83 +283,83 @@ public class bt extends ds {
             }
 
             if (var16) {
-               gm.aaa().aaa((int)var11.aaa.aba);
-               gj.ara();
+               Service.aaa().aaa((int)var11.aaa.aba);
+               LockGame.ara();
             }
 
             var7 = var11.aia;
-            gf.aba(6, 0, 0);
-            gj.ara();
-            gf.dfa = var11;
+            GameScr.aba(6, 0, 0);
+            LockGame.ara();
+            GameScr.dfa = var11;
 
             for(var8 = 0; var8 < 2 && var11.aia == var7; ++var8) {
-               gf.cxa = new gg[18];
+               GameScr.cxa = new gg[18];
                var9 = 0;
                int var24 = 0;
 
-               for(var20 = 0; var20 < var1.daa.length && var24 < var13; ++var20) {
-                  if ((var21 = var1.daa[var20]) != null && var21.aaa.aba == 26 && var21.aaa.aaa <= 3) {
-                     var1.daa[var20] = null;
-                     gf.cxa[var9++] = var21;
-                     var24 += gf.dva[var21.aaa.aaa];
+               for(var20 = 0; var20 < var1.arrItemBag.length && var24 < var13; ++var20) {
+                  if ((var21 = var1.arrItemBag[var20]) != null && var21.aaa.aba == 26 && var21.aaa.aaa <= 3) {
+                     var1.arrItemBag[var20] = null;
+                     GameScr.cxa[var9++] = var21;
+                     var24 += GameScr.dva[var21.aaa.aaa];
                   }
                }
 
                do {
                   Thread.sleep(3000L);
-                  gm.aaa().aaa(var11, gf.cxa);
-                  gj.ara();
-               } while(gf.cxa[0] != null);
+                  Service.aaa().aaa(var11, GameScr.cxa);
+                  LockGame.ara();
+               } while(GameScr.cxa[0] != null);
             }
 
-            gf.dfa = null;
-            gm.aaa().aea(var11.ada);
+            GameScr.dfa = null;
+            Service.aaa().aea(var11.ada);
             if (var11.aia > var7) {
-               gj.apa();
+               LockGame.apa();
                return;
             }
             break;
          case 13:
             gg var4;
             if ((var4 = var1.dca[1]) != null && var4.aia < 2) {
-               var5 = gf.dxa[var4.aia] / 2;
-               var15 = gf.eba[var4.aia];
+               var5 = GameScr.dxa[var4.aia] / 2;
+               var15 = GameScr.eba[var4.aia];
                if (var5 << 1 <= fz.bia() && var15 << 1 <= var1.csa) {
                   if (gn.aoa != 22) {
                      this.aaa(22, -2, -1, -1);
                      return;
                   }
 
-                  gm.aaa().aaa((int)var4.aaa.aba);
-                  gj.ara();
+                  Service.aaa().aaa((int)var4.aaa.aba);
+                  LockGame.ara();
                   var13 = var4.aia;
-                  gf.aba(6, 0, 0);
-                  gj.ara();
-                  gf.dfa = var4;
+                  GameScr.aba(6, 0, 0);
+                  LockGame.ara();
+                  GameScr.dfa = var4;
 
                   for(var18 = 0; var18 < 2 && var4.aia == var13; ++var18) {
-                     gf.cxa = new gg[18];
+                     GameScr.cxa = new gg[18];
                      var7 = 0;
                      var8 = 0;
 
-                     for(var9 = 0; var9 < var1.daa.length && var8 < var5; ++var9) {
+                     for(var9 = 0; var9 < var1.arrItemBag.length && var8 < var5; ++var9) {
                         gg var10;
-                        if ((var10 = var1.daa[var9]) != null && var10.aaa.aba == 26 && var10.aaa.aaa <= 3) {
-                           var1.daa[var9] = null;
-                           gf.cxa[var7++] = var10;
-                           var8 += gf.dva[var10.aaa.aaa];
+                        if ((var10 = var1.arrItemBag[var9]) != null && var10.aaa.aba == 26 && var10.aaa.aaa <= 3) {
+                           var1.arrItemBag[var9] = null;
+                           GameScr.cxa[var7++] = var10;
+                           var8 += GameScr.dva[var10.aaa.aaa];
                         }
                      }
 
                      do {
                         Thread.sleep(3000L);
-                        gm.aaa().aaa(var4, gf.cxa, false);
-                        gj.ara();
-                     } while(gf.cxa[0] != null);
+                        Service.aaa().aaa(var4, GameScr.cxa, false);
+                        LockGame.ara();
+                     } while(GameScr.cxa[0] != null);
                   }
 
-                  gf.dfa = null;
-                  gm.aaa().aea(var4.ada);
+                  GameScr.dfa = null;
+                  Service.aaa().aea(var4.ada);
                   return;
                }
 
@@ -391,15 +391,15 @@ public class bt extends ds {
                   return;
                }
 
-               if (gf.aya < 10 && var1.csa >= 300 * (10 - gf.aya)) {
-                  gf.aba(3, 0, 0);
-                  gm.aaa().aaa(7, 1, 10 - gf.aya);
-                  gj.aha();
+               if (GameScr.aya < 10 && var1.csa >= 300 * (10 - GameScr.aya)) {
+                  GameScr.aba(3, 0, 0);
+                  Service.aaa().aaa(7, 1, 10 - GameScr.aya);
+                  LockGame.aha();
                   return;
                }
 
-               gf.aba(var3, 0, 0);
-               gm.aaa().aja(var3, 0);
+               GameScr.aba(var3, 0, 0);
+               Service.aaa().aja(var3, 0);
                gn.aga();
                return;
             }
@@ -413,7 +413,7 @@ public class bt extends ds {
             }
 
             fz var14;
-            if (gf.bla.size() > 0 && (var14 = (fz)gf.bla.elementAt(0)) != null) {
+            if (GameScr.bla.size() > 0 && (var14 = (fz)GameScr.bla.elementAt(0)) != null) {
                bc var17 = Auto.aqa;
                if (ci.aea(var1.ala - var14.ala) > var17.aga || ci.aea(var1.ama - var14.ama) > var17.aha) {
                   fz.aca(var14.ala < gn.aca ? var14.ala : gn.aca - 50, var14.ama);
@@ -422,19 +422,19 @@ public class bt extends ds {
                Auto.aya.removeAllElements();
                Auto.aza.removeAllElements();
                Auto.aza.addElement(var14);
-               gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
+               Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
                if (System.currentTimeMillis() - var17.afa >= (long)var17.aea) {
                   var17.afa = System.currentTimeMillis();
                   var17.ala = true;
-                  var1.aba(gf.aza[var17.aaa.aaa], 0);
+                  var1.aba(GameScr.aza[var17.aaa.aaa], 0);
                   return;
                }
             }
             break;
          case 14:
             if (var1.aya >= 15 && (var11 = fz.afa(bia[var1.cua.aaa])) != null) {
-               gf.aca("Học sách kĩ năng");
-               gm.aaa().aea(var11.ada);
+               GameScr.chatPopup("Học sách kĩ năng");
+               Service.aaa().aea(var11.ada);
                Thread.sleep(1000L);
             }
 
@@ -462,9 +462,9 @@ public class bt extends ds {
                   var5 = var10000;
                   am var12 = null;
 
-                  for(var13 = 0; var13 < gf.bma.size(); ++var13) {
+                  for(var13 = 0; var13 < GameScr.bma.size(); ++var13) {
                      am var6;
-                     var7 = Math.abs((var6 = (am)gf.bma.elementAt(var13)).aaa - var1.ala);
+                     var7 = Math.abs((var6 = (am)GameScr.bma.elementAt(var13)).aaa - var1.ala);
                      var8 = Math.abs(var6.aba - var1.ama);
                      var9 = var7 * var7 + var8 * var8;
                      if (!var6.aka && var6.aha.aaa == 212 && (fz.bja() > 2 || fz.aja(212)) && (var5 < 0 || var9 < var5)) {
@@ -479,9 +479,9 @@ public class bt extends ds {
                   }
 
                   fz.aca(var12.aca, var12.ada);
-                  gm.aaa().aoa(var12.aga);
+                  Service.aaa().aoa(var12.aga);
 
-                  for(var13 = 0; var13 < 5 && !gj.ada(); ++var13) {
+                  for(var13 = 0; var13 < 5 && !LockGame.ada(); ++var13) {
                   }
 
                   var12.aka = true;
@@ -520,14 +520,14 @@ public class bt extends ds {
                return;
             }
 
-            gf.aba(var3, 0, 0);
-            gj.apa();
+            GameScr.aba(var3, 0, 0);
+            LockGame.apa();
             Auto.ala();
             return;
          case 16:
             if (var1.aya >= 20 && (var11 = fz.afa(bja[var1.cua.aaa])) != null) {
-               gf.aca("Học sách kĩ năng");
-               gm.aaa().aea(var11.ada);
+               GameScr.chatPopup("Học sách kĩ năng");
+               Service.aaa().aea(var11.ada);
                Thread.sleep(1000L);
             }
 

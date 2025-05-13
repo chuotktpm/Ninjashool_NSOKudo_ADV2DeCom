@@ -6,7 +6,7 @@ public final class ce extends fb implements ag {
    private int aea = -1;
 
    public final void aaa() {
-      gf.aca = ab.baa;
+      GameScr.aca = ab.baa;
       if (ab.bqa == 2) {
          ab.aaa(0);
       } else {
@@ -14,16 +14,16 @@ public final class ce extends fb implements ag {
       }
 
       super.aaa();
-      if (gf.aaa != null) {
-         gf.aaa = null;
+      if (GameScr.aaa != null) {
+         GameScr.aaa = null;
       }
 
       if ((gn.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || gn.ama == 6) {
          gn.ama = 4;
       }
 
-      gf.aaa(true);
-      gf.aia = 100;
+      GameScr.aaa(true);
+      GameScr.aia = 100;
       this.aaa = 170;
       this.aba = 175;
       if (ab.aza == 128 || ab.baa <= 208) {
@@ -85,8 +85,8 @@ public final class ce extends fb implements ag {
    }
 
    public final void aba() {
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       super.aba();

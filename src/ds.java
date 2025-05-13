@@ -14,8 +14,8 @@ public class ds extends Auto {
 
          for(int var7 = 0; var7 < var5.afa.length; ++var7) {
             if (var5.afa[var7][0].equals("Nói chuyện")) {
-               gf.aba(var3, var7, 0);
-               gj.apa();
+               GameScr.aba(var3, var7, 0);
+               LockGame.apa();
                return;
             }
          }
@@ -23,43 +23,43 @@ public class ds extends Auto {
          return;
       case 1:
          if (var1.cza.aaa == 0) {
-            gf.aba(var3, 0, 0);
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            GameScr.aba(var3, 0, 0);
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 1) {
-            gm.aaa().aja(var3, 0);
-            gj.apa();
+            Service.aaa().aja(var3, 0);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 2) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 3) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 4) {
-            gm.aaa().aja(var3, 0);
-            gj.apa();
+            Service.aaa().aja(var3, 0);
+            LockGame.apa();
             return;
          }
          break;
       case 2:
          if (var1.cza.aaa == 0) {
-            if (var1.daa[0] != null) {
-               gm.aaa().aea(0);
+            if (var1.arrItemBag[0] != null) {
+               Service.aaa().aea(0);
             }
 
-            gj.apa();
+            LockGame.apa();
             return;
          }
 
@@ -77,18 +77,18 @@ public class ds extends Auto {
       case 3:
          if (var1.cza.aaa == 0) {
             Thread.sleep(2000L);
-            gf.aba(4, 0, 0);
-            gm.aaa().aaa(9, 0, 3);
-            gj.apa();
+            GameScr.aba(4, 0, 0);
+            Service.aaa().aaa(9, 0, 3);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 1) {
-            if (var1.daa[0] != null) {
-               gm.aaa().aea(0);
+            if (var1.arrItemBag[0] != null) {
+               Service.aaa().aea(0);
             }
 
-            gj.apa();
+            LockGame.apa();
             return;
          }
 
@@ -215,95 +215,95 @@ public class ds extends Auto {
 
          if (var1.cza.aaa == 1) {
             super.aaa(var2, -2, -1, -1);
-            gf.aba(var3, 0, 0);
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            GameScr.aba(var3, 0, 0);
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 2) {
-            gm.aaa().aja(var3, 0);
-            gj.apa();
+            Service.aaa().aja(var3, 0);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 3) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 4) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 5) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 6) {
-            gf.aba(var3, 0, 0);
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            GameScr.aba(var3, 0, 0);
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 7) {
-            gm.aaa().aja(var3, 0);
-            gj.apa();
+            Service.aaa().aja(var3, 0);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 8) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 9) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 10) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 11) {
-            gf.aba(var3, 0, 0);
-            gm.aaa().aja(var3, 0);
-            gj.apa();
+            GameScr.aba(var3, 0, 0);
+            Service.aaa().aja(var3, 0);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 12) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 13) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 14) {
-            gm.aaa().aja(var3, 2);
-            gj.apa();
+            Service.aaa().aja(var3, 2);
+            LockGame.apa();
             return;
          }
 
          if (var1.cza.aaa == 15) {
-            gm.aaa().aja(var3, 1);
-            gj.apa();
+            Service.aaa().aja(var3, 1);
+            LockGame.apa();
             return;
          }
          break;
@@ -320,13 +320,13 @@ public class ds extends Auto {
          }
 
          super.aaa(var2, -2, -1, -1);
-         gf.aha(var3);
+         GameScr.aha(var3);
          cm var6 = av.aba[var3];
 
          for(int var4 = 0; var4 < var6.afa.length; ++var4) {
             if (var6.afa[var4][0].equals("Nói chuyện")) {
-               gf.aba(var3, var4, 0);
-               gj.apa();
+               GameScr.aba(var3, var4, 0);
+               LockGame.apa();
                Thread.sleep(1000L);
                return;
             }
@@ -338,29 +338,29 @@ public class ds extends Auto {
    public final void aaa() {
       fz var1 = fz.ala();
       if (this.aaa(var1)) {
-         gf.aca("Xong!");
+         GameScr.chatPopup("Xong!");
          Code.aga();
       } else {
-         byte var2 = gf.bma();
-         byte var3 = gf.bna();
+         byte var2 = GameScr.bma();
+         byte var3 = GameScr.bna();
          if (fz.ala().bba <= 0) {
             Auto.aaa(false);
          } else if (var1.cza == null) {
             if (gn.aoa != var2) {
                super.aaa(var2, -2, -1, -1);
             } else {
-               gf.aba(var3, 0, 0);
-               gm.aaa().aja(var3, 0);
-               gj.apa();
+               GameScr.aba(var3, 0, 0);
+               Service.aaa().aja(var3, 0);
+               LockGame.apa();
                super.aha = -1;
             }
          } else if (var1.cza.aaa >= var1.cza.aea.length - 1) {
             if (gn.aoa != var2) {
                super.aaa(var2, -2, -1, -1);
             } else {
-               gf.aba(var3, 0, 0);
-               gm.aaa().aja(var3, 0);
-               gj.apa();
+               GameScr.aba(var3, 0, 0);
+               Service.aaa().aja(var3, 0);
+               LockGame.apa();
                super.aha = -1;
             }
          } else {

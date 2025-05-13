@@ -26,7 +26,7 @@ public final class cg extends Auto {
             }
 
             if (var1.ada == null) {
-               gf.aba(17, 0, 0);
+               GameScr.aba(17, 0, 0);
                Thread.sleep(2000L);
                return;
             }
@@ -62,7 +62,7 @@ public final class cg extends Auto {
 
             label173: {
                if (var3.aaa.ada == 2) {
-                  gm.aaa().ara();
+                  Service.aaa().ara();
                } else {
                   fz var12;
                   ev var13;
@@ -70,7 +70,7 @@ public final class cg extends Auto {
                   fz var10000;
                   label170: {
                      if ((var12 = fz.ala()).ada != null) {
-                        var13 = gf.bla;
+                        var13 = GameScr.bla;
 
                         for(var15 = 0; var15 < var13.size(); ++var15) {
                            fz var16;
@@ -90,16 +90,16 @@ public final class cg extends Auto {
                         aaa(var12);
                      }
 
-                     gm.aaa().afa(var3.aaa.aaa);
+                     Service.aaa().afa(var3.aaa.aaa);
                      Auto.aya.removeAllElements();
                      Auto.aza.removeAllElements();
                      Auto.aza.addElement(var12);
-                     gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
+                     Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
                   } else {
                      ac var18;
                      label128: {
                         if ((var12 = fz.ala()).ada != null) {
-                           var13 = gf.bna;
+                           var13 = GameScr.bna;
 
                            for(var15 = 0; var15 < var13.size(); ++var15) {
                               ac var17;
@@ -122,11 +122,11 @@ public final class cg extends Auto {
                         this.aca(var14);
                      }
 
-                     gm.aaa().afa(var3.aaa.aaa);
+                     Service.aaa().afa(var3.aaa.aaa);
                      Auto.aya.removeAllElements();
                      Auto.aza.removeAllElements();
                      Auto.aya.addElement(var14);
-                     gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
+                     Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
                   }
                }
 
@@ -134,7 +134,7 @@ public final class cg extends Auto {
                   var3.afa = System.currentTimeMillis();
                   var3.ala = true;
                   if (!Code.bfa) {
-                     var2.aba(gf.aza[var3.aaa.aaa], 0);
+                     var2.aba(GameScr.aza[var3.aaa.aaa], 0);
                   }
                }
             }

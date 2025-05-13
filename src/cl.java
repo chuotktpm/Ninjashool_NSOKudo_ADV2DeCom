@@ -76,7 +76,7 @@ public final class cl extends fb implements ag {
    private void aga() {
       if (this.aga[this.aaa] != null) {
          aka = this.aga[this.aaa];
-         gm.aaa().aba(this.aga[this.aaa]);
+         Service.aaa().aba(this.aga[this.aaa]);
          ab.aba(er.bda);
          ab.aea = true;
       } else {
@@ -126,8 +126,8 @@ public final class cl extends fb implements ag {
    }
 
    public final void aba() {
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       if (this.aza > 0) {
@@ -173,10 +173,10 @@ public final class cl extends fb implements ag {
 
       for(var2 = 0; var2 < 3; ++var2) {
          if (this.aga[var2] != null) {
-            fj var3 = gf.bba[this.aba[var2]];
-            fj var4 = gf.bba[this.aca[var2]];
-            fj var5 = gf.bba[this.ada[var2]];
-            fj var6 = gf.bba[this.aea[var2]];
+            fj var3 = GameScr.bba[this.aba[var2]];
+            fj var4 = GameScr.bba[this.aca[var2]];
+            fj var5 = GameScr.bba[this.ada[var2]];
+            fj var6 = GameScr.bba[this.aea[var2]];
             int var7;
             if (var3.aaa != null && var3.aaa.length >= 8) {
                for(var7 = 0; var7 < var3.aaa.length; ++var7) {

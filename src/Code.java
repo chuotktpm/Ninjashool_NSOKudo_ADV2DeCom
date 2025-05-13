@@ -22,7 +22,7 @@ public final class Code implements Runnable {
    private static es cka;
    public static fv afa;
    private static ADV cla;
-   public static go aga;
+   public static AutoLoiDai aga;
    private static gk cma;
    private static cj cna;
    private static ap coa;
@@ -130,7 +130,7 @@ public final class Code implements Runnable {
       cka = new es();
       afa = new fv();
       cla = new ADV();
-      aga = new go();
+      aga = new AutoLoiDai();
       cma = new gk();
       cna = new cj();
       coa = new ap();
@@ -258,7 +258,7 @@ public final class Code implements Runnable {
    public static void aba() {
       cga = false;
       if (cha != null) {
-         gj.bla();
+         LockGame.bla();
          cha.interrupt();
       }
 
@@ -270,7 +270,7 @@ public final class Code implements Runnable {
    }
 
    public static void aca() {
-      gj.bla();
+      LockGame.bla();
       aba = aba.aoa;
    }
 
@@ -321,7 +321,7 @@ public final class Code implements Runnable {
    }
 
    public static void aga() {
-      gj.bla();
+      LockGame.bla();
       aba = null;
    }
 
@@ -422,7 +422,7 @@ public final class Code implements Runnable {
             if (aca(var0)) {
                return true;
             }
-         } else if (gf.bfa.size() > 1 && var1.equals(((ep)gf.bfa.firstElement()).ada) && var0.equals(aha)) {
+         } else if (GameScr.bfa.size() > 1 && var1.equals(((ep)GameScr.bfa.firstElement()).ada) && var0.equals(aha)) {
             return true;
          }
 
@@ -446,8 +446,8 @@ public final class Code implements Runnable {
       if (var0.equals(fz.ala().cea)) {
          return true;
       } else {
-         for(int var1 = 0; var1 < gf.bfa.size(); ++var1) {
-            if (((ep)gf.bfa.elementAt(var1)).ada.equals(var0)) {
+         for(int var1 = 0; var1 < GameScr.bfa.size(); ++var1) {
+            if (((ep)GameScr.bfa.elementAt(var1)).ada.equals(var0)) {
                return true;
             }
          }
@@ -470,9 +470,9 @@ public final class Code implements Runnable {
       int var1 = 0;
       fz var2 = fz.ala();
 
-      for(int var3 = 0; var3 < var2.daa.length; ++var3) {
+      for(int var3 = 0; var3 < var2.arrItemBag.length; ++var3) {
          gg var4;
-         if ((var4 = var2.daa[var3]) != null && var4.aaa.aba == 18 && var4.aaa.afa == var0) {
+         if ((var4 = var2.arrItemBag[var3]) != null && var4.aaa.aba == 18 && var4.aaa.afa == var0) {
             ++var1;
          }
       }
@@ -494,18 +494,18 @@ public final class Code implements Runnable {
                   int var6;
                   int var7;
                   if (aba != null) {
-                     if (aya && !(aba instanceof cj) && (!(aba instanceof eu) || aca.aaa != 2) && fz.ala().bha * 100L / gf.dta[fz.ala().aya] >= bza) {
+                     if (aya && !(aba instanceof cj) && (!(aba instanceof eu) || aca.aaa != 2) && fz.ala().bha * 100L / GameScr.dta[fz.ala().aya] >= bza) {
                         cj.aaa = aba;
                         awa();
                      }
 
                      if (aha != null && System.currentTimeMillis() - cqa > 5000L) {
                         if (aha.equals(var3.cea)) {
-                           if (!Auto.apa && gf.bfa.size() <= 0) {
-                              gm.aaa().asa();
+                           if (!Auto.apa && GameScr.bfa.size() <= 0) {
+                              Service.aaa().asa();
                            }
-                        } else if (gf.aaa(aha) != null && gf.bfa.size() == 0) {
-                           gm.aaa().aha(aha);
+                        } else if (GameScr.aaa(aha) != null && GameScr.bfa.size() == 0) {
+                           Service.aaa().aha(aha);
                         }
 
                         cqa = System.currentTimeMillis();
@@ -515,7 +515,7 @@ public final class Code implements Runnable {
                         long var8;
                         if ((var8 = System.currentTimeMillis()) - bca >= bda) {
                            bda = 0L;
-                           gj.bla();
+                           LockGame.bla();
                            aba = null;
                            cs.aaa.ada();
                            Controller.aea().aba();
@@ -573,9 +573,9 @@ public final class Code implements Runnable {
                         }
 
                         if (var5 > 0) {
-                           gf.aca("Cộng skill " + var20.aba + " " + var5 + " điểm");
-                           gm.aaa().afa(var20.aaa, var5);
-                           if (gj.ava()) {
+                           GameScr.chatPopup("Cộng skill " + var20.aba + " " + var5 + " điểm");
+                           Service.aaa().afa(var20.aaa, var5);
+                           if (LockGame.ava()) {
                               cs.aba().aea();
                            }
                         }
@@ -584,15 +584,15 @@ public final class Code implements Runnable {
                      if (var3.bia > 0 && (fz.fja || aba instanceof bt)) {
                         var6 = var3.aka() ? 3 : 0;
                         if (var3.bia >= 100) {
-                           gf.aca("Cộng tiềm năng " + er.jxa[var6] + " 60 điểm, " + er.jxa[2] + " 40 điểm");
-                           gm.aaa().aea(2, 40);
-                           gm.aaa().aea(var6, 60);
+                           GameScr.chatPopup("Cộng tiềm năng " + er.jxa[var6] + " 60 điểm, " + er.jxa[2] + " 40 điểm");
+                           Service.aaa().aea(2, 40);
+                           Service.aaa().aea(var6, 60);
                         } else {
-                           gf.aca("Cộng tiềm năng " + er.jxa[var6] + " " + var3.bia + " điểm");
-                           gm.aaa().aea(var6, var3.bia);
+                           GameScr.chatPopup("Cộng tiềm năng " + er.jxa[var6] + " " + var3.bia + " điểm");
+                           Service.aaa().aea(var6, var3.bia);
                         }
 
-                        gj.axa();
+                        LockGame.axa();
                      }
 
                      gn.bda[138] = new short[]{(short)gh.aja};
@@ -618,11 +618,11 @@ public final class Code implements Runnable {
                                  for(var22 = 0; var22 < var14; ++var22) {
                                     gg var16 = (gg)var13.elementAt(var13.size() - 1);
                                     var15[var22] = var16;
-                                    var3.daa[var16.ada] = null;
+                                    var3.arrItemBag[var16.ada] = null;
                                     var13.removeElementAt(var13.size() - 1);
                                  }
 
-                                 gm.aaa().aca(var21, var15);
+                                 Service.aaa().aca(var21, var15);
                                  var21.ava = true;
                                  var21.awa = var5;
                                  var21.axa = System.currentTimeMillis();
@@ -644,11 +644,11 @@ public final class Code implements Runnable {
                            for(var19 = 0; var19 < 9; ++var19) {
                               var21 = (gg)var23.elementAt(var23.size() - 1);
                               var26[var19] = var21;
-                              var3.daa[var21.ada] = null;
+                              var3.arrItemBag[var21.ada] = null;
                               var23.removeElementAt(var23.size() - 1);
                            }
 
-                           gm.aaa().ada(var26);
+                           Service.aaa().ada(var26);
                         }
 
                         var4 = fz.bja();
@@ -663,11 +663,11 @@ public final class Code implements Runnable {
                            for(var19 = 0; var19 < 9; ++var19) {
                               var21 = (gg)var23.elementAt(var23.size() - 1);
                               var26[var19] = var21;
-                              var3.daa[var21.ada] = null;
+                              var3.arrItemBag[var21.ada] = null;
                               var23.removeElementAt(var23.size() - 1);
                            }
 
-                           gm.aaa().ada(var26);
+                           Service.aaa().ada(var26);
                         }
 
                         var4 = fz.bja();
@@ -681,7 +681,7 @@ public final class Code implements Runnable {
                               bba.removeElementAt(var6);
                               --var6;
                            } else if ((var21 = fz.aga(var5)) != null) {
-                              gm.aaa().aaa(var21, var19);
+                              Service.aaa().aaa(var21, var19);
                            }
                         }
 
@@ -702,8 +702,8 @@ public final class Code implements Runnable {
                            var27.removeAllElements();
 
                            gg var29;
-                           for(var7 = 0; var7 < var3.daa.length; ++var7) {
-                              if ((var29 = var3.daa[var7]) != null && var29.aaa.aaa == var19) {
+                           for(var7 = 0; var7 < var3.arrItemBag.length; ++var7) {
+                              if ((var29 = var3.arrItemBag[var7]) != null && var29.aaa.aaa == var19) {
                                  var27.addElement(var29);
                               }
                            }
@@ -711,7 +711,7 @@ public final class Code implements Runnable {
                            while(var27.size() >= 4) {
                               var7 = 1;
 
-                              for(var5 = var19; var5 < fz.fwa - 1 && gf.dya[var5] <= var3.csa && var7 << 2 <= var27.size() && var7 < 16; ++var5) {
+                              for(var5 = var19; var5 < fz.fwa - 1 && GameScr.dya[var5] <= var3.csa && var7 << 2 <= var27.size() && var7 < 16; ++var5) {
                                  var7 <<= 2;
                               }
 
@@ -719,36 +719,36 @@ public final class Code implements Runnable {
                                  break label375;
                               }
 
-                              gf.ava().ada((int)12);
-                              gf.cwa = new gg[24];
+                              GameScr.ava().ada((int)12);
+                              GameScr.cwa = new gg[24];
 
                               for(var22 = 0; var22 < var7; ++var22) {
                                  var29 = (gg)var27.elementAt(0);
-                                 gf.cwa[var22] = var29;
-                                 var3.daa[var29.ada] = null;
+                                 GameScr.cwa[var22] = var29;
+                                 var3.arrItemBag[var29.ada] = null;
                                  var27.removeElementAt(0);
                               }
 
-                              gm.aaa().aca(gf.cwa);
-                              gj.aba();
-                              if (gf.cwa[0] != null) {
-                                 var3.daa[gf.cwa[0].ada] = gf.cwa[0];
+                              Service.aaa().aca(GameScr.cwa);
+                              LockGame.aba();
+                              if (GameScr.cwa[0] != null) {
+                                 var3.arrItemBag[GameScr.cwa[0].ada] = GameScr.cwa[0];
                               }
                            }
                         }
 
-                        gf.ava().ada((int)4);
+                        GameScr.ava().ada((int)4);
                         var5 = 0;
 
-                        for(var19 = fz.bka(); var5 < var3.daa.length; ++var5) {
-                           if ((var21 = var3.daa[var5]) != null && var21.aaa.aaa == fz.fwa - 1 && var19 > 0) {
-                              gm.aaa().ada(var21.ada);
+                        for(var19 = fz.bka(); var5 < var3.arrItemBag.length; ++var5) {
+                           if ((var21 = var3.arrItemBag[var5]) != null && var21.aaa.aaa == fz.fwa - 1 && var19 > 0) {
+                              Service.aaa().ada(var21.ada);
                               --var19;
                            }
                         }
 
-                        gm.aaa().afa();
-                        gj.ata();
+                        Service.aaa().afa();
+                        LockGame.ata();
                         Thread.sleep(1000L);
                         Controller.aea().aba();
                      }
@@ -764,20 +764,20 @@ public final class Code implements Runnable {
                               }
                            }
 
-                           gf.aba(4, 0, 0);
+                           GameScr.aba(4, 0, 0);
                            if (var19 == 50) {
-                              gm.aaa().aba(9, 7, var5);
+                              Service.aaa().aba(9, 7, var5);
                            } else {
-                              gm.aaa().aba(9, var19 / 10, var5);
+                              Service.aaa().aba(9, var19 / 10, var5);
                            }
 
-                           gj.aha();
+                           LockGame.aha();
                         }
 
                         if (gn.aoa == 138 && var4 > 1 && !fz.aja(35) && !fz.aja(37)) {
-                           gf.aba(4, 0, 0);
-                           gm.aaa().aba(9, 6, 1);
-                           gj.aha();
+                           GameScr.aba(4, 0, 0);
+                           Service.aaa().aba(9, 6, 1);
+                           LockGame.aha();
                            ++var4;
                         }
                      }
@@ -789,15 +789,15 @@ public final class Code implements Runnable {
                      var7 = 0;
 
                      while(true) {
-                        if (var7 >= gf.bma.size()) {
+                        if (var7 >= GameScr.bma.size()) {
                            if (var28 != null) {
-                              gm.aaa().aoa(var28.aga);
+                              Service.aaa().aoa(var28.aga);
                               Auto.aaa(50L);
                            }
                            break;
                         }
 
-                        am var24 = (am)gf.bma.elementAt(var7);
+                        am var24 = (am)GameScr.bma.elementAt(var7);
                         var5 = ci.aaa(var3.ala, var3.ama, var24.aca, var24.ada);
                         if ((var6 == -1 || var5 < var6) && (aaa(var24.aha) || var3.cua.aaa == 1 && var24.aha.aaa == 218) && (var4 > 2 || var24.aha.aba == 19 || var24.aha.aia && fz.aja(var24.aha.aaa))) {
                            var6 = var5;
@@ -808,8 +808,8 @@ public final class Code implements Runnable {
                      }
                   }
 
-                  if (aya && var3.bha * 100L / gf.dta[var3.aya] >= 95L) {
-                     gj.bla();
+                  if (aya && var3.bha * 100L / GameScr.dta[var3.aya] >= 95L) {
+                     LockGame.bla();
                      aba = null;
                      cs.aba().aca();
                      ab.aja.aqa();
@@ -839,7 +839,7 @@ public final class Code implements Runnable {
                               }
 
                               if ((var7 = fz.aia(var5)) >= 0) {
-                                 gm.aaa().aea(var7);
+                                 Service.aaa().aea(var7);
                                  break label574;
                               }
                            }
@@ -855,7 +855,7 @@ public final class Code implements Runnable {
                }
 
                if (fz.ala().aga) {
-                  gj.aja();
+                  LockGame.aja();
                }
 
                Auto.aaa((var1 = System.currentTimeMillis() - var1) < 100L ? 100L - var1 : 0L);
@@ -942,9 +942,9 @@ public final class Code implements Runnable {
 
       for(int var1 = 0; var1 < cua.size(); ++var1) {
          gg var2;
-         if ((var2 = (gg)cua.elementAt(var1)).ada >= 0 && var2.ada < var0.daa.length) {
-            if (var0.daa[var2.ada] != null && var0.daa[var2.ada].aua() >= 0 && var0.daa[var2.ada].aua() < 9) {
-               cua.setElementAt(var0.daa[var2.ada], var1);
+         if ((var2 = (gg)cua.elementAt(var1)).ada >= 0 && var2.ada < var0.arrItemBag.length) {
+            if (var0.arrItemBag[var2.ada] != null && var0.arrItemBag[var2.ada].aua() >= 0 && var0.arrItemBag[var2.ada].aua() < 9) {
+               cua.setElementAt(var0.arrItemBag[var2.ada], var1);
             } else {
                cua.removeElementAt(var1--);
             }
@@ -1182,8 +1182,8 @@ public final class Code implements Runnable {
 
                   if (!var0.asa && System.currentTimeMillis() - var0.ata > 5000L) {
                      var0.ata = System.currentTimeMillis();
-                     gm.aaa().aca(var0.ana, var0.ada);
-                     if (!gj.ata() || !var0.asa) {
+                     Service.aaa().aca(var0.ana, var0.ada);
+                     if (!LockGame.ata() || !var0.asa) {
                         return false;
                      }
                   }
@@ -1278,11 +1278,11 @@ public final class Code implements Runnable {
       fz var0 = fz.ala();
       if (!fz.aja(37) && !fz.aja(35)) {
          av var1;
-         if ((var1 = gf.aia(13)) != null && Math.abs(var1.ala - var0.ala) <= 200 && Math.abs(var1.ama - var0.ama) <= 200) {
+         if ((var1 = GameScr.aia(13)) != null && Math.abs(var1.ala - var0.ala) <= 200 && Math.abs(var1.ama - var0.ama) <= 200) {
             fz.aca(var1.ala > 200 ? var1.ala - 200 : var1.ala + 200, var1.ama);
          }
 
-         gm.aaa().aea();
+         Service.aaa().aea();
       } else {
          fz.aca(var0.ala, gn.ada);
       }
@@ -1322,7 +1322,7 @@ public final class Code implements Runnable {
 
       if (var26.equals("ttl")) {
          cfa = var1;
-         gf.aca("Vị trí truyền thuyết lệnh: " + cfa);
+         GameScr.chatPopup("Vị trí truyền thuyết lệnh: " + cfa);
          return true;
       } else if (var26.equals("akn")) {
          cea.aaa(gn.aoa, gn.ala);
@@ -1333,10 +1333,10 @@ public final class Code implements Runnable {
          return true;
       } else if (var26.equals("adpk")) {
          if (aba instanceof eo) {
-            gf.aca("Tắt auto đánh ai bật pk");
+            GameScr.chatPopup("Tắt auto đánh ai bật pk");
             aga();
          } else {
-            gf.aca("Bật auto đánh ai bật pk");
+            GameScr.chatPopup("Bật auto đánh ai bật pk");
             cpa.aea();
             aaa((Auto)cpa);
          }
@@ -1344,10 +1344,10 @@ public final class Code implements Runnable {
          return true;
       } else if (var26.equals("acpk")) {
          if (aba instanceof ap) {
-            gf.aca("Tắt auto chờ pk");
+            GameScr.chatPopup("Tắt auto chờ pk");
             aga();
          } else {
-            gf.aca("Bật auto chờ pk");
+            GameScr.chatPopup("Bật auto chờ pk");
             coa.aba();
             aaa((Auto)coa);
          }
@@ -1355,10 +1355,10 @@ public final class Code implements Runnable {
          return true;
       } else if (var26.equals("atpk")) {
          if (aba instanceof cj) {
-            gf.aca("Tắt auto pk âm kinh nghiệm");
+            GameScr.chatPopup("Tắt auto pk âm kinh nghiệm");
             aga();
          } else {
-            gf.aca("Bật auto pk âm kinh nghiệm");
+            GameScr.chatPopup("Bật auto pk âm kinh nghiệm");
             if (aba != null) {
                cj.aaa = aba;
             }
@@ -1370,18 +1370,18 @@ public final class Code implements Runnable {
          return true;
       } else if (var26.equals("s")) {
          if (var1 == 0) {
-            gf.aca("Chạy đi đou với tốc độ 0?");
+            GameScr.chatPopup("Chạy đi đou với tốc độ 0?");
          } else if (var1 > 100) {
-            gf.aca("Tốc giày nên để <= 100 để ko bị giật!");
+            GameScr.chatPopup("Tốc giày nên để <= 100 để ko bị giật!");
          } else {
-            gf.aca("Fake tốc chạy ".concat(String.valueOf(var1)));
+            GameScr.chatPopup("Fake tốc chạy ".concat(String.valueOf(var1)));
             bha = var1;
             bga = true;
          }
 
          return true;
       } else if (var26.equals("rs")) {
-         gf.aca("Reset tốc chạy");
+         GameScr.chatPopup("Reset tốc chạy");
          bga = false;
          return true;
       } else if (var26.equals("n")) {
@@ -1389,7 +1389,7 @@ public final class Code implements Runnable {
             var1 = 100;
          }
 
-         gf.aca("Fake tầm ngang ".concat(String.valueOf(var1)));
+         GameScr.chatPopup("Fake tầm ngang ".concat(String.valueOf(var1)));
          bia = true;
          bja = var1;
          return true;
@@ -1398,7 +1398,7 @@ public final class Code implements Runnable {
             var1 = 100;
          }
 
-         gf.aca("Fake tầm cao ".concat(String.valueOf(var1)));
+         GameScr.chatPopup("Fake tầm cao ".concat(String.valueOf(var1)));
          bka = true;
          bla = var1;
          return true;
@@ -1407,29 +1407,29 @@ public final class Code implements Runnable {
             var1 = 1;
          }
 
-         gf.aca("Fake lan ".concat(String.valueOf(var1)));
+         GameScr.chatPopup("Fake lan ".concat(String.valueOf(var1)));
          bma = true;
          bna = var1;
          return true;
       } else if (var26.equals("rsk")) {
-         gf.aca("Reset fake tầm lan skill");
+         GameScr.chatPopup("Reset fake tầm lan skill");
          bma = false;
          bia = false;
          bka = false;
          return true;
       } else if (var26.equals("zone")) {
          ADV.aca = !ADV.aca;
-         gf.aca(ADV.aca ? "Bật TSMT" : "Bật TSMKT");
+         GameScr.chatPopup(ADV.aca ? "Bật TSMT" : "Bật TSMKT");
          return true;
       } else if (var26.equals("show")) {
          cda = !cda;
-         gf.aca(cda ? "Bật Show" : "Bật Show");
+         GameScr.chatPopup(cda ? "Bật Show" : "Bật Show");
          return true;
       } else if (var26.equals("set")) {
          (new ge()).aaa();
          return true;
       } else if (var26.equals("check")) {
-         gm.aaa().aja(fz.ala().cea);
+         Service.aaa().aja(fz.ala().cea);
          return true;
       } else if (!var26.equals("bang") && !var26.equals("fz")) {
          if (!var26.equals("bangb") && !var26.equals("fb")) {
@@ -1440,7 +1440,7 @@ public final class Code implements Runnable {
                         var1 = 50;
                      }
 
-                     gf.aca("Khinh kông ".concat(String.valueOf(var1)));
+                     GameScr.chatPopup("Khinh kông ".concat(String.valueOf(var1)));
                      fz.aca(fz.ala().ala, fz.ala().ama - var1);
                      return true;
                   } else if (var26.equals("d")) {
@@ -1448,7 +1448,7 @@ public final class Code implements Runnable {
                         var1 = 50;
                      }
 
-                     gf.aca("Độn thổ ".concat(String.valueOf(var1)));
+                     GameScr.chatPopup("Độn thổ ".concat(String.valueOf(var1)));
                      fz.aca(fz.ala().ala, fz.ala().ama + var1);
                      return true;
                   } else if (var26.equals("l")) {
@@ -1456,7 +1456,7 @@ public final class Code implements Runnable {
                         var1 = 50;
                      }
 
-                     gf.aca("Dịch trái ".concat(String.valueOf(var1)));
+                     GameScr.chatPopup("Dịch trái ".concat(String.valueOf(var1)));
                      fz.aca(fz.ala().ala - var1, fz.ala().ama);
                      return true;
                   } else if (var26.equals("r")) {
@@ -1464,48 +1464,48 @@ public final class Code implements Runnable {
                         var1 = 50;
                      }
 
-                     gf.aca("Dịch phải ".concat(String.valueOf(var1)));
+                     GameScr.chatPopup("Dịch phải ".concat(String.valueOf(var1)));
                      fz.aca(fz.ala().ala + var1, fz.ala().ama);
                      return true;
                   } else {
                      fz var6;
                      if (var26.equals("g")) {
                         if ((var6 = fz.ala()).dsa != null) {
-                           gf.aca("MoveTo " + var6.dsa.cea);
+                           GameScr.chatPopup("MoveTo " + var6.dsa.cea);
                            fz.aca(var6.dsa.ala, var6.dsa.ama);
                         } else if (var6.dra != null) {
-                           gf.aca("MoveTo " + var6.dra.cea);
+                           GameScr.chatPopup("MoveTo " + var6.dra.cea);
                            fz.aca(var6.dra.ala, var6.dra.ama);
                         } else if (var6.dpa != null) {
-                           gf.aca("MoveTo " + var6.dpa.ada().aga);
+                           GameScr.chatPopup("MoveTo " + var6.dpa.ada().aga);
                            fz.aca(var6.dpa.aha, var6.dpa.aia);
                         } else if (var6.dta != null) {
-                           gf.aca("MoveTo " + var6.dta.aha.ada);
+                           GameScr.chatPopup("MoveTo " + var6.dta.aha.ada);
                            fz.aca(var6.dta.aaa, var6.dta.aba);
                         }
 
                         return true;
                      } else if (var26.equals("ta")) {
-                        gf.ava().ada((int)9);
+                        GameScr.ava().ada((int)9);
                         return true;
                      } else if (var26.equals("sw")) {
-                        gf.ava().ada((int)36);
+                        GameScr.ava().ada((int)36);
                         return true;
                      } else if (var26.equals("up")) {
                         cc.aaa().aba();
                         return true;
                      } else if (var26.equals("aq")) {
                         if ((var6 = fz.ala()).dpa != null) {
-                           gf.bna.removeElement(var6.dpa);
+                           GameScr.bna.removeElement(var6.dpa);
                         }
 
                         return true;
                      } else if (var26.equals("z")) {
-                        gf.aca((fz.fea ? "Tắt" : "Bật") + " auto chuyển map");
+                        GameScr.chatPopup((fz.fea ? "Tắt" : "Bật") + " auto chuyển map");
                         fz.fea = !fz.fea;
                         return true;
                      } else if (var26.equals("rm")) {
-                        gf.aca((fz.eza ? "Tắt" : "Bật") + " auto next map");
+                        GameScr.chatPopup((fz.eza ? "Tắt" : "Bật") + " auto next map");
                         fz.eza = !fz.eza;
                         return true;
                      } else if (var26.equals("x")) {
@@ -1513,7 +1513,7 @@ public final class Code implements Runnable {
                            var1 = -1;
                         }
 
-                        gf.aca("KC Nhặt ".concat(String.valueOf(var1)));
+                        GameScr.chatPopup("KC Nhặt ".concat(String.valueOf(var1)));
                         ama = var1;
                         return true;
                      } else if (var26.equals("kts")) {
@@ -1521,7 +1521,7 @@ public final class Code implements Runnable {
                            var1 = -1;
                         }
 
-                        gf.aca("KC Tàn sát ".concat(String.valueOf(var1)));
+                        GameScr.chatPopup("KC Tàn sát ".concat(String.valueOf(var1)));
                         aoa = fz.ala().ala;
                         apa = fz.ala().ama;
                         ana = var1;
@@ -1530,10 +1530,10 @@ public final class Code implements Runnable {
                         ac var7;
                         if (var26.equals("ts")) {
                            if ((var7 = ac.aba(var1)) == null) {
-                              gf.aca("Tàn sát all");
+                              GameScr.chatPopup("Tàn sát all");
                               aaa(-1, gn.aoa);
                            } else {
-                              gf.aca("Tàn sát " + var7.ada().aga + " lv " + var1);
+                              GameScr.chatPopup("Tàn sát " + var7.ada().aga + " lv " + var1);
                               aaa(var7.ara, gn.aoa);
                            }
 
@@ -1543,43 +1543,43 @@ public final class Code implements Runnable {
                            if (var26.equals("tsx")) {
                               var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                               if (var8 == null) {
-                                 gf.aca("Tàn sát all");
+                                 GameScr.chatPopup("Tàn sát all");
                                  aaa(-1, gn.aoa);
                               } else {
-                                 gf.aca("Tàn sát " + var8.aga + " id " + var1);
+                                 GameScr.chatPopup("Tàn sát " + var8.aga + " id " + var1);
                                  aaa(var8.aea, gn.aoa);
                               }
 
                               return true;
                            } else if (var26.equals("tsa")) {
-                              gf.aca("Tàn sát all");
+                              GameScr.chatPopup("Tàn sát all");
                               aaa(-1, gn.aoa);
                               return true;
                            } else if (var26.equals("anv")) {
                               if (gn.aoa != 1 && gn.aoa != 27 && gn.aoa != 72) {
-                                 gf.aca("Bạn phải đứng ở trường để Auto");
+                                 GameScr.chatPopup("Bạn phải đứng ở trường để Auto");
                                  return true;
                               } else {
-                                 gf.aca("Auto Nhiệm Vụ Hằng Ngày");
+                                 GameScr.chatPopup("Auto Nhiệm Vụ Hằng Ngày");
                                  ada();
                                  return true;
                               }
                            } else if (var26.equals("att")) {
-                              gf.aca("Auto Tà Thú");
+                              GameScr.chatPopup("Auto Tà Thú");
                               aea();
                               return true;
                            } else if (var26.equals("ak")) {
                               if (aba == cja) {
-                                 gf.aca("Tắt tự đánh");
+                                 GameScr.chatPopup("Tắt tự đánh");
                                  aga();
                               } else {
-                                 gf.aca("Bật tự đánh");
+                                 GameScr.chatPopup("Bật tự đánh");
                                  aua();
                               }
 
                               return true;
                            } else if (var26.equals("adv")) {
-                              gf.aca("Auto Danh Vọng");
+                              GameScr.chatPopup("Auto Danh Vọng");
                               afa();
                               return true;
                            } else if (var26.equals("ld")) {
@@ -1587,11 +1587,11 @@ public final class Code implements Runnable {
                               return true;
                            } else if (var26.equals("nw")) {
                               if (aba == aga) {
-                                 gf.aca("Tắt auto lôi đài win");
-                                 gj.bla();
+                                 GameScr.chatPopup("Tắt auto lôi đài win");
+                                 LockGame.bla();
                                  aba = null;
                               } else {
-                                 gf.aca("Bật auto lôi đài win");
+                                 GameScr.chatPopup("Bật auto lôi đài win");
                                  aga.aea();
                                  aaa((Auto)aga);
                               }
@@ -1599,11 +1599,11 @@ public final class Code implements Runnable {
                               return true;
                            } else if (var26.equals("nl")) {
                               if (aba == cma) {
-                                 gf.aca("Tắt auto lôi đài lose");
-                                 gj.bla();
+                                 GameScr.chatPopup("Tắt auto lôi đài lose");
+                                 LockGame.bla();
                                  aba = null;
                               } else {
-                                 gf.aca("Bật auto lôi đài lose");
+                                 GameScr.chatPopup("Bật auto lôi đài lose");
                                  cma.aea();
                                  aaa((Auto)cma);
                               }
@@ -1611,27 +1611,27 @@ public final class Code implements Runnable {
                               return true;
                            } else if (!var26.equals("e") && !var26.equals("pe")) {
                               if (var26.equals("k")) {
-                                 gf.aca("Chuyển Khu: ".concat(String.valueOf(var1)));
-                                 gf.ava();
-                                 gf.aja(var1);
+                                 GameScr.chatPopup("Chuyển Khu: ".concat(String.valueOf(var1)));
+                                 GameScr.ava();
+                                 GameScr.aja(var1);
                                  return true;
                               } else if (var26.equals("ltd")) {
                                  if (!gn.afa(gn.aoa) && !gn.ada(gn.aoa)) {
-                                    gf.aca("Hãy đứng ở làng hoặc trường để lưu tọa độ");
+                                    GameScr.chatPopup("Hãy đứng ở làng hoặc trường để lưu tọa độ");
                                  } else {
-                                    gf.aha(5);
-                                    gm.aaa().aga(5);
-                                    gm.aaa().aca(5, 1, 0);
+                                    GameScr.aha(5);
+                                    Service.aaa().aga(5);
+                                    Service.aaa().aca(5, 1, 0);
                                  }
 
                                  return true;
                               } else if (var26.equals("nm")) {
-                                 gf.aca("Next map: ".concat(String.valueOf(var1)));
+                                 GameScr.chatPopup("Next map: ".concat(String.valueOf(var1)));
                                  gn.ama(var1);
                                  return true;
                               } else if (var26.equals("gm")) {
                                  if (var1 < gn.ava.length && var1 >= 0) {
-                                    gf.aca("Go to: " + gn.ava[var1]);
+                                    GameScr.chatPopup("Go to: " + gn.ava[var1]);
                                     gn.ala(var1);
                                     return true;
                                  } else {
@@ -1639,57 +1639,57 @@ public final class Code implements Runnable {
                                  }
                               } else if (var26.equals("npc")) {
                                  if (var1 < av.aba.length) {
-                                    gf.aca("Act NPC: " + av.aba[var1].aba);
-                                    gf.aha(var1);
+                                    GameScr.chatPopup("Act NPC: " + av.aba[var1].aba);
+                                    GameScr.aha(var1);
                                  }
 
                                  return true;
                               } else if (var26.equals("hs")) {
-                                 gf.aca("Next to hirosaki");
+                                 GameScr.chatPopup("Next to hirosaki");
                                  (new Thread(new gl(0, 1))).start();
                                  return true;
                               } else if (var26.equals("hr")) {
-                                 gf.aca("Next to haruna");
+                                 GameScr.chatPopup("Next to haruna");
                                  (new Thread(new gl(1, 27))).start();
                                  return true;
                               } else if (var26.equals("oz")) {
-                                 gf.aca("Next to Ozawa(Oozaka)");
+                                 GameScr.chatPopup("Next to Ozawa(Oozaka)");
                                  (new Thread(new gl(2, 72))).start();
                                  return true;
                               } else if (var26.equals("kj")) {
-                                 gf.aca("Next to Kojin");
+                                 GameScr.chatPopup("Next to Kojin");
                                  (new Thread(new gl(3, 10))).start();
                                  return true;
                               } else if (var26.equals("sz")) {
-                                 gf.aca("Next to Sanzu");
+                                 GameScr.chatPopup("Next to Sanzu");
                                  (new Thread(new gl(4, 17))).start();
                                  return true;
                               } else if (var26.equals("tn")) {
-                                 gf.aca("Next to Tone");
+                                 GameScr.chatPopup("Next to Tone");
                                  (new Thread(new gl(5, 22))).start();
                                  return true;
                               } else if (var26.equals("lc")) {
-                                 gf.aca("Next to Chài");
+                                 GameScr.chatPopup("Next to Chài");
                                  (new Thread(new gl(6, 32))).start();
                                  return true;
                               } else if (var26.equals("ck")) {
-                                 gf.aca("Next to Chakumi");
+                                 GameScr.chatPopup("Next to Chakumi");
                                  (new Thread(new gl(7, 38))).start();
                                  return true;
                               } else if (var26.equals("eg")) {
-                                 gf.aca("Next to Echigo");
+                                 GameScr.chatPopup("Next to Echigo");
                                  (new Thread(new gl(8, 43))).start();
                                  return true;
                               } else if (var26.equals("os")) {
-                                 gf.aca("Next to Oshin");
+                                 GameScr.chatPopup("Next to Oshin");
                                  (new Thread(new gl(9, 48))).start();
                                  return true;
                               } else if (var26.equals("mnv")) {
-                                 gf.aca("Next to Map Nhiệm Vụ");
-                                 gn.ala(gf.bma());
+                                 GameScr.chatPopup("Next to Map Nhiệm Vụ");
+                                 gn.ala(GameScr.bma());
                                  return true;
                               } else if (var26.equals("mnvp")) {
-                                 gf.aca("Next to Map Nhiệm Vụ Phụ");
+                                 GameScr.chatPopup("Next to Map Nhiệm Vụ Phụ");
                                  aj var27;
                                  if ((var27 = fz.ama(0)) != null) {
                                     gn.ala(var27.aga);
@@ -1699,14 +1699,14 @@ public final class Code implements Runnable {
                               } else {
                                  am var10;
                                  if (var26.equals("add")) {
-                                    gf.aca("Thêm vật phẩm vào ds nhặt");
+                                    GameScr.chatPopup("Thêm vật phẩm vào ds nhặt");
                                     if ((var10 = fz.ala().dta) != null) {
                                        aaa(var10.aha.aaa);
                                     }
 
                                     return true;
                                  } else if (var26.equals("del")) {
-                                    gf.aca("Xóa vật phẩm khỏi ds nhặt");
+                                    GameScr.chatPopup("Xóa vật phẩm khỏi ds nhặt");
                                     if ((var10 = fz.ala().dta) != null) {
                                        aba(var10.aha.aaa);
                                     }
@@ -1716,95 +1716,95 @@ public final class Code implements Runnable {
                                     gh var11;
                                     if (var26.equals("ait")) {
                                        if ((var11 = gi.aaa((short)var1)) != null) {
-                                          gf.aca("Thêm " + var11.ada + " vào ds nhặt");
+                                          GameScr.chatPopup("Thêm " + var11.ada + " vào ds nhặt");
                                           aaa(var11.aaa);
                                        }
 
                                        return true;
                                     } else if (var26.equals("dit")) {
                                        if ((var11 = gi.aaa((short)var1)) != null) {
-                                          gf.aca("Xóa " + var11.ada + " khỏi ds nhặt");
+                                          GameScr.chatPopup("Xóa " + var11.ada + " khỏi ds nhặt");
                                           aba(var11.aaa);
                                        }
 
                                        return true;
                                     } else if (var26.equals("ajt")) {
                                        if ((var11 = gi.aaa((short)var1)) != null) {
-                                          gf.aca("Thêm " + var11.ada + " vào ds nhặt");
+                                          GameScr.chatPopup("Thêm " + var11.ada + " vào ds nhặt");
                                           aca(var11.aaa);
                                        }
 
                                        return true;
                                     } else if (var26.equals("djt")) {
                                        if ((var11 = gi.aaa((short)var1)) != null) {
-                                          gf.aca("Xóa " + var11.ada + " khỏi ds nhặt");
+                                          GameScr.chatPopup("Xóa " + var11.ada + " khỏi ds nhặt");
                                           ada(var11.aaa);
                                        }
 
                                        return true;
                                     } else if (var26.equals("cnhat")) {
                                        if (aqa) {
-                                          gf.aca("Bật nhặt xa");
+                                          GameScr.chatPopup("Bật nhặt xa");
                                        } else {
-                                          gf.aca("Bật hút VP");
+                                          GameScr.chatPopup("Bật hút VP");
                                        }
 
                                        aqa = !aqa;
                                        return true;
                                     } else if (var26.equals("ruong")) {
-                                       gf.ava().ama();
+                                       GameScr.ava().ama();
                                        return true;
                                     } else if (var26.equals("vpnhat")) {
-                                       gf.ava().ada((int)46);
+                                       GameScr.ava().ada((int)46);
                                        return true;
                                     } else if (var26.equals("die")) {
                                        aoa();
                                        return true;
                                     } else if (var26.equals("dcvt")) {
                                        if (ara) {
-                                          gf.aca("Tắt đánh chuyển vị trí");
+                                          GameScr.chatPopup("Tắt đánh chuyển vị trí");
                                        } else {
-                                          gf.aca("Bật đánh chuyển vị trí");
+                                          GameScr.chatPopup("Bật đánh chuyển vị trí");
                                        }
 
                                        ara = !ara;
                                        if (fz.fla) {
-                                          gm.aaa().aka("dcvt " + (ara ? 1 : 0));
+                                          Service.aaa().aka("dcvt " + (ara ? 1 : 0));
                                        }
 
                                        return true;
                                     } else if (var26.equals("avt")) {
-                                       gf.aca("Thêm vị trí " + ata.size());
+                                       GameScr.chatPopup("Thêm vị trí " + ata.size());
                                        ata.addElement(new Integer(fz.ala().ala));
                                        aua.addElement(new Integer(fz.ala().ama));
                                        if (fz.fla) {
-                                          gm.aaa().aka("avt " + fz.ala().ala + " " + fz.ala().ama);
+                                          Service.aaa().aka("avt " + fz.ala().ala + " " + fz.ala().ama);
                                        }
 
                                        return true;
                                     } else if (var26.equals("dvt")) {
-                                       gf.aca("Xóa hết vị trí");
+                                       GameScr.chatPopup("Xóa hết vị trí");
                                        ata.removeAllElements();
                                        aua.removeAllElements();
                                        if (fz.fla) {
-                                          gm.aaa().aka("dvt");
+                                          Service.aaa().aka("dvt");
                                        }
 
                                        return true;
                                     } else if (var26.equals("dvtx")) {
-                                       gf.aca("Xóa vị trí ".concat(String.valueOf(var1)));
+                                       GameScr.chatPopup("Xóa vị trí ".concat(String.valueOf(var1)));
                                        ata.removeElementAt(var1);
                                        aua.removeElementAt(var1);
                                        if (fz.fla) {
-                                          gm.aaa().aka("dtvx ".concat(String.valueOf(var1)));
+                                          Service.aaa().aka("dtvx ".concat(String.valueOf(var1)));
                                        }
 
                                        return true;
                                     } else if (var26.equals("dck")) {
                                        if (ava = !ava) {
-                                          gf.aca("Tắt đánh chuyển khu");
+                                          GameScr.chatPopup("Tắt đánh chuyển khu");
                                        } else {
-                                          gf.aca("Bật đánh chuyển khu");
+                                          GameScr.chatPopup("Bật đánh chuyển khu");
                                           ab.bka.aaa("Khu", new ca("Đặt", 1100090), 1);
                                           ab.bka.aaa.aaa(ala());
                                        }
@@ -1812,296 +1812,296 @@ public final class Code implements Runnable {
                                        return true;
                                     } else if (var26.equals("keeplevel")) {
                                        if (aya) {
-                                          gf.aca("Tắt giữ lv");
+                                          GameScr.chatPopup("Tắt giữ lv");
                                        } else {
-                                          gf.aca("Bật giữ lv");
+                                          GameScr.chatPopup("Bật giữ lv");
                                        }
 
                                        aya = !aya;
                                        return true;
                                     } else if (var26.equals("addn")) {
-                                       gf.aca("Thêm nhóm");
+                                       GameScr.chatPopup("Thêm nhóm");
                                        if ((var6 = fz.ala().dsa) != null) {
                                           if (!aca(var6.cea)) {
                                              aia.addElement(var6.cea);
                                           }
 
-                                          gm.aaa().afa(var6.cea);
+                                          Service.aaa().afa(var6.cea);
                                        }
 
                                        return true;
                                     } else if (var26.equals("cn")) {
-                                       gf.aca("Xóa nhóm");
+                                       GameScr.chatPopup("Xóa nhóm");
                                        aha = null;
                                        aia.removeAllElements();
                                        aya();
                                        return true;
                                     } else if (var26.equals("pt")) {
                                        if (!fz.ala().cea.equals(aha)) {
-                                          gf.aca("Bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Bạn không là nhóm trưởng");
                                           return true;
                                        } else {
-                                          gf.aca("PT nhóm");
+                                          GameScr.chatPopup("PT nhóm");
 
                                           for(var4 = 0; var4 < aia.size(); ++var4) {
                                              if (!ada(var0 = (String)aia.elementAt(var4))) {
-                                                gm.aaa().afa(var0);
+                                                Service.aaa().afa(var0);
                                              }
 
                                              if (aba instanceof ej) {
-                                                gm.aaa().aaa(var0, "pkm " + aba.aga);
-                                                gm.aaa().aaa(var0, "pkk " + aba.aha);
+                                                Service.aaa().aaa(var0, "pkm " + aba.aga);
+                                                Service.aaa().aaa(var0, "pkk " + aba.aha);
                                              } else if (aba != null) {
-                                                gm.aaa().aaa(var0, "map " + aba.aga);
-                                                gm.aaa().aaa(var0, "khu " + aba.aha);
+                                                Service.aaa().aaa(var0, "map " + aba.aga);
+                                                Service.aaa().aaa(var0, "khu " + aba.aha);
                                              }
                                           }
 
                                           return true;
                                        }
                                     } else if (var26.equals("sn")) {
-                                       gf.aca("Lưu nhóm");
+                                       GameScr.chatPopup("Lưu nhóm");
                                        aya();
                                        return true;
                                     } else if (var26.equals("tsn")) {
-                                       if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
                                           if ((var7 = ac.aba(var1)) == null) {
-                                             gf.aca("Tàn sát nhóm all");
+                                             GameScr.chatPopup("Tàn sát nhóm all");
                                              aaa(-1, gn.aoa);
                                           } else {
-                                             gf.aca("Tàn sát nhóm " + var7.ada().aga + " lv " + var1);
+                                             GameScr.chatPopup("Tàn sát nhóm " + var7.ada().aga + " lv " + var1);
                                              aaa(var7.ara, gn.aoa);
                                           }
 
                                           cia.afa = true;
-                                          gm.aaa().aka("ts " + cia.aga + " " + cia.aha + " " + cia.aaa);
+                                          Service.aaa().aka("ts " + cia.aga + " " + cia.aha + " " + cia.aaa);
                                           return true;
                                        } else {
-                                          gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                           return true;
                                        }
                                     } else if (var26.equals("tsnx")) {
-                                       if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
-                                             gf.aca("Tàn sát nhóm all");
+                                             GameScr.chatPopup("Tàn sát nhóm all");
                                              aaa(-1, gn.aoa);
                                           } else {
-                                             gf.aca("Tàn sát nhóm " + var8.aga + " id " + var1);
+                                             GameScr.chatPopup("Tàn sát nhóm " + var8.aga + " id " + var1);
                                              aaa(var8.aea, gn.aoa);
                                           }
 
                                           cia.afa = true;
-                                          gm.aaa().aka("ts " + cia.aga + " " + cia.aha + " " + cia.aaa);
+                                          Service.aaa().aka("ts " + cia.aga + " " + cia.aha + " " + cia.aaa);
                                           return true;
                                        } else {
-                                          gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                           return true;
                                        }
                                     } else if (var26.equals("tsan")) {
-                                       if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
-                                          gf.aca("Tàn sát nhóm all");
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                          GameScr.chatPopup("Tàn sát nhóm all");
                                           aaa(-1, gn.aoa);
                                           cia.afa = true;
-                                          gm.aaa().aka("tsa " + cia.aga + " " + cia.aha);
+                                          Service.aaa().aka("tsa " + cia.aga + " " + cia.aha);
                                           return true;
                                        } else {
-                                          gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                           return true;
                                        }
                                     } else if (var26.equals("attn")) {
-                                       if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
-                                          gf.aca("Auto Tà Thú Nhóm");
+                                       if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                          GameScr.chatPopup("Auto Tà Thú Nhóm");
                                           aea();
                                           aea.afa = true;
-                                          gm.aaa().aka("att " + aea.aga + " " + aea.aha + " " + aea.aaa);
+                                          Service.aaa().aka("att " + aea.aga + " " + aea.aha + " " + aea.aaa);
                                           return true;
                                        } else {
-                                          gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                           return true;
                                        }
                                     } else if (var26.equals("buff")) {
-                                       gf.aca("Bật Buff HS Xa");
+                                       GameScr.chatPopup("Bật Buff HS Xa");
                                        aba(true, true);
                                        return true;
                                     } else if (var26.equals("bux")) {
-                                       gf.aca("Bật Buff Xa");
+                                       GameScr.chatPopup("Bật Buff Xa");
                                        aba(true, false);
                                        return true;
                                     } else if (var26.equals("hsx")) {
-                                       gf.aca("Bật HS Xa");
+                                       GameScr.chatPopup("Bật HS Xa");
                                        aba(false, true);
                                        return true;
                                     } else {
                                        int var12;
                                        if (var26.equals("cy")) {
                                           if (aba == null) {
-                                             gf.aca("Bạn chưa up yên");
+                                             GameScr.chatPopup("Bạn chưa up yên");
                                           } else {
                                              var12 = fz.ala().csa - aba.ala;
                                              var1 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
-                                             gf.aca("Up " + var12 + " trong " + ex.aba(var1) + " perh=" + var12 / var1 * 3600);
+                                             GameScr.chatPopup("Up " + var12 + " trong " + ex.aba(var1) + " perh=" + var12 / var1 * 3600);
                                           }
 
                                           return true;
                                        } else if (var26.equals("clv")) {
                                           if (aba == null) {
-                                             gf.aca("Bạn chưa up level");
+                                             GameScr.chatPopup("Bạn chưa up level");
                                           } else {
                                              long var33;
-                                             float var30 = (float)((var33 = fz.ala().aja - aba.ama) * 10000L / gf.dta[fz.ala().aya]) / 100.0F;
+                                             float var30 = (float)((var33 = fz.ala().aja - aba.ama) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
                                              var12 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                                              long var35;
-                                             float var18 = (float)((var35 = var33 * 3600L / (long)var12) * 10000L / gf.dta[fz.ala().aya]) / 100.0F;
-                                             gf.aca("Up " + var33 + " - " + var30 + "% trong " + ex.aba(var12) + " perh=" + var35 + " - " + var18 + "%");
+                                             float var18 = (float)((var35 = var33 * 3600L / (long)var12) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
+                                             GameScr.chatPopup("Up " + var33 + " - " + var30 + "% trong " + ex.aba(var12) + " perh=" + var35 + " - " + var18 + "%");
                                           }
 
                                           return true;
                                        } else if (var26.equals("st")) {
                                           if ((var7 = ac.aba(var1)) == null) {
-                                             gf.aca("Stanima all");
+                                             GameScr.chatPopup("Stanima all");
                                              aca(-1, gn.aoa);
                                           } else {
-                                             gf.aca("Stanima " + var7.ada().aga + " lv " + var1);
+                                             GameScr.chatPopup("Stanima " + var7.ada().aga + " lv " + var1);
                                              aca(var7.ara, gn.aoa);
                                           }
 
                                           return true;
                                        } else if (var26.equals("sta")) {
-                                          gf.aca("Stanima all");
+                                          GameScr.chatPopup("Stanima all");
                                           aca(-1, gn.aoa);
                                           return true;
                                        } else if (var26.equals("stn")) {
-                                          if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
+                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
                                              if ((var7 = ac.aba(var1)) == null) {
-                                                gf.aca("Stanima nhóm all");
+                                                GameScr.chatPopup("Stanima nhóm all");
                                                 aca(-1, gn.aoa);
                                              } else {
-                                                gf.aca("Stanima nhóm " + var7.ada().aga + " lv " + var1);
+                                                GameScr.chatPopup("Stanima nhóm " + var7.ada().aga + " lv " + var1);
                                                 aca(var7.ara, gn.aoa);
                                              }
 
                                              aca.afa = true;
-                                             gm.aaa().aka("st " + aca.aga + " " + aca.aha + " " + aca.aba);
+                                             Service.aaa().aka("st " + aca.aga + " " + aca.aha + " " + aca.aba);
                                              return true;
                                           } else {
-                                             gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                             GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                              return true;
                                           }
                                        } else if (var26.equals("stan")) {
-                                          if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
-                                             gf.aca("Stanima nhóm all");
+                                          if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                             GameScr.chatPopup("Stanima nhóm all");
                                              aca(-1, gn.aoa);
                                              aca.afa = true;
-                                             gm.aaa().aka("sta " + aca.aga + " " + aca.aha);
+                                             Service.aaa().aka("sta " + aca.aga + " " + aca.aha);
                                              return true;
                                           } else {
-                                             gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                             GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                              return true;
                                           }
                                        } else if (var26.equals("stx")) {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
-                                             gf.aca("Tàn sát all");
+                                             GameScr.chatPopup("Tàn sát all");
                                              aaa(-1, gn.aoa);
                                           } else {
-                                             gf.aca("Tàn sát " + var8.aga + " id " + var1);
+                                             GameScr.chatPopup("Tàn sát " + var8.aga + " id " + var1);
                                              aca(var8.aea, gn.aoa);
                                           }
 
                                           return true;
                                        } else if (!var26.equals("stnx")) {
                                           if (var26.equals("sts")) {
-                                             gf.aca("Step Stanima");
+                                             GameScr.chatPopup("Step Stanima");
                                              aca.aea();
-                                             if (fz.ala().cea.equals(aha) && gf.bfa.size() > 0) {
-                                                gm.aaa().aka("sts");
+                                             if (fz.ala().cea.equals(aha) && GameScr.bfa.size() > 0) {
+                                                Service.aaa().aka("sts");
                                              }
 
                                              return true;
                                           } else if (var26.equals("stb")) {
-                                             if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa != fz.ala().asa) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
                                                 if (fz.ala().cua.aaa != 6) {
-                                                   gf.aca("Bạn không phải là quạt");
+                                                   GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
-                                                   gf.aca("Stanima Buff HS");
+                                                   GameScr.chatPopup("Stanima Buff HS");
                                                    aaa(true, true);
                                                    return true;
                                                 }
                                              } else {
-                                                gf.aca("Chưa có nhóm hoặc bạn là nhóm trưởng");
+                                                GameScr.chatPopup("Chưa có nhóm hoặc bạn là nhóm trưởng");
                                                 return true;
                                              }
                                           } else if (var26.equals("stbx")) {
-                                             if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa != fz.ala().asa) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
                                                 if (fz.ala().cua.aaa != 6) {
-                                                   gf.aca("Bạn không phải là quạt");
+                                                   GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
-                                                   gf.aca("Stanima Buff");
+                                                   GameScr.chatPopup("Stanima Buff");
                                                    aaa(true, false);
                                                    return true;
                                                 }
                                              } else {
-                                                gf.aca("Chưa có nhóm hoặc bạn là nhóm trưởng");
+                                                GameScr.chatPopup("Chưa có nhóm hoặc bạn là nhóm trưởng");
                                                 return true;
                                              }
                                           } else if (var26.equals("sths")) {
-                                             if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa != fz.ala().asa) {
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa != fz.ala().asa) {
                                                 if (fz.ala().cua.aaa != 6) {
-                                                   gf.aca("Bạn không phải là quạt");
+                                                   GameScr.chatPopup("Bạn không phải là quạt");
                                                    return true;
                                                 } else {
-                                                   gf.aca("Stanima HS");
+                                                   GameScr.chatPopup("Stanima HS");
                                                    aaa(false, true);
                                                    return true;
                                                 }
                                              } else {
-                                                gf.aca("Chưa có nhóm hoặc bạn là nhóm trưởng");
+                                                GameScr.chatPopup("Chưa có nhóm hoặc bạn là nhóm trưởng");
                                                 return true;
                                              }
                                           } else if (var26.equals("pkb")) {
-                                             gf.aca("PK Thần Thú");
+                                             GameScr.chatPopup("PK Thần Thú");
                                              aaa((Auto)(new ej(gn.aoa)));
-                                             if (aha != null && fz.ala().cea.equals(aha) && gf.bfa.size() > 1) {
-                                                gm.aaa().aka("pkm " + gn.aoa);
+                                             if (aha != null && fz.ala().cea.equals(aha) && GameScr.bfa.size() > 1) {
+                                                Service.aaa().aka("pkm " + gn.aoa);
                                              }
 
                                              return true;
                                           } else if (var26.equals("pkk")) {
-                                             gf.aca("PK Thần Thú");
+                                             GameScr.chatPopup("PK Thần Thú");
                                              ej var32;
                                              (var32 = new ej(gn.aoa)).aha = var1;
                                              aaa((Auto)var32);
-                                             if (aha != null && fz.ala().cea.equals(aha) && gf.bfa.size() > 1) {
-                                                gm.aaa().aka("pkm " + gn.aoa);
-                                                gm.aaa().aka("pkk ".concat(String.valueOf(var1)));
+                                             if (aha != null && fz.ala().cea.equals(aha) && GameScr.bfa.size() > 1) {
+                                                Service.aaa().aka("pkm " + gn.aoa);
+                                                Service.aaa().aka("pkk ".concat(String.valueOf(var1)));
                                              }
 
                                              return true;
                                           } else if (var26.equals("lb")) {
                                              var0 = "";
 
-                                             for(var1 = 0; var1 < gf.bna.size(); ++var1) {
+                                             for(var1 = 0; var1 < GameScr.bna.size(); ++var1) {
                                                 ac var31;
-                                                if ((var31 = (ac)gf.bna.elementAt(var1)).axa) {
+                                                if ((var31 = (ac)GameScr.bna.elementAt(var1)).axa) {
                                                    var0 = var0 + var31.ada().aga + " lv: " + var31.awa + ", ";
                                                 }
                                              }
 
-                                             gf.aca("Mob: ".concat(String.valueOf(var0)));
+                                             GameScr.chatPopup("Mob: ".concat(String.valueOf(var0)));
                                              return true;
                                           } else if (var26.equals("tb")) {
                                              (new Thread(new an())).start();
                                              return true;
                                           } else if (var26.equals("sell")) {
-                                             gf.aca("Auto Sell");
+                                             GameScr.chatPopup("Auto Sell");
                                              ava();
                                              return true;
                                           } else if (var26.equals("h")) {
                                              Calendar var28 = ci.aca();
-                                             gf.aca("Time " + var28.get(11) + ":" + var28.get(12) + ":" + var28.get(13));
+                                             GameScr.chatPopup("Time " + var28.get(11) + ":" + var28.get(12) + ":" + var28.get(13));
                                              return true;
                                           } else if (var26.equals("dt")) {
                                              aaa((Auto)(new cg()));
@@ -2116,13 +2116,13 @@ public final class Code implements Runnable {
                                              (new Thread(new az())).start();
                                              return true;
                                           } else if (var26.equals("f")) {
-                                             gf.ava().ada(var1);
+                                             GameScr.ava().ada(var1);
                                              return true;
                                           } else if (var0.equals("hd9x")) {
-                                             gf.aca("Hang động 9x");
+                                             GameScr.chatPopup("Hang động 9x");
                                              aaa((Auto)(new bj()));
-                                             if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
-                                                gm.aaa().aka("hd9x");
+                                             if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
+                                                Service.aaa().aka("hd9x");
                                              }
 
                                              return true;
@@ -2169,19 +2169,19 @@ public final class Code implements Runnable {
                                                 }
                                              } else {
                                                 if (var26.equals("boss")) {
-                                                   gf.aca("Auto Boss ".concat(String.valueOf(var1)));
+                                                   GameScr.chatPopup("Auto Boss ".concat(String.valueOf(var1)));
                                                    aaa((Auto)(new de(var1)));
                                                    return true;
                                                 }
 
                                                 if (var26.equals("kpk")) {
-                                                   gf.aca("Khu PK ".concat(String.valueOf(var1)));
+                                                   GameScr.chatPopup("Khu PK ".concat(String.valueOf(var1)));
                                                    Auto.axa = var1;
                                                    return true;
                                                 }
 
                                                 if (var26.equals("cpk")) {
-                                                   gf.aca("Xóa ds PK");
+                                                   GameScr.chatPopup("Xóa ds PK");
                                                    ff.aca();
                                                    return true;
                                                 }
@@ -2189,10 +2189,10 @@ public final class Code implements Runnable {
                                                 String[] var13;
                                                 if (var0.startsWith("apk")) {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
-                                                      gf.aca("Thêm " + var13[1] + " vào ds PK");
+                                                      GameScr.chatPopup("Thêm " + var13[1] + " vào ds PK");
                                                       ff.aaa(var13[1]);
                                                    } else if (fz.ala().dsa != null) {
-                                                      gf.aca("Thêm " + fz.ala().dsa.cea + " vào ds PK");
+                                                      GameScr.chatPopup("Thêm " + fz.ala().dsa.cea + " vào ds PK");
                                                       ff.aaa(fz.ala().dsa.cea);
                                                    }
 
@@ -2201,10 +2201,10 @@ public final class Code implements Runnable {
 
                                                 if (var0.startsWith("dpk")) {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
-                                                      gf.aca("Xóa " + var13[1] + " khỏi ds PK");
+                                                      GameScr.chatPopup("Xóa " + var13[1] + " khỏi ds PK");
                                                       ff.aba(var13[1]);
                                                    } else if (fz.ala().dsa != null) {
-                                                      gf.aca("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
+                                                      GameScr.chatPopup("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
                                                       ff.aba(fz.ala().dsa.cea);
                                                    }
 
@@ -2212,17 +2212,17 @@ public final class Code implements Runnable {
                                                 }
 
                                                 if (var26.equals("chs")) {
-                                                   gf.aca("Xóa ds HS");
+                                                   GameScr.chatPopup("Xóa ds HS");
                                                    axa();
                                                    return true;
                                                 }
 
                                                 if (var0.startsWith("ahs")) {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
-                                                      gf.aca("Thêm " + var13[1] + " vào ds HS");
+                                                      GameScr.chatPopup("Thêm " + var13[1] + " vào ds HS");
                                                       aja(var13[1]);
                                                    } else if (fz.ala().dsa != null) {
-                                                      gf.aca("Thêm " + fz.ala().dsa.cea + " vào ds HS");
+                                                      GameScr.chatPopup("Thêm " + fz.ala().dsa.cea + " vào ds HS");
                                                       aja(fz.ala().dsa.cea);
                                                    }
 
@@ -2231,10 +2231,10 @@ public final class Code implements Runnable {
 
                                                 if (var26.equals("dhs")) {
                                                    if ((var13 = aca(var0, " ")).length > 1) {
-                                                      gf.aca("Xóa " + var13[1] + " khỏi ds HS");
+                                                      GameScr.chatPopup("Xóa " + var13[1] + " khỏi ds HS");
                                                       aka(var13[1]);
                                                    } else if (fz.ala().dsa != null) {
-                                                      gf.aca("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
+                                                      GameScr.chatPopup("Xóa " + fz.ala().dsa.cea + " khỏi ds PK");
                                                       aka(fz.ala().dsa.cea);
                                                    }
 
@@ -2254,7 +2254,7 @@ public final class Code implements Runnable {
                                                    if ((var1 = (var0 = var0.substring(3)).indexOf(32)) > 0) {
                                                       try {
                                                          aw.aaa(var14 = gi.aaa(Short.parseShort(var0.substring(0, var1))), var0.substring(var1 + 1, var0.length()));
-                                                         gf.aca("Đặt giá: " + var14.ada);
+                                                         GameScr.chatPopup("Đặt giá: " + var14.ada);
                                                       } catch (Exception var19) {
                                                          var19.printStackTrace();
                                                       }
@@ -2270,7 +2270,7 @@ public final class Code implements Runnable {
                                                       var1 = Integer.parseInt(var13[1]);
                                                       int var29 = Integer.parseInt(var13[2]);
                                                       gh var34 = gi.aaa((short)var1);
-                                                      gf.aca("Thêm: " + var34.ada + " giá: " + var29 + " vào ds bán Shinwa");
+                                                      GameScr.chatPopup("Thêm: " + var34.ada + " giá: " + var29 + " vào ds bán Shinwa");
                                                       aba(var1, var29);
                                                    } catch (Exception var20) {
                                                       var20.printStackTrace();
@@ -2286,10 +2286,10 @@ public final class Code implements Runnable {
                                                       var14 = gi.aaa((short)(var1 = Integer.parseInt(var13[1])));
                                                       if (ada(var1)) {
                                                          var12 = aea(var1);
-                                                         gf.aca("Xóa: " + var14.ada + " giá: " + var12 + " khỏi ds bán Shinwa");
+                                                         GameScr.chatPopup("Xóa: " + var14.ada + " giá: " + var12 + " khỏi ds bán Shinwa");
                                                          afa(var1);
                                                       } else {
-                                                         gf.aca("Item " + var14.ada + " chưa có trong ds bán Shinwa");
+                                                         GameScr.chatPopup("Item " + var14.ada + " chưa có trong ds bán Shinwa");
                                                       }
                                                    } catch (Exception var21) {
                                                       var21.printStackTrace();
@@ -2322,41 +2322,41 @@ public final class Code implements Runnable {
                                                          var15 = false;
                                                       }
 
-                                                      gf.aca("Auto làm " + var1 + " tiên nữ");
+                                                      GameScr.chatPopup("Auto làm " + var1 + " tiên nữ");
                                                       return true;
                                                    }
 
-                                                   gf.aca("Hãy đứng Trường để auto làm tiên nữ");
+                                                   GameScr.chatPopup("Hãy đứng Trường để auto làm tiên nữ");
                                                 }
                                              }
 
                                              return false;
                                           }
-                                       } else if (gf.bfa.size() > 0 && ((ep)gf.bfa.firstElement()).aaa == fz.ala().asa) {
+                                       } else if (GameScr.bfa.size() > 0 && ((ep)GameScr.bfa.firstElement()).aaa == fz.ala().asa) {
                                           var8 = var1 >= 0 && var1 < ac.aaa.length ? ac.aaa[var1] : null;
                                           if (var8 == null) {
-                                             gf.aca("Stanima nhóm all");
+                                             GameScr.chatPopup("Stanima nhóm all");
                                              aca(-1, gn.aoa);
                                           } else {
-                                             gf.aca("Stanima nhóm " + var8.aga + " id " + var1);
+                                             GameScr.chatPopup("Stanima nhóm " + var8.aga + " id " + var1);
                                              aca(var8.aea, gn.aoa);
                                           }
 
                                           aca.afa = true;
-                                          gm.aaa().aka("st " + aca.aga + " " + aca.aha + " " + aca.aba);
+                                          Service.aaa().aka("st " + aca.aga + " " + aca.aha + " " + aca.aba);
                                           return true;
                                        } else {
-                                          gf.aca("Chưa có nhóm hoặc bạn không là nhóm trưởng");
+                                          GameScr.chatPopup("Chưa có nhóm hoặc bạn không là nhóm trưởng");
                                           return true;
                                        }
                                     }
                                  }
                               }
                            } else {
-                              gf.aca("End Auto");
+                              GameScr.chatPopup("End Auto");
                               aga();
                               if (fz.fla) {
-                                 gm.aaa().aka("pe");
+                                 Service.aaa().aka("pe");
                               }
 
                               return true;
@@ -2365,23 +2365,23 @@ public final class Code implements Runnable {
                      }
                   }
                } else {
-                  gf.aca("Phá băng");
+                  GameScr.chatPopup("Phá băng");
                   bea = false;
                   bfa = false;
                   return true;
                }
             } else {
-               gf.aca("Băng skill");
+               GameScr.chatPopup("Băng skill");
                bfa = true;
                return true;
             }
          } else {
-            gf.aca("Băng boss");
+            GameScr.chatPopup("Băng boss");
             bea = true;
             return true;
          }
       } else {
-         gf.aca("Đóng băng");
+         GameScr.chatPopup("Đóng băng");
          bea = true;
          bfa = true;
          return true;
@@ -2400,7 +2400,7 @@ public final class Code implements Runnable {
          daa = System.currentTimeMillis();
          ev var0;
          (var0 = new ev()).addElement(fz.ala());
-         gm.aaa().aaa((ev)(new ev()), (ev)var0, (int)2);
+         Service.aaa().aaa((ev)(new ev()), (ev)var0, (int)2);
       }
 
    }
@@ -2411,14 +2411,14 @@ public final class Code implements Runnable {
          Calendar var1;
          (var1 = Calendar.getInstance()).setTimeZone(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
          var0 = "@" + (10 + cza.nextInt(89)) + " " + var0 + " " + var1.get(11) + ":" + var1.get(12) + ":" + var1.get(13);
-         gm.aaa().aca(var0);
+         Service.aaa().aca(var0);
       }
 
    }
 
    public static void aaa(String var0, String var1) {
       dc.ada().aaa(var0, fz.ala().cea, var1);
-      gm.aaa().aaa(var0, var1);
+      Service.aaa().aaa(var0, var1);
       Auto.aaa(20L);
    }
 
@@ -2483,14 +2483,14 @@ public final class Code implements Runnable {
          } else {
             if (var1.toLowerCase().equals("level")) {
                long var18;
-               long var8 = (var18 = (fz.ala().aka > 0L ? fz.ala().aka : fz.ala().bha) * 10000L / gf.dta[fz.ala().aya]) % 100L;
+               long var8 = (var18 = (fz.ala().aka > 0L ? fz.ala().aka : fz.ala().bha) * 10000L / GameScr.dta[fz.ala().aya]) % 100L;
                aaa(var0, "LV: " + var4.aya + " + " + (fz.ala().aka > 0L ? "-" : "") + var18 / 100L + "." + (var8 < 10L ? "0".concat(String.valueOf(var8)) : String.valueOf(var8)) + "%");
                if (aba != null) {
                   long var10;
-                  float var12 = (float)((var10 = fz.ala().aja - aba.ama) * 10000L / gf.dta[fz.ala().aya]) / 100.0F;
+                  float var12 = (float)((var10 = fz.ala().aja - aba.ama) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
                   int var13 = (int)((System.currentTimeMillis() - aba.ana) / 1000L);
                   long var14;
-                  float var16 = (float)((var14 = var10 * 3600L / (long)var13) * 10000L / gf.dta[fz.ala().aya]) / 100.0F;
+                  float var16 = (float)((var14 = var10 * 3600L / (long)var13) * 10000L / GameScr.dta[fz.ala().aya]) / 100.0F;
                   aaa(var0, "Up " + var10 + " - " + var12 + "% trong " + ex.aba(var13) + " perh=" + var14 + " - " + var16 + "%");
                   return;
                }
@@ -2510,7 +2510,7 @@ public final class Code implements Runnable {
                }
 
                if (var1.equals(ez.aba)) {
-                  gj.bla();
+                  LockGame.bla();
                   aba = null;
                   cs var17 = cs.aba();
                   aba();
@@ -2558,14 +2558,14 @@ public final class Code implements Runnable {
             }
 
             if (var2[0].equals("avt")) {
-               gf.aca("Thêm vị trí " + ata.size());
+               GameScr.chatPopup("Thêm vị trí " + ata.size());
                ata.addElement(Integer.valueOf(var2[1]));
                aua.addElement(Integer.valueOf(var2[2]));
                return;
             }
 
             if (var2[0].equals("dvt")) {
-               gf.aca("Xóa hết vị trí");
+               GameScr.chatPopup("Xóa hết vị trí");
                ata.removeAllElements();
                aua.removeAllElements();
                return;
@@ -2574,15 +2574,15 @@ public final class Code implements Runnable {
             int var3;
             if (var2[0].equals("dvtx")) {
                var3 = Integer.parseInt(var2[1]);
-               gf.aca("Xóa vị trí ".concat(String.valueOf(var3)));
+               GameScr.chatPopup("Xóa vị trí ".concat(String.valueOf(var3)));
                ata.removeElementAt(var3);
                aua.removeElementAt(var3);
                return;
             }
 
             if (var2[0].equals("pe")) {
-               gf.aca("End Auto");
-               gj.bla();
+               GameScr.chatPopup("End Auto");
+               LockGame.bla();
                aba = null;
                return;
             }
@@ -2752,48 +2752,48 @@ public final class Code implements Runnable {
          int var2 = 0;
          int var3 = 0;
          if (((gg)var1).ara()) {
-            var2 = gf.dva[((gg)var1).aia] / 2;
-            var3 = gf.dza[((gg)var1).aia];
+            var2 = GameScr.dva[((gg)var1).aia] / 2;
+            var3 = GameScr.dza[((gg)var1).aia];
          } else if (((gg)var1).asa()) {
-            var2 = gf.dwa[((gg)var1).aia] / 2;
-            var3 = gf.eaa[((gg)var1).aia];
+            var2 = GameScr.dwa[((gg)var1).aia] / 2;
+            var3 = GameScr.eaa[((gg)var1).aia];
          } else if (((gg)var1).ata()) {
-            var2 = gf.dxa[((gg)var1).aia] / 2;
-            var3 = gf.eba[((gg)var1).aia];
+            var2 = GameScr.dxa[((gg)var1).aia] / 2;
+            var3 = GameScr.eba[((gg)var1).aia];
          }
 
          if (var2 << 1 <= fz.bia() && var3 << 1 <= fz.ala().csa && ((gg)var1).aia < cba) {
             int var4 = ((gg)var1).aia;
             if (cda) {
-               gf.ava().ada((int)10);
+               GameScr.ava().ada((int)10);
             }
 
-            gf.dfa = (gg)var1;
+            GameScr.dfa = (gg)var1;
 
             for(int var5 = 0; var5 < 1 && ((gg)var1).aia == var4; ++var5) {
-               gf.cxa = new gg[18];
+               GameScr.cxa = new gg[18];
                int var6 = 0;
                int var7 = 0;
 
-               for(int var8 = 0; var8 < fz.ala().daa.length && var7 < var2; ++var8) {
-                  gg var9 = fz.ala().daa[var8];
+               for(int var8 = 0; var8 < fz.ala().arrItemBag.length && var7 < var2; ++var8) {
+                  gg var9 = fz.ala().arrItemBag[var8];
                   if (((gg)var1).aia == 7) {
                      if (fz.aia(242) < 0) {
                         if (fz.ala().cta >= 10) {
-                           gm.aaa().aba(14, 23, 1);
-                           gj.aha();
+                           Service.aaa().aba(14, 23, 1);
+                           LockGame.aha();
                         } else {
-                           gf.aca("Hết Lượng Mua BHSC");
+                           GameScr.chatPopup("Hết Lượng Mua BHSC");
                         }
                      } else {
-                        gf.cxa[0] = ADV.aea(242);
+                        GameScr.cxa[0] = ADV.aea(242);
                      }
                   }
 
                   if (var9 != null && var9.aaa.aba == 26 && var9.aaa.aaa <= cca - 1) {
-                     fz.ala().daa[var8] = null;
-                     gf.cxa[var6++] = var9;
-                     var7 += gf.dva[var9.aaa.aaa];
+                     fz.ala().arrItemBag[var8] = null;
+                     GameScr.cxa[var6++] = var9;
+                     var7 += GameScr.dva[var9.aaa.aaa];
                   }
                }
 
@@ -2803,13 +2803,13 @@ public final class Code implements Runnable {
                   } catch (InterruptedException var10) {
                   }
 
-                  gm.aaa().aaa((gg)var1, gf.cxa);
-                  gm.aaa().aja(fz.ala().cea);
-                  gj.ara();
-               } while(gf.cxa[0] != null);
+                  Service.aaa().aaa((gg)var1, GameScr.cxa);
+                  Service.aaa().aja(fz.ala().cea);
+                  LockGame.ara();
+               } while(GameScr.cxa[0] != null);
             }
 
-            gf.dfa = null;
+            GameScr.dfa = null;
          } else if (((gg)var1).aia >= cba) {
             caa.removeElementAt(var0--);
          }

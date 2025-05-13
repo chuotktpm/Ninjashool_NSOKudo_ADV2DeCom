@@ -19,9 +19,9 @@ public final class bf {
       if ((var1 = (fs)aba.get(String.valueOf(var0))) == null) {
          var1 = new fs();
          aba.put(String.valueOf(var0), var1);
-         gm var10000 = gm.aaa();
+         Service var10000 = Service.aaa();
          short var2 = var0;
-         gm var8 = var10000;
+         Service var8 = var10000;
          fe var3 = null;
 
          try {
@@ -55,9 +55,9 @@ public final class bf {
                }
 
                if (var1.aaa == null && cs.aba().afa) {
-                  gm var10000 = gm.aaa();
+                  Service var10000 = Service.aaa();
                   short var2 = var0;
-                  gm var10 = var10000;
+                  Service var10 = var10000;
                   fe var3 = null;
 
                   try {

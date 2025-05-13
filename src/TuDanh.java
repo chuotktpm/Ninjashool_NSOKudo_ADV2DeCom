@@ -21,10 +21,10 @@ public final class TuDanh extends Auto {
          if (TanSat.aba && !(Code.aba instanceof ADV)) {
             fz var1 = fz.ala();
 
-            for(int var2 = 0; var2 < var1.daa.length; ++var2) {
+            for(int var2 = 0; var2 < var1.arrItemBag.length; ++var2) {
                gg var3;
-               if (Code.ada(var3 = var1.daa[var2])) {
-                  gm.aaa().aha(var3.ada, 1);
+               if (Code.ada(var3 = var1.arrItemBag[var2])) {
+                  Service.aaa().aha(var3.ada, 1);
                   return;
                }
             }

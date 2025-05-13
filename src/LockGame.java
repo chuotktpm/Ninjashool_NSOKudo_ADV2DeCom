@@ -1,4 +1,4 @@
-public final class gj {
+public final class LockGame {
    private static boolean aca;
    public static boolean aaa;
    public static boolean aba;
@@ -441,9 +441,9 @@ public final class gj {
       while(var0 < Code.aia.size()) {
          String var1 = (String)Code.aia.elementAt(var0);
 
-         for(int var2 = 0; var2 < gf.bfa.size(); ++var2) {
+         for(int var2 = 0; var2 < GameScr.bfa.size(); ++var2) {
             ep var3;
-            if ((var3 = (ep)gf.bfa.elementAt(var2)).ada.equals(var1)) {
+            if ((var3 = (ep)GameScr.bfa.elementAt(var2)).ada.equals(var1)) {
                if (var3.afa == null || ci.aaa(fz.ala().ala, fz.ala().ama, var3.afa.ala, var3.afa.ama) > 100) {
                   return false;
                }
@@ -464,8 +464,8 @@ public final class gj {
       for(int var0 = 0; var0 < Code.aia.size(); ++var0) {
          String var1 = (String)Code.aia.elementAt(var0);
 
-         for(int var2 = 0; var2 < gf.bfa.size(); ++var2) {
-            if (((ep)gf.bfa.elementAt(var2)).ada.equals(var1)) {
+         for(int var2 = 0; var2 < GameScr.bfa.size(); ++var2) {
+            if (((ep)GameScr.bfa.elementAt(var2)).ada.equals(var1)) {
                continue label23;
             }
          }
@@ -504,9 +504,9 @@ public final class gj {
 
                String var1 = (String)Code.aia.elementAt(var0);
 
-               for(int var4 = 0; var4 < gf.bfa.size(); ++var4) {
+               for(int var4 = 0; var4 < GameScr.bfa.size(); ++var4) {
                   ep var5;
-                  if ((var5 = (ep)gf.bfa.elementAt(var4)).ada.equals(var1)) {
+                  if ((var5 = (ep)GameScr.bfa.elementAt(var4)).ada.equals(var1)) {
                      if (var5.afa == null) {
                         var10000 = false;
                         break label37;

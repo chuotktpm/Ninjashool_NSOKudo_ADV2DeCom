@@ -225,8 +225,8 @@ public final class eu extends Auto {
                   return;
                }
 
-               gf.aba(5, 1, 0);
-               if (gj.aza()) {
+               GameScr.aba(5, 1, 0);
+               if (LockGame.aza()) {
                   this.bka = true;
                   super.aga = this.bla;
                   super.aha = this.bma;
@@ -258,24 +258,24 @@ public final class eu extends Auto {
                   this.ada(-1);
                } else {
                   fz var12 = fz.ala();
-                  fz var8 = gf.bfa.size() > 0 ? ((ep)gf.bfa.firstElement()).afa : null;
+                  fz var8 = GameScr.bfa.size() > 0 ? ((ep)GameScr.bfa.firstElement()).afa : null;
                   bc var15;
-                  if (this.bia && gf.bfa.size() > 0 && var12.cua.aaa == 6) {
+                  if (this.bia && GameScr.bfa.size() > 0 && var12.cua.aaa == 6) {
                      for(var3 = 0; var3 < var12.cwa.size(); ++var3) {
                         if ((var15 = (bc)var12.cwa.elementAt(var3)) != null && var15.aaa.ada == 4) {
                            if (!var15.aaa()) {
-                              for(var3 = 0; var3 < gf.bfa.size(); ++var3) {
+                              for(var3 = 0; var3 < GameScr.bfa.size(); ++var3) {
                                  ep var5;
-                                 if ((var5 = (ep)gf.bfa.elementAt(var3)).aaa != var12.asa && var5.afa != null && var5.afa.bba <= 0) {
+                                 if ((var5 = (ep)GameScr.bfa.elementAt(var3)).aaa != var12.asa && var5.afa != null && var5.afa.bba <= 0) {
                                     var3 = var12.ala;
                                     int var9 = var12.ama;
                                     fz var6;
                                     fz.aca((var6 = var5.afa).ala, var6.ama);
                                     Thread.sleep(500L);
-                                    gm.aaa().aua(var5.aaa);
+                                    Service.aaa().aua(var5.aaa);
                                     var15.afa = System.currentTimeMillis();
                                     var15.ala = true;
-                                    var12.aba(gf.aza[var15.aaa.aaa], 0);
+                                    var12.aba(GameScr.aza[var15.aaa.aaa], 0);
                                     Thread.sleep(1000L);
                                     fz.aca(var3, var9);
                                     return;
@@ -298,11 +298,11 @@ public final class eu extends Auto {
                            var16 = var12.ala;
                            var3 = var12.ama;
                            fz.aca(var8.ala, var8.ama);
-                           gm.aaa().afa(var15.aaa.aaa);
-                           gm.aaa().ara();
+                           Service.aaa().afa(var15.aaa.aaa);
+                           Service.aaa().ara();
                            var15.afa = System.currentTimeMillis();
                            var15.ala = true;
-                           var12.aba(gf.aza[var15.aaa.aaa], 0);
+                           var12.aba(GameScr.aza[var15.aaa.aaa], 0);
                            Thread.sleep(1000L);
                            fz.aca(var16, var3);
                            break;
@@ -313,7 +313,7 @@ public final class eu extends Auto {
 
                gg var14;
                if (System.currentTimeMillis() - this.bpa > 602000L && fz.bja() > 1 && (var14 = fz.afa(38)) != null) {
-                  gm.aaa().aea(var14.ada);
+                  Service.aaa().aea(var14.ada);
                   this.bpa = System.currentTimeMillis();
                   return;
                }
@@ -336,24 +336,24 @@ public final class eu extends Auto {
             boolean var7 = fz.ala().cea.equals(Code.aha);
             if (aca && var7) {
                this.aea();
-               gm.aaa().aka("sts");
+               Service.aaa().aka("sts");
                return;
             }
 
             if (var10 == null) {
                av var11;
-               fz.aca((var11 = gf.aia(25)).ala, var11.ama);
-               gj.aaa(300000L);
+               fz.aca((var11 = GameScr.aia(25)).ala, var11.ama);
+               LockGame.aaa(300000L);
                if (var7) {
-                  gf.aba(25, gf.gva + 1, 0);
-                  gj.ala();
+                  GameScr.aba(25, GameScr.gva + 1, 0);
+                  LockGame.ala();
                   Thread.sleep(2000L);
                   return;
                }
             } else {
                if (var10.aba >= var10.aca) {
-                  gf.aba(25, gf.gva + 1, 2);
-                  gj.ana();
+                  GameScr.aba(25, GameScr.gva + 1, 2);
+                  LockGame.ana();
                   Thread.sleep(2000L);
                   return;
                }
@@ -363,7 +363,7 @@ public final class eu extends Auto {
                   (var13 = Code.aea).a_();
                   var13.afa = true;
                   Code.aaa((Auto)var13);
-                  gm.aaa().aka("att " + var13.aga + " " + var13.aha + " " + var13.aaa);
+                  Service.aaa().aka("att " + var13.aga + " " + var13.aha + " " + var13.aaa);
                   return;
                }
             }
@@ -385,25 +385,25 @@ public final class eu extends Auto {
                   int var10000 = (var2 = fz.aka(fz.fta == 50 ? 29 : 23 + fz.fta / 10)) >= 2 ? 0 : 2 - var2;
                   var2 = var10000;
                   if (var10000 > 0) {
-                     gf.aba(4, 0, 0);
+                     GameScr.aba(4, 0, 0);
                      if (fz.fta == 50) {
-                        gm.aaa().aaa(9, 7, var2);
+                        Service.aaa().aaa(9, 7, var2);
                      } else {
-                        gm.aaa().aaa(9, fz.fta / 10, var2);
+                        Service.aaa().aaa(9, fz.fta / 10, var2);
                      }
 
-                     gj.aha();
+                     LockGame.aha();
                   }
                }
 
                if (var1.get(7) == 2) {
-                  gf.aba(24, 1, 0);
+                  GameScr.aba(24, 1, 0);
                   Thread.sleep(2000L);
                }
 
                this.bka = true;
                if ((var2 = fz.ala().aya) >= 90) {
-                  gj.bja();
+                  LockGame.bja();
                   Code.aaa((Auto)(new bj()));
                   ada = true;
                   return;
@@ -413,8 +413,8 @@ public final class eu extends Auto {
                super.aia = true;
                super.afa = false;
                if (var2 >= 60 && var2 < 70) {
-                  if (gf.bfa.size() > 1) {
-                     gm.aaa().ata();
+                  if (GameScr.bfa.size() > 1) {
+                     Service.aaa().ata();
                      return;
                   }
 
@@ -422,7 +422,7 @@ public final class eu extends Auto {
                }
 
                if (Code.aha != null) {
-                  gj.bja();
+                  LockGame.bja();
                   return;
                }
             } else {
@@ -441,8 +441,8 @@ public final class eu extends Auto {
                   return;
                }
 
-               gf.aba(0, 2, 0);
-               gm.aaa().bda();
+               GameScr.aba(0, 2, 0);
+               Service.aaa().bda();
                this.bka = false;
                ada = false;
                if (!aea) {
@@ -457,10 +457,10 @@ public final class eu extends Auto {
                   return;
                }
 
-               gf.aba(5, 1, 0);
-               if (gj.aza()) {
+               GameScr.aba(5, 1, 0);
+               if (LockGame.aza()) {
                   if (var1.get(7) == 2) {
-                     gf.aba(24, 1, 0);
+                     GameScr.aba(24, 1, 0);
                      Thread.sleep(2000L);
                   }
 

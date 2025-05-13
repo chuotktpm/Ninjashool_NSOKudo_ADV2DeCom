@@ -28,7 +28,7 @@ public final class dv extends Auto {
          switch(this.aaa) {
          case 0:
             if (gn.aoa == 38 && gn.ala == 21) {
-               gj.bka();
+               LockGame.bka();
                this.aaa = 2;
                return;
             }
@@ -54,12 +54,12 @@ public final class dv extends Auto {
                this.ada.removeElementAt(var1);
                this.aea.removeElementAt(var1);
                this.aaa = 3;
-               gm.aaa().aka("pkms " + super.aga + " " + this.aba);
+               Service.aaa().aka("pkms " + super.aga + " " + this.aba);
                return;
             }
 
             this.aaa = 4;
-            gm.aaa().aka("pkes");
+            Service.aaa().aka("pkes");
             return;
          case 3:
             if (this.aba > 0) {
@@ -68,8 +68,8 @@ public final class dv extends Auto {
                   return;
                }
 
-               gf.aba(5, 1, 0);
-               if (gj.aza()) {
+               GameScr.aba(5, 1, 0);
+               if (LockGame.aza()) {
                   this.aaa = 5;
                   Code.aaa((Auto)(new ej(super.aga)));
                   return;
@@ -83,8 +83,8 @@ public final class dv extends Auto {
                   return;
                }
 
-               gf.aba(5, 1, 0);
-               if (gj.aza()) {
+               GameScr.aba(5, 1, 0);
+               if (LockGame.aza()) {
                   Code.aca();
                   return;
                }

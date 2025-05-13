@@ -8,7 +8,7 @@ public final class bq {
 
    public bq(byte var1, int var2) {
       this.aaa = var2;
-      this.aca = gf.bva[var1];
+      this.aca = GameScr.bva[var1];
    }
 
    public final String aaa() {

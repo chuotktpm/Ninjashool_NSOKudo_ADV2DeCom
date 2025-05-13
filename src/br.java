@@ -98,35 +98,35 @@ public final class br {
                }
 
                if (this.asa <= 360 && this.asa > 340 || this.asa > 0 && this.asa <= 90) {
-                  gf.fza = 0;
+                  GameScr.fza = 0;
                   ab.ala[6] = true;
                   ab.aka[6] = true;
                   return;
                }
 
                if (this.asa > 290 && this.asa <= 340) {
-                  gf.fza = 0;
+                  GameScr.fza = 0;
                   ab.ala[3] = true;
                   ab.aka[3] = true;
                   return;
                }
 
                if (this.asa > 250 && this.asa <= 290) {
-                  gf.fza = 0;
+                  GameScr.fza = 0;
                   ab.ala[2] = true;
                   ab.aka[2] = true;
                   return;
                }
 
                if (this.asa > 200 && this.asa <= 250) {
-                  gf.fza = 0;
+                  GameScr.fza = 0;
                   ab.ala[1] = true;
                   ab.aka[1] = true;
                   return;
                }
 
                if (this.asa > 90 && this.asa <= 200) {
-                  gf.fza = 0;
+                  GameScr.fza = 0;
                   ab.ala[4] = true;
                   ab.aka[4] = true;
                   return;
@@ -168,7 +168,7 @@ public final class br {
          var1 = gn.aja;
       }
 
-      if (aea && (!aia || aha <= 4990) && !gf.dla) {
+      if (aea && (!aia || aha <= 4990) && !GameScr.dla) {
          fk.aaa(ab.bba - 64, 10, 128, 40, var0);
          if (aia) {
             ab.aaa(ab.bba - fw.aqa.aaa(var1) / 2 - 10, 30, var0);

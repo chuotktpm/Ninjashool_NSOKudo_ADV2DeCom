@@ -29,9 +29,9 @@ public final class gb {
             ((Vector)var1).removeAllElements();
 
             int var3;
-            for(var3 = 0; var3 < ((fz)var0).daa.length; ++var3) {
+            for(var3 = 0; var3 < ((fz)var0).arrItemBag.length; ++var3) {
                gg var4;
-               if ((var4 = ((fz)var0).daa[var3]) != null && var4.aaa.aaa == var2) {
+               if ((var4 = ((fz)var0).arrItemBag[var3]) != null && var4.aaa.aaa == var2) {
                   ((Vector)var1).addElement(var4);
                }
             }
@@ -40,7 +40,7 @@ public final class gb {
                var3 = 1;
 
                int var6;
-               for(var6 = var2; var6 < 4 && gf.dya[var6] <= ((fz)var0).csa && var3 << 2 <= ((Vector)var1).size() && var3 < 16; ++var6) {
+               for(var6 = var2; var6 < 4 && GameScr.dya[var6] <= ((fz)var0).csa && var3 << 2 <= ((Vector)var1).size() && var3 < 16; ++var6) {
                   var3 <<= 2;
                }
 
@@ -48,20 +48,20 @@ public final class gb {
                   return;
                }
 
-               gf.ava().ada((int)12);
-               gf.cwa = new gg[24];
+               GameScr.ava().ada((int)12);
+               GameScr.cwa = new gg[24];
 
                for(var6 = 0; var6 < var3; ++var6) {
                   Object var5 = ((Vector)var1).elementAt(0);
-                  gf.cwa[var6] = (gg)var5;
-                  ((fz)var0).daa[((gg)var5).ada] = null;
+                  GameScr.cwa[var6] = (gg)var5;
+                  ((fz)var0).arrItemBag[((gg)var5).ada] = null;
                   ((Vector)var1).removeElementAt(0);
                }
 
-               gm.aaa().aca(gf.cwa);
-               gj.aba();
-               if (gf.cwa[0] != null) {
-                  ((fz)var0).daa[gf.cwa[0].ada] = gf.cwa[0];
+               Service.aaa().aca(GameScr.cwa);
+               LockGame.aba();
+               if (GameScr.cwa[0] != null) {
+                  ((fz)var0).arrItemBag[GameScr.cwa[0].ada] = GameScr.cwa[0];
                }
             }
          }

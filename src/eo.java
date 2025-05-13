@@ -44,12 +44,12 @@ public final class eo extends Auto {
             if (System.currentTimeMillis() - aba >= 300L) {
                ev var1 = new ev();
 
-               for(int var2 = 0; var2 < gf.bla.size(); ++var2) {
+               for(int var2 = 0; var2 < GameScr.bla.size(); ++var2) {
                   fz var3;
-                  if ((var3 = (fz)gf.bla.elementAt(var2)).bba > 0 && var3.dla == 3 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50 && var1.size() <= aqa.aia) {
+                  if ((var3 = (fz)GameScr.bla.elementAt(var2)).bba > 0 && var3.dla == 3 && Math.abs(fz.ala().ala - var3.ala) <= 50 && Math.abs(fz.ala().ama - var3.ama) <= 50 && var1.size() <= aqa.aia) {
                      var1.addElement(var3);
                      if (var3.bba > 0 && var3.dla == 3 && Math.abs(fz.ala().ala - var3.ala) <= 50) {
-                        gm.aaa().aaa((ev)(new ev()), (ev)var1, (int)2);
+                        Service.aaa().aaa((ev)(new ev()), (ev)var1, (int)2);
                         aba = System.currentTimeMillis();
                      }
                   }

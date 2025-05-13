@@ -106,7 +106,7 @@ public final class fo {
             var1.aaa = Controller.aaa(fd.aba(String.valueOf(var0)));
             if (var1.aaa == null) {
                var1.aba = System.currentTimeMillis();
-               gm.aaa().baa(var0);
+               Service.aaa().baa(var0);
             }
 
             return false;
@@ -118,7 +118,7 @@ public final class fo {
 
          if (var1.aaa == null && System.currentTimeMillis() - var1.aba > 60000L) {
             var1.aba = System.currentTimeMillis();
-            gm.aaa().baa(var0);
+            Service.aaa().baa(var0);
             return false;
          }
       }
@@ -141,11 +141,11 @@ public final class fo {
             var6.aaa = Controller.aaa(fd.aba(String.valueOf(var1)));
             if (var6.aaa == null) {
                var6.aba = System.currentTimeMillis();
-               gm.aaa().baa(var1);
+               Service.aaa().baa(var1);
             }
          } else if (var6.aaa == null && System.currentTimeMillis() - var6.aba > 60000L) {
             var6.aba = System.currentTimeMillis();
-            gm.aaa().baa(var1);
+            Service.aaa().baa(var1);
          }
 
          if (var6 != null) {

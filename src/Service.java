@@ -1,15 +1,15 @@
 import java.io.IOException;
 import javax.microedition.lcdui.Display;
 
-public final class gm {
+public final class Service {
    public ag aaa = cs.aba();
-   private static gm aba;
+   private static Service aba;
    private int aca;
    private int ada;
 
-   public static gm aaa() {
+   public static Service aaa() {
       if (aba == null) {
-         aba = new gm();
+         aba = new Service();
       }
 
       return aba;
@@ -314,8 +314,8 @@ public final class gm {
          var2.aca();
       }
 
-      if (fz.ala().daa[var1] != null && fz.ala().daa[var1].aaa.aba == 24) {
-         gf.ava().bca();
+      if (fz.ala().arrItemBag[var1] != null && fz.ala().arrItemBag[var1].aaa.aba == 24) {
+         GameScr.ava().bca();
          br.aaa("");
       }
 
@@ -1021,51 +1021,51 @@ public final class gm {
       } else if (var1.equals("atc")) {
          cr.aaa = !cr.aaa;
          (new Thread(new cr())).start();
-         gf.aca("Auto chat: " + (cr.aaa ? "Bật" : "Tắt"));
+         GameScr.chatPopup("Auto chat: " + (cr.aaa ? "Bật" : "Tắt"));
          var10000 = true;
       } else if (var1.equals("hsl")) {
          if (eg.aaa = !eg.aaa) {
             fd.aaa("hsl", 1);
-            gf.aca("Hồi sinh lượng: Bật");
+            GameScr.chatPopup("Hồi sinh lượng: Bật");
          } else {
             fd.aaa("hsl", -1);
-            gf.aca("Hồi sinh lượng: Tắt");
+            GameScr.chatPopup("Hồi sinh lượng: Tắt");
          }
 
          var10000 = true;
       } else if (var1.equals("locdo")) {
          if (TanSat.aba = !TanSat.aba) {
             fd.aaa("locdo", 1);
-            gf.aca("Lọc đồ: Bật");
+            GameScr.chatPopup("Lọc đồ: Bật");
          } else {
             fd.aaa("locdo", -1);
-            gf.aca("Lọc đồ: Tắt");
+            GameScr.chatPopup("Lọc đồ: Tắt");
          }
 
          var10000 = true;
       } else if (var1.equals("dv")) {
          if (eg.aga = !eg.aga) {
             fd.aaa("adv", 1);
-            gf.aca("Tự đi làm danh vọng: Bật");
+            GameScr.chatPopup("Tự đi làm danh vọng: Bật");
          } else {
             fd.aaa("adv", -1);
-            gf.aca("Tự đi làm danh vọng: Tắt");
+            GameScr.chatPopup("Tự đi làm danh vọng: Tắt");
          }
 
          var10000 = true;
       } else if (var1.equals("glv")) {
          if (Code.aya = !Code.aya) {
             fd.aaa("glv", 1);
-            gf.aca("Tự đi pk âm: Bật");
+            GameScr.chatPopup("Tự đi pk âm: Bật");
          } else {
             fd.aaa("glv", -1);
-            gf.aca("Tự đi pk âm: Tắt");
+            GameScr.chatPopup("Tự đi pk âm: Tắt");
          }
 
          var10000 = true;
       } else if (var1.equals("pk")) {
          Code.boa = !Code.boa;
-         gf.aca("Auto pk: " + (Code.boa ? "Bật" : "Tắt"));
+         GameScr.chatPopup("Auto pk: " + (Code.boa ? "Bật" : "Tắt"));
          var10000 = true;
       } else {
          var10000 = false;
@@ -2160,7 +2160,7 @@ public final class gm {
       fe var1 = null;
 
       try {
-         (var1 = aba((byte)-72)).aca.writeByte(gf.bra);
+         (var1 = aba((byte)-72)).aca.writeByte(GameScr.bra);
          this.aaa.aaa(var1);
          return;
       } catch (Exception var5) {
@@ -2175,7 +2175,7 @@ public final class gm {
       fe var2 = null;
 
       try {
-         (var2 = aba((byte)-61)).aca.writeByte(gf.bra);
+         (var2 = aba((byte)-61)).aca.writeByte(GameScr.bra);
          var2.aca.writeUTF(var1);
          this.aaa.aaa(var2);
          return;
@@ -2191,7 +2191,7 @@ public final class gm {
       fe var1 = null;
 
       try {
-         (var1 = aba((byte)-60)).aca.writeByte(gf.bra);
+         (var1 = aba((byte)-60)).aca.writeByte(GameScr.bra);
          this.aaa.aaa(var1);
          return;
       } catch (Exception var5) {

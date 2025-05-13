@@ -1,7 +1,7 @@
 public final class al implements Runnable {
-   private gf aaa;
+   private GameScr aaa;
 
-   al(gf var1) {
+   al(GameScr var1) {
       this.aaa = var1;
    }
 
@@ -43,7 +43,7 @@ public final class al implements Runnable {
          }
 
          cq.aaa("Diệt ma: " + this.aaa.gta[var2], fz.ala());
-         gf.aaa(this.aaa, var2);
+         GameScr.aaa(this.aaa, var2);
       }
 
    }

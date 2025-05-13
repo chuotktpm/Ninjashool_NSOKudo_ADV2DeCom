@@ -39,7 +39,7 @@ public final class cr extends Thread {
       while(aaa) {
          ++this.ada;
          this.ada %= var7.length;
-         gm.aaa().aca("" + aea.nextInt(99) + ": " + var7[this.ada]);
+         Service.aaa().aca("" + aea.nextInt(99) + ": " + var7[this.ada]);
 
          try {
             Thread.sleep(aca);

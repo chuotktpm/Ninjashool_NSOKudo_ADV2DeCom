@@ -7,7 +7,7 @@ public final class cv extends Auto {
    public static void aaa(String var0) {
       if (var0.equals(aba[0])) {
          aca = 21;
-         gj.ama();
+         LockGame.ama();
       } else {
          int var1;
          if ((var1 = var0.indexOf(aba[1])) >= 0) {
@@ -41,28 +41,28 @@ public final class cv extends Auto {
 
          if (gn.afa(gn.aoa)) {
             if (this.ada == null) {
-               gf.aca("Nhận NV " + (aca + 1) + "/20");
-               gf.aba(25, gf.gva, 0);
-               gj.ala();
+               GameScr.chatPopup("Nhận NV " + (aca + 1) + "/20");
+               GameScr.aba(25, GameScr.gva, 0);
+               LockGame.ala();
                this.ada = fz.ama(0);
                return;
             }
 
             if (this.ada.aba < this.ada.aca) {
-               gf.aca("Đi làm NV " + aca + "/20");
-               gf.aba(25, gf.gva, 3);
+               GameScr.chatPopup("Đi làm NV " + aca + "/20");
+               GameScr.aba(25, GameScr.gva, 3);
                gn.aga();
                this.aca(super.aha);
                return;
             }
 
             if (fz.bja() <= 0) {
-               gf.aca("Hành trang đầy");
+               GameScr.chatPopup("Hành trang đầy");
                return;
             }
 
-            gf.aca("Hoàn thành NV " + aca + "/20");
-            gf.aba(25, gf.gva, 2);
+            GameScr.chatPopup("Hoàn thành NV " + aca + "/20");
+            GameScr.aba(25, GameScr.gva, 2);
             this.ada = null;
          } else if (this.ada != null && gn.aoa == this.ada.aga) {
             if (this.ada.aba >= this.ada.aca) {
@@ -73,12 +73,12 @@ public final class cv extends Auto {
             this.aca(this.ada.afa, 1);
             this.ada(-1);
             if (aaa) {
-               gf.aca("Nhiệm vụ " + aca + "/20: " + this.ada.aba + "/" + this.ada.aca + " " + ac.aaa[this.ada.afa].aga);
+               GameScr.chatPopup("Nhiệm vụ " + aca + "/20: " + this.ada.aba + "/" + this.ada.aca + " " + ac.aaa[this.ada.afa].aga);
                aaa = false;
             }
          }
       } else {
-         gf.aca("Hoàn thành!");
+         GameScr.chatPopup("Hoàn thành!");
          Code var1 = Code.aaa;
          Code.aca();
       }

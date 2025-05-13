@@ -32,21 +32,21 @@ public final class fc extends fb implements ag {
 
    public fc() {
       if (ab.aza == 128) {
-         gf.aba(128, 120);
-         gf.gia = (ab.aza - 128) / 2;
-         gf.gha = 0;
+         GameScr.aba(128, 120);
+         GameScr.gia = (ab.aza - 128) / 2;
+         GameScr.gha = 0;
       } else {
-         gf.aba(170, 190);
-         gf.gia = (ab.aza - 170) / 2;
-         gf.gha = (ab.baa - 220) / 2;
+         GameScr.aba(170, 190);
+         GameScr.gia = (ab.aza - 170) / 2;
+         GameScr.gha = (ab.baa - 220) / 2;
       }
 
       aca = 1;
       (aba = new eq()).aua = er.ffa;
       aba.aca = 100;
-      aba.aaa = gf.gia + 45;
-      aba.aaa = gf.gia + gf.gja / 2 - aba.aca / 2;
-      aba.aba = gf.gha + 62;
+      aba.aaa = GameScr.gia + 45;
+      aba.aaa = GameScr.gia + GameScr.gja / 2 - aba.aca / 2;
+      aba.aba = GameScr.gha + 62;
       if (ab.aza == 128) {
          aba.aca = 60;
       }
@@ -58,8 +58,8 @@ public final class fc extends fb implements ag {
       ada = 0;
       super.ama = new ca(er.fea, this, 8000, (Object)null);
       super.ala = new ca(er.fja, this, 8001, (Object)null);
-      this.aia = new ca("", this, 8002, gf.gia + gf.gja / 2 - fb.apa / 2, gf.gha + 70 + 30);
-      this.aja = new ca("", this, 8003, gf.gia + gf.gja / 2 - fb.apa / 2, gf.gha + 70 + 70);
+      this.aia = new ca("", this, 8002, GameScr.gia + GameScr.gja / 2 - fb.apa / 2, GameScr.gha + 70 + 30);
+      this.aja = new ca("", this, 8003, GameScr.gia + GameScr.gja / 2 - fb.apa / 2, GameScr.gha + 70 + 70);
       super.ana = aba.ava;
    }
 
@@ -74,8 +74,8 @@ public final class fc extends fb implements ag {
    }
 
    public final void aba() {
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       if (ab.afa && ab.aza >= 320) {
@@ -141,7 +141,7 @@ public final class fc extends fb implements ag {
          }
       }
 
-      if (ab.aoa && ab.aba(gf.gia + 5, gf.gha + 65, gf.gja - 5, fb.aoa)) {
+      if (ab.aoa && ab.aba(GameScr.gia + 5, GameScr.gha + 65, GameScr.gja - 5, fb.aoa)) {
          aea = 0;
       }
 
@@ -153,7 +153,7 @@ public final class fc extends fb implements ag {
    public final void aaa(as var1) {
       try {
          ab.aaa(var1);
-         fk.aaa(gf.gia, gf.gha, gf.gja, gf.gka, var1);
+         fk.aaa(GameScr.gia, GameScr.gha, GameScr.gja, GameScr.gka, var1);
          byte var2 = 40;
          if (ab.aza == 128) {
             var2 = 20;
@@ -162,11 +162,11 @@ public final class fc extends fb implements ag {
          int var3 = afa[aca][ada];
          int var4 = aga[aca];
          int var5 = aha[aca];
-         fj var9 = gf.bba[var3];
-         fj var10 = gf.bba[var4];
-         fj var11 = gf.bba[var5];
+         fj var9 = GameScr.bba[var3];
+         fj var10 = GameScr.bba[var4];
+         fj var11 = GameScr.bba[var5];
          int var6 = ab.aza / 2;
-         int var7 = gf.gha + 50;
+         int var7 = GameScr.gha + 50;
          fo.aaa(var1, var9.aaa[fz.gda[0][0][0]].aaa, var6 + fz.gda[0][0][1] + var9.aaa[fz.gda[0][0][0]].aba, var7 - fz.gda[0][0][2] + var9.aaa[fz.gda[0][0][0]].aca, 0, 0);
          fo.aaa(var1, var10.aaa[fz.gda[0][1][0]].aaa, var6 + fz.gda[0][1][1] + var10.aaa[fz.gda[0][1][0]].aba, var7 - fz.gda[0][1][2] + var10.aaa[fz.gda[0][1][0]].aca, 0, 0);
          fo.aaa(var1, var11.aaa[fz.gda[0][2][0]].aaa, var6 + fz.gda[0][2][1] + var11.aaa[fz.gda[0][2][0]].aba, var7 - fz.gda[0][2][2] + var11.aaa[fz.gda[0][2][0]].aca, 0, 0);
@@ -174,8 +174,8 @@ public final class fc extends fb implements ag {
             for(var3 = 0; var3 < er.jva.length; ++var3) {
                if (aea == var3) {
                   var4 = var3 > 0 ? -5 : 0;
-                  fo.aaa(var1, 989, gf.gia + 10 + (ab.aua % 7 > 3 ? 1 : 0), gf.gha + 76 + var3 * var2 + var4, 2, af.aga);
-                  fo.aaa(var1, 989, gf.gia + gf.gja - 15 - (ab.aua % 7 > 3 ? 1 : 0), gf.gha + 76 + var3 * var2 + var4, 0, af.aga);
+                  fo.aaa(var1, 989, GameScr.gia + 10 + (ab.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 2, af.aga);
+                  fo.aaa(var1, 989, GameScr.gia + GameScr.gja - 15 - (ab.aua % 7 > 3 ? 1 : 0), GameScr.gha + 76 + var3 * var2 + var4, 0, af.aga);
                }
             }
          }
@@ -200,12 +200,12 @@ public final class fc extends fb implements ag {
                fk.aba(this.aja.afa, this.aja.aga, this.aja.aha, this.aja.aia, var1);
             }
 
-            fw.aga.aaa(var1, er.jwa[aca], gf.gia + 85, gf.gha + 66 + var2, 2);
-            fw.aga.aaa(var1, er.gka[aca][ada], gf.gia + 85, gf.gha + 66 + (var2 << 1), 2);
+            fw.aga.aaa(var1, er.jwa[aca], GameScr.gia + 85, GameScr.gha + 66 + var2, 2);
+            fw.aga.aaa(var1, er.gka[aca][ada], GameScr.gia + 85, GameScr.gha + 66 + (var2 << 1), 2);
          }
 
-         aba.aaa = gf.gia + gf.gja / 2 - aba.aca / 2;
-         aba.aba = gf.gha + 62;
+         aba.aaa = GameScr.gia + GameScr.gja / 2 - aba.aca / 2;
+         aba.aba = GameScr.gha + 62;
          aba.aha = er.ffa;
          aba.aaa(var1);
          super.aaa(var1);
@@ -219,11 +219,11 @@ public final class fc extends fb implements ag {
    public final void aaa(int var1, Object var2) {
       switch(var1) {
       case 8000:
-         gm var10000 = gm.aaa();
+         Service var10000 = Service.aaa();
          int var4 = afa[aca][ada];
          int var3 = aca;
          String var8 = aba.aia;
-         gm var7 = var10000;
+         Service var7 = var10000;
          fe var5 = new fe((byte)-28);
 
          try {

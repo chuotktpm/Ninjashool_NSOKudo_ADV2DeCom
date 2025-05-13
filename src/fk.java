@@ -47,9 +47,9 @@ public final class fk {
                var1.aaa(var0);
             } else {
                if (fb.ara == 0) {
-                  var0.aaa(gf.eza, 1, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eza, 1, ab.baa - fb.aqa + 1, 0);
                } else {
-                  var0.aaa(gf.eya, 1, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eya, 1, ab.baa - fb.aqa + 1, 0);
                }
 
                var4.aaa(var0, var1.aaa, 35, ab.baa - fb.aqa + 4 + var5, 2);
@@ -61,9 +61,9 @@ public final class fk {
                var2.aaa(var0);
             } else {
                if (fb.ara == 1) {
-                  var0.aaa(gf.eza, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eza, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
                } else {
-                  var0.aaa(gf.eya, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
+                  var0.aaa(GameScr.eya, ab.bba - 35, ab.baa - fb.aqa + 1, 0);
                }
 
                var4.aaa(var0, var2.aaa, ab.bba, ab.baa - fb.aqa + 4 + var5, 2);
@@ -77,9 +77,9 @@ public final class fk {
             }
 
             if (fb.ara == 2) {
-               var0.aaa(gf.eza, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
+               var0.aaa(GameScr.eza, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
             } else {
-               var0.aaa(gf.eya, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
+               var0.aaa(GameScr.eya, ab.aza - 71, ab.baa - fb.aqa + 1, 0);
             }
 
             var4.aaa(var0, var3.aaa, ab.aza - 35, ab.baa - fb.aqa + 4 + var5, 2);
@@ -102,20 +102,20 @@ public final class fk {
       var0.aaa(0);
       int var9;
       if (var1) {
-         var0.aaa(gf.ewa, 0, 81, 29, 27, 0, var2, var3, 0);
-         var0.aaa(gf.ewa, 0, 135, 29, 27, 0, var2 + var4 - 29, var3, 0);
-         var0.aaa(gf.ewa, 0, 108, 29, 27, 0, var2 + var4 - 58, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 81, 29, 27, 0, var2, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 135, 29, 27, 0, var2 + var4 - 29, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 108, 29, 27, 0, var2 + var4 - 58, var3, 0);
 
          for(var9 = 0; var9 < (var4 - 58) / 29; ++var9) {
-            var0.aaa(gf.ewa, 0, 108, 29, 27, 0, var2 + 29 + var9 * 29, var3, 0);
+            var0.aaa(GameScr.ewa, 0, 108, 29, 27, 0, var2 + 29 + var9 * 29, var3, 0);
          }
       } else {
-         var0.aaa(gf.ewa, 0, 0, 29, 27, 0, var2, var3, 0);
-         var0.aaa(gf.ewa, 0, 54, 29, 27, 0, var2 + var4 - 29, var3, 0);
-         var0.aaa(gf.ewa, 0, 27, 29, 27, 0, var2 + var4 - 58, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 0, 29, 27, 0, var2, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 54, 29, 27, 0, var2 + var4 - 29, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 27, 29, 27, 0, var2 + var4 - 58, var3, 0);
 
          for(var9 = 0; var9 < (var4 - 58) / 29; ++var9) {
-            var0.aaa(gf.ewa, 0, 27, 29, 27, 0, var2 + 29 + var9 * 29, var3, 0);
+            var0.aaa(GameScr.ewa, 0, 27, 29, 27, 0, var2 + 29 + var9 * 29, var3, 0);
          }
       }
 
@@ -127,20 +127,20 @@ public final class fk {
       var0.aaa(0);
       int var8;
       if (var1) {
-         var0.aaa(gf.ewa, 0, 81, 29, 27, 0, var2, var3, 0);
-         var0.aaa(gf.ewa, 0, 135, 29, 27, 0, var2 + var4 - 29, var3, 0);
-         var0.aaa(gf.ewa, 0, 108, 29, 27, 0, var2 + var4 - 58, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 81, 29, 27, 0, var2, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 135, 29, 27, 0, var2 + var4 - 29, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 108, 29, 27, 0, var2 + var4 - 58, var3, 0);
 
          for(var8 = 0; var8 < (var4 - 58) / 29; ++var8) {
-            var0.aaa(gf.ewa, 0, 108, 29, 27, 0, var2 + 29 + var8 * 29, var3, 0);
+            var0.aaa(GameScr.ewa, 0, 108, 29, 27, 0, var2 + 29 + var8 * 29, var3, 0);
          }
       } else {
-         var0.aaa(gf.ewa, 0, 0, 29, 27, 0, var2, var3, 0);
-         var0.aaa(gf.ewa, 0, 54, 29, 27, 0, var2 + var4 - 29, var3, 0);
-         var0.aaa(gf.ewa, 0, 27, 29, 27, 0, var2 + var4 - 58, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 0, 29, 27, 0, var2, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 54, 29, 27, 0, var2 + var4 - 29, var3, 0);
+         var0.aaa(GameScr.ewa, 0, 27, 29, 27, 0, var2 + var4 - 58, var3, 0);
 
          for(var8 = 0; var8 < (var4 - 58) / 29; ++var8) {
-            var0.aaa(gf.ewa, 0, 27, 29, 27, 0, var2 + 29 + var8 * 29, var3, 0);
+            var0.aaa(GameScr.ewa, 0, 27, 29, 27, 0, var2 + 29 + var8 * 29, var3, 0);
          }
       }
 

@@ -10,7 +10,7 @@ public final class ef extends cu {
 
    public static void aaa(int var0, int var1, int var2, int var3) {
       ef var4;
-      (var4 = new ef()).aaa = gf.bca[var0];
+      (var4 = new ef()).aaa = GameScr.bca[var0];
       var4.aga = var1;
       var4.aha = var2;
       var4.aka = (short)var3;
@@ -19,7 +19,7 @@ public final class ef extends cu {
 
    public static void aaa(int var0, int var1, int var2, int var3, byte var4) {
       ef var5;
-      (var5 = new ef()).aaa = gf.bca[var0];
+      (var5 = new ef()).aaa = GameScr.bca[var0];
       var5.aga = var1;
       var5.aha = var2;
       var5.aka = (short)var3;
@@ -29,7 +29,7 @@ public final class ef extends cu {
 
    public static void aaa(int var0, fz var1, int var2) {
       ef var3;
-      (var3 = new ef()).aaa = gf.bca[var0];
+      (var3 = new ef()).aaa = GameScr.bca[var0];
       var3.aja = var1;
       var3.aka = (short)var2;
       cu.aca.addElement(var3);
@@ -37,7 +37,7 @@ public final class ef extends cu {
 
    public static void aba(int var0, fz var1, int var2) {
       ef var3;
-      (var3 = new ef()).aaa = gf.bca[var0];
+      (var3 = new ef()).aaa = GameScr.bca[var0];
       var3.aja = var1;
       var3.ala = System.currentTimeMillis() + (long)(var2 * 1000);
       cu.aca.addElement(var3);
@@ -87,7 +87,7 @@ public final class ef extends cu {
          }
       }
 
-      if (ab.aua % 11 == 0 && this.aja != null && this.aja != fz.ala() && !gf.bla.contains(this.aja)) {
+      if (ab.aua % 11 == 0 && this.aja != null && this.aja != fz.ala() && !GameScr.bla.contains(this.aja)) {
          cu.aca.removeElement(this);
       }
 

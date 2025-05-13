@@ -6,7 +6,7 @@ public final class ad implements Runnable {
    }
 
    public final void run() {
-      av var1 = gf.aia(13);
+      av var1 = GameScr.aia(13);
       int var2 = -1;
       if (var1 != null && var1.aqa != 15) {
          if (Math.abs(var1.ala - fz.ala().ala) > 22 || Math.abs(var1.ama - fz.ala().ama) > 22) {
@@ -22,7 +22,7 @@ public final class ad implements Runnable {
          }
       }
 
-      gm.aaa().aaa(this.aaa, var2);
+      Service.aaa().aaa(this.aaa, var2);
       gn.aga();
 
       try {

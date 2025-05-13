@@ -23,7 +23,7 @@ public final class bx implements Runnable {
 
       System.gc();
       if (cs.aba().afa) {
-         gf.ava().aaa();
+         GameScr.ava().aaa();
       }
 
       ab.ama();

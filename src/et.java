@@ -190,9 +190,9 @@ public final class et extends fb implements ag {
       if (this.aba) {
          var1.aaa(gn.aha, this.bja, this.bka, 0);
 
-         for(var3 = 0; var3 < gf.bna.size(); ++var3) {
+         for(var3 = 0; var3 < GameScr.bna.size(); ++var3) {
             ac var7;
-            var4 = (var7 = (ac)gf.bna.elementAt(var3)).ada / 12;
+            var4 = (var7 = (ac)GameScr.bna.elementAt(var3)).ada / 12;
             var5 = var7.aea / 12;
             if (var7.awa < fz.ala().aya - 2) {
                var1.aaa(11184810);
@@ -205,9 +205,9 @@ public final class et extends fb implements ag {
             var1.aca(this.bja + var4 - 1, this.bka + var5 - 1, 3, 3);
          }
 
-         for(var3 = 0; var3 < gf.bfa.size(); ++var3) {
+         for(var3 = 0; var3 < GameScr.bfa.size(); ++var3) {
             ep var9;
-            if ((var9 = (ep)gf.bfa.elementAt(var3)).afa != null && var9.afa != fz.ala()) {
+            if ((var9 = (ep)GameScr.bfa.elementAt(var3)).afa != null && var9.afa != fz.ala()) {
                var4 = var9.afa.ala / 12;
                var5 = var9.afa.ama / 12;
                if (ab.aua % 10 < 8) {
@@ -219,12 +219,12 @@ public final class et extends fb implements ag {
             }
          }
 
-         gf.ava();
-         gf.bna();
+         GameScr.ava();
+         GameScr.bna();
 
-         for(var6 = 0; var6 < gf.boa.size(); ++var6) {
+         for(var6 = 0; var6 < GameScr.boa.size(); ++var6) {
             av var10;
-            var4 = (var10 = (av)gf.boa.elementAt(var6)).ala / 12;
+            var4 = (var10 = (av)GameScr.boa.elementAt(var6)).ala / 12;
             var5 = var10.ama / 12;
             var1.aaa(16777215);
             var1.aca(this.bja + var4 - 2, this.bka + var5 - 2, 5, 5);
@@ -400,8 +400,8 @@ public final class et extends fb implements ag {
          ala();
       }
 
-      gf.ava();
-      bca = gf.bma();
+      GameScr.ava();
+      bca = GameScr.bma();
       if (ab.ana && ab.aqa < ab.baa - fb.aqa) {
          ab.ana = false;
          this.bla = true;
@@ -470,11 +470,11 @@ public final class et extends fb implements ag {
       switch(var1) {
       case 1000:
          if (fz.ala().bba <= 0 || fz.ala().aqa == 14) {
-            super.ama = gf.ava().gna;
+            super.ama = GameScr.ava().gna;
             fz.ala().bba = 0;
          }
 
-         gf.ava().aaa();
+         GameScr.ava().aaa();
          return;
       case 1001:
          this.aba = !this.aba;

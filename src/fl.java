@@ -46,13 +46,13 @@ public final class fl extends Auto {
                var1 = 0;
 
                while(true) {
-                  if (var1 >= gf.bfa.size()) {
+                  if (var1 >= GameScr.bfa.size()) {
                      var10000 = false;
                      break;
                   }
 
                   ep var2;
-                  if ((var2 = (ep)gf.bfa.elementAt(var1)).afa != null && var2.afa.bba > 0) {
+                  if ((var2 = (ep)GameScr.bfa.elementAt(var1)).afa != null && var2.afa.bba > 0) {
                      var10000 = true;
                      break;
                   }
@@ -69,17 +69,17 @@ public final class fl extends Auto {
             }
          } else if (gn.aoa == super.aga && gn.ala == super.aha) {
             if (this.ada != null && this.ada.aba >= this.ada.aca) {
-               gf.aca("Xong Tà Thú");
+               GameScr.chatPopup("Xong Tà Thú");
                Code.aca();
                return;
             }
 
             if (fz.ala().cea.equals(Code.aha)) {
                if (fz.ala().dpa != null && fz.ala().dpa.aba < fz.ala().dpa.aca / 10) {
-                  if (!gj.bha()) {
-                     gm.aaa().aka("waitGr");
-                     gj.aaa(200000L);
-                     gm.aaa().aka("notifyGr");
+                  if (!LockGame.bha()) {
+                     Service.aaa().aka("waitGr");
+                     LockGame.aaa(200000L);
+                     Service.aaa().aka("notifyGr");
                   }
 
                   var10000 = false;

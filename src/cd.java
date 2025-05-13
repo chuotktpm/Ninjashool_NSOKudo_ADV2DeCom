@@ -42,7 +42,7 @@ public final class cd {
    public final void aaa() {
       if (this.aga == 1) {
          if (this.aha == null) {
-            gf.bda.removeElement(this);
+            GameScr.bda.removeElement(this);
             return;
          }
 
@@ -71,11 +71,11 @@ public final class cd {
             this.aaa = this.aha.ala;
             this.aba = this.aha.ama - this.aha.cja / 2;
             if (this.afa < -5) {
-               gf.bda.removeElement(this);
+               GameScr.bda.removeElement(this);
                return;
             }
          } else if (ci.aea(this.aha.ala - this.aaa) < 10 && ci.aea(this.aha.ama - this.aba) < 10) {
-            gf.bda.removeElement(this);
+            GameScr.bda.removeElement(this);
             return;
          }
       } else if (this.aga == 2) {
@@ -95,7 +95,7 @@ public final class cd {
             }
 
             if (this.aja[var1] < 0) {
-               gf.bda.removeElement(this);
+               GameScr.bda.removeElement(this);
             }
          }
       }

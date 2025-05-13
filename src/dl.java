@@ -41,8 +41,8 @@ public final class dl extends fb implements ag {
 
    public final void aba() {
       super.aba();
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       int var1;
@@ -170,7 +170,7 @@ public final class dl extends fb implements ag {
    public final void aaa(int var1, Object var2) {
       switch(var1) {
       case 1:
-         gm var10000 = gm.aaa();
+         Service var10000 = Service.aaa();
          String var8 = this.aja[6].aia;
          String var7 = this.aja[5].aia;
          String var6 = this.aja[4].aia;
@@ -178,7 +178,7 @@ public final class dl extends fb implements ag {
          String var4 = this.aja[2].aia;
          String var3 = this.aja[1].aia;
          String var12 = this.aja[0].aia;
-         gm var11 = var10000;
+         Service var11 = var10000;
 
          try {
             fe var9;
@@ -196,7 +196,7 @@ public final class dl extends fb implements ag {
          }
 
          ab.bsa = false;
-         gf.ava().aaa();
+         GameScr.ava().aaa();
       default:
       }
    }

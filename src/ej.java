@@ -44,10 +44,10 @@ public final class ej extends Auto {
    private static void aea() {
       fz var0 = fz.ala();
 
-      for(int var1 = 0; var1 < gf.bma.size(); ++var1) {
+      for(int var1 = 0; var1 < GameScr.bma.size(); ++var1) {
          am var2;
-         if (aaa((var2 = (am)gf.bma.elementAt(var1)).aha) && ci.aaa(var0.ala, var0.ama, var2.aca, var2.ada) <= 100 && (fz.bja() > 2 || var2.aha.aia && fz.aja(var2.aha.aaa))) {
-            gm.aaa().aoa(var2.aga);
+         if (aaa((var2 = (am)GameScr.bma.elementAt(var1)).aha) && ci.aaa(var0.ala, var0.ama, var2.aca, var2.ada) <= 100 && (fz.bja() > 2 || var2.aha.aia && fz.aja(var2.aha.aaa))) {
+            Service.aaa().aoa(var2.aga);
             Thread.sleep(50L);
          }
       }
@@ -57,9 +57,9 @@ public final class ej extends Auto {
    protected final boolean c_() {
       fz var1 = fz.ala();
 
-      for(int var2 = 0; var2 < gf.bma.size(); ++var2) {
+      for(int var2 = 0; var2 < GameScr.bma.size(); ++var2) {
          am var3;
-         if (aaa((var3 = (am)gf.bma.elementAt(var2)).aha) && ci.aaa(var1.ala, var1.ama, var3.aca, var3.ada) <= 100 && (fz.bja() > 2 || var3.aha.aia && fz.aja(var3.aha.aaa))) {
+         if (aaa((var3 = (am)GameScr.bma.elementAt(var2)).aha) && ci.aaa(var1.ala, var1.ama, var3.aca, var3.ada) <= 100 && (fz.bja() > 2 || var3.aha.aia && fz.aja(var3.aha.aaa))) {
             return true;
          }
       }
@@ -78,7 +78,7 @@ public final class ej extends Auto {
 
          int var4;
          if (var3 == null && var2 == null || !var2.axa || System.currentTimeMillis() - super.baa > 60000L) {
-            ev var10 = gf.bna;
+            ev var10 = GameScr.bna;
             var4 = 0;
 
             ac var10000;
@@ -108,24 +108,24 @@ public final class ej extends Auto {
 
          int var6;
          fz var8;
-         if (gf.bfa.size() > 0 && var1.cua.aaa == 6 && var1.bba > 0) {
+         if (GameScr.bfa.size() > 0 && var1.cua.aaa == 6 && var1.bba > 0) {
             for(var4 = 0; var4 < var1.cwa.size(); ++var4) {
                bc var12;
                if ((var12 = (bc)var1.cwa.elementAt(var4)) != null && var12.aaa.ada == 4) {
                   if (!var12.aaa()) {
-                     for(var6 = 0; var6 < gf.bfa.size(); ++var6) {
+                     for(var6 = 0; var6 < GameScr.bfa.size(); ++var6) {
                         ep var7;
-                        if ((var7 = (ep)gf.bfa.elementAt(var6)).aaa != var1.asa && var7.afa != null && var7.afa.bba <= 0) {
+                        if ((var7 = (ep)GameScr.bfa.elementAt(var6)).aaa != var1.asa && var7.afa != null && var7.afa.bba <= 0) {
                            var8 = var7.afa;
                            if (Math.abs(var1.ala - var8.ala) > 50 || Math.abs(var1.ama - var8.ama) > 50) {
                               fz.aca(var8.ala, var8.ama);
                            }
 
                            Thread.sleep(500L);
-                           gm.aaa().aua(var7.aaa);
+                           Service.aaa().aua(var7.aaa);
                            var12.afa = System.currentTimeMillis();
                            var12.ala = true;
-                           var1.aba(gf.aza[var12.aaa.aaa], 0);
+                           var1.aba(GameScr.aza[var12.aaa.aaa], 0);
                            Thread.sleep(1000L);
                            return;
                         }
@@ -187,9 +187,9 @@ public final class ej extends Auto {
                }
             }
 
-            gm.aaa().afa(var11.aaa.aaa);
+            Service.aaa().afa(var11.aaa.aaa);
             if (var11.aaa.ada == 2) {
-               gm.aaa().ara();
+               Service.aaa().ara();
             } else {
                ac var17;
                if (Code.boa && var3 != null && !Auto.aca(var3) && Auto.aaa(var1, var3)) {
@@ -199,19 +199,19 @@ public final class ej extends Auto {
                   Auto.aza.removeAllElements();
                   Auto.aza.addElement(var3);
 
-                  for(var15 = 0; var15 < gf.bla.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
-                     if ((var8 = (fz)gf.bla.elementAt(var15)).bba > 0 && var8.aqa != 14 && var8.aqa != 5 && var8.aqa != 15 && !var8.equals(var3) && (var8.dla == 3 || var1.dla == 3 || var8.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var8.asa || var1.dya >= 0 && var1.dya == var8.asa || var8.dza == var1.asa) && !Code.ada(var8.cea) && var3.ala - var13 <= var8.ala && var8.ala <= var3.ala + var13 && var3.ama - var6 <= var8.ama && var8.ama <= var3.ama + var6) {
+                  for(var15 = 0; var15 < GameScr.bla.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
+                     if ((var8 = (fz)GameScr.bla.elementAt(var15)).bba > 0 && var8.aqa != 14 && var8.aqa != 5 && var8.aqa != 15 && !var8.equals(var3) && (var8.dla == 3 || var1.dla == 3 || var8.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var8.asa || var1.dya >= 0 && var1.dya == var8.asa || var8.dza == var1.asa) && !Code.ada(var8.cea) && var3.ala - var13 <= var8.ala && var8.ala <= var3.ala + var13 && var3.ama - var6 <= var8.ama && var8.ama <= var3.ama + var6) {
                         Auto.aza.addElement(var8);
                      }
                   }
 
-                  for(var15 = 0; var15 < gf.bna.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
-                     if ((var17 = (ac)gf.bna.elementAt(var15)).aga != 0 && var17.aga != 1 && var17.axa && var3.ala - var13 <= var17.ada && var17.ada <= var3.ala + var13 && var3.ama - var6 <= var17.aea && var17.aea <= var3.ama + var6) {
+                  for(var15 = 0; var15 < GameScr.bna.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
+                     if ((var17 = (ac)GameScr.bna.elementAt(var15)).aga != 0 && var17.aga != 1 && var17.axa && var3.ala - var13 <= var17.ada && var17.ada <= var3.ala + var13 && var3.ama - var6 <= var17.aea && var17.aea <= var3.ama + var6) {
                         Auto.aya.addElement(var17);
                      }
                   }
 
-                  gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
+                  Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
                } else {
                   if (var2 == null || var2 == null || !var2.axa || var2.aga == 0 || var2.aba <= 0) {
                      return;
@@ -227,19 +227,19 @@ public final class ej extends Auto {
                   Auto.aza.removeAllElements();
                   Auto.aya.addElement(var2);
 
-                  for(var15 = 0; var15 < gf.bna.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
-                     if ((var17 = (ac)gf.bna.elementAt(var15)).aga != 0 && var17.aga != 1 && !var17.equals(var2) && var17.axa && var2.aha - 100 <= var17.aha && var17.aha <= var2.aha + 100 && var2.aia - 50 <= var17.aia && var17.aia <= var2.aia + 50) {
+                  for(var15 = 0; var15 < GameScr.bna.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
+                     if ((var17 = (ac)GameScr.bna.elementAt(var15)).aga != 0 && var17.aga != 1 && !var17.equals(var2) && var17.axa && var2.aha - 100 <= var17.aha && var17.aha <= var2.aha + 100 && var2.aia - 50 <= var17.aia && var17.aia <= var2.aia + 50) {
                         Auto.aya.addElement(var17);
                      }
                   }
 
-                  for(var15 = 0; var15 < gf.bla.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
-                     if ((var8 = (fz)gf.bla.elementAt(var15)).bba > 0 && var8.aqa != 14 && var8.aqa != 5 && var8.aqa != 15 && (var8.dla == 3 || var1.dla == 3 || var8.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var8.asa || var1.dya >= 0 && var1.dya == var8.asa || var8.dza == var1.asa) && !Code.ada(var8.cea) && var2.ada - var13 <= var8.ala && var8.ala <= var2.ada + var13 && var2.aea - var6 <= var8.ama && var8.ama <= var2.aea + var6) {
+                  for(var15 = 0; var15 < GameScr.bla.size() && Auto.aya.size() + Auto.aza.size() < var11.aia; ++var15) {
+                     if ((var8 = (fz)GameScr.bla.elementAt(var15)).bba > 0 && var8.aqa != 14 && var8.aqa != 5 && var8.aqa != 15 && (var8.dla == 3 || var1.dla == 3 || var8.dla == 1 && var1.dla == 1 || var1.dza >= 0 && var1.dza == var8.asa || var1.dya >= 0 && var1.dya == var8.asa || var8.dza == var1.asa) && !Code.ada(var8.cea) && var2.ada - var13 <= var8.ala && var8.ala <= var2.ada + var13 && var2.aea - var6 <= var8.ama && var8.ama <= var2.aea + var6) {
                         Auto.aza.addElement(var8);
                      }
                   }
 
-                  gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
+                  Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)1);
                }
             }
 
@@ -247,7 +247,7 @@ public final class ej extends Auto {
                var11.afa = System.currentTimeMillis();
                var11.ala = true;
                if (!Code.bfa) {
-                  var1.aba(gf.aza[var11.aaa.aaa], 0);
+                  var1.aba(GameScr.aza[var11.aaa.aaa], 0);
                }
             }
 
@@ -274,15 +274,15 @@ public final class ej extends Auto {
                      label91:
                      while(true) {
                         ep var7;
-                        if (var5 >= gf.bfa.size()) {
+                        if (var5 >= GameScr.bfa.size()) {
                            var5 = 0;
 
                            while(true) {
-                              if (var5 >= gf.bfa.size()) {
+                              if (var5 >= GameScr.bfa.size()) {
                                  break label137;
                               }
 
-                              if ((var7 = (ep)gf.bfa.elementAt(var5)).afa != null) {
+                              if ((var7 = (ep)GameScr.bfa.elementAt(var5)).afa != null) {
                                  if (var7.ada.equals(fz.ala().cea)) {
                                     break label137;
                                  }
@@ -293,7 +293,7 @@ public final class ej extends Auto {
                            }
                         }
 
-                        if ((var7 = (ep)gf.bfa.elementAt(var5)).afa != null && var7.afa.bba > 0) {
+                        if ((var7 = (ep)GameScr.bfa.elementAt(var5)).afa != null && var7.afa.bba > 0) {
                            break;
                         }
 
@@ -331,17 +331,17 @@ public final class ej extends Auto {
 
                Auto.aba(this.aba);
 
-               for(var6 = 0; var6 < gf.bna.size(); ++var6) {
+               for(var6 = 0; var6 < GameScr.bna.size(); ++var6) {
                   ac var3;
-                  if ((var3 = (ac)gf.bna.elementAt(var6)).axa && var3.aba > 0 && var3.aga != 0) {
-                     gm.aaa().aka("pkm " + super.aga);
-                     gm.aaa().aka("pkk " + (super.aha = gn.ala));
+                  if ((var3 = (ac)GameScr.bna.elementAt(var6)).axa && var3.aba > 0 && var3.aga != 0) {
+                     Service.aaa().aka("pkm " + super.aga);
+                     Service.aaa().aka("pkk " + (super.aha = gn.ala));
                      break;
                   }
                }
 
                if (this.aba == 15 && ++this.aaa == 2) {
-                  gm.aaa().aka("pke");
+                  Service.aaa().aka("pke");
                   Code.aca();
                   return;
                }

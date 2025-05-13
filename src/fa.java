@@ -11,7 +11,7 @@ public final class fa {
 
    public final void aaa(String var1, String var2) {
       boolean var3 = false;
-      if (gf.dra && dc.ada().aea() == this && gf.bsa == this.aca.size() - 1) {
+      if (GameScr.dra && dc.ada().aea() == this && GameScr.bsa == this.aca.size() - 1) {
          var3 = true;
       }
 
@@ -23,7 +23,7 @@ public final class fa {
       }
 
       if (var3) {
-         gf.ava().bqa();
+         GameScr.ava().bqa();
       }
 
       this.aaa();
@@ -38,7 +38,7 @@ public final class fa {
 
    public final void aaa(String var1) {
       boolean var2 = false;
-      if (gf.dra && dc.ada().aea() == this && gf.bsa == this.aca.size() - 1) {
+      if (GameScr.dra && dc.ada().aea() == this && GameScr.bsa == this.aca.size() - 1) {
          var2 = true;
       }
 
@@ -49,7 +49,7 @@ public final class fa {
       }
 
       if (var2) {
-         gf.ava().bqa();
+         GameScr.ava().bqa();
       }
 
       this.aaa();

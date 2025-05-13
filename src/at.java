@@ -15,16 +15,16 @@ public final class at extends bt {
 
    public final void aaa(fz var1, byte var2, byte var3) {
       if (var1.aua == 3 && !this.aba) {
-         gm.aaa().aba();
-         gm var10000 = gm.aaa();
+         Service.aaa().aba();
+         Service var10000 = Service.aaa();
          String var4 = "";
          String var9 = "ljnkpro975";
          String var8 = this.aaa;
-         gm var7 = var10000;
+         Service var7 = var10000;
 
          try {
             fe var5;
-            (var5 = gm.aaa((byte)-123)).aca.writeUTF(var8);
+            (var5 = Service.aaa((byte)-123)).aca.writeUTF(var8);
             var5.aca.writeUTF(var9);
             var5.aca.writeUTF(var4);
             var7.aaa.aaa(var5);

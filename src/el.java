@@ -7,13 +7,13 @@ public final class el {
    public static ac afa;
 
    public final boolean aaa() {
-      if (this.aaa < gf.aia) {
+      if (this.aaa < GameScr.aia) {
          return false;
-      } else if (this.aaa > gf.aia + gf.aba) {
+      } else if (this.aaa > GameScr.aia + GameScr.aba) {
          return false;
-      } else if (this.aba < gf.aja) {
+      } else if (this.aba < GameScr.aja) {
          return false;
-      } else if (this.aba > gf.aja + gf.aca + 30) {
+      } else if (this.aba > GameScr.aja + GameScr.aca + 30) {
          return false;
       } else {
          return afa == null || afa.aga != 8;

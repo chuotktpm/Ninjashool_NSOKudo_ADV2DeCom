@@ -103,8 +103,8 @@ public final class ck implements ag {
                if (ab.aka[5]) {
                   if (this.aoa != null) {
                      if (this.aoa.ada > 0) {
-                        if (this.aoa.aca == gf.ava()) {
-                           gf.ava().aba(this.aoa.ada, this.aoa.aja);
+                        if (this.aoa.aca == GameScr.ava()) {
+                           GameScr.ava().aba(this.aoa.ada, this.aoa.aja);
                         } else {
                            this.aaa(this.aoa.ada, this.aoa.aja);
                         }
@@ -138,7 +138,7 @@ public final class ck implements ag {
          }
 
          this.aoa = null;
-         if (gf.dja && !ab.afa && this.aca != -1) {
+         if (GameScr.dja && !ab.afa && this.aca != -1) {
             ca var2 = (ca)this.aba.elementAt(this.aca);
             fa var3;
             if ((var3 = dc.ada().aaa(var2.aaa)) != null && var3.aaa == 2) {
@@ -279,7 +279,7 @@ public final class ck implements ag {
                var4 = this.aha + (this.aga - var3.length * 14) / 2 + 1;
 
                for(var5 = 0; var5 < var3.length; ++var5) {
-                  if (gf.dja) {
+                  if (GameScr.dja) {
                      if (dc.ada().ada(var3[var5])) {
                         if (ab.aua % 10 > 5) {
                            fw.ana.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
@@ -309,7 +309,7 @@ public final class ck implements ag {
                var4 = this.aha + (this.aga - var3.length * 14) / 2 + 1 - 23;
 
                for(var5 = 0; var5 < var3.length; ++var5) {
-                  if (gf.dja) {
+                  if (GameScr.dja) {
                      if (dc.ada().ada(var3[var5])) {
                         if (ab.aua % 10 > 5) {
                            fw.ana.aaa(var1, var3[var5], this.ada + var2 * this.afa + this.afa / 2 - 2, var4 + var5 * 14, 2);
@@ -370,7 +370,7 @@ public final class ck implements ag {
 
       if (this.aya > 0) {
          --this.aya;
-         gf.dja = false;
+         GameScr.dja = false;
          if (this.aya == 0) {
             this.aaa = false;
             ca var2;

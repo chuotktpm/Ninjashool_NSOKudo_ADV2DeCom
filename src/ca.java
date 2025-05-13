@@ -81,7 +81,7 @@ public final class ca {
             return;
          }
 
-         gf.ava().aba(this.ada, this.aja);
+         GameScr.ava().aba(this.ada, this.aja);
       }
 
    }
@@ -92,9 +92,9 @@ public final class ca {
       } else {
          if (this.aaa != "") {
             if (!this.aka) {
-               var1.aaa(gf.eya, this.afa, this.aga, 0);
+               var1.aaa(GameScr.eya, this.afa, this.aga, 0);
             } else {
-               var1.aaa(gf.eza, this.afa, this.aga, 0);
+               var1.aaa(GameScr.eza, this.afa, this.aga, 0);
             }
          }
 

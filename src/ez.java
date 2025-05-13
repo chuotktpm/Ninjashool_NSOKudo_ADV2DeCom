@@ -30,7 +30,7 @@ public final class ez extends fb implements ag {
    }
 
    public final void aaa() {
-      gf.aca = ab.baa;
+      GameScr.aca = ab.baa;
       if (ab.bqa == 2) {
          ab.aaa(0);
       } else {
@@ -38,16 +38,16 @@ public final class ez extends fb implements ag {
       }
 
       super.aaa();
-      if (gf.aaa != null) {
-         gf.aaa = null;
+      if (GameScr.aaa != null) {
+         GameScr.aaa = null;
       }
 
       if ((gn.ama = (byte)((int)(System.currentTimeMillis() % 9L))) == 5 || gn.ama == 6) {
          gn.ama = 4;
       }
 
-      gf.aaa(true);
-      gf.aia = 100;
+      GameScr.aaa(true);
+      GameScr.aia = 100;
       this.aea = 170;
       this.afa = 175;
       if (ab.aza == 128 || ab.baa <= 208) {
@@ -156,8 +156,8 @@ public final class ez extends fb implements ag {
          super.ama = ava[1][this.aia];
       }
 
-      if (++gf.aia > ab.aza * 3 + 100) {
-         gf.aia = 100;
+      if (++GameScr.aia > ab.aza * 3 + 100) {
+         GameScr.aia = 100;
       }
 
       super.aba();
@@ -228,7 +228,7 @@ public final class ez extends fb implements ag {
          }
 
          ala();
-         gm.aaa().aaa("-1", "12345", "1.4.8");
+         Service.aaa().aaa("-1", "12345", "1.4.8");
          return;
       case 1001:
          if (ada() && !aaa.equals("") && aca.equals("")) {
@@ -265,11 +265,11 @@ public final class ez extends fb implements ag {
             fd.aaa("pass", aba);
          }
 
-         gm.aaa().aaa(aaa, aba, "1.4.8");
+         Service.aaa().aaa(aaa, aba, "1.4.8");
          return;
       case 10001:
          ala();
-         gm.aaa().aaa("-1", "12345", "1.4.8");
+         Service.aaa().aaa("-1", "12345", "1.4.8");
          if (!aca.equals("")) {
             aaa = aca;
             aba = ada;

@@ -53,7 +53,7 @@ public final class eg implements ag {
             aba = var1;
             fd.aaa("nextmap", String.valueOf(aba));
          } else {
-            gf.aca("Tốc độ nextmap từ 1 đến 99");
+            GameScr.chatPopup("Tốc độ nextmap từ 1 đến 99");
          }
 
          ab.ama();
@@ -72,13 +72,13 @@ public final class eg implements ag {
             aha = var1;
             fd.aaa("background", String.valueOf(aha));
          } else {
-            gf.aca("Màu nền từ -1 đến 16777216");
+            GameScr.chatPopup("Màu nền từ -1 đến 16777216");
          }
 
          ab.ama();
       } else if (var1 == 5) {
          String var5 = aaa("hd.txt");
-         gf.ava().aaa("Hướng dẫn", var5, true);
+         GameScr.ava().aaa("Hướng dẫn", var5, true);
       }
    }
 

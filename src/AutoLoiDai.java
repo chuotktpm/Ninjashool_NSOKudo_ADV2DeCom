@@ -1,4 +1,4 @@
-public final class go extends Auto {
+public final class AutoLoiDai extends Auto {
    private static boolean aaa;
    private static boolean aba;
    private long aca;
@@ -35,15 +35,15 @@ public final class go extends Auto {
             }
 
             if (gn.aoa == Code.bqa && gn.ala == Code.bra) {
-               var11 = gf.aia(0);
+               var11 = GameScr.aia(0);
                if (fz.ala().ala == var11.ala && fz.ala().ama == var11.ama) {
-                  for(var2 = 0; var2 < gf.bla.size(); ++var2) {
+                  for(var2 = 0; var2 < GameScr.bla.size(); ++var2) {
                      var3 = Code.aca(Code.bpa, ",");
 
                      for(var4 = 0; var4 < var3.length; ++var4) {
-                        if (var3[var4].equals(((fz)gf.bla.elementAt(var2)).cea) && System.currentTimeMillis() - this.ada >= 5000L) {
-                           gf.aba(0, 3, 0);
-                           gm.aaa().aaa((short)11211, (String)var3[var4]);
+                        if (var3[var4].equals(((fz)GameScr.bla.elementAt(var2)).cea) && System.currentTimeMillis() - this.ada >= 5000L) {
+                           GameScr.aba(0, 3, 0);
+                           Service.aaa().aaa((short)11211, (String)var3[var4]);
                            ab.ama();
                            this.ada = System.currentTimeMillis();
                         }
@@ -87,7 +87,7 @@ public final class go extends Auto {
             }
 
             if (gn.aoa == 110) {
-               var11 = gf.aia(0);
+               var11 = GameScr.aia(0);
                if (fz.ala().ala != var11.ala || fz.ala().ama != var11.ama) {
                   fz.aca(var11.ala, var11.ama);
 
@@ -101,8 +101,8 @@ public final class go extends Auto {
                }
 
                if (System.currentTimeMillis() - this.aea >= 3000L) {
-                  gf.aba(0, 1, 0);
-                  gm.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
+                  GameScr.aba(0, 1, 0);
+                  Service.aaa().aaa((short)11212, (String)String.valueOf(dm.aaa));
                   ab.ama();
 
                   try {
@@ -124,12 +124,12 @@ public final class go extends Auto {
             if (System.currentTimeMillis() - this.aca >= 59000L) {
                fz var1 = null;
 
-               for(var2 = 0; var2 < gf.bla.size(); ++var2) {
+               for(var2 = 0; var2 < GameScr.bla.size(); ++var2) {
                   var3 = Code.aca(Code.bpa, ",");
 
                   for(var4 = 0; var4 < var3.length; ++var4) {
                      fz var5;
-                     if ((var5 = (fz)gf.bla.elementAt(var2)).cea.equals(var3[var4])) {
+                     if ((var5 = (fz)GameScr.bla.elementAt(var2)).cea.equals(var3[var4])) {
                         var1 = var5;
                         break;
                      }
@@ -147,8 +147,8 @@ public final class go extends Auto {
                   bc var12 = Auto.aqa;
                   fz var13 = fz.ala();
                   if (var12.aaa.ada == 2) {
-                     gm.aaa().afa(var12.aaa.aaa);
-                     gm.aaa().ara();
+                     Service.aaa().afa(var12.aaa.aaa);
+                     Service.aaa().ara();
                   } else {
                      if ((var12.aaa.ada == 1 || var12.aaa.ada == 3) && (ci.aea(var13.ala - var1.ala) > var12.aga + 30 || ci.aea(var13.ama - var1.ama) > var12.aha + 30) && System.currentTimeMillis() - this.bha > 1500L) {
                         Auto.ada(var1);
@@ -158,15 +158,15 @@ public final class go extends Auto {
                      Auto.aya.removeAllElements();
                      Auto.aza.removeAllElements();
                      Auto.aza.addElement(var1);
-                     gm.aaa().afa(var12.aaa.aaa);
-                     gm.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
+                     Service.aaa().afa(var12.aaa.aaa);
+                     Service.aaa().aaa((ev)Auto.aya, (ev)Auto.aza, (int)2);
                   }
 
                   if (System.currentTimeMillis() - var12.afa >= (long)var12.aea + 50L) {
                      var12.afa = System.currentTimeMillis();
                      var12.ala = true;
                      if (!Code.bfa) {
-                        var13.aba(gf.aza[var12.aaa.aaa], 0);
+                        var13.aba(GameScr.aza[var12.aaa.aaa], 0);
                      }
                   }
 

@@ -12,7 +12,7 @@ public final class fv extends Auto {
 
    public final void aaa(String var1, int var2) {
       if (aw.ada()) {
-         gm.aaa().aka(var2);
+         Service.aaa().aka(var2);
          this.bia = var1;
          this.bha = true;
          this.aea = true;
@@ -20,7 +20,7 @@ public final class fv extends Auto {
          this.bka = null;
          this.ada = true;
       } else {
-         gm.aaa().aha();
+         Service.aaa().aha();
          Code.aaa(var1, "<Hiện mk ko mua vp nào>");
       }
    }
@@ -28,7 +28,7 @@ public final class fv extends Auto {
    public final void aaa(String var1, String var2) {
       String[] var15 = Code.aca(var2, " ");
       if (this.ada) {
-         if (!gf.dpa) {
+         if (!GameScr.dpa) {
             Code.aaa(var1, "<Đang giao dịch với người khác. Mong bạn chờ giây lát>");
          }
 
@@ -189,10 +189,10 @@ public final class fv extends Auto {
             return;
          }
 
-         gm.aaa().aqa(var1.asa);
-         if (!gj.bba()) {
-            if (gf.dpa) {
-               gm.aaa().aia();
+         Service.aaa().aqa(var1.asa);
+         if (!LockGame.bba()) {
+            if (GameScr.dpa) {
+               Service.aaa().aia();
                Thread.sleep(1000L);
             }
 
@@ -202,17 +202,17 @@ public final class fv extends Auto {
       } else {
          var3 = System.currentTimeMillis();
 
-         while(!gf.dpa || System.currentTimeMillis() - var3 >= 10000L) {
+         while(!GameScr.dpa || System.currentTimeMillis() - var3 >= 10000L) {
             Thread.sleep(1000L);
          }
       }
 
       var3 = System.currentTimeMillis();
 
-      while(gf.ava().ega != 1) {
+      while(GameScr.ava().ega != 1) {
          if (aaa || System.currentTimeMillis() - var3 >= 20000L) {
-            if (gf.dpa) {
-               gm.aaa().aia();
+            if (GameScr.dpa) {
+               Service.aaa().aia();
                Thread.sleep(1000L);
             }
 
@@ -229,12 +229,12 @@ public final class fv extends Auto {
       int var4;
       int var7;
       int var10;
-      for(var4 = 0; var4 < gf.daa.length; ++var4) {
-         if (gf.daa[var4] != null) {
+      for(var4 = 0; var4 < GameScr.daa.length; ++var4) {
+         if (GameScr.daa[var4] != null) {
             fd var5;
-            if ((var5 = aw.aaa(gf.daa[var4].aaa.aaa)) == null || !var5.aca()) {
-               if (gf.dpa) {
-                  gm.aaa().aia();
+            if ((var5 = aw.aaa(GameScr.daa[var4].aaa.aaa)) == null || !var5.aca()) {
+               if (GameScr.dpa) {
+                  Service.aaa().aia();
                   Thread.sleep(1000L);
                }
 
@@ -242,7 +242,7 @@ public final class fv extends Auto {
                return;
             }
 
-            int var6 = gf.daa[var4].aaa.aia ? gf.daa[var4].ada : 1;
+            int var6 = GameScr.daa[var4].aaa.aia ? GameScr.daa[var4].ada : 1;
             if (var8.contains(var5)) {
                var7 = var8.indexOf(var5);
                var10 = (Integer)var9.elementAt(var7) + var6;
@@ -255,8 +255,8 @@ public final class fv extends Auto {
       }
 
       if (var8.size() == 0) {
-         if (gf.dpa) {
-            gm.aaa().aia();
+         if (GameScr.dpa) {
+            Service.aaa().aia();
             Thread.sleep(1000L);
          }
 
@@ -268,8 +268,8 @@ public final class fv extends Auto {
             fd var11 = (fd)var8.elementAt(var10);
             var7 = (Integer)var9.elementAt(var10);
             if (fz.aka(var11.aaa.aaa) + var7 > var11.aha) {
-               if (gf.dpa) {
-                  gm.aaa().aia();
+               if (GameScr.dpa) {
+                  Service.aaa().aia();
                   Thread.sleep(1000L);
                }
 
@@ -281,16 +281,16 @@ public final class fv extends Auto {
          }
 
          if (var4 > fz.ala().cqa) {
-            if (gf.dpa) {
-               gm.aaa().aia();
+            if (GameScr.dpa) {
+               Service.aaa().aia();
             }
 
             Code.aaa(this.bia, "<Hiện mk ko đủ xu, xin bạn quay lại sau>");
          } else {
-            gf.ava().eha = var4;
-            gf.cza = var2;
-            gm.aaa().aaa(var4, var2);
-            gf.ava().efa = 1;
+            GameScr.ava().eha = var4;
+            GameScr.cza = var2;
+            Service.aaa().aaa(var4, var2);
+            GameScr.ava().efa = 1;
             var3 = System.currentTimeMillis();
 
             while(System.currentTimeMillis() - var3 < 5000L) {
@@ -302,13 +302,13 @@ public final class fv extends Auto {
                Thread.sleep(200L);
             }
 
-            gm.aaa().aja();
-            gf.ava().efa = 2;
+            Service.aaa().aja();
+            GameScr.ava().efa = 2;
 
-            while(gf.ava().eha < 2) {
+            while(GameScr.ava().eha < 2) {
                if (aaa || System.currentTimeMillis() - var3 >= 20000L) {
-                  if (gf.dpa) {
-                     gm.aaa().aia();
+                  if (GameScr.dpa) {
+                     Service.aaa().aia();
                      Thread.sleep(1000L);
                   }
 
@@ -341,8 +341,8 @@ public final class fv extends Auto {
                   return;
                }
 
-               gm.aaa().aka(var15.ada, var8);
-               gj.ata();
+               Service.aaa().aka(var15.ada, var8);
+               LockGame.ata();
                if ((var15 = fz.aba(var7.aaa.aaa, var8)) == null) {
                   Code.aaa(this.bia, "<Xin lỗi, có lỗi chọn item>");
                   return;
@@ -356,9 +356,9 @@ public final class fv extends Auto {
 
                label184:
                for(int var11 = 0; var10 < var8; ++var10) {
-                  while(var11 < var9.daa.length) {
+                  while(var11 < var9.arrItemBag.length) {
                      gg var12;
-                     if ((var12 = var9.daa[var11]) != null && var12.aaa.aaa == var7.aaa.aaa) {
+                     if ((var12 = var9.arrItemBag[var11]) != null && var12.aaa.aaa == var7.aaa.aaa) {
                         var2[var3++] = var12;
                         ++var11;
                         continue label184;
@@ -384,50 +384,50 @@ public final class fv extends Auto {
       if (!fz.ada(var1.ala, var1.ama)) {
          Code.aaa(this.bia, "<Hãy đứng ở nơi dễ GD>");
          if (var5) {
-            gm.aaa().afa();
-            gj.ata();
+            Service.aaa().afa();
+            LockGame.ata();
          }
 
       } else {
-         gm.aaa().aqa(var1.asa);
-         if (!gj.bba()) {
-            if (gf.dpa) {
-               gm.aaa().aia();
+         Service.aaa().aqa(var1.asa);
+         if (!LockGame.bba()) {
+            if (GameScr.dpa) {
+               Service.aaa().aia();
                Thread.sleep(1000L);
             }
 
             if (var5) {
-               gm.aaa().afa();
-               gj.ata();
+               Service.aaa().afa();
+               LockGame.ata();
             }
 
             Code.aaa(this.bia, "<Hãy đồng ý giao dịch>");
          } else {
-            gf.ava().eha = 0;
-            gf.cza = new gg[12];
+            GameScr.ava().eha = 0;
+            GameScr.cza = new gg[12];
 
             for(var6 = 0; var6 < 12; ++var6) {
-               gf.cza[var6] = var2[var6];
-               if (var2[var6] != null && var2[var6].ada >= 0 && var2[var6].ada < fz.ala().daa.length) {
+               GameScr.cza[var6] = var2[var6];
+               if (var2[var6] != null && var2[var6].ada >= 0 && var2[var6].ada < fz.ala().arrItemBag.length) {
                   int var10001 = var2[var6].ada;
-                  fz.ala().daa[var10001] = null;
+                  fz.ala().arrItemBag[var10001] = null;
                }
             }
 
-            gm.aaa().aaa((int)0, (gg[])var2);
-            gf.ava().efa = 1;
+            Service.aaa().aaa((int)0, (gg[])var2);
+            GameScr.ava().efa = 1;
             long var13 = System.currentTimeMillis();
 
-            while(gf.ava().ega != 1) {
+            while(GameScr.ava().ega != 1) {
                if (aaa || System.currentTimeMillis() - var13 >= 20000L) {
-                  if (gf.dpa) {
-                     gm.aaa().aia();
+                  if (GameScr.dpa) {
+                     Service.aaa().aia();
                      Thread.sleep(1000L);
                   }
 
                   if (var5) {
-                     gm.aaa().afa();
-                     gj.ata();
+                     Service.aaa().afa();
+                     LockGame.ata();
                   }
 
                   Code.aaa(this.bia, "<Hãy giao dịch lại>");
@@ -438,29 +438,29 @@ public final class fv extends Auto {
             }
 
             var13 = System.currentTimeMillis();
-            if (gf.ava().eia < var4) {
-               if (gf.dpa) {
-                  gm.aaa().aia();
+            if (GameScr.ava().eia < var4) {
+               if (GameScr.dpa) {
+                  Service.aaa().aia();
                   Thread.sleep(1000L);
                }
 
                if (var5) {
-                  gm.aaa().afa();
-                  gj.ata();
+                  Service.aaa().afa();
+                  LockGame.ata();
                }
 
                Code.aaa(this.bia, "<Không đủ xu>");
             } else {
-               for(var8 = 0; var8 < gf.daa.length; ++var8) {
-                  if (gf.daa[var8] != null && aw.aaa(gf.daa[var8].aaa.aaa) == null) {
-                     if (gf.dpa) {
-                        gm.aaa().aia();
+               for(var8 = 0; var8 < GameScr.daa.length; ++var8) {
+                  if (GameScr.daa[var8] != null && aw.aaa(GameScr.daa[var8].aaa.aaa) == null) {
+                     if (GameScr.dpa) {
+                        Service.aaa().aia();
                         Thread.sleep(1000L);
                      }
 
                      if (var5) {
-                        gm.aaa().afa();
-                        gj.ata();
+                        Service.aaa().afa();
+                        LockGame.ata();
                      }
 
                      Code.aaa(this.bia, "<Chỉ GD xu>");
@@ -471,8 +471,8 @@ public final class fv extends Auto {
                while(System.currentTimeMillis() - var13 < 6000L) {
                   if (aaa) {
                      if (var5) {
-                        gm.aaa().afa();
-                        gj.ata();
+                        Service.aaa().afa();
+                        LockGame.ata();
                      }
 
                      Code.aaa(this.bia, "<Hãy giao dịch lại>");
@@ -482,19 +482,19 @@ public final class fv extends Auto {
                   Thread.sleep(200L);
                }
 
-               gm.aaa().aja();
-               gf.ava().efa = 2;
+               Service.aaa().aja();
+               GameScr.ava().efa = 2;
 
-               while(gf.ava().ega < 2) {
+               while(GameScr.ava().ega < 2) {
                   if (aaa || System.currentTimeMillis() - var13 >= 20000L) {
-                     if (gf.dpa) {
-                        gm.aaa().aia();
+                     if (GameScr.dpa) {
+                        Service.aaa().aia();
                         Thread.sleep(1000L);
                      }
 
                      if (var5) {
-                        gm.aaa().afa();
-                        gj.ata();
+                        Service.aaa().afa();
+                        LockGame.ata();
                      }
 
                      Code.aaa(this.bia, "<Hãy giao dịch lại>");
@@ -519,13 +519,13 @@ public final class fv extends Auto {
 
             fz var10000;
             while(true) {
-               if (var5 >= gf.bla.size()) {
+               if (var5 >= GameScr.bla.size()) {
                   var10000 = null;
                   break;
                }
 
                fz var3;
-               if ((var3 = (fz)gf.bla.elementAt(var5)).cea.equals(var1)) {
+               if ((var3 = (fz)GameScr.bla.elementAt(var5)).cea.equals(var1)) {
                   var10000 = var3;
                   break;
                }
@@ -558,7 +558,7 @@ public final class fv extends Auto {
 
             String var2;
             if (System.currentTimeMillis() - this.bla >= 5000L && !(var2 = aw.aca()).equals("")) {
-               gm.aaa().aca(var2);
+               Service.aaa().aca(var2);
                this.bla = System.currentTimeMillis();
             }
 

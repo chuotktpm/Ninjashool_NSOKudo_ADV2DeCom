@@ -36,18 +36,18 @@ public final class eb {
 
    public final void aaa(as var1) {
       if (this.ada == 0) {
-         var1.aaa(gf.faa, 0, this.aaa * 3, 3, 3, 0, this.aba, this.aca, 0);
+         var1.aaa(GameScr.faa, 0, this.aaa * 3, 3, 3, 0, this.aba, this.aca, 0);
       } else if (this.ada == 1) {
-         var1.aaa(gf.fba, 0, this.aaa * 20, 20, 20, 0, this.aba, this.aca, 33);
+         var1.aaa(GameScr.fba, 0, this.aaa * 20, 20, 20, 0, this.aba, this.aca, 33);
       } else if (this.ada == 2) {
-         var1.aaa(gf.fta, 0, this.aaa * 15, 14, 15, 0, this.aba + 20, this.aca + 4, 20);
+         var1.aaa(GameScr.fta, 0, this.aaa * 15, 14, 15, 0, this.aba + 20, this.aca + 4, 20);
       } else if (this.ada == 3) {
-         var1.aaa(gf.fqa, 0, this.aaa << 3, 8, 8, 0, this.aba + 20, this.aca + 4, 20);
+         var1.aaa(GameScr.fqa, 0, this.aaa << 3, 8, 8, 0, this.aba + 20, this.aca + 4, 20);
       } else if (this.ada == 4) {
-         var1.aaa(gf.fra, 0, this.aaa << 3, 8, 8, 0, this.aba + 20, this.aca + 4, 20);
+         var1.aaa(GameScr.fra, 0, this.aaa << 3, 8, 8, 0, this.aba + 20, this.aca + 4, 20);
       } else {
          if (this.ada == 5) {
-            var1.aaa(gf.fsa, 0, this.aaa * 14, 14, 14, 0, this.aba + 20, this.aca + 4, 20);
+            var1.aaa(GameScr.fsa, 0, this.aaa * 14, 14, 14, 0, this.aba + 20, this.aca + 4, 20);
          }
 
       }

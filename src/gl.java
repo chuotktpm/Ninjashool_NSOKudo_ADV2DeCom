@@ -11,15 +11,15 @@ public final class gl implements Runnable {
       if (fz.ala().csa >= 1000 && fz.ala().aua >= 30) {
          gg var1;
          if ((var1 = fz.afa(37)) == null && (var1 = fz.afa(35)) == null) {
-            gf.aba(4, 0, 0);
-            gm.aaa().aba(9, 6, 1);
-            gj.aha();
+            GameScr.aba(4, 0, 0);
+            Service.aaa().aba(9, 6, 1);
+            LockGame.aha();
             Auto.aaa(100L);
             var1 = fz.afa(35);
          }
 
          if (var1 != null) {
-            gm.aaa().aia(var1.ada, this.aaa);
+            Service.aaa().aia(var1.ada, this.aaa);
             gn.aga();
          }
       } else {

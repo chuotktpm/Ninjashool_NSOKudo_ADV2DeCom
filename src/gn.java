@@ -675,8 +675,8 @@ public final class gn {
    }
 
    public static final void aaa(as var0) {
-      for(int var1 = gf.ata; var1 < gf.ava; ++var1) {
-         for(int var2 = gf.aua; var2 < gf.awa; ++var2) {
+      for(int var1 = GameScr.ata; var1 < GameScr.ava; ++var1) {
+         for(int var2 = GameScr.aua; var2 < GameScr.awa; ++var2) {
             int var3 = afa[var2 * aaa + var1] - 1;
             if ((aga(var1, var2) & 256) != 256) {
                if (aea == 4 && (aga(var1, var2) & 64) == 64) {
@@ -808,9 +808,9 @@ public final class gn {
                }
 
                if ((aga(var1, var2) & 16) == 16) {
-                  boa = var1 * aia - gf.aia - gf.ada;
-                  bpa = (aia - 2) * boa / aia + gf.ada;
-                  var0.aaa(bha, 0, var3 * aia, 24, 24, 0, bpa + gf.aia, var2 * aia, 0);
+                  boa = var1 * aia - GameScr.aia - GameScr.ada;
+                  bpa = (aia - 2) * boa / aia + GameScr.ada;
+                  var0.aaa(bha, 0, var3 * aia, 24, 24, 0, bpa + GameScr.aia, var2 * aia, 0);
                } else if ((aga(var1, var2) & 512) == 512) {
                   if (var3 != -1) {
                      var0.aaa(bha, 0, var3 * aia, 24, 1, 0, var1 * aia, var2 * aia, 0);
@@ -896,9 +896,9 @@ public final class gn {
             }
          }
 
-         for(var2 = 0; var2 < gf.bfa.size(); ++var2) {
+         for(var2 = 0; var2 < GameScr.bfa.size(); ++var2) {
             ep var5;
-            if ((var5 = (ep)gf.bfa.elementAt(var2)).afa != null && var5.afa != fz.ala()) {
+            if ((var5 = (ep)GameScr.bfa.elementAt(var2)).afa != null && var5.afa != fz.ala()) {
                var1 = var5.afa.ala / 12;
                var4 = var5.afa.ama / 12;
                if (var1 < bxa) {
@@ -928,7 +928,7 @@ public final class gn {
 
          ci.aaa(var0);
          if (ab.afa) {
-            var0.aaa(gf.exa, asa - 1, ata, 0);
+            var0.aaa(GameScr.exa, asa - 1, ata, 0);
          }
       }
 
@@ -938,8 +938,8 @@ public final class gn {
       if (!ab.aaa) {
          int var1;
          int var2;
-         for(var1 = gf.ata; var1 < gf.ava; ++var1) {
-            for(var2 = gf.aua; var2 < gf.awa; ++var2) {
+         for(var1 = GameScr.ata; var1 < GameScr.ava; ++var1) {
+            for(var2 = GameScr.aua; var2 < GameScr.awa; ++var2) {
                Image var3;
                if (aea == 4) {
                   var3 = bna;
@@ -961,8 +961,8 @@ public final class gn {
             }
          }
 
-         if (aea != 4 && ab.afa && ab.aga && gf.awa >= aba - 2) {
-            for(var1 = gf.ata; var1 < gf.ava; ++var1) {
+         if (aea != 4 && ab.afa && ab.aga && GameScr.awa >= aba - 2) {
+            for(var1 = GameScr.ata; var1 < GameScr.ava; ++var1) {
                var2 = aba - 2;
                int var5 = afa[var2 * aaa + var1] - 1;
                int var4;
@@ -1195,7 +1195,7 @@ public final class gn {
       }
 
       Thread.sleep(10L);
-      gm.aaa().aca();
+      Service.aaa().aca();
    }
 
    public static void aga() {
@@ -1289,7 +1289,7 @@ public final class gn {
 
                                  var20 = var20 | Integer.MIN_VALUE | 134217728 | var13 << 20 & 15728640;
                               } else if (var3 != null && var19 == var3.aga) {
-                                 var11 = gf.gva;
+                                 var11 = GameScr.gva;
                                  var20 = var20 | Integer.MIN_VALUE | 419430400 | var11 << 20 & 15728640 | 196608;
                               } else {
                                  switch(var19) {
@@ -1303,18 +1303,18 @@ public final class gn {
                                     var20 = var20 | Integer.MIN_VALUE | 2097152 | 131072;
                                     break;
                                  case 98:
-                                    var11 = gf.gva + 2;
+                                    var11 = GameScr.gva + 2;
                                     var20 = var20 | Integer.MIN_VALUE | 419430400 | var11 << 20 & 15728640;
                                     break;
                                  case 104:
-                                    var11 = gf.gva + 2;
+                                    var11 = GameScr.gva + 2;
                                     var20 = var20 | Integer.MIN_VALUE | 419430400 | var11 << 20 & 15728640 | 65536;
                                     break;
                                  case 105:
                                     var20 = var20 | Integer.MIN_VALUE | 2097152 | 196608;
                                     break;
                                  case 113:
-                                    var11 = gf.gva + 3;
+                                    var11 = GameScr.gva + 3;
                                     var20 = var20 | Integer.MIN_VALUE | 419430400 | var11 << 20 & 15728640;
                                     break;
                                  case 114:
@@ -1421,7 +1421,7 @@ public final class gn {
                      }
 
                      if (var17) {
-                        var7 = (short)(gf.gwa ? 98 : 104);
+                        var7 = (short)(GameScr.gwa ? 98 : 104);
                         if (cba[var7] == -1 || cba[var7] > cba[var6] + 1) {
                            var10002 = cba;
                            var10002[var7] = var10002[var6] + 1;
@@ -1457,7 +1457,7 @@ public final class gn {
                   var15 = var5 >> 24 & 127;
                   var4 = var5 >> 20 & 15;
                   var5 = var5 >> 16 & 15;
-                  gf.aba(var15, var4, var5);
+                  GameScr.aba(var15, var4, var5);
                } else if ((var5 < 134 || var5 > 138) && var19 == 138) {
                   if (fz.ala().dka > 0) {
                      be.aaa("Hiếu chiến quá cao!", 50, fw.ala);
@@ -1467,8 +1467,8 @@ public final class gn {
                   gg var16;
                   if ((var16 = fz.afa(490)) == null || var16.aaa.aaa != 490) {
                      if (fz.foa && fz.ala().cta >= 20) {
-                        gm.aaa().aba(14, 28, 2);
-                        gj.aha();
+                        Service.aaa().aba(14, 28, 2);
+                        LockGame.aha();
                         return false;
                      }
 
@@ -1477,7 +1477,7 @@ public final class gn {
                   }
 
                   System.out.println("Dung Cổ  lenh");
-                  gm.aaa().aea(var16.ada);
+                  Service.aaa().aea(var16.ada);
                } else if (var5 != 0 && var5 != 56 && var5 != 73) {
                   var4 = -1;
 
@@ -1496,12 +1496,12 @@ public final class gn {
                   aja(var4);
                } else {
                   av var14;
-                  if ((var14 = (av)gf.boa.elementAt(0)) != null && var14.aqa != 15) {
+                  if ((var14 = (av)GameScr.boa.elementAt(0)) != null && var14.aqa != 15) {
                      fz.aca(var14.ala, var14.ama);
                      fz.ala().dra = var14;
-                     gm.aaa().aha(var14.aaa.aaa);
-                     gm.aaa().aca(var14.aaa.aaa, 0, 0);
-                     gm.aaa().aja(var14.aaa.aaa, 0);
+                     Service.aaa().aha(var14.aaa.aaa);
+                     Service.aaa().aca(var14.aaa.aaa, 0, 0);
+                     Service.aaa().aja(var14.aaa.aaa, 0);
                   }
                }
 

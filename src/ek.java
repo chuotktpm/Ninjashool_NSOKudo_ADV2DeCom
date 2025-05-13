@@ -78,10 +78,10 @@ public final class ek extends cu {
             ama[this.aaa] = new fp();
             aoa.put(String.valueOf(this.aaa), ama[this.aaa]);
             this.aha().ada = System.currentTimeMillis();
-            gm.aaa().aaa((byte)1, (short)this.aaa);
+            Service.aaa().aaa((byte)1, (short)this.aaa);
          } else if (this.aha().aca == null && System.currentTimeMillis() - this.aha().ada > 3000L) {
             this.aha().ada = System.currentTimeMillis();
-            gm.aaa().aaa((byte)1, (short)this.aaa);
+            Service.aaa().aaa((byte)1, (short)this.aaa);
          }
 
          if (this.aha().aca != null) {
@@ -92,11 +92,11 @@ public final class ek extends cu {
                this.aba.aaa = Controller.aaa(fd.aba("effauto " + this.aaa));
                if (this.aba.aaa == null) {
                   this.aba.aba = System.currentTimeMillis();
-                  gm.aaa().aaa((byte)0, (short)this.aaa);
+                  Service.aaa().aaa((byte)0, (short)this.aaa);
                }
             } else if (this.aba.aaa == null && System.currentTimeMillis() - this.aba.aba > 6000L) {
                this.aba.aba = System.currentTimeMillis();
-               gm.aaa().aaa((byte)0, (short)this.aaa);
+               Service.aaa().aaa((byte)0, (short)this.aaa);
             }
          }
 

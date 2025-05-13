@@ -314,13 +314,13 @@ public final class dx extends cu {
          }
       } else {
          if (ata > 100) {
-            var1.aaa(gf.fpa, 0, this.awa * 23, 31, 23, ava, this.aia, this.aja, 0);
+            var1.aaa(GameScr.fpa, 0, this.awa * 23, 31, 23, ava, this.aia, this.aja, 0);
          } else if (ata > 50 && ata <= 100) {
-            var1.aaa(gf.fpa, 0, 0, 14, 14, ava, this.aia, this.aja, 0);
+            var1.aaa(GameScr.fpa, 0, 0, 14, 14, ava, this.aia, this.aja, 0);
          } else if (ata > 30 && ata <= 50) {
-            var1.aaa(gf.fpa, 0, 0, 8, 8, ava, this.aia, this.aja, 0);
+            var1.aaa(GameScr.fpa, 0, 0, 8, 8, ava, this.aia, this.aja, 0);
          } else if (ata > 0 && ata <= 30) {
-            var1.aaa(gf.fpa, 0, 0, 8, 8, ava, this.aia, this.aja, 0);
+            var1.aaa(GameScr.fpa, 0, 0, 8, 8, ava, this.aia, this.aja, 0);
          }
 
          for(var2 = 0; var2 < aua.size(); ++var2) {

@@ -38,7 +38,7 @@ public final class bm extends cu {
       }
 
       for(int var3 = 0; var3 < var2; ++var3) {
-         cf var4 = new cf((gf.aia - 20 + ci.ada((ab.aza + 40) / 5) * 5) * 10, (gf.aja - 20 + ci.ada(ab.baa / 5) * 5) * 10);
+         cf var4 = new cf((GameScr.aia - 20 + ci.ada((ab.aza + 40) / 5) * 5) * 10, (GameScr.aja - 20 + ci.ada(ab.baa / 5) * 5) * 10);
          if (var1 == 3) {
             var4.ada = ci.ada(3);
          } else {
@@ -62,7 +62,7 @@ public final class bm extends cu {
       case 1:
          for(var2 = 0; var2 < this.aja; ++var2) {
             var3 = (cf)this.aka.elementAt(var2);
-            aaa.aaa(var3.aea / (var3.afa / 4), var3.aaa / 10 - gf.aia, var3.aba / 10 - gf.aja, 0, 3, var1);
+            aaa.aaa(var3.aea / (var3.afa / 4), var3.aaa / 10 - GameScr.aia, var3.aba / 10 - GameScr.aja, 0, 3, var1);
          }
 
          return;
@@ -76,8 +76,8 @@ public final class bm extends cu {
                   cw.aga = new cw();
                }
 
-               int var4 = cw.aga.aaa * (2 - var3.ada) * 20 / 120 - gf.aia;
-               aba.aaa(var3.ada, var4 + var3.aaa / 10, var3.aba / 10 - gf.aja, 2, 0, var1);
+               int var4 = cw.aga.aaa * (2 - var3.ada) * 20 / 120 - GameScr.aia;
+               aba.aaa(var3.ada, var4 + var3.aaa / 10, var3.aba / 10 - GameScr.aja, 2, 0, var1);
             }
          }
 
@@ -102,7 +102,7 @@ public final class bm extends cu {
                var3.aea = 0;
             }
 
-            if (var3.aba / 10 > gf.aja + ab.baa - (3 - var3.ada) * 40 || var3.aaa / 10 < gf.aia - ab.bba || var3.aaa / 10 > gf.aia + ab.aza + ab.bba) {
+            if (var3.aba / 10 > GameScr.aja + ab.baa - (3 - var3.ada) * 40 || var3.aaa / 10 < GameScr.aia - ab.bba || var3.aaa / 10 > GameScr.aia + ab.aza + ab.bba) {
                var1.aaa(var3);
             }
          }
@@ -118,16 +118,16 @@ public final class bm extends cu {
             var10000 = var3 = (cf)var1.aka.elementAt(var2);
             var10000.aba += (var3.ada + 1) * 5;
             var3.aaa += var3.ada + 1 << 1;
-            if (var3.aba / 10 > gf.aja + ab.baa - (3 - var3.ada) * 30) {
+            if (var3.aba / 10 > GameScr.aja + ab.baa - (3 - var3.ada) * 30) {
                var1.aaa(var3);
             }
 
-            int var4 = gf.aia * (2 - var3.ada) * 20 / 120;
-            if (var3.aaa / 10 + var4 < gf.aia - 10) {
+            int var4 = GameScr.aia * (2 - var3.ada) * 20 / 120;
+            if (var3.aaa / 10 + var4 < GameScr.aia - 10) {
                var3.aaa += (ab.aza + 20) * 10;
             }
 
-            if (var3.aaa / 10 + var4 > gf.aia + ab.aza + 10) {
+            if (var3.aaa / 10 + var4 > GameScr.aia + ab.aza + 10) {
                var3.aaa -= (ab.aza + 20) * 10;
             }
          }
@@ -136,8 +136,8 @@ public final class bm extends cu {
    }
 
    private void aaa(cf var1) {
-      var1.aaa = (gf.aia - 20 + ci.ada((ab.aza + 40) / 5) * 5) * 10;
-      var1.aba = (gf.aja - ab.bca + ci.ada(ab.baa / 5) * 5) * 10;
+      var1.aaa = (GameScr.aia - 20 + ci.ada((ab.aza + 40) / 5) * 5) * 10;
+      var1.aba = (GameScr.aja - ab.bca + ci.ada(ab.baa / 5) * 5) * 10;
       if (this.aia == 3) {
          var1.ada = ci.ada(3);
       } else {
